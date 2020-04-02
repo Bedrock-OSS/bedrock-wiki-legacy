@@ -4,7 +4,7 @@ title: Vanilla Usage 1.13
 parent: Vanilla Usage
 nav_order: 1
 ---
-# Vanilla Components 1.14
+# Vanilla Components 1.13
 This documentation is auto-generated using a python script, written by SirLich. If there is an issue, please bring it to his attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
@@ -275,61 +275,63 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:underwater_movement](#minecraftunderwater_movement)
  - [minecraft:variant](#minecraftvariant)
  - [minecraft:water_movement](#minecraftwater_movement)
+
 # minecraft:addrider
 ### cave_spider.json
-```JSON
+
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton.stray"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton.wither"
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:pillager"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:pillager",
     "spawn_event": "minecraft:spawn_for_raid"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:evocation_illager",
     "spawn_event": "minecraft:spawn_for_raid"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:pillager",
     "spawn_event": "minecraft:spawn_as_illager_captain"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:vindicator"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:vindicator",
     "spawn_event": "minecraft:spawn_as_illager_captain"
@@ -337,19 +339,19 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton.stray"
 }
 ```
 
-```JSON
+```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton.wither"
 }
@@ -357,7 +359,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:ageable
 ### cat.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -372,7 +374,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -389,7 +391,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": "wheat",
@@ -401,7 +403,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -416,7 +418,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -457,7 +459,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": "sweet_berries",
@@ -469,7 +471,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -510,7 +512,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -531,7 +533,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": "wheat",
@@ -543,7 +545,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -584,7 +586,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -599,7 +601,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": "bamboo",
@@ -611,7 +613,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -627,7 +629,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "grow_up": {
@@ -638,7 +640,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -654,7 +656,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": "wheat",
@@ -666,7 +668,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "grow_up": {
@@ -677,7 +679,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -694,7 +696,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "grow_up": {
@@ -705,7 +707,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "grow_up": {
@@ -716,7 +718,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "feed_items": [
@@ -740,7 +742,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:ageable": {
     "duration": 1200,
     "grow_up": {
@@ -752,7 +754,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:ambient_sound_interval
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
     "range": 4.0,
@@ -761,19 +763,19 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "event_name": "ambient"
 }
 ```
 
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "event_name": "sleep"
 }
 ```
 
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "event_name": "screech",
     "value": 80,
@@ -782,7 +784,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
     "range": 4.0,
@@ -791,7 +793,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "value": 4.0,
     "range": 8.0,
@@ -800,7 +802,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
     "range": 4.0,
@@ -809,7 +811,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
     "range": 4.0,
@@ -819,7 +821,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:angry
 ### cave_spider.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 10,
     "duration_delta": 3,
@@ -831,7 +833,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 25,
     "broadcast_anger": true,
@@ -844,7 +846,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 25,
     "calm_event": {
@@ -855,7 +857,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 4,
     "broadcast_anger": false,
@@ -866,7 +868,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:angry": {
     "duration": -1,
     "broadcast_anger": false,
@@ -877,7 +879,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:angry": {
     "duration": 10,
     "calm_event": {
@@ -888,7 +890,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 500,
     "broadcast_anger": true,
@@ -905,7 +907,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:angry": {
     "duration": 1,
     "broadcast_anger": true,
@@ -923,7 +925,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": -1,
     "broadcast_anger": true,
@@ -932,7 +934,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 1,
     "broadcast_anger": true,
@@ -944,7 +946,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:angry": {
     "duration": 500,
     "broadcast_anger": false,
@@ -957,7 +959,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": -1,
     "broadcast_anger": true,
@@ -970,7 +972,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 10,
     "duration_delta": 3,
@@ -982,7 +984,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": -1,
     "broadcast_anger": false,
@@ -994,7 +996,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 5,
     "broadcastAnger": true,
@@ -1015,7 +1017,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 25,
     "broadcast_anger": true,
@@ -1028,7 +1030,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:angry": {
     "duration": 25,
     "broadcast_anger": true,
@@ -1042,17 +1044,17 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:annotation.break_door
 ### drowned.json
-```JSON
+```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:annotation.break_door": {
     "break_time": 30,
     "min_difficulty": "normal"
@@ -1060,29 +1062,29 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:annotation.break_door": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:annotation.break_door": {}
 ```
 
 # minecraft:annotation.open_door
 ### villager.json
-```JSON
+```json
 "minecraft:annotation.open_door": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:annotation.open_door": {}
 ```
 
 # minecraft:area_attack
 ### pufferfish.json
-```JSON
+```json
 "minecraft:area_attack": {
     "damage_range": 0.2,
     "damage_per_tick": 2,
@@ -1106,14 +1108,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:attack
 ### blaze.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 6
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2,
     "effect_name": "poison",
@@ -1121,7 +1123,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2,
     "effect_name": "poison",
@@ -1129,7 +1131,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2,
     "effect_name": "poison",
@@ -1138,70 +1140,70 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 7
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3,
     "effect_name": "hunger",
@@ -1210,7 +1212,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": {
         "range_min": 7,
@@ -1220,121 +1222,121 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2.0
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 6.0
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 6
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 1
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 6.0
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 12.0
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 1
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 0
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3,
     "effect_name": "slowness",
@@ -1343,21 +1345,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 8
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 4,
     "effect_name": "wither",
@@ -1366,41 +1368,41 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:attack": {
     "damage": 4
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:attack": {
     "damage": 3
 }
@@ -1408,14 +1410,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:attack_damage
 ### cat.json
-```JSON
+```json
 "minecraft:attack_damage": {
     "value": 4
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:attack_damage": {
     "value": 4
 }
@@ -1423,101 +1425,101 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:balloonable
 ### chicken.json
-```JSON
+```json
 "minecraft:balloonable": {
     "mass": 0.6
 }
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:balloonable": {
     "mass": 0.75
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:balloonable": {
     "mass": 0.75
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:balloonable": {
     "mass": 0.75
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:balloonable": {}
 ```
 
 # minecraft:behavior.avoid_mob_type
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 6,
     "entity_types": [
@@ -1536,7 +1538,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
     "entity_types": [
@@ -1564,7 +1566,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 2,
     "entity_types": [
@@ -1593,7 +1595,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
     "entity_types": [
@@ -1612,7 +1614,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
     "entity_types": [
@@ -1631,7 +1633,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
     "entity_types": [
@@ -1680,7 +1682,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
     "entity_types": [
@@ -1699,7 +1701,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
     "entity_types": [
@@ -1718,7 +1720,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
     "max_dist": 16,
@@ -1740,7 +1742,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 0,
     "max_dist": 16.0,
@@ -1770,7 +1772,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
     "entity_types": [
@@ -1809,7 +1811,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
     "entity_types": [
@@ -1829,7 +1831,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
     "entity_types": [
@@ -1848,7 +1850,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
     "entity_types": [
@@ -1867,7 +1869,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
     "entity_types": [
@@ -1886,7 +1888,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
     "entity_types": [
@@ -1929,7 +1931,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
     "entity_types": [
@@ -1972,7 +1974,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 2,
     "entity_types": [
@@ -2015,7 +2017,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
     "entity_types": [
@@ -2035,7 +2037,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.beg
-```JSON
+```json
 "minecraft:behavior.beg": {
     "priority": 9,
     "look_distance": 8,
@@ -2062,7 +2064,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.break_door
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.break_door": {
     "priority": 1
 }
@@ -2070,7 +2072,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.breed
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2078,7 +2080,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2086,14 +2088,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2101,7 +2103,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2109,7 +2111,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2117,7 +2119,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2125,7 +2127,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -2133,14 +2135,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2148,7 +2150,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2156,14 +2158,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2171,7 +2173,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -2179,14 +2181,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 2,
     "speed_multiplier": 0.8
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2194,7 +2196,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2202,7 +2204,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2210,7 +2212,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.breed": {
     "priority": 7
 }
@@ -2218,7 +2220,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.celebrate
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2239,7 +2241,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2260,7 +2262,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2281,7 +2283,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2302,7 +2304,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2324,7 +2326,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.charge_attack
 ### vex.json
-```JSON
+```json
 "minecraft:behavior.charge_attack": {
     "priority": 4
 }
@@ -2332,7 +2334,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.charge_held_item
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.charge_held_item": {
     "priority": 3,
     "items": [
@@ -2343,7 +2345,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.circle_around_anchor
 ### phantom.json
-```JSON
+```json
 "minecraft:behavior.circle_around_anchor": {
     "priority": 3,
     "radius_range": [
@@ -2366,7 +2368,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.controlled_by_player
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.controlled_by_player": {
     "priority": 0
 }
@@ -2374,7 +2376,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.defend_trusted_target
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.defend_trusted_target": {
     "priority": 0,
     "within_radius": 25,
@@ -2390,7 +2392,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.defend_village_target
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.defend_village_target": {
     "priority": 1
 }
@@ -2398,7 +2400,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.delayed_attack
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.delayed_attack": {
     "priority": 4,
     "reach_multiplier": 1.5,
@@ -2411,56 +2413,56 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.dragonchargeplayer
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:behavior.dragonchargeplayer": {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.dragondeath
-```JSON
+```json
 "minecraft:behavior.dragondeath": {
     "priority": 0
 }
 ```
 
 # minecraft:behavior.dragonflaming
-```JSON
+```json
 "minecraft:behavior.dragonflaming": {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.dragonholdingpattern
-```JSON
+```json
 "minecraft:behavior.dragonholdingpattern": {
     "priority": 3
 }
 ```
 
 # minecraft:behavior.dragonlanding
-```JSON
+```json
 "minecraft:behavior.dragonlanding": {
     "priority": 0
 }
 ```
 
 # minecraft:behavior.dragonscanning
-```JSON
+```json
 "minecraft:behavior.dragonscanning": {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.dragonstrafeplayer
-```JSON
+```json
 "minecraft:behavior.dragonstrafeplayer": {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.dragontakeoff
-```JSON
+```json
 "minecraft:behavior.dragontakeoff": {
     "priority": 0
 }
@@ -2468,7 +2470,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.drink_potion
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.drink_potion": {
     "priority": 1,
     "speed_modifier": -0.2,
@@ -2567,7 +2569,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.drop_item_for
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.drop_item_for": {
     "priority": 1,
     "speed_multiplier": 1.0,
@@ -2602,7 +2604,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.eat_block
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.eat_block": {
     "priority": 6,
     "on_eat": {
@@ -2614,7 +2616,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.eat_carried_item
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.eat_carried_item": {
     "priority": 12,
     "delay_before_eating": 28
@@ -2623,14 +2625,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.enderman_leave_block
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.enderman_leave_block": {
     "priority": 10
 }
 ```
 
 # minecraft:behavior.enderman_take_block
-```JSON
+```json
 "minecraft:behavior.enderman_take_block": {
     "priority": 11
 }
@@ -2638,11 +2640,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.explore_outskirts
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.explore_outskirts": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.explore_outskirts": {
     "priority": 9,
     "explore_dist": 6.0,
@@ -2653,7 +2655,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.find_cover
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.find_cover": {
     "priority": 0,
     "speed_multiplier": 1,
@@ -2661,7 +2663,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.find_cover": {
     "priority": 9,
     "speed_multiplier": 1,
@@ -2671,7 +2673,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.find_mount
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
     "within_radius": 16
@@ -2679,7 +2681,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.find_mount": {
     "priority": 3,
     "within_radius": 16,
@@ -2691,7 +2693,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
     "within_radius": 16,
@@ -2701,7 +2703,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
     "within_radius": 16
@@ -2709,7 +2711,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
     "within_radius": 16
@@ -2718,7 +2720,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.find_underwater_treasure
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.find_underwater_treasure": {
     "priority": 2,
     "speed_multiplier": 2.0,
@@ -2729,7 +2731,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.flee_sun
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
     "speed_multiplier": 1
@@ -2737,7 +2739,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
     "speed_multiplier": 1
@@ -2745,7 +2747,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
     "speed_multiplier": 1
@@ -2753,7 +2755,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.flee_sun": {
     "priority": 4,
     "speed_multiplier": 1
@@ -2761,7 +2763,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.flee_sun": {
     "priority": 4,
     "speed_multiplier": 1
@@ -2770,252 +2772,252 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.float
 ### bat.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 2
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.float": {
     "priority": 0
 }
@@ -3023,7 +3025,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.float_wander
 ### bat.json
-```JSON
+```json
 "minecraft:behavior.float_wander": {
     "xz_dist": 10,
     "y_dist": 7,
@@ -3037,7 +3039,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:behavior.float_wander": {
     "priority": 2,
     "must_reach": true
@@ -3046,7 +3048,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.follow_caravan
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.follow_caravan": {
     "priority": 3,
     "speed_multiplier": 2.1,
@@ -3063,7 +3065,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.follow_mob
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.follow_mob": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -3074,7 +3076,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.follow_owner
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.follow_owner": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -3084,7 +3086,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.follow_owner": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -3094,7 +3096,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.follow_owner": {
     "priority": 2,
     "speed_multiplier": 1.0,
@@ -3104,7 +3106,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.follow_owner": {
     "priority": 6,
     "speed_multiplier": 1.0,
@@ -3115,7 +3117,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.follow_parent
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
     "speed_multiplier": 1.1
@@ -3123,14 +3125,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
     "speed_multiplier": 1.1
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3138,7 +3140,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.1
@@ -3146,7 +3148,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3154,7 +3156,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 9,
     "speed_multiplier": 1.1
@@ -3162,7 +3164,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3170,7 +3172,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
     "speed_multiplier": 1.0
@@ -3178,14 +3180,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
     "speed_multiplier": 1.1
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3193,7 +3195,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3201,7 +3203,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 13,
     "speed_multiplier": 1.1
@@ -3209,7 +3211,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3217,7 +3219,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.25
@@ -3225,7 +3227,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3233,14 +3235,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
     "speed_multiplier": 1.1
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3248,7 +3250,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3256,7 +3258,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3265,7 +3267,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.follow_target_captain
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.follow_target_captain": {
     "priority": 5,
     "speed_multiplier": 0.8,
@@ -3275,7 +3277,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.follow_target_captain": {
     "priority": 5,
     "speed_multiplier": 0.8,
@@ -3286,7 +3288,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.go_home
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.go_home": {
     "priority": 1,
     "speed_multiplier": 1.0,
@@ -3301,20 +3303,20 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.guardian_attack
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
 }
@@ -3322,7 +3324,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.harvest_farm_block
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.harvest_farm_block": {
     "priority": 9,
     "speed_multiplier": 0.5
@@ -3330,11 +3332,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.harvest_farm_block": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.harvest_farm_block": {
     "priority": 8,
     "speed_multiplier": 0.5
@@ -3342,7 +3344,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.hide
-```JSON
+```json
 "minecraft:behavior.hide": {
     "priority": 0,
     "speed_multiplier": 0.8,
@@ -3353,7 +3355,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.hold_ground
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.hold_ground": {
     "priority": 5,
     "min_radius": 10,
@@ -3370,7 +3372,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.hold_ground": {
     "priority": 6,
     "min_radius": 10,
@@ -3389,70 +3391,70 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.hurt_by_target
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 3
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
     "entity_types": {
@@ -3466,7 +3468,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
     "entity_types": {
@@ -3491,7 +3493,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
     "hurt_owner": true
@@ -3499,14 +3501,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
     "entity_types": {
@@ -3522,14 +3524,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
     "entity_types": {
@@ -3545,14 +3547,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
     "alert_same_type": true
@@ -3560,98 +3562,98 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 3
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
@@ -3659,11 +3661,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.inspect_bookshelf
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.inspect_bookshelf": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.inspect_bookshelf": {
     "priority": 8,
     "speed_multiplier": 0.6,
@@ -3676,7 +3678,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.knockback_roar
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.knockback_roar": {
     "priority": 1,
     "duration": 1,
@@ -3705,7 +3707,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.lay_down
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.lay_down": {
     "priority": 5,
     "interval": 400,
@@ -3715,7 +3717,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.lay_egg
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.lay_egg": {
     "priority": 1,
     "speed_multiplier": 1.0,
@@ -3731,7 +3733,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.leap_at_target
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.leap_at_target": {
     "priority": 3,
     "target_dist": 0.3
@@ -3739,7 +3741,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
     "yd": 0.4,
@@ -3747,7 +3749,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
     "yd": 0.4,
@@ -3756,7 +3758,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.leap_at_target": {
     "priority": 3,
     "target_dist": 0.3
@@ -3764,7 +3766,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
     "yd": 0.4,
@@ -3773,7 +3775,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
     "target_dist": 0.4
@@ -3782,7 +3784,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.look_at_entity
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.look_at_entity": {
     "priority": 10,
     "look_distance": 8.0,
@@ -3795,7 +3797,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.look_at_entity": {
     "priority": 10,
     "look_distance": 8,
@@ -3809,7 +3811,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:behavior.look_at_entity": {
     "priority": 9,
     "look_distance": 6.0,
@@ -3824,14 +3826,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.look_at_player
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 9
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3840,7 +3842,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3849,7 +3851,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3858,7 +3860,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "look_distance": 8
@@ -3866,7 +3868,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 6
@@ -3874,7 +3876,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3883,7 +3885,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6,
@@ -3892,7 +3894,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 12.0,
@@ -3901,7 +3903,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 8.0,
@@ -3910,7 +3912,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
     "look_distance": 3.0,
@@ -3919,7 +3921,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 14,
     "look_distance": 6.0,
@@ -3928,7 +3930,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 12.0,
@@ -3937,7 +3939,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3946,7 +3948,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6,
@@ -3955,7 +3957,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3964,7 +3966,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3973,7 +3975,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3982,7 +3984,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -3991,14 +3993,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 9
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 6.0,
@@ -4007,7 +4009,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 1,
     "look_distance": 8.0
@@ -4015,7 +4017,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 6.0,
@@ -4024,7 +4026,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 8
@@ -4032,7 +4034,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "target_distance": 6.0,
@@ -4041,14 +4043,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 11
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6,
@@ -4058,7 +4060,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 6.0,
@@ -4067,7 +4069,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 1,
     "look_distance": 6.0,
@@ -4076,7 +4078,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "look_distance": 8
@@ -4084,7 +4086,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -4093,7 +4095,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 3,
     "look_distance": 6.0
@@ -4101,7 +4103,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -4110,7 +4112,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "look_distance": 8
@@ -4118,7 +4120,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "target_distance": 6.0,
@@ -4127,7 +4129,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
     "look_distance": 6.0,
@@ -4136,7 +4138,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 12,
     "look_distance": 8,
@@ -4145,7 +4147,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 8,
@@ -4154,7 +4156,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
     "look_distance": 8,
@@ -4163,7 +4165,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 8,
@@ -4172,7 +4174,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 5,
     "look_distance": 8.0
@@ -4180,7 +4182,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "look_distance": 8
@@ -4188,7 +4190,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "look_distance": 8
@@ -4196,7 +4198,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
     "target_distance": 6.0,
@@ -4205,7 +4207,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6,
@@ -4214,7 +4216,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
     "look_distance": 6.0,
@@ -4223,7 +4225,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
     "look_distance": 6.0,
@@ -4232,7 +4234,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
     "look_distance": 6,
@@ -4241,7 +4243,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
     "look_distance": 6,
@@ -4251,7 +4253,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.look_at_target
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.look_at_target": {
     "priority": 5
 }
@@ -4259,21 +4261,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.look_at_trading_player
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 2
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 7
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 4
 }
@@ -4281,14 +4283,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.make_love
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.make_love": {
     "priority": 6
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.make_love": {
     "priority": 5
 }
@@ -4296,7 +4298,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.melee_attack
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "max_dist": 3,
@@ -4307,7 +4309,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -4317,7 +4319,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -4327,7 +4329,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -4337,7 +4339,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
     "track_target": true
@@ -4345,7 +4347,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1,
@@ -4354,7 +4356,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
     "speed_multiplier": 1.0,
@@ -4363,7 +4365,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1,
@@ -4372,7 +4374,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 10,
     "target_dist": 1.2,
@@ -4382,7 +4384,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 1,
     "target_dist": 1.2,
@@ -4393,7 +4395,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1,
@@ -4402,7 +4404,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 1,
     "target_dist": 1.0,
@@ -4411,7 +4413,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
     "target_dist": 1.2,
@@ -4421,7 +4423,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
     "target_dist": 1.2,
@@ -4431,7 +4433,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
     "target_dist": 1.2,
@@ -4441,7 +4443,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -4450,7 +4452,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
     "target_dist": 1.2,
@@ -4460,7 +4462,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -4470,7 +4472,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
     "target_dist": 1.2,
@@ -4480,7 +4482,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1,
@@ -4489,7 +4491,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
     "target_dist": 1.2,
@@ -4499,7 +4501,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 5,
     "target_dist": 1.2,
@@ -4509,7 +4511,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1,
@@ -4518,7 +4520,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1.5,
@@ -4527,7 +4529,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 6,
     "speed_multiplier": 1,
@@ -4536,7 +4538,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.melee_attack": {
     "priority": 6,
     "speed_multiplier": 1,
@@ -4546,11 +4548,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.mingle
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.mingle": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.mingle": {
     "priority": 7,
     "speed_multiplier": 0.5,
@@ -4563,7 +4565,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.mount_pathing
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -4573,7 +4575,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -4583,7 +4585,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4593,7 +4595,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4603,7 +4605,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4613,7 +4615,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4623,7 +4625,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.25,
@@ -4633,7 +4635,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -4643,7 +4645,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4653,7 +4655,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4663,7 +4665,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -4673,7 +4675,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
     "speed_multiplier": 1.5,
@@ -4683,7 +4685,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -4693,7 +4695,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -4703,7 +4705,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4713,7 +4715,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4723,7 +4725,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -4733,7 +4735,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -4743,7 +4745,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.25,
@@ -4753,7 +4755,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -4763,7 +4765,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
     "speed_multiplier": 1.25,
@@ -4773,7 +4775,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -4783,7 +4785,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -4794,7 +4796,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_indoors
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.move_indoors": {
     "priority": 4,
     "speed_multiplier": 0.8
@@ -4802,7 +4804,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.move_indoors": {
     "priority": 6,
     "speed_multiplier": 0.8,
@@ -4812,7 +4814,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_through_village
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.move_through_village": {
     "priority": 3,
     "speed_multiplier": 0.6,
@@ -4822,7 +4824,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_to_land
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.move_to_land": {
     "priority": 6,
     "search_range": 16,
@@ -4833,7 +4835,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_to_random_block
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.move_to_random_block": {
     "priority": 6,
     "speed_multiplier": 0.55,
@@ -4843,7 +4845,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.move_to_random_block": {
     "priority": 5,
     "speed_multiplier": 0.55,
@@ -4854,7 +4856,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_to_village
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.move_to_village": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -4862,7 +4864,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.move_to_village": {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -4871,7 +4873,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.move_to_village": {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -4880,7 +4882,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.move_to_village": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -4889,7 +4891,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.move_to_village": {
     "priority": 3,
     "speed_multiplier": 1.2,
@@ -4899,7 +4901,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_to_water
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.move_to_water": {
     "priority": 1,
     "search_range": 15,
@@ -4908,7 +4910,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.move_to_water": {
     "priority": 4,
     "search_range": 16,
@@ -4918,7 +4920,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.move_to_water": {
     "priority": 1,
     "search_range": 15,
@@ -4929,14 +4931,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_towards_restriction
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
     "speed_multiplier": 1
@@ -4944,7 +4946,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -4956,7 +4958,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -4968,7 +4970,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
     "speed_multiplier": 1
@@ -4976,7 +4978,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 4,
     "speed_multiplier": 1
@@ -4984,7 +4986,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
     "speed_multiplier": 0.6
@@ -4992,7 +4994,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 10,
     "speed_multiplier": 0.6
@@ -5000,7 +5002,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
     "speed_multiplier": 0.6
@@ -5008,7 +5010,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
     "speed_multiplier": 1
@@ -5016,14 +5018,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
     "speed_multiplier": 1
@@ -5031,7 +5033,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
     "speed_multiplier": 1
@@ -5040,7 +5042,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.move_towards_target
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.move_towards_target": {
     "priority": 2,
     "speed_multiplier": 0.9,
@@ -5050,7 +5052,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.nap
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.nap": {
     "priority": 8,
     "cooldown_min": 2.0,
@@ -5112,7 +5114,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.nearest_attackable_target
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5130,7 +5132,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "attack_interval": 10,
@@ -5168,7 +5170,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5200,7 +5202,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5233,7 +5235,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "entity_types": [
@@ -5252,7 +5254,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "within_radius": 12,
@@ -5358,7 +5360,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "entity_types": [
@@ -5386,7 +5388,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
     "attack_interval": 10,
@@ -5405,7 +5407,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
     "within_radius": 16,
@@ -5433,7 +5435,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5488,7 +5490,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5506,7 +5508,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "entity_types": [
@@ -5533,7 +5535,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "entity_types": [
@@ -5561,7 +5563,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "within_radius": 25,
@@ -5631,7 +5633,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
     "entity_types": [
@@ -5660,7 +5662,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "attack_interval": 16,
@@ -5690,7 +5692,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5708,7 +5710,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "attack_interval": 10,
@@ -5745,7 +5747,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "within_radius": 64,
@@ -5768,7 +5770,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "within_radius": 16.0,
@@ -5820,7 +5822,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
     "entity_types": [
@@ -5837,7 +5839,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
     "entity_types": [
@@ -5855,7 +5857,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "entity_types": [
         {
@@ -5901,7 +5903,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
     "entity_types": {
@@ -5917,7 +5919,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -5949,7 +5951,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "reselect_targets": true,
@@ -5994,7 +5996,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -6026,7 +6028,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
     "entity_types": [
@@ -6044,7 +6046,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -6077,7 +6079,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "reselect_targets": true,
@@ -6122,7 +6124,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
     "entity_types": [
@@ -6172,7 +6174,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "within_radius": 12,
@@ -6196,7 +6198,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "within_radius": 12,
@@ -6253,7 +6255,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "entity_types": [
@@ -6285,7 +6287,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
     "entity_types": [
@@ -6322,7 +6324,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "reselect_targets": true,
@@ -6367,7 +6369,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
     "attack_interval": 10,
@@ -6441,7 +6443,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
     "attack_interval": 10,
@@ -6460,7 +6462,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "within_radius": 25,
@@ -6531,7 +6533,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "reselect_targets": true,
@@ -6600,7 +6602,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
     "reselect_targets": true,
@@ -6662,7 +6664,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.nearest_prioritized_attackable_target
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
     "priority": 6,
     "attack_interval": 2,
@@ -6737,7 +6739,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
     "priority": 6,
     "attack_interval": 2,
@@ -6814,7 +6816,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.ocelot_sit_on_block
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.ocelot_sit_on_block": {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -6822,7 +6824,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.ocelot_sit_on_block": {
     "priority": 6,
     "speed_multiplier": 1.0
@@ -6831,7 +6833,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.ocelotattack
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.ocelotattack": {
     "priority": 4,
     "walk_speed_multiplier": 0.8,
@@ -6841,7 +6843,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.ocelotattack": {
     "priority": 4,
     "walk_speed_multiplier": 0.8,
@@ -6852,7 +6854,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.offer_flower
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.offer_flower": {
     "priority": 5
 }
@@ -6860,7 +6862,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.open_door
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.open_door": {
     "priority": 6,
     "close_door_after": true
@@ -6868,7 +6870,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.open_door": {
     "priority": 6,
     "close_door_after": true
@@ -6877,14 +6879,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.owner_hurt_by_target
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.owner_hurt_by_target": {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.owner_hurt_target
-```JSON
+```json
 "minecraft:behavior.owner_hurt_target": {
     "priority": 2
 }
@@ -6892,7 +6894,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.panic
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -6900,7 +6902,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.5
@@ -6908,7 +6910,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -6916,7 +6918,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -6924,7 +6926,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -6932,14 +6934,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 2,
     "speed_multiplier": 1.25
@@ -6947,7 +6949,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 3,
     "speed_multiplier": 1.2
@@ -6955,7 +6957,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 4,
     "speed_multiplier": 1.2
@@ -6963,7 +6965,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -6971,7 +6973,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -6979,7 +6981,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -6987,21 +6989,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 2.5
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -7010,7 +7012,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 0,
     "speed_multiplier": 1.25
@@ -7018,7 +7020,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 3,
     "speed_multiplier": 1.25
@@ -7026,7 +7028,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 2,
     "speed_multiplier": 2.0
@@ -7034,7 +7036,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 2.2
@@ -7042,7 +7044,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -7050,7 +7052,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -7058,7 +7060,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 0,
     "prefer_water": true,
@@ -7067,7 +7069,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 3,
     "speed_multiplier": 0.6
@@ -7075,7 +7077,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 0.6
@@ -7083,7 +7085,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 0.6
@@ -7091,7 +7093,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.panic": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -7100,7 +7102,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.pet_sleep_with_owner
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.pet_sleep_with_owner": {
     "priority": 2,
     "speed_multiplier": 1.2,
@@ -7112,7 +7114,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.pickup_items
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.pickup_items": {
     "priority": 11,
     "max_dist": 3,
@@ -7122,7 +7124,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.pickup_items": {
     "priority": 9,
     "max_dist": 3,
@@ -7132,7 +7134,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.pickup_items": {
     "priority": 4,
     "max_dist": 3,
@@ -7143,7 +7145,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.play
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.play": {
     "priority": 8,
     "speed_multiplier": 0.32
@@ -7151,7 +7153,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.play": {
     "priority": 8,
     "speed_multiplier": 0.32
@@ -7160,33 +7162,33 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.player_ride_tamed
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 # minecraft:behavior.raid_garden
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.raid_garden": {
     "priority": 12,
     "blocks": [
@@ -7202,7 +7204,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.raid_garden": {
     "priority": 5,
     "blocks": [
@@ -7215,7 +7217,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_breach
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.random_breach": {
     "priority": 6,
     "interval": 50,
@@ -7226,7 +7228,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_fly
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.random_fly": {
     "priority": 2,
     "xz_dist": 15,
@@ -7240,217 +7242,217 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_look_around
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 15
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 4
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 5,
     "look_distance": 8.0
@@ -7458,49 +7460,49 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
@@ -7508,7 +7510,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_look_around_and_sit
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.random_look_around_and_sit": {
     "priority": 12,
     "min_look_count": 2,
@@ -7521,7 +7523,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_sitting
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.random_sitting": {
     "priority": 5,
     "start_chance": 0.01,
@@ -7531,7 +7533,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.random_sitting": {
     "priority": 6,
     "start_chance": 0.02,
@@ -7543,7 +7545,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_stroll
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
     "speed_multiplier": 1.0
@@ -7551,7 +7553,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
     "speed_multiplier": 0.8
@@ -7559,7 +7561,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -7567,7 +7569,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1.0
@@ -7575,7 +7577,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -7583,7 +7585,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
     "speed_multiplier": 1
@@ -7591,7 +7593,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -7599,7 +7601,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1
@@ -7607,7 +7609,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 0.5
@@ -7615,7 +7617,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -7623,7 +7625,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1
@@ -7631,7 +7633,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
     "speed_multiplier": 0.6
@@ -7639,7 +7641,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 13,
     "speed_multiplier": 0.8
@@ -7647,7 +7649,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 1.0,
@@ -7656,7 +7658,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -7664,7 +7666,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1
@@ -7672,7 +7674,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1,
@@ -7681,7 +7683,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -7689,7 +7691,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -7697,7 +7699,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -7705,7 +7707,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
     "speed_multiplier": 0.8
@@ -7713,7 +7715,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 14,
     "speed_multiplier": 0.8
@@ -7721,7 +7723,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -7729,7 +7731,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 1
@@ -7737,14 +7739,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.6,
@@ -7754,14 +7756,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1.0
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.4
@@ -7769,7 +7771,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 0.8
@@ -7777,7 +7779,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
     "speed_multiplier": 1
@@ -7785,7 +7787,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -7793,7 +7795,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 2,
     "speed_multiplier": 1
@@ -7801,7 +7803,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -7809,7 +7811,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
     "speed_multiplier": 1
@@ -7817,7 +7819,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
     "interval": 100
@@ -7825,7 +7827,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 11,
     "speed_multiplier": 0.6
@@ -7833,7 +7835,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 10,
     "speed_multiplier": 0.6
@@ -7841,7 +7843,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
     "speed_multiplier": 1
@@ -7849,7 +7851,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -7857,7 +7859,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
     "speed_multiplier": 1
@@ -7865,7 +7867,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
     "speed_multiplier": 1
@@ -7873,7 +7875,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
     "speed_multiplier": 1.0
@@ -7881,7 +7883,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 1
@@ -7889,7 +7891,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -7897,7 +7899,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -7905,7 +7907,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
     "speed_multiplier": 1
@@ -7913,7 +7915,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
     "speed_multiplier": 1
@@ -7922,7 +7924,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.random_swim
 ### dolphin.json
-```JSON
+```json
 "minecraft:behavior.random_swim": {
     "priority": 5,
     "interval": 0,
@@ -7931,7 +7933,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -7942,7 +7944,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -7953,7 +7955,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:behavior.random_swim": {
     "speed_multiplier": 1.0,
     "priority": 3,
@@ -7964,7 +7966,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -7975,7 +7977,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
     "interval": 0,
@@ -7986,7 +7988,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.ranged_attack
 ### blaze.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 4,
     "attack_interval_min": 3,
@@ -8000,7 +8002,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 3,
     "attack_interval_min": 1,
@@ -8010,7 +8012,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 1,
     "attack_radius": 64,
@@ -8020,7 +8022,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
     "attack_radius": 64,
@@ -8029,7 +8031,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
     "attack_radius": 64,
@@ -8038,7 +8040,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
     "attack_radius": 64,
@@ -8048,7 +8050,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 4,
     "attack_interval_min": 1,
@@ -8058,7 +8060,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
     "attack_interval_max": 3,
@@ -8067,7 +8069,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
     "attack_interval_max": 3,
@@ -8075,7 +8077,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
     "attack_interval_max": 3,
@@ -8084,7 +8086,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -8094,7 +8096,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
     "attack_interval_max": 3,
@@ -8102,7 +8104,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
     "attack_interval_max": 3,
@@ -8111,7 +8113,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
     "speed_multiplier": 1.0,
@@ -8123,14 +8125,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.receive_love
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.receive_love": {
     "priority": 7
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.receive_love": {
     "priority": 6
 }
@@ -8138,14 +8140,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.restrict_open_door
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.restrict_open_door": {
     "priority": 5
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.restrict_open_door": {
     "priority": 5
 }
@@ -8153,14 +8155,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.roll
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.roll": {
     "priority": 12,
     "probability": 0.0016
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.roll": {
     "priority": 12,
     "probability": 0.013
@@ -8169,7 +8171,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.run_around_like_crazy
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8177,7 +8179,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8185,7 +8187,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8193,7 +8195,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8202,7 +8204,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.scared
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.scared": {
     "priority": 1,
     "sound_interval": 20
@@ -8211,7 +8213,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.send_event
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.send_event": {
     "priority": 3,
     "event_choices": [
@@ -8251,7 +8253,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.share_items
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.share_items": {
     "priority": 8,
     "max_dist": 3,
@@ -8270,7 +8272,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.share_items": {
     "priority": 9,
     "max_dist": 3,
@@ -8290,14 +8292,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.silverfish_merge_with_stone
 ### silverfish.json
-```JSON
+```json
 "minecraft:behavior.silverfish_merge_with_stone": {
     "priority": 5
 }
 ```
 
 # minecraft:behavior.silverfish_wake_up_friends
-```JSON
+```json
 "minecraft:behavior.silverfish_wake_up_friends": {
     "priority": 1
 }
@@ -8305,7 +8307,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.skeleton_horse_trap
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:behavior.skeleton_horse_trap": {
     "within_radius": 10.0,
     "duration": 900.0,
@@ -8315,11 +8317,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.sleep
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.sleep": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.sleep": {
     "priority": 3,
     "goal_radius": 1.5,
@@ -8333,14 +8335,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.slime_attack
 ### magma_cube.json
-```JSON
+```json
 "minecraft:behavior.slime_attack": {
     "priority": 3
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:behavior.slime_attack": {
     "priority": 3
 }
@@ -8348,14 +8350,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.slime_float
 ### magma_cube.json
-```JSON
+```json
 "minecraft:behavior.slime_float": {
     "priority": 1
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:behavior.slime_float": {
     "priority": 1
 }
@@ -8363,14 +8365,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.slime_keep_on_jumping
 ### magma_cube.json
-```JSON
+```json
 "minecraft:behavior.slime_keep_on_jumping": {
     "priority": 5
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:behavior.slime_keep_on_jumping": {
     "priority": 5
 }
@@ -8378,14 +8380,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.slime_random_direction
 ### magma_cube.json
-```JSON
+```json
 "minecraft:behavior.slime_random_direction": {
     "priority": 4
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:behavior.slime_random_direction": {
     "priority": 4
 }
@@ -8393,7 +8395,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.snacking
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.snacking": {
     "priority": 2,
     "snacking_cooldown": 22.5,
@@ -8406,7 +8408,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.snacking": {
     "priority": 3,
     "snacking_cooldown": 17.5,
@@ -8420,7 +8422,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.sneeze
-```JSON
+```json
 "minecraft:behavior.sneeze": {
     "priority": 7,
     "probability": 0.0001666,
@@ -8465,7 +8467,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.sneeze": {
     "priority": 7,
     "probability": 0.002,
@@ -8512,35 +8514,35 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.squid_dive
 ### squid.json
-```JSON
+```json
 "minecraft:behavior.squid_dive": {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.squid_flee
-```JSON
+```json
 "minecraft:behavior.squid_flee": {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.squid_idle
-```JSON
+```json
 "minecraft:behavior.squid_idle": {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.squid_move_away_from_ground
-```JSON
+```json
 "minecraft:behavior.squid_move_away_from_ground": {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.squid_out_of_water
-```JSON
+```json
 "minecraft:behavior.squid_out_of_water": {
     "priority": 2
 }
@@ -8548,7 +8550,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.stalk_and_pounce_on_target
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.stalk_and_pounce_on_target": {
     "priority": 7,
     "stalk_speed": 1.2,
@@ -8570,28 +8572,28 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.stay_while_sitting
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
 }
@@ -8599,7 +8601,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.stomp_attack
 ### polar_bear.json
-```JSON
+```json
 "minecraft:behavior.stomp_attack": {
     "priority": 1,
     "track_target": true,
@@ -8609,7 +8611,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.stomp_turtle_egg
 ### drowned.json
-```JSON
+```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
     "speed_multiplier": 1,
@@ -8622,7 +8624,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
     "speed_multiplier": 1,
@@ -8635,7 +8637,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
     "speed_multiplier": 1,
@@ -8648,7 +8650,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
     "speed_multiplier": 1,
@@ -8661,7 +8663,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
     "speed_multiplier": 1,
@@ -8674,7 +8676,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
     "speed_multiplier": 1,
@@ -8688,7 +8690,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.stroll_towards_village
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.stroll_towards_village": {
     "priority": 11,
     "speed_multiplier": 1.0,
@@ -8701,7 +8703,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.summon_entity
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:behavior.summon_entity": {
     "priority": 2,
     "summon_choices": [
@@ -8782,7 +8784,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.swell
 ### creeper.json
-```JSON
+```json
 "minecraft:behavior.swell": {
     "start_distance": 2.5,
     "stop_distance": 6.0,
@@ -8792,21 +8794,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.swim_idle
 ### fish.json
-```JSON
+```json
 "minecraft:behavior.swim_idle": {
     "priority": 5
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:behavior.swim_idle": {
     "priority": 5
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:behavior.swim_idle": {
     "priority": 5
 }
@@ -8814,7 +8816,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.swim_wander
 ### fish.json
-```JSON
+```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -8824,7 +8826,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:behavior.swim_wander": {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -8834,7 +8836,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
     "speed_multiplier": 0.014,
@@ -8843,7 +8845,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -8854,7 +8856,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.swoop_attack
 ### phantom.json
-```JSON
+```json
 "minecraft:behavior.swoop_attack": {
     "priority": 2,
     "delay_range": [
@@ -8866,14 +8868,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.take_flower
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.take_flower": {
     "priority": 7
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.take_flower": {
     "priority": 9
 }
@@ -8881,7 +8883,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.target_when_pushed
 ### iron_golem.json
-```JSON
+```json
 "minecraft:behavior.target_when_pushed": {
     "priority": 1,
     "percent_chance": 5.0,
@@ -8909,7 +8911,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.tempt
 ### cat.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 5,
     "speed_multiplier": 0.5,
@@ -8922,7 +8924,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 5,
     "speed_multiplier": 0.5,
@@ -8935,7 +8937,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -8949,7 +8951,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -8960,7 +8962,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -8980,7 +8982,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 3,
     "speed_multiplier": 0.5,
@@ -8993,7 +8995,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -9012,7 +9014,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -9023,7 +9025,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -9043,7 +9045,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 0.5,
@@ -9056,7 +9058,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 0.5,
@@ -9069,7 +9071,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -9080,7 +9082,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -9094,7 +9096,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 3,
     "speed_multiplier": 1,
@@ -9107,7 +9109,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -9118,7 +9120,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:behavior.tempt": {
     "priority": 3,
     "speed_multiplier": 1.1,
@@ -9130,11 +9132,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.trade_interest
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.trade_interest": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9145,7 +9147,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9156,7 +9158,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9167,7 +9169,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9178,7 +9180,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9189,7 +9191,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9200,7 +9202,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9211,7 +9213,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9222,7 +9224,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9233,7 +9235,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9244,7 +9246,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9255,7 +9257,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9266,7 +9268,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 5,
     "within_radius": 6.0,
@@ -9278,7 +9280,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.trade_interest": {
     "priority": 3,
     "within_radius": 6.0,
@@ -9291,21 +9293,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.trade_with_player
 ### villager.json
-```JSON
+```json
 "minecraft:behavior.trade_with_player": {
     "priority": 1
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.trade_with_player": {
     "priority": 2
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:behavior.trade_with_player": {
     "priority": 1
 }
@@ -9313,14 +9315,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.wither_random_attack_pos_goal
 ### wither.json
-```JSON
+```json
 "minecraft:behavior.wither_random_attack_pos_goal": {
     "priority": 3
 }
 ```
 
 # minecraft:behavior.wither_target_highest_damage
-```JSON
+```json
 "minecraft:behavior.wither_target_highest_damage": {
     "priority": 1
 }
@@ -9328,11 +9330,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:behavior.work
 ### villager_v2.json
-```JSON
+```json
 "minecraft:behavior.work": {}
 ```
 
-```JSON
+```json
 "minecraft:behavior.work": {
     "priority": 7,
     "active_time": 250,
@@ -9349,7 +9351,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.work": {
     "priority": 7,
     "active_time": 250,
@@ -9366,7 +9368,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.work": {
     "priority": 7,
     "active_time": 250,
@@ -9383,7 +9385,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:behavior.work": {
     "priority": 7,
     "active_time": 250,
@@ -9402,7 +9404,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:boostable
 ### pig.json
-```JSON
+```json
 "minecraft:boostable": {
     "speed_multiplier": 2.0,
     "duration": 3.0,
@@ -9418,7 +9420,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:boss
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:boss": {
     "should_darken_sky": false,
     "hud_range": 125
@@ -9426,7 +9428,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:boss": {
     "should_darken_sky": true,
     "hud_range": 55
@@ -9435,7 +9437,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:break_blocks
 ### ravager.json
-```JSON
+```json
 "minecraft:break_blocks": {
     "breakable_blocks": [
         "bamboo",
@@ -9474,7 +9476,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:breathable
 ### bat.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9482,7 +9484,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9490,7 +9492,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9498,7 +9500,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9506,7 +9508,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9514,7 +9516,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9522,7 +9524,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 240,
     "suffocate_time": 0,
@@ -9533,7 +9535,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9541,7 +9543,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9551,14 +9553,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:breathable": {
     "breathes_water": true
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9566,7 +9568,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9574,7 +9576,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9582,7 +9584,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9592,7 +9594,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:breathable": {
     "totalSupply": 15,
     "suffocateTime": 0
@@ -9600,7 +9602,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9608,14 +9610,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:breathable": {
     "breathes_water": true
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9623,7 +9625,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9632,7 +9634,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9640,7 +9642,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9649,7 +9651,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9657,7 +9659,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9665,7 +9667,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9673,7 +9675,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9681,7 +9683,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9689,7 +9691,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9699,7 +9701,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9707,7 +9709,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9715,7 +9717,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": -1,
@@ -9725,7 +9727,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9733,7 +9735,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9743,7 +9745,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9751,7 +9753,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:breathable": {
     "suffocate_time": 0,
     "total_supply": 15
@@ -9759,7 +9761,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9769,7 +9771,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9777,7 +9779,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9785,7 +9787,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9793,7 +9795,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9802,7 +9804,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9811,7 +9813,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9819,7 +9821,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9827,7 +9829,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9835,7 +9837,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9845,7 +9847,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9854,7 +9856,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9864,7 +9866,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9875,7 +9877,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9883,7 +9885,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9891,7 +9893,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9899,7 +9901,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9907,7 +9909,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9915,7 +9917,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9923,7 +9925,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9932,7 +9934,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
@@ -9940,7 +9942,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9950,7 +9952,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9959,7 +9961,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9968,7 +9970,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9977,7 +9979,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -9987,7 +9989,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:breedable
 ### cat.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": true,
     "allow_sitting": true,
@@ -10007,7 +10009,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breeds_with": {
@@ -10028,7 +10030,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breed_items": "wheat",
@@ -10044,7 +10046,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": true,
     "inherit_tamed": false,
@@ -10075,7 +10077,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breed_items": "sweet_berries",
@@ -10091,7 +10093,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": true,
     "inherit_tamed": false,
@@ -10122,7 +10124,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": true,
     "inherit_tamed": false,
@@ -10147,7 +10149,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breed_items": "wheat",
@@ -10168,7 +10170,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breeds_with": {
@@ -10187,7 +10189,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "blend_attributes": false,
@@ -10212,7 +10214,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breeds_with": {
@@ -10232,7 +10234,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:breedable": {
     "breed_items": [
         "golden_carrot",
@@ -10251,7 +10253,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "breeds_with": {
@@ -10263,7 +10265,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": false,
     "causes_pregnancy": true,
@@ -10282,7 +10284,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:breedable": {
     "require_tame": true,
     "breeds_with": {
@@ -10311,7 +10313,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:bribeable
 ### dolphin.json
-```JSON
+```json
 "minecraft:bribeable": {
     "bribe_items": [
         "fish",
@@ -10322,315 +10324,315 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:burns_in_daylight
 ### drowned.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:burns_in_daylight": false
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:burns_in_daylight": false
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:burns_in_daylight": {}
 ```
 
 # minecraft:can_climb
 ### blaze.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:can_climb": {}
 ```
 
 # minecraft:can_fly
 ### bat.json
-```JSON
+```json
 "minecraft:can_fly": {}
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:can_fly": {
     "value": true
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:can_fly": {}
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:can_fly": {
     "value": true
 }
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:can_fly": {}
 ```
 
 # minecraft:can_power_jump
 ### donkey.json
-```JSON
+```json
 "minecraft:can_power_jump": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:can_power_jump": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:can_power_jump": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:can_power_jump": {}
 ```
 
 # minecraft:collision_box
 ### armor_stand.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.5,
     "height": 1.975
@@ -10638,7 +10640,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### arrow.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -10646,7 +10648,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### bat.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.5,
     "height": 0.9
@@ -10654,7 +10656,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.5,
     "height": 1.8
@@ -10662,7 +10664,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### boat.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 0.455
@@ -10670,7 +10672,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.7
@@ -10678,7 +10680,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.7,
     "height": 0.5
@@ -10686,7 +10688,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.7
@@ -10694,7 +10696,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.8
@@ -10702,7 +10704,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.7
@@ -10710,7 +10712,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 1.3
@@ -10718,7 +10720,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.8
@@ -10726,7 +10728,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 0.6
@@ -10734,7 +10736,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 1.6
@@ -10742,7 +10744,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dragon_fireball.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.31,
     "height": 0.31
@@ -10750,7 +10752,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -10758,7 +10760,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### egg.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -10766,7 +10768,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.99,
     "height": 1.99
@@ -10774,7 +10776,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 2.9
@@ -10782,7 +10784,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.4,
     "height": 0.3
@@ -10790,7 +10792,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.98
@@ -10798,7 +10800,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 13,
     "height": 4
@@ -10806,7 +10808,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -10814,7 +10816,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -10822,7 +10824,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### eye_of_ender_signal.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -10830,7 +10832,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fireball.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.31,
     "height": 0.31
@@ -10838,7 +10840,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fireworks_rocket.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -10846,7 +10848,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.3
@@ -10854,7 +10856,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.15,
     "height": 0.15
@@ -10862,7 +10864,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.7
@@ -10870,7 +10872,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 4,
     "height": 4
@@ -10878,7 +10880,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.85,
     "height": 0.85
@@ -10886,7 +10888,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.7
@@ -10894,7 +10896,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 1.6
@@ -10902,7 +10904,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -10910,7 +10912,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 2.9
@@ -10918,7 +10920,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -10926,7 +10928,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 1.87
@@ -10934,7 +10936,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama_spit.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.31,
     "height": 0.31
@@ -10942,21 +10944,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 2.08,
     "height": 2.08
 }
 ```
 
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.78,
     "height": 0.78
 }
 ```
 
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.52,
     "height": 0.52
@@ -10964,7 +10966,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.7
@@ -10972,7 +10974,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 1.3
@@ -10980,7 +10982,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 1.6
@@ -10988,7 +10990,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.7
@@ -10996,7 +10998,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.7,
     "height": 1.5
@@ -11004,7 +11006,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.5,
     "height": 1
@@ -11012,7 +11014,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 0.5
@@ -11020,7 +11022,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 0.9
@@ -11028,7 +11030,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11036,7 +11038,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.8
@@ -11044,7 +11046,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.3,
     "height": 1.4
@@ -11052,7 +11054,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.8,
     "height": 0.8
@@ -11060,7 +11062,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.67,
     "height": 0.67
@@ -11068,7 +11070,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:collision_box": {
     "height": 1.9,
     "width": 1.2
@@ -11076,7 +11078,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.5,
     "height": 0.5
@@ -11084,7 +11086,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.9,
     "height": 1.3
@@ -11092,7 +11094,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker_bullet.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.625,
     "height": 0.625
@@ -11100,7 +11102,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.4,
     "height": 0.3
@@ -11108,7 +11110,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11116,7 +11118,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 1.6
@@ -11124,21 +11126,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 2.08,
     "height": 2.08
 }
 ```
 
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.04,
     "height": 1.04
 }
 ```
 
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.52,
     "height": 0.52
@@ -11146,7 +11148,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### small_fireball.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.31,
     "height": 0.31
@@ -11154,7 +11156,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snowball.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -11162,7 +11164,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.4,
     "height": 1.8
@@ -11170,7 +11172,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 0.9
@@ -11178,7 +11180,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### splash_potion.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -11186,7 +11188,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.95,
     "height": 0.95
@@ -11194,7 +11196,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11202,7 +11204,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.35
@@ -11210,7 +11212,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.98
@@ -11218,7 +11220,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.98,
     "height": 0.7
@@ -11226,7 +11228,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.75,
     "height": 1.8
@@ -11234,7 +11236,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.4,
     "height": 0.4
@@ -11242,14 +11244,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.2
 }
 ```
 
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.2,
     "height": 0.4
@@ -11257,7 +11259,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.4,
     "height": 0.8
@@ -11265,7 +11267,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11273,7 +11275,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11281,7 +11283,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11289,7 +11291,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11297,7 +11299,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11305,7 +11307,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1,
     "height": 3
@@ -11313,7 +11315,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.72,
     "height": 2.01
@@ -11321,7 +11323,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.15,
     "height": 0.15
@@ -11329,7 +11331,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.15,
     "height": 0.15
@@ -11337,7 +11339,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 0.8
@@ -11345,7 +11347,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### xp_bottle.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.25,
     "height": 0.25
@@ -11353,7 +11355,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11361,7 +11363,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 1.4,
     "height": 1.6
@@ -11369,7 +11371,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11377,7 +11379,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11385,7 +11387,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:collision_box": {
     "width": 0.6,
     "height": 1.9
@@ -11394,280 +11396,280 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:color
 ### cat.json
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 12
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 15
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 9
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 11
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 12
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 13
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 11
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 9
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color": {
     "value": 9
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:color": {
     "value": 14
 }
@@ -11675,223 +11677,223 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:color2
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:color2": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 9
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 11
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 12
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 13
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:color2": {
     "value": 4
 }
@@ -11899,7 +11901,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:damage_over_time
 ### dolphin.json
-```JSON
+```json
 "minecraft:damage_over_time": {
     "damage_per_hurt": 1,
     "time_between_hurt": 0
@@ -11908,7 +11910,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:damage_sensor
 ### bat.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -11918,7 +11920,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -11928,7 +11930,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -11938,7 +11940,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -11948,7 +11950,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -11965,7 +11967,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -11975,7 +11977,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": [
         {
@@ -11993,7 +11995,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -12003,7 +12005,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -12013,7 +12015,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "all",
@@ -12029,7 +12031,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "all",
@@ -12039,7 +12041,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -12049,7 +12051,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": [
         {
@@ -12101,7 +12103,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -12111,7 +12113,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -12121,7 +12123,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12138,7 +12140,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12162,7 +12164,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12187,7 +12189,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12201,7 +12203,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12217,7 +12219,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "fall",
@@ -12227,7 +12229,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "cause": "lightning",
@@ -12238,7 +12240,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": [
         {
@@ -12282,7 +12284,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": [
         {
@@ -12326,7 +12328,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12350,7 +12352,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12375,7 +12377,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": [
         {
@@ -12404,7 +12406,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
@@ -12421,7 +12423,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:despawn
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:despawn": {
     "remove_child_entities": true,
     "filters": {
@@ -12452,7 +12454,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:dweller
 ### cat.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "passive",
@@ -12465,7 +12467,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -12478,7 +12480,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "defender",
@@ -12491,7 +12493,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -12504,7 +12506,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -12517,7 +12519,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12529,7 +12531,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12542,7 +12544,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12555,7 +12557,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12568,7 +12570,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12581,7 +12583,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12594,7 +12596,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12607,7 +12609,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12620,7 +12622,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12633,7 +12635,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12646,7 +12648,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12659,7 +12661,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12672,7 +12674,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12685,7 +12687,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -12699,7 +12701,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -12712,7 +12714,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:dweller": {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -12726,11 +12728,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:economy_trade_table
 ### villager_v2.json
-```JSON
+```json
 "minecraft:economy_trade_table": {}
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.farmer",
     "table": "trading/economy_trades/farmer_trades.json",
@@ -12739,7 +12741,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.fisherman",
     "table": "trading/economy_trades/fisherman_trades.json",
@@ -12748,7 +12750,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.shepherd",
     "table": "trading/economy_trades/shepherd_trades.json",
@@ -12757,7 +12759,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.fletcher",
     "table": "trading/economy_trades/fletcher_trades.json",
@@ -12766,7 +12768,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.librarian",
     "table": "trading/economy_trades/librarian_trades.json",
@@ -12775,7 +12777,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.cartographer",
     "table": "trading/economy_trades/cartographer_trades.json",
@@ -12784,7 +12786,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.cleric",
     "table": "trading/economy_trades/cleric_trades.json",
@@ -12793,7 +12795,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.armor",
     "table": "trading/economy_trades/armorer_trades.json",
@@ -12802,7 +12804,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.weapon",
     "table": "trading/economy_trades/weapon_smith_trades.json",
@@ -12811,7 +12813,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.tool",
     "table": "trading/economy_trades/tool_smith_trades.json",
@@ -12820,7 +12822,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.butcher",
     "table": "trading/economy_trades/butcher_trades.json",
@@ -12829,7 +12831,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.leather",
     "table": "trading/economy_trades/leather_worker_trades.json",
@@ -12838,7 +12840,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.villager.mason",
     "table": "trading/economy_trades/stone_mason_trades.json",
@@ -12848,7 +12850,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.wandering_trader.name",
     "table": "trading/economy_trades/wandering_trader_trades.json",
@@ -12858,7 +12860,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:entity_sensor
 ### pufferfish.json
-```JSON
+```json
 "minecraft:entity_sensor": {
     "sensor_range": 1.5,
     "minimum_count": 1,
@@ -12891,7 +12893,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:entity_sensor": {
     "sensor_range": 10,
     "require_all": true,
@@ -12926,7 +12928,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:environment_sensor
 ### cave_spider.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -12939,7 +12941,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -12953,7 +12955,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -12977,7 +12979,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -12992,7 +12994,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13016,7 +13018,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13037,7 +13039,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13076,7 +13078,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13115,7 +13117,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13136,7 +13138,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13158,7 +13160,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -13174,7 +13176,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13188,7 +13190,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13203,7 +13205,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13227,7 +13229,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13241,7 +13243,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13256,7 +13258,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13279,7 +13281,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13293,7 +13295,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13307,7 +13309,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13322,7 +13324,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13335,7 +13337,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13349,7 +13351,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13363,7 +13365,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13377,7 +13379,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13392,7 +13394,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13405,7 +13407,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13419,7 +13421,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": {
         "filters": {
@@ -13435,7 +13437,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:equipment
 ### drowned.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/drowned_ranged_equipment.json",
     "slot_drop_chance": [
@@ -13447,7 +13449,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/drowned_equipment.json",
     "slot_drop_chance": [
@@ -13460,7 +13462,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/fox_equipment.json",
     "slot_drop_chance": [
@@ -13473,20 +13475,20 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_equipment.json"
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/pillager_gear.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/pillager_captain_equipment.json",
     "slot_drop_chance": [
@@ -13498,7 +13500,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/pillager_captain_equipment.json",
     "slot_drop_chance": [
@@ -13511,34 +13513,34 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/skeleton_gear.json"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/skeleton_gear.json"
 }
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vex_gear.json"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vindicator_gear.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vindicator_captain_equipment.json",
     "slot_drop_chance": [
@@ -13550,7 +13552,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vindicator_captain_equipment.json",
     "slot_drop_chance": [
@@ -13563,21 +13565,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/wither_skeleton_gear.json"
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_equipment.json"
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_pigman_gear.json"
 }
@@ -13585,7 +13587,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:equippable
 ### donkey.json
-```JSON
+```json
 "minecraft:equippable": {
     "slots": [
         {
@@ -13606,7 +13608,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:equippable": {
     "slots": [
         {
@@ -13637,7 +13639,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:equippable": {
     "slots": [
         {
@@ -13652,7 +13654,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:equippable": {
     "slots": [
         {
@@ -13674,14 +13676,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:experience_reward
 ### blaze.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13689,14 +13691,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13704,7 +13706,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13712,21 +13714,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13734,55 +13736,55 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 3 : 0"
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "10"
 }
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13790,21 +13792,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13812,20 +13814,20 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13833,14 +13835,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13848,14 +13850,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13863,7 +13865,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
@@ -13871,21 +13873,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13893,35 +13895,35 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "Math.Min(query.player_level * 7, 100)"
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13929,21 +13931,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 20 : 0"
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -13951,70 +13953,70 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
@@ -14022,42 +14024,42 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "50"
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -14065,59 +14067,59 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-```JSON
+```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
@@ -14125,7 +14127,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:explode
 ### creeper.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -14135,7 +14137,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -14145,7 +14147,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -14155,7 +14157,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -14166,7 +14168,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -14177,7 +14179,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fireball.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -14189,7 +14191,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 4,
     "fuse_lit": true,
@@ -14198,7 +14200,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": {
         "range_min": 0.5,
@@ -14211,7 +14213,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 4,
     "fuse_lit": true,
@@ -14220,7 +14222,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -14230,7 +14232,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -14241,7 +14243,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 "minecraft:explode": {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -14254,53 +14256,53 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:fire_immune
 ### blaze.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:fire_immune": true
 ```
 
 # minecraft:flocking
 ### dolphin.json
-```JSON
+```json
 "minecraft:flocking": {
     "in_water": false,
     "match_variants": false,
@@ -14324,7 +14326,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:flocking": {
     "in_water": true,
     "match_variants": false,
@@ -14348,7 +14350,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:flocking": {
     "in_water": true,
     "match_variants": false,
@@ -14372,7 +14374,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:flocking": {
     "in_water": true,
     "match_variants": false,
@@ -14396,7 +14398,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:flocking": {
     "in_water": true,
     "match_variants": true,
@@ -14421,7 +14423,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:flying_speed
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:flying_speed": {
     "value": 0.6
 }
@@ -14429,7 +14431,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:follow_range
 ### blaze.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 48,
     "max": 48
@@ -14437,7 +14439,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 48,
     "max": 48
@@ -14445,7 +14447,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 16,
     "max": 16
@@ -14453,7 +14455,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 32,
     "max": 32
@@ -14461,14 +14463,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64,
     "max": 64
@@ -14476,7 +14478,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 16,
     "max": 16
@@ -14484,14 +14486,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 40,
     "max": 40
@@ -14499,7 +14501,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64,
     "max": 64
@@ -14507,49 +14509,49 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 48
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 1024
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 128
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:follow_range": {
     "value": 64
 }
@@ -14557,7 +14559,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:genetics
 ### panda.json
-```JSON
+```json
 "minecraft:genetics": {
     "mutation_rate": 0.03125,
     "genes": [
@@ -14623,7 +14625,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:giveable
-```JSON
+```json
 "minecraft:giveable": {
     "triggers": {
         "cooldown": 3.0,
@@ -14641,7 +14643,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:healable
 ### cat.json
-```JSON
+```json
 "minecraft:healable": {
     "items": [
         {
@@ -14657,7 +14659,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:healable": {
     "items": [
         {
@@ -14693,7 +14695,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:healable": {
     "items": [
         {
@@ -14729,7 +14731,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:healable": {
     "items": [
         {
@@ -14745,7 +14747,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:healable": {
     "items": [
         {
@@ -14781,7 +14783,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:healable": {
     "force_use": true,
     "filters": {
@@ -14807,7 +14809,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:healable": {
     "items": [
         {
@@ -14888,7 +14890,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:health
 ### armor_stand.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -14896,7 +14898,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### bat.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -14904,7 +14906,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -14912,14 +14914,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -14927,7 +14929,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:health": {
     "value": 12,
     "max": 12
@@ -14935,7 +14937,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:health": {
     "value": 4,
     "max": 4
@@ -14943,7 +14945,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -14951,7 +14953,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -14959,7 +14961,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -14967,7 +14969,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:health": {
     "value": {
         "range_min": 15,
@@ -14977,7 +14979,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -14985,7 +14987,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:health": {
     "value": 80,
     "max": 80
@@ -14993,7 +14995,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:health": {
     "value": 40,
     "max": 40
@@ -15001,7 +15003,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:health": {
     "value": 8,
     "max": 8
@@ -15009,7 +15011,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:health": {
     "value": 1,
     "max": 1
@@ -15017,7 +15019,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:health": {
     "value": 200,
     "max": 200
@@ -15025,7 +15027,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:health": {
     "value": 24,
     "max": 24
@@ -15033,7 +15035,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -15041,7 +15043,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15049,7 +15051,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -15057,7 +15059,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:health": {
     "value": 30,
     "max": 30
@@ -15065,7 +15067,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:health": {
     "value": {
         "range_min": 15,
@@ -15075,7 +15077,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15083,7 +15085,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:health": {
     "value": 100,
     "max": 100
@@ -15091,7 +15093,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:health": {
     "value": {
         "range_min": 15,
@@ -15101,21 +15103,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:health": {
     "value": 16,
     "max": 16
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 4,
     "max": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 1,
     "max": 1
@@ -15123,7 +15125,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -15131,7 +15133,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:health": {
     "value": {
         "range_min": 15,
@@ -15141,14 +15143,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15156,14 +15158,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -15171,7 +15173,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -15179,7 +15181,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15187,7 +15189,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -15195,7 +15197,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:health": {
     "value": 24,
     "max": 24
@@ -15203,14 +15205,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:health": {
     "value": 30
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -15218,7 +15220,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:health": {
     "value": 3,
     "max": 3
@@ -15226,7 +15228,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:health": {
     "max": 100,
     "value": 100
@@ -15234,21 +15236,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -15256,7 +15258,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:health": {
     "value": 8,
     "max": 8
@@ -15264,7 +15266,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:health": {
     "value": 30,
     "max": 30
@@ -15272,7 +15274,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:health": {
     "value": 8,
     "max": 8
@@ -15280,7 +15282,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15288,7 +15290,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:health": {
     "value": 15,
     "max": 15
@@ -15296,21 +15298,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:health": {
     "value": 16,
     "max": 16
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 4,
     "max": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 1,
     "max": 1
@@ -15318,7 +15320,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:health": {
     "value": 4,
     "max": 4
@@ -15326,7 +15328,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:health": {
     "value": 16,
     "max": 16
@@ -15334,7 +15336,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:health": {
     "value": 10,
     "max": 10
@@ -15342,7 +15344,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15350,7 +15352,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 "minecraft:health": {
     "value": 4,
     "max": 4
@@ -15358,7 +15360,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:health": {
     "value": 6,
     "max": 6
@@ -15366,14 +15368,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:health": {
     "value": 30
 }
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:health": {
     "value": 14,
     "max": 14
@@ -15381,7 +15383,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15389,7 +15391,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15397,7 +15399,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:health": {
     "value": 24,
     "max": 24
@@ -15405,7 +15407,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15413,7 +15415,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:health": {
     "value": 26,
     "max": 26
@@ -15421,7 +15423,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:health": {
     "value": 600,
     "max": 600
@@ -15429,7 +15431,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15437,14 +15439,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:health": {
     "value": 8,
     "max": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15452,7 +15454,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15460,7 +15462,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:health": {
     "value": 15,
     "max": 15
@@ -15468,7 +15470,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15476,7 +15478,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15484,7 +15486,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:health": {
     "value": 20,
     "max": 20
@@ -15493,26 +15495,26 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:hide
 ### villager_v2.json
-```JSON
+```json
 "minecraft:hide": {}
 ```
 
 # minecraft:home
 ### turtle.json
-```JSON
+```json
 "minecraft:home": {}
 ```
 
 # minecraft:horse.jump_strength
 ### donkey.json
-```JSON
+```json
 "minecraft:horse.jump_strength": {
     "value": 0.5
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:horse.jump_strength": {
     "value": {
         "range_min": 0.4,
@@ -15522,14 +15524,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:horse.jump_strength": {
     "value": 0.5
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:horse.jump_strength": {
     "value": {
         "range_min": 0.4,
@@ -15539,7 +15541,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:horse.jump_strength": {
     "value": {
         "range_min": 0.4,
@@ -15550,7 +15552,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:hurt_on_condition
 ### armor_stand.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15568,7 +15570,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### arrow.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15586,7 +15588,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### bat.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15604,7 +15606,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15621,7 +15623,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### boat.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15639,7 +15641,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15657,7 +15659,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15675,7 +15677,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15693,7 +15695,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15711,7 +15713,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15729,7 +15731,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15747,7 +15749,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15765,7 +15767,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15783,7 +15785,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15801,7 +15803,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15828,7 +15830,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15846,7 +15848,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15864,7 +15866,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15882,7 +15884,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15900,7 +15902,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15918,7 +15920,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15936,7 +15938,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15954,7 +15956,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15972,7 +15974,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -15990,7 +15992,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16008,7 +16010,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16026,7 +16028,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16044,7 +16046,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16062,7 +16064,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16080,7 +16082,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16098,7 +16100,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16116,7 +16118,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16134,7 +16136,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16152,7 +16154,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16170,7 +16172,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16188,7 +16190,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16206,7 +16208,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16224,7 +16226,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16242,7 +16244,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16260,7 +16262,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16278,7 +16280,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16296,7 +16298,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16314,7 +16316,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16332,7 +16334,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16368,7 +16370,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16386,7 +16388,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16404,7 +16406,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16422,7 +16424,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16440,7 +16442,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16458,7 +16460,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16476,7 +16478,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16494,7 +16496,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16512,7 +16514,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16530,7 +16532,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16548,7 +16550,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16566,7 +16568,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16584,7 +16586,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16602,7 +16604,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16620,7 +16622,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16638,7 +16640,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
         {
@@ -16657,28 +16659,28 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:input_ground_controlled
 ### donkey.json
-```JSON
+```json
 "minecraft:input_ground_controlled": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:input_ground_controlled": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:input_ground_controlled": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:input_ground_controlled": {}
 ```
 
 # minecraft:insomnia
 ### player.json
-```JSON
+```json
 "minecraft:insomnia": {
     "days_until_insomnia": 3
 }
@@ -16686,7 +16688,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:interact
 ### cow.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -16717,7 +16719,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": {
         "on_interact": {
@@ -16753,7 +16755,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -16785,7 +16787,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -16817,7 +16819,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -17388,7 +17390,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -17420,7 +17422,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -17442,7 +17444,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -17488,7 +17490,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -17952,7 +17954,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -17991,7 +17993,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": [
         {
@@ -18062,7 +18064,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": {
         "on_interact": {
@@ -18091,7 +18093,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:interact": {
     "interactions": {
         "on_interact": {
@@ -18121,7 +18123,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:inventory
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:inventory": {
     "container_type": "minecart_chest",
     "inventory_size": 27,
@@ -18130,12 +18132,12 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:inventory": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 16,
     "container_type": "horse"
@@ -18143,7 +18145,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:inventory": {
     "container_type": "minecart_hopper",
     "inventory_size": 5,
@@ -18152,7 +18154,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 2,
     "container_type": "horse"
@@ -18160,7 +18162,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 16,
     "container_type": "horse",
@@ -18169,7 +18171,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 16,
     "container_type": "horse"
@@ -18177,7 +18179,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 1,
     "private": true
@@ -18185,7 +18187,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 8,
     "private": true
@@ -18193,7 +18195,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:inventory": {
     "inventory_size": 8,
     "private": true
@@ -18202,189 +18204,189 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:is_baby
 ### cat.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:is_baby": {}
 ```
 
 # minecraft:is_charged
 ### creeper.json
-```JSON
+```json
 "minecraft:is_charged": {}
 ```
 
 # minecraft:is_chested
 ### donkey.json
-```JSON
+```json
 "minecraft:is_chested": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:is_chested": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:is_chested": {}
 ```
 
 # minecraft:is_dyeable
 ### cat.json
-```JSON
+```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
 }
@@ -18392,193 +18394,193 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:is_hidden_when_invisible
 ### player.json
-```JSON
+```json
 "minecraft:is_hidden_when_invisible": {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:is_hidden_when_invisible": {}
 ```
 
 # minecraft:is_ignited
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:is_ignited": {}
 ```
 
-```JSON
+```json
 "minecraft:is_ignited": {}
 ```
 
 # minecraft:is_illager_captain
 ### pillager.json
-```JSON
+```json
 "minecraft:is_illager_captain": {}
 ```
 
-```JSON
+```json
 "minecraft:is_illager_captain": {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:is_illager_captain": {}
 ```
 
-```JSON
+```json
 "minecraft:is_illager_captain": {}
 ```
 
 # minecraft:is_saddled
 ### donkey.json
-```JSON
+```json
 "minecraft:is_saddled": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:is_saddled": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:is_saddled": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:is_saddled": {}
 ```
 
 # minecraft:is_shaking
 ### husk.json
-```JSON
+```json
 "minecraft:is_shaking": {}
 ```
 
-```JSON
+```json
 "minecraft:is_shaking": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:is_shaking": {}
 ```
 
-```JSON
+```json
 "minecraft:is_shaking": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:is_shaking": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:is_shaking": {}
 ```
 
 # minecraft:is_sheared
 ### sheep.json
-```JSON
+```json
 "minecraft:is_sheared": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:is_sheared": {}
 ```
 
 # minecraft:is_stackable
 ### boat.json
-```JSON
+```json
 "minecraft:is_stackable": {}
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:is_stackable": {
     "value": true
 }
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:is_stackable": {}
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:is_stackable": {}
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:is_stackable": {}
 ```
 
 # minecraft:is_stunned
 ### ravager.json
-```JSON
+```json
 "minecraft:is_stunned": {}
 ```
 
 # minecraft:is_tamed
 ### cat.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:is_tamed": {}
 ```
 
 # minecraft:item_controllable
 ### pig.json
-```JSON
+```json
 "minecraft:item_controllable": {
     "control_items": "carrotOnAStick"
 }
@@ -18586,297 +18588,297 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:item_hopper
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:item_hopper": {}
 ```
 
 # minecraft:jump.dynamic
 ### rabbit.json
-```JSON
+```json
 "minecraft:jump.dynamic": {}
 ```
 
 # minecraft:jump.static
 ### bat.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:jump.static": {
     "jump_power": 0.6
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:jump.static": {}
 ```
 
 # minecraft:knockback_resistance
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:knockback_resistance": {
     "value": 100,
     "max": 100
@@ -18884,14 +18886,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:knockback_resistance": {
     "value": 1.0
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:knockback_resistance": {
     "value": 0.5
 }
@@ -18899,7 +18901,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:leashable
 ### boat.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18908,7 +18910,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18917,7 +18919,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18926,7 +18928,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18935,7 +18937,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18944,7 +18946,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18953,7 +18955,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18962,7 +18964,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18971,7 +18973,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18981,7 +18983,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18990,7 +18992,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -18999,7 +19001,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19016,7 +19018,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19025,7 +19027,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19034,7 +19036,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19043,7 +19045,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19052,7 +19054,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19061,7 +19063,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19070,7 +19072,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19087,7 +19089,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -19097,7 +19099,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:lookat
 ### enderman.json
-```JSON
+```json
 "minecraft:lookat": {
     "search_radius": 64.0,
     "set_target": true,
@@ -19123,475 +19125,475 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:loot
 ### armor_stand.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/armor_stand.json"
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/blaze.json"
 }
 ```
 
 ### boat.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/boat.json"
 }
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/cat.json"
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/spider.json"
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/chicken.json"
 }
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/cow.json"
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/creeper.json"
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/dolphin.json"
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/drowned.json"
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/elder_guardian.json"
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/enderman.json"
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/evocation_illager.json"
 }
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/fish.json"
 }
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/gameplay/fishing.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/gameplay/jungle_fishing.json"
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/fox.json"
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ghast.json"
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/guardian.json"
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/iron_golem.json"
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/llama.json"
 }
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/magma_cube.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/magma_cube.json"
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/mooshroom.json"
 }
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ocelot.json"
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/panda.json"
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/parrot.json"
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/phantom.json"
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pig.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pig_saddled.json"
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pillager.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pillager_raid.json"
 }
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/polar_bear.json"
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pufferfish.json"
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/rabbit.json"
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ravager.json"
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/salmon_normal.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/salmon_normal.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/salmon_large.json"
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sheep_sheared.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sheep.json"
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/shulker.json"
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/silverfish.json"
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/skeleton.json"
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/skeleton_horse.json"
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/slime.json"
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/snowman.json"
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/spider.json"
 }
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/squid.json"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/stray.json"
 }
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/tropicalfish.json"
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sea_turtle.json"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/vindication_illager.json"
 }
 ```
 
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/vindicator_raid.json"
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/witch.json"
 }
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wither_boss.json"
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wither_skeleton.json"
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wolf.json"
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie_horse.json"
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie_pigman.json"
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
@@ -19599,372 +19601,372 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:managed_wandering_trader
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:managed_wandering_trader": {}
 ```
 
 # minecraft:mark_variant
 ### horse.json
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": -1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": -1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 9
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 6
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:mark_variant": {
     "value": 6
 }
@@ -19972,7 +19974,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:mob_effect
 ### pufferfish.json
-```JSON
+```json
 "minecraft:mob_effect": {
     "effect_range": 0.2,
     "mob_effect": "poison",
@@ -19996,152 +19998,152 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:movement
 ### bat.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.175
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.45
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.03
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.12
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:movement": {
     "value": {
         "range_min": 0.1125,
@@ -20151,170 +20153,170 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.75
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.66
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.6
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.175
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.15
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.07
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.4
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 1.8
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.13
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.0
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.12
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.0,
     "max": 0.0
@@ -20322,198 +20324,198 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.6
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.4
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.12
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 1.0
 }
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
-```JSON
+```json
 "minecraft:movement": {
     "value": 0.23
 }
@@ -20521,7 +20523,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:movement.amphibious
 ### turtle.json
-```JSON
+```json
 "minecraft:movement.amphibious": {
     "max_turn": 5.0
 }
@@ -20529,257 +20531,257 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:movement.basic
 ### bat.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:movement.basic": {
     "max_turn": 180.0
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:movement.basic": {}
 ```
 
 # minecraft:movement.fly
 ### parrot.json
-```JSON
+```json
 "minecraft:movement.fly": {}
 ```
 
 # minecraft:movement.generic
 ### drowned.json
-```JSON
+```json
 "minecraft:movement.generic": {}
 ```
 
 # minecraft:movement.glide
 ### phantom.json
-```JSON
+```json
 "minecraft:movement.glide": {
     "start_speed": 0.1,
     "speed_when_turning": 0.2
@@ -20788,7 +20790,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:movement.jump
 ### magma_cube.json
-```JSON
+```json
 "minecraft:movement.jump": {
     "jump_delay": [
         2.0,
@@ -20797,7 +20799,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:movement.jump": {
     "jump_delay": [
         2.0,
@@ -20806,7 +20808,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:movement.jump": {
     "jump_delay": [
         0.667,
@@ -20816,7 +20818,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:movement.jump": {
     "jump_delay": [
         0.5,
@@ -20825,7 +20827,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:movement.jump": {
     "jump_delay": [
         0.5,
@@ -20834,7 +20836,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:movement.jump": {
     "jump_delay": [
         0.16,
@@ -20845,44 +20847,44 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:movement.skip
 ### rabbit.json
-```JSON
+```json
 "minecraft:movement.skip": {}
 ```
 
 # minecraft:movement.sway
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:movement.sway": {}
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:movement.sway": {}
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
@@ -20890,167 +20892,167 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:nameable
 ### armor_stand.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### bat.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:nameable": {
     "always_show": true,
     "allow_name_tag_renaming": false
@@ -21058,107 +21060,107 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:nameable": {
     "default_trigger": {
         "event": "minecraft:stop_johnny",
@@ -21177,60 +21179,60 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:nameable": {}
 ```
 
 # minecraft:navigation.climb
 ### cave_spider.json
-```JSON
+```json
 "minecraft:navigation.climb": {
     "can_path_over_water": true
 }
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:navigation.climb": {
     "can_path_over_water": true
 }
@@ -21238,14 +21240,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:navigation.float
 ### bat.json
-```JSON
+```json
 "minecraft:navigation.float": {
     "can_path_over_water": true
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:navigation.float": {
     "can_path_over_water": true
 }
@@ -21253,7 +21255,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:navigation.fly
 ### parrot.json
-```JSON
+```json
 "minecraft:navigation.fly": {
     "can_path_over_water": true
 }
@@ -21261,7 +21263,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:navigation.generic
 ### dolphin.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -21272,7 +21274,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21283,7 +21285,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -21294,7 +21296,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -21306,7 +21308,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21317,7 +21319,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21328,7 +21330,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21340,7 +21342,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21351,7 +21353,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -21363,7 +21365,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21374,7 +21376,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -21386,7 +21388,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -21398,7 +21400,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -21410,7 +21412,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -21423,14 +21425,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:navigation.walk
 ### blaze.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_float": true,
     "avoid_water": true,
@@ -21439,7 +21441,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -21447,7 +21449,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21456,14 +21458,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21472,7 +21474,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": false,
     "avoid_water": true
@@ -21480,14 +21482,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -21497,7 +21499,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21506,7 +21508,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21515,7 +21517,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21525,7 +21527,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": false,
     "avoid_water": true,
@@ -21534,7 +21536,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -21542,7 +21544,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true
@@ -21550,7 +21552,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21559,7 +21561,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21568,7 +21570,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21577,7 +21579,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_float": true,
     "avoid_water": true,
@@ -21586,7 +21588,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -21595,14 +21597,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -21610,7 +21612,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true
@@ -21618,7 +21620,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "avoid_damage_blocks": true,
     "can_path_over_water": true,
@@ -21627,7 +21629,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true
@@ -21635,19 +21637,19 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:navigation.walk": {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "avoid_sun": true,
@@ -21656,7 +21658,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "avoid_water": true
@@ -21664,7 +21666,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true
@@ -21672,14 +21674,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "avoid_water": true
 }
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "can_sink": false
@@ -21687,7 +21689,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "avoid_sun": true,
@@ -21696,14 +21698,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -21715,7 +21717,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -21725,13 +21727,13 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -21740,7 +21742,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -21750,7 +21752,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": false
@@ -21758,7 +21760,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_water": true
@@ -21766,7 +21768,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "avoid_sun": true,
@@ -21775,7 +21777,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -21783,7 +21785,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21793,7 +21795,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "avoid_water": true
@@ -21801,7 +21803,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21812,7 +21814,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21821,7 +21823,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21832,7 +21834,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21841,7 +21843,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -21853,7 +21855,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_death
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:on_death": {
     "event": "minecraft:start_death",
     "target": "self"
@@ -21862,7 +21864,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_friendly_anger
 ### llama.json
-```JSON
+```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:defend_wandering_trader",
     "target": "self"
@@ -21870,7 +21872,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
     "target": "self"
@@ -21878,14 +21880,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
@@ -21893,7 +21895,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
     "target": "self"
@@ -21902,7 +21904,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_hurt
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:on_hurt": {
     "event": "minecraft:crystal_explode",
     "target": "self"
@@ -21910,14 +21912,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:on_hurt": {
     "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_hurt": {
     "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
@@ -21925,14 +21927,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:on_hurt_by_player
-```JSON
+```json
 "minecraft:on_hurt_by_player": {
     "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_hurt_by_player": {
     "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
@@ -21941,7 +21943,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_start_landing
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:on_start_landing": {
     "event": "minecraft:start_land",
     "target": "self"
@@ -21949,7 +21951,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:on_start_takeoff
-```JSON
+```json
 "minecraft:on_start_takeoff": {
     "event": "minecraft:start_fly",
     "target": "self"
@@ -21958,26 +21960,26 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_target_acquired
 ### cave_spider.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_acquired": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:has_target",
     "target": "self"
@@ -21985,7 +21987,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -21993,7 +21995,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "filters": {
         "all_of": [
@@ -22016,7 +22018,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggressive",
     "target": "self"
@@ -22024,33 +22026,33 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_scared",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_acquired": {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_scared",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_anger",
     "target": "self"
@@ -22058,7 +22060,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -22066,7 +22068,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggressive",
     "target": "self"
@@ -22074,20 +22076,20 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggro",
     "target": "self"
@@ -22095,11 +22097,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:on_target_acquired": {}
 ```
 
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -22107,7 +22109,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -22116,23 +22118,23 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_target_escape
 ### creeper.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:stop_exploding",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_escape": {}
 ```
 
-```JSON
+```json
 "minecraft:on_target_escape": {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:on_calm",
     "target": "self"
@@ -22140,7 +22142,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:lost_target",
     "target": "self"
@@ -22148,7 +22150,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "filters": {
         "all_of": [
@@ -22171,7 +22173,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:become_calm",
     "target": "self"
@@ -22179,7 +22181,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:on_calm",
     "target": "self"
@@ -22187,14 +22189,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:calm",
     "target": "self"
 }
 ```
 
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:calm",
     "target": "self"
@@ -22202,7 +22204,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:become_calm",
     "target": "self"
@@ -22210,7 +22212,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:on_target_escape": {
     "event": "minecraft:stop_aggro",
     "target": "self"
@@ -22219,7 +22221,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:on_wake_with_owner
 ### cat.json
-```JSON
+```json
 "minecraft:on_wake_with_owner": {
     "event": "minecraft:pet_slept_with_owner",
     "target": "self"
@@ -22228,7 +22230,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:peek
 ### shulker.json
-```JSON
+```json
 "minecraft:peek": {
     "on_open": {
         "event": "minecraft:on_open"
@@ -22244,155 +22246,155 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:persistent
 ### armor_stand.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:persistent": {}
 ```
 
 # minecraft:physics
 ### area_effect_cloud.json
-```JSON
+```json
 "minecraft:physics": {
     "has_collision": false
 }
 ```
 
 ### armor_stand.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### arrow.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### bat.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### boat.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### egg.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false,
     "has_collision": false
@@ -22400,284 +22402,284 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### eye_of_ender_signal.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### fireball.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### fireworks_rocket.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### llama_spit.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### shulker_bullet.json
-```JSON
+```json
 "minecraft:physics": {
     "has_collision": false
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### small_fireball.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### snowball.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### splash_potion.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### tnt.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:physics": {
     "has_gravity": false,
     "has_collision": false
@@ -22685,88 +22687,88 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### wither_skull.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### xp_bottle.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:physics": {}
 ```
 
 # minecraft:player.exhaustion
 ### player.json
-```JSON
+```json
 "minecraft:player.exhaustion": {
     "value": 0,
     "max": 4
@@ -22774,7 +22776,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:player.experience
-```JSON
+```json
 "minecraft:player.experience": {
     "value": 0,
     "max": 1
@@ -22782,7 +22784,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:player.level
-```JSON
+```json
 "minecraft:player.level": {
     "value": 0,
     "max": 24791
@@ -22790,7 +22792,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:player.saturation
-```JSON
+```json
 "minecraft:player.saturation": {
     "value": 20
 }
@@ -22798,7 +22800,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:preferred_path
 ### iron_golem.json
-```JSON
+```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
     "jump_cost": 5,
@@ -22885,7 +22887,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
     "jump_cost": 5,
@@ -22971,7 +22973,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
     "jump_cost": 20,
@@ -23059,7 +23061,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:projectile
 ### arrow.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23091,7 +23093,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23123,7 +23125,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23155,7 +23157,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23188,7 +23190,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dragon_fireball.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "spawn_aoe_cloud": {
@@ -23223,7 +23225,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### egg.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23254,7 +23256,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "teleport_owner": {},
@@ -23273,7 +23275,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "teleport_owner": {},
@@ -23288,7 +23290,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fireball.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "definition_event": {
@@ -23317,7 +23319,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "stick_in_ground": {}
@@ -23326,7 +23328,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "douse_fire": {},
@@ -23346,7 +23348,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama_spit.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23371,7 +23373,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker_bullet.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23410,7 +23412,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### small_fireball.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23441,7 +23443,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snowball.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23464,7 +23466,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### splash_potion.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "douse_fire": {},
@@ -23479,7 +23481,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "impact_damage": {
@@ -23512,7 +23514,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "definition_event": {
@@ -23549,7 +23551,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "definition_event": {
@@ -23588,7 +23590,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### xp_bottle.json
-```JSON
+```json
 "minecraft:projectile": {
     "on_hit": {
         "grant_xp": {
@@ -23606,7 +23608,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:pushable
 ### armor_stand.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -23614,7 +23616,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### arrow.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -23622,7 +23624,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23630,7 +23632,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### boat.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23638,7 +23640,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23646,7 +23648,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23654,7 +23656,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23662,7 +23664,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23670,7 +23672,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23678,7 +23680,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23686,7 +23688,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23694,7 +23696,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23702,7 +23704,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23710,7 +23712,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23718,7 +23720,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### egg.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23726,7 +23728,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23734,7 +23736,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23742,7 +23744,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23750,7 +23752,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23758,7 +23760,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23766,7 +23768,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23774,7 +23776,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### eye_of_ender_signal.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23782,7 +23784,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fireball.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23790,7 +23792,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fireworks_rocket.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23798,7 +23800,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23806,7 +23808,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -23814,7 +23816,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23822,7 +23824,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23830,7 +23832,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23838,7 +23840,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23846,7 +23848,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23854,7 +23856,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23862,7 +23864,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23870,7 +23872,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23878,7 +23880,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23886,7 +23888,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama_spit.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23894,7 +23896,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23902,7 +23904,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23910,7 +23912,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23918,7 +23920,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23926,7 +23928,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23934,7 +23936,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23942,7 +23944,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23950,7 +23952,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23958,7 +23960,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23966,7 +23968,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23974,7 +23976,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -23982,7 +23984,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23990,7 +23992,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -23998,7 +24000,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24006,7 +24008,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24014,7 +24016,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24022,7 +24024,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24030,7 +24032,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24038,7 +24040,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24046,7 +24048,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24054,7 +24056,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24062,7 +24064,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### small_fireball.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24070,7 +24072,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snowball.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24078,7 +24080,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24086,7 +24088,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24094,7 +24096,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### splash_potion.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24102,7 +24104,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24110,7 +24112,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24118,7 +24120,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24126,7 +24128,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -24134,7 +24136,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24142,7 +24144,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24150,7 +24152,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24158,7 +24160,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24166,7 +24168,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24174,7 +24176,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24182,7 +24184,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24190,7 +24192,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24198,7 +24200,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24206,7 +24208,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24214,7 +24216,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24222,7 +24224,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24230,7 +24232,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24238,7 +24240,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### xp_bottle.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24246,7 +24248,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24254,7 +24256,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24262,7 +24264,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24270,7 +24272,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24278,7 +24280,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:pushable": {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -24287,7 +24289,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:raid_trigger
 ### player.json
-```JSON
+```json
 "minecraft:raid_trigger": {
     "triggered_event": {
         "event": "minecraft:remove_raid_trigger",
@@ -24298,33 +24300,33 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:rail_movement
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:rail_movement": {}
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:rail_movement": {}
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:rail_movement": {}
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:rail_movement": {}
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:rail_movement": {}
 ```
 
 # minecraft:rail_sensor
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:rail_sensor": {
     "check_block_types": true,
     "eject_on_activate": false,
@@ -24337,7 +24339,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rail_sensor": {
     "check_block_types": false,
     "eject_on_activate": false,
@@ -24351,7 +24353,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:rail_sensor": {
     "on_activate": {
         "event": "minecraft:hopper_deactivate"
@@ -24359,7 +24361,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rail_sensor": {
     "on_deactivate": {
         "event": "minecraft:hopper_activate"
@@ -24368,22 +24370,22 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:rail_sensor": {
     "eject_on_activate": true
 }
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:rail_sensor": {}
 ```
 
-```JSON
+```json
 "minecraft:rail_sensor": {}
 ```
 
-```JSON
+```json
 "minecraft:rail_sensor": {
     "on_activate": {
         "filters": {
@@ -24403,7 +24405,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:ravager_blocked
 ### ravager.json
-```JSON
+```json
 "minecraft:ravager_blocked": {
     "knockback_strength": 3.0,
     "reaction_choices": [
@@ -24423,7 +24425,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:rideable
 ### boat.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 2,
     "interact_text": "action.interact.ride.boat",
@@ -24466,7 +24468,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24483,7 +24485,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24499,7 +24501,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24515,7 +24517,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24531,7 +24533,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24548,7 +24550,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24565,7 +24567,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24582,7 +24584,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24600,7 +24602,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "priority": 0,
     "seat_count": 1,
@@ -24620,7 +24622,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24638,7 +24640,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "priority": 0,
     "seat_count": 1,
@@ -24658,7 +24660,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24676,7 +24678,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24693,7 +24695,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "priority": 0,
     "seat_count": 1,
@@ -24713,7 +24715,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "interact_text": "action.interact.ride.minecart",
@@ -24729,7 +24731,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24746,7 +24748,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24764,7 +24766,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "priority": 0,
     "seat_count": 1,
@@ -24784,7 +24786,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24801,7 +24803,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24818,7 +24820,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24834,7 +24836,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "interact_text": "action.interact.mount",
@@ -24852,7 +24854,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 2,
     "family_types": [
@@ -24885,7 +24887,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24904,7 +24906,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24920,7 +24922,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24937,7 +24939,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24956,11 +24958,11 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {}
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24980,7 +24982,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -24996,7 +24998,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25012,7 +25014,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25028,7 +25030,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25045,7 +25047,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25062,7 +25064,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25080,7 +25082,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:rideable": {
     "priority": 0,
     "seat_count": 1,
@@ -25099,7 +25101,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25117,7 +25119,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25134,7 +25136,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:rideable": {
     "seat_count": 1,
     "family_types": [
@@ -25152,251 +25154,251 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:scaffolding_climber
 ### player.json
-```JSON
+```json
 "minecraft:scaffolding_climber": {}
 ```
 
 # minecraft:scale
 ### cat.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.4
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.8
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.65
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.0
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.53125
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.0625
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 1
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.0
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.4
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.2
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.4
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.6
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.5
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.3
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.16
 }
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 1.2
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:scale": {
     "value": 0.5
 }
@@ -25404,7 +25406,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:scale_by_age
 ### donkey.json
-```JSON
+```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -25412,7 +25414,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -25420,7 +25422,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -25428,7 +25430,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -25436,7 +25438,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -25445,7 +25447,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:scheduler
 ### fox.json
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 0,
@@ -25504,7 +25506,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -25598,7 +25600,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -25692,7 +25694,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -25752,7 +25754,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -25829,7 +25831,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -25923,7 +25925,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -26017,7 +26019,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -26113,7 +26115,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:shareables
 ### fox.json
-```JSON
+```json
 "minecraft:shareables": {
     "all_items": true,
     "all_items_max_amount": 1,
@@ -26313,7 +26315,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:shareables": {
     "items": [
         {
@@ -26356,7 +26358,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:shareables": {
     "items": [
         {
@@ -26384,7 +26386,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:shareables": {
     "items": [
         {
@@ -26427,7 +26429,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:shareables": {
     "items": [
         {
@@ -26470,7 +26472,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:shareables": {
     "items": [
         {
@@ -26499,7 +26501,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:shooter
 ### blaze.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "smallfireball",
     "def": "minecraft:small_fireball"
@@ -26507,14 +26509,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:shooter": {
     "def": "minecraft:thrown_trident"
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "dragonfireball",
     "def": "minecraft:dragon_fireball"
@@ -26522,7 +26524,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "largefireball",
     "def": "minecraft:fireball"
@@ -26530,7 +26532,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "llamaspit",
     "def": "minecraft:llama_spit"
@@ -26538,7 +26540,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "Arrow",
     "def": "minecraft:arrow"
@@ -26546,7 +26548,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "ShulkerBullet",
     "def": "minecraft:shulker_bullet"
@@ -26554,14 +26556,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "Arrow",
     "def": "minecraft:arrow"
 }
 ```
 
-```JSON
+```json
 "minecraft:shooter": {
     "type": "Arrow",
     "def": "minecraft:arrow"
@@ -26569,14 +26571,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:shooter": {
     "def": "minecraft:snowball"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:shooter": {
     "type": "Arrow",
     "def": "minecraft:arrow",
@@ -26584,7 +26586,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:shooter": {
     "type": "Arrow",
     "def": "minecraft:arrow",
@@ -26594,95 +26596,95 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:sittable
 ### cat.json
-```JSON
+```json
 "minecraft:sittable": {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:sittable": {}
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:sittable": {}
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:sittable": {}
 ```
 
 # minecraft:skin_id
 ### villager_v2.json
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 5
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:skin_id": {
     "value": 5
 }
@@ -26690,7 +26692,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:spawn_entity
 ### chicken.json
-```JSON
+```json
 "minecraft:spawn_entity": {
     "min_wait_time": 300,
     "max_wait_time": 600,
@@ -26706,7 +26708,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:spawn_entity": [
     {
         "min_wait_time": 0,
@@ -26722,7 +26724,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:spell_effects
 ### player.json
-```JSON
+```json
 "minecraft:spell_effects": {
     "add_effects": [
         {
@@ -26734,18 +26736,18 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:spell_effects": {}
 ```
 
-```JSON
+```json
 "minecraft:spell_effects": {
     "remove_effects": "bad_omen"
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:spell_effects": {
     "add_effects": [
         {
@@ -26762,7 +26764,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:spell_effects": {
     "add_effects": [
         {
@@ -26780,35 +26782,35 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:strength
 ### llama.json
-```JSON
+```json
 "minecraft:strength": {
     "value": 1,
     "max": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:strength": {
     "value": 2,
     "max": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:strength": {
     "value": 3,
     "max": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:strength": {
     "value": 4,
     "max": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:strength": {
     "value": 5,
     "max": 5
@@ -26817,7 +26819,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:tameable
 ### cat.json
-```JSON
+```json
 "minecraft:tameable": {
     "probability": 0.33,
     "tame_items": [
@@ -26832,7 +26834,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:tameable": {
     "probability": 0.33,
     "tame_items": [
@@ -26849,7 +26851,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:tameable": {
     "probability": 0.33,
     "tame_items": "bone",
@@ -26862,7 +26864,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:tamemount
 ### donkey.json
-```JSON
+```json
 "minecraft:tamemount": {
     "min_temper": 0,
     "max_temper": 100,
@@ -26919,7 +26921,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:tamemount": {
     "min_temper": 0,
     "max_temper": 100,
@@ -26976,7 +26978,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:tamemount": {
     "min_temper": 0,
     "max_temper": 30,
@@ -27017,7 +27019,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:tamemount": {
     "min_temper": 0,
     "max_temper": 100,
@@ -27075,7 +27077,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:target_nearby_sensor
 ### creeper.json
-```JSON
+```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 2.5,
     "outside_range": 6.0,
@@ -27095,16 +27097,16 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:target_nearby_sensor": {}
 ```
 
-```JSON
+```json
 "minecraft:target_nearby_sensor": {}
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
     "outside_range": 5.0,
@@ -27120,7 +27122,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
     "outside_range": 4.0,
@@ -27131,7 +27133,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
     "outside_range": 4.0,
@@ -27144,7 +27146,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:teleport
 ### enderman.json
-```JSON
+```json
 "minecraft:teleport": {
     "random_teleports": true,
     "max_random_teleport_time": 30,
@@ -27161,7 +27163,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:timer
 ### dolphin.json
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 20,
@@ -27172,7 +27174,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:timer": {
     "time": [
         1,
@@ -27187,7 +27189,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 30,
@@ -27198,7 +27200,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:timer": {
     "time": [
         0.0,
@@ -27213,7 +27215,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 0.05,
@@ -27224,7 +27226,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 1,
@@ -27235,7 +27237,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 10,
@@ -27247,7 +27249,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 2,
@@ -27258,7 +27260,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "random_time_choices": [
@@ -27279,7 +27281,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:timer": {
     "looping": false,
     "time": 30,
@@ -27291,13 +27293,13 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:trade_resupply
 ### villager_v2.json
-```JSON
+```json
 "minecraft:trade_resupply": {}
 ```
 
 # minecraft:trade_table
 ### villager.json
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.farmer",
     "table": "trading/farmer_trades.json",
@@ -27305,7 +27307,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.fisherman",
     "table": "trading/fisherman_trades.json",
@@ -27313,7 +27315,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.shepherd",
     "table": "trading/shepherd_trades.json",
@@ -27321,7 +27323,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.fletcher",
     "table": "trading/fletcher_trades.json",
@@ -27329,7 +27331,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.librarian",
     "table": "trading/librarian_trades.json",
@@ -27337,7 +27339,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.cartographer",
     "table": "trading/cartographer_trades.json",
@@ -27345,7 +27347,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.cleric",
     "table": "trading/cleric_trades.json",
@@ -27353,7 +27355,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.armor",
     "table": "trading/armorer_trades.json",
@@ -27361,7 +27363,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.weapon",
     "table": "trading/weapon_smith_trades.json",
@@ -27369,7 +27371,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.tool",
     "table": "trading/tool_smith_trades.json",
@@ -27377,7 +27379,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.butcher",
     "table": "trading/butcher_trades.json",
@@ -27385,7 +27387,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.leather",
     "table": "trading/leather_worker_trades.json",
@@ -27395,7 +27397,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:trail
 ### snow_golem.json
-```JSON
+```json
 "minecraft:trail": {
     "block_type": "minecraft:snow_layer",
     "spawn_filter": {
@@ -27408,7 +27410,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:transformation
 ### husk.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:zombie<minecraft:as_adult>",
     "transformation_sound": "convert_to_drowned",
@@ -27419,7 +27421,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:zombie<minecraft:as_baby>",
     "transformation_sound": "convert_to_drowned",
@@ -27431,14 +27433,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:cow"
 }
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:pig_zombie",
     "delay": 0.5
@@ -27446,7 +27448,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:skeleton",
     "delay": 0.5
@@ -27454,35 +27456,35 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:witch",
     "delay": 0.5
 }
 ```
 
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:villager_v2",
     "keep_level": true
 }
 ```
 
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_villager"
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:witch",
     "delay": 0.5
 }
 ```
 
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_villager_v2",
     "keep_level": true
@@ -27490,7 +27492,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:drowned<minecraft:as_adult>",
     "transformation_sound": "convert_to_drowned",
@@ -27501,7 +27503,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:drowned<minecraft:as_baby>",
     "transformation_sound": "convert_to_drowned",
@@ -27513,14 +27515,14 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_villager_v2",
     "keep_level": false
 }
 ```
 
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:villager",
     "begin_transform_sound": "remedy",
@@ -27539,7 +27541,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:transformation": {
     "into": "minecraft:villager_v2",
     "begin_transform_sound": "remedy",
@@ -27560,13 +27562,13 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:trust
 ### fox.json
-```JSON
+```json
 "minecraft:trust": {}
 ```
 
 # minecraft:trusting
 ### ocelot.json
-```JSON
+```json
 "minecraft:trusting": {
     "probability": 0.33,
     "trust_items": [
@@ -27582,7 +27584,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:type_family
 ### armor_stand.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "armor_stand",
@@ -27593,7 +27595,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### bat.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "bat",
@@ -27603,7 +27605,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### blaze.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "blaze",
@@ -27614,7 +27616,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### boat.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "boat",
@@ -27624,7 +27626,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cat.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cat",
@@ -27634,7 +27636,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cave_spider.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cavespider",
@@ -27646,7 +27648,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "minecart",
@@ -27656,7 +27658,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### chicken.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "chicken",
@@ -27666,7 +27668,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "minecart",
@@ -27676,7 +27678,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cow",
@@ -27686,7 +27688,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### creeper.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "creeper",
@@ -27697,7 +27699,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### dolphin.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "dolphin",
@@ -27707,7 +27709,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### donkey.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "donkey",
@@ -27717,7 +27719,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "drowned",
@@ -27730,7 +27732,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "guardian_elder",
@@ -27741,7 +27743,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### enderman.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "enderman",
@@ -27752,7 +27754,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### endermite.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "endermite",
@@ -27764,7 +27766,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "dragon",
@@ -27774,7 +27776,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "evocation_illager",
@@ -27786,7 +27788,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cod",
@@ -27796,7 +27798,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "fox",
@@ -27806,7 +27808,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ghast.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "ghast",
@@ -27817,7 +27819,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "guardian",
@@ -27828,7 +27830,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "minecart",
@@ -27838,7 +27840,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "horse",
@@ -27848,7 +27850,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "husk",
@@ -27861,7 +27863,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### iron_golem.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "irongolem",
@@ -27871,7 +27873,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### lightning_bolt.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "lightning"
@@ -27880,7 +27882,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "llama",
@@ -27890,7 +27892,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### magma_cube.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "magmacube",
@@ -27901,7 +27903,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### minecart.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "minecart",
@@ -27911,7 +27913,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "mushroomcow",
@@ -27921,7 +27923,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### mule.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "mule",
@@ -27931,7 +27933,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ocelot.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "ocelot",
@@ -27941,7 +27943,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "panda"
@@ -27949,7 +27951,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "panda",
@@ -27960,7 +27962,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "parrot_wild",
@@ -27969,7 +27971,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "parrot_tame",
@@ -27979,7 +27981,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### phantom.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "phantom",
@@ -27991,7 +27993,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pig.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "pig",
@@ -28001,7 +28003,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "pillager",
@@ -28013,7 +28015,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### player.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "player"
@@ -28022,7 +28024,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "polarbear",
@@ -28032,7 +28034,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "pufferfish",
@@ -28042,7 +28044,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "rabbit",
@@ -28052,7 +28054,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### ravager.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "monster",
@@ -28064,7 +28066,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "salmon",
@@ -28074,7 +28076,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### sheep.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "sheep",
@@ -28084,7 +28086,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "shulker",
@@ -28095,7 +28097,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### silverfish.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "silverfish",
@@ -28107,7 +28109,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "skeleton",
@@ -28119,7 +28121,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "skeletonhorse",
@@ -28130,7 +28132,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### slime.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "slime",
@@ -28141,7 +28143,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### snow_golem.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "snowgolem",
@@ -28151,7 +28153,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### spider.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "spider",
@@ -28163,7 +28165,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### squid.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "squid",
@@ -28173,7 +28175,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### stray.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "stray",
@@ -28186,7 +28188,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "tnt",
@@ -28196,7 +28198,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "minecart",
@@ -28206,7 +28208,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "tripodcamera",
@@ -28217,7 +28219,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "tropicalfish",
@@ -28227,7 +28229,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "turtle",
@@ -28237,7 +28239,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "turtle",
@@ -28247,7 +28249,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vex.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "vex",
@@ -28258,7 +28260,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28267,7 +28269,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28278,7 +28280,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28289,7 +28291,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28300,7 +28302,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28311,7 +28313,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28321,7 +28323,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28331,7 +28333,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28342,7 +28344,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28353,7 +28355,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28364,7 +28366,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28375,7 +28377,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28386,7 +28388,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28398,7 +28400,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28407,7 +28409,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28417,7 +28419,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28428,7 +28430,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28439,7 +28441,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28450,7 +28452,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28461,7 +28463,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28471,7 +28473,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28481,7 +28483,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28492,7 +28494,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28503,7 +28505,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28514,7 +28516,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28525,7 +28527,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28536,7 +28538,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28547,7 +28549,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28558,7 +28560,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "villager",
@@ -28570,7 +28572,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "vindicator",
@@ -28582,7 +28584,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "wandering_trader",
@@ -28591,7 +28593,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "wandering_trader",
@@ -28602,7 +28604,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### witch.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "witch",
@@ -28613,7 +28615,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "wither",
@@ -28626,7 +28628,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "wither",
@@ -28639,7 +28641,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### wolf.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "wolf",
@@ -28649,7 +28651,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "zombie",
@@ -28661,7 +28663,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "zombiehorse",
@@ -28672,7 +28674,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "zombie_pigman",
@@ -28684,7 +28686,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "farmer",
@@ -28697,7 +28699,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "fisherman",
@@ -28710,7 +28712,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "shepherd",
@@ -28723,7 +28725,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "fletcher",
@@ -28736,7 +28738,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "librarian",
@@ -28749,7 +28751,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cartographer",
@@ -28762,7 +28764,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cleric",
@@ -28775,7 +28777,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "armorer",
@@ -28788,7 +28790,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "weaponsmith",
@@ -28801,7 +28803,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "toolsmith",
@@ -28814,7 +28816,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "butcher",
@@ -28827,7 +28829,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "leatherworker",
@@ -28841,7 +28843,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "unskilled",
@@ -28854,7 +28856,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "nitwit",
@@ -28867,7 +28869,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "farmer",
@@ -28880,7 +28882,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "fisherman",
@@ -28893,7 +28895,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "shepherd",
@@ -28906,7 +28908,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "fletcher",
@@ -28919,7 +28921,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "librarian",
@@ -28932,7 +28934,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cartographer",
@@ -28945,7 +28947,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "cleric",
@@ -28958,7 +28960,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "armorer",
@@ -28971,7 +28973,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "weaponsmith",
@@ -28984,7 +28986,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "toolsmith",
@@ -28997,7 +28999,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "butcher",
@@ -29010,7 +29012,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "leatherworker",
@@ -29023,7 +29025,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-```JSON
+```json
 "minecraft:type_family": {
     "family": [
         "mason",
@@ -29038,82 +29040,82 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:underwater_movement
 ### dolphin.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.15
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.06
 }
 ```
 
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.08
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.3
 }
 ```
 
 ### fish.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.1
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.13
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.08
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.06
 }
 ```
 
-```JSON
+```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
@@ -29121,918 +29123,918 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:variant
 ### cat.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 9
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 10
 }
 ```
 
 ### fox.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
 ### horse.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 6
 }
 ```
 
 ### husk.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
 ### llama.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
 ### panda.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 6
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 5
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 12
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 13
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 14
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 9
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 16
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 15
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 11
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
 ### villager.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 5
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 6
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 7
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 8
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 9
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 10
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 11
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 12
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 13
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 14
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 1
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 2
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 3
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 4
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
 ```
 
-```JSON
+```json
 "minecraft:variant": {
     "value": 0
 }
@@ -30040,21 +30042,21 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:water_movement
 ### panda.json
-```JSON
+```json
 "minecraft:water_movement": {
     "drag_factor": 0.98
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 "minecraft:water_movement": {
     "drag_factor": 0.98
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 "minecraft:water_movement": {
     "drag_factor": 0.9
 }

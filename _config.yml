@@ -14,8 +14,8 @@ github_username:  SirLich
 
 coderay_default_lang: JSON
 markdown: kramdown
-kramdown: 
-  syntax_highlighter: rouge
+# kramdown:
+#   syntax_highlighter: rouge
 
 color_scheme: "dark"
 

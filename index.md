@@ -5,7 +5,9 @@ nav_order: 0
 description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
 permalink: /
 ---
-# Technical Bedrock
+# Technical Bedrock 
+<button class="btn js-toggle-dark-mode">Dark Theme</button>
+<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
 This repository serves as a dumping ground for my Technical Bedrock knowledge, as well as a place to put my scripts. I often use python to augment my development, and I will put the scripts I want to make public here.
 

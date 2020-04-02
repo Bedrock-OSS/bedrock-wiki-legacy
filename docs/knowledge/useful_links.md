@@ -42,10 +42,6 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
 
-## Personal Projects:
- - https://anightdazingzoroark.github.io/
- - https://thedestruc7i0n.ca/
-
 ## Non-Minecraft useful stuff:
  - [Free Sounds](https://www.zapsplat.com/sound-effect-categories/)
 
