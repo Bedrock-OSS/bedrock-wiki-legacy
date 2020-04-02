@@ -17,7 +17,7 @@ markdown: kramdown
 # kramdown:
 #   syntax_highlighter: rouge
 
-color_scheme: "dark"
+color_scheme: "nil"
 
 aux_links:
   "Just the Docs on GitHub":
