@@ -1,0 +1,21 @@
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sirlich_death_effects": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "speak": "!query.is_alive"
+                        }
+                    ]
+                },
+                "speak": {
+                    "on_entry": [
+                        "/say Good heavens! I can't believe I've been defeated!"
+                    ]
+                }
+            }
+        }
+    }
+}

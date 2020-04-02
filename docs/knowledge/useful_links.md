@@ -1,0 +1,54 @@
+---
+layout: page
+title: Useful Links
+parent: Knowledge
+nav_order: 1
+---
+
+# Useful Links 
+
+There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! I will do my best to keep this list up to date as I continue to find useful content.
+
+## Discord Links:
+
+ - [Crucible (Personal Support Discord)](https://discord.gg/XjV87YN)
+ - [Minecraft Commands](https://discord.gg/QAFXFtZ)
+ - [Blockbench](http://discord.gg/fZQbxbg)
+ - [Bedrock Scripting](https://discord.gg/46JUdQb)
+ - [Bridge](https://discord.gg/NxKuWuA)
+ - [Minecraft](https://discord.gg/minecraft)
+ - [Skill Share](https://discord.gg/sZ7fkcN)
+
+## Tools:
+ - [Loot Table Generator](https://amaury.carrade.eu/minecraft/loot_tables)
+ - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
+ - [Crafting Recipies](https://crafting.thedestruc7i0n.ca/)
+ - [Advancements](https://advancements.thedestruc7i0n.ca/)
+  
+## Documentation Links:
+ - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
+ - [TheDestruc7i0n Documentation](https://bedrock.dev/)
+ - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
+ - [Component Examples](vannila_components/components_14/)
+ - [Playsound List](http://www.theredengineer.com/1.9-playsound-list.html)
+ - [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
+
+## Other useful Links:
+ - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
+ - [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac) (Thanks CyberPon3)
+ - [Run Bedrock on Linux](https://github.com/Element-0/ElementZero) (Thanks Element-0)
+ - [Scripting: Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails) (Thanks WavePlayz)
+ - [Scripting: Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
+ - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
+ - [Block Models](https://blockmodels.com/)
+
+## Personal Projects:
+ - https://anightdazingzoroark.github.io/
+ - https://thedestruc7i0n.ca/
+
+## Non-Minecraft useful stuff:
+ - [Free Sounds](https://www.zapsplat.com/sound-effect-categories/)
+
+
+
+
