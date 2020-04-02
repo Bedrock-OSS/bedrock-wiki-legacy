@@ -17,8 +17,6 @@ markdown: kramdown
 # kramdown:
 #   syntax_highlighter: rouge
 
-color_scheme: "nil"
-
 aux_links:
   "Just the Docs on GitHub":
     - "//github.com/pmarsceill/just-the-docs"
