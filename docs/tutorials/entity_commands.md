@@ -1,0 +1,238 @@
+---
+layout: page
+title: Entity Commands
+parent: Tutorials
+---
+
+# Entity Commands
+
+`Warning:` This article is incomplete. You can contribute to it by contacting `SirLich#1658` on Discord, or by making a pull request.
+
+A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad. 
+
+# Animation Controllers
+To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can learn more about animation controllers on the entity events section of [bedrock.dev](https://bedrock.dev/1.14.0.0/1.14.0.6/Entity%20Events). 
+
+In short, animation controllers allow us to trigger events from behavior packs.
+ - Slash commands (like `/say`)
+ - Molang 
+ - Entity Events (such as `namespace:my_event`)
+
+Here is an example animation controller:
+```json
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sirlich_entity_commands": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "on_summon": true
+                        }
+                    ]
+                },
+                "on_summon": {
+                    "on_entry": [
+                        "/say I have been summoned"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+This animation controller will run the command `/say I have been summoned` as soon as the entity is summoned into the world. If you are confused about how this works, please review Molang, Animations, and Entity Events. 
+
+# Using Animation Controllers
+To add this animation controller to our entity, we can use the following code in the entity definition description:
+
+```json
+"description": {
+    "identifier": "sirlich:entity_commands",
+    "scripts": {
+        "animate": [
+            "sirlich:entity_commands"
+        ]
+    },
+    "animations": {
+        "sirlich:entity_commands": "controller.animation.sirlich_entity_commands"
+    }
+}
+```
+
+Once again, if you are confused about any of this step, please review the Entity Events documentation.
+
+# Triggering Commands using Events:
+Animation transitions are created using queries. You can read about queries [here](https://bedrock.dev/1.14.0.0/1.14.0.6/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
+
+I personally like using [skin_id](https://sirlich.github.io/technical-bedrock/docs/vanilla_usage/components_1.13.html#minecraftskin_id).
+
+We can update our animation controller to trigger based on `skin_id`:
+
+```json
+{
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.sirlich_entity_commands": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "command_example": "query.skin_id == 1"
+                        },
+                        {
+                            "zombies": "query.skin_id == 2"
+                        }
+                    ]
+                },
+                "command_example": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id != 1"
+                        }
+                    ],
+                    "on_summon": [
+                        "/say Command One!"
+                    ]
+                },
+                "zombies": {
+                    "transitions": [
+                        {
+                            "default": "query.skin_id != 2"
+                        }
+                    ],
+                    "on_summon": [
+                        "/say AHH! Zombies everywhere!",
+                        "/summon minecraft:zombie",
+                        "/summon minecraft:zombie",
+                        "/summon minecraft:zombie",
+                        "/summon minecraft:zombie"
+                    ]
+                }
+            }
+        }
+    }
+}
+```
+
+This animation controller has two command states now: The first is triggered by `skin_id=1`, and the second by `skin_id=2`. Note how I've added the `@s execute_no_commands` syntax at the end of each command list. We will create `execute_no_commands` later. It will allow us to set the skin_id back to 0, and re-use our commands.
+
+# Setting Component Groups
+Back in our entity file, we can set the `skin_id` using the `skin_id` component.
+
+The `skin_id` component looks like this:
+```json
+"minecraft:skin_id": {
+    "value": 1
+}
+```
+
+We can add component groups that contains skin_ids:
+```json
+"component_groups": {
+    "execute_no_commands": {
+        "minecraft:skin_id": {
+            "value": 0
+        }
+    },
+    "command_example": {
+        "minecraft:skin_id": {
+            "value": 1
+        }
+    },
+    "command_zombies": {
+        "minecraft:skin_id": {
+            "value": 2
+        }
+    }
+}
+```
+
+# Adding Events
+
+Now lets create events so we can easily add these groups:
+
+```json
+"events": {
+    "minecraft:entity_spawned": {
+        "add": {
+            "component_groups": [
+                "execute_no_commands"
+            ]
+        }
+    },
+    "command_example": {
+        "add": {
+            "component_groups": [
+                "command_example"
+            ]
+        }
+    },
+    "command_zombies": {
+        "add": {
+            "component_groups": [
+                "command_zombies"
+            ]
+        }
+    }
+}
+```
+
+# Triggering Events
+
+There are loads of ways to trigger events in Minecraft. Lets look at two specific examples:
+
+## Interact Component:
+
+This component will spawn zombies whenever you click on him.
+```json
+"minecraft:interact": {
+    "interactions": [{
+        "on_interact": {
+            "filters": {
+                "all_of": [{
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "player"
+                    }
+                ]
+            },
+            "event": "command_zombie"
+        }
+    }]
+}
+```
+
+## Timer
+
+This component will trigger the example command every 10 seconds:
+```json
+"minecraft:timer": {
+        "looping": true,
+        "time": 1,
+        "time_down_event": {
+            "event": "example_command"
+        }
+    }
+```
+
+By adding these (and similar!) components to our entity, we can control when the `skin_id` changes, and therefor which events run.
+
+# Review:
+Here is how it all works:
+ - Run `example_command` using a component like interact or timer.
+ - This adds the `example_command` component group
+ - This adds the skin_id component group
+ - This sets the entities skin_id, which can be queried in the animation controller
+ - The animation controller notices this skin_id, and moves to the `example_command` state
+ - The animation controller runs the `/say` command
+ - The animation controller runs the entity event `@s execute_no_command`
+ - This event sets the skin_id to 0
+ - The animation controllers sees this, and transitions to the default state
+ - Now the animation controller waits for a new skin_id command
+
+# Sorry for the mess!
+
+This tutorial is a mess I know. I will work on improving it shortly. 
