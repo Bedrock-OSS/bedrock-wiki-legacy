@@ -2,7 +2,6 @@
 layout: page
 title: Death Effects
 parent: Tutorials
-has_children: true
 ---
 
 # Death Effects

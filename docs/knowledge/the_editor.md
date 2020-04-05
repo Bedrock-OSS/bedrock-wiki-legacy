@@ -2,6 +2,7 @@
 layout: page
 title: The Editor
 parent: Knowledge
+nav_order: 2
 ---
 
 # The Editor
