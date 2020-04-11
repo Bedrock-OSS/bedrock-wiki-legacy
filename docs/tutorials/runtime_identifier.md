@@ -9,7 +9,8 @@ parent: Tutorials
 `Runtime identifiers` are used by Minecraft to give custom, hard-coded behaviors to entities. In other words, runtime identifiers give us access to powerful behaviors which can't be created using components. This is achieved by "pretending to be" a vanilla mob. 
 
 If you ever asked yourself: 
- > I can't seem to figure out this mechanic. I wish my entity would act more like a ___.
+
+"I can't seem to figure out this mechanic. I wish my entity would act more like a ___."
 
  Then you might consider using runtime identifiers. 
 
