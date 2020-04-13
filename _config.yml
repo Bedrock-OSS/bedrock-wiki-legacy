@@ -1,10 +1,7 @@
 title: Technical Bedrock
 email: sirlich.business@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
-  This website serves as a dumping ground for my Bedrock Addon knowledge, 
-  as well as a place to put my scripts. I often use python to augment 
-  my development, and I will put the scripts I want to make public here, alongside 
-  tutorials and documentation.
+  Technical Bedrock knowledge-base, written and maintained by SirLich.
 
 remote_theme: pmarsceill/just-the-docs
 
@@ -18,8 +15,8 @@ markdown: kramdown
 #   syntax_highlighter: rouge
 
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+  "Join the Discord":
+    - "https://discord.gg/XjV87YN"
 
 # Build settings
 theme: just-the-docs

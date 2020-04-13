@@ -9,13 +9,17 @@ permalink: /
 <button class="btn js-toggle-dark-mode">Dark Theme</button>
 <script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
 
-This repository serves as a dumping ground for my Technical Bedrock knowledge, as well as a place to put my scripts. I often use python to augment my development, and I will put the scripts I want to make public here.
+This website is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information. 
 
-There are three main sections to this repository:
- - **Knowledge**: I will put my general tips and write-ups here.
- - **Scripts:** I will put my random python snippets here. Enter and beware!
- - **Tools:** Stuff in here are more or less proper tools, and will come with instructions and explanations. Scripts may slowly become tools if I work on them. 
+## Navigating:
+
+ - **Knowledge**: Top-level information, such as editor recommendations.
+ - **Tutorials:** Tutorial-like write-ups, containing specific instructions and example json.
+ - **Documentation:** Specific documentation information. 
 
 You can reach me directly about this content by joining the discord: https://discord.gg/XjV87YN
 
+## Contributing:
+
+You can contribute! Just reach out to me on Discord, and I will help you get started contributing.
 

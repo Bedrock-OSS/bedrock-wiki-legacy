@@ -5,6 +5,6 @@ has_children: true
 nav_order: 2
 ---
 
-# Documentation
+# Tutorials
 
-Information, presented as tutorials. Should contain example json, and specific how-to information on creating different features.
+Information, presented as tutorials. Pages in this section contain example json, and specific how-to information on creating different features.
