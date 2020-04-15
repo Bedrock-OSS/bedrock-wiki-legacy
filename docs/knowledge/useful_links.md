@@ -9,6 +9,9 @@ nav_order: 1
 
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! I will do my best to keep this list up to date as I continue to find useful content.
 
+## Tutorials:
+ - [Beginner Tutorials](https://sites.google.com/view/mcbe-add-on-tutorial/guide?authuser=0)
+
 ## Discord Links:
 
  - [Crucible (Personal Support Discord)](https://discord.gg/XjV87YN)
