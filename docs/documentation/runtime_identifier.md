@@ -16,7 +16,8 @@ It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
     "is_summonable": true,
     "is_experimental": false,
     "runtime_identifier": "minecraft:shulker"
-}```
+}
+```
 
 It's important to remember that `runtime_identifier` will only parse the hardcoded properties of an entity. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity.
 
