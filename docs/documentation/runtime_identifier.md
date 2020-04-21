@@ -50,6 +50,5 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 
 ## Additional Identifiers to look out for:
  - minecraft:boat
- - minecraft:egg
  - ...
  - Probably others! If you know what different Identifiers do, please get in touch!
