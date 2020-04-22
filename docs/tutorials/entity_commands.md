@@ -6,9 +6,7 @@ parent: Tutorials
 
 # Entity Commands
 
-`Warning:` This article is incomplete. You can contribute to it by contacting `SirLich#1658` on Discord, or by making a pull request.
-
-A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad. 
+A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad! 
 
 # Animation Controllers
 To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can learn more about animation controllers on the entity events section of [bedrock.dev](https://bedrock.dev/1.14.0.0/1.14.0.6/Entity%20Events). 
@@ -44,6 +42,12 @@ Here is an example animation controller:
 ```
 
 This animation controller will run the command `/say I have been summoned` as soon as the entity is summoned into the world. If you are confused about how this works, please review Molang, Animations, and Entity Events. 
+
+In short, there are `states`, which can trigger events in their `on_entry` clause. We use queries to move between different states. By default, entities will be inside of the `default` state.
+
+`WARNING: ` Queries are re-run when the world/chunk reloads. This means the line `"/say I have been summoned"` will actually run each time the entity "loads" -not only when it is summoned. 
+
+If you need to stop this from happening, you need to add additional queries, such as a `skin_id` query. The first time the entity spawns, check for `skin_id = 0`, and then *also* add some higher `skin_id`, such as `skin_id = 1`. Then, when the entity reloads, it won't be able to run those commands. This is shown further down in the document.
 
 # Using Animation Controllers
 To add this animation controller to our entity, we can use the following code in the entity definition description:
@@ -117,7 +121,9 @@ We can update our animation controller to trigger based on `skin_id`:
 }
 ```
 
-This animation controller has two command states now: The first is triggered by `skin_id=1`, and the second by `skin_id=2`. Note how I've added the `@s execute_no_commands` syntax at the end of each command list. We will create `execute_no_commands` later. It will allow us to set the skin_id back to 0, and re-use our commands.
+This animation controller has two command states now: The first is triggered by `skin_id = 1`, and the second by `skin_id = 2`. Note how I've added the `@s execute_no_commands` syntax at the end of each command list. We will create `execute_no_commands` later. It will allow us to set the skin_id back to 0, and re-use our commands.
+
+The syntax is `@s` followed by the name of an entity event. This allows us to add/remove components from within the animation controller.
 
 # Setting Component Groups
 Back in our entity file, we can set the `skin_id` using the `skin_id` component.
@@ -160,6 +166,13 @@ Now lets create events so we can easily add these groups:
         "add": {
             "component_groups": [
                 "execute_no_commands"
+            ]
+        }
+    },
+    "execute_no_command": {
+        "add": {
+            "component_groups": [
+                "execute_no_command"
             ]
         }
     },
@@ -224,15 +237,11 @@ By adding these (and similar!) components to our entity, we can control when the
 Here is how it all works:
  - Run `example_command` using a component like interact or timer.
  - This adds the `example_command` component group
- - This adds the skin_id component group
- - This sets the entities skin_id, which can be queried in the animation controller
- - The animation controller notices this skin_id, and moves to the `example_command` state
+ - This adds the `skin_id` component
+ - This sets the entities `skin_id`, which can be queried in the animation controller
+ - The animation controller notices this `skin_id`, and moves to the `example_command` state
  - The animation controller runs the `/say` command
  - The animation controller runs the entity event `@s execute_no_command`
- - This event sets the skin_id to 0
+ - `execute_no_command` event sets the `skin_id` to 0
  - The animation controllers sees this, and transitions to the default state
- - Now the animation controller waits for a new skin_id command
-
-# Sorry for the mess!
-
-This tutorial is a mess I know. I will work on improving it shortly. 
+ - Now the animation controller waits for a new `skin_id`
