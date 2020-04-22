@@ -18,11 +18,15 @@ For editing Json files, something in the middle is probably the best. Something 
  - **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
 
 ## A note about Bridge:
-[Bridge](https://github.com/bridge-core/bridge.) is an Editor designed specifically for editing Minecraft addons. It has some very powerful features, such as auto-complete, and easy creation of new packs.
+[Bridge](https://github.com/bridge-core/bridge.) is an Editor designed specifically for editing Minecraft addons. It has some very powerful features, such as auto-complete, file validation and easy creation of new packs.
 
-Personally however, bridge has a very problematic limiting factor: Bridge does not like when you edit files outside of Bridge! This makes any and all outside scripts or tools incompatible. Since this is such an important part of *my* workflow, I can't efficiently use Bridge.
+If you choose to use Bridge, you should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and Bridge creates a bit of an overhead in your workflow (more later). The app builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
+1) Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without Bridge
+2) Add files that you want to edit without Bridge to a .no-cache file at the root of your behavior pack
 
-If you choose to use Bridge, just be aware that you are tying yourself to that editor for the duration of that project. 
+Due to the nature of the file versioning system, most scripts and tools will continue to work as expected.
+
+For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev).
 
 ## My Recommendation:
 I recommend using Microsoft Studio Code. It contains all of the features I that I feel are important, and it contains little/no bloat.
