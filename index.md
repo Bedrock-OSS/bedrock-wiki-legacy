@@ -2,14 +2,13 @@
 layout: default
 title: Home
 nav_order: 0
-description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
+description: "Technical bedrock knowledge-sharing wiki."
 permalink: /
 ---
-# Technical Bedrock 
-<button class="btn js-toggle-dark-mode">Dark Theme</button>
-<script type="text/javascript" src="{{ "/assets/js/dark-mode-preview.js" | absolute_url }}"></script>
+# Technical Bedrock Wiki 
+<a href="https://bedrock.dev/" type="button" name="button" class="btn">Visit Bedrock.dev</a>
 
-This website is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information. 
+This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information. 
 
 ## Navigating:
 
@@ -21,5 +20,9 @@ You can reach me directly about this content by joining the discord: https://dis
 
 ## Contributing:
 
-You can contribute! Just reach out to me on Discord, and I will help you get started contributing.
+Contributions welcome!
+
+If you are familiar with GitHub, I accept pull requests. The repository can be found [here](https://github.com/SirLich/technical-bedrock). Website is located on the `gh-pages` branch.
+
+If you aren't comfortable with Git, you can contact me directly [here](https://discord.gg/XjV87YN), and we can work something out.
 
