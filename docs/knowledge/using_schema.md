@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Using Schemas
-parent: Documentation
+parent: Knowledge
 ---
 
 # What's a Schema?
