@@ -92,32 +92,38 @@ The entity will still probably be too slow when flying, so we'll borrow our anim
 "controller.animation.dragon.flying": {
 	"states": {
 		"default": {
-			"transitions": [
-				{ "jumping_1": "!query.is_on_ground" }
-			]
+			"transitions": [{
+				"jumping_1": "!query.is_on_ground"
+			}]
 		},
 		"jumping_1": {
-			"transitions": [
-				{ "transition_to_default": "query.is_on_ground" },
-				{ "jumping_2": true }
+			"transitions": [{
+					"transition_to_default": "query.is_on_ground"
+				},
+				{
+					"jumping_2": true
+				}
 			],
 			"on_entry": [
 				"/effect @s speed 15 10 true"
 			]
 		},
 		"jumping_2": {
-			"transitions": [
-				{ "transition_to_default": "query.is_on_ground" },
-				{ "jumping_1": true }
+			"transitions": [{
+					"transition_to_default": "query.is_on_ground"
+				},
+				{
+					"jumping_1": true
+				}
 			],
 			"on_entry": [
 				"/effect @s speed 15 10 true"
 			]
 		},
 		"transition_to_default": {
-			"transitions": [
-				{ "transition_to_default": true }
-			],
+			"transitions": [{
+				"transition_to_default": true
+			}],
 			"on_entry": [
 				"/effect @s clear"
 			]
@@ -133,14 +139,14 @@ You might also notice that the entity levitates when you go near it. We can fix 
 "controller.animation.dragon.test_rider": {
 	"states": {
 		"default": {
-			"transitions": [
-				{ "has_rider": "query.has_rider" }
-			]
+			"transitions": [{
+				"has_rider": "query.has_rider"
+			}]
 		},
 		"has_rider": {
-			"transitions": [
-				{"default": "!query.has_rider"}
-			],
+			"transitions": [{
+				"default": "!query.has_rider"
+			}],
 			"on_entry": [
 				"/tag @s add has_rider"
 			],
