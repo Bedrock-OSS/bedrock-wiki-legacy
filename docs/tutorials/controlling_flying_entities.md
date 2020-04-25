@@ -33,14 +33,14 @@ Now we will to give it slow falling and speed as it's falling down so that it do
 "controller.animation.dragon.flying": {
 	"states": {
 		"default": {
-	"transitions": [
-				{ "jumping": "!query.is_on_ground" }
-			]
+			"transitions": [{
+				"jumping": "!query.is_on_ground"
+			}]
 		},
 		"jumping": {
-			"transitions": [
-				{ "default": "query.is_on_ground" }
-			],
+			"transitions": [{
+				"default": "query.is_on_ground"
+			}],
 			"on_entry": [
 				"/effect @s slow_falling 20000 0 true",
 				"/effect @s speed 20000 10 true"
