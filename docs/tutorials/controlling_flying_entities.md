@@ -162,3 +162,6 @@ execute @a[rxm=35,rx=90] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] clear
 ```
 ---
 There is also another method of controlling a flying entity through holding the jump button to go upwards, and releasing it to go down. This is done through an animation controller that's animated from the player's json, but I won't be covering that in this tutorial for now.
+
+---
+### **Original Author:** assassin (assassin#1634), 4/24/2020
