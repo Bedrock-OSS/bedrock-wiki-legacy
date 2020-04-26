@@ -7,20 +7,35 @@ nav_order: 2
 
 # Dummy Components
 
-`Warning:` This article is incomplete. You can contribute to it by contacting `SirLich#1658` on Discord, or by making a pull request.
+Dummy components are useless components that are only used for data storage. Dummy components don't **do** anything on their own. They need to be paired with secondary mechanics to have any function. dDummy components are useful because they allow us to store information on the entities, and use the information to drive graphics/gameplay mechanics.
 
-Dummy components are useless components that are only used for data storage. Dummy components don't **do** anything on their own. They need to be paired with secondary mechanics.
+Good examples are `variant` and `mark_variant`. These components can be set with an Integer value. In the vanilla resource pack, this Integer is used to pick the textures for the Cat, and Horse. Another good example is `is_tamed`, which is used by the Horse to handle whether he is ridable or not.
 
-Good examples are `variant` and `mark_variant`. These components can be set with Integer. This Integer is used inside the Resource Pack to pick the different textures. So they are useful, but they won't automatically change textures for you.
+Dummy components are good because they allow us to save data about our entity, and then query this data using Molang. 
 
-Dummy components are good because it allows us to save data about our entity, and then query this data using Molang. 
+## Integer Dummies
 
-## Known Dummies:
- - variant
- - mark_variant
- - skin_id
- - color
- - colo2
+Integer dummies are set with an integer value, which allows you to store numbers, such as 1, 10, or 1423. These integers can be read using queries. Integer dummies are the most useful.
 
-## Simple Dummies (Testable with has_component, but don't contain a "value" field):
- - is_tamed
+## Bit Dummies 
+
+Bit dummies store a single bit of information. Namely `True` or `False`. For example `is_tamed`, which is either `False` (not added to the entity), or `True` (Added to the entity).
+
+# Dummies
+
+| Type | Query                    | Component                    | Notes                                                                                                                             |
+|------|--------------------------|------------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| **Int**  | query.variant            | minecraft:variant            |                                                                                                                                   |
+| **Int**  | query.mark_variant       | minecraft:mark_variant       |                                                                                                                                   |
+| **Int**  | query.skin_id            | minecraft:skin_id            |                                                                                                                                   |
+| Bit  | query.is_illager_captain | minecraft:is_illager_captain |                                                                                                                                   |
+| Bit  | query.is_baby            | minecraft:is_illager_captain |                                                                                                                                   |
+| Bit  | query.is_sheared         | minecraft:is_sheared         |                                                                                                                                   |
+| Bit  | query.is_tamed           | minecraft:is_tamed           |                                                                                                                                   |
+| Bit  | query.is_chested         | minecraft:is_chested         | Will drop chest on death                                                                                                          |
+| Bit  | query.is_charged         | minecraft:is_charged         |                                                                                                                                   |
+| Bit  | query.is_stunned         | minecraft:is_stunned         |                                                                                                                                   |
+| Bit  | query.can_climb          | minecraft:can_climb          | Will allow entities to climb ladders                                                                                              |
+| Bit  | query.can_fly            | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
+| Bit  | query.can_power_jump     | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
+| Bit  | query.is_ignited         | minecraft:is_ignited         |                                                                                                                                   |
