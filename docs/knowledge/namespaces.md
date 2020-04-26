@@ -30,7 +30,7 @@ Some good examples:
  - `cubeworld`
  - `bworks`
 
-# Where to use namespacesS?
+# Where to use namespaces?
 
 In short, you should use name-spaces as often as you can.
 
