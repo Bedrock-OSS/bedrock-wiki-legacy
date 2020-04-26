@@ -2,7 +2,6 @@
 layout: page
 title: Entity Troubleshooting
 parent: Knowledge
-nav_order: 2
 ---
 
 # Entity Troubleshooting

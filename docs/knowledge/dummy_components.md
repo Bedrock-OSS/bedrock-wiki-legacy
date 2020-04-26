@@ -2,7 +2,6 @@
 layout: page
 title: Dummy Components
 parent: Knowledge
-nav_order: 2
 ---
 
 # Dummy Components

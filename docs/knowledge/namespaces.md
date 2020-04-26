@@ -2,7 +2,6 @@
 layout: page
 title: Namespaces
 parent: Knowledge
-nav_order: 3
 ---
 
 # Namespaces

@@ -2,7 +2,6 @@
 layout: page
 title: Dummy Entities
 parent: Tutorials
-nav_order: 2
 ---
 
 # Dummy Entities

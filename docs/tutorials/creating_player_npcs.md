@@ -2,7 +2,6 @@
 layout: page
 title: Creating Player NPCs
 parent: Tutorials
-nav_order: 2
 ---
 
 # Creating Player NPCs
