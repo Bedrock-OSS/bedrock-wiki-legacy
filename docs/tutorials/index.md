@@ -2,7 +2,7 @@
 layout: page
 title: Tutorials
 has_children: true
-nav_order: 2
+nav_order: 3
 ---
 
 # Tutorials
