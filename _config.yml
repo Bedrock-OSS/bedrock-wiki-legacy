@@ -1,7 +1,7 @@
 title: Technical Bedrock Wiki
 email: sirlich.business@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Technical Bedrock knowledge-base, written and maintained by SirLich.
+description: >- 
+  Technical Bedrock knowledge-base, written and maintained by SirLich#1658.
 
 remote_theme: pmarsceill/just-the-docs
 
@@ -9,14 +9,14 @@ github_username:  SirLich
 
 coderay_default_lang: JSON
 markdown: kramdown
-# kramdown:
-#   syntax_highlighter: rouge
 
 aux_links:
   "Join the Discord":
     - "https://discord.gg/XjV87YN"
   "Visit Bedrock.dev":
     - "https://bedrock.dev/"
+  "View the Repository":
+    - "https://github.com/SirLich/technical-bedrock"
 
 # Build settings
 theme: just-the-docs
