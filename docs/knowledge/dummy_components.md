@@ -32,7 +32,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit  | query.is_sheared         | minecraft:is_sheared         |                                                                                                                                   |
 | Bit  | query.is_tamed           | minecraft:is_tamed           |                                                                                                                                   |
 | Bit  | query.is_chested         | minecraft:is_chested         | Will drop chest on death                                                                                                          |
-| Bit  | query.is_charged         | minecraft:is_charged         |                                                                                                                                   |
+| Bit  | query.is_powered         | minecraft:is_charged         |                                                                                                                                   |
 | Bit  | query.is_stunned         | minecraft:is_stunned         |                                                                                                                                   |
 | Bit  | query.can_climb          | minecraft:can_climb          | Will allow entities to climb ladders                                                                                              |
 | Bit  | query.can_fly            | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
