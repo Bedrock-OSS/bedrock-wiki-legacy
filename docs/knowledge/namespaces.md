@@ -19,9 +19,9 @@ If you had instead used `your_namespace:shark`, the naming conflict wouldn't hav
 
 A good namespace is completely unique to you. Something like `mob` or `cars` or `content` or `custom` would be a **bad** namespace, since another developer might come up with the same namespace as you.
 
-A good namespace is short. You will be writing your namespace a **LOT**, so the shorter the beter. `george_carlin_the_comedian` would be a bad namespace for this reason.
+A good namespace is short. You will be writing your namespace a **LOT**, so the shorter the better. `george_carlin_the_comedian` would be a bad namespace for this reason.
 
-For personal projects, I recomend a conveient version of your player name, and for comercial projects, I recomend a convenient version of the company name.
+For personal projects, I recommend a convenient version of your player name, and for commercial projects, I recommend a convenient version of the company name.
 
 Some good examples:
  - `gcarlin`
@@ -47,7 +47,7 @@ For example: `controller.animation.namespace.entity_name.action` is better than 
 
 The actual file structure does not need namespaces. 
 
-`animations/namespace/my_entity/animation` is more confusing than `aniimation/my_entity/animation`.
+`animations/namespace/my_entity/animation` is more confusing than `animation/my_entity/animation`.
 
 
 
