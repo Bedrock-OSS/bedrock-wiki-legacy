@@ -1,7 +1,7 @@
 title: Technical Bedrock Wiki
 email: sirlich.business@gmail.com
 description: >- 
-  Technical Bedrock knowledge-base, written and maintained by SirLich#1658.
+  Technical Bedrock Wiki, written and maintained by SirLich#1658.
 
 remote_theme: pmarsceill/just-the-docs
 
@@ -15,8 +15,10 @@ aux_links:
     - "https://discord.gg/XjV87YN"
   "Visit Bedrock.dev":
     - "https://bedrock.dev/"
-  "View the Repository":
+  "Contribute":
     - "https://github.com/SirLich/technical-bedrock"
+  "Add-on Beginner Guide":
+    - "https://guide.bedrock.dev/"
 
 # Build settings
 theme: just-the-docs
