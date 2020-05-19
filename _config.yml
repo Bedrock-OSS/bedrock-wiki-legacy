@@ -11,13 +11,13 @@ coderay_default_lang: JSON
 markdown: kramdown
 
 aux_links:
-  "Join the Discord":
+  "Discord":
     - "https://discord.gg/XjV87YN"
-  "Visit Bedrock.dev":
+  "Bedrock.dev":
     - "https://bedrock.dev/"
   "Contribute":
     - "https://github.com/SirLich/technical-bedrock"
-  "Add-on Beginner Guide":
+  "Beginner Guide":
     - "https://guide.bedrock.dev/"
 
 # Build settings
@@ -25,3 +25,4 @@ theme: just-the-docs
 plugins:
   - jekyll-feed
 
+search_enabled: true
