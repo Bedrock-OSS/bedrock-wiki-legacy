@@ -32,7 +32,7 @@ Texture layering is achieved through the use of render controllers. If you aren'
 					"*": "Material.default"
 				}
 			],
-			"textures": [
+			"textures": [ //You can add as many layers as you like. Layers are added top to bottom.
                 "Texture.bottom_layer",
                 "Texture.top_layer"
 			]
@@ -51,12 +51,26 @@ You need to define all textures in the entity, and also use `entity_alphatest` m
 "textures": {
     "top_layer": "textures/top",
     "bottom_layer": "textures/bottom"
+	//Add more texture short-name definitions here
 }
 ```
 
 ## Texture Layering with Variance
 
 While I guess hard-coding layered textures is cool, the real fun comes when you make the textures dynamic:
+
+### Entity
+
+Set multiple top textures, which we will index into later.
+
+```json
+"textures": {
+    "top_1": "textures/top_1",
+	"top_2": "textures/top_2",
+    "top_3": "textures/top_3",
+    "bottom_layer": "textures/bottom"
+}
+```
 
 ### Render Controller
 
@@ -81,8 +95,8 @@ While I guess hard-coding layered textures is cool, the real fun comes when you 
 				}
 			],
 			"textures": [
-                "Texture.bottom
-				"Array.top[query.variant]"
+                "Texture.bottom", //static bottom texture
+				"Array.top[query.variant]" //pick top texture based on entity variant.
 			]
 		}
 	}
@@ -91,4 +105,23 @@ While I guess hard-coding layered textures is cool, the real fun comes when you 
 
 By using arrays, and then `query.variant`, we are able to select the top texture based on the `variant` of the entity.
 
+### Setting variant
+
+Now, to select which layer will show up, we can simply set the variant component in the entity:
+
+Remember that components like variant are zero-indexed, which means `0` is our first texture, and then `1` and `2` point to the second and third.
+
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+### Dynamically Changing Texture
+
+If you want to dynamically change the texture of an entity during gameplay, you simply need to change the `variant`. This can be done using component groups and events. 
+
+### Dynamic Layered Textures
+
+Dynamic layered textures can be achieved by adding more lists of textures, and other other dummy components as indexes. You can read about dummy components [here](https://wiki.bedrock.dev/docs/knowledge/dummy_components.html)
 
