@@ -24,7 +24,7 @@ There is loads of useful information about Bedrock Development online, but somet
 ## Tools:
  - [Loot Table Generator](https://amaury.carrade.eu/minecraft/loot_tables)
  - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
- - [Crafting Recipies](https://crafting.thedestruc7i0n.ca/)
+ - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
  - [Advancements](https://advancements.thedestruc7i0n.ca/)
   
 ## Documentation Links:
@@ -43,10 +43,6 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Scripting: Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
-
-## Non-Minecraft useful stuff:
- - [Free Sounds](https://www.zapsplat.com/sound-effect-categories/)
-
 
 
 
