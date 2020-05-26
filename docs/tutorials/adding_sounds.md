@@ -16,6 +16,9 @@ There are two files you will need to edit:
 
 Additionally, you will need to include the actual sound files. This isn't an exhaustive list, but I believe that `.ogg` and `.wav` are supported. These files can be included inside the sounds folder, for example `sounds/elephant/trumpet.wav`.
 
+
+## Sound Categories
+
 Sounds in Minecraft are added in one of multiple categories:
  - **individual_event_sounds:** Contains sounds like beacon activation, chest-close, or explode.
  - **block_sounds:** Contains hit, step, and break sounds for blocks.
@@ -51,11 +54,37 @@ There are also many sound definitions, which *most likely* trigger automatically
  - warn
  - scream
 
-Here is an example of adding step, and ambient sound-definitions for an imaginary elephant mob.
+# Example
+
+Here is an example of adding `step`, and `ambient` sound-definitions for an imaginary elephant mob.
+
+## sounds/sound_definitions.json
+
+This will create the sound definitions, and make them available to the engine. You can now test your sound by running a command like `/playsound elephant.step`.
+
+```json
+{
+	"elephant.step": {
+		"category": "neutral",
+		"sounds": [
+			"sounds/elephant/step"
+		]
+	},
+	"elephant.trumpet": {
+		"category": "neutral",
+		"sounds": [
+			"sounds/elephant/trumpet"
+		]
+	}
+}
+```
+
+## sounds.json
+
+If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to the entity.
 
 Note that when adding sounds this way, you don't need to trigger them using a `playsound` or anything. The step and ambient will play automatically, based on their configured triggers.
  
-## sounds.json
 ```json
 {
     "entity_sounds": {
@@ -81,23 +110,5 @@ Note that when adding sounds this way, you don't need to trigger them using a `p
             }
         }
     }
-}
-```
-
-## sounds/sound_definitions.json
-```json
-{
-	"elephant.step": {
-		"category": "neutral",
-		"sounds": [
-			"sounds/elephant/step"
-		]
-	},
-	"elephant.trumpet": {
-		"category": "neutral",
-		"sounds": [
-			"sounds/elephant/trumpet"
-		]
-	}
 }
 ```
