@@ -21,3 +21,7 @@ The next thing you should do is turn on your content log. This can be done like:
 ## Using Vanilla Resources
 
 You should also download the vanilla resource and behavior pack. You can find these [here](https://www.minecraft.net/en-us/addons/). You can compare against the vanilla files if you have any issues.
+
+## JSON-Schemas
+
+A very valuable tool for validation entity files is by using a JSON-Schema, which you can learn more about [here](https://wiki.bedrock.dev/docs/knowledge/using_schema.html).

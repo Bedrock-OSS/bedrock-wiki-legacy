@@ -18,7 +18,7 @@ You should join the following discord servers:
 
 ## What editor should I use?
 
-I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](https://wiki.bedrock.dev/docs/knowledge/the_editor.html) document.
+I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](https://wiki.bedrock.dev/docs/knowledge/the_editor.html) document. You should also be using a [JSON-Schema](https://wiki.bedrock.dev/docs/knowledge/using_schema.html)
 
 ## OK but how do I actually get started?
 
