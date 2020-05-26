@@ -28,7 +28,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | **Int**  | query.mark_variant       | minecraft:mark_variant       |                                                                                                                                   |
 | **Int**  | query.skin_id            | minecraft:skin_id            |                                                                                                                                   |
 | Bit  | query.is_illager_captain | minecraft:is_illager_captain |                                                                                                                                   |
-| Bit  | query.is_baby            | minecraft:is_illager_captain |                                                                                                                                   |
+| Bit  | query.is_baby            | minecraft:is_baby |                                                                                                                                   |
 | Bit  | query.is_sheared         | minecraft:is_sheared         |                                                                                                                                   |
 | Bit  | query.is_tamed           | minecraft:is_tamed           |                                                                                                                                   |
 | Bit  | query.is_chested         | minecraft:is_chested         | Will drop chest on death                                                                                                          |
