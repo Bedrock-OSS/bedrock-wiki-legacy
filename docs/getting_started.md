@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Getting Started with Addons
-nav_order: 2
+title: Getting Started
+nav_order: 1
 ---
 
 # Getting Started with Addons
