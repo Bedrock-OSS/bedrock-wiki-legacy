@@ -21,7 +21,7 @@ The syntax for this component can be found [here](https://bedrock.dev/1.14.0.0/1
 
 An example usage would be:
 
-```JSON
+```json
 "minecraft:timer": {
     "time": 5,
     "time_down_event": {
@@ -38,7 +38,7 @@ We can get around this by using dummy-timers, such as `minecraft:ageable`. As lo
 
 That might look something like this:
 
-```JSON
+```json
 "minecraft:is_baby": {},
 "minecraft:ageable": {
     "duration": 4,
@@ -68,7 +68,7 @@ Simply use randomize with weight to determine how often events will be run. This
 
 A solution might look like this:
 
-```JSON
+```json
 "sirlich:do_tick": {
     "randomize": [
         {
@@ -99,7 +99,7 @@ A solution might look like this:
 Another possibility is to use `minecraft:environment_sensor` with the `hourly_clock_time` or `clock_time` filters.
 
 A solution of this form might look like this:
-```JSON
+```json
 "minecraft:environment_sensor": {
     "triggers": [
         {
@@ -115,3 +115,38 @@ A solution of this form might look like this:
 ```
 
 Hopefully this spread some light on the subject of handling time in Minecraft Bedrock!
+
+## Using animation timelines
+
+For certain timing needs, the use of animation timelines might be the most natural. Animations timelines will not be covered extensively in this document, but you should know they exist. 
+
+By triggering animations from an animation controller, you can execute specific events, commands, or molang expressions in a timed-sequence, called a timeline.
+
+You can set up timelines like this:
+
+```json
+"format_version": "1.8.0",
+	"animations": {
+		"animation.command.example_timeline": {
+			"timeline": {
+				"0.0": "/say this will trigger instantly",
+				"3.0": "/say this will trigger after 3 seconds"
+            },
+            "animation_length": 3
+		},
+		"animation.command.example_timeline_2": {
+			"timeline": {
+				"0.0": [
+                    "/say you can trigger multiple events at once",
+                    "/say by using timelines."
+                ],
+                "55.55": "/say this will trigger after 55.55 seconds.",
+                "100": "/say this will trigger after 100 seconds"
+            },
+            "animation_length": 55.55
+		}
+	}
+}
+```
+
+For more information about animations and timelines, you should check out the official documentation, or the other pages on this wiki.
