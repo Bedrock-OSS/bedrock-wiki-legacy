@@ -18,8 +18,7 @@ This wiki is a knowledge-sharing website for Technical Bedrock, containing docum
  - **Knowledge**: Top-level information, such as editor recommendations.
  - **Tutorials:** Tutorial-like write-ups, containing specific instructions and example json.
  - **Documentation:** Specific documentation information. 
-
-You can reach me directly about this content by joining the discord: https://discord.gg/XjV87YN
+ - **Vanilla Usage:** Vanilla examples of every-single entity component. 
 
 ## Contributing:
 
