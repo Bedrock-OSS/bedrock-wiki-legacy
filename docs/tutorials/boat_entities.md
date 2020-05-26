@@ -18,7 +18,7 @@ In general though, runtime identifiers can be used to get hard-coded functionali
 
 #  Using Components
 
-I believe the best way to create boat entities is to offset the geometry so that it doesn't sink too far into the water. 
+I believe the best way to create boat entities is by using components, and by offsetting the geometry so that it doesn't sink too far into the water. This section will cover how to achieve boats in this way. 
 
 ## Base Entity
 
