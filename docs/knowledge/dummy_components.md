@@ -30,6 +30,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit  | query.is_illager_captain | minecraft:is_illager_captain |                                                                                                                                   |
 | Bit  | query.is_baby            | minecraft:is_illager_captain |                                                                                                                                   |
 | Bit  | query.is_sheared         | minecraft:is_sheared         |                                                                                                                                   |
+| Bit  | query.is_saddled         | minecraft:is_saddled         |                                                                                                                                   |
 | Bit  | query.is_tamed           | minecraft:is_tamed           |                                                                                                                                   |
 | Bit  | query.is_chested         | minecraft:is_chested         | Will drop chest on death                                                                                                          |
 | Bit  | query.is_powered         | minecraft:is_charged         |                                                                                                                                   |
