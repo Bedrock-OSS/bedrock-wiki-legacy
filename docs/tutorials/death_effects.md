@@ -74,7 +74,8 @@ I've included example files for download. Feel free to use them as templates, or
 }
 ```
 
-## Animation Controller
+## Animation controller
+For this to work please put the animation controller in BP not RP
 ```json
 {
     "format_version": "1.10.0",
@@ -99,3 +100,7 @@ I've included example files for download. Feel free to use them as templates, or
 }
 ```
 
+## Related links
+for further information on these topics got to these Bedrock.dev pages
+- [Animations](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Animations)
+- [Entity Events](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entity%20Events)
