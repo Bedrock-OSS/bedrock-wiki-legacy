@@ -48,6 +48,6 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
  - [Vanilla Behaviour Pack](https://aka.ms/behaviorpacktemplate)
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
- - [Vannilla Beta Behaviour pack](https://aka.ms/MinecraftBetaBehaviors)
+ - [Vannilla Beta Behaviour Pack](https://aka.ms/MinecraftBetaBehaviors)
 
 
