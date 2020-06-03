@@ -23,21 +23,22 @@ Texture layering is achieved through the use of render controllers. If you aren'
 ### Render Controller
 ```json
 {
-	"format_version": "1.10.0",
-	"render_controllers": {
-		"controller.render.texture_layering": {
-			"geometry": "Geometry.default",
-			"materials": [
-				{
-					"*": "Material.default"
-				}
-			],
-			"textures": [ //You can add as many layers as you like. Layers are added top to bottom.
-                "Texture.bottom_layer",
-                "Texture.top_layer"
-			]
-		}
-	}
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.texture_layering": {
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        //You can add as many layers as you like. Layers are added top to bottom.
+        "Texture.bottom_layer",
+        "Texture.top_layer"
+      ]
+    }
+  }
 }
 ```
 
@@ -46,12 +47,12 @@ Texture layering is achieved through the use of render controllers. If you aren'
 You need to define all textures in the entity, and also use `entity_alphatest` material.
 ```json
 "materials": {
-    "default": "entity_alphatest"
+  "default": "entity_alphatest"
 },
 "textures": {
-    "top_layer": "textures/top",
-    "bottom_layer": "textures/bottom"
-	//Add more texture short-name definitions here
+  "top_layer": "textures/top",
+  "bottom_layer": "textures/bottom"
+  //Add more texture short-name definitions here.
 }
 ```
 
@@ -65,10 +66,10 @@ Set multiple top textures, which we will index into later.
 
 ```json
 "textures": {
-    "top_1": "textures/top_1",
-	"top_2": "textures/top_2",
-    "top_3": "textures/top_3",
-    "bottom_layer": "textures/bottom"
+  "top_1": "textures/top_1",
+  "top_2": "textures/top_2",
+  "top_3": "textures/top_3",
+  "bottom_layer": "textures/bottom"
 }
 ```
 
@@ -76,30 +77,30 @@ Set multiple top textures, which we will index into later.
 
 ```json
 {
-	"format_version": "1.10.0",
-	"render_controllers": {
-		"controller.render.wool_only": {
-			"arrays": {
-				"textures": {
-					"Array.top": [
-						"Texture.top_1",
-						"Texture.top_2",
-						"Texture.top_3"
-					]
-				}
-			},
-			"geometry": "Geometry.default",
-			"materials": [
-				{
-					"*": "Material.default"
-				}
-			],
-			"textures": [
-                "Texture.bottom", //static bottom texture
-				"Array.top[query.variant]" //pick top texture based on entity variant.
-			]
-		}
-	}
+  "format_version": "1.10.0",
+  "render_controllers": {
+    "controller.render.wool_only": {
+      "arrays": {
+        "textures": {
+          "Array.top": [
+            "Texture.top_1",
+            "Texture.top_2",
+            "Texture.top_3"
+          ]
+        }
+      },
+      "geometry": "Geometry.default",
+      "materials": [
+        {
+          "*": "Material.default"
+        }
+      ],
+      "textures": [
+        "Texture.bottom", //static bottom texture
+        "Array.top[query.variant]" //pick top texture based on entity variant.
+      ]
+    }
+  }
 }
 ```
 
@@ -113,7 +114,7 @@ Remember that components like variant are zero-indexed, which means `0` is our f
 
 ```json
 "minecraft:variant": {
-    "value": 0
+  "value": 0
 }
 ```
 
