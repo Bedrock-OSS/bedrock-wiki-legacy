@@ -43,6 +43,10 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Scripting: Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
-
+ ## Vannilla Behaviour & Recource Packs:
+ - [Vanilla Recource Pack](https://aka.ms/resourcepacktemplate)
+ - [Vanilla Behaviour Pack](https://aka.ms/behaviorpacktemplate)
+ - [Vanilla Beta Recource Pack](https://aka.ms/MinecraftBetaResources)
+ - [Vannilla Beta Behaviour pack](https://aka.ms/MinecraftBetaBehaviors)
 
 
