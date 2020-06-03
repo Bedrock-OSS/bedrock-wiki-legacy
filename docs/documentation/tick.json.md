@@ -6,7 +6,9 @@ parent: Documentation
  
 # Running functions through tick.json
  
-`Tick.json` is server-side file located as `(Root Behavior Folder)/functions/tick.json` that lets you execute function files. 
+`Tick.json` is server-side file located as `(Root Behavior Folder)/functions/tick.json` that lets you execute function files.
+
+Functions will be run each tick, as if placed in a repeating command block.
 
 
 ## Creating tick.json
