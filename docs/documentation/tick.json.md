@@ -27,4 +27,4 @@ Create a file called tick.json in your root function folder. The format is this:
 
 ## Known Issues
 
-While this is a useful file if you're trying to stary away from using repeating command blocks in-game, it is known for starting to executing function files before the world has fully loaded. This might cause unintended command behavior and crashes, thus it's recommeded not to use this file excessivley.
+While this is a useful file if you're trying to stray away from using repeating command blocks in-game, it is known for starting to executing function files before the world has fully loaded. This might cause unintended command behavior and crashes, thus it's recommended not to use this file excessively.
