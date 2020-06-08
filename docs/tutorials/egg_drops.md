@@ -31,7 +31,7 @@ Here is how to make entities drop their own eggs when killed:
                     "functions": [
                         {
                             "function": "set_actor_id",
-                            "id": "namespace:your_entity" // Change this to match your entity, or remove it to automatically use the ID of the entity that drops this loot table.
+                            "id": "namespace:your_entity" // View notes below
                         }
                     ]
                 }
@@ -40,6 +40,8 @@ Here is how to make entities drop their own eggs when killed:
     ]
 }
 ```
+
+**Notes:** Change this to match your entity, or remove it to automatically use the ID of the entity that drops this loot table.
 
 
 
