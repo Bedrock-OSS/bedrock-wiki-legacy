@@ -9,7 +9,7 @@ github_username:  SirLich
 
 coderay_default_lang: JSON
 markdown: kramdown
-
+url: https://wiki.bedrock.dev/
 aux_links:
   "Discord":
     - "https://discord.gg/XjV87YN"
