@@ -11,6 +11,7 @@ NBT data for Bedrock edition is very limited. Two of the only values we have acc
 # Format
 
 Destroy:: `/give @p diamond_pickaxe 1 0 {"minecraft:can_destroy":{"blocks":["stone"]}}`
+
 Place on: `/give @p stone 1 0 {"minecraft:can_place_on":{"blocks":["stone"]}}`
 
 You can add more blocks like this: `["stone", "dirt"]`
