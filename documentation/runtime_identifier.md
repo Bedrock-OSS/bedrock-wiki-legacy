@@ -48,3 +48,9 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 - Will always be pushable through by other entites.
 - Cannot be configured to recieve damage.
 - Cannot change the direction it faces.
+
+`minecraft:parrot`
+### Notes:
+ - makes the wing flap animation able to work
+ - makes the mob fall slowly
+ - makes it dance to music discs 
