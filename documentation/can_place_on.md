@@ -1,6 +1,6 @@
 ---
 layout: page
-title: CanPlaceOn and CanDestroy
+title: Can PlaceOn/Destory
 parent: Documentation
 ---
 
