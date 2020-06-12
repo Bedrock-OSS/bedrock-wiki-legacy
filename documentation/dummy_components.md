@@ -27,6 +27,8 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | **Int**  | query.variant            | minecraft:variant            |                                                                                                                                   |
 | **Int**  | query.mark_variant       | minecraft:mark_variant       |                                                                                                                                   |
 | **Int**  | query.skin_id            | minecraft:skin_id            |                                                                                                                                   |
+| **Int***  | Filter like: `"test": "is_color"`, colors are provided below.            | minecraft:color |   Also sets color in materials.  |                                                                                                                                   |
+| **Int***  |             | minecraft:skin_id | No known filter, but can be used with `"has_component"`        | Also sets color in materials.   |                                                                                                                                   |
 | Bit  | query.is_illager_captain | minecraft:is_illager_captain |                                                                                                                                   |
 | Bit  | query.is_baby            | minecraft:is_baby |                                                                                                                                   |
 | Bit  | query.is_sheared         | minecraft:is_sheared         |                                                                                                                                   |
@@ -39,3 +41,21 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit  | query.can_fly            | minecraft:can_fly            | Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it. |
 | Bit  | query.can_power_jump     | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
 | Bit  | query.is_ignited         | minecraft:is_ignited         |                                                                                                                                   |
+
+## Colors for the color and color2 components:
+- black	
+- blue	
+- brown	
+- cyan	
+- gray	
+- green	
+- light_blue	
+- light_green	
+- magenta	
+- orange	
+- pink	
+- purple	
+- red	
+- silver	
+- white	
+- yellow
