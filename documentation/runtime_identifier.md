@@ -55,4 +55,7 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
  - makes the mob fall slowly
  - makes it dance to music discs
 
+`minecraft:armor_stand`
+### Notes:
+ - Disables entity shadows
 
