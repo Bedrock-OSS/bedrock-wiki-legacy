@@ -559,6 +559,11 @@ This is an edited version of the player entity file. It contains geometry, a nor
 }
 ```
 
+`warning:` After 1.16, you will also need to add this:
+```json
+"fishing_rod": "animation.humanoid.fishing_rod"
+```
+
 # Render Controller File
 
 You can also use a vanilla render controller if you prefer.
