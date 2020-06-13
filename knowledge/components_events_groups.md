@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Component Groups Vs. Components Vs. Events
+title: Components/Groups/Events
 parent: Knowledge
 ---
 
