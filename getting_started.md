@@ -18,12 +18,12 @@ You should join the following discord servers:
 
 ## What editor should I use?
 
-I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](https://wiki.bedrock.dev/docs/knowledge/the_editor.html) document. You should also be using a [JSON-Schema](https://wiki.bedrock.dev/docs/knowledge/using_schema.html)
+I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](https://wiki.bedrock.dev/knowledge/the_editor.html) document. You should also be using a [JSON-Schema](https://wiki.bedrock.dev/knowledge/using_schema.html)
 
 ## OK but how do I actually get started?
 
-The best place to start is probably the Bedrock [Beginners Guide](https://guide.bedrock.dev/). You should also bookmark the [documentation](https://bedrock.dev/). After that, your best bet is to just try things! Download the vanilla Behavior Pack and Resource Pack. Poke around. Try changing things. 
+The best place to start is probably the Bedrock [Beginners Guide](https://guide.bedrock.dev/). You should also bookmark the [documentation](https://bedrock.dev/). After that, your best bet is to just try things! Download the vanilla Behavior Pack and Resource Pack. Poke around. Try changing things.
 
 ## What if my addon doesn't work?
 
-You will need to debug your entity. This [page](https://wiki.bedrock.dev/docs/knowledge/entity_troubleshooting.html) can be useful.
+You will need to debug your entity. This [page](https://wiki.bedrock.dev/knowledge/troubleshooting.html) can be useful.

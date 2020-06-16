@@ -8,11 +8,11 @@ parent: Tutorials
 
 sometimes, it is useful to create layered textures for custom entities. Layered in this context simply means multiple textures overlayed on top of each other, where the top texture has alpha pixels, and allows the bottom texture to show through.
 
-As a very simple example, imagine a **painting** entity. The frame of the painting is always the same, but the picture itself can change. While you *could* duplicate the frame 10 times, and paint in 10 paintings, you now created a problem: What if you want to change the frame? Now you need to edit 10 textures. 
+As a very simple example, imagine a **painting** entity. The frame of the painting is always the same, but the picture itself can change. While you *could* duplicate the frame 10 times, and paint in 10 paintings, you now created a problem: What if you want to change the frame? Now you need to edit 10 textures.
 
-This can be solved by layering textures. Simply place the frame texture on first, and then add the different paintings on top. You can now edit the frame in one, simple location. 
+This can be solved by layering textures. Simply place the frame texture on first, and then add the different paintings on top. You can now edit the frame in one, simple location.
 
-Or, you could even create multiple frames for each painting! This allows you to create more variety in your panting entity, since the player can independently change two textures. 
+Or, you could even create multiple frames for each painting! This allows you to create more variety in your panting entity, since the player can independently change two textures.
 
 # Render Controllers
 
@@ -120,9 +120,8 @@ Remember that components like variant are zero-indexed, which means `0` is our f
 
 ### Dynamically Changing Texture
 
-If you want to dynamically change the texture of an entity during gameplay, you simply need to change the `variant`. This can be done using component groups and events. 
+If you want to dynamically change the texture of an entity during gameplay, you simply need to change the `variant`. This can be done using component groups and events.
 
 ### Dynamic Layered Textures
 
-Dynamic layered textures can be achieved by adding more lists of textures, and other other dummy components as indexes. You can read about dummy components [here](https://wiki.bedrock.dev/docs/knowledge/dummy_components.html)
-
+Dynamic layered textures can be achieved by adding more lists of textures, and other other dummy components as indexes. You can read about dummy components [here](https://wiki.bedrock.dev/tutorials/dummy_entities.html)
