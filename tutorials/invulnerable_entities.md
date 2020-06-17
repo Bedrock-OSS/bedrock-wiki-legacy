@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Invulnerable Entities 
+title: Invulnerable Entities
 parent: Tutorials
 ---
 
@@ -29,9 +29,9 @@ This is a stub. More information will be added later.
 ```
 
 ## Filtering Damage:
-Using `minecraft:damage_sensor`, you can create some very nice damage-filtering. For example, only being invincible to lighting, or only taking damage from  players. 
+Using `minecraft:damage_sensor`, you can create some very nice damage-filtering. For example, only being invincible to lighting, or only taking damage from  players.
 
-The best way to learn about this component is by using the [vanilla examples for damage sensor.](https://sirlich.github.io/technical-bedrock/docs/vanilla_usage/components_1.14.html#minecraftdamage_sensor)
+The best way to learn about this component is by using the [vanilla examples for damage sensor.](https://sirlich.github.io/technical-bedrock/vanilla_usage/components_1.14.html#minecraftdamage_sensor)
 
 ### Filtering Damage Example:
 
