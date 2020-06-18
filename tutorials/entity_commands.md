@@ -26,7 +26,7 @@ Here is an example animation controller:
                 "default": {
                     "transitions": [
                         {
-                            "on_summon": true
+                            "on_summon": "1" //1 evaluates as true
                         }
                     ]
                 },
