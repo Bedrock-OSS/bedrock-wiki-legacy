@@ -31,11 +31,11 @@ In this case, four short-name definitions have been created:
  - `default`, in the textures array
  - `default`, in the geometry array
 
-You can define multiple short-names in each array, such as in the `materials` example above. 
+You can define multiple short-names in each array, such as in the `materials` example above.
 
 You should think of short-name definitions as `importing` the assets you want. At this state, you are bringing in textures, geometry, etc. In the render-controller stage, you won't import anything. You will simply use the assets you already imported to create the rendered entity.
 
-# Simple render-controller 
+# Simple render-controller
 
 A simple render controller looks like this:
 
@@ -52,11 +52,11 @@ A simple render controller looks like this:
 }
 ```
 
-This controller is taking the short-name definitions from the entity file, and `rendering` them. For example the line: `"textures": [ "Texture.default"]` says: "Take the default texture, and apply it to the entity". The render controller doesn't what the default texture is, it simply applies it.
+This controller is taking the short-name definitions from the entity file, and `rendering` them. For example the line: `"textures": [ "Texture.default"]` says: "Take the default texture, and apply it to the entity". The render controller doesn't know what the default texture is, it simply applies it.
 
 # Re-using render controllers
 
-Since render controllers work based on short-names, it is possible to re-use the same render controller for all of your entities. For simple entities with one material, one texture, and one geometry, custom render controllers are not necesarry. 
+Since render controllers work based on short-names, it is possible to re-use the same render controller for all of your entities. For simple entities with one material, one texture, and one geometry, custom render controllers are not necessary.
 
 For example, the render controller above is used for the `minecraft:cow` entity. If you want to use this render controller in your own pack, simple define like: `"render_controllers": [ "controller.render.cow" ]` in your entity file.
 
@@ -72,4 +72,3 @@ For example, the render controller above is used for the `minecraft:cow` entity.
  # Texture layering
 
  Layering textures is currently written as a wiki article here: [Texture Layering](https://wiki.bedrock.dev/tutorials/texture_layering.html).
-
