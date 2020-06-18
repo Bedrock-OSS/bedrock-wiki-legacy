@@ -1,7 +1,7 @@
 ---
 layout: page
 title: FAQ
-nav_order: 1
+parent: Knowledge
 ---
 
 ### FAQ
