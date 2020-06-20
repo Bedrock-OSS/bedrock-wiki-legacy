@@ -59,3 +59,8 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 ### Notes:
  - Disables entity shadows
 
+`minecraft:iron_golem`
+### Notes:
+- Allows push attack
+- Breaks arm interaction
+- Might interact badly with village/villager logic.
