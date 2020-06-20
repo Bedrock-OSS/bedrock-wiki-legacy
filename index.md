@@ -5,7 +5,7 @@ nav_order: 0
 description: "Technical bedrock knowledge-sharing wiki."
 permalink: /
 ---
-# Technical Bedrock Wiki 
+# Bedrock Wiki 
 <a href="https://discord.gg/XjV87YN" type="button" name="button" class="btn">Discord</a>
 <a href="https://bedrock.dev/" type="button" name="button" class="btn">Visit Bedrock.dev</a>
 <a href="https://github.com/SirLich/technical-bedrock" type="button" name="button" class="btn">Contribute</a>
@@ -19,6 +19,7 @@ This wiki is a knowledge-sharing website for Technical Bedrock, containing docum
  - **Tutorials:** Tutorial-like write-ups, containing specific instructions and example json.
  - **Documentation:** Specific documentation information. 
  - **Vanilla Usage:** Vanilla examples of every-single entity component. 
+ - **Templates:** Useful json examples. 
 
 ## Contributing:
 
