@@ -37,6 +37,32 @@ Your animation controller might look something like this:
 }
 ```
 
+## Use on player entities
+
+In the case of player entities, an additional transition must be added to the second animation state in order to ensure the state resets between deaths:
+
+```json
+"states": {
+    "default": {
+        "transitions": [
+            {
+                "speak": "!query.is_alive"
+            }
+        ]
+    },
+    "speak": {
+        "transitions": [
+            {
+                "default": "query.is_alive"
+            }
+        ],
+        "on_entry": [
+            "/say I'm Dead!"
+        ]
+    }
+}
+```
+
 ## Example Files
 
 I've included example files for download. Feel free to use them as templates, or directly in your projects if thats useful to you.
