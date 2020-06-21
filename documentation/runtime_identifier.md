@@ -25,7 +25,7 @@ It's important to remember that `runtime_identifier` will only parse the hard-co
 
 Down below are a few Runtime Identifiers that you can add to your entity with their pros and cons.
 
-`minecraft:shulker`
+## `minecraft:shulker`
 ---
 ### Pros
 - A solid collision box of 1x1x1.
@@ -37,7 +37,7 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 - If the entity is spawned on a non-full block (e.g. bed, slab, etc...), it will teleport to another location nearby.
 - The solid collision box's width and height cannot be changed.
 
-`minecraft:end_crystal`
+## `minecraft:end_crystal`
 ---
 ### Pros
 - The entity will stick to the center of the block it's spawned in.
@@ -49,18 +49,29 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 - Cannot be configured to recieve damage.
 - Cannot change the direction it faces.
 
-`minecraft:parrot`
+## `minecraft:parrot`
 ### Notes:
  - makes the wing flap animation able to work
  - makes the mob fall slowly
  - makes it dance to music discs
 
-`minecraft:armor_stand`
+## `minecraft:armor_stand`
 ### Notes:
  - Disables entity shadows
+ - Equipment placeable on/removable from entity
 
-`minecraft:iron_golem`
+## `minecraft:iron_golem`
 ### Notes:
-- Allows push attack
-- Breaks arm interaction
-- Might interact badly with village/villager logic.
+- Allows launching attack
+- Speeds up arm and leg animation (can be fixed manually, ~1/4 speed)
+- May interact poorly with village/villager logic.
+
+## `minecraft:arrow`
+### Notes:
+- Disables death animation, sound, and particles
+- Not interactable
+
+## `minecraft:thrown_trident`
+### Notes:
+- Disables death animation, sound, and particles
+- Not interactable
