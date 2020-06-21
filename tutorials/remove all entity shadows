@@ -1,9 +1,9 @@
-'''Add / Remove all shadows by code'''
+**Add / Remove all shadows by code**
 
 by Outlandishly Crafted updated by Jeremy Benisek AKA CyberAxe
 06212020
 
-How to remove all entity shadows:
+**How to remove all entity shadows:**
 
 Change these lines in the shadow.material file under the Resource Pack / materials folder. 
 NOTE: This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
