@@ -26,39 +26,68 @@ In the vanilla Behavior Pack, this component is used in all kinds of circumstanc
 
 A simple example which triggers an event after 5.6 seconds:
 ```json
-"minecraft:timer": {
-	"time": 5.6,
-	"time_down_event": {
-		"event": "namespace:my_event"
-	}
-}
+  "minecraft:timer": {
+    "time": 5.6,
+    "time_down_event": {
+      "event": "namespace:my_event"
+    }
+  }
+```
+
+A more complex example which triggers an event after a randomized amount of delay using weighted values:
+```json
+  "minecraft:timer": {
+    "looping": false, //true will fires event after every execution,  false will fire event only once.
+    "random_time_choices": [
+      {
+        "weight": 25,
+        "value": 0.5 //Half a second of delay.
+      },
+      {
+        "weight": 25,
+        "value": 10 //Ten seconds of delay.
+      },
+      {
+        "weight": 25,
+        "value": 30 //Thirty seconds of delay.
+      },
+      {
+        "weight": 25,
+        "value": 120 //2 minutes of delay
+      }
+    ],
+    "time_down_event": {
+      "event": "namespace:event",
+      "target": "self"
+    }
+  }
 ```
 
 A particularly useful way to handle time events is using a single, looping `minecraft:timer` component and processing the events on each tick (or however often you decide to fire the timer). This is done by using the `randomize` parameter in events, where a weight may be used determine how often other events will be run. This can get you a lot of extra mileage out of a single timer component.
 ```json
-"sirlich:do_event": {
-	"randomize": [
-		{
-			"weight": 1,
-			"add": {
-			"component_groups": [
-					"sirlich:my_event"
-				]
-			}
-		},
-		{
-			"weight": 5,
-			"add": {
-				"component_groups": [
-					"sirlich:my_more_frequent_event"
-				]
-			}
-		},
-		{
-			"weight": 50 //do nothing!
-		}
-	]
-}
+  "sirlich:do_event": {
+    "randomize": [
+      {
+        "weight": 1,
+        "add": {
+          "component_groups": [
+            "sirlich:my_event"
+          ]
+        }
+      },
+      {
+        "weight": 5,
+        "add": {
+          "component_groups": [
+            "sirlich:my_more_frequent_event"
+          ]
+        }
+      },
+      {
+        "weight": 50 //Fires nothing.
+      }
+    ]
+  }
 ```
 
 ### [minecraft:environment_sensor](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entities#minecraft:environment_sensor)
@@ -67,14 +96,18 @@ Another component which can be very useful for time-based events is `minecraft:e
 
 Here is an example which is used to fire an event 800 ticks after the start of the day (valid range is 0 to 24000):
 ```json
-"minecraft:environment_sensor": {
-	"triggers": [
-		{
-			"filters": { "test": "hourly_clock_time", "operator": "=", "value": 800 },
-			"event": "namespace:my_daily_event"
-		}
-	]
-}
+  "minecraft:environment_sensor": {
+    "triggers": [
+      {
+        "filters": {
+          "test": "hourly_clock_time",
+          "operator": "=",
+          "value": 800
+        },
+        "event": "namespace:my_daily_event"
+      }
+    ]
+  }
 ```
 
 ### [minecraft:ageable](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entities#minecraft:ageable)
@@ -83,14 +116,14 @@ If this component is not being used in the entity's behavior for a different pur
 
 Here is an example which fires an event after four seconds:
 ```json
-"minecraft:is_baby": {},
-"minecraft:ageable": {
-    "duration": 4.0,
+  "minecraft:is_baby": {},
+  "minecraft:ageable": {
+    "duration": 4,
     "grow_up": {
-        "event": "namespace:my_other_event",
-        "target": "self"
+      "event": "namespace:my_other_event",
+      "target": "self"
     }
-}
+  }
 ```
 
 ### Other dummy-timers:
@@ -114,27 +147,28 @@ By triggering animations from an animation controller or directly from the scrip
 
 You can set up timelines like this:
 ```json
-"format_version": "1.10.0",
-	"animations": {
-		"animation.command.example_timeline": {
-			"timeline": {
-				"0.0": "/say this will trigger instantly",
-				"3.0": "/say this will trigger after 3 seconds"
-			},
-			"animation_length": 3.0
-		},
-		"animation.command.example_timeline_2": {
-			"timeline": {
-				"0.0": [
-					"/say you can trigger multiple events at once",
-					"/say by using timelines."
-				],
-				"55.55": "/say this will trigger after 55.55 seconds.",
-				"100": "/say this will trigger after 100 seconds"
-			},
-			"animation_length": 100.0
-		}
-	}
+{
+  "format_version": "1.10.0",
+  "animations": {
+    "animation.command.example_timeline": {
+      "timeline": {
+        "0.0": "/say this will trigger instantly",
+        "3.0": "/say this will trigger after 3 seconds"
+      },
+      "animation_length": 3
+    },
+    "animation.command.example_timeline_2": {
+      "timeline": {
+        "100": "/say this will trigger after 100 seconds",
+        "0.0": [
+          "/say you can trigger multiple events at once",
+          "/say by using timelines."
+        ],
+        "55.55": "/say this will trigger after 55.55 seconds."
+      },
+      "animation_length": 100
+    }
+  }
 }
 ```
 
@@ -142,25 +176,41 @@ You can set up timelines like this:
 
 A very useful feature of the timer component is its ability to define a random interval in which the event will be triggered. This functionality can be replicated using animations and a controller. Below is an example of an animation triggered by adding the `minecraft:is_sheared` component to an entity which randomly fires an event between 2 to 7 seconds after activation. Animation and controller version 1.10.0.
 ```json
-"controller.animation.shanewolf.random_interval": {
-	"initial_state": "inactive",
-	"states": {
-		"inactive": {
-			"transitions": [ { "active": "query.is_sheared" } ]
-		},
-		"active": {
-			"on_entry": [ "variable.random_interval = math.random(2, 7);", "/say random interval started" ],
-			"animations": [ "shanewolf:animate_interval" ],
-			"transitions": [ { "inactive": "query.anim_time >= variable.random_interval" } ],
-			"on_exit": [ "@s shanewolf:stop_random_interval", "/say random interval finished" ]
-		}
-	}
-}
+  "controller.animation.shanewolf.random_interval": {
+    "initial_state": "inactive",
+    "states": {
+      "inactive": {
+        "transitions": [
+          {
+            "active": "query.is_sheared"
+          }
+        ]
+      },
+      "active": {
+        "on_entry": [
+          "variable.random_interval = math.random(2, 7);",
+          "/say random interval started"
+        ],
+        "animations": [
+          "shanewolf:animate_interval"
+        ],
+        "transitions": [
+          {
+            "inactive": "query.anim_time >= variable.random_interval"
+          }
+        ],
+        "on_exit": [
+          "@s shanewolf:stop_random_interval",
+          "/say random interval finished"
+        ]
+      }
+    }
+  }
 ```
 ```json
-"animation.shanewolf.random_interval": {
-	"animation_length": 100.0
-}
+  "animation.shanewolf.random_interval": {
+    "animation_length": 100
+  }
 ```
 
 Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 2 and 7. The animation finishes when the current animation time is greater than or equal to the value of this variable.
@@ -175,29 +225,47 @@ Notes:
 
 Another useful feature of the timer component is its ability to trigger events at a time determined by a weighted list of values. This functionality can also be replicated using animations and a controller. Below is an example of an animation triggered by adding the `minecraft:is_charged` component to an entity which randomly fires an event at either 2, 5, or 9 seconds with weights of 30, 60, and 10, respectively. Animation and controller version 1.10.0.
 ```json
-"controller.animation.shanewolf.random_choices": {
-	"initial_state": "inactive",
-	"states": {
-		"inactive": {
-			"transitions": [ { "active": "query.is_powered" } ]
-		},
-		"active": {
-			"on_entry": [ "variable.random_choices = math.random(0, 100);", "/say random interval started" ],
-			"animations": [ "shanewolf:animate_choices" ],
-			"transitions": [
-				{ "inactive": "query.anim_time >= 2.0 && variable.random_choices < 30" },
-				{ "inactive": "query.anim_time >= 5.0 && variable.random_choices < 90" },
-				{ "inactive": "query.anim_time >= 9.0 && variable.random_choices <= 100" }
-			],
-			"on_exit": [ "@s shanewolf:stop_random_choices", "/say random choices finished" ]
-		}
-	}
-}
+  "controller.animation.shanewolf.random_choices": {
+    "initial_state": "inactive",
+    "states": {
+      "inactive": {
+        "transitions": [
+          {
+            "active": "query.is_powered"
+          }
+        ]
+      },
+      "active": {
+        "on_entry": [
+          "variable.random_choices = math.random(0, 100);",
+          "/say random interval started"
+        ],
+        "animations": [
+          "shanewolf:animate_choices"
+        ],
+        "transitions": [
+          {
+            "inactive": "query.anim_time >= 2.0 && variable.random_choices < 30"
+          },
+          {
+            "inactive": "query.anim_time >= 5.0 && variable.random_choices < 90"
+          },
+          {
+            "inactive": "query.anim_time >= 9.0 && variable.random_choices <= 100"
+          }
+        ],
+        "on_exit": [
+          "@s shanewolf:stop_random_choices",
+          "/say random choices finished"
+        ]
+      }
+    }
+  }
 ```
 ```json
-"animation.shanewolf.random_choices": {
-	"animation_length": 100.0
-}
+  "animation.shanewolf.random_choices": {
+    "animation_length": 100
+  }
 ```
 
 Explanation: Upon entry into the state beginning the animation, a variable is given a random value between 0 and 100 (sum of the weights). The transitions are laid out with the list of values ordered from the smallest time to the largest time. This is done so multiple && operators are not required in the latter transitions to define the variable's range (the query for the smallest times return true first and have their weights checked before the others--flipping 2 and 5 would result in 2 mistakenly having a weight of 90 instead of 30). The animation finishes when the current animation time is greater than or equal to a time in the list and the value of the random variable falls within that time's defined weight range.
