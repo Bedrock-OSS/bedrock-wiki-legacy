@@ -41,15 +41,15 @@ A more complex example which triggers an event after a randomized amount of dela
     "random_time_choices": [
       {
         "weight": 25,
-        "value": 0.5 //Half a second of delay.
+        "value": 0.5 //Half a second of delay
       },
       {
         "weight": 25,
-        "value": 10 //Ten seconds of delay.
+        "value": 10 //Ten seconds of delay
       },
       {
         "weight": 25,
-        "value": 30 //Thirty seconds of delay.
+        "value": 30 //Thirty seconds of delay
       },
       {
         "weight": 25,
@@ -84,7 +84,7 @@ A particularly useful way to handle time events is using a single, looping `mine
         }
       },
       {
-        "weight": 50 //Fires nothing.
+        "weight": 50 //Fires nothing
       }
     ]
   }
