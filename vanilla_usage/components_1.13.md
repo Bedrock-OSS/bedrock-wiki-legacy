@@ -1,8 +1,7 @@
 ---
 layout: page
-title: Vanilla Usage 1.13
+title: Vanilla Components 1.13
 parent: Vanilla Usage
-nav_order: 1
 ---
 # Vanilla Components 1.13
 This documentation is auto-generated using a python script, written by SirLich. If there is an issue, please bring it to his attention by contacting him on discord: `SirLich#1658`
