@@ -33,7 +33,7 @@ Here is an example:
 
 All component groups are custom-created. You cannot use component groups from other entities in your own entity. In the example above, `minecraft:cat_persian` is *not* a component. You cannot use it in your entity. If you want the `cat_persian` functionality in your entity, you must create your own group, or add the components directly into the your entities `components` object.
 
-`Note:` All minecraft component groups are prefixed with `minecraft:`. When you create your own groups, you should *not* follow this design. Rather, use your own [namespace](https://wiki.bedrock.dev/knowledge/namespaces.html).s
+`Note:` All minecraft component groups are prefixed with `minecraft:`. When you create your own groups, you should *not* follow this design. Rather, use your own [namespace](/knowledge/namespaces.html).s
 
 # Events
 
@@ -61,7 +61,7 @@ The only thing you can add/remove from an entity is `component groups`. As tempt
 
 # Triggering events
 
-Many components can trigger events. Particularly, components like [environment sensor](https://wiki.bedrock.dev/vanilla-usage/components-1.14.html#minecraftenvironment_sensor) or [timer](https://wiki.bedrock.dev/vanilla-usage/components-1.14.html#minecrafttimer).
+Many components can trigger events. Particularly, components like [environment sensor](/vanilla-usage/components-1.14.html#minecraftenvironment_sensor) or [timer](/vanilla-usage/components-1.14.html#minecrafttimer).
 
 The flow is:
  - Add component to the entity

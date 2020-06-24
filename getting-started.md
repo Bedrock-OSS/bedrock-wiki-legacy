@@ -18,7 +18,7 @@ You should join the following discord servers:
 
 ## What editor should I use?
 
-I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](https://wiki.bedrock.dev/knowledge/the-editor.html) document. You should also be using a [JSON-Schema](https://wiki.bedrock.dev/knowledge/using-schema.html)
+I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](/knowledge/the-editor.html) document. You should also be using a [JSON-Schema](/knowledge/using-schema.html)
 
 ## OK but how do I actually get started?
 
@@ -26,4 +26,4 @@ The best place to start is probably the Bedrock [Beginners Guide](https://guide.
 
 ## What if my addon doesn't work?
 
-You will need to debug your entity. This [page](https://wiki.bedrock.dev/knowledge/troubleshooting.html) can be useful.
+You will need to debug your entity. This [page](/knowledge/troubleshooting.html) can be useful.
