@@ -28,4 +28,4 @@ You should also download the vanilla resource and behavior pack. You can find th
 
 ## JSON-Schemas
 
-JSON-Schemas are a valuable tool for file validation. You can learn more about them here [here](https://wiki.bedrock.dev/knowledge/using_schema.html).
+JSON-Schemas are a valuable tool for file validation. You can learn more about them here [here](https://wiki.bedrock.dev/knowledge/using-schema.html).

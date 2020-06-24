@@ -61,7 +61,7 @@ The only thing you can add/remove from an entity is `component groups`. As tempt
 
 # Triggering events
 
-Many components can trigger events. Particularly, components like [environment sensor](https://wiki.bedrock.dev/vanilla_usage/components_1.14.html#minecraftenvironment_sensor) or [timer](https://wiki.bedrock.dev/vanilla_usage/components_1.14.html#minecrafttimer).
+Many components can trigger events. Particularly, components like [environment sensor](https://wiki.bedrock.dev/vanilla-usage/components-1.14.html#minecraftenvironment_sensor) or [timer](https://wiki.bedrock.dev/vanilla-usage/components-1.14.html#minecrafttimer).
 
 The flow is:
  - Add component to the entity

@@ -124,4 +124,4 @@ If you want to dynamically change the texture of an entity during gameplay, you 
 
 ### Dynamic Layered Textures
 
-Dynamic layered textures can be achieved by adding more lists of textures, and other other dummy components as indexes. You can read about dummy components [here](https://wiki.bedrock.dev/tutorials/dummy_entities.html)
+Dynamic layered textures can be achieved by adding more lists of textures, and other other dummy components as indexes. You can read about dummy components [here](https://wiki.bedrock.dev/tutorials/dummy-entities.html)

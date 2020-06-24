@@ -12,7 +12,7 @@ Sadly, Minecraft makes this difficult by making the `minecraft:boat` one of the 
 
 ## Using Runtime Identifiers
 
-You can read more about runtime identifiers [here](https://wiki.bedrock.dev/documentation/runtime_identifier.html). I don't honestly know what will happen if you add `minecraft:boat` to your entity, but if somebody bothers to try, you should update the wiki :)
+You can read more about runtime identifiers [here](https://wiki.bedrock.dev/documentation/runtime-identifier.html). I don't honestly know what will happen if you add `minecraft:boat` to your entity, but if somebody bothers to try, you should update the wiki :)
 
 In general though, runtime identifiers can be used to get hard-coded functionality into data-driven custom entities.
 
