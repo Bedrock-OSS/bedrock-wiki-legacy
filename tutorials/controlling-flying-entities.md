@@ -28,7 +28,7 @@ We can also use `"value"` as an object to utilize the **range bar** players will
 
 Now we will to give it slow falling and speed as it's falling down so that it doesn't instantly fall down. To do this, we will make an animation controller and give it those effects when it's not on the ground as so:
 
-(If you don't know how to use animation controllers to execute commands, you can read a tutorial on how to do so [here](https://wiki.bedrock.dev/tutorials/entity_commands.html))
+(If you don't know how to use animation controllers to execute commands, you can read a tutorial on how to do so [here](/tutorials/entity-commands.html))
 ```json
 "controller.animation.dragon.flying": {
 	"states": {
