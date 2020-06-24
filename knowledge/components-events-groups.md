@@ -33,7 +33,7 @@ Here is an example:
 
 All component groups are custom-created. You cannot use component groups from other entities in your own entity. In the example above, `minecraft:cat_persian` is *not* a component. You cannot use it in your entity. If you want the `cat_persian` functionality in your entity, you must create your own group, or add the components directly into the your entities `components` object.
 
-`Note:` All minecraft component groups are prefixed with `minecraft:`. When you create your own groups, you should *not* follow this design. Rather, use your own [namespace](/knowledge/namespaces.html).s
+`Note:` All minecraft component groups are prefixed with `minecraft:`. When you create your own groups, you should *not* follow this design. Rather, use your own [namespace](/knowledge/namespaces).s
 
 # Events
 
