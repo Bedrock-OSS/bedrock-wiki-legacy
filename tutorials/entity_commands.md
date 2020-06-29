@@ -97,8 +97,9 @@ We can update our animation controller to trigger based on `skin_id`:
                             "default": "query.skin_id != 1"
                         }
                     ],
-                    "on_summon": [
+                    "on_entry": [
                         "/say Command One!"
+                        "@s execute_no_commands"
                     ]
                 },
                 "zombies": {
@@ -107,12 +108,13 @@ We can update our animation controller to trigger based on `skin_id`:
                             "default": "query.skin_id != 2"
                         }
                     ],
-                    "on_summon": [
+                    "on_entry": [
                         "/say AHH! Zombies everywhere!",
                         "/summon minecraft:zombie",
                         "/summon minecraft:zombie",
                         "/summon minecraft:zombie",
                         "/summon minecraft:zombie"
+                        "@s execute_no_commands"
                     ]
                 }
             }
