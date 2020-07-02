@@ -10,7 +10,7 @@ Adding entities into Minecraft is a fairly easy process *once you get a hang of 
 
 ## The Environment
 
-The best way to prevent *invisible entity syndrome* and other nasty bugs is by setting yourself the correct environment. You should review [The Editor](https://wiki.bedrock.dev/knowledge/the_editor.html) document for my editor recommendations. The most important part is getting a json-linter ([or using an online tool](https://jsonlint.com/)).
+The best way to prevent *invisible entity syndrome* and other nasty bugs is by setting yourself the correct environment. You should review [The Editor](/knowledge/the_editor) document for my editor recommendations. The most important part is getting a json-linter ([or using an online tool](https://jsonlint.com/)).
 
 ## Content Log
 
@@ -28,4 +28,4 @@ You should also download the vanilla resource and behavior pack. You can find th
 
 ## JSON-Schemas
 
-JSON-Schemas are a valuable tool for file validation. You can learn more about them here [here](https://wiki.bedrock.dev/knowledge/using_schema.html).
+JSON-Schemas are a valuable tool for file validation. You can learn more about them here [here](/knowledge/using-schema).

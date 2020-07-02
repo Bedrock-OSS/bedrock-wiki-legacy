@@ -19,7 +19,7 @@ Please note that this will remove all death-effects, including sound, particles,
 
 We can also cancel the rotational value of the entity, allowing the entity to die more conventionally (particles, red-coloring, loot) without the 90 degree spin. This could be useful for things like furniture, where the tipping over effect of entity-death is not desirable.
 
-If you need more information about triggering animations from entity death, see [this document](https://wiki.bedrock.dev/tutorials/death_effects.html).
+If you need more information about triggering animations from entity death, see [this document](/tutorials/death-effects).
 
 Rotation needs to be applied to a bone parent to all other bones, with a pivot at [0,0,0], and the animation should only start when `!query.is_alive`.
 

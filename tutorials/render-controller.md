@@ -71,4 +71,4 @@ For example, the render controller above is used for the `minecraft:cow` entity.
 
  # Texture layering
 
- Layering textures is currently written as a wiki article here: [Texture Layering](https://wiki.bedrock.dev/tutorials/texture_layering.html).
+ Layering textures is currently written as a wiki article here: [Texture Layering](/tutorials/texture-layering).
