@@ -34,8 +34,8 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
  - [TheDestruc7i0n Documentation](https://bedrock.dev/)
  - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
- - [Component Examples](vanilla_usage/components_1.4/)
- - [Playsound List](http://www.theredengineer.com/1.9-playsound-list.html)
+ - [Component Examples](vanilla-usage/components-1.4/)
+ - [Playsound List](http://www.theredengineer.com/1.9-playsound-list)
  - [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
 
 ## Other useful Links:
