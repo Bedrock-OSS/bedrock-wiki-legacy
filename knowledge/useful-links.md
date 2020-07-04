@@ -29,6 +29,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
  - [Advancements](https://advancements.thedestruc7i0n.ca/)
  - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
+ - [Block and Item Generator](https://gitwither.github.io/bedrock-item-generator/)
   
 ## Documentation Links:
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
@@ -47,10 +48,10 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
 
-## Vanilla Behaviour & Resource Packs:
+## Vanilla Behavior & Resource Packs:
  - [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
- - [Vanilla Behaviour Pack](https://aka.ms/behaviorpacktemplate)
+ - [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
- - [Vannilla Beta Behaviour Pack](https://aka.ms/MinecraftBetaBehaviors)
+ - [Vanilla Beta Behavior Pack](https://aka.ms/MinecraftBetaBehaviors)
 
 
