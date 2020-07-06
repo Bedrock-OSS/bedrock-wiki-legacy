@@ -19,13 +19,13 @@ This documentation is stripped from the vanilla files using an automated script.
  - [minecraft:stacked_by_data](#minecraft:stacked_by_data)
  - [minecraft:use_duration](#minecraft:use_duration)
 
-# minecraft:block
+# minecraftblock
 ### camera.json
 ```json
 minecraft:block: "minecraft:camera"
 ```
 
-# minecraft:camera
+# minecraftcamera
 ```json
 minecraft:camera: {
     "black_bars_duration": 0.2,
@@ -36,7 +36,7 @@ minecraft:camera: {
 }
 ```
 
-# minecraft:foil
+# minecraftfoil
 ### appleEnchanted.json
 ```json
 minecraft:foil: true
@@ -47,7 +47,7 @@ minecraft:foil: true
 minecraft:foil: false
 ```
 
-# minecraft:food
+# minecraftfood
 ### apple.json
 ```json
 minecraft:food: {
@@ -471,13 +471,13 @@ minecraft:food: {
 }
 ```
 
-# minecraft:hand_equipped
+# minecrafthand_equipped
 ### appleEnchanted.json
 ```json
 minecraft:hand_equipped: false
 ```
 
-# minecraft:max_damage
+# minecraftmax_damage
 ### clownfish.json
 ```json
 minecraft:max_damage: 0
@@ -508,7 +508,7 @@ minecraft:max_damage: 0
 minecraft:max_damage: 0
 ```
 
-# minecraft:max_stack_size
+# minecraftmax_stack_size
 ### beetroot_soup.json
 ```json
 minecraft:max_stack_size: 1
@@ -534,7 +534,7 @@ minecraft:max_stack_size: 1
 minecraft:max_stack_size: 1
 ```
 
-# minecraft:seed
+# minecraftseed
 ### beetroot_seeds.json
 ```json
 minecraft:seed: {
@@ -597,7 +597,7 @@ minecraft:seed: {
 }
 ```
 
-# minecraft:stacked_by_data
+# minecraftstacked_by_data
 ### appleEnchanted.json
 ```json
 minecraft:stacked_by_data: true
@@ -638,7 +638,7 @@ minecraft:stacked_by_data: true
 minecraft:stacked_by_data: true
 ```
 
-# minecraft:use_duration
+# minecraftuse_duration
 ### apple.json
 ```json
 minecraft:use_duration: 32
