@@ -6,6 +6,23 @@ description: "Technical bedrock knowledge-sharing wiki."
 permalink: /
 ---
 # Bedrock Wiki 
+
+<!-- <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
+
+<script>
+const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
+
+jtd.addEvent(toggleDarkMode, 'click', function(){
+  if (jtd.getTheme() === 'dark') {
+    jtd.setTheme('light');
+    toggleDarkMode.textContent = 'Dark Theme';
+  } else {
+    jtd.setTheme('dark');
+    toggleDarkMode.textContent = 'Light Theme';
+  }
+});
+</script> -->
+
 <a href="https://discord.gg/XjV87YN" type="button" name="button" class="btn">Discord</a>
 <a href="https://bedrock.dev/" type="button" name="button" class="btn">Visit Bedrock.dev</a>
 <a href="https://github.com/SirLich/technical-bedrock" type="button" name="button" class="btn">Contribute</a>
