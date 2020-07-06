@@ -8,281 +8,281 @@ parent: Vanilla Usage
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
- - [minecraft:addrider](#minecraft:addrider)
- - [minecraft:ageable](#minecraft:ageable)
- - [minecraft:ambient_sound_interval](#minecraft:ambient_sound_interval)
- - [minecraft:angry](#minecraft:angry)
- - [minecraft:annotation.break_door](#minecraft:annotation.break_door)
- - [minecraft:annotation.open_door](#minecraft:annotation.open_door)
- - [minecraft:area_attack](#minecraft:area_attack)
- - [minecraft:attack](#minecraft:attack)
- - [minecraft:attack_damage](#minecraft:attack_damage)
- - [minecraft:balloonable](#minecraft:balloonable)
- - [minecraft:behavior.avoid_mob_type](#minecraft:behavior.avoid_mob_type)
- - [minecraft:behavior.beg](#minecraft:behavior.beg)
- - [minecraft:behavior.break_door](#minecraft:behavior.break_door)
- - [minecraft:behavior.breed](#minecraft:behavior.breed)
- - [minecraft:behavior.celebrate](#minecraft:behavior.celebrate)
- - [minecraft:behavior.charge_attack](#minecraft:behavior.charge_attack)
- - [minecraft:behavior.charge_held_item](#minecraft:behavior.charge_held_item)
- - [minecraft:behavior.circle_around_anchor](#minecraft:behavior.circle_around_anchor)
- - [minecraft:behavior.controlled_by_player](#minecraft:behavior.controlled_by_player)
- - [minecraft:behavior.defend_trusted_target](#minecraft:behavior.defend_trusted_target)
- - [minecraft:behavior.defend_village_target](#minecraft:behavior.defend_village_target)
- - [minecraft:behavior.delayed_attack](#minecraft:behavior.delayed_attack)
- - [minecraft:behavior.dragonchargeplayer](#minecraft:behavior.dragonchargeplayer)
- - [minecraft:behavior.dragondeath](#minecraft:behavior.dragondeath)
- - [minecraft:behavior.dragonflaming](#minecraft:behavior.dragonflaming)
- - [minecraft:behavior.dragonholdingpattern](#minecraft:behavior.dragonholdingpattern)
- - [minecraft:behavior.dragonlanding](#minecraft:behavior.dragonlanding)
- - [minecraft:behavior.dragonscanning](#minecraft:behavior.dragonscanning)
- - [minecraft:behavior.dragonstrafeplayer](#minecraft:behavior.dragonstrafeplayer)
- - [minecraft:behavior.dragontakeoff](#minecraft:behavior.dragontakeoff)
- - [minecraft:behavior.drink_potion](#minecraft:behavior.drink_potion)
- - [minecraft:behavior.drop_item_for](#minecraft:behavior.drop_item_for)
- - [minecraft:behavior.eat_block](#minecraft:behavior.eat_block)
- - [minecraft:behavior.eat_carried_item](#minecraft:behavior.eat_carried_item)
- - [minecraft:behavior.enderman_leave_block](#minecraft:behavior.enderman_leave_block)
- - [minecraft:behavior.enderman_take_block](#minecraft:behavior.enderman_take_block)
- - [minecraft:behavior.explore_outskirts](#minecraft:behavior.explore_outskirts)
- - [minecraft:behavior.find_cover](#minecraft:behavior.find_cover)
- - [minecraft:behavior.find_mount](#minecraft:behavior.find_mount)
- - [minecraft:behavior.find_underwater_treasure](#minecraft:behavior.find_underwater_treasure)
- - [minecraft:behavior.flee_sun](#minecraft:behavior.flee_sun)
- - [minecraft:behavior.float](#minecraft:behavior.float)
- - [minecraft:behavior.float_wander](#minecraft:behavior.float_wander)
- - [minecraft:behavior.follow_caravan](#minecraft:behavior.follow_caravan)
- - [minecraft:behavior.follow_mob](#minecraft:behavior.follow_mob)
- - [minecraft:behavior.follow_owner](#minecraft:behavior.follow_owner)
- - [minecraft:behavior.follow_parent](#minecraft:behavior.follow_parent)
- - [minecraft:behavior.follow_target_captain](#minecraft:behavior.follow_target_captain)
- - [minecraft:behavior.go_home](#minecraft:behavior.go_home)
- - [minecraft:behavior.guardian_attack](#minecraft:behavior.guardian_attack)
- - [minecraft:behavior.harvest_farm_block](#minecraft:behavior.harvest_farm_block)
- - [minecraft:behavior.hide](#minecraft:behavior.hide)
- - [minecraft:behavior.hold_ground](#minecraft:behavior.hold_ground)
- - [minecraft:behavior.hurt_by_target](#minecraft:behavior.hurt_by_target)
- - [minecraft:behavior.inspect_bookshelf](#minecraft:behavior.inspect_bookshelf)
- - [minecraft:behavior.knockback_roar](#minecraft:behavior.knockback_roar)
- - [minecraft:behavior.lay_down](#minecraft:behavior.lay_down)
- - [minecraft:behavior.lay_egg](#minecraft:behavior.lay_egg)
- - [minecraft:behavior.leap_at_target](#minecraft:behavior.leap_at_target)
- - [minecraft:behavior.look_at_entity](#minecraft:behavior.look_at_entity)
- - [minecraft:behavior.look_at_player](#minecraft:behavior.look_at_player)
- - [minecraft:behavior.look_at_target](#minecraft:behavior.look_at_target)
- - [minecraft:behavior.look_at_trading_player](#minecraft:behavior.look_at_trading_player)
- - [minecraft:behavior.make_love](#minecraft:behavior.make_love)
- - [minecraft:behavior.melee_attack](#minecraft:behavior.melee_attack)
- - [minecraft:behavior.mingle](#minecraft:behavior.mingle)
- - [minecraft:behavior.mount_pathing](#minecraft:behavior.mount_pathing)
- - [minecraft:behavior.move_indoors](#minecraft:behavior.move_indoors)
- - [minecraft:behavior.move_through_village](#minecraft:behavior.move_through_village)
- - [minecraft:behavior.move_to_block](#minecraft:behavior.move_to_block)
- - [minecraft:behavior.move_to_land](#minecraft:behavior.move_to_land)
- - [minecraft:behavior.move_to_random_block](#minecraft:behavior.move_to_random_block)
- - [minecraft:behavior.move_to_village](#minecraft:behavior.move_to_village)
- - [minecraft:behavior.move_to_water](#minecraft:behavior.move_to_water)
- - [minecraft:behavior.move_towards_restriction](#minecraft:behavior.move_towards_restriction)
- - [minecraft:behavior.move_towards_target](#minecraft:behavior.move_towards_target)
- - [minecraft:behavior.nap](#minecraft:behavior.nap)
- - [minecraft:behavior.nearest_attackable_target](#minecraft:behavior.nearest_attackable_target)
- - [minecraft:behavior.nearest_prioritized_attackable_target](#minecraft:behavior.nearest_prioritized_attackable_target)
- - [minecraft:behavior.ocelot_sit_on_block](#minecraft:behavior.ocelot_sit_on_block)
- - [minecraft:behavior.ocelotattack](#minecraft:behavior.ocelotattack)
- - [minecraft:behavior.offer_flower](#minecraft:behavior.offer_flower)
- - [minecraft:behavior.open_door](#minecraft:behavior.open_door)
- - [minecraft:behavior.owner_hurt_by_target](#minecraft:behavior.owner_hurt_by_target)
- - [minecraft:behavior.owner_hurt_target](#minecraft:behavior.owner_hurt_target)
- - [minecraft:behavior.panic](#minecraft:behavior.panic)
- - [minecraft:behavior.pet_sleep_with_owner](#minecraft:behavior.pet_sleep_with_owner)
- - [minecraft:behavior.pickup_items](#minecraft:behavior.pickup_items)
- - [minecraft:behavior.play](#minecraft:behavior.play)
- - [minecraft:behavior.player_ride_tamed](#minecraft:behavior.player_ride_tamed)
- - [minecraft:behavior.raid_garden](#minecraft:behavior.raid_garden)
- - [minecraft:behavior.random_breach](#minecraft:behavior.random_breach)
- - [minecraft:behavior.random_fly](#minecraft:behavior.random_fly)
- - [minecraft:behavior.random_hover](#minecraft:behavior.random_hover)
- - [minecraft:behavior.random_look_around](#minecraft:behavior.random_look_around)
- - [minecraft:behavior.random_look_around_and_sit](#minecraft:behavior.random_look_around_and_sit)
- - [minecraft:behavior.random_sitting](#minecraft:behavior.random_sitting)
- - [minecraft:behavior.random_stroll](#minecraft:behavior.random_stroll)
- - [minecraft:behavior.random_swim](#minecraft:behavior.random_swim)
- - [minecraft:behavior.ranged_attack](#minecraft:behavior.ranged_attack)
- - [minecraft:behavior.receive_love](#minecraft:behavior.receive_love)
- - [minecraft:behavior.restrict_open_door](#minecraft:behavior.restrict_open_door)
- - [minecraft:behavior.roll](#minecraft:behavior.roll)
- - [minecraft:behavior.run_around_like_crazy](#minecraft:behavior.run_around_like_crazy)
- - [minecraft:behavior.scared](#minecraft:behavior.scared)
- - [minecraft:behavior.send_event](#minecraft:behavior.send_event)
- - [minecraft:behavior.share_items](#minecraft:behavior.share_items)
- - [minecraft:behavior.silverfish_merge_with_stone](#minecraft:behavior.silverfish_merge_with_stone)
- - [minecraft:behavior.silverfish_wake_up_friends](#minecraft:behavior.silverfish_wake_up_friends)
- - [minecraft:behavior.skeleton_horse_trap](#minecraft:behavior.skeleton_horse_trap)
- - [minecraft:behavior.sleep](#minecraft:behavior.sleep)
- - [minecraft:behavior.slime_attack](#minecraft:behavior.slime_attack)
- - [minecraft:behavior.slime_float](#minecraft:behavior.slime_float)
- - [minecraft:behavior.slime_keep_on_jumping](#minecraft:behavior.slime_keep_on_jumping)
- - [minecraft:behavior.slime_random_direction](#minecraft:behavior.slime_random_direction)
- - [minecraft:behavior.snacking](#minecraft:behavior.snacking)
- - [minecraft:behavior.sneeze](#minecraft:behavior.sneeze)
- - [minecraft:behavior.squid_dive](#minecraft:behavior.squid_dive)
- - [minecraft:behavior.squid_flee](#minecraft:behavior.squid_flee)
- - [minecraft:behavior.squid_idle](#minecraft:behavior.squid_idle)
- - [minecraft:behavior.squid_move_away_from_ground](#minecraft:behavior.squid_move_away_from_ground)
- - [minecraft:behavior.squid_out_of_water](#minecraft:behavior.squid_out_of_water)
- - [minecraft:behavior.stalk_and_pounce_on_target](#minecraft:behavior.stalk_and_pounce_on_target)
- - [minecraft:behavior.stay_while_sitting](#minecraft:behavior.stay_while_sitting)
- - [minecraft:behavior.stomp_attack](#minecraft:behavior.stomp_attack)
- - [minecraft:behavior.stomp_turtle_egg](#minecraft:behavior.stomp_turtle_egg)
- - [minecraft:behavior.stroll_towards_village](#minecraft:behavior.stroll_towards_village)
- - [minecraft:behavior.summon_entity](#minecraft:behavior.summon_entity)
- - [minecraft:behavior.swell](#minecraft:behavior.swell)
- - [minecraft:behavior.swim_idle](#minecraft:behavior.swim_idle)
- - [minecraft:behavior.swim_wander](#minecraft:behavior.swim_wander)
- - [minecraft:behavior.swoop_attack](#minecraft:behavior.swoop_attack)
- - [minecraft:behavior.take_flower](#minecraft:behavior.take_flower)
- - [minecraft:behavior.target_when_pushed](#minecraft:behavior.target_when_pushed)
- - [minecraft:behavior.tempt](#minecraft:behavior.tempt)
- - [minecraft:behavior.trade_interest](#minecraft:behavior.trade_interest)
- - [minecraft:behavior.trade_with_player](#minecraft:behavior.trade_with_player)
- - [minecraft:behavior.wither_random_attack_pos_goal](#minecraft:behavior.wither_random_attack_pos_goal)
- - [minecraft:behavior.wither_target_highest_damage](#minecraft:behavior.wither_target_highest_damage)
- - [minecraft:behavior.work](#minecraft:behavior.work)
- - [minecraft:block_sensor](#minecraft:block_sensor)
- - [minecraft:boostable](#minecraft:boostable)
- - [minecraft:boss](#minecraft:boss)
- - [minecraft:break_blocks](#minecraft:break_blocks)
- - [minecraft:breathable](#minecraft:breathable)
- - [minecraft:breedable](#minecraft:breedable)
- - [minecraft:bribeable](#minecraft:bribeable)
- - [minecraft:burns_in_daylight](#minecraft:burns_in_daylight)
- - [minecraft:can_climb](#minecraft:can_climb)
- - [minecraft:can_fly](#minecraft:can_fly)
- - [minecraft:can_power_jump](#minecraft:can_power_jump)
- - [minecraft:collision_box](#minecraft:collision_box)
- - [minecraft:color](#minecraft:color)
- - [minecraft:color2](#minecraft:color2)
- - [minecraft:damage_over_time](#minecraft:damage_over_time)
- - [minecraft:damage_sensor](#minecraft:damage_sensor)
- - [minecraft:despawn](#minecraft:despawn)
- - [minecraft:dweller](#minecraft:dweller)
- - [minecraft:economy_trade_table](#minecraft:economy_trade_table)
- - [minecraft:entity_sensor](#minecraft:entity_sensor)
- - [minecraft:environment_sensor](#minecraft:environment_sensor)
- - [minecraft:equipment](#minecraft:equipment)
- - [minecraft:equippable](#minecraft:equippable)
- - [minecraft:experience_reward](#minecraft:experience_reward)
- - [minecraft:explode](#minecraft:explode)
- - [minecraft:fire_immune](#minecraft:fire_immune)
- - [minecraft:flocking](#minecraft:flocking)
- - [minecraft:flying_speed](#minecraft:flying_speed)
- - [minecraft:follow_range](#minecraft:follow_range)
- - [minecraft:genetics](#minecraft:genetics)
- - [minecraft:giveable](#minecraft:giveable)
- - [minecraft:grows_crop](#minecraft:grows_crop)
- - [minecraft:healable](#minecraft:healable)
- - [minecraft:health](#minecraft:health)
- - [minecraft:hide](#minecraft:hide)
- - [minecraft:home](#minecraft:home)
- - [minecraft:horse.jump_strength](#minecraft:horse.jump_strength)
- - [minecraft:hurt_on_condition](#minecraft:hurt_on_condition)
- - [minecraft:input_ground_controlled](#minecraft:input_ground_controlled)
- - [minecraft:insomnia](#minecraft:insomnia)
- - [minecraft:interact](#minecraft:interact)
- - [minecraft:inventory](#minecraft:inventory)
- - [minecraft:is_baby](#minecraft:is_baby)
- - [minecraft:is_charged](#minecraft:is_charged)
- - [minecraft:is_chested](#minecraft:is_chested)
- - [minecraft:is_dyeable](#minecraft:is_dyeable)
- - [minecraft:is_hidden_when_invisible](#minecraft:is_hidden_when_invisible)
- - [minecraft:is_ignited](#minecraft:is_ignited)
- - [minecraft:is_illager_captain](#minecraft:is_illager_captain)
- - [minecraft:is_saddled](#minecraft:is_saddled)
- - [minecraft:is_shaking](#minecraft:is_shaking)
- - [minecraft:is_sheared](#minecraft:is_sheared)
- - [minecraft:is_stackable](#minecraft:is_stackable)
- - [minecraft:is_stunned](#minecraft:is_stunned)
- - [minecraft:is_tamed](#minecraft:is_tamed)
- - [minecraft:item_controllable](#minecraft:item_controllable)
- - [minecraft:item_hopper](#minecraft:item_hopper)
- - [minecraft:jump.dynamic](#minecraft:jump.dynamic)
- - [minecraft:jump.static](#minecraft:jump.static)
- - [minecraft:knockback_resistance](#minecraft:knockback_resistance)
- - [minecraft:leashable](#minecraft:leashable)
- - [minecraft:lookat](#minecraft:lookat)
- - [minecraft:loot](#minecraft:loot)
- - [minecraft:managed_wandering_trader](#minecraft:managed_wandering_trader)
- - [minecraft:mark_variant](#minecraft:mark_variant)
- - [minecraft:mob_effect](#minecraft:mob_effect)
- - [minecraft:movement](#minecraft:movement)
- - [minecraft:movement.amphibious](#minecraft:movement.amphibious)
- - [minecraft:movement.basic](#minecraft:movement.basic)
- - [minecraft:movement.fly](#minecraft:movement.fly)
- - [minecraft:movement.generic](#minecraft:movement.generic)
- - [minecraft:movement.glide](#minecraft:movement.glide)
- - [minecraft:movement.hover](#minecraft:movement.hover)
- - [minecraft:movement.jump](#minecraft:movement.jump)
- - [minecraft:movement.skip](#minecraft:movement.skip)
- - [minecraft:movement.sway](#minecraft:movement.sway)
- - [minecraft:nameable](#minecraft:nameable)
- - [minecraft:navigation.climb](#minecraft:navigation.climb)
- - [minecraft:navigation.float](#minecraft:navigation.float)
- - [minecraft:navigation.fly](#minecraft:navigation.fly)
- - [minecraft:navigation.generic](#minecraft:navigation.generic)
- - [minecraft:navigation.hover](#minecraft:navigation.hover)
- - [minecraft:navigation.walk](#minecraft:navigation.walk)
- - [minecraft:on_death](#minecraft:on_death)
- - [minecraft:on_friendly_anger](#minecraft:on_friendly_anger)
- - [minecraft:on_hurt](#minecraft:on_hurt)
- - [minecraft:on_hurt_by_player](#minecraft:on_hurt_by_player)
- - [minecraft:on_start_landing](#minecraft:on_start_landing)
- - [minecraft:on_start_takeoff](#minecraft:on_start_takeoff)
- - [minecraft:on_target_acquired](#minecraft:on_target_acquired)
- - [minecraft:on_target_escape](#minecraft:on_target_escape)
- - [minecraft:on_wake_with_owner](#minecraft:on_wake_with_owner)
- - [minecraft:peek](#minecraft:peek)
- - [minecraft:persistent](#minecraft:persistent)
- - [minecraft:physics](#minecraft:physics)
- - [minecraft:player.exhaustion](#minecraft:player.exhaustion)
- - [minecraft:player.experience](#minecraft:player.experience)
- - [minecraft:player.level](#minecraft:player.level)
- - [minecraft:player.saturation](#minecraft:player.saturation)
- - [minecraft:preferred_path](#minecraft:preferred_path)
- - [minecraft:projectile](#minecraft:projectile)
- - [minecraft:pushable](#minecraft:pushable)
- - [minecraft:raid_trigger](#minecraft:raid_trigger)
- - [minecraft:rail_movement](#minecraft:rail_movement)
- - [minecraft:rail_sensor](#minecraft:rail_sensor)
- - [minecraft:ravager_blocked](#minecraft:ravager_blocked)
- - [minecraft:rideable](#minecraft:rideable)
- - [minecraft:scaffolding_climber](#minecraft:scaffolding_climber)
- - [minecraft:scale](#minecraft:scale)
- - [minecraft:scale_by_age](#minecraft:scale_by_age)
- - [minecraft:scheduler](#minecraft:scheduler)
- - [minecraft:shareables](#minecraft:shareables)
- - [minecraft:shooter](#minecraft:shooter)
- - [minecraft:sittable](#minecraft:sittable)
- - [minecraft:skin_id](#minecraft:skin_id)
- - [minecraft:spawn_entity](#minecraft:spawn_entity)
- - [minecraft:spell_effects](#minecraft:spell_effects)
- - [minecraft:strength](#minecraft:strength)
- - [minecraft:tameable](#minecraft:tameable)
- - [minecraft:tamemount](#minecraft:tamemount)
- - [minecraft:target_nearby_sensor](#minecraft:target_nearby_sensor)
- - [minecraft:teleport](#minecraft:teleport)
- - [minecraft:timer](#minecraft:timer)
- - [minecraft:trade_resupply](#minecraft:trade_resupply)
- - [minecraft:trade_table](#minecraft:trade_table)
- - [minecraft:trail](#minecraft:trail)
- - [minecraft:transformation](#minecraft:transformation)
- - [minecraft:trust](#minecraft:trust)
- - [minecraft:trusting](#minecraft:trusting)
- - [minecraft:type_family](#minecraft:type_family)
- - [minecraft:underwater_movement](#minecraft:underwater_movement)
- - [minecraft:variant](#minecraft:variant)
- - [minecraft:water_movement](#minecraft:water_movement)
+ - [minecraft:addrider](#minecraftaddrider)
+ - [minecraft:ageable](#minecraftageable)
+ - [minecraft:ambient_sound_interval](#minecraftambient_sound_interval)
+ - [minecraft:angry](#minecraftangry)
+ - [minecraft:annotation.break_door](#minecraftannotation.break_door)
+ - [minecraft:annotation.open_door](#minecraftannotation.open_door)
+ - [minecraft:area_attack](#minecraftarea_attack)
+ - [minecraft:attack](#minecraftattack)
+ - [minecraft:attack_damage](#minecraftattack_damage)
+ - [minecraft:balloonable](#minecraftballoonable)
+ - [minecraft:behavior.avoid_mob_type](#minecraftbehavior.avoid_mob_type)
+ - [minecraft:behavior.beg](#minecraftbehavior.beg)
+ - [minecraft:behavior.break_door](#minecraftbehavior.break_door)
+ - [minecraft:behavior.breed](#minecraftbehavior.breed)
+ - [minecraft:behavior.celebrate](#minecraftbehavior.celebrate)
+ - [minecraft:behavior.charge_attack](#minecraftbehavior.charge_attack)
+ - [minecraft:behavior.charge_held_item](#minecraftbehavior.charge_held_item)
+ - [minecraft:behavior.circle_around_anchor](#minecraftbehavior.circle_around_anchor)
+ - [minecraft:behavior.controlled_by_player](#minecraftbehavior.controlled_by_player)
+ - [minecraft:behavior.defend_trusted_target](#minecraftbehavior.defend_trusted_target)
+ - [minecraft:behavior.defend_village_target](#minecraftbehavior.defend_village_target)
+ - [minecraft:behavior.delayed_attack](#minecraftbehavior.delayed_attack)
+ - [minecraft:behavior.dragonchargeplayer](#minecraftbehavior.dragonchargeplayer)
+ - [minecraft:behavior.dragondeath](#minecraftbehavior.dragondeath)
+ - [minecraft:behavior.dragonflaming](#minecraftbehavior.dragonflaming)
+ - [minecraft:behavior.dragonholdingpattern](#minecraftbehavior.dragonholdingpattern)
+ - [minecraft:behavior.dragonlanding](#minecraftbehavior.dragonlanding)
+ - [minecraft:behavior.dragonscanning](#minecraftbehavior.dragonscanning)
+ - [minecraft:behavior.dragonstrafeplayer](#minecraftbehavior.dragonstrafeplayer)
+ - [minecraft:behavior.dragontakeoff](#minecraftbehavior.dragontakeoff)
+ - [minecraft:behavior.drink_potion](#minecraftbehavior.drink_potion)
+ - [minecraft:behavior.drop_item_for](#minecraftbehavior.drop_item_for)
+ - [minecraft:behavior.eat_block](#minecraftbehavior.eat_block)
+ - [minecraft:behavior.eat_carried_item](#minecraftbehavior.eat_carried_item)
+ - [minecraft:behavior.enderman_leave_block](#minecraftbehavior.enderman_leave_block)
+ - [minecraft:behavior.enderman_take_block](#minecraftbehavior.enderman_take_block)
+ - [minecraft:behavior.explore_outskirts](#minecraftbehavior.explore_outskirts)
+ - [minecraft:behavior.find_cover](#minecraftbehavior.find_cover)
+ - [minecraft:behavior.find_mount](#minecraftbehavior.find_mount)
+ - [minecraft:behavior.find_underwater_treasure](#minecraftbehavior.find_underwater_treasure)
+ - [minecraft:behavior.flee_sun](#minecraftbehavior.flee_sun)
+ - [minecraft:behavior.float](#minecraftbehavior.float)
+ - [minecraft:behavior.float_wander](#minecraftbehavior.float_wander)
+ - [minecraft:behavior.follow_caravan](#minecraftbehavior.follow_caravan)
+ - [minecraft:behavior.follow_mob](#minecraftbehavior.follow_mob)
+ - [minecraft:behavior.follow_owner](#minecraftbehavior.follow_owner)
+ - [minecraft:behavior.follow_parent](#minecraftbehavior.follow_parent)
+ - [minecraft:behavior.follow_target_captain](#minecraftbehavior.follow_target_captain)
+ - [minecraft:behavior.go_home](#minecraftbehavior.go_home)
+ - [minecraft:behavior.guardian_attack](#minecraftbehavior.guardian_attack)
+ - [minecraft:behavior.harvest_farm_block](#minecraftbehavior.harvest_farm_block)
+ - [minecraft:behavior.hide](#minecraftbehavior.hide)
+ - [minecraft:behavior.hold_ground](#minecraftbehavior.hold_ground)
+ - [minecraft:behavior.hurt_by_target](#minecraftbehavior.hurt_by_target)
+ - [minecraft:behavior.inspect_bookshelf](#minecraftbehavior.inspect_bookshelf)
+ - [minecraft:behavior.knockback_roar](#minecraftbehavior.knockback_roar)
+ - [minecraft:behavior.lay_down](#minecraftbehavior.lay_down)
+ - [minecraft:behavior.lay_egg](#minecraftbehavior.lay_egg)
+ - [minecraft:behavior.leap_at_target](#minecraftbehavior.leap_at_target)
+ - [minecraft:behavior.look_at_entity](#minecraftbehavior.look_at_entity)
+ - [minecraft:behavior.look_at_player](#minecraftbehavior.look_at_player)
+ - [minecraft:behavior.look_at_target](#minecraftbehavior.look_at_target)
+ - [minecraft:behavior.look_at_trading_player](#minecraftbehavior.look_at_trading_player)
+ - [minecraft:behavior.make_love](#minecraftbehavior.make_love)
+ - [minecraft:behavior.melee_attack](#minecraftbehavior.melee_attack)
+ - [minecraft:behavior.mingle](#minecraftbehavior.mingle)
+ - [minecraft:behavior.mount_pathing](#minecraftbehavior.mount_pathing)
+ - [minecraft:behavior.move_indoors](#minecraftbehavior.move_indoors)
+ - [minecraft:behavior.move_through_village](#minecraftbehavior.move_through_village)
+ - [minecraft:behavior.move_to_block](#minecraftbehavior.move_to_block)
+ - [minecraft:behavior.move_to_land](#minecraftbehavior.move_to_land)
+ - [minecraft:behavior.move_to_random_block](#minecraftbehavior.move_to_random_block)
+ - [minecraft:behavior.move_to_village](#minecraftbehavior.move_to_village)
+ - [minecraft:behavior.move_to_water](#minecraftbehavior.move_to_water)
+ - [minecraft:behavior.move_towards_restriction](#minecraftbehavior.move_towards_restriction)
+ - [minecraft:behavior.move_towards_target](#minecraftbehavior.move_towards_target)
+ - [minecraft:behavior.nap](#minecraftbehavior.nap)
+ - [minecraft:behavior.nearest_attackable_target](#minecraftbehavior.nearest_attackable_target)
+ - [minecraft:behavior.nearest_prioritized_attackable_target](#minecraftbehavior.nearest_prioritized_attackable_target)
+ - [minecraft:behavior.ocelot_sit_on_block](#minecraftbehavior.ocelot_sit_on_block)
+ - [minecraft:behavior.ocelotattack](#minecraftbehavior.ocelotattack)
+ - [minecraft:behavior.offer_flower](#minecraftbehavior.offer_flower)
+ - [minecraft:behavior.open_door](#minecraftbehavior.open_door)
+ - [minecraft:behavior.owner_hurt_by_target](#minecraftbehavior.owner_hurt_by_target)
+ - [minecraft:behavior.owner_hurt_target](#minecraftbehavior.owner_hurt_target)
+ - [minecraft:behavior.panic](#minecraftbehavior.panic)
+ - [minecraft:behavior.pet_sleep_with_owner](#minecraftbehavior.pet_sleep_with_owner)
+ - [minecraft:behavior.pickup_items](#minecraftbehavior.pickup_items)
+ - [minecraft:behavior.play](#minecraftbehavior.play)
+ - [minecraft:behavior.player_ride_tamed](#minecraftbehavior.player_ride_tamed)
+ - [minecraft:behavior.raid_garden](#minecraftbehavior.raid_garden)
+ - [minecraft:behavior.random_breach](#minecraftbehavior.random_breach)
+ - [minecraft:behavior.random_fly](#minecraftbehavior.random_fly)
+ - [minecraft:behavior.random_hover](#minecraftbehavior.random_hover)
+ - [minecraft:behavior.random_look_around](#minecraftbehavior.random_look_around)
+ - [minecraft:behavior.random_look_around_and_sit](#minecraftbehavior.random_look_around_and_sit)
+ - [minecraft:behavior.random_sitting](#minecraftbehavior.random_sitting)
+ - [minecraft:behavior.random_stroll](#minecraftbehavior.random_stroll)
+ - [minecraft:behavior.random_swim](#minecraftbehavior.random_swim)
+ - [minecraft:behavior.ranged_attack](#minecraftbehavior.ranged_attack)
+ - [minecraft:behavior.receive_love](#minecraftbehavior.receive_love)
+ - [minecraft:behavior.restrict_open_door](#minecraftbehavior.restrict_open_door)
+ - [minecraft:behavior.roll](#minecraftbehavior.roll)
+ - [minecraft:behavior.run_around_like_crazy](#minecraftbehavior.run_around_like_crazy)
+ - [minecraft:behavior.scared](#minecraftbehavior.scared)
+ - [minecraft:behavior.send_event](#minecraftbehavior.send_event)
+ - [minecraft:behavior.share_items](#minecraftbehavior.share_items)
+ - [minecraft:behavior.silverfish_merge_with_stone](#minecraftbehavior.silverfish_merge_with_stone)
+ - [minecraft:behavior.silverfish_wake_up_friends](#minecraftbehavior.silverfish_wake_up_friends)
+ - [minecraft:behavior.skeleton_horse_trap](#minecraftbehavior.skeleton_horse_trap)
+ - [minecraft:behavior.sleep](#minecraftbehavior.sleep)
+ - [minecraft:behavior.slime_attack](#minecraftbehavior.slime_attack)
+ - [minecraft:behavior.slime_float](#minecraftbehavior.slime_float)
+ - [minecraft:behavior.slime_keep_on_jumping](#minecraftbehavior.slime_keep_on_jumping)
+ - [minecraft:behavior.slime_random_direction](#minecraftbehavior.slime_random_direction)
+ - [minecraft:behavior.snacking](#minecraftbehavior.snacking)
+ - [minecraft:behavior.sneeze](#minecraftbehavior.sneeze)
+ - [minecraft:behavior.squid_dive](#minecraftbehavior.squid_dive)
+ - [minecraft:behavior.squid_flee](#minecraftbehavior.squid_flee)
+ - [minecraft:behavior.squid_idle](#minecraftbehavior.squid_idle)
+ - [minecraft:behavior.squid_move_away_from_ground](#minecraftbehavior.squid_move_away_from_ground)
+ - [minecraft:behavior.squid_out_of_water](#minecraftbehavior.squid_out_of_water)
+ - [minecraft:behavior.stalk_and_pounce_on_target](#minecraftbehavior.stalk_and_pounce_on_target)
+ - [minecraft:behavior.stay_while_sitting](#minecraftbehavior.stay_while_sitting)
+ - [minecraft:behavior.stomp_attack](#minecraftbehavior.stomp_attack)
+ - [minecraft:behavior.stomp_turtle_egg](#minecraftbehavior.stomp_turtle_egg)
+ - [minecraft:behavior.stroll_towards_village](#minecraftbehavior.stroll_towards_village)
+ - [minecraft:behavior.summon_entity](#minecraftbehavior.summon_entity)
+ - [minecraft:behavior.swell](#minecraftbehavior.swell)
+ - [minecraft:behavior.swim_idle](#minecraftbehavior.swim_idle)
+ - [minecraft:behavior.swim_wander](#minecraftbehavior.swim_wander)
+ - [minecraft:behavior.swoop_attack](#minecraftbehavior.swoop_attack)
+ - [minecraft:behavior.take_flower](#minecraftbehavior.take_flower)
+ - [minecraft:behavior.target_when_pushed](#minecraftbehavior.target_when_pushed)
+ - [minecraft:behavior.tempt](#minecraftbehavior.tempt)
+ - [minecraft:behavior.trade_interest](#minecraftbehavior.trade_interest)
+ - [minecraft:behavior.trade_with_player](#minecraftbehavior.trade_with_player)
+ - [minecraft:behavior.wither_random_attack_pos_goal](#minecraftbehavior.wither_random_attack_pos_goal)
+ - [minecraft:behavior.wither_target_highest_damage](#minecraftbehavior.wither_target_highest_damage)
+ - [minecraft:behavior.work](#minecraftbehavior.work)
+ - [minecraft:block_sensor](#minecraftblock_sensor)
+ - [minecraft:boostable](#minecraftboostable)
+ - [minecraft:boss](#minecraftboss)
+ - [minecraft:break_blocks](#minecraftbreak_blocks)
+ - [minecraft:breathable](#minecraftbreathable)
+ - [minecraft:breedable](#minecraftbreedable)
+ - [minecraft:bribeable](#minecraftbribeable)
+ - [minecraft:burns_in_daylight](#minecraftburns_in_daylight)
+ - [minecraft:can_climb](#minecraftcan_climb)
+ - [minecraft:can_fly](#minecraftcan_fly)
+ - [minecraft:can_power_jump](#minecraftcan_power_jump)
+ - [minecraft:collision_box](#minecraftcollision_box)
+ - [minecraft:color](#minecraftcolor)
+ - [minecraft:color2](#minecraftcolor2)
+ - [minecraft:damage_over_time](#minecraftdamage_over_time)
+ - [minecraft:damage_sensor](#minecraftdamage_sensor)
+ - [minecraft:despawn](#minecraftdespawn)
+ - [minecraft:dweller](#minecraftdweller)
+ - [minecraft:economy_trade_table](#minecrafteconomy_trade_table)
+ - [minecraft:entity_sensor](#minecraftentity_sensor)
+ - [minecraft:environment_sensor](#minecraftenvironment_sensor)
+ - [minecraft:equipment](#minecraftequipment)
+ - [minecraft:equippable](#minecraftequippable)
+ - [minecraft:experience_reward](#minecraftexperience_reward)
+ - [minecraft:explode](#minecraftexplode)
+ - [minecraft:fire_immune](#minecraftfire_immune)
+ - [minecraft:flocking](#minecraftflocking)
+ - [minecraft:flying_speed](#minecraftflying_speed)
+ - [minecraft:follow_range](#minecraftfollow_range)
+ - [minecraft:genetics](#minecraftgenetics)
+ - [minecraft:giveable](#minecraftgiveable)
+ - [minecraft:grows_crop](#minecraftgrows_crop)
+ - [minecraft:healable](#minecrafthealable)
+ - [minecraft:health](#minecrafthealth)
+ - [minecraft:hide](#minecrafthide)
+ - [minecraft:home](#minecrafthome)
+ - [minecraft:horse.jump_strength](#minecrafthorse.jump_strength)
+ - [minecraft:hurt_on_condition](#minecrafthurt_on_condition)
+ - [minecraft:input_ground_controlled](#minecraftinput_ground_controlled)
+ - [minecraft:insomnia](#minecraftinsomnia)
+ - [minecraft:interact](#minecraftinteract)
+ - [minecraft:inventory](#minecraftinventory)
+ - [minecraft:is_baby](#minecraftis_baby)
+ - [minecraft:is_charged](#minecraftis_charged)
+ - [minecraft:is_chested](#minecraftis_chested)
+ - [minecraft:is_dyeable](#minecraftis_dyeable)
+ - [minecraft:is_hidden_when_invisible](#minecraftis_hidden_when_invisible)
+ - [minecraft:is_ignited](#minecraftis_ignited)
+ - [minecraft:is_illager_captain](#minecraftis_illager_captain)
+ - [minecraft:is_saddled](#minecraftis_saddled)
+ - [minecraft:is_shaking](#minecraftis_shaking)
+ - [minecraft:is_sheared](#minecraftis_sheared)
+ - [minecraft:is_stackable](#minecraftis_stackable)
+ - [minecraft:is_stunned](#minecraftis_stunned)
+ - [minecraft:is_tamed](#minecraftis_tamed)
+ - [minecraft:item_controllable](#minecraftitem_controllable)
+ - [minecraft:item_hopper](#minecraftitem_hopper)
+ - [minecraft:jump.dynamic](#minecraftjump.dynamic)
+ - [minecraft:jump.static](#minecraftjump.static)
+ - [minecraft:knockback_resistance](#minecraftknockback_resistance)
+ - [minecraft:leashable](#minecraftleashable)
+ - [minecraft:lookat](#minecraftlookat)
+ - [minecraft:loot](#minecraftloot)
+ - [minecraft:managed_wandering_trader](#minecraftmanaged_wandering_trader)
+ - [minecraft:mark_variant](#minecraftmark_variant)
+ - [minecraft:mob_effect](#minecraftmob_effect)
+ - [minecraft:movement](#minecraftmovement)
+ - [minecraft:movement.amphibious](#minecraftmovement.amphibious)
+ - [minecraft:movement.basic](#minecraftmovement.basic)
+ - [minecraft:movement.fly](#minecraftmovement.fly)
+ - [minecraft:movement.generic](#minecraftmovement.generic)
+ - [minecraft:movement.glide](#minecraftmovement.glide)
+ - [minecraft:movement.hover](#minecraftmovement.hover)
+ - [minecraft:movement.jump](#minecraftmovement.jump)
+ - [minecraft:movement.skip](#minecraftmovement.skip)
+ - [minecraft:movement.sway](#minecraftmovement.sway)
+ - [minecraft:nameable](#minecraftnameable)
+ - [minecraft:navigation.climb](#minecraftnavigation.climb)
+ - [minecraft:navigation.float](#minecraftnavigation.float)
+ - [minecraft:navigation.fly](#minecraftnavigation.fly)
+ - [minecraft:navigation.generic](#minecraftnavigation.generic)
+ - [minecraft:navigation.hover](#minecraftnavigation.hover)
+ - [minecraft:navigation.walk](#minecraftnavigation.walk)
+ - [minecraft:on_death](#minecrafton_death)
+ - [minecraft:on_friendly_anger](#minecrafton_friendly_anger)
+ - [minecraft:on_hurt](#minecrafton_hurt)
+ - [minecraft:on_hurt_by_player](#minecrafton_hurt_by_player)
+ - [minecraft:on_start_landing](#minecrafton_start_landing)
+ - [minecraft:on_start_takeoff](#minecrafton_start_takeoff)
+ - [minecraft:on_target_acquired](#minecrafton_target_acquired)
+ - [minecraft:on_target_escape](#minecrafton_target_escape)
+ - [minecraft:on_wake_with_owner](#minecrafton_wake_with_owner)
+ - [minecraft:peek](#minecraftpeek)
+ - [minecraft:persistent](#minecraftpersistent)
+ - [minecraft:physics](#minecraftphysics)
+ - [minecraft:player.exhaustion](#minecraftplayer.exhaustion)
+ - [minecraft:player.experience](#minecraftplayer.experience)
+ - [minecraft:player.level](#minecraftplayer.level)
+ - [minecraft:player.saturation](#minecraftplayer.saturation)
+ - [minecraft:preferred_path](#minecraftpreferred_path)
+ - [minecraft:projectile](#minecraftprojectile)
+ - [minecraft:pushable](#minecraftpushable)
+ - [minecraft:raid_trigger](#minecraftraid_trigger)
+ - [minecraft:rail_movement](#minecraftrail_movement)
+ - [minecraft:rail_sensor](#minecraftrail_sensor)
+ - [minecraft:ravager_blocked](#minecraftravager_blocked)
+ - [minecraft:rideable](#minecraftrideable)
+ - [minecraft:scaffolding_climber](#minecraftscaffolding_climber)
+ - [minecraft:scale](#minecraftscale)
+ - [minecraft:scale_by_age](#minecraftscale_by_age)
+ - [minecraft:scheduler](#minecraftscheduler)
+ - [minecraft:shareables](#minecraftshareables)
+ - [minecraft:shooter](#minecraftshooter)
+ - [minecraft:sittable](#minecraftsittable)
+ - [minecraft:skin_id](#minecraftskin_id)
+ - [minecraft:spawn_entity](#minecraftspawn_entity)
+ - [minecraft:spell_effects](#minecraftspell_effects)
+ - [minecraft:strength](#minecraftstrength)
+ - [minecraft:tameable](#minecrafttameable)
+ - [minecraft:tamemount](#minecrafttamemount)
+ - [minecraft:target_nearby_sensor](#minecrafttarget_nearby_sensor)
+ - [minecraft:teleport](#minecraftteleport)
+ - [minecraft:timer](#minecrafttimer)
+ - [minecraft:trade_resupply](#minecrafttrade_resupply)
+ - [minecraft:trade_table](#minecrafttrade_table)
+ - [minecraft:trail](#minecrafttrail)
+ - [minecraft:transformation](#minecrafttransformation)
+ - [minecraft:trust](#minecrafttrust)
+ - [minecraft:trusting](#minecrafttrusting)
+ - [minecraft:type_family](#minecrafttype_family)
+ - [minecraft:underwater_movement](#minecraftunderwater_movement)
+ - [minecraft:variant](#minecraftvariant)
+ - [minecraft:water_movement](#minecraftwater_movement)
 
-# minecraftaddrider
+# minecraft:addrider
 ### cave_spider.json
 ```json
 minecraft:addrider: {
@@ -362,7 +362,7 @@ minecraft:addrider: {
 }
 ```
 
-# minecraftageable
+# minecraft:ageable
 ### bee.json
 ```json
 minecraft:ageable: {
@@ -777,7 +777,7 @@ minecraft:ageable: {
 }
 ```
 
-# minecraftambient_sound_interval
+# minecraft:ambient_sound_interval
 ### bee.json
 ```json
 minecraft:ambient_sound_interval: {
@@ -861,7 +861,7 @@ minecraft:ambient_sound_interval: {
 }
 ```
 
-# minecraftangry
+# minecraft:angry
 ### bee.json
 ```json
 minecraft:angry: {
@@ -1102,7 +1102,7 @@ minecraft:angry: {
 }
 ```
 
-# minecraftannotation.break_door
+# minecraft:annotation.break_door
 ### drowned.json
 ```json
 minecraft:annotation.break_door: {}
@@ -1131,7 +1131,7 @@ minecraft:annotation.break_door: {}
 minecraft:annotation.break_door: {}
 ```
 
-# minecraftannotation.open_door
+# minecraft:annotation.open_door
 ### villager.json
 ```json
 minecraft:annotation.open_door: {}
@@ -1142,7 +1142,7 @@ minecraft:annotation.open_door: {}
 minecraft:annotation.open_door: {}
 ```
 
-# minecraftarea_attack
+# minecraft:area_attack
 ### pufferfish.json
 ```json
 minecraft:area_attack: {
@@ -1166,7 +1166,7 @@ minecraft:area_attack: {
 }
 ```
 
-# minecraftattack
+# minecraft:attack
 ### bee.json
 ```json
 minecraft:attack: {
@@ -1491,7 +1491,7 @@ minecraft:attack: {
 }
 ```
 
-# minecraftattack_damage
+# minecraft:attack_damage
 ### cat.json
 ```json
 minecraft:attack_damage: {
@@ -1506,7 +1506,7 @@ minecraft:attack_damage: {
 }
 ```
 
-# minecraftballoonable
+# minecraft:balloonable
 ### chicken.json
 ```json
 minecraft:balloonable: {
@@ -1600,7 +1600,7 @@ minecraft:balloonable: {}
 minecraft:balloonable: {}
 ```
 
-# minecraftbehavior.avoid_mob_type
+# minecraft:behavior.avoid_mob_type
 ### cat.json
 ```json
 minecraft:behavior.avoid_mob_type: {
@@ -2119,7 +2119,7 @@ minecraft:behavior.avoid_mob_type: {
 }
 ```
 
-# minecraftbehavior.beg
+# minecraft:behavior.beg
 ```json
 minecraft:behavior.beg: {
     "priority": 9,
@@ -2145,7 +2145,7 @@ minecraft:behavior.beg: {
 }
 ```
 
-# minecraftbehavior.break_door
+# minecraft:behavior.break_door
 ### zombie_villager_v2.json
 ```json
 minecraft:behavior.break_door: {
@@ -2153,7 +2153,7 @@ minecraft:behavior.break_door: {
 }
 ```
 
-# minecraftbehavior.breed
+# minecraft:behavior.breed
 ### bee.json
 ```json
 minecraft:behavior.breed: {
@@ -2310,7 +2310,7 @@ minecraft:behavior.breed: {
 }
 ```
 
-# minecraftbehavior.celebrate
+# minecraft:behavior.celebrate
 ### evocation_illager.json
 ```json
 minecraft:behavior.celebrate: {
@@ -2416,7 +2416,7 @@ minecraft:behavior.celebrate: {
 }
 ```
 
-# minecraftbehavior.charge_attack
+# minecraft:behavior.charge_attack
 ### vex.json
 ```json
 minecraft:behavior.charge_attack: {
@@ -2424,7 +2424,7 @@ minecraft:behavior.charge_attack: {
 }
 ```
 
-# minecraftbehavior.charge_held_item
+# minecraft:behavior.charge_held_item
 ### pillager.json
 ```json
 minecraft:behavior.charge_held_item: {
@@ -2435,7 +2435,7 @@ minecraft:behavior.charge_held_item: {
 }
 ```
 
-# minecraftbehavior.circle_around_anchor
+# minecraft:behavior.circle_around_anchor
 ### phantom.json
 ```json
 minecraft:behavior.circle_around_anchor: {
@@ -2458,7 +2458,7 @@ minecraft:behavior.circle_around_anchor: {
 }
 ```
 
-# minecraftbehavior.controlled_by_player
+# minecraft:behavior.controlled_by_player
 ### pig.json
 ```json
 minecraft:behavior.controlled_by_player: {
@@ -2466,7 +2466,7 @@ minecraft:behavior.controlled_by_player: {
 }
 ```
 
-# minecraftbehavior.defend_trusted_target
+# minecraft:behavior.defend_trusted_target
 ### fox.json
 ```json
 minecraft:behavior.defend_trusted_target: {
@@ -2482,7 +2482,7 @@ minecraft:behavior.defend_trusted_target: {
 }
 ```
 
-# minecraftbehavior.defend_village_target
+# minecraft:behavior.defend_village_target
 ### iron_golem.json
 ```json
 minecraft:behavior.defend_village_target: {
@@ -2490,7 +2490,7 @@ minecraft:behavior.defend_village_target: {
 }
 ```
 
-# minecraftbehavior.delayed_attack
+# minecraft:behavior.delayed_attack
 ### ravager.json
 ```json
 minecraft:behavior.delayed_attack: {
@@ -2503,7 +2503,7 @@ minecraft:behavior.delayed_attack: {
 }
 ```
 
-# minecraftbehavior.dragonchargeplayer
+# minecraft:behavior.dragonchargeplayer
 ### ender_dragon.json
 ```json
 minecraft:behavior.dragonchargeplayer: {
@@ -2511,56 +2511,56 @@ minecraft:behavior.dragonchargeplayer: {
 }
 ```
 
-# minecraftbehavior.dragondeath
+# minecraft:behavior.dragondeath
 ```json
 minecraft:behavior.dragondeath: {
     "priority": 0
 }
 ```
 
-# minecraftbehavior.dragonflaming
+# minecraft:behavior.dragonflaming
 ```json
 minecraft:behavior.dragonflaming: {
     "priority": 1
 }
 ```
 
-# minecraftbehavior.dragonholdingpattern
+# minecraft:behavior.dragonholdingpattern
 ```json
 minecraft:behavior.dragonholdingpattern: {
     "priority": 3
 }
 ```
 
-# minecraftbehavior.dragonlanding
+# minecraft:behavior.dragonlanding
 ```json
 minecraft:behavior.dragonlanding: {
     "priority": 0
 }
 ```
 
-# minecraftbehavior.dragonscanning
+# minecraft:behavior.dragonscanning
 ```json
 minecraft:behavior.dragonscanning: {
     "priority": 2
 }
 ```
 
-# minecraftbehavior.dragonstrafeplayer
+# minecraft:behavior.dragonstrafeplayer
 ```json
 minecraft:behavior.dragonstrafeplayer: {
     "priority": 2
 }
 ```
 
-# minecraftbehavior.dragontakeoff
+# minecraft:behavior.dragontakeoff
 ```json
 minecraft:behavior.dragontakeoff: {
     "priority": 0
 }
 ```
 
-# minecraftbehavior.drink_potion
+# minecraft:behavior.drink_potion
 ### wandering_trader.json
 ```json
 minecraft:behavior.drink_potion: {
@@ -2659,7 +2659,7 @@ minecraft:behavior.drink_potion: {
 }
 ```
 
-# minecraftbehavior.drop_item_for
+# minecraft:behavior.drop_item_for
 ### cat.json
 ```json
 minecraft:behavior.drop_item_for: {
@@ -2694,7 +2694,7 @@ minecraft:behavior.drop_item_for: {
 }
 ```
 
-# minecraftbehavior.eat_block
+# minecraft:behavior.eat_block
 ### sheep.json
 ```json
 minecraft:behavior.eat_block: {
@@ -2706,7 +2706,7 @@ minecraft:behavior.eat_block: {
 }
 ```
 
-# minecraftbehavior.eat_carried_item
+# minecraft:behavior.eat_carried_item
 ### fox.json
 ```json
 minecraft:behavior.eat_carried_item: {
@@ -2715,7 +2715,7 @@ minecraft:behavior.eat_carried_item: {
 }
 ```
 
-# minecraftbehavior.enderman_leave_block
+# minecraft:behavior.enderman_leave_block
 ### enderman.json
 ```json
 minecraft:behavior.enderman_leave_block: {
@@ -2723,14 +2723,14 @@ minecraft:behavior.enderman_leave_block: {
 }
 ```
 
-# minecraftbehavior.enderman_take_block
+# minecraft:behavior.enderman_take_block
 ```json
 minecraft:behavior.enderman_take_block: {
     "priority": 11
 }
 ```
 
-# minecraftbehavior.explore_outskirts
+# minecraft:behavior.explore_outskirts
 ### villager_v2.json
 ```json
 minecraft:behavior.explore_outskirts: {}
@@ -2745,7 +2745,7 @@ minecraft:behavior.explore_outskirts: {
 }
 ```
 
-# minecraftbehavior.find_cover
+# minecraft:behavior.find_cover
 ### fox.json
 ```json
 minecraft:behavior.find_cover: {
@@ -2763,7 +2763,7 @@ minecraft:behavior.find_cover: {
 }
 ```
 
-# minecraftbehavior.find_mount
+# minecraft:behavior.find_mount
 ### husk.json
 ```json
 minecraft:behavior.find_mount: {
@@ -2810,7 +2810,7 @@ minecraft:behavior.find_mount: {
 }
 ```
 
-# minecraftbehavior.find_underwater_treasure
+# minecraft:behavior.find_underwater_treasure
 ### dolphin.json
 ```json
 minecraft:behavior.find_underwater_treasure: {
@@ -2821,7 +2821,7 @@ minecraft:behavior.find_underwater_treasure: {
 }
 ```
 
-# minecraftbehavior.flee_sun
+# minecraft:behavior.flee_sun
 ### drowned.json
 ```json
 minecraft:behavior.flee_sun: {
@@ -2862,7 +2862,7 @@ minecraft:behavior.flee_sun: {
 }
 ```
 
-# minecraftbehavior.float
+# minecraft:behavior.float
 ### bat.json
 ```json
 minecraft:behavior.float: {
@@ -3122,7 +3122,7 @@ minecraft:behavior.float: {
 }
 ```
 
-# minecraftbehavior.float_wander
+# minecraft:behavior.float_wander
 ### bat.json
 ```json
 minecraft:behavior.float_wander: {
@@ -3145,7 +3145,7 @@ minecraft:behavior.float_wander: {
 }
 ```
 
-# minecraftbehavior.follow_caravan
+# minecraft:behavior.follow_caravan
 ### llama.json
 ```json
 minecraft:behavior.follow_caravan: {
@@ -3162,7 +3162,7 @@ minecraft:behavior.follow_caravan: {
 }
 ```
 
-# minecraftbehavior.follow_mob
+# minecraft:behavior.follow_mob
 ### parrot.json
 ```json
 minecraft:behavior.follow_mob: {
@@ -3173,7 +3173,7 @@ minecraft:behavior.follow_mob: {
 }
 ```
 
-# minecraftbehavior.follow_owner
+# minecraft:behavior.follow_owner
 ### cat.json
 ```json
 minecraft:behavior.follow_owner: {
@@ -3214,7 +3214,7 @@ minecraft:behavior.follow_owner: {
 }
 ```
 
-# minecraftbehavior.follow_parent
+# minecraft:behavior.follow_parent
 ### bee.json
 ```json
 minecraft:behavior.follow_parent: {
@@ -3372,7 +3372,7 @@ minecraft:behavior.follow_parent: {
 }
 ```
 
-# minecraftbehavior.follow_target_captain
+# minecraft:behavior.follow_target_captain
 ### pillager.json
 ```json
 minecraft:behavior.follow_target_captain: {
@@ -3393,7 +3393,7 @@ minecraft:behavior.follow_target_captain: {
 }
 ```
 
-# minecraftbehavior.go_home
+# minecraft:behavior.go_home
 ### bee.json
 ```json
 minecraft:behavior.go_home: {
@@ -3462,7 +3462,7 @@ minecraft:behavior.go_home: {
 }
 ```
 
-# minecraftbehavior.guardian_attack
+# minecraft:behavior.guardian_attack
 ### elder_guardian.json
 ```json
 minecraft:behavior.guardian_attack: {
@@ -3483,7 +3483,7 @@ minecraft:behavior.guardian_attack: {
 }
 ```
 
-# minecraftbehavior.harvest_farm_block
+# minecraft:behavior.harvest_farm_block
 ### villager.json
 ```json
 minecraft:behavior.harvest_farm_block: {
@@ -3504,7 +3504,7 @@ minecraft:behavior.harvest_farm_block: {
 }
 ```
 
-# minecraftbehavior.hide
+# minecraft:behavior.hide
 ```json
 minecraft:behavior.hide: {
     "priority": 0,
@@ -3514,7 +3514,7 @@ minecraft:behavior.hide: {
 }
 ```
 
-# minecraftbehavior.hold_ground
+# minecraft:behavior.hold_ground
 ### pillager.json
 ```json
 minecraft:behavior.hold_ground: {
@@ -3550,7 +3550,7 @@ minecraft:behavior.hold_ground: {
 }
 ```
 
-# minecraftbehavior.hurt_by_target
+# minecraft:behavior.hurt_by_target
 ### bee.json
 ```json
 minecraft:behavior.hurt_by_target: {
@@ -3827,7 +3827,7 @@ minecraft:behavior.hurt_by_target: {
 }
 ```
 
-# minecraftbehavior.inspect_bookshelf
+# minecraft:behavior.inspect_bookshelf
 ### villager_v2.json
 ```json
 minecraft:behavior.inspect_bookshelf: {}
@@ -3844,7 +3844,7 @@ minecraft:behavior.inspect_bookshelf: {
 }
 ```
 
-# minecraftbehavior.knockback_roar
+# minecraft:behavior.knockback_roar
 ### ravager.json
 ```json
 minecraft:behavior.knockback_roar: {
@@ -3873,7 +3873,7 @@ minecraft:behavior.knockback_roar: {
 }
 ```
 
-# minecraftbehavior.lay_down
+# minecraft:behavior.lay_down
 ### panda.json
 ```json
 minecraft:behavior.lay_down: {
@@ -3883,7 +3883,7 @@ minecraft:behavior.lay_down: {
 }
 ```
 
-# minecraftbehavior.lay_egg
+# minecraft:behavior.lay_egg
 ### turtle.json
 ```json
 minecraft:behavior.lay_egg: {
@@ -3899,7 +3899,7 @@ minecraft:behavior.lay_egg: {
 }
 ```
 
-# minecraftbehavior.leap_at_target
+# minecraft:behavior.leap_at_target
 ### cat.json
 ```json
 minecraft:behavior.leap_at_target: {
@@ -3950,7 +3950,7 @@ minecraft:behavior.leap_at_target: {
 }
 ```
 
-# minecraftbehavior.look_at_entity
+# minecraft:behavior.look_at_entity
 ### evocation_illager.json
 ```json
 minecraft:behavior.look_at_entity: {
@@ -3992,7 +3992,7 @@ minecraft:behavior.look_at_entity: {
 }
 ```
 
-# minecraftbehavior.look_at_player
+# minecraft:behavior.look_at_player
 ### cat.json
 ```json
 minecraft:behavior.look_at_player: {
@@ -4419,7 +4419,7 @@ minecraft:behavior.look_at_player: {
 }
 ```
 
-# minecraftbehavior.look_at_target
+# minecraft:behavior.look_at_target
 ### wither.json
 ```json
 minecraft:behavior.look_at_target: {
@@ -4427,7 +4427,7 @@ minecraft:behavior.look_at_target: {
 }
 ```
 
-# minecraftbehavior.look_at_trading_player
+# minecraft:behavior.look_at_trading_player
 ### villager.json
 ```json
 minecraft:behavior.look_at_trading_player: {
@@ -4449,7 +4449,7 @@ minecraft:behavior.look_at_trading_player: {
 }
 ```
 
-# minecraftbehavior.make_love
+# minecraft:behavior.make_love
 ### villager.json
 ```json
 minecraft:behavior.make_love: {
@@ -4464,7 +4464,7 @@ minecraft:behavior.make_love: {
 }
 ```
 
-# minecraftbehavior.melee_attack
+# minecraft:behavior.melee_attack
 ### bee.json
 ```json
 minecraft:behavior.melee_attack: {
@@ -4747,7 +4747,7 @@ minecraft:behavior.melee_attack: {
 }
 ```
 
-# minecraftbehavior.mingle
+# minecraft:behavior.mingle
 ### villager_v2.json
 ```json
 minecraft:behavior.mingle: {}
@@ -4764,7 +4764,7 @@ minecraft:behavior.mingle: {
 }
 ```
 
-# minecraftbehavior.mount_pathing
+# minecraft:behavior.mount_pathing
 ### cat.json
 ```json
 minecraft:behavior.mount_pathing: {
@@ -4995,7 +4995,7 @@ minecraft:behavior.mount_pathing: {
 }
 ```
 
-# minecraftbehavior.move_indoors
+# minecraft:behavior.move_indoors
 ### villager.json
 ```json
 minecraft:behavior.move_indoors: {
@@ -5013,7 +5013,7 @@ minecraft:behavior.move_indoors: {
 }
 ```
 
-# minecraftbehavior.move_through_village
+# minecraft:behavior.move_through_village
 ### iron_golem.json
 ```json
 minecraft:behavior.move_through_village: {
@@ -5023,7 +5023,7 @@ minecraft:behavior.move_through_village: {
 }
 ```
 
-# minecraftbehavior.move_to_block
+# minecraft:behavior.move_to_block
 ### bee.json
 ```json
 minecraft:behavior.move_to_block: {
@@ -5079,7 +5079,7 @@ minecraft:behavior.move_to_block: {
 }
 ```
 
-# minecraftbehavior.move_to_land
+# minecraft:behavior.move_to_land
 ### turtle.json
 ```json
 minecraft:behavior.move_to_land: {
@@ -5090,7 +5090,7 @@ minecraft:behavior.move_to_land: {
 }
 ```
 
-# minecraftbehavior.move_to_random_block
+# minecraft:behavior.move_to_random_block
 ### pillager.json
 ```json
 minecraft:behavior.move_to_random_block: {
@@ -5111,7 +5111,7 @@ minecraft:behavior.move_to_random_block: {
 }
 ```
 
-# minecraftbehavior.move_to_village
+# minecraft:behavior.move_to_village
 ### evocation_illager.json
 ```json
 minecraft:behavior.move_to_village: {
@@ -5156,7 +5156,7 @@ minecraft:behavior.move_to_village: {
 }
 ```
 
-# minecraftbehavior.move_to_water
+# minecraft:behavior.move_to_water
 ### dolphin.json
 ```json
 minecraft:behavior.move_to_water: {
@@ -5186,7 +5186,7 @@ minecraft:behavior.move_to_water: {
 }
 ```
 
-# minecraftbehavior.move_towards_restriction
+# minecraft:behavior.move_towards_restriction
 ### cat.json
 ```json
 minecraft:behavior.move_towards_restriction: {
@@ -5297,7 +5297,7 @@ minecraft:behavior.move_towards_restriction: {
 }
 ```
 
-# minecraftbehavior.move_towards_target
+# minecraft:behavior.move_towards_target
 ### iron_golem.json
 ```json
 minecraft:behavior.move_towards_target: {
@@ -5307,7 +5307,7 @@ minecraft:behavior.move_towards_target: {
 }
 ```
 
-# minecraftbehavior.nap
+# minecraft:behavior.nap
 ### fox.json
 ```json
 minecraft:behavior.nap: {
@@ -5369,7 +5369,7 @@ minecraft:behavior.nap: {
 }
 ```
 
-# minecraftbehavior.nearest_attackable_target
+# minecraft:behavior.nearest_attackable_target
 ### bee.json
 ```json
 minecraft:behavior.nearest_attackable_target: {
@@ -6936,7 +6936,7 @@ minecraft:behavior.nearest_attackable_target: {
 }
 ```
 
-# minecraftbehavior.nearest_prioritized_attackable_target
+# minecraft:behavior.nearest_prioritized_attackable_target
 ### fox.json
 ```json
 minecraft:behavior.nearest_prioritized_attackable_target: {
@@ -7088,7 +7088,7 @@ minecraft:behavior.nearest_prioritized_attackable_target: {
 }
 ```
 
-# minecraftbehavior.ocelot_sit_on_block
+# minecraft:behavior.ocelot_sit_on_block
 ### cat.json
 ```json
 minecraft:behavior.ocelot_sit_on_block: {
@@ -7105,7 +7105,7 @@ minecraft:behavior.ocelot_sit_on_block: {
 }
 ```
 
-# minecraftbehavior.ocelotattack
+# minecraft:behavior.ocelotattack
 ### cat.json
 ```json
 minecraft:behavior.ocelotattack: {
@@ -7126,7 +7126,7 @@ minecraft:behavior.ocelotattack: {
 }
 ```
 
-# minecraftbehavior.offer_flower
+# minecraft:behavior.offer_flower
 ### iron_golem.json
 ```json
 minecraft:behavior.offer_flower: {
@@ -7134,7 +7134,7 @@ minecraft:behavior.offer_flower: {
 }
 ```
 
-# minecraftbehavior.open_door
+# minecraft:behavior.open_door
 ### villager.json
 ```json
 minecraft:behavior.open_door: {
@@ -7151,7 +7151,7 @@ minecraft:behavior.open_door: {
 }
 ```
 
-# minecraftbehavior.owner_hurt_by_target
+# minecraft:behavior.owner_hurt_by_target
 ### wolf.json
 ```json
 minecraft:behavior.owner_hurt_by_target: {
@@ -7159,14 +7159,14 @@ minecraft:behavior.owner_hurt_by_target: {
 }
 ```
 
-# minecraftbehavior.owner_hurt_target
+# minecraft:behavior.owner_hurt_target
 ```json
 minecraft:behavior.owner_hurt_target: {
     "priority": 2
 }
 ```
 
-# minecraftbehavior.panic
+# minecraft:behavior.panic
 ### bee.json
 ```json
 minecraft:behavior.panic: {
@@ -7391,7 +7391,7 @@ minecraft:behavior.panic: {
 }
 ```
 
-# minecraftbehavior.pet_sleep_with_owner
+# minecraft:behavior.pet_sleep_with_owner
 ### cat.json
 ```json
 minecraft:behavior.pet_sleep_with_owner: {
@@ -7403,7 +7403,7 @@ minecraft:behavior.pet_sleep_with_owner: {
 }
 ```
 
-# minecraftbehavior.pickup_items
+# minecraft:behavior.pickup_items
 ### fox.json
 ```json
 minecraft:behavior.pickup_items: {
@@ -7434,7 +7434,7 @@ minecraft:behavior.pickup_items: {
 }
 ```
 
-# minecraftbehavior.play
+# minecraft:behavior.play
 ### villager.json
 ```json
 minecraft:behavior.play: {
@@ -7451,7 +7451,7 @@ minecraft:behavior.play: {
 }
 ```
 
-# minecraftbehavior.player_ride_tamed
+# minecraft:behavior.player_ride_tamed
 ### donkey.json
 ```json
 minecraft:behavior.player_ride_tamed: {}
@@ -7477,7 +7477,7 @@ minecraft:behavior.player_ride_tamed: {}
 minecraft:behavior.player_ride_tamed: {}
 ```
 
-# minecraftbehavior.raid_garden
+# minecraft:behavior.raid_garden
 ### fox.json
 ```json
 minecraft:behavior.raid_garden: {
@@ -7506,7 +7506,7 @@ minecraft:behavior.raid_garden: {
 }
 ```
 
-# minecraftbehavior.random_breach
+# minecraft:behavior.random_breach
 ### dolphin.json
 ```json
 minecraft:behavior.random_breach: {
@@ -7517,7 +7517,7 @@ minecraft:behavior.random_breach: {
 }
 ```
 
-# minecraftbehavior.random_fly
+# minecraft:behavior.random_fly
 ### parrot.json
 ```json
 minecraft:behavior.random_fly: {
@@ -7531,7 +7531,7 @@ minecraft:behavior.random_fly: {
 }
 ```
 
-# minecraftbehavior.random_hover
+# minecraft:behavior.random_hover
 ### bee.json
 ```json
 minecraft:behavior.random_hover: {
@@ -7547,7 +7547,7 @@ minecraft:behavior.random_hover: {
 }
 ```
 
-# minecraftbehavior.random_look_around
+# minecraft:behavior.random_look_around
 ### blaze.json
 ```json
 minecraft:behavior.random_look_around: {
@@ -7815,7 +7815,7 @@ minecraft:behavior.random_look_around: {
 }
 ```
 
-# minecraftbehavior.random_look_around_and_sit
+# minecraft:behavior.random_look_around_and_sit
 ### fox.json
 ```json
 minecraft:behavior.random_look_around_and_sit: {
@@ -7828,7 +7828,7 @@ minecraft:behavior.random_look_around_and_sit: {
 }
 ```
 
-# minecraftbehavior.random_sitting
+# minecraft:behavior.random_sitting
 ### panda.json
 ```json
 minecraft:behavior.random_sitting: {
@@ -7850,7 +7850,7 @@ minecraft:behavior.random_sitting: {
 }
 ```
 
-# minecraftbehavior.random_stroll
+# minecraft:behavior.random_stroll
 ### blaze.json
 ```json
 minecraft:behavior.random_stroll: {
@@ -8229,7 +8229,7 @@ minecraft:behavior.random_stroll: {
 }
 ```
 
-# minecraftbehavior.random_swim
+# minecraft:behavior.random_swim
 ### dolphin.json
 ```json
 minecraft:behavior.random_swim: {
@@ -8293,7 +8293,7 @@ minecraft:behavior.random_swim: {
 }
 ```
 
-# minecraftbehavior.ranged_attack
+# minecraft:behavior.ranged_attack
 ### blaze.json
 ```json
 minecraft:behavior.ranged_attack: {
@@ -8430,7 +8430,7 @@ minecraft:behavior.ranged_attack: {
 }
 ```
 
-# minecraftbehavior.receive_love
+# minecraft:behavior.receive_love
 ### villager.json
 ```json
 minecraft:behavior.receive_love: {
@@ -8445,7 +8445,7 @@ minecraft:behavior.receive_love: {
 }
 ```
 
-# minecraftbehavior.restrict_open_door
+# minecraft:behavior.restrict_open_door
 ### villager.json
 ```json
 minecraft:behavior.restrict_open_door: {
@@ -8460,7 +8460,7 @@ minecraft:behavior.restrict_open_door: {
 }
 ```
 
-# minecraftbehavior.roll
+# minecraft:behavior.roll
 ### panda.json
 ```json
 minecraft:behavior.roll: {
@@ -8476,7 +8476,7 @@ minecraft:behavior.roll: {
 }
 ```
 
-# minecraftbehavior.run_around_like_crazy
+# minecraft:behavior.run_around_like_crazy
 ### donkey.json
 ```json
 minecraft:behavior.run_around_like_crazy: {
@@ -8509,7 +8509,7 @@ minecraft:behavior.run_around_like_crazy: {
 }
 ```
 
-# minecraftbehavior.scared
+# minecraft:behavior.scared
 ### panda.json
 ```json
 minecraft:behavior.scared: {
@@ -8518,7 +8518,7 @@ minecraft:behavior.scared: {
 }
 ```
 
-# minecraftbehavior.send_event
+# minecraft:behavior.send_event
 ### evocation_illager.json
 ```json
 minecraft:behavior.send_event: {
@@ -8558,7 +8558,7 @@ minecraft:behavior.send_event: {
 }
 ```
 
-# minecraftbehavior.share_items
+# minecraft:behavior.share_items
 ### villager.json
 ```json
 minecraft:behavior.share_items: {
@@ -8597,7 +8597,7 @@ minecraft:behavior.share_items: {
 }
 ```
 
-# minecraftbehavior.silverfish_merge_with_stone
+# minecraft:behavior.silverfish_merge_with_stone
 ### silverfish.json
 ```json
 minecraft:behavior.silverfish_merge_with_stone: {
@@ -8605,14 +8605,14 @@ minecraft:behavior.silverfish_merge_with_stone: {
 }
 ```
 
-# minecraftbehavior.silverfish_wake_up_friends
+# minecraft:behavior.silverfish_wake_up_friends
 ```json
 minecraft:behavior.silverfish_wake_up_friends: {
     "priority": 1
 }
 ```
 
-# minecraftbehavior.skeleton_horse_trap
+# minecraft:behavior.skeleton_horse_trap
 ### skeleton_horse.json
 ```json
 minecraft:behavior.skeleton_horse_trap: {
@@ -8622,7 +8622,7 @@ minecraft:behavior.skeleton_horse_trap: {
 }
 ```
 
-# minecraftbehavior.sleep
+# minecraft:behavior.sleep
 ### villager_v2.json
 ```json
 minecraft:behavior.sleep: {}
@@ -8640,7 +8640,7 @@ minecraft:behavior.sleep: {
 }
 ```
 
-# minecraftbehavior.slime_attack
+# minecraft:behavior.slime_attack
 ### magma_cube.json
 ```json
 minecraft:behavior.slime_attack: {
@@ -8655,7 +8655,7 @@ minecraft:behavior.slime_attack: {
 }
 ```
 
-# minecraftbehavior.slime_float
+# minecraft:behavior.slime_float
 ### magma_cube.json
 ```json
 minecraft:behavior.slime_float: {
@@ -8670,7 +8670,7 @@ minecraft:behavior.slime_float: {
 }
 ```
 
-# minecraftbehavior.slime_keep_on_jumping
+# minecraft:behavior.slime_keep_on_jumping
 ### magma_cube.json
 ```json
 minecraft:behavior.slime_keep_on_jumping: {
@@ -8685,7 +8685,7 @@ minecraft:behavior.slime_keep_on_jumping: {
 }
 ```
 
-# minecraftbehavior.slime_random_direction
+# minecraft:behavior.slime_random_direction
 ### magma_cube.json
 ```json
 minecraft:behavior.slime_random_direction: {
@@ -8700,7 +8700,7 @@ minecraft:behavior.slime_random_direction: {
 }
 ```
 
-# minecraftbehavior.snacking
+# minecraft:behavior.snacking
 ### panda.json
 ```json
 minecraft:behavior.snacking: {
@@ -8728,7 +8728,7 @@ minecraft:behavior.snacking: {
 }
 ```
 
-# minecraftbehavior.sneeze
+# minecraft:behavior.sneeze
 ```json
 minecraft:behavior.sneeze: {
     "priority": 7,
@@ -8819,7 +8819,7 @@ minecraft:behavior.sneeze: {
 }
 ```
 
-# minecraftbehavior.squid_dive
+# minecraft:behavior.squid_dive
 ### squid.json
 ```json
 minecraft:behavior.squid_dive: {
@@ -8827,35 +8827,35 @@ minecraft:behavior.squid_dive: {
 }
 ```
 
-# minecraftbehavior.squid_flee
+# minecraft:behavior.squid_flee
 ```json
 minecraft:behavior.squid_flee: {
     "priority": 2
 }
 ```
 
-# minecraftbehavior.squid_idle
+# minecraft:behavior.squid_idle
 ```json
 minecraft:behavior.squid_idle: {
     "priority": 2
 }
 ```
 
-# minecraftbehavior.squid_move_away_from_ground
+# minecraft:behavior.squid_move_away_from_ground
 ```json
 minecraft:behavior.squid_move_away_from_ground: {
     "priority": 1
 }
 ```
 
-# minecraftbehavior.squid_out_of_water
+# minecraft:behavior.squid_out_of_water
 ```json
 minecraft:behavior.squid_out_of_water: {
     "priority": 2
 }
 ```
 
-# minecraftbehavior.stalk_and_pounce_on_target
+# minecraft:behavior.stalk_and_pounce_on_target
 ### fox.json
 ```json
 minecraft:behavior.stalk_and_pounce_on_target: {
@@ -8877,7 +8877,7 @@ minecraft:behavior.stalk_and_pounce_on_target: {
 }
 ```
 
-# minecraftbehavior.stay_while_sitting
+# minecraft:behavior.stay_while_sitting
 ### cat.json
 ```json
 minecraft:behavior.stay_while_sitting: {
@@ -8906,7 +8906,7 @@ minecraft:behavior.stay_while_sitting: {
 }
 ```
 
-# minecraftbehavior.stomp_attack
+# minecraft:behavior.stomp_attack
 ### polar_bear.json
 ```json
 minecraft:behavior.stomp_attack: {
@@ -8916,7 +8916,7 @@ minecraft:behavior.stomp_attack: {
 }
 ```
 
-# minecraftbehavior.stomp_turtle_egg
+# minecraft:behavior.stomp_turtle_egg
 ### drowned.json
 ```json
 minecraft:behavior.stomp_turtle_egg: {
@@ -8995,7 +8995,7 @@ minecraft:behavior.stomp_turtle_egg: {
 }
 ```
 
-# minecraftbehavior.stroll_towards_village
+# minecraft:behavior.stroll_towards_village
 ### fox.json
 ```json
 minecraft:behavior.stroll_towards_village: {
@@ -9008,7 +9008,7 @@ minecraft:behavior.stroll_towards_village: {
 }
 ```
 
-# minecraftbehavior.summon_entity
+# minecraft:behavior.summon_entity
 ### evocation_illager.json
 ```json
 minecraft:behavior.summon_entity: {
@@ -9089,7 +9089,7 @@ minecraft:behavior.summon_entity: {
 }
 ```
 
-# minecraftbehavior.swell
+# minecraft:behavior.swell
 ### creeper.json
 ```json
 minecraft:behavior.swell: {
@@ -9099,7 +9099,7 @@ minecraft:behavior.swell: {
 }
 ```
 
-# minecraftbehavior.swim_idle
+# minecraft:behavior.swim_idle
 ### fish.json
 ```json
 minecraft:behavior.swim_idle: {
@@ -9121,7 +9121,7 @@ minecraft:behavior.swim_idle: {
 }
 ```
 
-# minecraftbehavior.swim_wander
+# minecraft:behavior.swim_wander
 ### fish.json
 ```json
 minecraft:behavior.swim_wander: {
@@ -9161,7 +9161,7 @@ minecraft:behavior.swim_wander: {
 }
 ```
 
-# minecraftbehavior.swoop_attack
+# minecraft:behavior.swoop_attack
 ### phantom.json
 ```json
 minecraft:behavior.swoop_attack: {
@@ -9173,7 +9173,7 @@ minecraft:behavior.swoop_attack: {
 }
 ```
 
-# minecraftbehavior.take_flower
+# minecraft:behavior.take_flower
 ### villager.json
 ```json
 minecraft:behavior.take_flower: {
@@ -9188,7 +9188,7 @@ minecraft:behavior.take_flower: {
 }
 ```
 
-# minecraftbehavior.target_when_pushed
+# minecraft:behavior.target_when_pushed
 ### iron_golem.json
 ```json
 minecraft:behavior.target_when_pushed: {
@@ -9216,7 +9216,7 @@ minecraft:behavior.target_when_pushed: {
 }
 ```
 
-# minecraftbehavior.tempt
+# minecraft:behavior.tempt
 ### bee.json
 ```json
 minecraft:behavior.tempt: {
@@ -9456,7 +9456,7 @@ minecraft:behavior.tempt: {
 }
 ```
 
-# minecraftbehavior.trade_interest
+# minecraft:behavior.trade_interest
 ### villager_v2.json
 ```json
 minecraft:behavior.trade_interest: {}
@@ -9617,7 +9617,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-# minecraftbehavior.trade_with_player
+# minecraft:behavior.trade_with_player
 ### villager.json
 ```json
 minecraft:behavior.trade_with_player: {
@@ -9639,7 +9639,7 @@ minecraft:behavior.trade_with_player: {
 }
 ```
 
-# minecraftbehavior.wither_random_attack_pos_goal
+# minecraft:behavior.wither_random_attack_pos_goal
 ### wither.json
 ```json
 minecraft:behavior.wither_random_attack_pos_goal: {
@@ -9647,14 +9647,14 @@ minecraft:behavior.wither_random_attack_pos_goal: {
 }
 ```
 
-# minecraftbehavior.wither_target_highest_damage
+# minecraft:behavior.wither_target_highest_damage
 ```json
 minecraft:behavior.wither_target_highest_damage: {
     "priority": 1
 }
 ```
 
-# minecraftbehavior.work
+# minecraft:behavior.work
 ### villager_v2.json
 ```json
 minecraft:behavior.work: {}
@@ -9728,7 +9728,7 @@ minecraft:behavior.work: {
 }
 ```
 
-# minecraftblock_sensor
+# minecraft:block_sensor
 ### bee.json
 ```json
 minecraft:block_sensor: {
@@ -9745,7 +9745,7 @@ minecraft:block_sensor: {
 }
 ```
 
-# minecraftboostable
+# minecraft:boostable
 ### pig.json
 ```json
 minecraft:boostable: {
@@ -9761,7 +9761,7 @@ minecraft:boostable: {
 }
 ```
 
-# minecraftboss
+# minecraft:boss
 ### ender_dragon.json
 ```json
 minecraft:boss: {
@@ -9778,7 +9778,7 @@ minecraft:boss: {
 }
 ```
 
-# minecraftbreak_blocks
+# minecraft:break_blocks
 ### ravager.json
 ```json
 minecraft:break_blocks: {
@@ -9817,7 +9817,7 @@ minecraft:break_blocks: {
 }
 ```
 
-# minecraftbreathable
+# minecraft:breathable
 ### bat.json
 ```json
 minecraft:breathable: {
@@ -10338,7 +10338,7 @@ minecraft:breathable: {
 }
 ```
 
-# minecraftbreedable
+# minecraft:breedable
 ### bee.json
 ```json
 minecraft:breedable: {
@@ -10686,7 +10686,7 @@ minecraft:breedable: {
 }
 ```
 
-# minecraftbribeable
+# minecraft:bribeable
 ### dolphin.json
 ```json
 minecraft:bribeable: {
@@ -10697,7 +10697,7 @@ minecraft:bribeable: {
 }
 ```
 
-# minecraftburns_in_daylight
+# minecraft:burns_in_daylight
 ### drowned.json
 ```json
 minecraft:burns_in_daylight: {}
@@ -10743,7 +10743,7 @@ minecraft:burns_in_daylight: {}
 minecraft:burns_in_daylight: {}
 ```
 
-# minecraftcan_climb
+# minecraft:can_climb
 ### blaze.json
 ```json
 minecraft:can_climb: {}
@@ -10954,7 +10954,7 @@ minecraft:can_climb: {}
 minecraft:can_climb: {}
 ```
 
-# minecraftcan_fly
+# minecraft:can_fly
 ### bat.json
 ```json
 minecraft:can_fly: {}
@@ -10989,7 +10989,7 @@ minecraft:can_fly: {
 minecraft:can_fly: {}
 ```
 
-# minecraftcan_power_jump
+# minecraft:can_power_jump
 ### donkey.json
 ```json
 minecraft:can_power_jump: {}
@@ -11010,7 +11010,7 @@ minecraft:can_power_jump: {}
 minecraft:can_power_jump: {}
 ```
 
-# minecraftcollision_box
+# minecraft:collision_box
 ### armor_stand.json
 ```json
 minecraft:collision_box: {
@@ -11782,7 +11782,7 @@ minecraft:collision_box: {
 }
 ```
 
-# minecraftcolor
+# minecraft:color
 ### cat.json
 ```json
 minecraft:color: {
@@ -12063,7 +12063,7 @@ minecraft:color: {
 }
 ```
 
-# minecraftcolor2
+# minecraft:color2
 ### tropicalfish.json
 ```json
 minecraft:color2: {
@@ -12287,7 +12287,7 @@ minecraft:color2: {
 }
 ```
 
-# minecraftdamage_over_time
+# minecraft:damage_over_time
 ### dolphin.json
 ```json
 minecraft:damage_over_time: {
@@ -12296,7 +12296,7 @@ minecraft:damage_over_time: {
 }
 ```
 
-# minecraftdamage_sensor
+# minecraft:damage_sensor
 ### bat.json
 ```json
 minecraft:damage_sensor: {
@@ -12819,7 +12819,7 @@ minecraft:damage_sensor: {
 }
 ```
 
-# minecraftdespawn
+# minecraft:despawn
 ### wandering_trader.json
 ```json
 minecraft:despawn: {
@@ -12850,7 +12850,7 @@ minecraft:despawn: {
 }
 ```
 
-# minecraftdweller
+# minecraft:dweller
 ### cat.json
 ```json
 minecraft:dweller: {
@@ -13124,7 +13124,7 @@ minecraft:dweller: {
 }
 ```
 
-# minecrafteconomy_trade_table
+# minecraft:economy_trade_table
 ### villager_v2.json
 ```json
 minecraft:economy_trade_table: {}
@@ -13256,7 +13256,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-# minecraftentity_sensor
+# minecraft:entity_sensor
 ### pufferfish.json
 ```json
 minecraft:entity_sensor: {
@@ -13324,7 +13324,7 @@ minecraft:entity_sensor: {
 }
 ```
 
-# minecraftenvironment_sensor
+# minecraft:environment_sensor
 ### bee.json
 ```json
 minecraft:environment_sensor: {
@@ -13892,7 +13892,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-# minecraftequipment
+# minecraft:equipment
 ### drowned.json
 ```json
 minecraft:equipment: {
@@ -14042,7 +14042,7 @@ minecraft:equipment: {
 }
 ```
 
-# minecraftequippable
+# minecraft:equippable
 ### donkey.json
 ```json
 minecraft:equippable: {
@@ -14131,7 +14131,7 @@ minecraft:equippable: {
 }
 ```
 
-# minecraftexperience_reward
+# minecraft:experience_reward
 ### bee.json
 ```json
 minecraft:experience_reward: {
@@ -14590,7 +14590,7 @@ minecraft:experience_reward: {
 }
 ```
 
-# minecraftexplode
+# minecraft:explode
 ### creeper.json
 ```json
 minecraft:explode: {
@@ -14719,7 +14719,7 @@ minecraft:explode: {
 }
 ```
 
-# minecraftfire_immune
+# minecraft:fire_immune
 ### blaze.json
 ```json
 minecraft:fire_immune: true
@@ -14765,7 +14765,7 @@ minecraft:fire_immune: true
 minecraft:fire_immune: true
 ```
 
-# minecraftflocking
+# minecraft:flocking
 ### dolphin.json
 ```json
 minecraft:flocking: {
@@ -14886,7 +14886,7 @@ minecraft:flocking: {
 }
 ```
 
-# minecraftflying_speed
+# minecraft:flying_speed
 ### bee.json
 ```json
 minecraft:flying_speed: {
@@ -14901,7 +14901,7 @@ minecraft:flying_speed: {
 }
 ```
 
-# minecraftfollow_range
+# minecraft:follow_range
 ### bee.json
 ```json
 minecraft:follow_range: {
@@ -15036,7 +15036,7 @@ minecraft:follow_range: {
 }
 ```
 
-# minecraftgenetics
+# minecraft:genetics
 ### panda.json
 ```json
 minecraft:genetics: {
@@ -15103,7 +15103,7 @@ minecraft:genetics: {
 }
 ```
 
-# minecraftgiveable
+# minecraft:giveable
 ```json
 minecraft:giveable: {
     "triggers": {
@@ -15120,7 +15120,7 @@ minecraft:giveable: {
 }
 ```
 
-# minecraftgrows_crop
+# minecraft:grows_crop
 ### bee.json
 ```json
 minecraft:grows_crop: {
@@ -15129,7 +15129,7 @@ minecraft:grows_crop: {
 }
 ```
 
-# minecrafthealable
+# minecraft:healable
 ### cat.json
 ```json
 minecraft:healable: {
@@ -15376,7 +15376,7 @@ minecraft:healable: {
 }
 ```
 
-# minecrafthealth
+# minecraft:health
 ### armor_stand.json
 ```json
 minecraft:health: {
@@ -15989,13 +15989,13 @@ minecraft:health: {
 }
 ```
 
-# minecrafthide
+# minecraft:hide
 ### villager_v2.json
 ```json
 minecraft:hide: {}
 ```
 
-# minecrafthome
+# minecraft:home
 ### bee.json
 ```json
 minecraft:home: {}
@@ -16006,7 +16006,7 @@ minecraft:home: {}
 minecraft:home: {}
 ```
 
-# minecrafthorse.jump_strength
+# minecraft:horse.jump_strength
 ### donkey.json
 ```json
 minecraft:horse.jump_strength: {
@@ -16051,7 +16051,7 @@ minecraft:horse.jump_strength: {
 }
 ```
 
-# minecrafthurt_on_condition
+# minecraft:hurt_on_condition
 ### armor_stand.json
 ```json
 minecraft:hurt_on_condition: {
@@ -17187,7 +17187,7 @@ minecraft:hurt_on_condition: {
 }
 ```
 
-# minecraftinput_ground_controlled
+# minecraft:input_ground_controlled
 ### donkey.json
 ```json
 minecraft:input_ground_controlled: {}
@@ -17208,7 +17208,7 @@ minecraft:input_ground_controlled: {}
 minecraft:input_ground_controlled: {}
 ```
 
-# minecraftinsomnia
+# minecraft:insomnia
 ### player.json
 ```json
 minecraft:insomnia: {
@@ -17216,7 +17216,7 @@ minecraft:insomnia: {
 }
 ```
 
-# minecraftinteract
+# minecraft:interact
 ### cow.json
 ```json
 minecraft:interact: {
@@ -18651,7 +18651,7 @@ minecraft:interact: {
 }
 ```
 
-# minecraftinventory
+# minecraft:inventory
 ### chest_minecart.json
 ```json
 minecraft:inventory: {
@@ -18732,7 +18732,7 @@ minecraft:inventory: {
 }
 ```
 
-# minecraftis_baby
+# minecraft:is_baby
 ### bee.json
 ```json
 minecraft:is_baby: {}
@@ -18883,7 +18883,7 @@ minecraft:is_baby: {}
 minecraft:is_baby: {}
 ```
 
-# minecraftis_charged
+# minecraft:is_charged
 ### bee.json
 ```json
 minecraft:is_charged: {}
@@ -18894,7 +18894,7 @@ minecraft:is_charged: {}
 minecraft:is_charged: {}
 ```
 
-# minecraftis_chested
+# minecraft:is_chested
 ### donkey.json
 ```json
 minecraft:is_chested: {}
@@ -18910,7 +18910,7 @@ minecraft:is_chested: {}
 minecraft:is_chested: {}
 ```
 
-# minecraftis_dyeable
+# minecraft:is_dyeable
 ### cat.json
 ```json
 minecraft:is_dyeable: {
@@ -18932,7 +18932,7 @@ minecraft:is_dyeable: {
 }
 ```
 
-# minecraftis_hidden_when_invisible
+# minecraft:is_hidden_when_invisible
 ### player.json
 ```json
 minecraft:is_hidden_when_invisible: {}
@@ -18943,7 +18943,7 @@ minecraft:is_hidden_when_invisible: {}
 minecraft:is_hidden_when_invisible: {}
 ```
 
-# minecraftis_ignited
+# minecraft:is_ignited
 ### tnt_minecart.json
 ```json
 minecraft:is_ignited: {}
@@ -18953,7 +18953,7 @@ minecraft:is_ignited: {}
 minecraft:is_ignited: {}
 ```
 
-# minecraftis_illager_captain
+# minecraft:is_illager_captain
 ### pillager.json
 ```json
 minecraft:is_illager_captain: {}
@@ -18972,7 +18972,7 @@ minecraft:is_illager_captain: {}
 minecraft:is_illager_captain: {}
 ```
 
-# minecraftis_saddled
+# minecraft:is_saddled
 ### donkey.json
 ```json
 minecraft:is_saddled: {}
@@ -18993,7 +18993,7 @@ minecraft:is_saddled: {}
 minecraft:is_saddled: {}
 ```
 
-# minecraftis_shaking
+# minecraft:is_shaking
 ### husk.json
 ```json
 minecraft:is_shaking: {}
@@ -19022,7 +19022,7 @@ minecraft:is_shaking: {}
 minecraft:is_shaking: {}
 ```
 
-# minecraftis_sheared
+# minecraft:is_sheared
 ### sheep.json
 ```json
 minecraft:is_sheared: {}
@@ -19033,7 +19033,7 @@ minecraft:is_sheared: {}
 minecraft:is_sheared: {}
 ```
 
-# minecraftis_stackable
+# minecraft:is_stackable
 ### boat.json
 ```json
 minecraft:is_stackable: {}
@@ -19061,13 +19061,13 @@ minecraft:is_stackable: {}
 minecraft:is_stackable: {}
 ```
 
-# minecraftis_stunned
+# minecraft:is_stunned
 ### ravager.json
 ```json
 minecraft:is_stunned: {}
 ```
 
-# minecraftis_tamed
+# minecraft:is_tamed
 ### cat.json
 ```json
 minecraft:is_tamed: {}
@@ -19118,7 +19118,7 @@ minecraft:is_tamed: {}
 minecraft:is_tamed: {}
 ```
 
-# minecraftitem_controllable
+# minecraft:item_controllable
 ### pig.json
 ```json
 minecraft:item_controllable: {
@@ -19126,19 +19126,19 @@ minecraft:item_controllable: {
 }
 ```
 
-# minecraftitem_hopper
+# minecraft:item_hopper
 ### hopper_minecart.json
 ```json
 minecraft:item_hopper: {}
 ```
 
-# minecraftjump.dynamic
+# minecraft:jump.dynamic
 ### rabbit.json
 ```json
 minecraft:jump.dynamic: {}
 ```
 
-# minecraftjump.static
+# minecraft:jump.static
 ### bat.json
 ```json
 minecraft:jump.static: {}
@@ -19421,7 +19421,7 @@ minecraft:jump.static: {}
 minecraft:jump.static: {}
 ```
 
-# minecraftknockback_resistance
+# minecraft:knockback_resistance
 ### ender_dragon.json
 ```json
 minecraft:knockback_resistance: {
@@ -19444,7 +19444,7 @@ minecraft:knockback_resistance: {
 }
 ```
 
-# minecraftleashable
+# minecraft:leashable
 ### bee.json
 ```json
 minecraft:leashable: {
@@ -19678,7 +19678,7 @@ minecraft:leashable: {
 }
 ```
 
-# minecraftlookat
+# minecraft:lookat
 ### enderman.json
 ```json
 minecraft:lookat: {
@@ -19704,7 +19704,7 @@ minecraft:lookat: {
 }
 ```
 
-# minecraftloot
+# minecraft:loot
 ### armor_stand.json
 ```json
 minecraft:loot: {
@@ -20180,13 +20180,13 @@ minecraft:loot: {
 }
 ```
 
-# minecraftmanaged_wandering_trader
+# minecraft:managed_wandering_trader
 ### wandering_trader.json
 ```json
 minecraft:managed_wandering_trader: {}
 ```
 
-# minecraftmark_variant
+# minecraft:mark_variant
 ### bee.json
 ```json
 minecraft:mark_variant: {
@@ -20560,7 +20560,7 @@ minecraft:mark_variant: {
 }
 ```
 
-# minecraftmob_effect
+# minecraft:mob_effect
 ### pufferfish.json
 ```json
 minecraft:mob_effect: {
@@ -20584,7 +20584,7 @@ minecraft:mob_effect: {
 }
 ```
 
-# minecraftmovement
+# minecraft:movement
 ### bat.json
 ```json
 minecraft:movement: {
@@ -21116,7 +21116,7 @@ minecraft:movement: {
 }
 ```
 
-# minecraftmovement.amphibious
+# minecraft:movement.amphibious
 ### turtle.json
 ```json
 minecraft:movement.amphibious: {
@@ -21124,7 +21124,7 @@ minecraft:movement.amphibious: {
 }
 ```
 
-# minecraftmovement.basic
+# minecraft:movement.basic
 ### bat.json
 ```json
 minecraft:movement.basic: {}
@@ -21362,19 +21362,19 @@ minecraft:movement.basic: {}
 minecraft:movement.basic: {}
 ```
 
-# minecraftmovement.fly
+# minecraft:movement.fly
 ### parrot.json
 ```json
 minecraft:movement.fly: {}
 ```
 
-# minecraftmovement.generic
+# minecraft:movement.generic
 ### drowned.json
 ```json
 minecraft:movement.generic: {}
 ```
 
-# minecraftmovement.glide
+# minecraft:movement.glide
 ### phantom.json
 ```json
 minecraft:movement.glide: {
@@ -21383,13 +21383,13 @@ minecraft:movement.glide: {
 }
 ```
 
-# minecraftmovement.hover
+# minecraft:movement.hover
 ### bee.json
 ```json
 minecraft:movement.hover: {}
 ```
 
-# minecraftmovement.jump
+# minecraft:movement.jump
 ### magma_cube.json
 ```json
 minecraft:movement.jump: {
@@ -21446,13 +21446,13 @@ minecraft:movement.jump: {
 }
 ```
 
-# minecraftmovement.skip
+# minecraft:movement.skip
 ### rabbit.json
 ```json
 minecraft:movement.skip: {}
 ```
 
-# minecraftmovement.sway
+# minecraft:movement.sway
 ### elder_guardian.json
 ```json
 minecraft:movement.sway: {}
@@ -21491,7 +21491,7 @@ minecraft:movement.sway: {
 }
 ```
 
-# minecraftnameable
+# minecraft:nameable
 ### armor_stand.json
 ```json
 minecraft:nameable: {}
@@ -21829,7 +21829,7 @@ minecraft:nameable: {}
 minecraft:nameable: {}
 ```
 
-# minecraftnavigation.climb
+# minecraft:navigation.climb
 ### cave_spider.json
 ```json
 minecraft:navigation.climb: {
@@ -21844,7 +21844,7 @@ minecraft:navigation.climb: {
 }
 ```
 
-# minecraftnavigation.float
+# minecraft:navigation.float
 ### bat.json
 ```json
 minecraft:navigation.float: {
@@ -21859,7 +21859,7 @@ minecraft:navigation.float: {
 }
 ```
 
-# minecraftnavigation.fly
+# minecraft:navigation.fly
 ### parrot.json
 ```json
 minecraft:navigation.fly: {
@@ -21867,7 +21867,7 @@ minecraft:navigation.fly: {
 }
 ```
 
-# minecraftnavigation.generic
+# minecraft:navigation.generic
 ### dolphin.json
 ```json
 minecraft:navigation.generic: {
@@ -22029,7 +22029,7 @@ minecraft:navigation.generic: {
 }
 ```
 
-# minecraftnavigation.hover
+# minecraft:navigation.hover
 ### bee.json
 ```json
 minecraft:navigation.hover: {
@@ -22042,7 +22042,7 @@ minecraft:navigation.hover: {
 }
 ```
 
-# minecraftnavigation.walk
+# minecraft:navigation.walk
 ### blaze.json
 ```json
 minecraft:navigation.walk: {
@@ -22472,7 +22472,7 @@ minecraft:navigation.walk: {
 }
 ```
 
-# minecrafton_death
+# minecraft:on_death
 ### ender_dragon.json
 ```json
 minecraft:on_death: {
@@ -22481,7 +22481,7 @@ minecraft:on_death: {
 }
 ```
 
-# minecrafton_friendly_anger
+# minecraft:on_friendly_anger
 ### llama.json
 ```json
 minecraft:on_friendly_anger: {
@@ -22521,7 +22521,7 @@ minecraft:on_friendly_anger: {
 }
 ```
 
-# minecrafton_hurt
+# minecraft:on_hurt
 ### ender_crystal.json
 ```json
 minecraft:on_hurt: {
@@ -22545,7 +22545,7 @@ minecraft:on_hurt: {
 }
 ```
 
-# minecrafton_hurt_by_player
+# minecraft:on_hurt_by_player
 ```json
 minecraft:on_hurt_by_player: {
     "event": "minecraft:synchronized_ranged_mode",
@@ -22560,7 +22560,7 @@ minecraft:on_hurt_by_player: {
 }
 ```
 
-# minecrafton_start_landing
+# minecraft:on_start_landing
 ### ender_dragon.json
 ```json
 minecraft:on_start_landing: {
@@ -22569,7 +22569,7 @@ minecraft:on_start_landing: {
 }
 ```
 
-# minecrafton_start_takeoff
+# minecraft:on_start_takeoff
 ```json
 minecraft:on_start_takeoff: {
     "event": "minecraft:start_fly",
@@ -22577,7 +22577,7 @@ minecraft:on_start_takeoff: {
 }
 ```
 
-# minecrafton_target_acquired
+# minecraft:on_target_acquired
 ### bee.json
 ```json
 minecraft:on_target_acquired: {
@@ -22743,7 +22743,7 @@ minecraft:on_target_acquired: {
 }
 ```
 
-# minecrafton_target_escape
+# minecraft:on_target_escape
 ### creeper.json
 ```json
 minecraft:on_target_escape: {
@@ -22846,7 +22846,7 @@ minecraft:on_target_escape: {
 }
 ```
 
-# minecrafton_wake_with_owner
+# minecraft:on_wake_with_owner
 ### cat.json
 ```json
 minecraft:on_wake_with_owner: {
@@ -22855,7 +22855,7 @@ minecraft:on_wake_with_owner: {
 }
 ```
 
-# minecraftpeek
+# minecraft:peek
 ### shulker.json
 ```json
 minecraft:peek: {
@@ -22871,7 +22871,7 @@ minecraft:peek: {
 }
 ```
 
-# minecraftpersistent
+# minecraft:persistent
 ### armor_stand.json
 ```json
 minecraft:persistent: {}
@@ -22912,7 +22912,7 @@ minecraft:persistent: {}
 minecraft:persistent: {}
 ```
 
-# minecraftphysics
+# minecraft:physics
 ### area_effect_cloud.json
 ```json
 minecraft:physics: {
@@ -23398,7 +23398,7 @@ minecraft:physics: {}
 minecraft:physics: {}
 ```
 
-# minecraftplayer.exhaustion
+# minecraft:player.exhaustion
 ### player.json
 ```json
 minecraft:player.exhaustion: {
@@ -23407,7 +23407,7 @@ minecraft:player.exhaustion: {
 }
 ```
 
-# minecraftplayer.experience
+# minecraft:player.experience
 ```json
 minecraft:player.experience: {
     "value": 0,
@@ -23415,7 +23415,7 @@ minecraft:player.experience: {
 }
 ```
 
-# minecraftplayer.level
+# minecraft:player.level
 ```json
 minecraft:player.level: {
     "value": 0,
@@ -23423,14 +23423,14 @@ minecraft:player.level: {
 }
 ```
 
-# minecraftplayer.saturation
+# minecraft:player.saturation
 ```json
 minecraft:player.saturation: {
     "value": 20
 }
 ```
 
-# minecraftpreferred_path
+# minecraft:preferred_path
 ### iron_golem.json
 ```json
 minecraft:preferred_path: {
@@ -23691,7 +23691,7 @@ minecraft:preferred_path: {
 }
 ```
 
-# minecraftprojectile
+# minecraft:projectile
 ### arrow.json
 ```json
 minecraft:projectile: {
@@ -24238,7 +24238,7 @@ minecraft:projectile: {
 }
 ```
 
-# minecraftpushable
+# minecraft:pushable
 ### armor_stand.json
 ```json
 minecraft:pushable: {
@@ -24927,7 +24927,7 @@ minecraft:pushable: {
 }
 ```
 
-# minecraftraid_trigger
+# minecraft:raid_trigger
 ### player.json
 ```json
 minecraft:raid_trigger: {
@@ -24938,7 +24938,7 @@ minecraft:raid_trigger: {
 }
 ```
 
-# minecraftrail_movement
+# minecraft:rail_movement
 ### chest_minecart.json
 ```json
 minecraft:rail_movement: {}
@@ -24964,7 +24964,7 @@ minecraft:rail_movement: {}
 minecraft:rail_movement: {}
 ```
 
-# minecraftrail_sensor
+# minecraft:rail_sensor
 ### command_block_minecart.json
 ```json
 minecraft:rail_sensor: {
@@ -25043,7 +25043,7 @@ minecraft:rail_sensor: {
 }
 ```
 
-# minecraftravager_blocked
+# minecraft:ravager_blocked
 ### ravager.json
 ```json
 minecraft:ravager_blocked: {
@@ -25063,7 +25063,7 @@ minecraft:ravager_blocked: {
 }
 ```
 
-# minecraftrideable
+# minecraft:rideable
 ### boat.json
 ```json
 minecraft:rideable: {
@@ -25792,13 +25792,13 @@ minecraft:rideable: {
 }
 ```
 
-# minecraftscaffolding_climber
+# minecraft:scaffolding_climber
 ### player.json
 ```json
 minecraft:scaffolding_climber: {}
 ```
 
-# minecraftscale
+# minecraft:scale
 ### bee.json
 ```json
 minecraft:scale: {
@@ -26051,7 +26051,7 @@ minecraft:scale: {
 }
 ```
 
-# minecraftscale_by_age
+# minecraft:scale_by_age
 ### donkey.json
 ```json
 minecraft:scale_by_age: {
@@ -26092,7 +26092,7 @@ minecraft:scale_by_age: {
 }
 ```
 
-# minecraftscheduler
+# minecraft:scheduler
 ### fox.json
 ```json
 minecraft:scheduler: {
@@ -26760,7 +26760,7 @@ minecraft:scheduler: {
 }
 ```
 
-# minecraftshareables
+# minecraft:shareables
 ### fox.json
 ```json
 minecraft:shareables: {
@@ -27146,7 +27146,7 @@ minecraft:shareables: {
 }
 ```
 
-# minecraftshooter
+# minecraft:shooter
 ### blaze.json
 ```json
 minecraft:shooter: {
@@ -27241,7 +27241,7 @@ minecraft:shooter: {
 }
 ```
 
-# minecraftsittable
+# minecraft:sittable
 ### cat.json
 ```json
 minecraft:sittable: {}
@@ -27262,7 +27262,7 @@ minecraft:sittable: {}
 minecraft:sittable: {}
 ```
 
-# minecraftskin_id
+# minecraft:skin_id
 ### villager_v2.json
 ```json
 minecraft:skin_id: {
@@ -27337,7 +27337,7 @@ minecraft:skin_id: {
 }
 ```
 
-# minecraftspawn_entity
+# minecraft:spawn_entity
 ### chicken.json
 ```json
 minecraft:spawn_entity: {
@@ -27369,7 +27369,7 @@ minecraft:spawn_entity: [
 ]
 ```
 
-# minecraftspell_effects
+# minecraft:spell_effects
 ### player.json
 ```json
 minecraft:spell_effects: {
@@ -27427,7 +27427,7 @@ minecraft:spell_effects: {
 }
 ```
 
-# minecraftstrength
+# minecraft:strength
 ### llama.json
 ```json
 minecraft:strength: {
@@ -27464,7 +27464,7 @@ minecraft:strength: {
 }
 ```
 
-# minecrafttameable
+# minecraft:tameable
 ### cat.json
 ```json
 minecraft:tameable: {
@@ -27509,7 +27509,7 @@ minecraft:tameable: {
 }
 ```
 
-# minecrafttamemount
+# minecraft:tamemount
 ### donkey.json
 ```json
 minecraft:tamemount: {
@@ -27722,7 +27722,7 @@ minecraft:tamemount: {
 }
 ```
 
-# minecrafttarget_nearby_sensor
+# minecraft:target_nearby_sensor
 ### creeper.json
 ```json
 minecraft:target_nearby_sensor: {
@@ -27791,7 +27791,7 @@ minecraft:target_nearby_sensor: {
 }
 ```
 
-# minecraftteleport
+# minecraft:teleport
 ### enderman.json
 ```json
 minecraft:teleport: {
@@ -27808,7 +27808,7 @@ minecraft:teleport: {
 }
 ```
 
-# minecrafttimer
+# minecraft:timer
 ### bee.json
 ```json
 minecraft:timer: {
@@ -28016,13 +28016,13 @@ minecraft:timer: {
 }
 ```
 
-# minecrafttrade_resupply
+# minecraft:trade_resupply
 ### villager_v2.json
 ```json
 minecraft:trade_resupply: {}
 ```
 
-# minecrafttrade_table
+# minecraft:trade_table
 ### villager.json
 ```json
 minecraft:trade_table: {
@@ -28120,7 +28120,7 @@ minecraft:trade_table: {
 }
 ```
 
-# minecrafttrail
+# minecraft:trail
 ### snow_golem.json
 ```json
 minecraft:trail: {
@@ -28133,7 +28133,7 @@ minecraft:trail: {
 }
 ```
 
-# minecrafttransformation
+# minecraft:transformation
 ### husk.json
 ```json
 minecraft:transformation: {
@@ -28285,13 +28285,13 @@ minecraft:transformation: {
 }
 ```
 
-# minecrafttrust
+# minecraft:trust
 ### fox.json
 ```json
 minecraft:trust: {}
 ```
 
-# minecrafttrusting
+# minecraft:trusting
 ### ocelot.json
 ```json
 minecraft:trusting: {
@@ -28307,7 +28307,7 @@ minecraft:trusting: {
 }
 ```
 
-# minecrafttype_family
+# minecraft:type_family
 ### armor_stand.json
 ```json
 minecraft:type_family: {
@@ -29785,7 +29785,7 @@ minecraft:type_family: {
 }
 ```
 
-# minecraftunderwater_movement
+# minecraft:underwater_movement
 ### dolphin.json
 ```json
 minecraft:underwater_movement: {
@@ -29868,7 +29868,7 @@ minecraft:underwater_movement: {
 }
 ```
 
-# minecraftvariant
+# minecraft:variant
 ### cat.json
 ```json
 minecraft:variant: {
@@ -30787,7 +30787,7 @@ minecraft:variant: {
 }
 ```
 
-# minecraftwater_movement
+# minecraft:water_movement
 ### panda.json
 ```json
 minecraft:water_movement: {

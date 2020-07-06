@@ -8,24 +8,24 @@ parent: Vanilla Usage
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
- - [minecraft:block](#minecraft:block)
- - [minecraft:camera](#minecraft:camera)
- - [minecraft:foil](#minecraft:foil)
- - [minecraft:food](#minecraft:food)
- - [minecraft:hand_equipped](#minecraft:hand_equipped)
- - [minecraft:max_damage](#minecraft:max_damage)
- - [minecraft:max_stack_size](#minecraft:max_stack_size)
- - [minecraft:seed](#minecraft:seed)
- - [minecraft:stacked_by_data](#minecraft:stacked_by_data)
- - [minecraft:use_duration](#minecraft:use_duration)
+ - [minecraft:block](#minecraftblock)
+ - [minecraft:camera](#minecraftcamera)
+ - [minecraft:foil](#minecraftfoil)
+ - [minecraft:food](#minecraftfood)
+ - [minecraft:hand_equipped](#minecrafthand_equipped)
+ - [minecraft:max_damage](#minecraftmax_damage)
+ - [minecraft:max_stack_size](#minecraftmax_stack_size)
+ - [minecraft:seed](#minecraftseed)
+ - [minecraft:stacked_by_data](#minecraftstacked_by_data)
+ - [minecraft:use_duration](#minecraftuse_duration)
 
-# minecraftblock
+# minecraft:block
 ### camera.json
 ```json
 minecraft:block: "minecraft:camera"
 ```
 
-# minecraftcamera
+# minecraft:camera
 ```json
 minecraft:camera: {
     "black_bars_duration": 0.2,
@@ -36,7 +36,7 @@ minecraft:camera: {
 }
 ```
 
-# minecraftfoil
+# minecraft:foil
 ### appleEnchanted.json
 ```json
 minecraft:foil: true
@@ -47,7 +47,7 @@ minecraft:foil: true
 minecraft:foil: false
 ```
 
-# minecraftfood
+# minecraft:food
 ### apple.json
 ```json
 minecraft:food: {
@@ -471,13 +471,13 @@ minecraft:food: {
 }
 ```
 
-# minecrafthand_equipped
+# minecraft:hand_equipped
 ### appleEnchanted.json
 ```json
 minecraft:hand_equipped: false
 ```
 
-# minecraftmax_damage
+# minecraft:max_damage
 ### clownfish.json
 ```json
 minecraft:max_damage: 0
@@ -508,7 +508,7 @@ minecraft:max_damage: 0
 minecraft:max_damage: 0
 ```
 
-# minecraftmax_stack_size
+# minecraft:max_stack_size
 ### beetroot_soup.json
 ```json
 minecraft:max_stack_size: 1
@@ -534,7 +534,7 @@ minecraft:max_stack_size: 1
 minecraft:max_stack_size: 1
 ```
 
-# minecraftseed
+# minecraft:seed
 ### beetroot_seeds.json
 ```json
 minecraft:seed: {
@@ -597,7 +597,7 @@ minecraft:seed: {
 }
 ```
 
-# minecraftstacked_by_data
+# minecraft:stacked_by_data
 ### appleEnchanted.json
 ```json
 minecraft:stacked_by_data: true
@@ -638,7 +638,7 @@ minecraft:stacked_by_data: true
 minecraft:stacked_by_data: true
 ```
 
-# minecraftuse_duration
+# minecraft:use_duration
 ### apple.json
 ```json
 minecraft:use_duration: 32
