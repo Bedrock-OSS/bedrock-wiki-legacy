@@ -13,6 +13,13 @@ permalink: /
 
 This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information. 
 
+Website looks weird?
+{: .label .label-red }
+- F12
+- click disable cache
+- reload
+- click disable cache again to re-enable it
+
 ## Navigating:
 
  - **Knowledge**: Top-level information, such as editor recommendations.
