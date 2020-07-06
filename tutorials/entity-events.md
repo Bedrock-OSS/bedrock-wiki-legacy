@@ -266,7 +266,7 @@ This event is run when the entity is hit by a player or projectile. There is a 6
                 }
               ]
             }
-		      ]
+	  ]
         },
         //runs if entity is sheared (under half health)
         {
