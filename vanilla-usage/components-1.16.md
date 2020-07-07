@@ -1,363 +1,342 @@
 ---
 layout: page
-title: Vanilla Components 1.16
+title: Entity Components 1.16
 parent: Vanilla Usage
 ---
 
-# Vanilla Components 1.16
+# Entity Components 1.16
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
- - [minecraft:addrider](#minecraft:addrider)
- - [minecraft:admire_item](#minecraft:admire_item)
- - [minecraft:ageable](#minecraft:ageable)
- - [minecraft:ambient_sound_interval](#minecraft:ambient_sound_interval)
- - [minecraft:angry](#minecraft:angry)
- - [minecraft:annotation.break_door](#minecraft:annotation.break_door)
- - [minecraft:annotation.open_door](#minecraft:annotation.open_door)
- - [minecraft:area_attack](#minecraft:area_attack)
- - [minecraft:attack](#minecraft:attack)
- - [minecraft:attack_cooldown](#minecraft:attack_cooldown)
- - [minecraft:attack_damage](#minecraft:attack_damage)
- - [minecraft:balloonable](#minecraft:balloonable)
- - [minecraft:barter](#minecraft:barter)
- - [minecraft:behavior.admire_item](#minecraft:behavior.admire_item)
- - [minecraft:behavior.avoid_block](#minecraft:behavior.avoid_block)
- - [minecraft:behavior.avoid_mob_type](#minecraft:behavior.avoid_mob_type)
- - [minecraft:behavior.barter](#minecraft:behavior.barter)
- - [minecraft:behavior.beg](#minecraft:behavior.beg)
- - [minecraft:behavior.breed](#minecraft:behavior.breed)
- - [minecraft:behavior.celebrate](#minecraft:behavior.celebrate)
- - [minecraft:behavior.charge_attack](#minecraft:behavior.charge_attack)
- - [minecraft:behavior.charge_held_item](#minecraft:behavior.charge_held_item)
- - [minecraft:behavior.circle_around_anchor](#minecraft:behavior.circle_around_anchor)
- - [minecraft:behavior.controlled_by_player](#minecraft:behavior.controlled_by_player)
- - [minecraft:behavior.defend_trusted_target](#minecraft:behavior.defend_trusted_target)
- - [minecraft:behavior.defend_village_target](#minecraft:behavior.defend_village_target)
- - [minecraft:behavior.delayed_attack](#minecraft:behavior.delayed_attack)
- - [minecraft:behavior.dragonchargeplayer](#minecraft:behavior.dragonchargeplayer)
- - [minecraft:behavior.dragondeath](#minecraft:behavior.dragondeath)
- - [minecraft:behavior.dragonflaming](#minecraft:behavior.dragonflaming)
- - [minecraft:behavior.dragonholdingpattern](#minecraft:behavior.dragonholdingpattern)
- - [minecraft:behavior.dragonlanding](#minecraft:behavior.dragonlanding)
- - [minecraft:behavior.dragonscanning](#minecraft:behavior.dragonscanning)
- - [minecraft:behavior.dragonstrafeplayer](#minecraft:behavior.dragonstrafeplayer)
- - [minecraft:behavior.dragontakeoff](#minecraft:behavior.dragontakeoff)
- - [minecraft:behavior.drink_potion](#minecraft:behavior.drink_potion)
- - [minecraft:behavior.drop_item_for](#minecraft:behavior.drop_item_for)
- - [minecraft:behavior.eat_block](#minecraft:behavior.eat_block)
- - [minecraft:behavior.eat_carried_item](#minecraft:behavior.eat_carried_item)
- - [minecraft:behavior.enderman_leave_block](#minecraft:behavior.enderman_leave_block)
- - [minecraft:behavior.enderman_take_block](#minecraft:behavior.enderman_take_block)
- - [minecraft:behavior.equip_item](#minecraft:behavior.equip_item)
- - [minecraft:behavior.explore_outskirts](#minecraft:behavior.explore_outskirts)
- - [minecraft:behavior.find_cover](#minecraft:behavior.find_cover)
- - [minecraft:behavior.find_mount](#minecraft:behavior.find_mount)
- - [minecraft:behavior.find_underwater_treasure](#minecraft:behavior.find_underwater_treasure)
- - [minecraft:behavior.flee_sun](#minecraft:behavior.flee_sun)
- - [minecraft:behavior.float](#minecraft:behavior.float)
- - [minecraft:behavior.float_wander](#minecraft:behavior.float_wander)
- - [minecraft:behavior.follow_caravan](#minecraft:behavior.follow_caravan)
- - [minecraft:behavior.follow_mob](#minecraft:behavior.follow_mob)
- - [minecraft:behavior.follow_owner](#minecraft:behavior.follow_owner)
- - [minecraft:behavior.follow_parent](#minecraft:behavior.follow_parent)
- - [minecraft:behavior.follow_target_captain](#minecraft:behavior.follow_target_captain)
- - [minecraft:behavior.go_home](#minecraft:behavior.go_home)
- - [minecraft:behavior.guardian_attack](#minecraft:behavior.guardian_attack)
- - [minecraft:behavior.harvest_farm_block](#minecraft:behavior.harvest_farm_block)
- - [minecraft:behavior.hide](#minecraft:behavior.hide)
- - [minecraft:behavior.hold_ground](#minecraft:behavior.hold_ground)
- - [minecraft:behavior.hurt_by_target](#minecraft:behavior.hurt_by_target)
- - [minecraft:behavior.inspect_bookshelf](#minecraft:behavior.inspect_bookshelf)
- - [minecraft:behavior.knockback_roar](#minecraft:behavior.knockback_roar)
- - [minecraft:behavior.lay_down](#minecraft:behavior.lay_down)
- - [minecraft:behavior.lay_egg](#minecraft:behavior.lay_egg)
- - [minecraft:behavior.leap_at_target](#minecraft:behavior.leap_at_target)
- - [minecraft:behavior.look_at_entity](#minecraft:behavior.look_at_entity)
- - [minecraft:behavior.look_at_player](#minecraft:behavior.look_at_player)
- - [minecraft:behavior.look_at_target](#minecraft:behavior.look_at_target)
- - [minecraft:behavior.look_at_trading_player](#minecraft:behavior.look_at_trading_player)
- - [minecraft:behavior.make_love](#minecraft:behavior.make_love)
- - [minecraft:behavior.melee_attack](#minecraft:behavior.melee_attack)
- - [minecraft:behavior.mingle](#minecraft:behavior.mingle)
- - [minecraft:behavior.mount_pathing](#minecraft:behavior.mount_pathing)
- - [minecraft:behavior.move_indoors](#minecraft:behavior.move_indoors)
- - [minecraft:behavior.move_through_village](#minecraft:behavior.move_through_village)
- - [minecraft:behavior.move_to_block](#minecraft:behavior.move_to_block)
- - [minecraft:behavior.move_to_land](#minecraft:behavior.move_to_land)
- - [minecraft:behavior.move_to_lava](#minecraft:behavior.move_to_lava)
- - [minecraft:behavior.move_to_random_block](#minecraft:behavior.move_to_random_block)
- - [minecraft:behavior.move_to_village](#minecraft:behavior.move_to_village)
- - [minecraft:behavior.move_to_water](#minecraft:behavior.move_to_water)
- - [minecraft:behavior.move_towards_restriction](#minecraft:behavior.move_towards_restriction)
- - [minecraft:behavior.move_towards_target](#minecraft:behavior.move_towards_target)
- - [minecraft:behavior.nap](#minecraft:behavior.nap)
- - [minecraft:behavior.nearest_attackable_target](#minecraft:behavior.nearest_attackable_target)
- - [minecraft:behavior.nearest_prioritized_attackable_target](#minecraft:behavior.nearest_prioritized_attackable_target)
- - [minecraft:behavior.ocelot_sit_on_block](#minecraft:behavior.ocelot_sit_on_block)
- - [minecraft:behavior.ocelotattack](#minecraft:behavior.ocelotattack)
- - [minecraft:behavior.offer_flower](#minecraft:behavior.offer_flower)
- - [minecraft:behavior.open_door](#minecraft:behavior.open_door)
- - [minecraft:behavior.owner_hurt_by_target](#minecraft:behavior.owner_hurt_by_target)
- - [minecraft:behavior.owner_hurt_target](#minecraft:behavior.owner_hurt_target)
- - [minecraft:behavior.panic](#minecraft:behavior.panic)
- - [minecraft:behavior.pet_sleep_with_owner](#minecraft:behavior.pet_sleep_with_owner)
- - [minecraft:behavior.pickup_items](#minecraft:behavior.pickup_items)
- - [minecraft:behavior.play](#minecraft:behavior.play)
- - [minecraft:behavior.player_ride_tamed](#minecraft:behavior.player_ride_tamed)
- - [minecraft:behavior.raid_garden](#minecraft:behavior.raid_garden)
- - [minecraft:behavior.random_breach](#minecraft:behavior.random_breach)
- - [minecraft:behavior.random_fly](#minecraft:behavior.random_fly)
- - [minecraft:behavior.random_hover](#minecraft:behavior.random_hover)
- - [minecraft:behavior.random_look_around](#minecraft:behavior.random_look_around)
- - [minecraft:behavior.random_look_around_and_sit](#minecraft:behavior.random_look_around_and_sit)
- - [minecraft:behavior.random_sitting](#minecraft:behavior.random_sitting)
- - [minecraft:behavior.random_stroll](#minecraft:behavior.random_stroll)
- - [minecraft:behavior.random_swim](#minecraft:behavior.random_swim)
- - [minecraft:behavior.ranged_attack](#minecraft:behavior.ranged_attack)
- - [minecraft:behavior.receive_love](#minecraft:behavior.receive_love)
- - [minecraft:behavior.restrict_open_door](#minecraft:behavior.restrict_open_door)
- - [minecraft:behavior.rise_to_liquid_level](#minecraft:behavior.rise_to_liquid_level)
- - [minecraft:behavior.roll](#minecraft:behavior.roll)
- - [minecraft:behavior.run_around_like_crazy](#minecraft:behavior.run_around_like_crazy)
- - [minecraft:behavior.scared](#minecraft:behavior.scared)
- - [minecraft:behavior.send_event](#minecraft:behavior.send_event)
- - [minecraft:behavior.share_items](#minecraft:behavior.share_items)
- - [minecraft:behavior.silverfish_merge_with_stone](#minecraft:behavior.silverfish_merge_with_stone)
- - [minecraft:behavior.silverfish_wake_up_friends](#minecraft:behavior.silverfish_wake_up_friends)
- - [minecraft:behavior.skeleton_horse_trap](#minecraft:behavior.skeleton_horse_trap)
- - [minecraft:behavior.sleep](#minecraft:behavior.sleep)
- - [minecraft:behavior.slime_attack](#minecraft:behavior.slime_attack)
- - [minecraft:behavior.slime_float](#minecraft:behavior.slime_float)
- - [minecraft:behavior.slime_keep_on_jumping](#minecraft:behavior.slime_keep_on_jumping)
- - [minecraft:behavior.slime_random_direction](#minecraft:behavior.slime_random_direction)
- - [minecraft:behavior.snacking](#minecraft:behavior.snacking)
- - [minecraft:behavior.sneeze](#minecraft:behavior.sneeze)
- - [minecraft:behavior.squid_dive](#minecraft:behavior.squid_dive)
- - [minecraft:behavior.squid_flee](#minecraft:behavior.squid_flee)
- - [minecraft:behavior.squid_idle](#minecraft:behavior.squid_idle)
- - [minecraft:behavior.squid_move_away_from_ground](#minecraft:behavior.squid_move_away_from_ground)
- - [minecraft:behavior.squid_out_of_water](#minecraft:behavior.squid_out_of_water)
- - [minecraft:behavior.stalk_and_pounce_on_target](#minecraft:behavior.stalk_and_pounce_on_target)
- - [minecraft:behavior.stay_while_sitting](#minecraft:behavior.stay_while_sitting)
- - [minecraft:behavior.stomp_attack](#minecraft:behavior.stomp_attack)
- - [minecraft:behavior.stomp_turtle_egg](#minecraft:behavior.stomp_turtle_egg)
- - [minecraft:behavior.stroll_towards_village](#minecraft:behavior.stroll_towards_village)
- - [minecraft:behavior.summon_entity](#minecraft:behavior.summon_entity)
- - [minecraft:behavior.swell](#minecraft:behavior.swell)
- - [minecraft:behavior.swim_idle](#minecraft:behavior.swim_idle)
- - [minecraft:behavior.swim_wander](#minecraft:behavior.swim_wander)
- - [minecraft:behavior.swim_with_entity](#minecraft:behavior.swim_with_entity)
- - [minecraft:behavior.swoop_attack](#minecraft:behavior.swoop_attack)
- - [minecraft:behavior.take_flower](#minecraft:behavior.take_flower)
- - [minecraft:behavior.target_when_pushed](#minecraft:behavior.target_when_pushed)
- - [minecraft:behavior.tempt](#minecraft:behavior.tempt)
- - [minecraft:behavior.trade_interest](#minecraft:behavior.trade_interest)
- - [minecraft:behavior.trade_with_player](#minecraft:behavior.trade_with_player)
- - [minecraft:behavior.wither_random_attack_pos_goal](#minecraft:behavior.wither_random_attack_pos_goal)
- - [minecraft:behavior.wither_target_highest_damage](#minecraft:behavior.wither_target_highest_damage)
- - [minecraft:behavior.work](#minecraft:behavior.work)
- - [minecraft:block_sensor](#minecraft:block_sensor)
- - [minecraft:boostable](#minecraft:boostable)
- - [minecraft:boss](#minecraft:boss)
- - [minecraft:break_blocks](#minecraft:break_blocks)
- - [minecraft:breathable](#minecraft:breathable)
- - [minecraft:breedable](#minecraft:breedable)
- - [minecraft:bribeable](#minecraft:bribeable)
- - [minecraft:burns_in_daylight](#minecraft:burns_in_daylight)
- - [minecraft:can_climb](#minecraft:can_climb)
- - [minecraft:can_fly](#minecraft:can_fly)
- - [minecraft:can_power_jump](#minecraft:can_power_jump)
- - [minecraft:celebrate_hunt](#minecraft:celebrate_hunt)
- - [minecraft:collision_box](#minecraft:collision_box)
- - [minecraft:color](#minecraft:color)
- - [minecraft:color2](#minecraft:color2)
- - [minecraft:custom_hit_test](#minecraft:custom_hit_test)
- - [minecraft:damage_over_time](#minecraft:damage_over_time)
- - [minecraft:damage_sensor](#minecraft:damage_sensor)
- - [minecraft:despawn](#minecraft:despawn)
- - [minecraft:dweller](#minecraft:dweller)
- - [minecraft:economy_trade_table](#minecraft:economy_trade_table)
- - [minecraft:entity_sensor](#minecraft:entity_sensor)
- - [minecraft:environment_sensor](#minecraft:environment_sensor)
- - [minecraft:equip_item](#minecraft:equip_item)
- - [minecraft:equipment](#minecraft:equipment)
- - [minecraft:equippable](#minecraft:equippable)
- - [minecraft:experience_reward](#minecraft:experience_reward)
- - [minecraft:explode](#minecraft:explode)
- - [minecraft:fire_immune](#minecraft:fire_immune)
- - [minecraft:flocking](#minecraft:flocking)
- - [minecraft:flying_speed](#minecraft:flying_speed)
- - [minecraft:follow_range](#minecraft:follow_range)
- - [minecraft:genetics](#minecraft:genetics)
- - [minecraft:giveable](#minecraft:giveable)
- - [minecraft:group_size](#minecraft:group_size)
- - [minecraft:grows_crop](#minecraft:grows_crop)
- - [minecraft:healable](#minecraft:healable)
- - [minecraft:health](#minecraft:health)
- - [minecraft:hide](#minecraft:hide)
- - [minecraft:home](#minecraft:home)
- - [minecraft:horse.jump_strength](#minecraft:horse.jump_strength)
- - [minecraft:hurt_on_condition](#minecraft:hurt_on_condition)
- - [minecraft:input_ground_controlled](#minecraft:input_ground_controlled)
- - [minecraft:insomnia](#minecraft:insomnia)
- - [minecraft:interact](#minecraft:interact)
- - [minecraft:inventory](#minecraft:inventory)
- - [minecraft:is_baby](#minecraft:is_baby)
- - [minecraft:is_charged](#minecraft:is_charged)
- - [minecraft:is_chested](#minecraft:is_chested)
- - [minecraft:is_dyeable](#minecraft:is_dyeable)
- - [minecraft:is_hidden_when_invisible](#minecraft:is_hidden_when_invisible)
- - [minecraft:is_ignited](#minecraft:is_ignited)
- - [minecraft:is_illager_captain](#minecraft:is_illager_captain)
- - [minecraft:is_saddled](#minecraft:is_saddled)
- - [minecraft:is_shaking](#minecraft:is_shaking)
- - [minecraft:is_sheared](#minecraft:is_sheared)
- - [minecraft:is_stackable](#minecraft:is_stackable)
- - [minecraft:is_stunned](#minecraft:is_stunned)
- - [minecraft:is_tamed](#minecraft:is_tamed)
- - [minecraft:item_controllable](#minecraft:item_controllable)
- - [minecraft:item_hopper](#minecraft:item_hopper)
- - [minecraft:jump.dynamic](#minecraft:jump.dynamic)
- - [minecraft:jump.static](#minecraft:jump.static)
- - [minecraft:knockback_resistance](#minecraft:knockback_resistance)
- - [minecraft:lava_movement](#minecraft:lava_movement)
- - [minecraft:leashable](#minecraft:leashable)
- - [minecraft:lookat](#minecraft:lookat)
- - [minecraft:loot](#minecraft:loot)
- - [minecraft:managed_wandering_trader](#minecraft:managed_wandering_trader)
- - [minecraft:mark_variant](#minecraft:mark_variant)
- - [minecraft:mob_effect](#minecraft:mob_effect)
- - [minecraft:movement](#minecraft:movement)
- - [minecraft:movement.amphibious](#minecraft:movement.amphibious)
- - [minecraft:movement.basic](#minecraft:movement.basic)
- - [minecraft:movement.fly](#minecraft:movement.fly)
- - [minecraft:movement.generic](#minecraft:movement.generic)
- - [minecraft:movement.glide](#minecraft:movement.glide)
- - [minecraft:movement.hover](#minecraft:movement.hover)
- - [minecraft:movement.jump](#minecraft:movement.jump)
- - [minecraft:movement.skip](#minecraft:movement.skip)
- - [minecraft:movement.sway](#minecraft:movement.sway)
- - [minecraft:nameable](#minecraft:nameable)
- - [minecraft:navigation.climb](#minecraft:navigation.climb)
- - [minecraft:navigation.float](#minecraft:navigation.float)
- - [minecraft:navigation.fly](#minecraft:navigation.fly)
- - [minecraft:navigation.generic](#minecraft:navigation.generic)
- - [minecraft:navigation.hover](#minecraft:navigation.hover)
- - [minecraft:navigation.walk](#minecraft:navigation.walk)
- - [minecraft:npc](#minecraft:npc)
- - [minecraft:on_death](#minecraft:on_death)
- - [minecraft:on_friendly_anger](#minecraft:on_friendly_anger)
- - [minecraft:on_hurt](#minecraft:on_hurt)
- - [minecraft:on_hurt_by_player](#minecraft:on_hurt_by_player)
- - [minecraft:on_start_landing](#minecraft:on_start_landing)
- - [minecraft:on_start_takeoff](#minecraft:on_start_takeoff)
- - [minecraft:on_target_acquired](#minecraft:on_target_acquired)
- - [minecraft:on_target_escape](#minecraft:on_target_escape)
- - [minecraft:on_wake_with_owner](#minecraft:on_wake_with_owner)
- - [minecraft:peek](#minecraft:peek)
- - [minecraft:persistent](#minecraft:persistent)
- - [minecraft:physics](#minecraft:physics)
- - [minecraft:player.exhaustion](#minecraft:player.exhaustion)
- - [minecraft:player.experience](#minecraft:player.experience)
- - [minecraft:player.level](#minecraft:player.level)
- - [minecraft:player.saturation](#minecraft:player.saturation)
- - [minecraft:preferred_path](#minecraft:preferred_path)
- - [minecraft:projectile](#minecraft:projectile)
- - [minecraft:pushable](#minecraft:pushable)
- - [minecraft:raid_trigger](#minecraft:raid_trigger)
- - [minecraft:rail_movement](#minecraft:rail_movement)
- - [minecraft:rail_sensor](#minecraft:rail_sensor)
- - [minecraft:ravager_blocked](#minecraft:ravager_blocked)
- - [minecraft:rideable](#minecraft:rideable)
- - [minecraft:scaffolding_climber](#minecraft:scaffolding_climber)
- - [minecraft:scale](#minecraft:scale)
- - [minecraft:scale_by_age](#minecraft:scale_by_age)
- - [minecraft:scheduler](#minecraft:scheduler)
- - [minecraft:shareables](#minecraft:shareables)
- - [minecraft:shooter](#minecraft:shooter)
- - [minecraft:sittable](#minecraft:sittable)
- - [minecraft:skin_id](#minecraft:skin_id)
- - [minecraft:spawn_entity](#minecraft:spawn_entity)
- - [minecraft:spell_effects](#minecraft:spell_effects)
- - [minecraft:strength](#minecraft:strength)
- - [minecraft:tameable](#minecraft:tameable)
- - [minecraft:tamemount](#minecraft:tamemount)
- - [minecraft:target_nearby_sensor](#minecraft:target_nearby_sensor)
- - [minecraft:teleport](#minecraft:teleport)
- - [minecraft:timer](#minecraft:timer)
- - [minecraft:trade_resupply](#minecraft:trade_resupply)
- - [minecraft:trade_table](#minecraft:trade_table)
- - [minecraft:trail](#minecraft:trail)
- - [minecraft:transformation](#minecraft:transformation)
- - [minecraft:trust](#minecraft:trust)
- - [minecraft:trusting](#minecraft:trusting)
- - [minecraft:type_family](#minecraft:type_family)
- - [minecraft:underwater_movement](#minecraft:underwater_movement)
- - [minecraft:variant](#minecraft:variant)
- - [minecraft:water_movement](#minecraft:water_movement)
+ - [minecraft:addrider](#minecraftaddrider)
+ - [minecraft:ageable](#minecraftageable)
+ - [minecraft:ambient_sound_interval](#minecraftambient_sound_interval)
+ - [minecraft:angry](#minecraftangry)
+ - [minecraft:annotation.break_door](#minecraftannotationbreak_door)
+ - [minecraft:annotation.open_door](#minecraftannotationopen_door)
+ - [minecraft:area_attack](#minecraftarea_attack)
+ - [minecraft:attack](#minecraftattack)
+ - [minecraft:attack_damage](#minecraftattack_damage)
+ - [minecraft:balloonable](#minecraftballoonable)
+ - [minecraft:behavior.avoid_mob_type](#minecraftbehavioravoid_mob_type)
+ - [minecraft:behavior.beg](#minecraftbehaviorbeg)
+ - [minecraft:behavior.break_door](#minecraftbehaviorbreak_door)
+ - [minecraft:behavior.breed](#minecraftbehaviorbreed)
+ - [minecraft:behavior.celebrate](#minecraftbehaviorcelebrate)
+ - [minecraft:behavior.charge_attack](#minecraftbehaviorcharge_attack)
+ - [minecraft:behavior.charge_held_item](#minecraftbehaviorcharge_held_item)
+ - [minecraft:behavior.circle_around_anchor](#minecraftbehaviorcircle_around_anchor)
+ - [minecraft:behavior.controlled_by_player](#minecraftbehaviorcontrolled_by_player)
+ - [minecraft:behavior.defend_trusted_target](#minecraftbehaviordefend_trusted_target)
+ - [minecraft:behavior.defend_village_target](#minecraftbehaviordefend_village_target)
+ - [minecraft:behavior.delayed_attack](#minecraftbehaviordelayed_attack)
+ - [minecraft:behavior.dragonchargeplayer](#minecraftbehaviordragonchargeplayer)
+ - [minecraft:behavior.dragondeath](#minecraftbehaviordragondeath)
+ - [minecraft:behavior.dragonflaming](#minecraftbehaviordragonflaming)
+ - [minecraft:behavior.dragonholdingpattern](#minecraftbehaviordragonholdingpattern)
+ - [minecraft:behavior.dragonlanding](#minecraftbehaviordragonlanding)
+ - [minecraft:behavior.dragonscanning](#minecraftbehaviordragonscanning)
+ - [minecraft:behavior.dragonstrafeplayer](#minecraftbehaviordragonstrafeplayer)
+ - [minecraft:behavior.dragontakeoff](#minecraftbehaviordragontakeoff)
+ - [minecraft:behavior.drink_potion](#minecraftbehaviordrink_potion)
+ - [minecraft:behavior.drop_item_for](#minecraftbehaviordrop_item_for)
+ - [minecraft:behavior.eat_block](#minecraftbehavioreat_block)
+ - [minecraft:behavior.eat_carried_item](#minecraftbehavioreat_carried_item)
+ - [minecraft:behavior.enderman_leave_block](#minecraftbehaviorenderman_leave_block)
+ - [minecraft:behavior.enderman_take_block](#minecraftbehaviorenderman_take_block)
+ - [minecraft:behavior.explore_outskirts](#minecraftbehaviorexplore_outskirts)
+ - [minecraft:behavior.find_cover](#minecraftbehaviorfind_cover)
+ - [minecraft:behavior.find_mount](#minecraftbehaviorfind_mount)
+ - [minecraft:behavior.find_underwater_treasure](#minecraftbehaviorfind_underwater_treasure)
+ - [minecraft:behavior.flee_sun](#minecraftbehaviorflee_sun)
+ - [minecraft:behavior.float](#minecraftbehaviorfloat)
+ - [minecraft:behavior.float_wander](#minecraftbehaviorfloat_wander)
+ - [minecraft:behavior.follow_caravan](#minecraftbehaviorfollow_caravan)
+ - [minecraft:behavior.follow_mob](#minecraftbehaviorfollow_mob)
+ - [minecraft:behavior.follow_owner](#minecraftbehaviorfollow_owner)
+ - [minecraft:behavior.follow_parent](#minecraftbehaviorfollow_parent)
+ - [minecraft:behavior.follow_target_captain](#minecraftbehaviorfollow_target_captain)
+ - [minecraft:behavior.go_home](#minecraftbehaviorgo_home)
+ - [minecraft:behavior.guardian_attack](#minecraftbehaviorguardian_attack)
+ - [minecraft:behavior.harvest_farm_block](#minecraftbehaviorharvest_farm_block)
+ - [minecraft:behavior.hide](#minecraftbehaviorhide)
+ - [minecraft:behavior.hold_ground](#minecraftbehaviorhold_ground)
+ - [minecraft:behavior.hurt_by_target](#minecraftbehaviorhurt_by_target)
+ - [minecraft:behavior.inspect_bookshelf](#minecraftbehaviorinspect_bookshelf)
+ - [minecraft:behavior.knockback_roar](#minecraftbehaviorknockback_roar)
+ - [minecraft:behavior.lay_down](#minecraftbehaviorlay_down)
+ - [minecraft:behavior.lay_egg](#minecraftbehaviorlay_egg)
+ - [minecraft:behavior.leap_at_target](#minecraftbehaviorleap_at_target)
+ - [minecraft:behavior.look_at_entity](#minecraftbehaviorlook_at_entity)
+ - [minecraft:behavior.look_at_player](#minecraftbehaviorlook_at_player)
+ - [minecraft:behavior.look_at_target](#minecraftbehaviorlook_at_target)
+ - [minecraft:behavior.look_at_trading_player](#minecraftbehaviorlook_at_trading_player)
+ - [minecraft:behavior.make_love](#minecraftbehaviormake_love)
+ - [minecraft:behavior.melee_attack](#minecraftbehaviormelee_attack)
+ - [minecraft:behavior.mingle](#minecraftbehaviormingle)
+ - [minecraft:behavior.mount_pathing](#minecraftbehaviormount_pathing)
+ - [minecraft:behavior.move_indoors](#minecraftbehaviormove_indoors)
+ - [minecraft:behavior.move_through_village](#minecraftbehaviormove_through_village)
+ - [minecraft:behavior.move_to_block](#minecraftbehaviormove_to_block)
+ - [minecraft:behavior.move_to_land](#minecraftbehaviormove_to_land)
+ - [minecraft:behavior.move_to_random_block](#minecraftbehaviormove_to_random_block)
+ - [minecraft:behavior.move_to_village](#minecraftbehaviormove_to_village)
+ - [minecraft:behavior.move_to_water](#minecraftbehaviormove_to_water)
+ - [minecraft:behavior.move_towards_restriction](#minecraftbehaviormove_towards_restriction)
+ - [minecraft:behavior.move_towards_target](#minecraftbehaviormove_towards_target)
+ - [minecraft:behavior.nap](#minecraftbehaviornap)
+ - [minecraft:behavior.nearest_attackable_target](#minecraftbehaviornearest_attackable_target)
+ - [minecraft:behavior.nearest_prioritized_attackable_target](#minecraftbehaviornearest_prioritized_attackable_target)
+ - [minecraft:behavior.ocelot_sit_on_block](#minecraftbehaviorocelot_sit_on_block)
+ - [minecraft:behavior.ocelotattack](#minecraftbehaviorocelotattack)
+ - [minecraft:behavior.offer_flower](#minecraftbehavioroffer_flower)
+ - [minecraft:behavior.open_door](#minecraftbehavioropen_door)
+ - [minecraft:behavior.owner_hurt_by_target](#minecraftbehaviorowner_hurt_by_target)
+ - [minecraft:behavior.owner_hurt_target](#minecraftbehaviorowner_hurt_target)
+ - [minecraft:behavior.panic](#minecraftbehaviorpanic)
+ - [minecraft:behavior.pet_sleep_with_owner](#minecraftbehaviorpet_sleep_with_owner)
+ - [minecraft:behavior.pickup_items](#minecraftbehaviorpickup_items)
+ - [minecraft:behavior.play](#minecraftbehaviorplay)
+ - [minecraft:behavior.player_ride_tamed](#minecraftbehaviorplayer_ride_tamed)
+ - [minecraft:behavior.raid_garden](#minecraftbehaviorraid_garden)
+ - [minecraft:behavior.random_breach](#minecraftbehaviorrandom_breach)
+ - [minecraft:behavior.random_fly](#minecraftbehaviorrandom_fly)
+ - [minecraft:behavior.random_hover](#minecraftbehaviorrandom_hover)
+ - [minecraft:behavior.random_look_around](#minecraftbehaviorrandom_look_around)
+ - [minecraft:behavior.random_look_around_and_sit](#minecraftbehaviorrandom_look_around_and_sit)
+ - [minecraft:behavior.random_sitting](#minecraftbehaviorrandom_sitting)
+ - [minecraft:behavior.random_stroll](#minecraftbehaviorrandom_stroll)
+ - [minecraft:behavior.random_swim](#minecraftbehaviorrandom_swim)
+ - [minecraft:behavior.ranged_attack](#minecraftbehaviorranged_attack)
+ - [minecraft:behavior.receive_love](#minecraftbehaviorreceive_love)
+ - [minecraft:behavior.restrict_open_door](#minecraftbehaviorrestrict_open_door)
+ - [minecraft:behavior.roll](#minecraftbehaviorroll)
+ - [minecraft:behavior.run_around_like_crazy](#minecraftbehaviorrun_around_like_crazy)
+ - [minecraft:behavior.scared](#minecraftbehaviorscared)
+ - [minecraft:behavior.send_event](#minecraftbehaviorsend_event)
+ - [minecraft:behavior.share_items](#minecraftbehaviorshare_items)
+ - [minecraft:behavior.silverfish_merge_with_stone](#minecraftbehaviorsilverfish_merge_with_stone)
+ - [minecraft:behavior.silverfish_wake_up_friends](#minecraftbehaviorsilverfish_wake_up_friends)
+ - [minecraft:behavior.skeleton_horse_trap](#minecraftbehaviorskeleton_horse_trap)
+ - [minecraft:behavior.sleep](#minecraftbehaviorsleep)
+ - [minecraft:behavior.slime_attack](#minecraftbehaviorslime_attack)
+ - [minecraft:behavior.slime_float](#minecraftbehaviorslime_float)
+ - [minecraft:behavior.slime_keep_on_jumping](#minecraftbehaviorslime_keep_on_jumping)
+ - [minecraft:behavior.slime_random_direction](#minecraftbehaviorslime_random_direction)
+ - [minecraft:behavior.snacking](#minecraftbehaviorsnacking)
+ - [minecraft:behavior.sneeze](#minecraftbehaviorsneeze)
+ - [minecraft:behavior.squid_dive](#minecraftbehaviorsquid_dive)
+ - [minecraft:behavior.squid_flee](#minecraftbehaviorsquid_flee)
+ - [minecraft:behavior.squid_idle](#minecraftbehaviorsquid_idle)
+ - [minecraft:behavior.squid_move_away_from_ground](#minecraftbehaviorsquid_move_away_from_ground)
+ - [minecraft:behavior.squid_out_of_water](#minecraftbehaviorsquid_out_of_water)
+ - [minecraft:behavior.stalk_and_pounce_on_target](#minecraftbehaviorstalk_and_pounce_on_target)
+ - [minecraft:behavior.stay_while_sitting](#minecraftbehaviorstay_while_sitting)
+ - [minecraft:behavior.stomp_attack](#minecraftbehaviorstomp_attack)
+ - [minecraft:behavior.stomp_turtle_egg](#minecraftbehaviorstomp_turtle_egg)
+ - [minecraft:behavior.stroll_towards_village](#minecraftbehaviorstroll_towards_village)
+ - [minecraft:behavior.summon_entity](#minecraftbehaviorsummon_entity)
+ - [minecraft:behavior.swell](#minecraftbehaviorswell)
+ - [minecraft:behavior.swim_idle](#minecraftbehaviorswim_idle)
+ - [minecraft:behavior.swim_wander](#minecraftbehaviorswim_wander)
+ - [minecraft:behavior.swoop_attack](#minecraftbehaviorswoop_attack)
+ - [minecraft:behavior.take_flower](#minecraftbehaviortake_flower)
+ - [minecraft:behavior.target_when_pushed](#minecraftbehaviortarget_when_pushed)
+ - [minecraft:behavior.tempt](#minecraftbehaviortempt)
+ - [minecraft:behavior.trade_interest](#minecraftbehaviortrade_interest)
+ - [minecraft:behavior.trade_with_player](#minecraftbehaviortrade_with_player)
+ - [minecraft:behavior.wither_random_attack_pos_goal](#minecraftbehaviorwither_random_attack_pos_goal)
+ - [minecraft:behavior.wither_target_highest_damage](#minecraftbehaviorwither_target_highest_damage)
+ - [minecraft:behavior.work](#minecraftbehaviorwork)
+ - [minecraft:block_sensor](#minecraftblock_sensor)
+ - [minecraft:boostable](#minecraftboostable)
+ - [minecraft:boss](#minecraftboss)
+ - [minecraft:break_blocks](#minecraftbreak_blocks)
+ - [minecraft:breathable](#minecraftbreathable)
+ - [minecraft:breedable](#minecraftbreedable)
+ - [minecraft:bribeable](#minecraftbribeable)
+ - [minecraft:burns_in_daylight](#minecraftburns_in_daylight)
+ - [minecraft:can_climb](#minecraftcan_climb)
+ - [minecraft:can_fly](#minecraftcan_fly)
+ - [minecraft:can_power_jump](#minecraftcan_power_jump)
+ - [minecraft:collision_box](#minecraftcollision_box)
+ - [minecraft:color](#minecraftcolor)
+ - [minecraft:color2](#minecraftcolor2)
+ - [minecraft:damage_over_time](#minecraftdamage_over_time)
+ - [minecraft:damage_sensor](#minecraftdamage_sensor)
+ - [minecraft:despawn](#minecraftdespawn)
+ - [minecraft:dweller](#minecraftdweller)
+ - [minecraft:economy_trade_table](#minecrafteconomy_trade_table)
+ - [minecraft:entity_sensor](#minecraftentity_sensor)
+ - [minecraft:environment_sensor](#minecraftenvironment_sensor)
+ - [minecraft:equipment](#minecraftequipment)
+ - [minecraft:equippable](#minecraftequippable)
+ - [minecraft:experience_reward](#minecraftexperience_reward)
+ - [minecraft:explode](#minecraftexplode)
+ - [minecraft:fire_immune](#minecraftfire_immune)
+ - [minecraft:flocking](#minecraftflocking)
+ - [minecraft:flying_speed](#minecraftflying_speed)
+ - [minecraft:follow_range](#minecraftfollow_range)
+ - [minecraft:genetics](#minecraftgenetics)
+ - [minecraft:giveable](#minecraftgiveable)
+ - [minecraft:grows_crop](#minecraftgrows_crop)
+ - [minecraft:healable](#minecrafthealable)
+ - [minecraft:health](#minecrafthealth)
+ - [minecraft:hide](#minecrafthide)
+ - [minecraft:home](#minecrafthome)
+ - [minecraft:horse.jump_strength](#minecrafthorsejump_strength)
+ - [minecraft:hurt_on_condition](#minecrafthurt_on_condition)
+ - [minecraft:input_ground_controlled](#minecraftinput_ground_controlled)
+ - [minecraft:insomnia](#minecraftinsomnia)
+ - [minecraft:interact](#minecraftinteract)
+ - [minecraft:inventory](#minecraftinventory)
+ - [minecraft:is_baby](#minecraftis_baby)
+ - [minecraft:is_charged](#minecraftis_charged)
+ - [minecraft:is_chested](#minecraftis_chested)
+ - [minecraft:is_dyeable](#minecraftis_dyeable)
+ - [minecraft:is_hidden_when_invisible](#minecraftis_hidden_when_invisible)
+ - [minecraft:is_ignited](#minecraftis_ignited)
+ - [minecraft:is_illager_captain](#minecraftis_illager_captain)
+ - [minecraft:is_saddled](#minecraftis_saddled)
+ - [minecraft:is_shaking](#minecraftis_shaking)
+ - [minecraft:is_sheared](#minecraftis_sheared)
+ - [minecraft:is_stackable](#minecraftis_stackable)
+ - [minecraft:is_stunned](#minecraftis_stunned)
+ - [minecraft:is_tamed](#minecraftis_tamed)
+ - [minecraft:item_controllable](#minecraftitem_controllable)
+ - [minecraft:item_hopper](#minecraftitem_hopper)
+ - [minecraft:jump.dynamic](#minecraftjumpdynamic)
+ - [minecraft:jump.static](#minecraftjumpstatic)
+ - [minecraft:knockback_resistance](#minecraftknockback_resistance)
+ - [minecraft:leashable](#minecraftleashable)
+ - [minecraft:lookat](#minecraftlookat)
+ - [minecraft:loot](#minecraftloot)
+ - [minecraft:managed_wandering_trader](#minecraftmanaged_wandering_trader)
+ - [minecraft:mark_variant](#minecraftmark_variant)
+ - [minecraft:mob_effect](#minecraftmob_effect)
+ - [minecraft:movement](#minecraftmovement)
+ - [minecraft:movement.amphibious](#minecraftmovementamphibious)
+ - [minecraft:movement.basic](#minecraftmovementbasic)
+ - [minecraft:movement.fly](#minecraftmovementfly)
+ - [minecraft:movement.generic](#minecraftmovementgeneric)
+ - [minecraft:movement.glide](#minecraftmovementglide)
+ - [minecraft:movement.hover](#minecraftmovementhover)
+ - [minecraft:movement.jump](#minecraftmovementjump)
+ - [minecraft:movement.skip](#minecraftmovementskip)
+ - [minecraft:movement.sway](#minecraftmovementsway)
+ - [minecraft:nameable](#minecraftnameable)
+ - [minecraft:navigation.climb](#minecraftnavigationclimb)
+ - [minecraft:navigation.float](#minecraftnavigationfloat)
+ - [minecraft:navigation.fly](#minecraftnavigationfly)
+ - [minecraft:navigation.generic](#minecraftnavigationgeneric)
+ - [minecraft:navigation.hover](#minecraftnavigationhover)
+ - [minecraft:navigation.walk](#minecraftnavigationwalk)
+ - [minecraft:on_death](#minecrafton_death)
+ - [minecraft:on_friendly_anger](#minecrafton_friendly_anger)
+ - [minecraft:on_hurt](#minecrafton_hurt)
+ - [minecraft:on_hurt_by_player](#minecrafton_hurt_by_player)
+ - [minecraft:on_start_landing](#minecrafton_start_landing)
+ - [minecraft:on_start_takeoff](#minecrafton_start_takeoff)
+ - [minecraft:on_target_acquired](#minecrafton_target_acquired)
+ - [minecraft:on_target_escape](#minecrafton_target_escape)
+ - [minecraft:on_wake_with_owner](#minecrafton_wake_with_owner)
+ - [minecraft:peek](#minecraftpeek)
+ - [minecraft:persistent](#minecraftpersistent)
+ - [minecraft:physics](#minecraftphysics)
+ - [minecraft:player.exhaustion](#minecraftplayerexhaustion)
+ - [minecraft:player.experience](#minecraftplayerexperience)
+ - [minecraft:player.level](#minecraftplayerlevel)
+ - [minecraft:player.saturation](#minecraftplayersaturation)
+ - [minecraft:preferred_path](#minecraftpreferred_path)
+ - [minecraft:projectile](#minecraftprojectile)
+ - [minecraft:pushable](#minecraftpushable)
+ - [minecraft:raid_trigger](#minecraftraid_trigger)
+ - [minecraft:rail_movement](#minecraftrail_movement)
+ - [minecraft:rail_sensor](#minecraftrail_sensor)
+ - [minecraft:ravager_blocked](#minecraftravager_blocked)
+ - [minecraft:rideable](#minecraftrideable)
+ - [minecraft:scaffolding_climber](#minecraftscaffolding_climber)
+ - [minecraft:scale](#minecraftscale)
+ - [minecraft:scale_by_age](#minecraftscale_by_age)
+ - [minecraft:scheduler](#minecraftscheduler)
+ - [minecraft:shareables](#minecraftshareables)
+ - [minecraft:shooter](#minecraftshooter)
+ - [minecraft:sittable](#minecraftsittable)
+ - [minecraft:skin_id](#minecraftskin_id)
+ - [minecraft:spawn_entity](#minecraftspawn_entity)
+ - [minecraft:spell_effects](#minecraftspell_effects)
+ - [minecraft:strength](#minecraftstrength)
+ - [minecraft:tameable](#minecrafttameable)
+ - [minecraft:tamemount](#minecrafttamemount)
+ - [minecraft:target_nearby_sensor](#minecrafttarget_nearby_sensor)
+ - [minecraft:teleport](#minecraftteleport)
+ - [minecraft:timer](#minecrafttimer)
+ - [minecraft:trade_resupply](#minecrafttrade_resupply)
+ - [minecraft:trade_table](#minecrafttrade_table)
+ - [minecraft:trail](#minecrafttrail)
+ - [minecraft:transformation](#minecrafttransformation)
+ - [minecraft:trust](#minecrafttrust)
+ - [minecraft:trusting](#minecrafttrusting)
+ - [minecraft:type_family](#minecrafttype_family)
+ - [minecraft:underwater_movement](#minecraftunderwater_movement)
+ - [minecraft:variant](#minecraftvariant)
+ - [minecraft:water_movement](#minecraftwater_movement)
+
 # minecraft:addrider
 ### cave_spider.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:skeleton"
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:skeleton.stray"
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:skeleton.wither"
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:pillager"
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:pillager",
     "spawn_event": "minecraft:spawn_for_raid"
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:evocation_illager",
     "spawn_event": "minecraft:spawn_for_raid"
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:pillager",
     "spawn_event": "minecraft:spawn_as_illager_captain"
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:vindicator"
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:vindicator",
     "spawn_event": "minecraft:spawn_as_illager_captain"
@@ -365,54 +344,27 @@ minecraft:addrider: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:skeleton"
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:skeleton.stray"
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:addrider: {
     "entity_type": "minecraft:skeleton.wither"
 }
 ```
 
-### strider.json
-```JSON
-minecraft:addrider: {
-    "entity_type": "minecraft:zombie_pigman",
-    "spawn_event": "spawn_zombified_piglin_rider"
-}
-```
-
-### strider.json
-```JSON
-minecraft:addrider: {
-    "entity_type": "minecraft:strider",
-    "spawn_event": "spawn_baby"
-}
-```
-
-# minecraft:admire_item
-### piglin.json
-```JSON
-minecraft:admire_item: {
-    "duration": 8,
-    "cooldown_after_being_attacked": 20
-}
-```
-
 # minecraft:ageable
 ### bee.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -432,7 +384,7 @@ minecraft:ageable: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -447,7 +399,7 @@ minecraft:ageable: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -464,7 +416,7 @@ minecraft:ageable: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": "wheat",
@@ -476,7 +428,7 @@ minecraft:ageable: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -491,7 +443,7 @@ minecraft:ageable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -532,7 +484,7 @@ minecraft:ageable: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": "sweet_berries",
@@ -543,22 +495,8 @@ minecraft:ageable: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:ageable: {
-    "duration": 1200,
-    "feed_items": [
-        "crimson_fungus"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -599,7 +537,7 @@ minecraft:ageable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -620,7 +558,7 @@ minecraft:ageable: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": "wheat",
@@ -632,7 +570,7 @@ minecraft:ageable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -673,7 +611,7 @@ minecraft:ageable: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -688,7 +626,7 @@ minecraft:ageable: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": "bamboo",
@@ -700,7 +638,7 @@ minecraft:ageable: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -716,7 +654,7 @@ minecraft:ageable: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "grow_up": {
@@ -727,7 +665,7 @@ minecraft:ageable: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -743,7 +681,7 @@ minecraft:ageable: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": "wheat",
@@ -755,23 +693,9 @@ minecraft:ageable: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
-### strider.json
-```JSON
-minecraft:ageable: {
-    "duration": 1200,
-    "feed_items": [
-        "warped_fungus"
-    ],
     "grow_up": {
         "event": "minecraft:ageable_grow_up",
         "target": "self"
@@ -780,7 +704,7 @@ minecraft:ageable: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -797,7 +721,7 @@ minecraft:ageable: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "grow_up": {
@@ -808,7 +732,7 @@ minecraft:ageable: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "grow_up": {
@@ -819,7 +743,7 @@ minecraft:ageable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "feed_items": [
@@ -843,7 +767,7 @@ minecraft:ageable: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:ageable: {
     "duration": 1200,
     "grow_up": {
@@ -855,7 +779,7 @@ minecraft:ageable: {
 
 # minecraft:ambient_sound_interval
 ### bee.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "event_name": "ambient.pollinate",
     "range": 3.0,
@@ -863,8 +787,7 @@ minecraft:ambient_sound_interval: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "event_name": "ambient",
     "range": 0.0,
@@ -873,7 +796,7 @@ minecraft:ambient_sound_interval: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "value": 2.0,
     "range": 4.0,
@@ -882,21 +805,19 @@ minecraft:ambient_sound_interval: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "event_name": "ambient"
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "event_name": "sleep"
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "event_name": "screech",
     "value": 80,
@@ -905,7 +826,7 @@ minecraft:ambient_sound_interval: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "value": 2.0,
     "range": 4.0,
@@ -914,7 +835,7 @@ minecraft:ambient_sound_interval: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "value": 4.0,
     "range": 8.0,
@@ -923,7 +844,7 @@ minecraft:ambient_sound_interval: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "value": 2.0,
     "range": 4.0,
@@ -932,7 +853,7 @@ minecraft:ambient_sound_interval: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:ambient_sound_interval: {
     "value": 2.0,
     "range": 4.0,
@@ -942,7 +863,7 @@ minecraft:ambient_sound_interval: {
 
 # minecraft:angry
 ### bee.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 25,
     "broadcastAnger": true,
@@ -960,7 +881,7 @@ minecraft:angry: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 10,
     "duration_delta": 3,
@@ -972,7 +893,7 @@ minecraft:angry: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 25,
     "broadcast_anger": true,
@@ -985,7 +906,7 @@ minecraft:angry: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 25,
     "calm_event": {
@@ -995,26 +916,8 @@ minecraft:angry: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:angry: {
-    "duration": 10,
-    "broadcast_anger": true,
-    "broadcast_range": 16,
-    "calm_event": {
-        "event": "become_calm_event",
-        "target": "self"
-    },
-    "angry_sound": "angry",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
 ### llama.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 4,
     "broadcast_anger": false,
@@ -1025,8 +928,7 @@ minecraft:angry: {
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:angry: {
     "duration": -1,
     "broadcast_anger": false,
@@ -1037,8 +939,7 @@ minecraft:angry: {
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 10,
     "calm_event": {
@@ -1049,7 +950,7 @@ minecraft:angry: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 500,
     "broadcast_anger": true,
@@ -1066,8 +967,7 @@ minecraft:angry: {
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 1,
     "broadcast_anger": true,
@@ -1084,44 +984,17 @@ minecraft:angry: {
 }
 ```
 
-### piglin.json
-```JSON
+### pillager.json
+```json
 minecraft:angry: {
-    "duration": 30,
+    "duration": -1,
     "broadcast_anger": true,
-    "broadcast_anger_on_attack": true,
-    "broadcast_anger_on_being_attacked": true,
-    "broadcast_range": 16,
-    "calm_event": {
-        "event": "become_calm_event",
-        "target": "self"
-    },
-    "filters": {
-        "all_of": [
-            {
-                "test": "is_family",
-                "subject": "other",
-                "operator": "!=",
-                "value": "piglin"
-            },
-            {
-                "test": "has_component",
-                "subject": "self",
-                "operator": "!=",
-                "value": "minecraft:attack_cooldown"
-            }
-        ]
-    },
-    "angry_sound": "angry",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
+    "broadcast_range": 8
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 1,
     "broadcast_anger": true,
@@ -1133,8 +1006,7 @@ minecraft:angry: {
 }
 ```
 
-### polar_bear.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 500,
     "broadcast_anger": false,
@@ -1147,7 +1019,7 @@ minecraft:angry: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:angry: {
     "duration": -1,
     "broadcast_anger": true,
@@ -1160,7 +1032,7 @@ minecraft:angry: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 10,
     "duration_delta": 3,
@@ -1172,7 +1044,7 @@ minecraft:angry: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:angry: {
     "duration": -1,
     "broadcast_anger": false,
@@ -1184,7 +1056,7 @@ minecraft:angry: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 5,
     "broadcastAnger": true,
@@ -1205,7 +1077,7 @@ minecraft:angry: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 25,
     "broadcast_anger": true,
@@ -1218,7 +1090,7 @@ minecraft:angry: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:angry: {
     "duration": 25,
     "broadcast_anger": true,
@@ -1232,17 +1104,17 @@ minecraft:angry: {
 
 # minecraft:annotation.break_door
 ### drowned.json
-```JSON
+```json
 minecraft:annotation.break_door: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:annotation.break_door: {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:annotation.break_door: {
     "break_time": 30,
     "min_difficulty": "normal"
@@ -1250,39 +1122,29 @@ minecraft:annotation.break_door: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:annotation.break_door: {}
 ```
 
 ### zombie_villager.json
-```JSON
-minecraft:annotation.break_door: {}
-```
-
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:annotation.break_door: {}
 ```
 
 # minecraft:annotation.open_door
-### piglin.json
-```JSON
-minecraft:annotation.open_door: {}
-```
-
 ### villager.json
-```JSON
+```json
 minecraft:annotation.open_door: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:annotation.open_door: {}
 ```
 
 # minecraft:area_attack
 ### pufferfish.json
-```JSON
+```json
 minecraft:area_attack: {
     "damage_range": 0.2,
     "damage_per_tick": 2,
@@ -1306,14 +1168,13 @@ minecraft:area_attack: {
 
 # minecraft:attack
 ### bee.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2,
     "effect_name": "poison",
@@ -1321,8 +1182,7 @@ minecraft:attack: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2,
     "effect_name": "poison",
@@ -1331,14 +1191,14 @@ minecraft:attack: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 6
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2,
     "effect_name": "poison",
@@ -1346,8 +1206,7 @@ minecraft:attack: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2,
     "effect_name": "poison",
@@ -1355,8 +1214,7 @@ minecraft:attack: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2,
     "effect_name": "poison",
@@ -1365,87 +1223,70 @@ minecraft:attack: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 5
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 7
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 5
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:attack: {
-    "damage": 0.5
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:attack: {
-    "damage": [
-        3,
-        9
-    ]
-}
-```
-
 ### husk.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3,
     "effect_name": "hunger",
@@ -1454,7 +1295,7 @@ minecraft:attack: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:attack: {
     "damage": {
         "range_min": 7,
@@ -1464,133 +1305,121 @@ minecraft:attack: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 6
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 4
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2.0
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 6.0
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 6
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:attack: {
-    "damage": 5
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 1
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 6.0
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 12.0
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 1
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 4
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 0
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 2
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3,
     "effect_name": "slowness",
@@ -1599,21 +1428,21 @@ minecraft:attack: {
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 8
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 4,
     "effect_name": "wither",
@@ -1622,103 +1451,56 @@ minecraft:attack: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
-### wolf.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 4
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:attack: {
-    "damage": 1
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:attack: {
-    "damage": [
-        3,
-        8
-    ]
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 5
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:attack: {
     "damage": 3
 }
 ```
 
-# minecraft:attack_cooldown
-### hoglin.json
-```JSON
-minecraft:attack_cooldown: {
-    "attack_cooldown_time": [
-        10.0,
-        15.0
-    ],
-    "attack_cooldown_complete_event": {
-        "event": "attack_cooldown_complete_event",
-        "target": "self"
-    }
-}
-```
-
-### piglin.json
-```JSON
-minecraft:attack_cooldown: {
-    "attack_cooldown_time": [
-        30.0,
-        120.0
-    ],
-    "attack_cooldown_complete_event": {
-        "event": "attack_cooldown_complete_event",
-        "target": "self"
-    }
-}
-```
-
 # minecraft:attack_damage
 ### cat.json
-```JSON
+```json
 minecraft:attack_damage: {
     "value": 4
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:attack_damage: {
     "value": 4
 }
@@ -1726,184 +1508,101 @@ minecraft:attack_damage: {
 
 # minecraft:balloonable
 ### chicken.json
-```JSON
-minecraft:balloonable: {
-    "mass": 0.5
-}
-```
-
-### cow.json
-```JSON
-minecraft:balloonable: {}
-```
-
-### donkey.json
-```JSON
-minecraft:balloonable: {}
-```
-
-### fox.json
-```JSON
+```json
 minecraft:balloonable: {
     "mass": 0.6
 }
 ```
 
+### cow.json
+```json
+minecraft:balloonable: {}
+```
+
+### donkey.json
+```json
+minecraft:balloonable: {}
+```
+
+### fox.json
+```json
+minecraft:balloonable: {}
+```
+
 ### horse.json
-```JSON
+```json
 minecraft:balloonable: {}
 ```
 
 ### iron_golem.json
-```JSON
-minecraft:balloonable: {
-    "mass": 2.0
-}
+```json
+minecraft:balloonable: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:balloonable: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:balloonable: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:balloonable: {}
 ```
 
 ### panda.json
-```JSON
-minecraft:balloonable: {
-    "mass": 1.5
-}
+```json
+minecraft:balloonable: {}
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:balloonable: {
     "mass": 0.75
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:balloonable: {
-    "mass": 0.4
+    "mass": 0.75
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:balloonable: {
     "mass": 0.75
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:balloonable: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
+minecraft:balloonable: {}
+```
+
+### squid.json
+```json
 minecraft:balloonable: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:balloonable: {}
-```
-
-# minecraft:barter
-### piglin.json
-```JSON
-minecraft:barter: {
-    "barter_table": "loot_tables/entities/piglin_barter.json",
-    "cooldown_after_being_attacked": 20
-}
-```
-
-# minecraft:behavior.admire_item
-### piglin.json
-```JSON
-minecraft:behavior.admire_item: {
-    "priority": 2,
-    "admire_item_sound": "admire",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    },
-    "on_admire_item_start": {
-        "event": "admire_item_started_event",
-        "target": "self"
-    },
-    "on_admire_item_stop": {
-        "event": "admire_item_stopped_event",
-        "target": "self"
-    }
-}
-```
-
-# minecraft:behavior.avoid_block
-### hoglin.json
-```JSON
-minecraft:behavior.avoid_block: {
-    "priority": 1,
-    "tick_interval": 5,
-    "search_range": 8,
-    "search_height": 4,
-    "walk_speed_modifier": 1,
-    "sprint_speed_modifier": 1,
-    "avoid_block_sound": "retreat",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    },
-    "target_selection_method": "nearest",
-    "target_blocks": [
-        "minecraft:warped_fungus",
-        "minecraft:portal"
-    ],
-    "on_escape": [
-        {
-            "event": "escaped_event",
-            "target": "self"
-        }
-    ]
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.avoid_block: {
-    "priority": 9,
-    "tick_interval": 5,
-    "search_range": 8,
-    "search_height": 4,
-    "sprint_speed_modifier": 1.1,
-    "target_selection_method": "nearest",
-    "target_blocks": [
-        "minecraft:soul_fire",
-        "minecraft:soul_lantern",
-        "minecraft:soul_torch",
-        "minecraft:item.soul_campfire"
-    ],
-    "avoid_block_sound": "retreat",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
 ```
 
 # minecraft:behavior.avoid_mob_type
 ### cat.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 6,
     "entity_types": [
@@ -1922,7 +1621,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 3,
     "entity_types": [
@@ -1942,6 +1641,7 @@ minecraft:behavior.avoid_mob_type: {
                 ]
             },
             "max_dist": 6,
+            "walk_speed_multiplier": 1,
             "sprint_speed_multiplier": 1.2
         }
     ]
@@ -1949,7 +1649,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 2,
     "entity_types": [
@@ -1978,7 +1678,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 5,
     "entity_types": [
@@ -1997,7 +1697,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 1,
     "entity_types": [
@@ -2016,7 +1716,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 5,
     "entity_types": [
@@ -2065,7 +1765,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 1,
     "entity_types": [
@@ -2083,42 +1783,8 @@ minecraft:behavior.avoid_mob_type: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:behavior.avoid_mob_type: {
-    "priority": 0,
-    "remove_target": true,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_target",
-                        "subject": "other",
-                        "value": true
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "piglin"
-                    }
-                ]
-            },
-            "check_if_outnumbered": true,
-            "max_dist": 10,
-            "sprint_speed_multiplier": 1.2
-        }
-    ],
-    "avoid_mob_sound": "retreat",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 5,
     "entity_types": [
@@ -2137,7 +1803,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 5,
     "max_dist": 16,
@@ -2151,6 +1817,7 @@ minecraft:behavior.avoid_mob_type: {
                 "value": "panda"
             },
             "max_dist": 16,
+            "walk_speed_multiplier": 1.0,
             "sprint_speed_multiplier": 1.5
         }
     ]
@@ -2158,7 +1825,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 0,
     "max_dist": 16.0,
@@ -2179,75 +1846,16 @@ minecraft:behavior.avoid_mob_type: {
                     }
                 ]
             },
-            "max_dist": 16
+            "max_dist": 16,
+            "walk_speed_multiplier": 1,
+            "sprint_speed_multiplier": 1
         }
     ]
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:behavior.avoid_mob_type: {
-    "priority": 4,
-    "remove_target": true,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zombie_pigman"
-                    }
-                ]
-            },
-            "max_dist": 6
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "zoglin"
-                    }
-                ]
-            },
-            "max_dist": 6
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_target",
-                        "subject": "other",
-                        "value": true
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "hoglin"
-                    }
-                ]
-            },
-            "sprint_speed_multiplier": 1.2,
-            "check_if_outnumbered": true
-        }
-    ],
-    "on_escape_event": {
-        "event": "become_calm_event",
-        "target": "self"
-    },
-    "avoid_mob_sound": "retreat",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 4,
     "entity_types": [
@@ -2286,7 +1894,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 1,
     "entity_types": [
@@ -2306,7 +1914,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 4,
     "entity_types": [
@@ -2325,7 +1933,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 4,
     "entity_types": [
@@ -2344,7 +1952,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 1,
     "entity_types": [
@@ -2363,7 +1971,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 3,
     "entity_types": [
@@ -2406,7 +2014,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 4,
     "entity_types": [
@@ -2449,7 +2057,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 2,
     "entity_types": [
@@ -2492,7 +2100,7 @@ minecraft:behavior.avoid_mob_type: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.avoid_mob_type: {
     "priority": 3,
     "entity_types": [
@@ -2511,17 +2119,8 @@ minecraft:behavior.avoid_mob_type: {
 }
 ```
 
-# minecraft:behavior.barter
-### piglin.json
-```JSON
-minecraft:behavior.barter: {
-    "priority": 3
-}
-```
-
 # minecraft:behavior.beg
-### wolf.json
-```JSON
+```json
 minecraft:behavior.beg: {
     "priority": 9,
     "look_distance": 8,
@@ -2546,17 +2145,25 @@ minecraft:behavior.beg: {
 }
 ```
 
+# minecraft:behavior.break_door
+### zombie_villager_v2.json
+```json
+minecraft:behavior.break_door: {
+    "priority": 1
+}
+```
+
 # minecraft:behavior.breed
 ### bee.json
-```JSON
+```json
 minecraft:behavior.breed: {
-    "priority": 4,
+    "priority": 6,
     "speed_multiplier": 1.0
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2564,7 +2171,7 @@ minecraft:behavior.breed: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2572,15 +2179,14 @@ minecraft:behavior.breed: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-### cow.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2588,7 +2194,7 @@ minecraft:behavior.breed: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2596,23 +2202,15 @@ minecraft:behavior.breed: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:behavior.breed: {
-    "priority": 3,
-    "speed_multiplier": 0.6
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2620,7 +2218,7 @@ minecraft:behavior.breed: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -2628,15 +2226,14 @@ minecraft:behavior.breed: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2644,7 +2241,7 @@ minecraft:behavior.breed: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2652,15 +2249,14 @@ minecraft:behavior.breed: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
@@ -2668,7 +2264,7 @@ minecraft:behavior.breed: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -2676,15 +2272,14 @@ minecraft:behavior.breed: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 2,
     "speed_multiplier": 0.8
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2692,23 +2287,15 @@ minecraft:behavior.breed: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 3,
     "speed_multiplier": 1.0
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.breed: {
-    "priority": 4,
-    "speed_multiplier": 1.0
-}
-```
-
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2716,7 +2303,7 @@ minecraft:behavior.breed: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.breed: {
     "priority": 2,
     "speed_multiplier": 1.0
@@ -2725,7 +2312,7 @@ minecraft:behavior.breed: {
 
 # minecraft:behavior.celebrate
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.celebrate: {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2746,7 +2333,7 @@ minecraft:behavior.celebrate: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.celebrate: {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2767,7 +2354,7 @@ minecraft:behavior.celebrate: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.celebrate: {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2788,7 +2375,7 @@ minecraft:behavior.celebrate: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.celebrate: {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2809,7 +2396,7 @@ minecraft:behavior.celebrate: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.celebrate: {
     "priority": 5,
     "celebration_sound": "celebrate",
@@ -2831,26 +2418,15 @@ minecraft:behavior.celebrate: {
 
 # minecraft:behavior.charge_attack
 ### vex.json
-```JSON
+```json
 minecraft:behavior.charge_attack: {
-    "priority": 4,
-    "speed_multiplier": 2.0
+    "priority": 4
 }
 ```
 
 # minecraft:behavior.charge_held_item
-### piglin.json
-```JSON
-minecraft:behavior.charge_held_item: {
-    "priority": 3,
-    "items": [
-        "minecraft:arrow"
-    ]
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.charge_held_item: {
     "priority": 3,
     "items": [
@@ -2861,48 +2437,38 @@ minecraft:behavior.charge_held_item: {
 
 # minecraft:behavior.circle_around_anchor
 ### phantom.json
-```JSON
+```json
 minecraft:behavior.circle_around_anchor: {
     "priority": 3,
-    "radius_change": 1.0,
-    "radius_adjustment_chance": 0.004,
-    "height_adjustment_chance": 0.002857,
-    "goal_radius": 1.0,
-    "angle_change": 15.0,
     "radius_range": [
         5.0,
         15.0
+    ],
+    "radius_change_chance": 250,
+    "height_above_target_range": [
+        20.0,
+        40.0
     ],
     "height_offset_range": [
         -4.0,
         5.0
     ],
-    "height_above_target_range": [
-        20.0,
-        40.0
-    ]
+    "height_change_chance": 350,
+    "goal_radius": 1.0
 }
 ```
 
 # minecraft:behavior.controlled_by_player
 ### pig.json
-```JSON
+```json
 minecraft:behavior.controlled_by_player: {
     "priority": 0
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.controlled_by_player: {
-    "priority": 0,
-    "mount_speed_multiplier": 1.45
-}
-```
-
 # minecraft:behavior.defend_trusted_target
 ### fox.json
-```JSON
+```json
 minecraft:behavior.defend_trusted_target: {
     "priority": 0,
     "within_radius": 25,
@@ -2918,105 +2484,77 @@ minecraft:behavior.defend_trusted_target: {
 
 # minecraft:behavior.defend_village_target
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.defend_village_target: {
-    "priority": 1,
-    "must_reach": true,
-    "attack_chance": 0.05,
-    "entity_types": {
-        "filters": {
-            "any_of": [
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "mob"
-                },
-                {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "player"
-                }
-            ]
-        }
-    }
+    "priority": 1
 }
 ```
 
 # minecraft:behavior.delayed_attack
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.delayed_attack: {
     "priority": 4,
-    "attack_once": false,
-    "track_target": true,
-    "require_complete_path": false,
-    "random_stop_interval": 0,
     "reach_multiplier": 1.5,
-    "speed_multiplier": 1.0,
     "attack_duration": 0.75,
-    "hit_delay_pct": 0.5
+    "hit_delay_pct": 0.5,
+    "track_target": true,
+    "sound_event": "attack.strong"
 }
 ```
 
 # minecraft:behavior.dragonchargeplayer
 ### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragonchargeplayer: {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.dragondeath
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragondeath: {
     "priority": 0
 }
 ```
 
 # minecraft:behavior.dragonflaming
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragonflaming: {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.dragonholdingpattern
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragonholdingpattern: {
     "priority": 3
 }
 ```
 
 # minecraft:behavior.dragonlanding
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragonlanding: {
     "priority": 0
 }
 ```
 
 # minecraft:behavior.dragonscanning
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragonscanning: {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.dragonstrafeplayer
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragonstrafeplayer: {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.dragontakeoff
-### ender_dragon.json
-```JSON
+```json
 minecraft:behavior.dragontakeoff: {
     "priority": 0
 }
@@ -3024,7 +2562,7 @@ minecraft:behavior.dragontakeoff: {
 
 # minecraft:behavior.drink_potion
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.drink_potion: {
     "priority": 1,
     "speed_modifier": -0.2,
@@ -3123,7 +2661,7 @@ minecraft:behavior.drink_potion: {
 
 # minecraft:behavior.drop_item_for
 ### cat.json
-```JSON
+```json
 minecraft:behavior.drop_item_for: {
     "priority": 1,
     "speed_multiplier": 1.0,
@@ -3158,21 +2696,9 @@ minecraft:behavior.drop_item_for: {
 
 # minecraft:behavior.eat_block
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.eat_block: {
     "priority": 6,
-    "success_chance": "query.is_baby ? 0.02 : 0.001",
-    "time_until_eat": 1.8,
-    "eat_and_replace_block_pairs": [
-        {
-            "eat_block": "grass",
-            "replace_block": "dirt"
-        },
-        {
-            "eat_block": "tallgrass",
-            "replace_block": "air"
-        }
-    ],
     "on_eat": {
         "event": "minecraft:on_eat_block",
         "target": "self"
@@ -3182,7 +2708,7 @@ minecraft:behavior.eat_block: {
 
 # minecraft:behavior.eat_carried_item
 ### fox.json
-```JSON
+```json
 minecraft:behavior.eat_carried_item: {
     "priority": 12,
     "delay_before_eating": 28
@@ -3191,113 +2717,26 @@ minecraft:behavior.eat_carried_item: {
 
 # minecraft:behavior.enderman_leave_block
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.enderman_leave_block: {
     "priority": 10
 }
 ```
 
 # minecraft:behavior.enderman_take_block
-### enderman.json
-```JSON
+```json
 minecraft:behavior.enderman_take_block: {
     "priority": 11
 }
 ```
 
-# minecraft:behavior.equip_item
-### drowned.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### fox.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 2
-}
-```
-
-### husk.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 2
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 5
-}
-```
-
-### pillager.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### skeleton.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### stray.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### wither_skeleton.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### zombie.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 2
-}
-```
-
-### zombie_pigman.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
-### zombie_villager_v2.json
-```JSON
-minecraft:behavior.equip_item: {
-    "priority": 3
-}
-```
-
 # minecraft:behavior.explore_outskirts
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.explore_outskirts: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.explore_outskirts: {
     "priority": 9,
     "explore_dist": 6.0,
@@ -3308,7 +2747,7 @@ minecraft:behavior.explore_outskirts: {
 
 # minecraft:behavior.find_cover
 ### fox.json
-```JSON
+```json
 minecraft:behavior.find_cover: {
     "priority": 0,
     "speed_multiplier": 1,
@@ -3316,8 +2755,7 @@ minecraft:behavior.find_cover: {
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:behavior.find_cover: {
     "priority": 9,
     "speed_multiplier": 1,
@@ -3327,7 +2765,7 @@ minecraft:behavior.find_cover: {
 
 # minecraft:behavior.find_mount
 ### husk.json
-```JSON
+```json
 minecraft:behavior.find_mount: {
     "priority": 1,
     "within_radius": 16
@@ -3335,7 +2773,7 @@ minecraft:behavior.find_mount: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.find_mount: {
     "priority": 3,
     "within_radius": 16,
@@ -3346,18 +2784,8 @@ minecraft:behavior.find_mount: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:behavior.find_mount: {
-    "priority": 1,
-    "within_radius": 16,
-    "start_delay": 15,
-    "max_failed_attempts": 20
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.find_mount: {
     "priority": 1,
     "within_radius": 16,
@@ -3367,7 +2795,7 @@ minecraft:behavior.find_mount: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.find_mount: {
     "priority": 1,
     "within_radius": 16
@@ -3375,7 +2803,7 @@ minecraft:behavior.find_mount: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.find_mount: {
     "priority": 1,
     "within_radius": 16
@@ -3384,7 +2812,7 @@ minecraft:behavior.find_mount: {
 
 # minecraft:behavior.find_underwater_treasure
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.find_underwater_treasure: {
     "priority": 2,
     "speed_multiplier": 2.0,
@@ -3395,7 +2823,7 @@ minecraft:behavior.find_underwater_treasure: {
 
 # minecraft:behavior.flee_sun
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.flee_sun: {
     "priority": 2,
     "speed_multiplier": 1
@@ -3403,7 +2831,7 @@ minecraft:behavior.flee_sun: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.flee_sun: {
     "priority": 2,
     "speed_multiplier": 1
@@ -3411,7 +2839,7 @@ minecraft:behavior.flee_sun: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.flee_sun: {
     "priority": 2,
     "speed_multiplier": 1
@@ -3419,7 +2847,7 @@ minecraft:behavior.flee_sun: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.flee_sun: {
     "priority": 4,
     "speed_multiplier": 1
@@ -3427,7 +2855,7 @@ minecraft:behavior.flee_sun: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.flee_sun: {
     "priority": 4,
     "speed_multiplier": 1
@@ -3436,259 +2864,259 @@ minecraft:behavior.flee_sun: {
 
 # minecraft:behavior.float
 ### bat.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:behavior.float: {
-    "priority": 19
+    "priority": 20
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 1
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 2
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 1
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 1
 }
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 1
 }
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.float: {
     "priority": 0
 }
@@ -3696,7 +3124,7 @@ minecraft:behavior.float: {
 
 # minecraft:behavior.float_wander
 ### bat.json
-```JSON
+```json
 minecraft:behavior.float_wander: {
     "xz_dist": 10,
     "y_dist": 7,
@@ -3710,7 +3138,7 @@ minecraft:behavior.float_wander: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:behavior.float_wander: {
     "priority": 2,
     "must_reach": true
@@ -3719,7 +3147,7 @@ minecraft:behavior.float_wander: {
 
 # minecraft:behavior.follow_caravan
 ### llama.json
-```JSON
+```json
 minecraft:behavior.follow_caravan: {
     "priority": 3,
     "speed_multiplier": 2.1,
@@ -3736,7 +3164,7 @@ minecraft:behavior.follow_caravan: {
 
 # minecraft:behavior.follow_mob
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.follow_mob: {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -3747,7 +3175,7 @@ minecraft:behavior.follow_mob: {
 
 # minecraft:behavior.follow_owner
 ### cat.json
-```JSON
+```json
 minecraft:behavior.follow_owner: {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -3757,7 +3185,7 @@ minecraft:behavior.follow_owner: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.follow_owner: {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -3767,7 +3195,7 @@ minecraft:behavior.follow_owner: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.follow_owner: {
     "priority": 2,
     "speed_multiplier": 1.0,
@@ -3777,7 +3205,7 @@ minecraft:behavior.follow_owner: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.follow_owner: {
     "priority": 6,
     "speed_multiplier": 1.0,
@@ -3788,15 +3216,15 @@ minecraft:behavior.follow_owner: {
 
 # minecraft:behavior.follow_parent
 ### bee.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
-    "priority": 11,
+    "priority": 8,
     "speed_multiplier": 1.1
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 5,
     "speed_multiplier": 1.1
@@ -3804,15 +3232,14 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 5,
     "speed_multiplier": 1.1
 }
 ```
 
-### cow.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3820,7 +3247,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.1
@@ -3828,7 +3255,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3836,23 +3263,15 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 9,
     "speed_multiplier": 1.1
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:behavior.follow_parent: {
-    "priority": 6,
-    "speed_multiplier": 1
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3860,7 +3279,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 5,
     "speed_multiplier": 1.0
@@ -3868,15 +3287,14 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 5,
     "speed_multiplier": 1.1
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3884,7 +3302,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3892,7 +3310,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 13,
     "speed_multiplier": 1.1
@@ -3900,7 +3318,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3908,7 +3326,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.25
@@ -3916,7 +3334,7 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3924,15 +3342,14 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 5,
     "speed_multiplier": 1.1
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 6,
     "speed_multiplier": 1.1
@@ -3940,23 +3357,15 @@ minecraft:behavior.follow_parent: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.0
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.follow_parent: {
-    "priority": 6,
-    "speed_multiplier": 1.1
-}
-```
-
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.follow_parent: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -3965,7 +3374,7 @@ minecraft:behavior.follow_parent: {
 
 # minecraft:behavior.follow_target_captain
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.follow_target_captain: {
     "priority": 5,
     "speed_multiplier": 0.8,
@@ -3975,7 +3384,7 @@ minecraft:behavior.follow_target_captain: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.follow_target_captain: {
     "priority": 5,
     "speed_multiplier": 0.8,
@@ -3986,9 +3395,9 @@ minecraft:behavior.follow_target_captain: {
 
 # minecraft:behavior.go_home
 ### bee.json
-```JSON
+```json
 minecraft:behavior.go_home: {
-    "priority": 4,
+    "priority": 5,
     "speed_multiplier": 1.0,
     "interval": 1,
     "goal_radius": 1.2,
@@ -4040,7 +3449,7 @@ minecraft:behavior.go_home: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.go_home: {
     "priority": 1,
     "speed_multiplier": 1.0,
@@ -4055,21 +3464,20 @@ minecraft:behavior.go_home: {
 
 # minecraft:behavior.guardian_attack
 ### elder_guardian.json
-```JSON
+```json
 minecraft:behavior.guardian_attack: {
     "priority": 4
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:behavior.guardian_attack: {
     "priority": 4
 }
 ```
 
-### guardian.json
-```JSON
+```json
 minecraft:behavior.guardian_attack: {
     "priority": 4
 }
@@ -4077,7 +3485,7 @@ minecraft:behavior.guardian_attack: {
 
 # minecraft:behavior.harvest_farm_block
 ### villager.json
-```JSON
+```json
 minecraft:behavior.harvest_farm_block: {
     "priority": 9,
     "speed_multiplier": 0.5
@@ -4085,12 +3493,11 @@ minecraft:behavior.harvest_farm_block: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.harvest_farm_block: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.harvest_farm_block: {
     "priority": 8,
     "speed_multiplier": 0.5
@@ -4098,8 +3505,7 @@ minecraft:behavior.harvest_farm_block: {
 ```
 
 # minecraft:behavior.hide
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.hide: {
     "priority": 0,
     "speed_multiplier": 0.8,
@@ -4110,28 +3516,35 @@ minecraft:behavior.hide: {
 
 # minecraft:behavior.hold_ground
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.hold_ground: {
     "priority": 5,
     "min_radius": 10,
     "broadcast": true,
     "broadcast_range": 8,
     "within_radius_event": {
-        "event": "minecraft:ranged_mode",
+        "event": "minecraft:synchronized_ranged_mode",
+        "target": "self"
+    },
+    "hurt_by_target_event": {
+        "event": "minecraft:synchronized_ranged_mode",
         "target": "self"
     }
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:behavior.hold_ground: {
     "priority": 6,
     "min_radius": 10,
     "broadcast": true,
     "broadcast_range": 8,
     "within_radius_event": {
-        "event": "minecraft:ranged_mode",
+        "event": "minecraft:synchronized_ranged_mode",
+        "target": "self"
+    },
+    "hurt_by_target_event": {
+        "event": "minecraft:synchronized_ranged_mode",
         "target": "self"
     }
 }
@@ -4139,84 +3552,77 @@ minecraft:behavior.hold_ground: {
 
 # minecraft:behavior.hurt_by_target
 ### bee.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
-    "priority": 1
+    "priority": 2
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 2
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 3
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:behavior.hurt_by_target: {
-    "priority": 2
-}
-```
-
 ### husk.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 2,
     "entity_types": {
@@ -4230,8 +3636,7 @@ minecraft:behavior.hurt_by_target: {
 }
 ```
 
-### iron_golem.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 2,
     "entity_types": {
@@ -4256,7 +3661,7 @@ minecraft:behavior.hurt_by_target: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1,
     "hurt_owner": true
@@ -4264,21 +3669,14 @@ minecraft:behavior.hurt_by_target: {
 ```
 
 ### panda.json
-```JSON
-minecraft:behavior.hurt_by_target: {
-    "priority": 1
-}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1,
     "entity_types": {
@@ -4294,14 +3692,14 @@ minecraft:behavior.hurt_by_target: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 2,
     "entity_types": {
@@ -4317,14 +3715,14 @@ minecraft:behavior.hurt_by_target: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 2
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1,
     "alert_same_type": true
@@ -4332,105 +3730,98 @@ minecraft:behavior.hurt_by_target: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 2
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 3
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:behavior.hurt_by_target: {
-    "priority": 1
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.hurt_by_target: {
     "priority": 1
 }
@@ -4438,12 +3829,11 @@ minecraft:behavior.hurt_by_target: {
 
 # minecraft:behavior.inspect_bookshelf
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.inspect_bookshelf: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.inspect_bookshelf: {
     "priority": 8,
     "speed_multiplier": 0.6,
@@ -4456,7 +3846,7 @@ minecraft:behavior.inspect_bookshelf: {
 
 # minecraft:behavior.knockback_roar
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.knockback_roar: {
     "priority": 1,
     "duration": 1,
@@ -4485,7 +3875,7 @@ minecraft:behavior.knockback_roar: {
 
 # minecraft:behavior.lay_down
 ### panda.json
-```JSON
+```json
 minecraft:behavior.lay_down: {
     "priority": 5,
     "interval": 400,
@@ -4495,13 +3885,13 @@ minecraft:behavior.lay_down: {
 
 # minecraft:behavior.lay_egg
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.lay_egg: {
     "priority": 1,
     "speed_multiplier": 1.0,
     "search_range": 16,
     "search_height": 4,
-    "goal_radius": 1.5,
+    "goal_radius": 1.0,
     "on_lay": {
         "event": "minecraft:laid_egg",
         "target": "self"
@@ -4511,7 +3901,7 @@ minecraft:behavior.lay_egg: {
 
 # minecraft:behavior.leap_at_target
 ### cat.json
-```JSON
+```json
 minecraft:behavior.leap_at_target: {
     "priority": 3,
     "target_dist": 0.3
@@ -4519,7 +3909,7 @@ minecraft:behavior.leap_at_target: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.leap_at_target: {
     "priority": 4,
     "yd": 0.4,
@@ -4527,8 +3917,7 @@ minecraft:behavior.leap_at_target: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:behavior.leap_at_target: {
     "priority": 4,
     "yd": 0.4,
@@ -4537,7 +3926,7 @@ minecraft:behavior.leap_at_target: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.leap_at_target: {
     "priority": 3,
     "target_dist": 0.3
@@ -4545,7 +3934,7 @@ minecraft:behavior.leap_at_target: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.leap_at_target: {
     "priority": 4,
     "yd": 0.4,
@@ -4554,7 +3943,7 @@ minecraft:behavior.leap_at_target: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.leap_at_target: {
     "priority": 4,
     "target_dist": 0.4
@@ -4563,7 +3952,7 @@ minecraft:behavior.leap_at_target: {
 
 # minecraft:behavior.look_at_entity
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.look_at_entity: {
     "priority": 10,
     "look_distance": 8.0,
@@ -4576,7 +3965,7 @@ minecraft:behavior.look_at_entity: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.look_at_entity: {
     "priority": 10,
     "look_distance": 8,
@@ -4590,7 +3979,7 @@ minecraft:behavior.look_at_entity: {
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:behavior.look_at_entity: {
     "priority": 9,
     "look_distance": 6.0,
@@ -4605,14 +3994,14 @@ minecraft:behavior.look_at_entity: {
 
 # minecraft:behavior.look_at_player
 ### cat.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 9
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4621,7 +4010,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4630,7 +4019,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4639,7 +4028,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 6,
     "look_distance": 8
@@ -4647,7 +4036,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 6
@@ -4655,7 +4044,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4664,16 +4053,16 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 8,
+    "priority": 7,
     "look_distance": 6,
     "probability": 0.02
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 12.0,
@@ -4682,7 +4071,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 8.0,
@@ -4691,7 +4080,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 9,
     "look_distance": 3.0,
@@ -4700,7 +4089,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 14,
     "look_distance": 6.0,
@@ -4709,7 +4098,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 12.0,
@@ -4717,17 +4106,8 @@ minecraft:behavior.look_at_player: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:behavior.look_at_player: {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4736,16 +4116,16 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 8,
+    "priority": 7,
     "look_distance": 6,
     "probability": 0.02
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4754,7 +4134,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4763,7 +4143,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4772,7 +4152,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4780,24 +4160,15 @@ minecraft:behavior.look_at_player: {
 }
 ```
 
-### npc.json
-```JSON
-minecraft:behavior.look_at_player: {
-    "priority": 0,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 9
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 6.0,
@@ -4806,7 +4177,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 1,
     "look_distance": 8.0
@@ -4814,7 +4185,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 6.0,
@@ -4822,24 +4193,16 @@ minecraft:behavior.look_at_player: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:behavior.look_at_player: {
-    "priority": 11,
-    "look_distance": 8
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 9,
+    "priority": 8,
     "look_distance": 8
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 6,
     "target_distance": 6.0,
@@ -4848,14 +4211,14 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 11
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6,
@@ -4865,7 +4228,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 6.0,
@@ -4874,7 +4237,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 1,
     "look_distance": 6.0,
@@ -4883,15 +4246,15 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 7,
+    "priority": 6,
     "look_distance": 8
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4900,7 +4263,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 3,
     "look_distance": 6.0
@@ -4908,7 +4271,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -4917,24 +4280,15 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 7,
+    "priority": 6,
     "look_distance": 8
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.look_at_player: {
-    "priority": 9,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "target_distance": 6.0,
@@ -4943,7 +4297,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 9,
     "look_distance": 6.0,
@@ -4952,7 +4306,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 12,
     "look_distance": 8,
@@ -4961,7 +4315,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 8,
@@ -4970,7 +4324,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 10,
     "look_distance": 8,
@@ -4979,7 +4333,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 8,
@@ -4988,7 +4342,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 5,
     "look_distance": 8.0
@@ -4996,7 +4350,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 6,
     "look_distance": 8
@@ -5004,15 +4358,15 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 7,
+    "priority": 6,
     "look_distance": 8
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 6,
     "target_distance": 6.0,
@@ -5020,26 +4374,17 @@ minecraft:behavior.look_at_player: {
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:behavior.look_at_player: {
-    "priority": 8,
-    "look_distance": 6.0,
-    "probability": 0.02
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 8,
+    "priority": 7,
     "look_distance": 6,
     "probability": 0.02
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 7,
     "look_distance": 6.0,
@@ -5048,7 +4393,7 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
     "priority": 8,
     "look_distance": 6.0,
@@ -5057,18 +4402,18 @@ minecraft:behavior.look_at_player: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 10,
+    "priority": 9,
     "look_distance": 6,
     "probability": 0.02
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.look_at_player: {
-    "priority": 10,
+    "priority": 9,
     "look_distance": 6,
     "probability": 0.02
 }
@@ -5076,7 +4421,7 @@ minecraft:behavior.look_at_player: {
 
 # minecraft:behavior.look_at_target
 ### wither.json
-```JSON
+```json
 minecraft:behavior.look_at_target: {
     "priority": 5
 }
@@ -5084,21 +4429,21 @@ minecraft:behavior.look_at_target: {
 
 # minecraft:behavior.look_at_trading_player
 ### villager.json
-```JSON
+```json
 minecraft:behavior.look_at_trading_player: {
     "priority": 2
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.look_at_trading_player: {
     "priority": 7
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.look_at_trading_player: {
     "priority": 4
 }
@@ -5106,14 +4451,14 @@ minecraft:behavior.look_at_trading_player: {
 
 # minecraft:behavior.make_love
 ### villager.json
-```JSON
+```json
 minecraft:behavior.make_love: {
     "priority": 6
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.make_love: {
     "priority": 5
 }
@@ -5121,11 +4466,30 @@ minecraft:behavior.make_love: {
 
 # minecraft:behavior.melee_attack
 ### bee.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 2,
+    "priority": 3,
+    "target_dist": 1.2,
+    "track_target": false,
     "attack_once": true,
-    "speed_multiplier": 1.4,
+    "reach_multiplier": 2.0,
+    "look_distance": 30,
+    "untrackable_cooldown_delay": 17,
+    "speed_multiplier": 9,
+    "target_tracking": {
+        "refresh_period_min": 4,
+        "refresh_period_max": 11,
+        "backoff": [
+            {
+                "distance_squared_gt": 256,
+                "refresh_period_delta": 50
+            },
+            {
+                "distance_squared_gt": 1024,
+                "refresh_period_delta": 100
+            }
+        ]
+    },
     "on_attack": {
         "event": "countdown_to_perish_event",
         "target": "self"
@@ -5134,35 +4498,38 @@ minecraft:behavior.melee_attack: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 3,
-    "track_target": true,
-    "random_stop_interval": 2
+    "max_dist": 3,
+    "speed_multiplier": 1,
+    "random_stop_interval": 2.0,
+    "track_target": true
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 3,
+    "speed_multiplier": 1.0,
     "track_target": true,
     "random_stop_interval": 100,
     "reach_multiplier": 0.8
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 3,
+    "speed_multiplier": 1.0,
     "track_target": true,
     "reach_multiplier": 1.4
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -5172,7 +4539,7 @@ minecraft:behavior.melee_attack: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 2,
     "track_target": true
@@ -5180,7 +4547,7 @@ minecraft:behavior.melee_attack: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 3,
     "speed_multiplier": 1,
@@ -5190,217 +4557,203 @@ minecraft:behavior.melee_attack: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 2
+    "priority": 2,
+    "speed_multiplier": 1.0,
+    "track_target": false
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 3,
+    "speed_multiplier": 1,
     "track_target": true
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 10,
+    "target_dist": 1.2,
     "track_target": true,
     "require_complete_path": true,
     "reach_multiplier": 1.5
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 1,
+    "target_dist": 1.2,
     "track_target": true,
     "require_complete_path": true,
     "reach_multiplier": 1.5
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 4,
-    "speed_multiplier": 1,
-    "track_target": true,
-    "reach_multiplier": 1.0,
-    "cooldown_time": 0.75
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 4,
-    "speed_multiplier": 1,
-    "track_target": true,
-    "reach_multiplier": 2.5,
-    "cooldown_time": 2
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 3
+    "priority": 3,
+    "speed_multiplier": 1,
+    "track_target": false
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 1,
+    "target_dist": 1.0,
     "track_target": true
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 2,
+    "target_dist": 1.2,
+    "track_target": true,
     "attack_once": true,
-    "track_target": true,
     "reach_multiplier": 1.0
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 2,
+    "target_dist": 1.2,
     "track_target": true,
     "reach_multiplier": 1.0
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 8,
-    "speed_multiplier": 1.0,
-    "track_target": true
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 4,
+    "target_dist": 1.2,
+    "speed_multiplier": 1,
     "track_target": true
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 4,
+    "speed_multiplier": 1.0,
     "track_target": true
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 4,
-    "track_target": true,
-    "speed_multiplier": 1.25
+    "target_dist": 1.2,
+    "speed_multiplier": 1.25,
+    "track_target": true
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 3,
+    "speed_multiplier": 1.0,
     "track_target": true,
     "reach_multiplier": 0.8
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
     "priority": 4,
-    "track_target": true,
-    "speed_multiplier": 1.25
-}
-```
-
-### vindicator.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 3
-}
-```
-
-### wither_skeleton.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 4,
-    "track_target": true,
-    "speed_multiplier": 1.25
-}
-```
-
-### wolf.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 5
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:behavior.melee_attack: {
-    "priority": 4,
-    "speed_multiplier": 1.4,
+    "target_dist": 1.2,
+    "speed_multiplier": 1.25,
     "track_target": true
 }
 ```
 
-### zombie.json
-```JSON
+### vindicator.json
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 3
+    "priority": 3,
+    "speed_multiplier": 1,
+    "track_target": false
+}
+```
+
+### wither_skeleton.json
+```json
+minecraft:behavior.melee_attack: {
+    "priority": 4,
+    "target_dist": 1.2,
+    "speed_multiplier": 1.25,
+    "track_target": true
+}
+```
+
+### wolf.json
+```json
+minecraft:behavior.melee_attack: {
+    "priority": 5,
+    "target_dist": 1.2,
+    "track_target": true,
+    "reach_multiplier": 1.0
+}
+```
+
+### zombie.json
+```json
+minecraft:behavior.melee_attack: {
+    "priority": 3,
+    "speed_multiplier": 1,
+    "track_target": false
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 4,
-    "speed_multiplier": 1.5
+    "priority": 3,
+    "speed_multiplier": 1.5,
+    "track_target": false
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 6
+    "priority": 6,
+    "speed_multiplier": 1,
+    "track_target": false
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.melee_attack: {
-    "priority": 6
+    "priority": 6,
+    "speed_multiplier": 1,
+    "track_target": false
 }
 ```
 
 # minecraft:behavior.mingle
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.mingle: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.mingle: {
     "priority": 7,
     "speed_multiplier": 0.5,
@@ -5413,7 +4766,7 @@ minecraft:behavior.mingle: {
 
 # minecraft:behavior.mount_pathing
 ### cat.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -5423,7 +4776,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -5433,7 +4786,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5443,7 +4796,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5453,7 +4806,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5463,7 +4816,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5473,7 +4826,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.25,
@@ -5483,7 +4836,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -5493,7 +4846,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5503,7 +4856,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5513,7 +4866,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -5523,7 +4876,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 5,
     "speed_multiplier": 1.5,
@@ -5533,7 +4886,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -5543,7 +4896,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -5553,7 +4906,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5563,7 +4916,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5573,7 +4926,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -5583,7 +4936,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -5593,7 +4946,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.25,
@@ -5603,7 +4956,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.5,
@@ -5613,7 +4966,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 2,
     "speed_multiplier": 1.25,
@@ -5623,7 +4976,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -5633,7 +4986,7 @@ minecraft:behavior.mount_pathing: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.mount_pathing: {
     "priority": 5,
     "speed_multiplier": 1.25,
@@ -5644,7 +4997,7 @@ minecraft:behavior.mount_pathing: {
 
 # minecraft:behavior.move_indoors
 ### villager.json
-```JSON
+```json
 minecraft:behavior.move_indoors: {
     "priority": 4,
     "speed_multiplier": 0.8
@@ -5652,7 +5005,7 @@ minecraft:behavior.move_indoors: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.move_indoors: {
     "priority": 6,
     "speed_multiplier": 0.8,
@@ -5662,7 +5015,7 @@ minecraft:behavior.move_indoors: {
 
 # minecraft:behavior.move_through_village
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.move_through_village: {
     "priority": 3,
     "speed_multiplier": 0.6,
@@ -5672,9 +5025,9 @@ minecraft:behavior.move_through_village: {
 
 # minecraft:behavior.move_to_block
 ### bee.json
-```JSON
+```json
 minecraft:behavior.move_to_block: {
-    "priority": 10,
+    "priority": 11,
     "tick_interval": 1,
     "start_chance": 0.5,
     "search_range": 6,
@@ -5706,10 +5059,9 @@ minecraft:behavior.move_to_block: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:behavior.move_to_block: {
-    "priority": 10,
+    "priority": 11,
     "search_range": 16,
     "search_height": 10,
     "tick_interval": 1,
@@ -5729,7 +5081,7 @@ minecraft:behavior.move_to_block: {
 
 # minecraft:behavior.move_to_land
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.move_to_land: {
     "priority": 6,
     "search_range": 16,
@@ -5738,21 +5090,9 @@ minecraft:behavior.move_to_land: {
 }
 ```
 
-# minecraft:behavior.move_to_lava
-### strider.json
-```JSON
-minecraft:behavior.move_to_lava: {
-    "priority": 7,
-    "search_range": 16,
-    "search_height": 10,
-    "goal_radius": 0.9,
-    "search_count": 30
-}
-```
-
 # minecraft:behavior.move_to_random_block
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.move_to_random_block: {
     "priority": 6,
     "speed_multiplier": 0.55,
@@ -5762,7 +5102,7 @@ minecraft:behavior.move_to_random_block: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.move_to_random_block: {
     "priority": 5,
     "speed_multiplier": 0.55,
@@ -5773,7 +5113,7 @@ minecraft:behavior.move_to_random_block: {
 
 # minecraft:behavior.move_to_village
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.move_to_village: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -5781,7 +5121,7 @@ minecraft:behavior.move_to_village: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.move_to_village: {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -5790,7 +5130,7 @@ minecraft:behavior.move_to_village: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.move_to_village: {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -5799,7 +5139,7 @@ minecraft:behavior.move_to_village: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.move_to_village: {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -5808,7 +5148,7 @@ minecraft:behavior.move_to_village: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.move_to_village: {
     "priority": 3,
     "speed_multiplier": 1.2,
@@ -5818,7 +5158,7 @@ minecraft:behavior.move_to_village: {
 
 # minecraft:behavior.move_to_water
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.move_to_water: {
     "priority": 1,
     "search_range": 15,
@@ -5827,7 +5167,7 @@ minecraft:behavior.move_to_water: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.move_to_water: {
     "priority": 4,
     "search_range": 16,
@@ -5837,8 +5177,7 @@ minecraft:behavior.move_to_water: {
 }
 ```
 
-### turtle.json
-```JSON
+```json
 minecraft:behavior.move_to_water: {
     "priority": 1,
     "search_range": 15,
@@ -5849,14 +5188,14 @@ minecraft:behavior.move_to_water: {
 
 # minecraft:behavior.move_towards_restriction
 ### cat.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 7
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 5,
     "speed_multiplier": 1
@@ -5864,7 +5203,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -5876,7 +5215,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 5,
     "speed_multiplier": 1.0,
@@ -5888,7 +5227,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 5,
     "speed_multiplier": 1
@@ -5896,7 +5235,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 4,
     "speed_multiplier": 1
@@ -5904,7 +5243,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 7,
     "speed_multiplier": 0.6
@@ -5912,7 +5251,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 10,
     "speed_multiplier": 0.6
@@ -5920,7 +5259,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 7,
     "speed_multiplier": 0.6
@@ -5928,7 +5267,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 5,
     "speed_multiplier": 1
@@ -5936,14 +5275,14 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
-    "priority": 6
+    "priority": 5
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 7,
     "speed_multiplier": 1
@@ -5951,7 +5290,7 @@ minecraft:behavior.move_towards_restriction: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.move_towards_restriction: {
     "priority": 7,
     "speed_multiplier": 1
@@ -5960,7 +5299,7 @@ minecraft:behavior.move_towards_restriction: {
 
 # minecraft:behavior.move_towards_target
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.move_towards_target: {
     "priority": 2,
     "speed_multiplier": 0.9,
@@ -5970,7 +5309,7 @@ minecraft:behavior.move_towards_target: {
 
 # minecraft:behavior.nap
 ### fox.json
-```JSON
+```json
 minecraft:behavior.nap: {
     "priority": 8,
     "cooldown_min": 2.0,
@@ -5998,7 +5337,7 @@ minecraft:behavior.nap: {
                 "value": true
             },
             {
-                "test": "weather_at_position",
+                "test": "is_weather",
                 "subject": "self",
                 "operator": "!=",
                 "value": "thunderstorm"
@@ -6032,9 +5371,9 @@ minecraft:behavior.nap: {
 
 # minecraft:behavior.nearest_attackable_target
 ### bee.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
-    "priority": 2,
+    "priority": 3,
     "entity_types": [
         {
             "filters": {
@@ -6049,10 +5388,9 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
     "entity_types": [
         {
             "filters": {
@@ -6060,16 +5398,18 @@ minecraft:behavior.nearest_attackable_target: {
                 "subject": "other",
                 "value": "player"
             },
-            "max_dist": 48.0
+            "max_dist": 48
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
+    "attack_interval": 10,
     "reselect_targets": true,
     "within_radius": 16.0,
     "entity_types": [
@@ -6104,11 +5444,9 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
-    "attack_interval": 5,
     "entity_types": [
         {
             "filters": {
@@ -6132,16 +5470,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true,
+    "attack_interval": 5
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
-    "attack_interval": 10,
     "entity_types": [
         {
             "filters": {
@@ -6165,16 +5502,16 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "attack_interval": 10,
+    "must_see": true
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
-    "must_see": true,
-    "must_see_forget_duration": 3.0,
     "entity_types": [
         {
             "filters": {
@@ -6184,19 +5521,18 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true,
+    "must_see_forget_duration": 0.0
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
+    "within_radius": 12,
     "reselect_targets": true,
-    "must_see": true,
-    "within_radius": 12.0,
-    "must_see_forget_duration": 17.0,
-    "persist_time": 0.5,
     "entity_types": [
         {
             "filters": {
@@ -6290,12 +5626,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 20
         }
-    ]
+    ],
+    "must_see": true,
+    "must_see_forget_duration": 17.0,
+    "persist_time": 0.5
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
     "entity_types": [
@@ -6323,10 +5662,9 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 5,
-    "must_see": true,
     "attack_interval": 10,
     "entity_types": [
         {
@@ -6337,16 +5675,16 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 64
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 5,
-    "must_see": true,
-    "within_radius": 16.0,
+    "within_radius": 16,
     "entity_types": [
         {
             "filters": {
@@ -6365,12 +5703,13 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "entity_types": [
@@ -6425,7 +5764,7 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "entity_types": [
@@ -6443,7 +5782,7 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
     "entity_types": [
@@ -6470,8 +5809,7 @@ minecraft:behavior.nearest_attackable_target: {
 }
 ```
 
-### guardian.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
     "entity_types": [
@@ -6494,46 +5832,16 @@ minecraft:behavior.nearest_attackable_target: {
         }
     ],
     "attack_interval_min": 1.0,
-    "must_see": true
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:behavior.nearest_attackable_target: {
-    "priority": 4,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "operator": "!=",
-                        "value": "minecraft:attack_cooldown"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
     "must_see": true
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
+    "within_radius": 25,
     "reselect_targets": true,
-    "within_radius": 25.0,
     "entity_types": [
         {
             "filters": {
@@ -6593,16 +5901,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 35
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 3,
-    "must_reach": true,
-    "must_see": true,
     "entity_types": [
         {
             "filters": {
@@ -6622,12 +5929,14 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "within_default": 10
         }
-    ]
+    ],
+    "must_see": true,
+    "must_reach": true
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "attack_interval": 16,
@@ -6657,7 +5966,7 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "entity_types": [
@@ -6675,9 +5984,10 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
+    "attack_interval": 10,
     "reselect_targets": true,
     "entity_types": [
         {
@@ -6711,14 +6021,11 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
+    "within_radius": 64,
     "reselect_targets": true,
-    "scan_interval": 20,
-    "within_radius": 64.0,
-    "must_see_forget_duration": 0.5,
-    "target_search_height": 80.0,
     "entity_types": [
         {
             "filters": {
@@ -6728,140 +6035,20 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 64
         }
-    ]
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.nearest_attackable_target: {
-    "priority": 7,
-    "within_radius": 16.0,
-    "persist_time": 2.0,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "wither"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "self",
-                        "value": "piglin_hunter"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "hoglin_huntable"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "minecraft:is_baby"
-                    },
-                    {
-                        "test": "has_component",
-                        "subject": "self",
-                        "operator": "!=",
-                        "value": "minecraft:attack_cooldown"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "head",
-                        "operator": "!=",
-                        "value": "golden_helmet"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "torso",
-                        "operator": "!=",
-                        "value": "golden_chestplate"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "leg",
-                        "operator": "!=",
-                        "value": "golden_leggings"
-                    },
-                    {
-                        "test": "has_equipment",
-                        "subject": "other",
-                        "domain": "feet",
-                        "operator": "!=",
-                        "value": "golden_boots"
-                    }
-                ]
-            },
-            "max_dist": 16
-        },
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "has_container_open",
-                        "subject": "other",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
     ],
-    "must_see": true
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.nearest_attackable_target: {
-    "priority": 7,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 16
-        }
-    ]
+    "must_see": false,
+    "must_see_forget_duration": 0.5,
+    "scan_interval": 20,
+    "target_search_height": 80.0
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
-    "reselect_targets": true,
     "within_radius": 16.0,
+    "reselect_targets": true,
     "entity_types": [
         {
             "filters": {
@@ -6903,12 +6090,13 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 4,
     "entity_types": [
@@ -6920,12 +6108,12 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": false
 }
 ```
 
-### polar_bear.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 4,
     "entity_types": [
@@ -6943,11 +6131,8 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
-    "priority": 3,
-    "must_see": true,
-    "within_radius": 16.0,
     "entity_types": [
         {
             "filters": {
@@ -6984,12 +6169,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true,
+    "priority": 3,
+    "within_radius": 16
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 3,
     "entity_types": {
@@ -7005,10 +6193,9 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "attack_interval": 10,
     "entity_types": [
         {
             "filters": {
@@ -7030,17 +6217,17 @@ minecraft:behavior.nearest_attackable_target: {
                     }
                 ]
             },
-            "max_dist": 8
+            "max_dist": 8,
+            "attack_interval": 10
         }
     ]
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
     "reselect_targets": true,
     "entity_types": [
         {
@@ -7077,12 +6264,13 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "entity_types": [
@@ -7114,7 +6302,7 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 1,
     "entity_types": [
@@ -7126,16 +6314,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "within_default": 6
         }
-    ]
+    ],
+    "must_reach": true
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
-    "attack_interval": 5,
     "entity_types": [
         {
             "filters": {
@@ -7159,15 +6346,16 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "attack_interval": 5,
+    "must_see": true
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
     "reselect_targets": true,
     "entity_types": [
         {
@@ -7204,12 +6392,13 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 3,
     "entity_types": [
@@ -7259,11 +6448,11 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
+    "within_radius": 12,
     "must_see": true,
-    "within_radius": 12.0,
     "must_see_forget_duration": 40.0,
     "entity_types": [
         {
@@ -7283,12 +6472,11 @@ minecraft:behavior.nearest_attackable_target: {
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
+    "within_radius": 12,
     "must_see": true,
-    "within_radius": 12.0,
     "must_see_forget_duration": 40.0,
     "entity_types": [
         {
@@ -7341,7 +6529,7 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "entity_types": [
@@ -7373,7 +6561,7 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 3,
     "entity_types": [
@@ -7410,11 +6598,10 @@ minecraft:behavior.nearest_attackable_target: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
     "reselect_targets": true,
-    "must_see": true,
     "entity_types": [
         {
             "filters": {
@@ -7450,16 +6637,17 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 4,
+    "attack_interval": 10,
     "reselect_targets": true,
-    "must_see": true,
     "entity_types": [
         {
             "filters": {
@@ -7524,15 +6712,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
-### wolf.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 5,
-    "must_see": true,
+    "attack_interval": 10,
     "entity_types": [
         {
             "filters": {
@@ -7542,48 +6730,17 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 16
         }
-    ]
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:behavior.nearest_attackable_target: {
-    "priority": 3,
-    "within_radius": 16.0,
-    "entity_types": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "zoglin"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "operator": "!=",
-                        "value": "creeper"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
     ],
     "must_see": true
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
+    "within_radius": 25,
     "reselect_targets": true,
-    "within_radius": 25.0,
-    "must_see_forget_duration": 17.0,
     "entity_types": [
         {
             "filters": {
@@ -7643,15 +6800,16 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 35
         }
-    ]
+    ],
+    "must_see": true,
+    "must_see_forget_duration": 17.0
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
     "reselect_targets": true,
     "entity_types": [
         {
@@ -7712,15 +6870,15 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 35
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.nearest_attackable_target: {
     "priority": 2,
-    "must_see": true,
     "reselect_targets": true,
     "entity_types": [
         {
@@ -7773,13 +6931,14 @@ minecraft:behavior.nearest_attackable_target: {
             },
             "max_dist": 35
         }
-    ]
+    ],
+    "must_see": true
 }
 ```
 
 # minecraft:behavior.nearest_prioritized_attackable_target
 ### fox.json
-```JSON
+```json
 minecraft:behavior.nearest_prioritized_attackable_target: {
     "priority": 6,
     "attack_interval": 2,
@@ -7854,8 +7013,7 @@ minecraft:behavior.nearest_prioritized_attackable_target: {
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:behavior.nearest_prioritized_attackable_target: {
     "priority": 6,
     "attack_interval": 2,
@@ -7932,7 +7090,7 @@ minecraft:behavior.nearest_prioritized_attackable_target: {
 
 # minecraft:behavior.ocelot_sit_on_block
 ### cat.json
-```JSON
+```json
 minecraft:behavior.ocelot_sit_on_block: {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -7940,7 +7098,7 @@ minecraft:behavior.ocelot_sit_on_block: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.ocelot_sit_on_block: {
     "priority": 6,
     "speed_multiplier": 1.0
@@ -7949,42 +7107,28 @@ minecraft:behavior.ocelot_sit_on_block: {
 
 # minecraft:behavior.ocelotattack
 ### cat.json
-```JSON
+```json
 minecraft:behavior.ocelotattack: {
     "priority": 4,
-    "cooldown_time": 1.0,
-    "x_max_rotation": 30.0,
-    "y_max_head_rotation": 30.0,
-    "max_distance": 15.0,
-    "max_sneak_range": 15.0,
-    "max_sprint_range": 4.0,
-    "reach_multiplier": 2.0,
-    "sneak_speed_multiplier": 0.6,
+    "walk_speed_multiplier": 0.8,
     "sprint_speed_multiplier": 1.33,
-    "walk_speed_multiplier": 0.8
+    "sneak_speed_multiplier": 0.6
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.ocelotattack: {
     "priority": 4,
-    "cooldown_time": 1.0,
-    "x_max_rotation": 30.0,
-    "y_max_head_rotation": 30.0,
-    "max_distance": 15.0,
-    "max_sneak_range": 15.0,
-    "max_sprint_range": 4.0,
-    "reach_multiplier": 2.0,
-    "sneak_speed_multiplier": 0.6,
+    "walk_speed_multiplier": 0.8,
     "sprint_speed_multiplier": 1.33,
-    "walk_speed_multiplier": 0.8
+    "sneak_speed_multiplier": 0.6
 }
 ```
 
 # minecraft:behavior.offer_flower
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.offer_flower: {
     "priority": 5
 }
@@ -7992,7 +7136,7 @@ minecraft:behavior.offer_flower: {
 
 # minecraft:behavior.open_door
 ### villager.json
-```JSON
+```json
 minecraft:behavior.open_door: {
     "priority": 6,
     "close_door_after": true
@@ -8000,7 +7144,7 @@ minecraft:behavior.open_door: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.open_door: {
     "priority": 6,
     "close_door_after": true
@@ -8009,15 +7153,14 @@ minecraft:behavior.open_door: {
 
 # minecraft:behavior.owner_hurt_by_target
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.owner_hurt_by_target: {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.owner_hurt_target
-### wolf.json
-```JSON
+```json
 minecraft:behavior.owner_hurt_target: {
     "priority": 2
 }
@@ -8025,16 +7168,15 @@ minecraft:behavior.owner_hurt_target: {
 
 # minecraft:behavior.panic
 ### bee.json
-```JSON
+```json
 minecraft:behavior.panic: {
-    "priority": 1,
+    "priority": 4,
     "speed_multiplier": 1.25,
     "force": true
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -8043,7 +7185,7 @@ minecraft:behavior.panic: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -8051,7 +7193,7 @@ minecraft:behavior.panic: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.5
@@ -8059,7 +7201,7 @@ minecraft:behavior.panic: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -8067,7 +7209,7 @@ minecraft:behavior.panic: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -8075,7 +7217,7 @@ minecraft:behavior.panic: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8083,31 +7225,22 @@ minecraft:behavior.panic: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 2,
     "speed_multiplier": 1.25
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:behavior.panic: {
-    "priority": 1,
-    "speed_multiplier": 1
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 3,
     "speed_multiplier": 1.2
@@ -8115,7 +7248,7 @@ minecraft:behavior.panic: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 4,
     "speed_multiplier": 1.2
@@ -8123,7 +7256,7 @@ minecraft:behavior.panic: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -8131,7 +7264,7 @@ minecraft:behavior.panic: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8139,7 +7272,7 @@ minecraft:behavior.panic: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -8147,23 +7280,21 @@ minecraft:behavior.panic: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 2.5
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -8172,7 +7303,7 @@ minecraft:behavior.panic: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 0,
     "speed_multiplier": 1.25
@@ -8180,23 +7311,15 @@ minecraft:behavior.panic: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 3,
     "speed_multiplier": 1.25
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:behavior.panic: {
-    "priority": 1,
-    "speed_multiplier": 1.1
-}
-```
-
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 2,
     "speed_multiplier": 2.0
@@ -8204,7 +7327,7 @@ minecraft:behavior.panic: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 2.2
@@ -8212,7 +7335,7 @@ minecraft:behavior.panic: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.25
@@ -8220,28 +7343,15 @@ minecraft:behavior.panic: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.2
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.panic: {
-    "priority": 3,
-    "speed_multiplier": 1.1,
-    "panic_sound": "panic",
-    "sound_interval": {
-        "range_min": 1.0,
-        "range_max": 3.0
-    }
-}
-```
-
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 0,
     "prefer_water": true,
@@ -8250,7 +7360,7 @@ minecraft:behavior.panic: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 3,
     "speed_multiplier": 0.6
@@ -8258,7 +7368,7 @@ minecraft:behavior.panic: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 0.6
@@ -8266,7 +7376,7 @@ minecraft:behavior.panic: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 0.6
@@ -8274,7 +7384,7 @@ minecraft:behavior.panic: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.panic: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -8283,7 +7393,7 @@ minecraft:behavior.panic: {
 
 # minecraft:behavior.pet_sleep_with_owner
 ### cat.json
-```JSON
+```json
 minecraft:behavior.pet_sleep_with_owner: {
     "priority": 2,
     "speed_multiplier": 1.2,
@@ -8294,20 +7404,8 @@ minecraft:behavior.pet_sleep_with_owner: {
 ```
 
 # minecraft:behavior.pickup_items
-### drowned.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 6,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
 ### fox.json
-```JSON
+```json
 minecraft:behavior.pickup_items: {
     "priority": 11,
     "max_dist": 3,
@@ -8316,149 +7414,29 @@ minecraft:behavior.pickup_items: {
 }
 ```
 
-### husk.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 6,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 6,
-    "max_dist": 10,
-    "goal_radius": 2,
-    "speed_multiplier": 0.8,
-    "pickup_based_on_chance": false,
-    "can_pickup_any_item": false,
-    "cooldown_after_being_attacked": 20.0
-}
-```
-
-### pillager.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 7,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0
-}
-```
-
-### skeleton.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 5,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-### stray.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 5,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
 ### villager.json
-```JSON
+```json
 minecraft:behavior.pickup_items: {
     "priority": 9,
     "max_dist": 3,
     "goal_radius": 2,
-    "speed_multiplier": 0.5,
-    "can_pickup_to_hand_or_equipment": false
+    "speed_multiplier": 0.5
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.pickup_items: {
     "priority": 4,
     "max_dist": 3,
     "goal_radius": 2,
-    "speed_multiplier": 0.5,
-    "can_pickup_to_hand_or_equipment": false
-}
-```
-
-### wither_skeleton.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 5,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true
-}
-```
-
-### zombie.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 6,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-### zombie_pigman.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 6,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 8,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
-}
-```
-
-### zombie_villager_v2.json
-```JSON
-minecraft:behavior.pickup_items: {
-    "priority": 8,
-    "max_dist": 3,
-    "goal_radius": 2,
-    "speed_multiplier": 1.0,
-    "pickup_based_on_chance": true,
-    "can_pickup_any_item": true
+    "speed_multiplier": 0.5
 }
 ```
 
 # minecraft:behavior.play
 ### villager.json
-```JSON
+```json
 minecraft:behavior.play: {
     "priority": 8,
     "speed_multiplier": 0.32
@@ -8466,7 +7444,7 @@ minecraft:behavior.play: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.play: {
     "priority": 8,
     "speed_multiplier": 0.32
@@ -8475,33 +7453,33 @@ minecraft:behavior.play: {
 
 # minecraft:behavior.player_ride_tamed
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.player_ride_tamed: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.player_ride_tamed: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.player_ride_tamed: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.player_ride_tamed: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.player_ride_tamed: {}
 ```
 
 # minecraft:behavior.raid_garden
 ### fox.json
-```JSON
+```json
 minecraft:behavior.raid_garden: {
     "priority": 12,
     "blocks": [
@@ -8517,7 +7495,7 @@ minecraft:behavior.raid_garden: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.raid_garden: {
     "priority": 5,
     "blocks": [
@@ -8530,7 +7508,7 @@ minecraft:behavior.raid_garden: {
 
 # minecraft:behavior.random_breach
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.random_breach: {
     "priority": 6,
     "interval": 50,
@@ -8541,7 +7519,7 @@ minecraft:behavior.random_breach: {
 
 # minecraft:behavior.random_fly
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.random_fly: {
     "priority": 2,
     "xz_dist": 15,
@@ -8555,7 +7533,7 @@ minecraft:behavior.random_fly: {
 
 # minecraft:behavior.random_hover
 ### bee.json
-```JSON
+```json
 minecraft:behavior.random_hover: {
     "priority": 12,
     "xz_dist": 8,
@@ -8571,238 +7549,217 @@ minecraft:behavior.random_hover: {
 
 # minecraft:behavior.random_look_around
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 6
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 7
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 6
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 7
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 9
+    "priority": 7
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 15
 }
 ```
 
 ### guardian.json
-```JSON
-minecraft:behavior.random_look_around: {
-    "priority": 9
-}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 9
+    "priority": 7
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:behavior.random_look_around: {
-    "priority": 12
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 10
+    "priority": 8
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 7
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 8
+    "priority": 6
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 4
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 7
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 8
-}
-```
-
-### strider.json
-```JSON
-minecraft:behavior.random_look_around: {
-    "priority": 10
+    "priority": 6
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 5,
     "look_distance": 8.0
@@ -8810,64 +7767,57 @@ minecraft:behavior.random_look_around: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 7
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 8
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:behavior.random_look_around: {
-    "priority": 9
+    "priority": 6
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 9
+    "priority": 7
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 8
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
     "priority": 9
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 11
+    "priority": 9
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.random_look_around: {
-    "priority": 11
+    "priority": 9
 }
 ```
 
 # minecraft:behavior.random_look_around_and_sit
 ### fox.json
-```JSON
+```json
 minecraft:behavior.random_look_around_and_sit: {
     "priority": 12,
     "min_look_count": 2,
@@ -8880,7 +7830,7 @@ minecraft:behavior.random_look_around_and_sit: {
 
 # minecraft:behavior.random_sitting
 ### panda.json
-```JSON
+```json
 minecraft:behavior.random_sitting: {
     "priority": 5,
     "start_chance": 0.01,
@@ -8890,8 +7840,7 @@ minecraft:behavior.random_sitting: {
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.random_sitting: {
     "priority": 6,
     "start_chance": 0.02,
@@ -8903,7 +7852,7 @@ minecraft:behavior.random_sitting: {
 
 # minecraft:behavior.random_stroll
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 5,
     "speed_multiplier": 1.0
@@ -8911,7 +7860,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 8,
     "speed_multiplier": 0.8
@@ -8919,7 +7868,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -8927,7 +7876,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 1.0
@@ -8935,7 +7884,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -8943,7 +7892,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 5,
     "speed_multiplier": 1
@@ -8951,7 +7900,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -8959,15 +7908,23 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 7,
+    "priority": 6,
     "speed_multiplier": 1
 }
 ```
 
+### elder_guardian.json
+```json
+minecraft:behavior.random_stroll: {
+    "priority": 7,
+    "speed_multiplier": 0.5
+}
+```
+
 ### enderman.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -8975,7 +7932,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 1
@@ -8983,7 +7940,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 8,
     "speed_multiplier": 0.6
@@ -8991,23 +7948,24 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 13,
     "speed_multiplier": 0.8
 }
 ```
 
-### hoglin.json
-```JSON
+### guardian.json
+```json
 minecraft:behavior.random_stroll: {
     "priority": 7,
-    "speed_multiplier": 0.4
+    "speed_multiplier": 1.0,
+    "interval": 80
 }
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -9015,24 +7973,24 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 7,
+    "priority": 6,
     "speed_multiplier": 1
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
-    "speed_multiplier": 0.6,
+    "speed_multiplier": 1,
     "xz_dist": 16
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -9040,7 +7998,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -9048,7 +8006,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -9056,7 +8014,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 8,
     "speed_multiplier": 0.8
@@ -9064,7 +8022,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 14,
     "speed_multiplier": 0.8
@@ -9072,38 +8030,30 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 7,
     "speed_multiplier": 1.0
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:behavior.random_stroll: {
-    "priority": 10,
-    "speed_multiplier": 0.6
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 8,
+    "priority": 7,
     "speed_multiplier": 1
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 5
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.6,
@@ -9113,15 +8063,14 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 1.0
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.4
@@ -9129,7 +8078,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 7,
     "speed_multiplier": 0.8
@@ -9137,15 +8086,15 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 6,
+    "priority": 5,
     "speed_multiplier": 1
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -9153,7 +8102,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 2,
     "speed_multiplier": 1
@@ -9161,7 +8110,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.8
@@ -9169,23 +8118,15 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 6,
+    "priority": 5,
     "speed_multiplier": 1
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.random_stroll: {
-    "priority": 8,
-    "speed_multiplier": 0.8
-}
-```
-
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 9,
     "interval": 100
@@ -9193,7 +8134,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 11,
     "speed_multiplier": 0.6
@@ -9201,7 +8142,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 10,
     "speed_multiplier": 0.6
@@ -9209,7 +8150,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 9,
     "speed_multiplier": 1
@@ -9217,7 +8158,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 4,
     "speed_multiplier": 1.0
@@ -9225,7 +8166,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 5,
     "speed_multiplier": 1
@@ -9233,39 +8174,31 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 6,
+    "priority": 5,
     "speed_multiplier": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 8,
     "speed_multiplier": 1.0
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:behavior.random_stroll: {
-    "priority": 7,
-    "speed_multiplier": 1.0
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 7,
+    "priority": 6,
     "speed_multiplier": 1
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 6,
     "speed_multiplier": 0.7
@@ -9273,7 +8206,7 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
     "priority": 7,
     "speed_multiplier": 1.0
@@ -9281,24 +8214,24 @@ minecraft:behavior.random_stroll: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 9,
+    "priority": 8,
     "speed_multiplier": 1
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.random_stroll: {
-    "priority": 9,
+    "priority": 8,
     "speed_multiplier": 1
 }
 ```
 
 # minecraft:behavior.random_swim
 ### dolphin.json
-```JSON
+```json
 minecraft:behavior.random_swim: {
     "priority": 5,
     "interval": 0,
@@ -9306,17 +8239,8 @@ minecraft:behavior.random_swim: {
 }
 ```
 
-### elder_guardian.json
-```JSON
-minecraft:behavior.random_swim: {
-    "priority": 7,
-    "speed_multiplier": 0.5,
-    "avoid_surface": false
-}
-```
-
 ### fish.json
-```JSON
+```json
 minecraft:behavior.random_swim: {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -9326,18 +8250,8 @@ minecraft:behavior.random_swim: {
 }
 ```
 
-### guardian.json
-```JSON
-minecraft:behavior.random_swim: {
-    "priority": 7,
-    "speed_multiplier": 1.0,
-    "interval": 80,
-    "avoid_surface": false
-}
-```
-
 ### pufferfish.json
-```JSON
+```json
 minecraft:behavior.random_swim: {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -9348,7 +8262,7 @@ minecraft:behavior.random_swim: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:behavior.random_swim: {
     "speed_multiplier": 1.0,
     "priority": 3,
@@ -9359,7 +8273,7 @@ minecraft:behavior.random_swim: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:behavior.random_swim: {
     "priority": 3,
     "speed_multiplier": 1.0,
@@ -9370,7 +8284,7 @@ minecraft:behavior.random_swim: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.random_swim: {
     "priority": 7,
     "interval": 0,
@@ -9381,31 +8295,31 @@ minecraft:behavior.random_swim: {
 
 # minecraft:behavior.ranged_attack
 ### blaze.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 4,
-    "burst_shots": 3,
-    "burst_interval": 0.3,
+    "attack_interval_min": 3,
+    "attack_interval_max": 5,
     "charge_charged_trigger": 0.0,
     "charge_shoot_trigger": 4.0,
-    "attack_interval_min": 3.0,
-    "attack_interval_max": 5.0,
-    "attack_radius": 16.0
+    "attack_radius": 16,
+    "burst_shots": 3,
+    "burst_interval": 0.3
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 3,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 10.0
+    "attack_interval_min": 1,
+    "attack_interval_max": 3,
+    "attack_radius": 10
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 1,
     "attack_radius": 64,
@@ -9415,7 +8329,7 @@ minecraft:behavior.ranged_attack: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 2,
     "attack_radius": 64,
@@ -9424,8 +8338,7 @@ minecraft:behavior.ranged_attack: {
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 2,
     "attack_radius": 64,
@@ -9434,41 +8347,27 @@ minecraft:behavior.ranged_attack: {
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 2,
     "attack_radius": 64,
     "charge_shoot_trigger": 2,
     "charge_charged_trigger": 1
-}
-```
-
-### piglin.json
-```JSON
-minecraft:behavior.ranged_attack: {
-    "priority": 8,
-    "attack_interval_min": 1,
-    "attack_interval_max": 1,
-    "attack_radius": 8,
-    "attack_radius_min": 4,
-    "speed_multiplier": 1.0,
-    "target_in_sight_time": 0.1
 }
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 4,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 1.0,
-    "attack_radius": 8.0
+    "attack_interval_min": 1,
+    "attack_interval_max": 1,
+    "attack_radius": 8
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "attack_interval_min": 1,
     "attack_interval_max": 3,
@@ -9477,27 +8376,24 @@ minecraft:behavior.ranged_attack: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
+    "attack_interval_min": 1,
+    "attack_interval_max": 3,
+    "attack_radius": 15
 }
 ```
 
-### skeleton.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
+    "attack_interval_min": 1,
+    "attack_interval_max": 3,
+    "attack_radius": 15
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 1,
     "speed_multiplier": 1.25,
@@ -9507,27 +8403,24 @@ minecraft:behavior.ranged_attack: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
+    "attack_interval_min": 1,
+    "attack_interval_max": 3,
+    "attack_radius": 15
 }
 ```
 
-### stray.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
+    "attack_interval_min": 1,
+    "attack_interval_max": 3,
+    "attack_radius": 15
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:behavior.ranged_attack: {
     "priority": 2,
     "speed_multiplier": 1.0,
@@ -9539,14 +8432,14 @@ minecraft:behavior.ranged_attack: {
 
 # minecraft:behavior.receive_love
 ### villager.json
-```JSON
+```json
 minecraft:behavior.receive_love: {
     "priority": 7
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.receive_love: {
     "priority": 6
 }
@@ -9554,41 +8447,29 @@ minecraft:behavior.receive_love: {
 
 # minecraft:behavior.restrict_open_door
 ### villager.json
-```JSON
+```json
 minecraft:behavior.restrict_open_door: {
     "priority": 5
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.restrict_open_door: {
     "priority": 5
 }
 ```
 
-# minecraft:behavior.rise_to_liquid_level
-### strider.json
-```JSON
-minecraft:behavior.rise_to_liquid_level: {
-    "priority": 0,
-    "liquid_y_offset": 0.25,
-    "rise_delta": 0.01,
-    "sink_delta": 0.01
-}
-```
-
 # minecraft:behavior.roll
 ### panda.json
-```JSON
+```json
 minecraft:behavior.roll: {
     "priority": 12,
     "probability": 0.0016
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.roll: {
     "priority": 12,
     "probability": 0.013
@@ -9597,7 +8478,7 @@ minecraft:behavior.roll: {
 
 # minecraft:behavior.run_around_like_crazy
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.run_around_like_crazy: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -9605,7 +8486,7 @@ minecraft:behavior.run_around_like_crazy: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.run_around_like_crazy: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -9613,7 +8494,7 @@ minecraft:behavior.run_around_like_crazy: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:behavior.run_around_like_crazy: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -9621,7 +8502,7 @@ minecraft:behavior.run_around_like_crazy: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.run_around_like_crazy: {
     "priority": 1,
     "speed_multiplier": 1.2
@@ -9630,7 +8511,7 @@ minecraft:behavior.run_around_like_crazy: {
 
 # minecraft:behavior.scared
 ### panda.json
-```JSON
+```json
 minecraft:behavior.scared: {
     "priority": 1,
     "sound_interval": 20
@@ -9639,7 +8520,7 @@ minecraft:behavior.scared: {
 
 # minecraft:behavior.send_event
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.send_event: {
     "priority": 3,
     "event_choices": [
@@ -9679,7 +8560,7 @@ minecraft:behavior.send_event: {
 
 # minecraft:behavior.share_items
 ### villager.json
-```JSON
+```json
 minecraft:behavior.share_items: {
     "priority": 8,
     "max_dist": 3,
@@ -9698,7 +8579,7 @@ minecraft:behavior.share_items: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.share_items: {
     "priority": 9,
     "max_dist": 3,
@@ -9718,15 +8599,14 @@ minecraft:behavior.share_items: {
 
 # minecraft:behavior.silverfish_merge_with_stone
 ### silverfish.json
-```JSON
+```json
 minecraft:behavior.silverfish_merge_with_stone: {
     "priority": 5
 }
 ```
 
 # minecraft:behavior.silverfish_wake_up_friends
-### silverfish.json
-```JSON
+```json
 minecraft:behavior.silverfish_wake_up_friends: {
     "priority": 1
 }
@@ -9734,7 +8614,7 @@ minecraft:behavior.silverfish_wake_up_friends: {
 
 # minecraft:behavior.skeleton_horse_trap
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:behavior.skeleton_horse_trap: {
     "within_radius": 10.0,
     "duration": 900.0,
@@ -9744,12 +8624,11 @@ minecraft:behavior.skeleton_horse_trap: {
 
 # minecraft:behavior.sleep
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.sleep: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.sleep: {
     "priority": 3,
     "goal_radius": 1.5,
@@ -9763,14 +8642,14 @@ minecraft:behavior.sleep: {
 
 # minecraft:behavior.slime_attack
 ### magma_cube.json
-```JSON
+```json
 minecraft:behavior.slime_attack: {
     "priority": 3
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:behavior.slime_attack: {
     "priority": 3
 }
@@ -9778,64 +8657,52 @@ minecraft:behavior.slime_attack: {
 
 # minecraft:behavior.slime_float
 ### magma_cube.json
-```JSON
+```json
 minecraft:behavior.slime_float: {
-    "priority": 1,
-    "jump_chance_percentage": 0.8,
-    "speed_multiplier": 1.2
+    "priority": 1
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:behavior.slime_float: {
-    "priority": 1,
-    "jump_chance_percentage": 0.8,
-    "speed_multiplier": 1.2
+    "priority": 1
 }
 ```
 
 # minecraft:behavior.slime_keep_on_jumping
 ### magma_cube.json
-```JSON
+```json
 minecraft:behavior.slime_keep_on_jumping: {
-    "priority": 5,
-    "speed_multiplier": 1.0
+    "priority": 5
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:behavior.slime_keep_on_jumping: {
-    "priority": 5,
-    "speed_multiplier": 1.0
+    "priority": 5
 }
 ```
 
 # minecraft:behavior.slime_random_direction
 ### magma_cube.json
-```JSON
+```json
 minecraft:behavior.slime_random_direction: {
-    "priority": 4,
-    "add_random_time_range": 3,
-    "turn_range": 360,
-    "min_change_direction_time": 2.0
+    "priority": 4
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:behavior.slime_random_direction: {
-    "priority": 4,
-    "add_random_time_range": 3,
-    "turn_range": 360,
-    "min_change_direction_time": 2.0
+    "priority": 4
 }
 ```
 
 # minecraft:behavior.snacking
 ### panda.json
-```JSON
+```json
 minecraft:behavior.snacking: {
     "priority": 2,
     "snacking_cooldown": 22.5,
@@ -9848,8 +8715,7 @@ minecraft:behavior.snacking: {
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.snacking: {
     "priority": 3,
     "snacking_cooldown": 17.5,
@@ -9863,8 +8729,7 @@ minecraft:behavior.snacking: {
 ```
 
 # minecraft:behavior.sneeze
-### panda.json
-```JSON
+```json
 minecraft:behavior.sneeze: {
     "priority": 7,
     "probability": 0.0001666,
@@ -9909,8 +8774,7 @@ minecraft:behavior.sneeze: {
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:behavior.sneeze: {
     "priority": 7,
     "probability": 0.002,
@@ -9957,39 +8821,35 @@ minecraft:behavior.sneeze: {
 
 # minecraft:behavior.squid_dive
 ### squid.json
-```JSON
+```json
 minecraft:behavior.squid_dive: {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.squid_flee
-### squid.json
-```JSON
+```json
 minecraft:behavior.squid_flee: {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.squid_idle
-### squid.json
-```JSON
+```json
 minecraft:behavior.squid_idle: {
     "priority": 2
 }
 ```
 
 # minecraft:behavior.squid_move_away_from_ground
-### squid.json
-```JSON
+```json
 minecraft:behavior.squid_move_away_from_ground: {
     "priority": 1
 }
 ```
 
 # minecraft:behavior.squid_out_of_water
-### squid.json
-```JSON
+```json
 minecraft:behavior.squid_out_of_water: {
     "priority": 2
 }
@@ -9997,7 +8857,7 @@ minecraft:behavior.squid_out_of_water: {
 
 # minecraft:behavior.stalk_and_pounce_on_target
 ### fox.json
-```JSON
+```json
 minecraft:behavior.stalk_and_pounce_on_target: {
     "priority": 7,
     "stalk_speed": 1.2,
@@ -10019,28 +8879,28 @@ minecraft:behavior.stalk_and_pounce_on_target: {
 
 # minecraft:behavior.stay_while_sitting
 ### cat.json
-```JSON
+```json
 minecraft:behavior.stay_while_sitting: {
     "priority": 3
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.stay_while_sitting: {
     "priority": 3
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:behavior.stay_while_sitting: {
     "priority": 1
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:behavior.stay_while_sitting: {
     "priority": 3
 }
@@ -10048,92 +8908,96 @@ minecraft:behavior.stay_while_sitting: {
 
 # minecraft:behavior.stomp_attack
 ### polar_bear.json
-```JSON
+```json
 minecraft:behavior.stomp_attack: {
     "priority": 1,
     "track_target": true,
-    "require_complete_path": true,
-    "stomp_range_multiplier": 2.0,
-    "no_damage_range_multiplier": 2.0
+    "require_complete_path": true
 }
 ```
 
 # minecraft:behavior.stomp_turtle_egg
 ### drowned.json
-```JSON
+```json
 minecraft:behavior.stomp_turtle_egg: {
     "priority": 4,
     "speed_multiplier": 1,
     "search_range": 10,
-    "search_height": 2,
+    "search_height": 3,
     "goal_radius": 1.14,
+    "search_count": 4,
     "interval": 20
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:behavior.stomp_turtle_egg: {
     "priority": 4,
     "speed_multiplier": 1,
     "search_range": 10,
-    "search_height": 2,
+    "search_height": 3,
     "goal_radius": 1.14,
+    "search_count": 4,
     "interval": 20
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:behavior.stomp_turtle_egg: {
     "priority": 4,
     "speed_multiplier": 1,
     "search_range": 10,
-    "search_height": 2,
+    "search_height": 3,
     "goal_radius": 1.14,
+    "search_count": 4,
     "interval": 20
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:behavior.stomp_turtle_egg: {
-    "priority": 5,
+    "priority": 4,
     "speed_multiplier": 1,
     "search_range": 10,
-    "search_height": 2,
+    "search_height": 3,
     "goal_radius": 1.14,
+    "search_count": 4,
     "interval": 20
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:behavior.stomp_turtle_egg: {
     "priority": 4,
     "speed_multiplier": 1,
-    "search_range": 10,
-    "search_height": 2,
+    "search_range": 24,
+    "search_height": 3,
     "goal_radius": 1.14,
+    "search_count": 4,
     "interval": 20
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:behavior.stomp_turtle_egg: {
     "priority": 4,
     "speed_multiplier": 1,
-    "search_range": 10,
-    "search_height": 2,
+    "search_range": 24,
+    "search_height": 3,
     "goal_radius": 1.14,
+    "search_count": 4,
     "interval": 20
 }
 ```
 
 # minecraft:behavior.stroll_towards_village
 ### fox.json
-```JSON
+```json
 minecraft:behavior.stroll_towards_village: {
     "priority": 11,
     "speed_multiplier": 1.0,
@@ -10146,7 +9010,7 @@ minecraft:behavior.stroll_towards_village: {
 
 # minecraft:behavior.summon_entity
 ### evocation_illager.json
-```JSON
+```json
 minecraft:behavior.summon_entity: {
     "priority": 2,
     "summon_choices": [
@@ -10227,7 +9091,7 @@ minecraft:behavior.summon_entity: {
 
 # minecraft:behavior.swell
 ### creeper.json
-```JSON
+```json
 minecraft:behavior.swell: {
     "start_distance": 2.5,
     "stop_distance": 6.0,
@@ -10237,110 +9101,71 @@ minecraft:behavior.swell: {
 
 # minecraft:behavior.swim_idle
 ### fish.json
-```JSON
+```json
 minecraft:behavior.swim_idle: {
-    "priority": 5,
-    "idle_time": 5.0,
-    "success_rate": 0.1
+    "priority": 5
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:behavior.swim_idle: {
-    "priority": 5,
-    "idle_time": 5.0,
-    "success_rate": 0.1
+    "priority": 5
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:behavior.swim_idle: {
-    "priority": 5,
-    "idle_time": 5.0,
-    "success_rate": 0.1
+    "priority": 5
 }
 ```
 
 # minecraft:behavior.swim_wander
 ### fish.json
-```JSON
+```json
 minecraft:behavior.swim_wander: {
     "priority": 4,
-    "interval": 0.1,
-    "look_ahead": 2.0,
     "speed_multiplier": 1.0,
-    "wander_time": 5.0
+    "interval": 10,
+    "look_ahead": 2.0
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:behavior.swim_wander: {
     "priority": 5,
-    "interval": 1.0,
-    "look_ahead": 2.0,
     "speed_multiplier": 1.0,
-    "wander_time": 5.0
+    "interval": 0,
+    "look_ahead": 2.0
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:behavior.swim_wander: {
     "priority": 4,
-    "interval": 0.0166,
-    "look_ahead": 5.0,
     "speed_multiplier": 0.014,
-    "wander_time": 5.0
+    "interval": 60
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:behavior.swim_wander: {
     "priority": 4,
-    "interval": 0.1,
-    "look_ahead": 2.0,
     "speed_multiplier": 1.0,
-    "wander_time": 5.0
-}
-```
-
-# minecraft:behavior.swim_with_entity
-### dolphin.json
-```JSON
-minecraft:behavior.swim_with_entity: {
-    "priority": 4,
-    "success_rate": 0.1,
-    "chance_to_stop": 0.0333,
-    "state_check_interval": 0.5,
-    "catch_up_threshold": 12.0,
-    "match_direction_threshold": 2.0,
-    "catch_up_multiplier": 2.5,
-    "speed_multiplier": 1.5,
-    "search_range": 20.0,
-    "stop_distance": 5.0,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            }
-        }
-    ]
+    "interval": 10,
+    "look_ahead": 2.0
 }
 ```
 
 # minecraft:behavior.swoop_attack
 ### phantom.json
-```JSON
+```json
 minecraft:behavior.swoop_attack: {
     "priority": 2,
-    "damage_reach": 0.2,
-    "speed_multiplier": 1.0,
     "delay_range": [
         10.0,
         20.0
@@ -10350,14 +9175,14 @@ minecraft:behavior.swoop_attack: {
 
 # minecraft:behavior.take_flower
 ### villager.json
-```JSON
+```json
 minecraft:behavior.take_flower: {
     "priority": 7
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.take_flower: {
     "priority": 9
 }
@@ -10365,7 +9190,7 @@ minecraft:behavior.take_flower: {
 
 # minecraft:behavior.target_when_pushed
 ### iron_golem.json
-```JSON
+```json
 minecraft:behavior.target_when_pushed: {
     "priority": 1,
     "percent_chance": 5.0,
@@ -10393,9 +9218,9 @@ minecraft:behavior.target_when_pushed: {
 
 # minecraft:behavior.tempt
 ### bee.json
-```JSON
+```json
 minecraft:behavior.tempt: {
-    "priority": 5,
+    "priority": 7,
     "speed_multiplier": 1.25,
     "within_radius": 8,
     "can_tempt_vertically": true,
@@ -10412,7 +9237,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 5,
     "speed_multiplier": 0.5,
@@ -10425,8 +9250,7 @@ minecraft:behavior.tempt: {
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 5,
     "speed_multiplier": 0.5,
@@ -10439,7 +9263,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 1.0,
@@ -10453,7 +9277,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -10464,7 +9288,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -10484,7 +9308,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 3,
     "speed_multiplier": 0.5,
@@ -10497,20 +9321,26 @@ minecraft:behavior.tempt: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 5,
     "speed_multiplier": 1.2,
     "items": [
+        "apple",
+        "carrot",
         "golden_apple",
         "appleEnchanted",
-        "golden_carrot"
+        "golden_carrot",
+        "hay_block",
+        "sugar",
+        "bread",
+        "wheat"
     ]
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -10521,7 +9351,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -10541,7 +9371,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 0.5,
@@ -10554,8 +9384,7 @@ minecraft:behavior.tempt: {
 }
 ```
 
-### ocelot.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 0.5,
@@ -10568,7 +9397,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -10579,7 +9408,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 5,
     "speed_multiplier": 1.2,
@@ -10593,7 +9422,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 3,
     "speed_multiplier": 1,
@@ -10606,7 +9435,7 @@ minecraft:behavior.tempt: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 4,
     "speed_multiplier": 1.25,
@@ -10616,25 +9445,8 @@ minecraft:behavior.tempt: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:behavior.tempt: {
-    "priority": 5,
-    "speed_multiplier": 1.2,
-    "items": [
-        "warped_fungus",
-        "warped_fungus_on_a_stick"
-    ],
-    "tempt_sound": "tempt",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    }
-}
-```
-
 ### turtle.json
-```JSON
+```json
 minecraft:behavior.tempt: {
     "priority": 3,
     "speed_multiplier": 1.1,
@@ -10646,12 +9458,11 @@ minecraft:behavior.tempt: {
 
 # minecraft:behavior.trade_interest
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10662,8 +9473,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10674,8 +9484,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10686,8 +9495,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10698,8 +9506,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10710,8 +9517,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10722,8 +9528,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10734,8 +9539,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10746,8 +9550,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10758,8 +9561,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10770,8 +9572,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10782,8 +9583,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10794,8 +9594,7 @@ minecraft:behavior.trade_interest: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 5,
     "within_radius": 6.0,
@@ -10807,7 +9606,7 @@ minecraft:behavior.trade_interest: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.trade_interest: {
     "priority": 3,
     "within_radius": 6.0,
@@ -10820,21 +9619,21 @@ minecraft:behavior.trade_interest: {
 
 # minecraft:behavior.trade_with_player
 ### villager.json
-```JSON
+```json
 minecraft:behavior.trade_with_player: {
     "priority": 1
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.trade_with_player: {
     "priority": 2
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:behavior.trade_with_player: {
     "priority": 1
 }
@@ -10842,15 +9641,14 @@ minecraft:behavior.trade_with_player: {
 
 # minecraft:behavior.wither_random_attack_pos_goal
 ### wither.json
-```JSON
+```json
 minecraft:behavior.wither_random_attack_pos_goal: {
     "priority": 3
 }
 ```
 
 # minecraft:behavior.wither_target_highest_damage
-### wither.json
-```JSON
+```json
 minecraft:behavior.wither_target_highest_damage: {
     "priority": 1
 }
@@ -10858,12 +9656,11 @@ minecraft:behavior.wither_target_highest_damage: {
 
 # minecraft:behavior.work
 ### villager_v2.json
-```JSON
+```json
 minecraft:behavior.work: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.work: {
     "priority": 7,
     "active_time": 250,
@@ -10880,8 +9677,7 @@ minecraft:behavior.work: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.work: {
     "priority": 7,
     "active_time": 250,
@@ -10898,8 +9694,7 @@ minecraft:behavior.work: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.work: {
     "priority": 7,
     "active_time": 250,
@@ -10916,8 +9711,7 @@ minecraft:behavior.work: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:behavior.work: {
     "priority": 7,
     "active_time": 250,
@@ -10936,7 +9730,7 @@ minecraft:behavior.work: {
 
 # minecraft:block_sensor
 ### bee.json
-```JSON
+```json
 minecraft:block_sensor: {
     "sensor_radius": 16,
     "on_break": [
@@ -10951,33 +9745,9 @@ minecraft:block_sensor: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:block_sensor: {
-    "sensor_radius": 16,
-    "on_break": [
-        {
-            "block_list": [
-                "minecraft:gold_block",
-                "minecraft:gilded_blackstone",
-                "minecraft:nether_gold_ore",
-                "minecraft:gold_ore",
-                "minecraft:chest",
-                "minecraft:trapped_chest",
-                "minecraft:ender_chest",
-                "minecraft:barrel",
-                "minecraft:shulker_box",
-                "minecraft:undyed_shulker_box"
-            ],
-            "on_block_broken": "important_block_destroyed_event"
-        }
-    ]
-}
-```
-
 # minecraft:boostable
 ### pig.json
-```JSON
+```json
 minecraft:boostable: {
     "speed_multiplier": 2.0,
     "duration": 3.0,
@@ -10991,24 +9761,9 @@ minecraft:boostable: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:boostable: {
-    "speed_multiplier": 2.0,
-    "duration": 16.0,
-    "boost_items": [
-        {
-            "item": "warped_fungus_on_a_stick",
-            "damage": 1,
-            "replace_item": "fishing_rod"
-        }
-    ]
-}
-```
-
 # minecraft:boss
 ### ender_dragon.json
-```JSON
+```json
 minecraft:boss: {
     "should_darken_sky": false,
     "hud_range": 125
@@ -11016,7 +9771,7 @@ minecraft:boss: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:boss: {
     "should_darken_sky": true,
     "hud_range": 55
@@ -11025,7 +9780,7 @@ minecraft:boss: {
 
 # minecraft:break_blocks
 ### ravager.json
-```JSON
+```json
 minecraft:break_blocks: {
     "breakable_blocks": [
         "bamboo",
@@ -11048,8 +9803,6 @@ minecraft:break_blocks: {
         "pumpkin_stem",
         "red_flower",
         "red_mushroom",
-        "crimson_fungus",
-        "warped_fungus",
         "reeds",
         "sapling",
         "snow_layer",
@@ -11066,7 +9819,7 @@ minecraft:break_blocks: {
 
 # minecraft:breathable
 ### bat.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11074,7 +9827,7 @@ minecraft:breathable: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:breathable: {
     "totalSupply": 15,
     "suffocateTime": 0
@@ -11082,7 +9835,7 @@ minecraft:breathable: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11090,7 +9843,7 @@ minecraft:breathable: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11098,7 +9851,7 @@ minecraft:breathable: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11106,7 +9859,7 @@ minecraft:breathable: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11114,7 +9867,7 @@ minecraft:breathable: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11122,7 +9875,7 @@ minecraft:breathable: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 240,
     "suffocate_time": 0,
@@ -11133,7 +9886,7 @@ minecraft:breathable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11141,7 +9894,7 @@ minecraft:breathable: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11151,14 +9904,14 @@ minecraft:breathable: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:breathable: {
     "breathes_water": true
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11166,7 +9919,7 @@ minecraft:breathable: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11174,7 +9927,7 @@ minecraft:breathable: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11182,7 +9935,7 @@ minecraft:breathable: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11192,7 +9945,7 @@ minecraft:breathable: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:breathable: {
     "totalSupply": 15,
     "suffocateTime": 0
@@ -11200,7 +9953,7 @@ minecraft:breathable: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11208,22 +9961,14 @@ minecraft:breathable: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:breathable: {
     "breathes_water": true
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:breathable: {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11231,7 +9976,7 @@ minecraft:breathable: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11240,7 +9985,7 @@ minecraft:breathable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11248,7 +9993,7 @@ minecraft:breathable: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11257,7 +10002,7 @@ minecraft:breathable: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11265,7 +10010,7 @@ minecraft:breathable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11273,7 +10018,7 @@ minecraft:breathable: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11281,7 +10026,7 @@ minecraft:breathable: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11289,7 +10034,7 @@ minecraft:breathable: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11297,7 +10042,7 @@ minecraft:breathable: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11307,15 +10052,7 @@ minecraft:breathable: {
 ```
 
 ### pig.json
-```JSON
-minecraft:breathable: {
-    "total_supply": 15,
-    "suffocate_time": 0
-}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11323,7 +10060,7 @@ minecraft:breathable: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11331,7 +10068,7 @@ minecraft:breathable: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": -1,
@@ -11341,7 +10078,7 @@ minecraft:breathable: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11349,7 +10086,7 @@ minecraft:breathable: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11359,7 +10096,7 @@ minecraft:breathable: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11367,7 +10104,7 @@ minecraft:breathable: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:breathable: {
     "suffocate_time": 0,
     "total_supply": 15
@@ -11375,7 +10112,7 @@ minecraft:breathable: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11385,7 +10122,7 @@ minecraft:breathable: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11393,7 +10130,7 @@ minecraft:breathable: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11401,7 +10138,7 @@ minecraft:breathable: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11409,7 +10146,7 @@ minecraft:breathable: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11418,7 +10155,7 @@ minecraft:breathable: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11427,7 +10164,7 @@ minecraft:breathable: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11435,7 +10172,7 @@ minecraft:breathable: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11443,7 +10180,7 @@ minecraft:breathable: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11451,7 +10188,7 @@ minecraft:breathable: {
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11461,7 +10198,7 @@ minecraft:breathable: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11470,7 +10207,7 @@ minecraft:breathable: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11480,7 +10217,7 @@ minecraft:breathable: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11491,7 +10228,7 @@ minecraft:breathable: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11499,7 +10236,7 @@ minecraft:breathable: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11507,7 +10244,7 @@ minecraft:breathable: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11515,7 +10252,7 @@ minecraft:breathable: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11523,7 +10260,7 @@ minecraft:breathable: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11531,7 +10268,7 @@ minecraft:breathable: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
@@ -11539,7 +10276,7 @@ minecraft:breathable: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11548,24 +10285,15 @@ minecraft:breathable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:breathable: {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11575,7 +10303,7 @@ minecraft:breathable: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11584,7 +10312,7 @@ minecraft:breathable: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11593,7 +10321,7 @@ minecraft:breathable: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11602,7 +10330,7 @@ minecraft:breathable: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:breathable: {
     "total_supply": 15,
     "suffocate_time": 0,
@@ -11612,7 +10340,7 @@ minecraft:breathable: {
 
 # minecraft:breedable
 ### bee.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breeds_with": {
@@ -11636,10 +10364,9 @@ minecraft:breedable: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": true,
-    "require_full_health": true,
     "allow_sitting": true,
     "breeds_with": {
         "mate_type": "minecraft:cat",
@@ -11657,7 +10384,7 @@ minecraft:breedable: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breeds_with": {
@@ -11678,7 +10405,7 @@ minecraft:breedable: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breed_items": "wheat",
@@ -11694,7 +10421,7 @@ minecraft:breedable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": true,
     "inherit_tamed": false,
@@ -11725,7 +10452,7 @@ minecraft:breedable: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breed_items": "sweet_berries",
@@ -11740,32 +10467,8 @@ minecraft:breedable: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:breedable: {
-    "require_tame": false,
-    "love_filters": {
-        "test": "has_component",
-        "subject": "self",
-        "operator": "!=",
-        "value": "minecraft:attack_cooldown"
-    },
-    "breeds_with": {
-        "mate_type": "minecraft:hoglin",
-        "baby_type": "minecraft:hoglin",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "crimson_fungus"
-    ]
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": true,
     "inherit_tamed": false,
@@ -11796,7 +10499,7 @@ minecraft:breedable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": true,
     "inherit_tamed": false,
@@ -11821,7 +10524,7 @@ minecraft:breedable: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breed_items": "wheat",
@@ -11842,7 +10545,7 @@ minecraft:breedable: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breeds_with": {
@@ -11861,7 +10564,7 @@ minecraft:breedable: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "blend_attributes": false,
@@ -11886,7 +10589,7 @@ minecraft:breedable: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breeds_with": {
@@ -11906,7 +10609,7 @@ minecraft:breedable: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:breedable: {
     "breed_items": [
         "golden_carrot",
@@ -11925,7 +10628,7 @@ minecraft:breedable: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "breeds_with": {
@@ -11936,26 +10639,8 @@ minecraft:breedable: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:breedable: {
-    "require_tame": false,
-    "breeds_with": {
-        "mate_type": "minecraft:strider",
-        "baby_type": "minecraft:strider",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "warped_fungus"
-    ]
-}
-```
-
 ### turtle.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": false,
     "causes_pregnancy": true,
@@ -11974,10 +10659,9 @@ minecraft:breedable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:breedable: {
     "require_tame": true,
-    "require_full_health": true,
     "breeds_with": {
         "mate_type": "minecraft:wolf",
         "baby_type": "minecraft:wolf",
@@ -12004,7 +10688,7 @@ minecraft:breedable: {
 
 # minecraft:bribeable
 ### dolphin.json
-```JSON
+```json
 minecraft:bribeable: {
     "bribe_items": [
         "fish",
@@ -12015,341 +10699,320 @@ minecraft:bribeable: {
 
 # minecraft:burns_in_daylight
 ### drowned.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:burns_in_daylight: false
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
+### zombie_pigman.json
+```json
+minecraft:burns_in_daylight: false
+```
+
 ### zombie_villager.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:burns_in_daylight: {}
 ```
 
 # minecraft:can_climb
 ### blaze.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### fox.json
-```JSON
-minecraft:can_climb: {}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### wolf.json
-```JSON
-minecraft:can_climb: {}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:can_climb: {}
 ```
 
 # minecraft:can_fly
 ### bat.json
-```JSON
+```json
 minecraft:can_fly: {}
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:can_fly: {}
 ```
 
+### blaze.json
+```json
+minecraft:can_fly: {
+    "value": true
+}
+```
+
 ### ghast.json
-```JSON
+```json
 minecraft:can_fly: {}
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:can_fly: {
     "value": true
 }
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:can_fly: {}
 ```
 
 # minecraft:can_power_jump
 ### donkey.json
-```JSON
+```json
 minecraft:can_power_jump: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:can_power_jump: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:can_power_jump: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:can_power_jump: {}
-```
-
-# minecraft:celebrate_hunt
-### piglin.json
-```JSON
-minecraft:celebrate_hunt: {
-    "celebration_targets": {
-        "all_of": [
-            {
-                "test": "is_family",
-                "value": "hoglin"
-            }
-        ]
-    },
-    "broadcast": true,
-    "duration": 10,
-    "celebrate_sound": "celebrate",
-    "sound_interval": {
-        "range_min": 2.0,
-        "range_max": 5.0
-    },
-    "radius": 16
-}
 ```
 
 # minecraft:collision_box
 ### armor_stand.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.5,
     "height": 1.975
@@ -12357,7 +11020,7 @@ minecraft:collision_box: {
 ```
 
 ### arrow.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12365,7 +11028,7 @@ minecraft:collision_box: {
 ```
 
 ### bat.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.5,
     "height": 0.9
@@ -12373,7 +11036,7 @@ minecraft:collision_box: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.55,
     "height": 0.5
@@ -12381,7 +11044,7 @@ minecraft:collision_box: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.5,
     "height": 1.8
@@ -12389,7 +11052,7 @@ minecraft:collision_box: {
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 0.455
@@ -12397,7 +11060,7 @@ minecraft:collision_box: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.7
@@ -12405,7 +11068,7 @@ minecraft:collision_box: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.7,
     "height": 0.5
@@ -12413,7 +11076,7 @@ minecraft:collision_box: {
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.7
@@ -12421,7 +11084,7 @@ minecraft:collision_box: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.8
@@ -12429,7 +11092,7 @@ minecraft:collision_box: {
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.7
@@ -12437,7 +11100,7 @@ minecraft:collision_box: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 1.3
@@ -12445,7 +11108,7 @@ minecraft:collision_box: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.8
@@ -12453,7 +11116,7 @@ minecraft:collision_box: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 0.6
@@ -12461,7 +11124,7 @@ minecraft:collision_box: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 1.6
@@ -12469,7 +11132,7 @@ minecraft:collision_box: {
 ```
 
 ### dragon_fireball.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.31,
     "height": 0.31
@@ -12477,7 +11140,7 @@ minecraft:collision_box: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -12485,7 +11148,7 @@ minecraft:collision_box: {
 ```
 
 ### egg.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12493,7 +11156,7 @@ minecraft:collision_box: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.99,
     "height": 1.99
@@ -12501,7 +11164,7 @@ minecraft:collision_box: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 2.9
@@ -12509,7 +11172,7 @@ minecraft:collision_box: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.4,
     "height": 0.3
@@ -12517,7 +11180,7 @@ minecraft:collision_box: {
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.98
@@ -12525,7 +11188,7 @@ minecraft:collision_box: {
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 13,
     "height": 4
@@ -12533,7 +11196,7 @@ minecraft:collision_box: {
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12541,7 +11204,7 @@ minecraft:collision_box: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -12549,7 +11212,7 @@ minecraft:collision_box: {
 ```
 
 ### eye_of_ender_signal.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12557,7 +11220,7 @@ minecraft:collision_box: {
 ```
 
 ### fireball.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.31,
     "height": 0.31
@@ -12565,7 +11228,7 @@ minecraft:collision_box: {
 ```
 
 ### fireworks_rocket.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12573,7 +11236,7 @@ minecraft:collision_box: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.3
@@ -12581,7 +11244,7 @@ minecraft:collision_box: {
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.15,
     "height": 0.15
@@ -12589,7 +11252,7 @@ minecraft:collision_box: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.7
@@ -12597,7 +11260,7 @@ minecraft:collision_box: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 4,
     "height": 4
@@ -12605,31 +11268,15 @@ minecraft:collision_box: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.85,
     "height": 0.85
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.85,
-    "height": 0.85
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.9,
-    "height": 0.9
 }
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.7
@@ -12637,7 +11284,7 @@ minecraft:collision_box: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 1.6
@@ -12645,7 +11292,7 @@ minecraft:collision_box: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -12653,7 +11300,7 @@ minecraft:collision_box: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 2.9
@@ -12661,7 +11308,7 @@ minecraft:collision_box: {
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12669,7 +11316,7 @@ minecraft:collision_box: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 1.87
@@ -12677,7 +11324,7 @@ minecraft:collision_box: {
 ```
 
 ### llama_spit.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.31,
     "height": 0.31
@@ -12685,23 +11332,21 @@ minecraft:collision_box: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 2.08,
     "height": 2.08
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.78,
     "height": 0.78
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.52,
     "height": 0.52
@@ -12709,7 +11354,7 @@ minecraft:collision_box: {
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.7
@@ -12717,7 +11362,7 @@ minecraft:collision_box: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 1.3
@@ -12725,23 +11370,15 @@ minecraft:collision_box: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 1.6
 }
 ```
 
-### npc.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.6,
-    "height": 2.1
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.7
@@ -12749,7 +11386,7 @@ minecraft:collision_box: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.7,
     "height": 1.5
@@ -12757,7 +11394,7 @@ minecraft:collision_box: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.5,
     "height": 1
@@ -12765,7 +11402,7 @@ minecraft:collision_box: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 0.5
@@ -12773,23 +11410,15 @@ minecraft:collision_box: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 0.9
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.6,
-    "height": 1.9
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -12797,7 +11426,7 @@ minecraft:collision_box: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.8
@@ -12805,7 +11434,7 @@ minecraft:collision_box: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.3,
     "height": 1.4
@@ -12813,7 +11442,7 @@ minecraft:collision_box: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.8,
     "height": 0.8
@@ -12821,7 +11450,7 @@ minecraft:collision_box: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.67,
     "height": 0.67
@@ -12829,7 +11458,7 @@ minecraft:collision_box: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:collision_box: {
     "height": 1.9,
     "width": 1.2
@@ -12837,7 +11466,7 @@ minecraft:collision_box: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.5,
     "height": 0.5
@@ -12845,7 +11474,7 @@ minecraft:collision_box: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.9,
     "height": 1.3
@@ -12853,7 +11482,7 @@ minecraft:collision_box: {
 ```
 
 ### shulker_bullet.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.625,
     "height": 0.625
@@ -12861,7 +11490,7 @@ minecraft:collision_box: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.4,
     "height": 0.3
@@ -12869,7 +11498,7 @@ minecraft:collision_box: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -12877,7 +11506,7 @@ minecraft:collision_box: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 1.6
@@ -12885,23 +11514,21 @@ minecraft:collision_box: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 2.08,
     "height": 2.08
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.04,
     "height": 1.04
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.52,
     "height": 0.52
@@ -12909,7 +11536,7 @@ minecraft:collision_box: {
 ```
 
 ### small_fireball.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.31,
     "height": 0.31
@@ -12917,7 +11544,7 @@ minecraft:collision_box: {
 ```
 
 ### snowball.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12925,7 +11552,7 @@ minecraft:collision_box: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.4,
     "height": 1.8
@@ -12933,7 +11560,7 @@ minecraft:collision_box: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 0.9
@@ -12941,7 +11568,7 @@ minecraft:collision_box: {
 ```
 
 ### splash_potion.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
@@ -12949,7 +11576,7 @@ minecraft:collision_box: {
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.95,
     "height": 0.95
@@ -12957,23 +11584,15 @@ minecraft:collision_box: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
 }
 ```
 
-### strider.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.9,
-    "height": 1.7
-}
-```
-
 ### thrown_trident.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.35
@@ -12981,7 +11600,7 @@ minecraft:collision_box: {
 ```
 
 ### tnt.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.98
@@ -12989,7 +11608,7 @@ minecraft:collision_box: {
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.98,
     "height": 0.7
@@ -12997,7 +11616,7 @@ minecraft:collision_box: {
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.75,
     "height": 1.8
@@ -13005,7 +11624,7 @@ minecraft:collision_box: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.4,
     "height": 0.4
@@ -13013,15 +11632,14 @@ minecraft:collision_box: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.2
 }
 ```
 
-### turtle.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.2,
     "height": 0.4
@@ -13029,7 +11647,7 @@ minecraft:collision_box: {
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.4,
     "height": 0.8
@@ -13037,7 +11655,7 @@ minecraft:collision_box: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13045,7 +11663,7 @@ minecraft:collision_box: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13053,7 +11671,7 @@ minecraft:collision_box: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13061,7 +11679,7 @@ minecraft:collision_box: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13069,7 +11687,7 @@ minecraft:collision_box: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13077,7 +11695,7 @@ minecraft:collision_box: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1,
     "height": 3
@@ -13085,7 +11703,7 @@ minecraft:collision_box: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.72,
     "height": 2.01
@@ -13093,7 +11711,7 @@ minecraft:collision_box: {
 ```
 
 ### wither_skull.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.15,
     "height": 0.15
@@ -13101,7 +11719,7 @@ minecraft:collision_box: {
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.15,
     "height": 0.15
@@ -13109,7 +11727,7 @@ minecraft:collision_box: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 0.8
@@ -13117,39 +11735,15 @@ minecraft:collision_box: {
 ```
 
 ### xp_bottle.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.25,
     "height": 0.25
-}
-```
-
-### xp_orb.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.25,
-    "height": 0.25
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.85,
-    "height": 0.85
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:collision_box: {
-    "width": 0.9,
-    "height": 0.9
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13157,7 +11751,7 @@ minecraft:collision_box: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 1.4,
     "height": 1.6
@@ -13165,7 +11759,7 @@ minecraft:collision_box: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13173,7 +11767,7 @@ minecraft:collision_box: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13181,7 +11775,7 @@ minecraft:collision_box: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:collision_box: {
     "width": 0.6,
     "height": 1.9
@@ -13190,322 +11784,280 @@ minecraft:collision_box: {
 
 # minecraft:color
 ### cat.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 12
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 15
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 8
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 7
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 6
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 2
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 6
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 8
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 9
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 10
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 11
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 12
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 13
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 11
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 6
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 10
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 9
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color: {
     "value": 9
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:color: {
     "value": 14
 }
@@ -13513,336 +12065,231 @@ minecraft:color: {
 
 # minecraft:color2
 ### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 2
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 6
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 8
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 9
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 10
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 11
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 12
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 13
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 7
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 6
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 14
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:color2: {
     "value": 4
-}
-```
-
-# minecraft:custom_hit_test
-### hoglin.json
-```JSON
-minecraft:custom_hit_test: {
-    "hitboxes": [
-        {
-            "width": 1.0,
-            "height": 0.85,
-            "pivot": [
-                0,
-                0.5,
-                0
-            ]
-        }
-    ]
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:custom_hit_test: {
-    "hitboxes": [
-        {
-            "width": 2.0,
-            "height": 1.75,
-            "pivot": [
-                0,
-                1,
-                0
-            ]
-        }
-    ]
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:custom_hit_test: {
-    "hitboxes": [
-        {
-            "width": 1.0,
-            "height": 0.85,
-            "pivot": [
-                0,
-                0.5,
-                0
-            ]
-        }
-    ]
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:custom_hit_test: {
-    "hitboxes": [
-        {
-            "width": 2.0,
-            "height": 1.75,
-            "pivot": [
-                0,
-                1,
-                0
-            ]
-        }
-    ]
 }
 ```
 
 # minecraft:damage_over_time
 ### dolphin.json
-```JSON
+```json
 minecraft:damage_over_time: {
     "damage_per_hurt": 1,
     "time_between_hurt": 0
@@ -13851,7 +12298,7 @@ minecraft:damage_over_time: {
 
 # minecraft:damage_sensor
 ### bat.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13861,7 +12308,7 @@ minecraft:damage_sensor: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13871,7 +12318,7 @@ minecraft:damage_sensor: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13881,7 +12328,7 @@ minecraft:damage_sensor: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13891,7 +12338,7 @@ minecraft:damage_sensor: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13901,7 +12348,7 @@ minecraft:damage_sensor: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -13918,7 +12365,7 @@ minecraft:damage_sensor: {
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13928,7 +12375,7 @@ minecraft:damage_sensor: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": [
         {
@@ -13946,7 +12393,7 @@ minecraft:damage_sensor: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13956,7 +12403,7 @@ minecraft:damage_sensor: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -13966,7 +12413,7 @@ minecraft:damage_sensor: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "all",
@@ -13982,8 +12429,7 @@ minecraft:damage_sensor: {
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "all",
@@ -13993,7 +12439,7 @@ minecraft:damage_sensor: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -14003,7 +12449,7 @@ minecraft:damage_sensor: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": [
         {
@@ -14054,18 +12500,8 @@ minecraft:damage_sensor: {
 }
 ```
 
-### npc.json
-```JSON
-minecraft:damage_sensor: {
-    "triggers": {
-        "cause": "all",
-        "deals_damage": false
-    }
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -14075,7 +12511,7 @@ minecraft:damage_sensor: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -14085,7 +12521,7 @@ minecraft:damage_sensor: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14102,7 +12538,7 @@ minecraft:damage_sensor: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14126,8 +12562,7 @@ minecraft:damage_sensor: {
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14152,7 +12587,7 @@ minecraft:damage_sensor: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14166,7 +12601,7 @@ minecraft:damage_sensor: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14182,7 +12617,7 @@ minecraft:damage_sensor: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "fall",
@@ -14192,7 +12627,7 @@ minecraft:damage_sensor: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "cause": "lightning",
@@ -14203,7 +12638,7 @@ minecraft:damage_sensor: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": [
         {
@@ -14247,7 +12682,7 @@ minecraft:damage_sensor: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": [
         {
@@ -14291,7 +12726,7 @@ minecraft:damage_sensor: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14315,8 +12750,7 @@ minecraft:damage_sensor: {
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14341,7 +12775,7 @@ minecraft:damage_sensor: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": [
         {
@@ -14370,7 +12804,7 @@ minecraft:damage_sensor: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:damage_sensor: {
     "triggers": {
         "on_damage": {
@@ -14386,349 +12820,8 @@ minecraft:damage_sensor: {
 ```
 
 # minecraft:despawn
-### bat.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### blaze.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### cat.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### cave_spider.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### chicken.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### cow.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### creeper.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### dolphin.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### donkey.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### drowned.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### enderman.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### endermite.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### fish.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-### fox.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### ghast.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### guardian.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### horse.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### husk.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### llama.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### magma_cube.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### mooshroom.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### mule.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### ocelot.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### panda.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### parrot.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### phantom.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### pig.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### piglin.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### pillager.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### polar_bear.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### pufferfish.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-### rabbit.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### ravager.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### salmon.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-### sheep.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### silverfish.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### skeleton.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### skeleton_horse.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### slime.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### spider.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### squid.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### stray.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### strider.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### tropicalfish.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {
-        "min_distance": 32,
-        "max_distance": 40
-    }
-}
-```
-
-### turtle.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### vex.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
 ### wandering_trader.json
-```JSON
+```json
 minecraft:despawn: {
     "remove_child_entities": true,
     "filters": {
@@ -14757,110 +12850,9 @@ minecraft:despawn: {
 }
 ```
 
-### witch.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### wither_skeleton.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### wolf.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:despawn: {
-    "filters": {
-        "any_of": [
-            {
-                "all_of": [
-                    {
-                        "test": "is_persistent",
-                        "value": false
-                    },
-                    {
-                        "test": "distance_to_nearest_player",
-                        "operator": ">",
-                        "value": 54
-                    }
-                ]
-            },
-            {
-                "all_of": [
-                    {
-                        "test": "is_persistent",
-                        "value": false
-                    },
-                    {
-                        "test": "inactivity_timer",
-                        "subject": "self",
-                        "value": 30
-                    },
-                    {
-                        "test": "random_chance",
-                        "value": 800
-                    },
-                    {
-                        "test": "distance_to_nearest_player",
-                        "operator": ">",
-                        "value": 32
-                    }
-                ]
-            }
-        ]
-    }
-}
-```
-
-### zombie.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### zombie_horse.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### zombie_pigman.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
-### zombie_villager_v2.json
-```JSON
-minecraft:despawn: {
-    "despawn_from_distance": {}
-}
-```
-
 # minecraft:dweller
 ### cat.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "passive",
@@ -14873,7 +12865,7 @@ minecraft:dweller: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -14886,7 +12878,7 @@ minecraft:dweller: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "defender",
@@ -14899,7 +12891,7 @@ minecraft:dweller: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -14912,7 +12904,7 @@ minecraft:dweller: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -14925,7 +12917,7 @@ minecraft:dweller: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -14937,8 +12929,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -14951,8 +12942,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -14965,8 +12955,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -14979,8 +12968,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -14993,8 +12981,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15007,8 +12994,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15021,8 +13007,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15035,8 +13020,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15049,8 +13033,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15063,8 +13046,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15077,8 +13059,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15091,8 +13072,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15105,8 +13085,7 @@ minecraft:dweller: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "inhabitant",
@@ -15120,7 +13099,7 @@ minecraft:dweller: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -15133,7 +13112,7 @@ minecraft:dweller: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:dweller: {
     "dwelling_type": "village",
     "dweller_role": "hostile",
@@ -15147,12 +13126,11 @@ minecraft:dweller: {
 
 # minecraft:economy_trade_table
 ### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {}
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.farmer",
     "table": "trading/economy_trades/farmer_trades.json",
@@ -15161,8 +13139,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.fisherman",
     "table": "trading/economy_trades/fisherman_trades.json",
@@ -15171,8 +13148,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.shepherd",
     "table": "trading/economy_trades/shepherd_trades.json",
@@ -15181,8 +13157,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.fletcher",
     "table": "trading/economy_trades/fletcher_trades.json",
@@ -15191,8 +13166,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.librarian",
     "table": "trading/economy_trades/librarian_trades.json",
@@ -15201,8 +13175,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.cartographer",
     "table": "trading/economy_trades/cartographer_trades.json",
@@ -15211,8 +13184,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.cleric",
     "table": "trading/economy_trades/cleric_trades.json",
@@ -15221,8 +13193,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.armor",
     "table": "trading/economy_trades/armorer_trades.json",
@@ -15231,8 +13202,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.weapon",
     "table": "trading/economy_trades/weapon_smith_trades.json",
@@ -15241,8 +13211,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.tool",
     "table": "trading/economy_trades/tool_smith_trades.json",
@@ -15251,8 +13220,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.butcher",
     "table": "trading/economy_trades/butcher_trades.json",
@@ -15261,8 +13229,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.leather",
     "table": "trading/economy_trades/leather_worker_trades.json",
@@ -15271,8 +13238,7 @@ minecraft:economy_trade_table: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.villager.mason",
     "table": "trading/economy_trades/stone_mason_trades.json",
@@ -15282,7 +13248,7 @@ minecraft:economy_trade_table: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:economy_trade_table: {
     "display_name": "entity.wandering_trader.name",
     "table": "trading/economy_trades/wandering_trader_trades.json",
@@ -15292,10 +13258,9 @@ minecraft:economy_trade_table: {
 
 # minecraft:entity_sensor
 ### pufferfish.json
-```JSON
+```json
 minecraft:entity_sensor: {
-    "sensor_range": 2.5,
-    "relative_range": false,
+    "sensor_range": 1.5,
     "minimum_count": 1,
     "event_filters": {
         "any_of": [
@@ -15322,50 +13287,13 @@ minecraft:entity_sensor: {
             }
         ]
     },
-    "event": "minecraft:start_half_puff"
+    "event": "minecraft:to_full_puff"
 }
 ```
 
-### pufferfish.json
-```JSON
+```json
 minecraft:entity_sensor: {
-    "sensor_range": 2.5,
-    "relative_range": false,
-    "minimum_count": 1,
-    "event_filters": {
-        "any_of": [
-            {
-                "test": "is_family",
-                "subject": "other",
-                "value": "mob"
-            },
-            {
-                "all_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "none_of": {
-                            "test": "has_ability",
-                            "subject": "other",
-                            "value": "instabuild"
-                        }
-                    }
-                ]
-            }
-        ]
-    },
-    "event": "minecraft:start_full_puff"
-}
-```
-
-### pufferfish.json
-```JSON
-minecraft:entity_sensor: {
-    "sensor_range": 2.9,
-    "relative_range": false,
+    "sensor_range": 10,
     "require_all": true,
     "event_filters": {
         "none_of": [
@@ -15390,10 +13318,7 @@ minecraft:entity_sensor: {
                     }
                 ]
             }
-        ],
-        "test": "distance_to_nearest_player",
-        "operator": ">",
-        "value": 2.9
+        ]
     },
     "event": "minecraft:from_full_puff"
 }
@@ -15401,7 +13326,7 @@ minecraft:entity_sensor: {
 
 # minecraft:environment_sensor
 ### bee.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15415,9 +13340,9 @@ minecraft:environment_sensor: {
                                 "value": false
                             },
                             {
-                                "test": "weather",
-                                "operator": "==",
-                                "value": "precipitation"
+                                "test": "is_weather",
+                                "value": "clear",
+                                "operator": "!="
                             }
                         ]
                     },
@@ -15437,8 +13362,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15446,8 +13370,7 @@ minecraft:environment_sensor: {
             "filters": {
                 "all_of": [
                     {
-                        "test": "weather",
-                        "operator": "==",
+                        "test": "is_weather",
                         "value": "clear"
                     },
                     {
@@ -15462,7 +13385,7 @@ minecraft:environment_sensor: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15475,8 +13398,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15490,7 +13412,7 @@ minecraft:environment_sensor: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15514,8 +13436,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### dolphin.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15530,8 +13451,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### dolphin.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15555,7 +13475,7 @@ minecraft:environment_sensor: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15576,8 +13496,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15616,15 +13535,14 @@ minecraft:environment_sensor: {
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
             "filters": {
                 "all_of": [
                     {
-                        "test": "weather_at_position",
+                        "test": "is_weather",
                         "operator": "!=",
                         "value": "thunderstorm"
                     },
@@ -15640,7 +13558,7 @@ minecraft:environment_sensor: {
             "filters": {
                 "all_of": [
                     {
-                        "test": "weather_at_position",
+                        "test": "is_weather",
                         "operator": "!=",
                         "value": "thunderstorm"
                     },
@@ -15656,13 +13574,12 @@ minecraft:environment_sensor: {
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
             "filters": {
-                "test": "weather_at_position",
+                "test": "is_weather",
                 "value": "thunderstorm"
             },
             "event": "minecraft:fox_configure_thunderstorm"
@@ -15678,13 +13595,12 @@ minecraft:environment_sensor: {
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
             "filters": {
-                "test": "weather_at_position",
+                "test": "is_weather",
                 "value": "thunderstorm"
             },
             "event": "minecraft:fox_configure_thunderstorm"
@@ -15700,38 +13616,8 @@ minecraft:environment_sensor: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "start_zombification_event"
-    }
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "stop_zombification_event"
-    }
-}
-```
-
 ### husk.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": [
         {
@@ -15747,8 +13633,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### husk.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15762,8 +13647,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### husk.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15778,7 +13662,7 @@ minecraft:environment_sensor: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15801,38 +13685,8 @@ minecraft:environment_sensor: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": false
-        },
-        "event": "start_zombification_event"
-    }
-}
-```
-
-### piglin.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": {
-        "filters": {
-            "test": "in_nether",
-            "subject": "self",
-            "operator": "==",
-            "value": true
-        },
-        "event": "stop_zombification_event"
-    }
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15846,8 +13700,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15862,7 +13715,7 @@ minecraft:environment_sensor: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15885,86 +13738,50 @@ minecraft:environment_sensor: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:environment_sensor: {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
+    "triggers": {
+        "filters": {
+            "test": "is_underwater",
+            "subject": "self",
+            "operator": "==",
+            "value": true
         },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
+        "event": "minecraft:melee_mode"
+    }
 }
 ```
 
-### skeleton.json
-```JSON
+```json
 minecraft:environment_sensor: {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
+    "triggers": {
+        "filters": {
+            "test": "is_underwater",
+            "subject": "self",
+            "operator": "==",
+            "value": true
         },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
+        "event": "minecraft:melee_mode"
+    }
 }
 ```
 
-### skeleton.json
-```JSON
+```json
 minecraft:environment_sensor: {
-    "triggers": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "in_water",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": false
-                    },
-                    {
-                        "test": "has_ranged_weapon",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "event": "minecraft:ranged_mode"
-        }
-    ]
+    "triggers": {
+        "filters": {
+            "test": "in_water",
+            "subject": "self",
+            "operator": "==",
+            "value": false
+        },
+        "event": "minecraft:ranged_mode"
+    }
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15977,8 +13794,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -15992,146 +13808,50 @@ minecraft:environment_sensor: {
 ```
 
 ### stray.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
-}
-```
-
-### stray.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
-}
-```
-
-### stray.json
-```JSON
-minecraft:environment_sensor: {
-    "triggers": [
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "in_water",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": false
-                    },
-                    {
-                        "test": "has_ranged_weapon",
-                        "subject": "self",
-                        "operator": "==",
-                        "value": true
-                    }
-                ]
-            },
-            "event": "minecraft:ranged_mode"
-        }
-    ]
-}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
-            "any_of": [
-                {
-                    "test": "in_lava",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": true
-                },
-                {
-                    "test": "in_lava",
-                    "subject": "other",
-                    "operator": "==",
-                    "value": true
-                }
-            ]
+            "test": "is_underwater",
+            "subject": "self",
+            "operator": "==",
+            "value": true
         },
-        "event": "stop_suffocating"
+        "event": "minecraft:melee_mode"
     }
 }
 ```
 
-### strider.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
-            "all_of": [
-                {
-                    "test": "in_lava",
-                    "subject": "self",
-                    "operator": "==",
-                    "value": false
-                },
-                {
-                    "any_of": [
-                        {
-                            "test": "is_riding",
-                            "subject": "self",
-                            "operator": "==",
-                            "value": false
-                        },
-                        {
-                            "test": "in_lava",
-                            "subject": "other",
-                            "operator": "==",
-                            "value": false
-                        }
-                    ]
-                }
-            ]
+            "test": "is_underwater",
+            "subject": "self",
+            "operator": "==",
+            "value": true
         },
-        "event": "start_suffocating"
+        "event": "minecraft:melee_mode"
+    }
+}
+```
+
+```json
+minecraft:environment_sensor: {
+    "triggers": {
+        "filters": {
+            "test": "in_water",
+            "subject": "self",
+            "operator": "==",
+            "value": false
+        },
+        "event": "minecraft:ranged_mode"
     }
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -16144,8 +13864,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### zombie.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -16159,8 +13878,7 @@ minecraft:environment_sensor: {
 }
 ```
 
-### zombie.json
-```JSON
+```json
 minecraft:environment_sensor: {
     "triggers": {
         "filters": {
@@ -16174,70 +13892,9 @@ minecraft:environment_sensor: {
 }
 ```
 
-# minecraft:equip_item
-### drowned.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### fox.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### husk.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### piglin.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### pillager.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### skeleton.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### stray.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### wither_skeleton.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### zombie.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### zombie_pigman.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:equip_item: {}
-```
-
-### zombie_villager_v2.json
-```JSON
-minecraft:equip_item: {}
-```
-
 # minecraft:equipment
 ### drowned.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/drowned_ranged_equipment.json",
     "slot_drop_chance": [
@@ -16249,8 +13906,7 @@ minecraft:equipment: {
 }
 ```
 
-### drowned.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/drowned_equipment.json",
     "slot_drop_chance": [
@@ -16263,7 +13919,7 @@ minecraft:equipment: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/fox_equipment.json",
     "slot_drop_chance": [
@@ -16276,35 +13932,20 @@ minecraft:equipment: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/zombie_equipment.json"
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:equipment: {
-    "table": "loot_tables/entities/piglin_gear_ranged.json"
-}
-```
-
-### piglin.json
-```JSON
-minecraft:equipment: {
-    "table": "loot_tables/entities/piglin_gear_melee.json"
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/pillager_gear.json"
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/pillager_captain_equipment.json",
     "slot_drop_chance": [
@@ -16316,8 +13957,7 @@ minecraft:equipment: {
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/pillager_captain_equipment.json",
     "slot_drop_chance": [
@@ -16330,42 +13970,34 @@ minecraft:equipment: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/skeleton_gear.json"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/skeleton_gear.json"
 }
 ```
 
-### strider.json
-```JSON
-minecraft:equipment: {
-    "table": "loot_tables/entities/zombified_piglin_rider_gear.json"
-}
-```
-
 ### vex.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/vex_gear.json"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/vindicator_gear.json"
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/vindicator_captain_equipment.json",
     "slot_drop_chance": [
@@ -16377,8 +14009,7 @@ minecraft:equipment: {
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/vindicator_captain_equipment.json",
     "slot_drop_chance": [
@@ -16391,21 +14022,21 @@ minecraft:equipment: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/wither_skeleton_gear.json"
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/zombie_equipment.json"
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:equipment: {
     "table": "loot_tables/entities/zombie_pigman_gear.json"
 }
@@ -16413,7 +14044,7 @@ minecraft:equipment: {
 
 # minecraft:equippable
 ### donkey.json
-```JSON
+```json
 minecraft:equippable: {
     "slots": [
         {
@@ -16434,7 +14065,7 @@ minecraft:equippable: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:equippable: {
     "slots": [
         {
@@ -16465,7 +14096,7 @@ minecraft:equippable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:equippable: {
     "slots": [
         {
@@ -16480,7 +14111,7 @@ minecraft:equippable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:equippable: {
     "slots": [
         {
@@ -16502,7 +14133,7 @@ minecraft:equippable: {
 
 # minecraft:experience_reward
 ### bee.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16510,14 +14141,14 @@ minecraft:experience_reward: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16525,14 +14156,14 @@ minecraft:experience_reward: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16540,7 +14171,7 @@ minecraft:experience_reward: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16548,21 +14179,21 @@ minecraft:experience_reward: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16570,56 +14201,55 @@ minecraft:experience_reward: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### drowned.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 3 : 0"
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "10"
 }
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16627,29 +14257,21 @@ minecraft:experience_reward: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:experience_reward: {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16657,21 +14279,20 @@ minecraft:experience_reward: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### husk.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16679,14 +14300,14 @@ minecraft:experience_reward: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16694,14 +14315,14 @@ minecraft:experience_reward: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16709,7 +14330,7 @@ minecraft:experience_reward: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16717,71 +14338,57 @@ minecraft:experience_reward: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:experience_reward: {
-    "on_death": "query.last_hit_by_player ? 1 + (query.equipment_count * Math.Random(1,2)) : 0"
-}
-```
-
-### piglin.json
-```JSON
-minecraft:experience_reward: {
-    "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "Math.Min(query.player_level * 7, 100)"
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16789,21 +14396,21 @@ minecraft:experience_reward: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 20 : 0"
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16811,78 +14418,70 @@ minecraft:experience_reward: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### strider.json
-```JSON
-minecraft:experience_reward: {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
 ### tropicalfish.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16890,50 +14489,42 @@ minecraft:experience_reward: {
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "50"
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### wolf.json
-```JSON
-minecraft:experience_reward: {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_bred": "Math.Random(1,7)",
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
@@ -16941,63 +14532,59 @@ minecraft:experience_reward: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### zombie.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### zombie_pigman.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:experience_reward: {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
@@ -17005,7 +14592,7 @@ minecraft:experience_reward: {
 
 # minecraft:explode
 ### creeper.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -17015,8 +14602,7 @@ minecraft:explode: {
 }
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -17026,8 +14612,7 @@ minecraft:explode: {
 }
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -17037,8 +14622,7 @@ minecraft:explode: {
 }
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 1.5,
     "fuse_lit": true,
@@ -17049,7 +14633,7 @@ minecraft:explode: {
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -17060,7 +14644,7 @@ minecraft:explode: {
 ```
 
 ### fireball.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -17072,7 +14656,7 @@ minecraft:explode: {
 ```
 
 ### tnt.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 4,
     "fuse_lit": true,
@@ -17081,8 +14665,7 @@ minecraft:explode: {
 }
 ```
 
-### tnt.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": {
         "range_min": 0.5,
@@ -17095,7 +14678,7 @@ minecraft:explode: {
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 4,
     "fuse_lit": true,
@@ -17104,8 +14687,7 @@ minecraft:explode: {
 }
 ```
 
-### tnt_minecart.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -17115,7 +14697,7 @@ minecraft:explode: {
 ```
 
 ### wither_skull.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -17126,7 +14708,7 @@ minecraft:explode: {
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 minecraft:explode: {
     "fuse_length": 0,
     "fuse_lit": true,
@@ -17139,68 +14721,53 @@ minecraft:explode: {
 
 # minecraft:fire_immune
 ### blaze.json
-```JSON
-minecraft:fire_immune: {}
+```json
+minecraft:fire_immune: true
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 minecraft:fire_immune: true
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:fire_immune: true
 ```
 
 ### ghast.json
-```JSON
-minecraft:fire_immune: {}
-```
-
-### magma_cube.json
-```JSON
-minecraft:fire_immune: {}
-```
-
-### npc.json
-```JSON
+```json
 minecraft:fire_immune: true
 ```
 
-### strider.json
-```JSON
-minecraft:fire_immune: {}
+### magma_cube.json
+```json
+minecraft:fire_immune: true
 ```
 
 ### vex.json
-```JSON
-minecraft:fire_immune: {}
+```json
+minecraft:fire_immune: true
 ```
 
 ### wither.json
-```JSON
-minecraft:fire_immune: {}
+```json
+minecraft:fire_immune: true
 ```
 
 ### wither_skeleton.json
-```JSON
-minecraft:fire_immune: {}
-```
-
-### zoglin.json
-```JSON
-minecraft:fire_immune: {}
+```json
+minecraft:fire_immune: true
 ```
 
 ### zombie_pigman.json
-```JSON
-minecraft:fire_immune: {}
+```json
+minecraft:fire_immune: true
 ```
 
 # minecraft:flocking
 ### dolphin.json
-```JSON
+```json
 minecraft:flocking: {
     "in_water": false,
     "match_variants": false,
@@ -17224,7 +14791,7 @@ minecraft:flocking: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:flocking: {
     "in_water": true,
     "match_variants": false,
@@ -17248,7 +14815,7 @@ minecraft:flocking: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:flocking: {
     "in_water": true,
     "match_variants": false,
@@ -17272,7 +14839,7 @@ minecraft:flocking: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:flocking: {
     "in_water": true,
     "match_variants": false,
@@ -17296,7 +14863,7 @@ minecraft:flocking: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:flocking: {
     "in_water": true,
     "match_variants": true,
@@ -17321,14 +14888,14 @@ minecraft:flocking: {
 
 # minecraft:flying_speed
 ### bee.json
-```JSON
+```json
 minecraft:flying_speed: {
     "value": 0.15
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:flying_speed: {
     "value": 0.6
 }
@@ -17336,14 +14903,14 @@ minecraft:flying_speed: {
 
 # minecraft:follow_range
 ### bee.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 1024
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 48,
     "max": 48
@@ -17351,7 +14918,7 @@ minecraft:follow_range: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 48,
     "max": 48
@@ -17359,7 +14926,7 @@ minecraft:follow_range: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 16,
     "max": 16
@@ -17367,7 +14934,7 @@ minecraft:follow_range: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 32,
     "max": 32
@@ -17375,14 +14942,14 @@ minecraft:follow_range: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64,
     "max": 64
@@ -17390,7 +14957,7 @@ minecraft:follow_range: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 16,
     "max": 16
@@ -17398,14 +14965,14 @@ minecraft:follow_range: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 40,
     "max": 40
@@ -17413,64 +14980,57 @@ minecraft:follow_range: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64,
     "max": 64
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:follow_range: {
-    "value": 64
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 48
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 1024
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 128
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:follow_range: {
     "value": 64
 }
@@ -17478,7 +15038,7 @@ minecraft:follow_range: {
 
 # minecraft:genetics
 ### panda.json
-```JSON
+```json
 minecraft:genetics: {
     "mutation_rate": 0.03125,
     "genes": [
@@ -17544,8 +15104,7 @@ minecraft:genetics: {
 ```
 
 # minecraft:giveable
-### panda.json
-```JSON
+```json
 minecraft:giveable: {
     "triggers": {
         "cooldown": 3.0,
@@ -17561,50 +15120,9 @@ minecraft:giveable: {
 }
 ```
 
-# minecraft:group_size
-### hoglin.json
-```JSON
-minecraft:group_size: {
-    "radius": 32,
-    "filters": {
-        "all_of": [
-            {
-                "test": "has_component",
-                "operator": "!=",
-                "value": "minecraft:is_baby"
-            },
-            {
-                "test": "is_family",
-                "value": "hoglin"
-            }
-        ]
-    }
-}
-```
-
-### piglin.json
-```JSON
-minecraft:group_size: {
-    "radius": 32,
-    "filters": {
-        "all_of": [
-            {
-                "test": "has_component",
-                "operator": "!=",
-                "value": "minecraft:is_baby"
-            },
-            {
-                "test": "is_family",
-                "value": "piglin"
-            }
-        ]
-    }
-}
-```
-
 # minecraft:grows_crop
 ### bee.json
-```JSON
+```json
 minecraft:grows_crop: {
     "charges": 10,
     "chance": 0.03
@@ -17613,7 +15131,7 @@ minecraft:grows_crop: {
 
 # minecraft:healable
 ### cat.json
-```JSON
+```json
 minecraft:healable: {
     "items": [
         {
@@ -17629,7 +15147,7 @@ minecraft:healable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:healable: {
     "items": [
         {
@@ -17665,7 +15183,7 @@ minecraft:healable: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:healable: {
     "items": [
         {
@@ -17701,7 +15219,7 @@ minecraft:healable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:healable: {
     "items": [
         {
@@ -17717,7 +15235,7 @@ minecraft:healable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:healable: {
     "items": [
         {
@@ -17753,7 +15271,7 @@ minecraft:healable: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:healable: {
     "force_use": true,
     "filters": {
@@ -17779,7 +15297,7 @@ minecraft:healable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:healable: {
     "items": [
         {
@@ -17860,7 +15378,7 @@ minecraft:healable: {
 
 # minecraft:health
 ### armor_stand.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -17868,7 +15386,7 @@ minecraft:health: {
 ```
 
 ### bat.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -17876,7 +15394,7 @@ minecraft:health: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -17884,7 +15402,7 @@ minecraft:health: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -17892,15 +15410,14 @@ minecraft:health: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -17908,7 +15425,7 @@ minecraft:health: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:health: {
     "value": 12,
     "max": 12
@@ -17916,7 +15433,7 @@ minecraft:health: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:health: {
     "value": 4,
     "max": 4
@@ -17924,7 +15441,7 @@ minecraft:health: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -17932,7 +15449,7 @@ minecraft:health: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -17940,7 +15457,7 @@ minecraft:health: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -17948,7 +15465,7 @@ minecraft:health: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:health: {
     "value": {
         "range_min": 15,
@@ -17958,7 +15475,7 @@ minecraft:health: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -17966,7 +15483,7 @@ minecraft:health: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:health: {
     "value": 80,
     "max": 80
@@ -17974,7 +15491,7 @@ minecraft:health: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:health: {
     "value": 40,
     "max": 40
@@ -17982,7 +15499,7 @@ minecraft:health: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:health: {
     "value": 8,
     "max": 8
@@ -17990,7 +15507,7 @@ minecraft:health: {
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 minecraft:health: {
     "value": 1,
     "max": 1
@@ -17998,7 +15515,7 @@ minecraft:health: {
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:health: {
     "value": 200,
     "max": 200
@@ -18006,7 +15523,7 @@ minecraft:health: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:health: {
     "value": 24,
     "max": 24
@@ -18014,7 +15531,7 @@ minecraft:health: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -18022,7 +15539,7 @@ minecraft:health: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18030,7 +15547,7 @@ minecraft:health: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -18038,23 +15555,15 @@ minecraft:health: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:health: {
     "value": 30,
     "max": 30
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:health: {
-    "value": 40,
-    "max": 40
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:health: {
     "value": {
         "range_min": 15,
@@ -18064,7 +15573,7 @@ minecraft:health: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18072,7 +15581,7 @@ minecraft:health: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:health: {
     "value": 100,
     "max": 100
@@ -18080,7 +15589,7 @@ minecraft:health: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:health: {
     "value": {
         "range_min": 15,
@@ -18090,23 +15599,21 @@ minecraft:health: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:health: {
     "value": 16,
     "max": 16
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:health: {
     "value": 4,
     "max": 4
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:health: {
     "value": 1,
     "max": 1
@@ -18114,7 +15621,7 @@ minecraft:health: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -18122,7 +15629,7 @@ minecraft:health: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:health: {
     "value": {
         "range_min": 15,
@@ -18132,15 +15639,14 @@ minecraft:health: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
 }
 ```
 
-### ocelot.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18148,15 +15654,14 @@ minecraft:health: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -18164,7 +15669,7 @@ minecraft:health: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -18172,7 +15677,7 @@ minecraft:health: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18180,23 +15685,15 @@ minecraft:health: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:health: {
-    "value": 16,
-    "max": 16
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:health: {
     "value": 24,
     "max": 24
@@ -18204,14 +15701,14 @@ minecraft:health: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:health: {
     "value": 30
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -18219,7 +15716,7 @@ minecraft:health: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:health: {
     "value": 3,
     "max": 3
@@ -18227,7 +15724,7 @@ minecraft:health: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:health: {
     "max": 100,
     "value": 100
@@ -18235,23 +15732,21 @@ minecraft:health: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
 }
 ```
 
-### salmon.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
 }
 ```
 
-### salmon.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -18259,7 +15754,7 @@ minecraft:health: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:health: {
     "value": 8,
     "max": 8
@@ -18267,7 +15762,7 @@ minecraft:health: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:health: {
     "value": 30,
     "max": 30
@@ -18275,7 +15770,7 @@ minecraft:health: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:health: {
     "value": 8,
     "max": 8
@@ -18283,7 +15778,7 @@ minecraft:health: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18291,7 +15786,7 @@ minecraft:health: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:health: {
     "value": 15,
     "max": 15
@@ -18299,23 +15794,21 @@ minecraft:health: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:health: {
     "value": 16,
     "max": 16
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:health: {
     "value": 4,
     "max": 4
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:health: {
     "value": 1,
     "max": 1
@@ -18323,7 +15816,7 @@ minecraft:health: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:health: {
     "value": 4,
     "max": 4
@@ -18331,7 +15824,7 @@ minecraft:health: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:health: {
     "value": 16,
     "max": 16
@@ -18339,7 +15832,7 @@ minecraft:health: {
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:health: {
     "value": 10,
     "max": 10
@@ -18347,23 +15840,15 @@ minecraft:health: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
 }
 ```
 
-### strider.json
-```JSON
-minecraft:health: {
-    "value": 15,
-    "max": 15
-}
-```
-
 ### tripod_camera.json
-```JSON
+```json
 minecraft:health: {
     "value": 4,
     "max": 4
@@ -18371,7 +15856,7 @@ minecraft:health: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:health: {
     "value": 6,
     "max": 6
@@ -18379,14 +15864,14 @@ minecraft:health: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:health: {
     "value": 30
 }
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:health: {
     "value": 14,
     "max": 14
@@ -18394,7 +15879,7 @@ minecraft:health: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18402,7 +15887,7 @@ minecraft:health: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18410,7 +15895,7 @@ minecraft:health: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:health: {
     "value": 24,
     "max": 24
@@ -18418,7 +15903,7 @@ minecraft:health: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18426,7 +15911,7 @@ minecraft:health: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:health: {
     "value": 26,
     "max": 26
@@ -18434,7 +15919,7 @@ minecraft:health: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:health: {
     "value": 600,
     "max": 600
@@ -18442,7 +15927,7 @@ minecraft:health: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18450,39 +15935,22 @@ minecraft:health: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:health: {
     "value": 8,
     "max": 8
 }
 ```
 
-### wolf.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
 }
 ```
 
-### xp_orb.json
-```JSON
-minecraft:health: {
-    "value": 5,
-    "max": 5
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:health: {
-    "value": 40,
-    "max": 40
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18490,7 +15958,7 @@ minecraft:health: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:health: {
     "value": 15,
     "max": 15
@@ -18498,7 +15966,7 @@ minecraft:health: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18506,7 +15974,7 @@ minecraft:health: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18514,7 +15982,7 @@ minecraft:health: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:health: {
     "value": 20,
     "max": 20
@@ -18523,31 +15991,31 @@ minecraft:health: {
 
 # minecraft:hide
 ### villager_v2.json
-```JSON
+```json
 minecraft:hide: {}
 ```
 
 # minecraft:home
 ### bee.json
-```JSON
+```json
 minecraft:home: {}
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:home: {}
 ```
 
 # minecraft:horse.jump_strength
 ### donkey.json
-```JSON
+```json
 minecraft:horse.jump_strength: {
     "value": 0.5
 }
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:horse.jump_strength: {
     "value": {
         "range_min": 0.4,
@@ -18557,14 +16025,14 @@ minecraft:horse.jump_strength: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:horse.jump_strength: {
     "value": 0.5
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:horse.jump_strength: {
     "value": {
         "range_min": 0.4,
@@ -18574,7 +16042,7 @@ minecraft:horse.jump_strength: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:horse.jump_strength: {
     "value": {
         "range_min": 0.4,
@@ -18585,7 +16053,7 @@ minecraft:horse.jump_strength: {
 
 # minecraft:hurt_on_condition
 ### armor_stand.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18603,7 +16071,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### arrow.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18621,7 +16089,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### bat.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18639,7 +16107,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18656,8 +16124,7 @@ minecraft:hurt_on_condition: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18669,7 +16136,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18686,7 +16153,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18704,7 +16171,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18722,7 +16189,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18740,7 +16207,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18758,7 +16225,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18776,7 +16243,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18794,7 +16261,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18812,7 +16279,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18830,7 +16297,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18848,7 +16315,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18866,7 +16333,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18893,7 +16360,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18911,7 +16378,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18929,7 +16396,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18947,25 +16414,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### guardian.json
-```JSON
-minecraft:hurt_on_condition: {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -18983,7 +16432,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19001,7 +16450,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19019,7 +16468,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19037,7 +16486,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19055,7 +16504,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19073,7 +16522,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19091,7 +16540,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19109,7 +16558,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19127,7 +16576,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19145,7 +16594,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19163,25 +16612,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### pig.json
-```JSON
-minecraft:hurt_on_condition: {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19199,7 +16630,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19217,7 +16648,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19235,7 +16666,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19253,7 +16684,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19271,7 +16702,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19289,7 +16720,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19307,7 +16738,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19325,7 +16756,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19343,7 +16774,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19361,7 +16792,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19379,7 +16810,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19397,7 +16828,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19415,7 +16846,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19433,7 +16864,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19469,7 +16900,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19487,7 +16918,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19505,7 +16936,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19522,25 +16953,8 @@ minecraft:hurt_on_condition: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:hurt_on_condition: {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_water_or_rain",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "drowning",
-            "damage_per_tick": 1
-        }
-    ]
-}
-```
-
 ### tripod_camera.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19558,7 +16972,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19576,7 +16990,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19594,7 +17008,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19612,7 +17026,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19630,7 +17044,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19648,7 +17062,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19666,7 +17080,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19684,7 +17098,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19702,7 +17116,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19720,7 +17134,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19738,7 +17152,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19756,7 +17170,7 @@ minecraft:hurt_on_condition: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:hurt_on_condition: {
     "damage_conditions": [
         {
@@ -19775,28 +17189,28 @@ minecraft:hurt_on_condition: {
 
 # minecraft:input_ground_controlled
 ### donkey.json
-```JSON
+```json
 minecraft:input_ground_controlled: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:input_ground_controlled: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:input_ground_controlled: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:input_ground_controlled: {}
 ```
 
 # minecraft:insomnia
 ### player.json
-```JSON
+```json
 minecraft:insomnia: {
     "days_until_insomnia": 3
 }
@@ -19804,7 +17218,7 @@ minecraft:insomnia: {
 
 # minecraft:interact
 ### cow.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -19835,7 +17249,7 @@ minecraft:interact: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": {
         "on_interact": {
@@ -19871,7 +17285,7 @@ minecraft:interact: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -19903,7 +17317,7 @@ minecraft:interact: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -19935,7 +17349,7 @@ minecraft:interact: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -20506,7 +17920,7 @@ minecraft:interact: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -20538,7 +17952,7 @@ minecraft:interact: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -20559,40 +17973,8 @@ minecraft:interact: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:interact: {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "all_of": [
-                        {
-                            "test": "has_equipment",
-                            "subject": "other",
-                            "domain": "hand",
-                            "value": "gold_ingot"
-                        },
-                        {
-                            "test": "is_family",
-                            "subject": "other",
-                            "value": "player"
-                        }
-                    ]
-                }
-            },
-            "barter": true,
-            "admire": true,
-            "use_item": true,
-            "cooldown_after_being_attacked": 20,
-            "interact_text": "action.interact.barter"
-        }
-    ]
-}
-```
-
 ### sheep.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -20638,7 +18020,7 @@ minecraft:interact: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -21102,7 +18484,7 @@ minecraft:interact: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -21140,30 +18522,8 @@ minecraft:interact: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:interact: {
-    "interactions": [
-        {
-            "on_interact": {
-                "filters": {
-                    "test": "has_equipment",
-                    "subject": "other",
-                    "domain": "hand",
-                    "value": "saddle"
-                },
-                "event": "minecraft:on_saddled"
-            },
-            "use_item": true,
-            "play_sounds": "saddle",
-            "interact_text": "action.interact.saddle"
-        }
-    ]
-}
-```
-
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": [
         {
@@ -21234,7 +18594,7 @@ minecraft:interact: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": {
         "on_interact": {
@@ -21263,7 +18623,7 @@ minecraft:interact: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:interact: {
     "interactions": {
         "on_interact": {
@@ -21293,7 +18653,7 @@ minecraft:interact: {
 
 # minecraft:inventory
 ### chest_minecart.json
-```JSON
+```json
 minecraft:inventory: {
     "container_type": "minecart_chest",
     "inventory_size": 27,
@@ -21302,12 +18662,12 @@ minecraft:inventory: {
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:inventory: {}
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 16,
     "container_type": "horse"
@@ -21315,7 +18675,7 @@ minecraft:inventory: {
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:inventory: {
     "container_type": "minecart_hopper",
     "inventory_size": 5,
@@ -21324,7 +18684,7 @@ minecraft:inventory: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 2,
     "container_type": "horse"
@@ -21332,7 +18692,7 @@ minecraft:inventory: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 16,
     "container_type": "horse",
@@ -21341,7 +18701,7 @@ minecraft:inventory: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 16,
     "container_type": "horse"
@@ -21349,22 +18709,15 @@ minecraft:inventory: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 1,
     "private": true
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:inventory: {
-    "inventory_size": 8
-}
-```
-
 ### villager.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 8,
     "private": true
@@ -21372,7 +18725,7 @@ minecraft:inventory: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:inventory: {
     "inventory_size": 8,
     "private": true
@@ -21381,219 +18734,199 @@ minecraft:inventory: {
 
 # minecraft:is_baby
 ### bee.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### fox.json
-```JSON
-minecraft:is_baby: {}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### pig.json
-```JSON
-minecraft:is_baby: {}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### squid.json
-```JSON
-minecraft:is_baby: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### wolf.json
-```JSON
-minecraft:is_baby: {}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:is_baby: {}
 ```
 
 # minecraft:is_charged
 ### bee.json
-```JSON
+```json
 minecraft:is_charged: {}
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:is_charged: {}
 ```
 
 # minecraft:is_chested
 ### donkey.json
-```JSON
+```json
 minecraft:is_chested: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:is_chested: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:is_chested: {}
 ```
 
 # minecraft:is_dyeable
 ### cat.json
-```JSON
+```json
 minecraft:is_dyeable: {
     "interact_text": "action.interact.dye"
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:is_dyeable: {
     "interact_text": "action.interact.dye"
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:is_dyeable: {
     "interact_text": "action.interact.dye"
 }
@@ -21601,593 +18934,519 @@ minecraft:is_dyeable: {
 
 # minecraft:is_hidden_when_invisible
 ### player.json
-```JSON
+```json
 minecraft:is_hidden_when_invisible: {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:is_hidden_when_invisible: {}
 ```
 
 # minecraft:is_ignited
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:is_ignited: {}
 ```
 
-### tnt_minecart.json
-```JSON
+```json
 minecraft:is_ignited: {}
 ```
 
 # minecraft:is_illager_captain
 ### pillager.json
-```JSON
+```json
 minecraft:is_illager_captain: {}
 ```
 
-### pillager.json
-```JSON
-minecraft:is_illager_captain: {}
-```
-
-### vindicator.json
-```JSON
+```json
 minecraft:is_illager_captain: {}
 ```
 
 ### vindicator.json
-```JSON
+```json
+minecraft:is_illager_captain: {}
+```
+
+```json
 minecraft:is_illager_captain: {}
 ```
 
 # minecraft:is_saddled
 ### donkey.json
-```JSON
+```json
 minecraft:is_saddled: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:is_saddled: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:is_saddled: {}
 ```
 
 ### pig.json
-```JSON
-minecraft:is_saddled: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:is_saddled: {}
 ```
 
 # minecraft:is_shaking
-### hoglin.json
-```JSON
-minecraft:is_shaking: {}
-```
-
 ### husk.json
-```JSON
+```json
 minecraft:is_shaking: {}
 ```
 
-### husk.json
-```JSON
-minecraft:is_shaking: {}
-```
-
-### piglin.json
-```JSON
-minecraft:is_shaking: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:is_shaking: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:is_shaking: {}
 ```
 
-### zombie.json
-```JSON
+```json
 minecraft:is_shaking: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:is_shaking: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:is_shaking: {}
 ```
 
 # minecraft:is_sheared
 ### sheep.json
-```JSON
+```json
 minecraft:is_sheared: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:is_sheared: {}
 ```
 
 # minecraft:is_stackable
 ### boat.json
-```JSON
+```json
 minecraft:is_stackable: {}
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 minecraft:is_stackable: {
     "value": true
 }
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:is_stackable: {}
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:is_stackable: {}
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:is_stackable: {}
 ```
 
 # minecraft:is_stunned
 ### ravager.json
-```JSON
+```json
 minecraft:is_stunned: {}
 ```
 
 # minecraft:is_tamed
 ### cat.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:is_tamed: {}
 ```
 
 # minecraft:item_controllable
 ### pig.json
-```JSON
+```json
 minecraft:item_controllable: {
     "control_items": "carrotOnAStick"
 }
 ```
 
-### strider.json
-```JSON
-minecraft:item_controllable: {
-    "control_items": "warped_fungus_on_a_stick"
-}
-```
-
 # minecraft:item_hopper
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:item_hopper: {}
 ```
 
 # minecraft:jump.dynamic
 ### rabbit.json
-```JSON
+```json
 minecraft:jump.dynamic: {}
 ```
 
 # minecraft:jump.static
 ### bat.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:jump.static: {
     "jump_power": 0.6
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### guardian.json
-```JSON
-minecraft:jump.static: {}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### pig.json
-```JSON
-minecraft:jump.static: {}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### stray.json
-```JSON
-minecraft:jump.static: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### wolf.json
-```JSON
-minecraft:jump.static: {}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:jump.static: {}
 ```
 
 # minecraft:knockback_resistance
 ### ender_dragon.json
-```JSON
+```json
 minecraft:knockback_resistance: {
     "value": 100,
     "max": 100
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:knockback_resistance: {
-    "value": 0.5
-}
-```
-
 ### iron_golem.json
-```JSON
+```json
 minecraft:knockback_resistance: {
     "value": 1.0
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:knockback_resistance: {
     "value": 0.5
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:knockback_resistance: {
-    "value": 0.5
-}
-```
-
-# minecraft:lava_movement
-### strider.json
-```JSON
-minecraft:lava_movement: {
-    "value": 0.32
 }
 ```
 
 # minecraft:leashable
 ### bee.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22196,7 +19455,7 @@ minecraft:leashable: {
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22205,7 +19464,7 @@ minecraft:leashable: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22214,7 +19473,7 @@ minecraft:leashable: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22223,7 +19482,7 @@ minecraft:leashable: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22232,7 +19491,7 @@ minecraft:leashable: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22241,7 +19500,7 @@ minecraft:leashable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22250,16 +19509,7 @@ minecraft:leashable: {
 ```
 
 ### fox.json
-```JSON
-minecraft:leashable: {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22268,7 +19518,7 @@ minecraft:leashable: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22277,7 +19527,7 @@ minecraft:leashable: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22286,7 +19536,7 @@ minecraft:leashable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22296,7 +19546,7 @@ minecraft:leashable: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22305,7 +19555,7 @@ minecraft:leashable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22314,7 +19564,7 @@ minecraft:leashable: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22331,7 +19581,7 @@ minecraft:leashable: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22340,7 +19590,7 @@ minecraft:leashable: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22349,7 +19599,7 @@ minecraft:leashable: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22358,7 +19608,7 @@ minecraft:leashable: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22367,7 +19617,7 @@ minecraft:leashable: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22376,7 +19626,7 @@ minecraft:leashable: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22385,7 +19635,7 @@ minecraft:leashable: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22394,16 +19644,7 @@ minecraft:leashable: {
 ```
 
 ### squid.json
-```JSON
-minecraft:leashable: {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22412,7 +19653,7 @@ minecraft:leashable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22428,17 +19669,8 @@ minecraft:leashable: {
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:leashable: {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
 ### zombie_horse.json
-```JSON
+```json
 minecraft:leashable: {
     "soft_distance": 4.0,
     "hard_distance": 6.0,
@@ -22448,7 +19680,7 @@ minecraft:leashable: {
 
 # minecraft:lookat
 ### enderman.json
-```JSON
+```json
 minecraft:lookat: {
     "search_radius": 64.0,
     "set_target": true,
@@ -22474,525 +19706,475 @@ minecraft:lookat: {
 
 # minecraft:loot
 ### armor_stand.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/armor_stand.json"
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/blaze.json"
 }
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/boat.json"
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/cat.json"
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/spider.json"
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/chicken.json"
 }
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/cow.json"
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/creeper.json"
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/dolphin.json"
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/drowned.json"
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/elder_guardian.json"
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/enderman.json"
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/evocation_illager.json"
 }
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/fish.json"
 }
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/gameplay/fishing.json"
 }
 ```
 
-### fishing_hook.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/gameplay/jungle_fishing.json"
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/fox.json"
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/ghast.json"
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/guardian.json"
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:loot: {
-    "table": "loot_tables/entities/hoglin.json"
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/iron_golem.json"
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/llama.json"
 }
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/magma_cube.json"
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/magma_cube.json"
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/mooshroom.json"
 }
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
-### npc.json
-```JSON
-minecraft:loot: {
-    "table": "loot_tables/empty.json"
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/ocelot.json"
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/panda.json"
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/parrot.json"
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/phantom.json"
 }
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/pig.json"
 }
 ```
 
-### pig.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/pig_saddled.json"
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:loot: {
-    "table": "loot_tables/entities/piglin.json"
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/pillager.json"
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/pillager_raid.json"
 }
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/empty.json"
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/polar_bear.json"
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/pufferfish.json"
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/rabbit.json"
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/ravager.json"
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/salmon_normal.json"
 }
 ```
 
-### salmon.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/salmon_normal.json"
 }
 ```
 
-### salmon.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/salmon_large.json"
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/sheep_sheared.json"
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/sheep.json"
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/shulker.json"
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/silverfish.json"
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/skeleton.json"
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/skeleton_horse.json"
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/slime.json"
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/snowman.json"
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/spider.json"
 }
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/squid.json"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/stray.json"
 }
 ```
 
-### strider.json
-```JSON
-minecraft:loot: {
-    "table": "loot_tables/entities/strider_saddled.json"
-}
-```
-
-### strider.json
-```JSON
-minecraft:loot: {
-    "table": "loot_tables/entities/strider.json"
-}
-```
-
 ### tripod_camera.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/empty.json"
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/tropicalfish.json"
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/sea_turtle.json"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/vindication_illager.json"
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/vindicator_raid.json"
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/witch.json"
 }
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/wither_boss.json"
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/wither_skeleton.json"
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/wolf.json"
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:loot: {
-    "table": "loot_tables/entities/zoglin.json"
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/zombie_horse.json"
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/zombie_pigman.json"
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:loot: {
     "table": "loot_tables/entities/zombie.json"
 }
@@ -23000,433 +20182,379 @@ minecraft:loot: {
 
 # minecraft:managed_wandering_trader
 ### wandering_trader.json
-```JSON
+```json
 minecraft:managed_wandering_trader: {}
 ```
 
 # minecraft:mark_variant
 ### bee.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": -1
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": -1
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 6
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 7
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 8
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 9
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 0
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 6
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 1
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 2
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 3
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 4
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 5
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:mark_variant: {
     "value": 6
 }
@@ -23434,7 +20562,7 @@ minecraft:mark_variant: {
 
 # minecraft:mob_effect
 ### pufferfish.json
-```JSON
+```json
 minecraft:mob_effect: {
     "effect_range": 0.2,
     "mob_effect": "poison",
@@ -23458,175 +20586,159 @@ minecraft:mob_effect: {
 
 # minecraft:movement
 ### bat.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.1
 }
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.2
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.1
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.175
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
 ```
 
-### drowned.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
-### enderman.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.45
 }
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.5
 }
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.1
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.03
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.12
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:movement: {
-    "value": 0.36
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:movement: {
-    "value": 0.3
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:movement: {
     "value": {
         "range_min": 0.1125,
@@ -23636,196 +20748,170 @@ minecraft:movement: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.35
 }
 ```
 
-### husk.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.75
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.66
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.6
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.175
 }
 ```
 
-### npc.json
-```JSON
-minecraft:movement: {
-    "value": 0.5
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.15
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.07
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.4
 }
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:movement: {
     "value": 1.8
 }
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:movement: {
-    "value": 0.42
-}
-```
-
-### piglin.json
-```JSON
-minecraft:movement: {
-    "value": 0.35
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.35
 }
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.1
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.13
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.0
 }
 ```
 
-### ravager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.12
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.0,
     "max": 0.0
@@ -23833,217 +20919,198 @@ minecraft:movement: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.2
 }
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.6
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.4
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.2
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.2
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
-### strider.json
-```JSON
-minecraft:movement: {
-    "value": 0.16
-}
-```
-
 ### tropicalfish.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.12
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.1
 }
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:movement: {
     "value": 1.0
 }
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.5
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.5
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.35
 }
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.5
 }
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.25
 }
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.3
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:movement: {
-    "value": 0.25
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.35
 }
 ```
 
-### zombie.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.2
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.35
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.35
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:movement: {
     "value": 0.23
 }
@@ -24051,7 +21118,7 @@ minecraft:movement: {
 
 # minecraft:movement.amphibious
 ### turtle.json
-```JSON
+```json
 minecraft:movement.amphibious: {
     "max_turn": 5.0
 }
@@ -24059,277 +21126,257 @@ minecraft:movement.amphibious: {
 
 # minecraft:movement.basic
 ### bat.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### fox.json
-```JSON
-minecraft:movement.basic: {}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### pig.json
-```JSON
-minecraft:movement.basic: {}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### stray.json
-```JSON
-minecraft:movement.basic: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:movement.basic: {
     "max_turn": 180.0
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### wolf.json
-```JSON
-minecraft:movement.basic: {}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:movement.basic: {}
 ```
 
 # minecraft:movement.fly
 ### parrot.json
-```JSON
+```json
 minecraft:movement.fly: {}
 ```
 
 # minecraft:movement.generic
 ### drowned.json
-```JSON
+```json
 minecraft:movement.generic: {}
 ```
 
 # minecraft:movement.glide
 ### phantom.json
-```JSON
+```json
 minecraft:movement.glide: {
     "start_speed": 0.1,
     "speed_when_turning": 0.2
@@ -24338,13 +21385,13 @@ minecraft:movement.glide: {
 
 # minecraft:movement.hover
 ### bee.json
-```JSON
+```json
 minecraft:movement.hover: {}
 ```
 
 # minecraft:movement.jump
 ### magma_cube.json
-```JSON
+```json
 minecraft:movement.jump: {
     "jump_delay": [
         2.0,
@@ -24353,8 +21400,7 @@ minecraft:movement.jump: {
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:movement.jump: {
     "jump_delay": [
         2.0,
@@ -24363,8 +21409,7 @@ minecraft:movement.jump: {
 }
 ```
 
-### magma_cube.json
-```JSON
+```json
 minecraft:movement.jump: {
     "jump_delay": [
         0.667,
@@ -24374,7 +21419,7 @@ minecraft:movement.jump: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:movement.jump: {
     "jump_delay": [
         0.5,
@@ -24383,8 +21428,7 @@ minecraft:movement.jump: {
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:movement.jump: {
     "jump_delay": [
         0.5,
@@ -24393,8 +21437,7 @@ minecraft:movement.jump: {
 }
 ```
 
-### slime.json
-```JSON
+```json
 minecraft:movement.jump: {
     "jump_delay": [
         0.16,
@@ -24405,44 +21448,44 @@ minecraft:movement.jump: {
 
 # minecraft:movement.skip
 ### rabbit.json
-```JSON
+```json
 minecraft:movement.skip: {}
 ```
 
 # minecraft:movement.sway
 ### elder_guardian.json
-```JSON
+```json
 minecraft:movement.sway: {}
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:movement.sway: {
     "sway_amplitude": 0.0
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:movement.sway: {}
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:movement.sway: {
     "sway_amplitude": 0.0
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:movement.sway: {
     "sway_amplitude": 0.0
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:movement.sway: {
     "sway_amplitude": 0.0
 }
@@ -24450,190 +21493,172 @@ minecraft:movement.sway: {
 
 # minecraft:nameable
 ### armor_stand.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### bat.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### guardian.json
-```JSON
-minecraft:nameable: {}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
-### npc.json
-```JSON
-minecraft:nameable: {
-    "always_show": true,
-    "allow_name_tag_renaming": false
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### pig.json
-```JSON
-minecraft:nameable: {}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:nameable: {
     "always_show": true,
     "allow_name_tag_renaming": false
@@ -24641,112 +21666,107 @@ minecraft:nameable: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### stray.json
-```JSON
-minecraft:nameable: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:nameable: {
     "default_trigger": {
         "event": "minecraft:stop_johnny",
@@ -24765,65 +21785,60 @@ minecraft:nameable: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### wolf.json
-```JSON
-minecraft:nameable: {}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:nameable: {}
 ```
 
 # minecraft:navigation.climb
 ### cave_spider.json
-```JSON
+```json
 minecraft:navigation.climb: {
     "can_path_over_water": true
 }
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:navigation.climb: {
     "can_path_over_water": true
 }
@@ -24831,14 +21846,14 @@ minecraft:navigation.climb: {
 
 # minecraft:navigation.float
 ### bat.json
-```JSON
+```json
 minecraft:navigation.float: {
     "can_path_over_water": true
 }
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:navigation.float: {
     "can_path_over_water": true
 }
@@ -24846,16 +21861,15 @@ minecraft:navigation.float: {
 
 # minecraft:navigation.fly
 ### parrot.json
-```JSON
+```json
 minecraft:navigation.fly: {
-    "can_path_over_water": true,
-    "can_path_from_air": true
+    "can_path_over_water": true
 }
 ```
 
 # minecraft:navigation.generic
 ### dolphin.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -24866,8 +21880,7 @@ minecraft:navigation.generic: {
 }
 ```
 
-### dolphin.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -24878,8 +21891,7 @@ minecraft:navigation.generic: {
 }
 ```
 
-### dolphin.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -24890,8 +21902,7 @@ minecraft:navigation.generic: {
 }
 ```
 
-### dolphin.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -24903,7 +21914,7 @@ minecraft:navigation.generic: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -24914,8 +21925,7 @@ minecraft:navigation.generic: {
 }
 ```
 
-### drowned.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -24926,8 +21936,7 @@ minecraft:navigation.generic: {
 }
 ```
 
-### drowned.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -24939,7 +21948,7 @@ minecraft:navigation.generic: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -24950,7 +21959,7 @@ minecraft:navigation.generic: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -24962,7 +21971,7 @@ minecraft:navigation.generic: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -24973,7 +21982,7 @@ minecraft:navigation.generic: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -24985,7 +21994,7 @@ minecraft:navigation.generic: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -24997,7 +22006,7 @@ minecraft:navigation.generic: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": false,
     "can_path_over_water": false,
@@ -25009,7 +22018,7 @@ minecraft:navigation.generic: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:navigation.generic: {
     "is_amphibious": true,
     "can_path_over_water": false,
@@ -25022,11 +22031,10 @@ minecraft:navigation.generic: {
 
 # minecraft:navigation.hover
 ### bee.json
-```JSON
+```json
 minecraft:navigation.hover: {
     "can_path_over_water": true,
     "can_sink": false,
-    "can_pass_doors": false,
     "can_path_from_air": true,
     "avoid_water": true,
     "avoid_damage_blocks": true,
@@ -25036,16 +22044,14 @@ minecraft:navigation.hover: {
 
 # minecraft:navigation.walk
 ### blaze.json
-```JSON
+```json
 minecraft:navigation.walk: {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
+    "can_path_over_water": true
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_float": true,
     "avoid_water": true,
@@ -25054,7 +22060,7 @@ minecraft:navigation.walk: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -25062,7 +22068,7 @@ minecraft:navigation.walk: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25071,14 +22077,14 @@ minecraft:navigation.walk: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true
 }
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25087,7 +22093,7 @@ minecraft:navigation.walk: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": false,
     "avoid_water": true
@@ -25095,14 +22101,14 @@ minecraft:navigation.walk: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true
 }
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -25112,16 +22118,7 @@ minecraft:navigation.walk: {
 ```
 
 ### fox.json
-```JSON
-minecraft:navigation.walk: {
-    "can_path_over_water": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25130,7 +22127,7 @@ minecraft:navigation.walk: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25139,7 +22136,7 @@ minecraft:navigation.walk: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -25149,7 +22146,7 @@ minecraft:navigation.walk: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": false,
     "avoid_water": true,
@@ -25158,7 +22155,7 @@ minecraft:navigation.walk: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -25166,7 +22163,7 @@ minecraft:navigation.walk: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true
@@ -25174,7 +22171,7 @@ minecraft:navigation.walk: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25183,7 +22180,7 @@ minecraft:navigation.walk: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25192,7 +22189,7 @@ minecraft:navigation.walk: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25201,7 +22198,7 @@ minecraft:navigation.walk: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_float": true,
     "avoid_water": true,
@@ -25210,7 +22207,7 @@ minecraft:navigation.walk: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true,
@@ -25218,23 +22215,15 @@ minecraft:navigation.walk: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:navigation.walk: {
-    "can_path_over_water": true,
-    "can_open_doors": true
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
@@ -25242,7 +22231,7 @@ minecraft:navigation.walk: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true
@@ -25250,7 +22239,7 @@ minecraft:navigation.walk: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "avoid_damage_blocks": true,
     "can_path_over_water": true,
@@ -25259,7 +22248,7 @@ minecraft:navigation.walk: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true
@@ -25267,19 +22256,19 @@ minecraft:navigation.walk: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:navigation.walk: {}
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "avoid_sun": true,
@@ -25288,7 +22277,7 @@ minecraft:navigation.walk: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "avoid_water": true
@@ -25296,7 +22285,7 @@ minecraft:navigation.walk: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true
@@ -25304,14 +22293,14 @@ minecraft:navigation.walk: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "avoid_water": true
 }
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "can_sink": false
@@ -25319,7 +22308,7 @@ minecraft:navigation.walk: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "avoid_sun": true,
@@ -25327,25 +22316,15 @@ minecraft:navigation.walk: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:navigation.walk: {
-    "can_path_over_lava": true,
-    "avoid_water": true,
-    "can_sink": false,
-    "can_walk_in_lava": true
-}
-```
-
 ### vex.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true
 }
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_path_over_water": true,
@@ -25357,7 +22336,7 @@ minecraft:navigation.walk: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -25367,14 +22346,13 @@ minecraft:navigation.walk: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -25383,7 +22361,7 @@ minecraft:navigation.walk: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "can_pass_doors": true,
@@ -25393,7 +22371,7 @@ minecraft:navigation.walk: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": false
@@ -25401,7 +22379,7 @@ minecraft:navigation.walk: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_water": true
@@ -25409,7 +22387,7 @@ minecraft:navigation.walk: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "avoid_sun": true,
@@ -25418,25 +22396,15 @@ minecraft:navigation.walk: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "can_path_over_water": true,
     "avoid_damage_blocks": true
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:navigation.walk: {
-    "is_amphibious": true,
-    "can_path_over_water": false,
-    "avoid_water": true,
-    "avoid_damage_blocks": true
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -25446,7 +22414,7 @@ minecraft:navigation.walk: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "avoid_water": true
@@ -25454,7 +22422,7 @@ minecraft:navigation.walk: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -25465,7 +22433,7 @@ minecraft:navigation.walk: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -25474,8 +22442,7 @@ minecraft:navigation.walk: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
@@ -25486,124 +22453,28 @@ minecraft:navigation.walk: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
-    "can_break_doors": true,
+    "can_open_doors": true,
     "avoid_sun": false
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:navigation.walk: {
     "is_amphibious": true,
     "can_pass_doors": true,
     "can_open_doors": true,
     "avoid_water": true,
     "avoid_sun": true
-}
-```
-
-# minecraft:npc
-### npc.json
-```JSON
-minecraft:npc: {
-    "npc_data": {
-        "portrait_offsets": {
-            "translate": [
-                -7,
-                50,
-                0
-            ],
-            "scale": [
-                1.75,
-                1.75,
-                1.75
-            ]
-        },
-        "picker_offsets": {
-            "translate": [
-                0,
-                20,
-                0
-            ],
-            "scale": [
-                1.7,
-                1.7,
-                1.7
-            ]
-        },
-        "skin_list": [
-            {
-                "variant": 0
-            },
-            {
-                "variant": 1
-            },
-            {
-                "variant": 2
-            },
-            {
-                "variant": 3
-            },
-            {
-                "variant": 4
-            },
-            {
-                "variant": 5
-            },
-            {
-                "variant": 6
-            },
-            {
-                "variant": 7
-            },
-            {
-                "variant": 8
-            },
-            {
-                "variant": 9
-            },
-            {
-                "variant": 10
-            },
-            {
-                "variant": 11
-            },
-            {
-                "variant": 12
-            },
-            {
-                "variant": 13
-            },
-            {
-                "variant": 14
-            },
-            {
-                "variant": 15
-            },
-            {
-                "variant": 16
-            },
-            {
-                "variant": 17
-            },
-            {
-                "variant": 18
-            },
-            {
-                "variant": 19
-            }
-        ]
-    }
 }
 ```
 
 # minecraft:on_death
 ### ender_dragon.json
-```JSON
+```json
 minecraft:on_death: {
     "event": "minecraft:start_death",
     "target": "self"
@@ -25612,7 +22483,7 @@ minecraft:on_death: {
 
 # minecraft:on_friendly_anger
 ### llama.json
-```JSON
+```json
 minecraft:on_friendly_anger: {
     "event": "minecraft:defend_wandering_trader",
     "target": "self"
@@ -25620,15 +22491,30 @@ minecraft:on_friendly_anger: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:on_friendly_anger: {
     "event": "minecraft:on_anger",
     "target": "self"
 }
 ```
 
+### pillager.json
+```json
+minecraft:on_friendly_anger: {
+    "event": "minecraft:synchronized_ranged_mode",
+    "target": "self"
+}
+```
+
+```json
+minecraft:on_friendly_anger: {
+    "event": "minecraft:synchronized_ranged_mode",
+    "target": "self"
+}
+```
+
 ### polar_bear.json
-```JSON
+```json
 minecraft:on_friendly_anger: {
     "event": "minecraft:on_anger",
     "target": "self"
@@ -25637,7 +22523,7 @@ minecraft:on_friendly_anger: {
 
 # minecraft:on_hurt
 ### ender_crystal.json
-```JSON
+```json
 minecraft:on_hurt: {
     "event": "minecraft:crystal_explode",
     "target": "self"
@@ -25645,57 +22531,38 @@ minecraft:on_hurt: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:on_hurt: {
-    "event": "minecraft:ranged_mode",
+    "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:on_hurt: {
-    "event": "minecraft:ranged_mode",
-    "target": "self"
-}
-```
-
-### pillager.json
-```JSON
-minecraft:on_hurt: {
-    "event": "minecraft:ranged_mode",
+    "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
 # minecraft:on_hurt_by_player
-### pillager.json
-```JSON
+```json
 minecraft:on_hurt_by_player: {
-    "event": "minecraft:ranged_mode",
+    "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:on_hurt_by_player: {
-    "event": "minecraft:ranged_mode",
-    "target": "self"
-}
-```
-
-### pillager.json
-```JSON
-minecraft:on_hurt_by_player: {
-    "event": "minecraft:ranged_mode",
+    "event": "minecraft:synchronized_ranged_mode",
     "target": "self"
 }
 ```
 
 # minecraft:on_start_landing
 ### ender_dragon.json
-```JSON
+```json
 minecraft:on_start_landing: {
     "event": "minecraft:start_land",
     "target": "self"
@@ -25703,8 +22570,7 @@ minecraft:on_start_landing: {
 ```
 
 # minecraft:on_start_takeoff
-### ender_dragon.json
-```JSON
+```json
 minecraft:on_start_takeoff: {
     "event": "minecraft:start_fly",
     "target": "self"
@@ -25713,7 +22579,7 @@ minecraft:on_start_takeoff: {
 
 # minecraft:on_target_acquired
 ### bee.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "attacked",
     "target": "self"
@@ -25721,27 +22587,26 @@ minecraft:on_target_acquired: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry"
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry",
     "target": "self"
 }
 ```
 
-### dolphin.json
-```JSON
+```json
 minecraft:on_target_acquired: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:has_target",
     "target": "self"
@@ -25749,23 +22614,15 @@ minecraft:on_target_acquired: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry",
     "target": "self"
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:on_target_acquired: {
-    "event": "become_angry_event",
-    "target": "self"
-}
-```
-
 ### llama.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "filters": {
         "all_of": [
@@ -25788,7 +22645,7 @@ minecraft:on_target_acquired: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_aggressive",
     "target": "self"
@@ -25796,44 +22653,33 @@ minecraft:on_target_acquired: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:on_scared",
     "target": "self"
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry",
     "target": "self"
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:on_target_acquired: {}
 ```
 
-### piglin.json
-```JSON
-minecraft:on_target_acquired: {
-    "event": "become_angry_event",
-    "target": "self"
-}
-```
-
 ### polar_bear.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:on_scared",
     "target": "self"
 }
 ```
 
-### polar_bear.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:on_anger",
     "target": "self"
@@ -25841,7 +22687,7 @@ minecraft:on_target_acquired: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -25849,7 +22695,7 @@ minecraft:on_target_acquired: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_aggressive",
     "target": "self"
@@ -25857,21 +22703,20 @@ minecraft:on_target_acquired: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry"
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry"
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_aggro",
     "target": "self"
@@ -25879,12 +22724,11 @@ minecraft:on_target_acquired: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:on_target_acquired: {}
 ```
 
-### wolf.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -25892,7 +22736,7 @@ minecraft:on_target_acquired: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:on_target_acquired: {
     "event": "minecraft:become_angry",
     "target": "self"
@@ -25901,25 +22745,23 @@ minecraft:on_target_acquired: {
 
 # minecraft:on_target_escape
 ### creeper.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:stop_exploding",
     "target": "self"
 }
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:on_target_escape: {}
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:on_target_escape: {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:on_calm",
     "target": "self"
@@ -25927,7 +22769,7 @@ minecraft:on_target_escape: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:lost_target",
     "target": "self"
@@ -25935,7 +22777,7 @@ minecraft:on_target_escape: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "filters": {
         "all_of": [
@@ -25958,7 +22800,7 @@ minecraft:on_target_escape: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:become_calm",
     "target": "self"
@@ -25966,7 +22808,7 @@ minecraft:on_target_escape: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:on_calm",
     "target": "self"
@@ -25974,15 +22816,14 @@ minecraft:on_target_escape: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:calm",
     "target": "self"
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:calm",
     "target": "self"
@@ -25990,7 +22831,7 @@ minecraft:on_target_escape: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:become_calm",
     "target": "self"
@@ -25998,7 +22839,7 @@ minecraft:on_target_escape: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:on_target_escape: {
     "event": "minecraft:stop_aggro",
     "target": "self"
@@ -26007,7 +22848,7 @@ minecraft:on_target_escape: {
 
 # minecraft:on_wake_with_owner
 ### cat.json
-```JSON
+```json
 minecraft:on_wake_with_owner: {
     "event": "minecraft:pet_slept_with_owner",
     "target": "self"
@@ -26016,7 +22857,7 @@ minecraft:on_wake_with_owner: {
 
 # minecraft:peek
 ### shulker.json
-```JSON
+```json
 minecraft:peek: {
     "on_open": {
         "event": "minecraft:on_open"
@@ -26032,170 +22873,160 @@ minecraft:peek: {
 
 # minecraft:persistent
 ### armor_stand.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### iron_golem.json
-```JSON
-minecraft:persistent: {}
-```
-
-### llama.json
-```JSON
-minecraft:persistent: {}
-```
-
-### npc.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:persistent: {}
 ```
 
 # minecraft:physics
 ### area_effect_cloud.json
-```JSON
+```json
 minecraft:physics: {
     "has_collision": false
 }
 ```
 
 ### armor_stand.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### arrow.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### bat.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### egg.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false,
     "has_collision": false
@@ -26203,304 +23034,284 @@ minecraft:physics: {
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### eye_of_ender_signal.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### fireball.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### fireworks_rocket.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false
 }
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### guardian.json
-```JSON
-minecraft:physics: {}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### llama_spit.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### mule.json
-```JSON
-minecraft:physics: {}
-```
-
-### npc.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false
 }
 ```
 
 ### pig.json
-```JSON
-minecraft:physics: {}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### shulker_bullet.json
-```JSON
+```json
 minecraft:physics: {
     "has_collision": false
 }
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### small_fireball.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### snowball.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### splash_potion.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### stray.json
-```JSON
-minecraft:physics: {}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### tnt.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:physics: {
     "has_gravity": false,
     "has_collision": false
@@ -26508,98 +23319,88 @@ minecraft:physics: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### wither_skull.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### xp_bottle.json
-```JSON
-minecraft:physics: {}
-```
-
-### xp_orb.json
-```JSON
-minecraft:physics: {}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:physics: {}
 ```
 
 # minecraft:player.exhaustion
 ### player.json
-```JSON
+```json
 minecraft:player.exhaustion: {
     "value": 0,
     "max": 4
@@ -26607,8 +23408,7 @@ minecraft:player.exhaustion: {
 ```
 
 # minecraft:player.experience
-### player.json
-```JSON
+```json
 minecraft:player.experience: {
     "value": 0,
     "max": 1
@@ -26616,8 +23416,7 @@ minecraft:player.experience: {
 ```
 
 # minecraft:player.level
-### player.json
-```JSON
+```json
 minecraft:player.level: {
     "value": 0,
     "max": 24791
@@ -26625,8 +23424,7 @@ minecraft:player.level: {
 ```
 
 # minecraft:player.saturation
-### player.json
-```JSON
+```json
 minecraft:player.saturation: {
     "value": 20
 }
@@ -26634,7 +23432,7 @@ minecraft:player.saturation: {
 
 # minecraft:preferred_path
 ### iron_golem.json
-```JSON
+```json
 minecraft:preferred_path: {
     "max_fall_blocks": 1,
     "jump_cost": 5,
@@ -26721,7 +23519,7 @@ minecraft:preferred_path: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:preferred_path: {
     "max_fall_blocks": 1,
     "jump_cost": 5,
@@ -26807,8 +23605,7 @@ minecraft:preferred_path: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:preferred_path: {
     "max_fall_blocks": 1,
     "jump_cost": 20,
@@ -26896,7 +23693,7 @@ minecraft:preferred_path: {
 
 # minecraft:projectile
 ### arrow.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -26928,8 +23725,7 @@ minecraft:projectile: {
 }
 ```
 
-### arrow.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -26961,8 +23757,7 @@ minecraft:projectile: {
 }
 ```
 
-### arrow.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -26994,8 +23789,7 @@ minecraft:projectile: {
 }
 ```
 
-### arrow.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27028,7 +23822,7 @@ minecraft:projectile: {
 ```
 
 ### dragon_fireball.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "spawn_aoe_cloud": {
@@ -27042,8 +23836,7 @@ minecraft:projectile: {
                 0,
                 239
             ],
-            "affect_owner": false,
-            "reapplication_delay": 20
+            "affect_owner": false
         },
         "remove_on_hit": {}
     },
@@ -27064,7 +23857,7 @@ minecraft:projectile: {
 ```
 
 ### egg.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27095,7 +23888,7 @@ minecraft:projectile: {
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "teleport_owner": {},
@@ -27114,8 +23907,7 @@ minecraft:projectile: {
 }
 ```
 
-### ender_pearl.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "teleport_owner": {},
@@ -27130,7 +23922,7 @@ minecraft:projectile: {
 ```
 
 ### fireball.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "definition_event": {
@@ -27159,7 +23951,7 @@ minecraft:projectile: {
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "stick_in_ground": {}
@@ -27168,7 +23960,7 @@ minecraft:projectile: {
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "douse_fire": {},
@@ -27188,7 +23980,7 @@ minecraft:projectile: {
 ```
 
 ### llama_spit.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27213,7 +24005,7 @@ minecraft:projectile: {
 ```
 
 ### shulker_bullet.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27252,7 +24044,7 @@ minecraft:projectile: {
 ```
 
 ### small_fireball.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27283,7 +24075,7 @@ minecraft:projectile: {
 ```
 
 ### snowball.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27299,20 +24091,14 @@ minecraft:projectile: {
             "on_other_hit": true
         }
     },
-    "anchor": 1,
     "power": 1.5,
     "gravity": 0.03,
-    "angle_offset": 0.0,
-    "offset": [
-        0,
-        -0.1,
-        0
-    ]
+    "angle_offset": 0.0
 }
 ```
 
 ### splash_potion.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "douse_fire": {},
@@ -27327,7 +24113,7 @@ minecraft:projectile: {
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "impact_damage": {
@@ -27360,7 +24146,7 @@ minecraft:projectile: {
 ```
 
 ### wither_skull.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "definition_event": {
@@ -27397,7 +24183,7 @@ minecraft:projectile: {
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "definition_event": {
@@ -27436,7 +24222,7 @@ minecraft:projectile: {
 ```
 
 ### xp_bottle.json
-```JSON
+```json
 minecraft:projectile: {
     "on_hit": {
         "grant_xp": {
@@ -27454,7 +24240,7 @@ minecraft:projectile: {
 
 # minecraft:pushable
 ### armor_stand.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -27462,7 +24248,7 @@ minecraft:pushable: {
 ```
 
 ### arrow.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -27470,7 +24256,7 @@ minecraft:pushable: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27478,7 +24264,7 @@ minecraft:pushable: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27486,7 +24272,7 @@ minecraft:pushable: {
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27494,7 +24280,7 @@ minecraft:pushable: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27502,7 +24288,7 @@ minecraft:pushable: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27510,7 +24296,7 @@ minecraft:pushable: {
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27518,7 +24304,7 @@ minecraft:pushable: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27526,7 +24312,7 @@ minecraft:pushable: {
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27534,7 +24320,7 @@ minecraft:pushable: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27542,7 +24328,7 @@ minecraft:pushable: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27550,7 +24336,7 @@ minecraft:pushable: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27558,7 +24344,7 @@ minecraft:pushable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27566,7 +24352,7 @@ minecraft:pushable: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27574,7 +24360,7 @@ minecraft:pushable: {
 ```
 
 ### egg.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27582,7 +24368,7 @@ minecraft:pushable: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27590,7 +24376,7 @@ minecraft:pushable: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27598,7 +24384,7 @@ minecraft:pushable: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27606,7 +24392,7 @@ minecraft:pushable: {
 ```
 
 ### ender_crystal.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27614,7 +24400,7 @@ minecraft:pushable: {
 ```
 
 ### ender_pearl.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27622,7 +24408,7 @@ minecraft:pushable: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27630,7 +24416,7 @@ minecraft:pushable: {
 ```
 
 ### eye_of_ender_signal.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27638,7 +24424,7 @@ minecraft:pushable: {
 ```
 
 ### fireball.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27646,7 +24432,7 @@ minecraft:pushable: {
 ```
 
 ### fireworks_rocket.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27654,7 +24440,7 @@ minecraft:pushable: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27662,7 +24448,7 @@ minecraft:pushable: {
 ```
 
 ### fishing_hook.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -27670,7 +24456,7 @@ minecraft:pushable: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27678,7 +24464,7 @@ minecraft:pushable: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27686,15 +24472,7 @@ minecraft:pushable: {
 ```
 
 ### guardian.json
-```JSON
-minecraft:pushable: {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27702,7 +24480,7 @@ minecraft:pushable: {
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27710,7 +24488,7 @@ minecraft:pushable: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27718,7 +24496,7 @@ minecraft:pushable: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27726,7 +24504,7 @@ minecraft:pushable: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27734,7 +24512,7 @@ minecraft:pushable: {
 ```
 
 ### lingering_potion.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27742,7 +24520,7 @@ minecraft:pushable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27750,7 +24528,7 @@ minecraft:pushable: {
 ```
 
 ### llama_spit.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27758,7 +24536,7 @@ minecraft:pushable: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27766,7 +24544,7 @@ minecraft:pushable: {
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27774,7 +24552,7 @@ minecraft:pushable: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27782,7 +24560,7 @@ minecraft:pushable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27790,7 +24568,7 @@ minecraft:pushable: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27798,7 +24576,7 @@ minecraft:pushable: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27806,7 +24584,7 @@ minecraft:pushable: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27814,7 +24592,7 @@ minecraft:pushable: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27822,15 +24600,7 @@ minecraft:pushable: {
 ```
 
 ### pig.json
-```JSON
-minecraft:pushable: {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27838,7 +24608,7 @@ minecraft:pushable: {
 ```
 
 ### pillager.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27846,7 +24616,7 @@ minecraft:pushable: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -27854,7 +24624,7 @@ minecraft:pushable: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27862,7 +24632,7 @@ minecraft:pushable: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27870,7 +24640,7 @@ minecraft:pushable: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27878,7 +24648,7 @@ minecraft:pushable: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27886,7 +24656,7 @@ minecraft:pushable: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27894,7 +24664,7 @@ minecraft:pushable: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27902,7 +24672,7 @@ minecraft:pushable: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27910,7 +24680,7 @@ minecraft:pushable: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27918,7 +24688,7 @@ minecraft:pushable: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27926,7 +24696,7 @@ minecraft:pushable: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27934,7 +24704,7 @@ minecraft:pushable: {
 ```
 
 ### small_fireball.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27942,7 +24712,7 @@ minecraft:pushable: {
 ```
 
 ### snowball.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27950,7 +24720,7 @@ minecraft:pushable: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27958,7 +24728,7 @@ minecraft:pushable: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27966,7 +24736,7 @@ minecraft:pushable: {
 ```
 
 ### splash_potion.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27974,7 +24744,7 @@ minecraft:pushable: {
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27982,15 +24752,7 @@ minecraft:pushable: {
 ```
 
 ### stray.json
-```JSON
-minecraft:pushable: {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -27998,7 +24760,7 @@ minecraft:pushable: {
 ```
 
 ### thrown_trident.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28006,7 +24768,7 @@ minecraft:pushable: {
 ```
 
 ### tnt.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": false,
     "is_pushable_by_piston": true
@@ -28014,7 +24776,7 @@ minecraft:pushable: {
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28022,7 +24784,7 @@ minecraft:pushable: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28030,7 +24792,7 @@ minecraft:pushable: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28038,7 +24800,7 @@ minecraft:pushable: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28046,7 +24808,7 @@ minecraft:pushable: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28054,7 +24816,7 @@ minecraft:pushable: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28062,7 +24824,7 @@ minecraft:pushable: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28070,7 +24832,7 @@ minecraft:pushable: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28078,7 +24840,7 @@ minecraft:pushable: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28086,7 +24848,7 @@ minecraft:pushable: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28094,7 +24856,7 @@ minecraft:pushable: {
 ```
 
 ### wither_skull.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28102,7 +24864,7 @@ minecraft:pushable: {
 ```
 
 ### wither_skull_dangerous.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28110,7 +24872,7 @@ minecraft:pushable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28118,23 +24880,7 @@ minecraft:pushable: {
 ```
 
 ### xp_bottle.json
-```JSON
-minecraft:pushable: {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### xp_orb.json
-```JSON
-minecraft:pushable: {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28142,7 +24888,7 @@ minecraft:pushable: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28150,7 +24896,7 @@ minecraft:pushable: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28158,7 +24904,7 @@ minecraft:pushable: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28166,7 +24912,7 @@ minecraft:pushable: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28174,7 +24920,7 @@ minecraft:pushable: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:pushable: {
     "is_pushable": true,
     "is_pushable_by_piston": true
@@ -28183,7 +24929,7 @@ minecraft:pushable: {
 
 # minecraft:raid_trigger
 ### player.json
-```JSON
+```json
 minecraft:raid_trigger: {
     "triggered_event": {
         "event": "minecraft:remove_raid_trigger",
@@ -28194,33 +24940,33 @@ minecraft:raid_trigger: {
 
 # minecraft:rail_movement
 ### chest_minecart.json
-```JSON
+```json
 minecraft:rail_movement: {}
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:rail_movement: {}
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:rail_movement: {}
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:rail_movement: {}
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:rail_movement: {}
 ```
 
 # minecraft:rail_sensor
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {
     "check_block_types": true,
     "eject_on_activate": false,
@@ -28233,8 +24979,7 @@ minecraft:rail_sensor: {
 }
 ```
 
-### command_block_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {
     "check_block_types": false,
     "eject_on_activate": false,
@@ -28248,7 +24993,7 @@ minecraft:rail_sensor: {
 ```
 
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {
     "on_activate": {
         "event": "minecraft:hopper_deactivate"
@@ -28256,8 +25001,7 @@ minecraft:rail_sensor: {
 }
 ```
 
-### hopper_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {
     "on_deactivate": {
         "event": "minecraft:hopper_activate"
@@ -28266,24 +25010,22 @@ minecraft:rail_sensor: {
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {
     "eject_on_activate": true
 }
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {}
 ```
 
-### tnt_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {}
 ```
 
-### tnt_minecart.json
-```JSON
+```json
 minecraft:rail_sensor: {
     "on_activate": {
         "filters": {
@@ -28303,7 +25045,7 @@ minecraft:rail_sensor: {
 
 # minecraft:ravager_blocked
 ### ravager.json
-```JSON
+```json
 minecraft:ravager_blocked: {
     "knockback_strength": 3.0,
     "reaction_choices": [
@@ -28323,7 +25065,7 @@ minecraft:ravager_blocked: {
 
 # minecraft:rideable
 ### boat.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 2,
     "interact_text": "action.interact.ride.boat",
@@ -28348,7 +25090,7 @@ minecraft:rideable: {
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
+            "rotate_rider_by": -90,
             "lock_rider_rotation": 90
         },
         {
@@ -28359,7 +25101,6 @@ minecraft:rideable: {
             ],
             "min_rider_count": 2,
             "max_rider_count": 2,
-            "rotate_rider_by": "query.has_any_family('blaze', 'creeper', 'enderman', 'illager', 'magmacube', 'piglin', 'player', 'skeleton', 'slime', 'villager', 'wandering_trader', 'witch', 'zombie', 'zombie_pigman') ? -90 : 0",
             "lock_rider_rotation": 90
         }
     ]
@@ -28367,7 +25108,7 @@ minecraft:rideable: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28384,7 +25125,7 @@ minecraft:rideable: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28400,8 +25141,7 @@ minecraft:rideable: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28417,8 +25157,7 @@ minecraft:rideable: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28434,8 +25173,7 @@ minecraft:rideable: {
 }
 ```
 
-### cave_spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28452,7 +25190,7 @@ minecraft:rideable: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28469,7 +25207,7 @@ minecraft:rideable: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28486,7 +25224,7 @@ minecraft:rideable: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28504,9 +25242,9 @@ minecraft:rideable: {
 }
 ```
 
-### donkey.json
-```JSON
+```json
 minecraft:rideable: {
+    "priority": 0,
     "seat_count": 1,
     "crouching_skip_interact": true,
     "family_types": [
@@ -28523,44 +25261,8 @@ minecraft:rideable: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:rideable: {
-    "seat_count": 3,
-    "family_types": [
-        "piglin"
-    ],
-    "seats": [
-        {
-            "position": [
-                0.0,
-                0.9,
-                -0.3
-            ],
-            "lock_rider_rotation": 0
-        },
-        {
-            "position": [
-                0.0,
-                2.4,
-                -0.3
-            ],
-            "lock_rider_rotation": 0
-        },
-        {
-            "position": [
-                0.0,
-                3.9,
-                -0.3
-            ],
-            "lock_rider_rotation": 0
-        }
-    ]
-}
-```
-
 ### horse.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28578,9 +25280,9 @@ minecraft:rideable: {
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:rideable: {
+    "priority": 0,
     "seat_count": 1,
     "crouching_skip_interact": true,
     "family_types": [
@@ -28598,7 +25300,7 @@ minecraft:rideable: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28616,7 +25318,7 @@ minecraft:rideable: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28633,9 +25335,9 @@ minecraft:rideable: {
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:rideable: {
+    "priority": 0,
     "seat_count": 1,
     "crouching_skip_interact": true,
     "family_types": [
@@ -28653,7 +25355,7 @@ minecraft:rideable: {
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "interact_text": "action.interact.ride.minecart",
@@ -28669,7 +25371,7 @@ minecraft:rideable: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28686,7 +25388,7 @@ minecraft:rideable: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28704,9 +25406,9 @@ minecraft:rideable: {
 }
 ```
 
-### mule.json
-```JSON
+```json
 minecraft:rideable: {
+    "priority": 0,
     "seat_count": 1,
     "crouching_skip_interact": true,
     "family_types": [
@@ -28724,7 +25426,7 @@ minecraft:rideable: {
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28741,7 +25443,7 @@ minecraft:rideable: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28758,7 +25460,7 @@ minecraft:rideable: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28774,8 +25476,7 @@ minecraft:rideable: {
 }
 ```
 
-### pig.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "interact_text": "action.interact.mount",
@@ -28793,7 +25494,7 @@ minecraft:rideable: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 2,
     "family_types": [
@@ -28826,7 +25527,7 @@ minecraft:rideable: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28845,7 +25546,7 @@ minecraft:rideable: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28861,8 +25562,7 @@ minecraft:rideable: {
 }
 ```
 
-### sheep.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28879,7 +25579,7 @@ minecraft:rideable: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28898,13 +25598,11 @@ minecraft:rideable: {
 }
 ```
 
-### skeleton_horse.json
-```JSON
+```json
 minecraft:rideable: {}
 ```
 
-### skeleton_horse.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28924,7 +25622,7 @@ minecraft:rideable: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28940,8 +25638,7 @@ minecraft:rideable: {
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28957,8 +25654,7 @@ minecraft:rideable: {
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28974,8 +25670,7 @@ minecraft:rideable: {
 }
 ```
 
-### spider.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -28985,64 +25680,6 @@ minecraft:rideable: {
         "position": [
             0.0,
             0.54,
-            0.0
-        ]
-    }
-}
-```
-
-### strider.json
-```JSON
-minecraft:rideable: {
-    "priority": 0,
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player"
-    ],
-    "interact_text": "action.interact.ride.strider",
-    "seats": {
-        "position": [
-            0.0,
-            1.6,
-            -0.2
-        ]
-    }
-}
-```
-
-### strider.json
-```JSON
-minecraft:rideable: {
-    "priority": 0,
-    "seat_count": 1,
-    "crouching_skip_interact": true,
-    "family_types": [
-        "player",
-        "zombie_pigman"
-    ],
-    "interact_text": "action.interact.ride.strider",
-    "seats": {
-        "position": [
-            0.0,
-            1.8,
-            -0.2
-        ]
-    }
-}
-```
-
-### strider.json
-```JSON
-minecraft:rideable: {
-    "seat_count": 1,
-    "family_types": [
-        "strider"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            1.6,
             0.0
         ]
     }
@@ -29050,24 +25687,7 @@ minecraft:rideable: {
 ```
 
 ### wolf.json
-```JSON
-minecraft:rideable: {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.675,
-            -0.1
-        ]
-    }
-}
-```
-
-### wolf.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -29084,7 +25704,7 @@ minecraft:rideable: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -29102,8 +25722,9 @@ minecraft:rideable: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:rideable: {
+    "priority": 0,
     "seat_count": 1,
     "family_types": [
         "zombie"
@@ -29120,7 +25741,7 @@ minecraft:rideable: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -29138,7 +25759,7 @@ minecraft:rideable: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -29155,7 +25776,7 @@ minecraft:rideable: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:rideable: {
     "seat_count": 1,
     "family_types": [
@@ -29173,293 +25794,258 @@ minecraft:rideable: {
 
 # minecraft:scaffolding_climber
 ### player.json
-```JSON
+```json
 minecraft:scaffolding_climber: {}
 ```
 
 # minecraft:scale
 ### bee.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.4
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.8
 }
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.65
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.0
 }
 ```
 
 ### fox.json
-```JSON
-minecraft:scale: {
-    "value": 0.5
-}
-```
-
-### hoglin.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.53125
 }
 ```
 
-### husk.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.0625
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
-### ocelot.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.0
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.4
 }
 ```
 
 ### pig.json
-```JSON
-minecraft:scale: {
-    "value": 0.5
-}
-```
-
-### piglin.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.2
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.4
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.6
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
-### salmon.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1
 }
 ```
 
-### salmon.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.5
 }
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### squid.json
-```JSON
-minecraft:scale: {
-    "value": 0.5
-}
-```
-
-### strider.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.3
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.16
 }
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:scale: {
     "value": 1.2
 }
 ```
 
 ### wolf.json
-```JSON
-minecraft:scale: {
-    "value": 0.5
-}
-```
-
-### zoglin.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:scale: {
     "value": 0.5
 }
@@ -29467,7 +26053,7 @@ minecraft:scale: {
 
 # minecraft:scale_by_age
 ### donkey.json
-```JSON
+```json
 minecraft:scale_by_age: {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -29475,7 +26061,7 @@ minecraft:scale_by_age: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:scale_by_age: {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -29483,7 +26069,7 @@ minecraft:scale_by_age: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:scale_by_age: {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -29491,7 +26077,7 @@ minecraft:scale_by_age: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:scale_by_age: {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -29499,7 +26085,7 @@ minecraft:scale_by_age: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:scale_by_age: {
     "start_scale": 0.5,
     "end_scale": 1.0
@@ -29508,7 +26094,7 @@ minecraft:scale_by_age: {
 
 # minecraft:scheduler
 ### fox.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 0,
@@ -29567,7 +26153,7 @@ minecraft:scheduler: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -29661,8 +26247,7 @@ minecraft:scheduler: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -29756,8 +26341,7 @@ minecraft:scheduler: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -29817,8 +26401,7 @@ minecraft:scheduler: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -29895,8 +26478,7 @@ minecraft:scheduler: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -29990,8 +26572,7 @@ minecraft:scheduler: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -30085,8 +26666,7 @@ minecraft:scheduler: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:scheduler: {
     "min_delay_secs": 0,
     "max_delay_secs": 10,
@@ -30181,232 +26761,8 @@ minecraft:scheduler: {
 ```
 
 # minecraft:shareables
-### drowned.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:nautilus_shell",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:trident",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
 ### fox.json
-```JSON
+```json
 minecraft:shareables: {
     "all_items": true,
     "all_items_max_amount": 1,
@@ -30605,2370 +26961,186 @@ minecraft:shareables: {
 }
 ```
 
-### husk.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-### piglin.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:golden_sword",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_axe",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_hoe",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_pickaxe",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_shovel",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_rail",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_apple",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:appleEnchanted",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:golden_carrot",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:gold_block",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:gold_nugget",
-            "priority": 2,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:gold_ore",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:nether_gold_ore",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:gilded_blackstone",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:horsearmorgold",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:crossbow",
-            "priority": 2
-        },
-        {
-            "item": "minecraft:porkchop",
-            "consume_item": true,
-            "priority": 3,
-            "max_amount": 64
-        },
-        {
-            "item": "minecraft:cooked_porkchop",
-            "consume_item": true,
-            "priority": 3,
-            "max_amount": 64
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "priority": 3
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "priority": 4
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "priority": 5
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "priority": 6
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 8
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 8
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 8
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "priority": 3
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "priority": 4
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "priority": 5
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "priority": 6
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "priority": 3
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "priority": 4
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "priority": 5
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "priority": 6
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "priority": 3
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "priority": 4
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "priority": 5
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "priority": 6
-        },
-        {
-            "item": "minecraft:bell",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:clock",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:speckled_melon",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:light_weighted_pressure_plate",
-            "priority": 2,
-            "admire": true,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_sword",
-            "priority": 3
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "priority": 4
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "priority": 5
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "priority": 7
-        },
-        {
-            "item": "minecraft:gold_ingot",
-            "priority": 1,
-            "pickup_limit": 1,
-            "admire": true,
-            "barter": true
-        }
-    ]
-}
-```
-
-### pillager.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:banner:15",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        }
-    ]
-}
-```
-
-### skeleton.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:bow",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-### stray.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:bow",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
 ### villager.json
-```JSON
+```json
 minecraft:shareables: {
     "items": [
         {
             "item": "minecraft:bread",
             "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
+            "surplus_amount": 6
         },
         {
             "item": "minecraft:carrot",
             "want_amount": 60,
-            "surplus_amount": 4,
-            "stored_in_inventory": true
+            "surplus_amount": 4
         },
         {
             "item": "minecraft:potato",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:beetroot",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:wheat_seeds",
             "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
+            "surplus_amount": 64
         },
         {
             "item": "minecraft:beetroot_seeds",
             "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
+            "surplus_amount": 64
         },
         {
             "item": "minecraft:wheat",
             "want_amount": 45,
             "surplus_amount": 18,
-            "craft_into": "minecraft:bread",
-            "stored_in_inventory": true
+            "craft_into": "minecraft:bread"
         }
     ]
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:shareables: {
     "items": [
         {
             "item": "minecraft:bread",
             "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
+            "surplus_amount": 6
         },
         {
             "item": "minecraft:carrot",
             "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:potato",
             "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:beetroot",
             "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         }
     ]
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:shareables: {
     "items": [
         {
             "item": "minecraft:bread",
             "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
+            "surplus_amount": 6
         },
         {
             "item": "minecraft:carrot",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 4
         },
         {
             "item": "minecraft:potato",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:beetroot",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:wheat_seeds",
             "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
+            "surplus_amount": 64
         },
         {
             "item": "minecraft:beetroot_seeds",
             "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
+            "surplus_amount": 64
         },
         {
             "item": "minecraft:wheat",
             "want_amount": 45,
             "surplus_amount": 18,
-            "craft_into": "minecraft:bread",
-            "stored_in_inventory": true
+            "craft_into": "minecraft:bread"
         }
     ]
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:shareables: {
     "items": [
         {
             "item": "minecraft:bread",
             "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
+            "surplus_amount": 6
         },
         {
             "item": "minecraft:carrot",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 4
         },
         {
             "item": "minecraft:potato",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:beetroot",
             "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:wheat_seeds",
             "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
+            "surplus_amount": 64
         },
         {
             "item": "minecraft:beetroot_seeds",
             "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
+            "surplus_amount": 64
         },
         {
             "item": "minecraft:wheat",
             "want_amount": 45,
             "surplus_amount": 18,
-            "craft_into": "minecraft:bread",
-            "stored_in_inventory": true
+            "craft_into": "minecraft:bread"
         }
     ]
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:shareables: {
     "items": [
         {
             "item": "minecraft:bread",
             "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
+            "surplus_amount": 6
         },
         {
             "item": "minecraft:carrot",
             "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:potato",
             "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
+            "surplus_amount": 24
         },
         {
             "item": "minecraft:beetroot",
             "want_amount": 12,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        }
-    ]
-}
-```
-
-### wither_skeleton.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:wooden_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_shovel",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_pickaxe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_axe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:wooden_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:stone_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:golden_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:iron_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:diamond_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_hoe",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-### zombie.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-### zombie_pigman.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        }
-    ]
-}
-```
-
-### zombie_villager_v2.json
-```JSON
-minecraft:shareables: {
-    "items": [
-        {
-            "item": "minecraft:netherite_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:stone_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:wooden_sword",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:turtle_helmet",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 6
-        },
-        {
-            "item": "minecraft:skull:0",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:skull:1",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:carved_pumpkin",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 7
-        },
-        {
-            "item": "minecraft:netherite_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_chestplate",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_leggings",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
-        },
-        {
-            "item": "minecraft:netherite_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 0
-        },
-        {
-            "item": "minecraft:diamond_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 1
-        },
-        {
-            "item": "minecraft:iron_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 2
-        },
-        {
-            "item": "minecraft:chainmail_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 3
-        },
-        {
-            "item": "minecraft:golden_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 4
-        },
-        {
-            "item": "minecraft:leather_boots",
-            "want_amount": 1,
-            "surplus_amount": 1,
-            "priority": 5
+            "surplus_amount": 24
         }
     ]
 }
@@ -32976,21 +27148,22 @@ minecraft:shareables: {
 
 # minecraft:shooter
 ### blaze.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "smallfireball",
     "def": "minecraft:small_fireball"
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:shooter: {
     "def": "minecraft:thrown_trident"
 }
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:shooter: {
     "type": "dragonfireball",
     "def": "minecraft:dragon_fireball"
@@ -32998,72 +27171,71 @@ minecraft:shooter: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "largefireball",
     "def": "minecraft:fireball"
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "llamaspit",
     "def": "minecraft:llama_spit"
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:shooter: {
-    "def": "minecraft:arrow"
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "Arrow",
     "def": "minecraft:arrow"
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "ShulkerBullet",
     "def": "minecraft:shulker_bullet"
 }
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "Arrow",
     "def": "minecraft:arrow"
 }
 ```
 
-### skeleton.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "Arrow",
     "def": "minecraft:arrow"
 }
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:shooter: {
     "def": "minecraft:snowball"
 }
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "Arrow",
     "def": "minecraft:arrow",
     "aux_val": 19
 }
 ```
 
-### stray.json
-```JSON
+```json
 minecraft:shooter: {
+    "type": "Arrow",
     "def": "minecraft:arrow",
     "aux_val": 19
 }
@@ -33071,105 +27243,95 @@ minecraft:shooter: {
 
 # minecraft:sittable
 ### cat.json
-```JSON
+```json
 minecraft:sittable: {}
 ```
 
 ### ocelot.json
-```JSON
+```json
 minecraft:sittable: {}
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:sittable: {}
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:sittable: {}
 ```
 
 # minecraft:skin_id
 ### villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 0
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 1
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 2
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 3
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 4
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 5
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 1
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 2
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 3
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 4
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:skin_id: {
     "value": 5
 }
@@ -33177,43 +27339,39 @@ minecraft:skin_id: {
 
 # minecraft:spawn_entity
 ### chicken.json
-```JSON
+```json
 minecraft:spawn_entity: {
-    "entities": {
-        "min_wait_time": 300,
-        "max_wait_time": 600,
-        "spawn_sound": "plop",
-        "spawn_item": "egg",
-        "filters": {
-            "test": "rider_count",
-            "subject": "self",
-            "operator": "==",
-            "value": 0
-        }
+    "min_wait_time": 300,
+    "max_wait_time": 600,
+    "spawn_sound": "plop",
+    "spawn_item": "egg",
+    "filters": {
+        "test": "rider_count",
+        "subject": "self",
+        "operator": "==",
+        "value": 0
     }
 }
 ```
 
 ### wandering_trader.json
-```JSON
-minecraft:spawn_entity: {
-    "entities": [
-        {
-            "min_wait_time": 0,
-            "max_wait_time": 0,
-            "spawn_entity": "llama",
-            "spawn_event": "minecraft:from_wandering_trader",
-            "single_use": true,
-            "num_to_spawn": 2,
-            "should_leash": true
-        }
-    ]
-}
+```json
+minecraft:spawn_entity: [
+    {
+        "min_wait_time": 0,
+        "max_wait_time": 0,
+        "spawn_entity": "llama",
+        "spawn_event": "minecraft:from_wandering_trader",
+        "single_use": true,
+        "num_to_spawn": 2,
+        "should_leash": true
+    }
+]
 ```
 
 # minecraft:spell_effects
 ### player.json
-```JSON
+```json
 minecraft:spell_effects: {
     "add_effects": [
         {
@@ -33225,20 +27383,18 @@ minecraft:spell_effects: {
 }
 ```
 
-### player.json
-```JSON
+```json
 minecraft:spell_effects: {}
 ```
 
-### player.json
-```JSON
+```json
 minecraft:spell_effects: {
     "remove_effects": "bad_omen"
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:spell_effects: {
     "add_effects": [
         {
@@ -33255,7 +27411,7 @@ minecraft:spell_effects: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:spell_effects: {
     "add_effects": [
         {
@@ -33273,39 +27429,35 @@ minecraft:spell_effects: {
 
 # minecraft:strength
 ### llama.json
-```JSON
+```json
 minecraft:strength: {
     "value": 1,
     "max": 5
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:strength: {
     "value": 2,
     "max": 5
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:strength: {
     "value": 3,
     "max": 5
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:strength: {
     "value": 4,
     "max": 5
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:strength: {
     "value": 5,
     "max": 5
@@ -33314,7 +27466,7 @@ minecraft:strength: {
 
 # minecraft:tameable
 ### cat.json
-```JSON
+```json
 minecraft:tameable: {
     "probability": 0.33,
     "tame_items": [
@@ -33329,7 +27481,7 @@ minecraft:tameable: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:tameable: {
     "probability": 0.33,
     "tame_items": [
@@ -33346,7 +27498,7 @@ minecraft:tameable: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:tameable: {
     "probability": 0.33,
     "tame_items": "bone",
@@ -33359,7 +27511,7 @@ minecraft:tameable: {
 
 # minecraft:tamemount
 ### donkey.json
-```JSON
+```json
 minecraft:tamemount: {
     "min_temper": 0,
     "max_temper": 100,
@@ -33416,7 +27568,7 @@ minecraft:tamemount: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:tamemount: {
     "min_temper": 0,
     "max_temper": 100,
@@ -33473,7 +27625,7 @@ minecraft:tamemount: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:tamemount: {
     "min_temper": 0,
     "max_temper": 30,
@@ -33514,7 +27666,7 @@ minecraft:tamemount: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:tamemount: {
     "min_temper": 0,
     "max_temper": 100,
@@ -33572,7 +27724,7 @@ minecraft:tamemount: {
 
 # minecraft:target_nearby_sensor
 ### creeper.json
-```JSON
+```json
 minecraft:target_nearby_sensor: {
     "inside_range": 2.5,
     "outside_range": 6.0,
@@ -33592,18 +27744,16 @@ minecraft:target_nearby_sensor: {
 }
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:target_nearby_sensor: {}
 ```
 
-### creeper.json
-```JSON
+```json
 minecraft:target_nearby_sensor: {}
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:target_nearby_sensor: {
     "inside_range": 3.0,
     "outside_range": 5.0,
@@ -33619,7 +27769,7 @@ minecraft:target_nearby_sensor: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:target_nearby_sensor: {
     "inside_range": 3.0,
     "outside_range": 4.0,
@@ -33630,8 +27780,7 @@ minecraft:target_nearby_sensor: {
 }
 ```
 
-### guardian.json
-```JSON
+```json
 minecraft:target_nearby_sensor: {
     "inside_range": 3.0,
     "outside_range": 4.0,
@@ -33644,7 +27793,7 @@ minecraft:target_nearby_sensor: {
 
 # minecraft:teleport
 ### enderman.json
-```JSON
+```json
 minecraft:teleport: {
     "random_teleports": true,
     "max_random_teleport_time": 30,
@@ -33661,7 +27810,7 @@ minecraft:teleport: {
 
 # minecraft:timer
 ### bee.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": [
@@ -33676,8 +27825,7 @@ minecraft:timer: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": [
@@ -33692,8 +27840,7 @@ minecraft:timer: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:timer: {
     "looping": true,
     "time": 5,
@@ -33704,8 +27851,7 @@ minecraft:timer: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:timer: {
     "looping": true,
     "time": 180,
@@ -33715,8 +27861,7 @@ minecraft:timer: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": 180,
@@ -33727,8 +27872,7 @@ minecraft:timer: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": [
@@ -33744,7 +27888,7 @@ minecraft:timer: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": 20,
@@ -33755,7 +27899,7 @@ minecraft:timer: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:timer: {
     "time": [
         1,
@@ -33769,19 +27913,8 @@ minecraft:timer: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:timer: {
-    "looping": false,
-    "time": 15,
-    "time_down_event": {
-        "event": "become_zombie_event"
-    }
-}
-```
-
 ### husk.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": 30,
@@ -33791,19 +27924,8 @@ minecraft:timer: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:timer: {
-    "looping": false,
-    "time": 15,
-    "time_down_event": {
-        "event": "become_zombie_event"
-    }
-}
-```
-
 ### player.json
-```JSON
+```json
 minecraft:timer: {
     "time": [
         0.0,
@@ -33818,34 +27940,10 @@ minecraft:timer: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
-    "time": 2,
-    "randomInterval": false,
-    "time_down_event": {
-        "event": "minecraft:on_half_puff"
-    }
-}
-```
-
-### pufferfish.json
-```JSON
-minecraft:timer: {
-    "looping": false,
-    "time": 2,
-    "randomInterval": false,
-    "time_down_event": {
-        "event": "minecraft:on_normal_puff"
-    }
-}
-```
-
-### pufferfish.json
-```JSON
-minecraft:timer: {
-    "looping": false,
-    "time": 0.01,
+    "time": 0.05,
     "randomInterval": false,
     "time_down_event": {
         "event": "minecraft:on_full_puff"
@@ -33853,11 +27951,21 @@ minecraft:timer: {
 }
 ```
 
-### pufferfish.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
-    "time": 3,
+    "time": 1,
+    "randomInterval": false,
+    "time_down_event": {
+        "event": "minecraft:on_normal_puff"
+    }
+}
+```
+
+```json
+minecraft:timer: {
+    "looping": false,
+    "time": 10,
     "randomInterval": false,
     "time_down_event": {
         "event": "minecraft:on_deflate"
@@ -33866,7 +27974,7 @@ minecraft:timer: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": 2,
@@ -33877,7 +27985,7 @@ minecraft:timer: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "random_time_choices": [
@@ -33898,7 +28006,7 @@ minecraft:timer: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:timer: {
     "looping": false,
     "time": 30,
@@ -33910,13 +28018,13 @@ minecraft:timer: {
 
 # minecraft:trade_resupply
 ### villager_v2.json
-```JSON
+```json
 minecraft:trade_resupply: {}
 ```
 
 # minecraft:trade_table
 ### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.farmer",
     "table": "trading/farmer_trades.json",
@@ -33924,8 +28032,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.fisherman",
     "table": "trading/fisherman_trades.json",
@@ -33933,8 +28040,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.shepherd",
     "table": "trading/shepherd_trades.json",
@@ -33942,8 +28048,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.fletcher",
     "table": "trading/fletcher_trades.json",
@@ -33951,8 +28056,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.librarian",
     "table": "trading/librarian_trades.json",
@@ -33960,8 +28064,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.cartographer",
     "table": "trading/cartographer_trades.json",
@@ -33969,8 +28072,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.cleric",
     "table": "trading/cleric_trades.json",
@@ -33978,8 +28080,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.armor",
     "table": "trading/armorer_trades.json",
@@ -33987,8 +28088,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.weapon",
     "table": "trading/weapon_smith_trades.json",
@@ -33996,8 +28096,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.tool",
     "table": "trading/tool_smith_trades.json",
@@ -34005,8 +28104,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.butcher",
     "table": "trading/butcher_trades.json",
@@ -34014,8 +28112,7 @@ minecraft:trade_table: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:trade_table: {
     "display_name": "entity.villager.leather",
     "table": "trading/leather_worker_trades.json",
@@ -34025,7 +28122,7 @@ minecraft:trade_table: {
 
 # minecraft:trail
 ### snow_golem.json
-```JSON
+```json
 minecraft:trail: {
     "block_type": "minecraft:snow_layer",
     "spawn_filter": {
@@ -34037,17 +28134,8 @@ minecraft:trail: {
 ```
 
 # minecraft:transformation
-### hoglin.json
-```JSON
-minecraft:transformation: {
-    "into": "minecraft:zoglin",
-    "transformation_sound": "converted_to_zombified",
-    "keep_level": true
-}
-```
-
 ### husk.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:zombie<minecraft:as_adult>",
     "transformation_sound": "convert_to_drowned",
@@ -34058,8 +28146,7 @@ minecraft:transformation: {
 }
 ```
 
-### husk.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:zombie<minecraft:as_baby>",
     "transformation_sound": "convert_to_drowned",
@@ -34071,31 +28158,22 @@ minecraft:transformation: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:cow"
 }
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:pig_zombie",
     "delay": 0.5
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:transformation: {
-    "into": "minecraft:zombie_pigman",
-    "transformation_sound": "converted_to_zombified",
-    "keep_level": true
-}
-```
-
 ### stray.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:skeleton",
     "delay": 0.5
@@ -34103,38 +28181,35 @@ minecraft:transformation: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:witch",
     "delay": 0.5
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:villager_v2",
     "keep_level": true
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:zombie_villager"
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:witch",
     "delay": 0.5
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:zombie_villager_v2",
     "keep_level": true
@@ -34142,7 +28217,7 @@ minecraft:transformation: {
 ```
 
 ### zombie.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:drowned<minecraft:as_adult>",
     "transformation_sound": "convert_to_drowned",
@@ -34153,8 +28228,7 @@ minecraft:transformation: {
 }
 ```
 
-### zombie.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:drowned<minecraft:as_baby>",
     "transformation_sound": "convert_to_drowned",
@@ -34166,15 +28240,14 @@ minecraft:transformation: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:zombie_villager_v2",
     "keep_level": false
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:villager",
     "begin_transform_sound": "remedy",
@@ -34193,7 +28266,7 @@ minecraft:transformation: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:transformation: {
     "into": "minecraft:villager_v2",
     "begin_transform_sound": "remedy",
@@ -34214,13 +28287,13 @@ minecraft:transformation: {
 
 # minecraft:trust
 ### fox.json
-```JSON
+```json
 minecraft:trust: {}
 ```
 
 # minecraft:trusting
 ### ocelot.json
-```JSON
+```json
 minecraft:trusting: {
     "probability": 0.33,
     "trust_items": [
@@ -34236,7 +28309,7 @@ minecraft:trusting: {
 
 # minecraft:type_family
 ### armor_stand.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "armor_stand",
@@ -34247,7 +28320,7 @@ minecraft:type_family: {
 ```
 
 ### bat.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "bat",
@@ -34257,7 +28330,7 @@ minecraft:type_family: {
 ```
 
 ### bee.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "bee",
@@ -34267,8 +28340,7 @@ minecraft:type_family: {
 }
 ```
 
-### bee.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "bee",
@@ -34280,7 +28352,7 @@ minecraft:type_family: {
 ```
 
 ### blaze.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "blaze",
@@ -34291,7 +28363,7 @@ minecraft:type_family: {
 ```
 
 ### boat.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "boat",
@@ -34301,7 +28373,7 @@ minecraft:type_family: {
 ```
 
 ### cat.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cat",
@@ -34311,7 +28383,7 @@ minecraft:type_family: {
 ```
 
 ### cave_spider.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cavespider",
@@ -34323,7 +28395,7 @@ minecraft:type_family: {
 ```
 
 ### chest_minecart.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "minecart",
@@ -34333,7 +28405,7 @@ minecraft:type_family: {
 ```
 
 ### chicken.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "chicken",
@@ -34343,7 +28415,7 @@ minecraft:type_family: {
 ```
 
 ### command_block_minecart.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "minecart",
@@ -34353,7 +28425,7 @@ minecraft:type_family: {
 ```
 
 ### cow.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cow",
@@ -34363,7 +28435,7 @@ minecraft:type_family: {
 ```
 
 ### creeper.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "creeper",
@@ -34374,7 +28446,7 @@ minecraft:type_family: {
 ```
 
 ### dolphin.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "dolphin",
@@ -34384,7 +28456,7 @@ minecraft:type_family: {
 ```
 
 ### donkey.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "donkey",
@@ -34394,7 +28466,7 @@ minecraft:type_family: {
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "drowned",
@@ -34407,7 +28479,7 @@ minecraft:type_family: {
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "guardian_elder",
@@ -34418,7 +28490,7 @@ minecraft:type_family: {
 ```
 
 ### enderman.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "enderman",
@@ -34429,7 +28501,7 @@ minecraft:type_family: {
 ```
 
 ### endermite.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "endermite",
@@ -34441,7 +28513,7 @@ minecraft:type_family: {
 ```
 
 ### ender_dragon.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "dragon",
@@ -34451,7 +28523,7 @@ minecraft:type_family: {
 ```
 
 ### evocation_illager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "evocation_illager",
@@ -34463,7 +28535,7 @@ minecraft:type_family: {
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cod",
@@ -34473,7 +28545,7 @@ minecraft:type_family: {
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "fox",
@@ -34483,7 +28555,7 @@ minecraft:type_family: {
 ```
 
 ### ghast.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "ghast",
@@ -34494,7 +28566,7 @@ minecraft:type_family: {
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "guardian",
@@ -34504,42 +28576,8 @@ minecraft:type_family: {
 }
 ```
 
-### hoglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "hoglin",
-        "hoglin_baby",
-        "mob"
-    ]
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "hoglin",
-        "hoglin_adult",
-        "mob"
-    ]
-}
-```
-
-### hoglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "hoglin",
-        "hoglin_adult",
-        "hoglin_huntable",
-        "mob"
-    ]
-}
-```
-
 ### hopper_minecart.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "minecart",
@@ -34549,7 +28587,7 @@ minecraft:type_family: {
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "horse",
@@ -34559,7 +28597,7 @@ minecraft:type_family: {
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "husk",
@@ -34572,7 +28610,7 @@ minecraft:type_family: {
 ```
 
 ### iron_golem.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "irongolem",
@@ -34582,7 +28620,7 @@ minecraft:type_family: {
 ```
 
 ### lightning_bolt.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "lightning"
@@ -34591,7 +28629,7 @@ minecraft:type_family: {
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "llama",
@@ -34601,7 +28639,7 @@ minecraft:type_family: {
 ```
 
 ### magma_cube.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "magmacube",
@@ -34612,7 +28650,7 @@ minecraft:type_family: {
 ```
 
 ### minecart.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "minecart",
@@ -34622,7 +28660,7 @@ minecraft:type_family: {
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "mushroomcow",
@@ -34632,7 +28670,7 @@ minecraft:type_family: {
 ```
 
 ### mule.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "mule",
@@ -34641,18 +28679,8 @@ minecraft:type_family: {
 }
 ```
 
-### npc.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "npc",
-        "mob"
-    ]
-}
-```
-
 ### ocelot.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "ocelot",
@@ -34662,7 +28690,7 @@ minecraft:type_family: {
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "panda"
@@ -34670,8 +28698,7 @@ minecraft:type_family: {
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "panda",
@@ -34682,7 +28709,7 @@ minecraft:type_family: {
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "parrot_wild",
@@ -34691,8 +28718,7 @@ minecraft:type_family: {
 }
 ```
 
-### parrot.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "parrot_tame",
@@ -34702,7 +28728,7 @@ minecraft:type_family: {
 ```
 
 ### phantom.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "phantom",
@@ -34714,7 +28740,7 @@ minecraft:type_family: {
 ```
 
 ### pig.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "pig",
@@ -34723,29 +28749,8 @@ minecraft:type_family: {
 }
 ```
 
-### piglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "piglin",
-        "piglin_hunter",
-        "monster"
-    ]
-}
-```
-
-### piglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "piglin",
-        "monster"
-    ]
-}
-```
-
 ### pillager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "pillager",
@@ -34757,7 +28762,7 @@ minecraft:type_family: {
 ```
 
 ### player.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "player"
@@ -34766,7 +28771,7 @@ minecraft:type_family: {
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "polarbear",
@@ -34776,7 +28781,7 @@ minecraft:type_family: {
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "pufferfish",
@@ -34786,7 +28791,7 @@ minecraft:type_family: {
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "rabbit",
@@ -34796,7 +28801,7 @@ minecraft:type_family: {
 ```
 
 ### ravager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "monster",
@@ -34808,7 +28813,7 @@ minecraft:type_family: {
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "salmon",
@@ -34818,7 +28823,7 @@ minecraft:type_family: {
 ```
 
 ### sheep.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "sheep",
@@ -34828,7 +28833,7 @@ minecraft:type_family: {
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "shulker",
@@ -34839,7 +28844,7 @@ minecraft:type_family: {
 ```
 
 ### silverfish.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "silverfish",
@@ -34851,7 +28856,7 @@ minecraft:type_family: {
 ```
 
 ### skeleton.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "skeleton",
@@ -34863,7 +28868,7 @@ minecraft:type_family: {
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "skeletonhorse",
@@ -34874,7 +28879,7 @@ minecraft:type_family: {
 ```
 
 ### slime.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "slime",
@@ -34885,7 +28890,7 @@ minecraft:type_family: {
 ```
 
 ### snow_golem.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "snowgolem",
@@ -34895,7 +28900,7 @@ minecraft:type_family: {
 ```
 
 ### spider.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "spider",
@@ -34907,7 +28912,7 @@ minecraft:type_family: {
 ```
 
 ### squid.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "squid",
@@ -34917,7 +28922,7 @@ minecraft:type_family: {
 ```
 
 ### stray.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "stray",
@@ -34929,40 +28934,8 @@ minecraft:type_family: {
 }
 ```
 
-### strider.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "strider",
-        "mob"
-    ]
-}
-```
-
-### strider.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "strider",
-        "strider_baby",
-        "mob"
-    ]
-}
-```
-
-### strider.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "strider",
-        "strider_adult",
-        "mob"
-    ]
-}
-```
-
 ### tnt.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "tnt",
@@ -34972,7 +28945,7 @@ minecraft:type_family: {
 ```
 
 ### tnt_minecart.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "minecart",
@@ -34982,7 +28955,7 @@ minecraft:type_family: {
 ```
 
 ### tripod_camera.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "tripodcamera",
@@ -34993,7 +28966,7 @@ minecraft:type_family: {
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "tropicalfish",
@@ -35003,7 +28976,7 @@ minecraft:type_family: {
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "turtle",
@@ -35013,8 +28986,7 @@ minecraft:type_family: {
 }
 ```
 
-### turtle.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "turtle",
@@ -35024,7 +28996,7 @@ minecraft:type_family: {
 ```
 
 ### vex.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "vex",
@@ -35035,7 +29007,7 @@ minecraft:type_family: {
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35044,8 +29016,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35056,8 +29027,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35068,8 +29038,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35080,8 +29049,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35092,8 +29060,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35103,8 +29070,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35114,8 +29080,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35126,8 +29091,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35138,8 +29102,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35150,8 +29113,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35162,8 +29124,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35174,8 +29135,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35187,7 +29147,7 @@ minecraft:type_family: {
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35196,8 +29156,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35207,8 +29166,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35219,8 +29177,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35231,8 +29188,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35243,8 +29199,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35255,8 +29210,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35266,8 +29220,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35277,8 +29230,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35289,8 +29241,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35301,8 +29252,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35313,8 +29263,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35325,8 +29274,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35337,8 +29285,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35349,8 +29296,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35361,8 +29307,7 @@ minecraft:type_family: {
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "villager",
@@ -35374,7 +29319,7 @@ minecraft:type_family: {
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "vindicator",
@@ -35386,7 +29331,7 @@ minecraft:type_family: {
 ```
 
 ### wandering_trader.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "wandering_trader",
@@ -35395,8 +29340,7 @@ minecraft:type_family: {
 }
 ```
 
-### wandering_trader.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "wandering_trader",
@@ -35407,7 +29351,7 @@ minecraft:type_family: {
 ```
 
 ### witch.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "witch",
@@ -35418,7 +29362,7 @@ minecraft:type_family: {
 ```
 
 ### wither.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "wither",
@@ -35431,7 +29375,7 @@ minecraft:type_family: {
 ```
 
 ### wither_skeleton.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "wither",
@@ -35444,7 +29388,7 @@ minecraft:type_family: {
 ```
 
 ### wolf.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "wolf",
@@ -35453,32 +29397,8 @@ minecraft:type_family: {
 }
 ```
 
-### zoglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "zoglin",
-        "zoglin_baby",
-        "undead",
-        "mob"
-    ]
-}
-```
-
-### zoglin.json
-```JSON
-minecraft:type_family: {
-    "family": [
-        "zoglin",
-        "zoglin_adult",
-        "undead",
-        "mob"
-    ]
-}
-```
-
 ### zombie.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "zombie",
@@ -35490,7 +29410,7 @@ minecraft:type_family: {
 ```
 
 ### zombie_horse.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "zombiehorse",
@@ -35501,7 +29421,7 @@ minecraft:type_family: {
 ```
 
 ### zombie_pigman.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "zombie_pigman",
@@ -35513,7 +29433,7 @@ minecraft:type_family: {
 ```
 
 ### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "farmer",
@@ -35526,8 +29446,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "fisherman",
@@ -35540,8 +29459,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "shepherd",
@@ -35554,8 +29472,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "fletcher",
@@ -35568,8 +29485,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "librarian",
@@ -35582,8 +29498,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cartographer",
@@ -35596,8 +29511,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cleric",
@@ -35610,8 +29524,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "armorer",
@@ -35624,8 +29537,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "weaponsmith",
@@ -35638,8 +29550,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "toolsmith",
@@ -35652,8 +29563,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "butcher",
@@ -35666,8 +29576,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "leatherworker",
@@ -35681,7 +29590,7 @@ minecraft:type_family: {
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "unskilled",
@@ -35694,8 +29603,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "nitwit",
@@ -35708,8 +29616,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "farmer",
@@ -35722,8 +29629,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "fisherman",
@@ -35736,8 +29642,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "shepherd",
@@ -35750,8 +29655,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "fletcher",
@@ -35764,8 +29668,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "librarian",
@@ -35778,8 +29681,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cartographer",
@@ -35792,8 +29694,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "cleric",
@@ -35806,8 +29707,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "armorer",
@@ -35820,8 +29720,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "weaponsmith",
@@ -35834,8 +29733,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "toolsmith",
@@ -35848,8 +29746,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "butcher",
@@ -35862,8 +29759,7 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
         "leatherworker",
@@ -35876,11 +29772,10 @@ minecraft:type_family: {
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:type_family: {
     "family": [
-        "stone_mason",
+        "mason",
         "zombie_villager",
         "zombie",
         "undead",
@@ -35892,84 +29787,82 @@ minecraft:type_family: {
 
 # minecraft:underwater_movement
 ### dolphin.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.15
 }
 ```
 
 ### drowned.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.06
 }
 ```
 
-### drowned.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.08
 }
 ```
 
 ### elder_guardian.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.3
 }
 ```
 
 ### fish.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.1
 }
 ```
 
 ### guardian.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.12
 }
 ```
 
 ### pufferfish.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.13
 }
 ```
 
 ### salmon.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.12
 }
 ```
 
 ### skeleton_horse.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.08
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.12
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.06
 }
 ```
 
-### turtle.json
-```JSON
+```json
 minecraft:underwater_movement: {
     "value": 0.12
 }
@@ -35977,1064 +29870,918 @@ minecraft:underwater_movement: {
 
 # minecraft:variant
 ### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 5
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 6
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 7
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 8
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 9
 }
 ```
 
-### cat.json
-```JSON
+```json
 minecraft:variant: {
     "value": 10
 }
 ```
 
 ### fox.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### fox.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
 ### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 5
 }
 ```
 
-### horse.json
-```JSON
+```json
 minecraft:variant: {
     "value": 6
 }
 ```
 
 ### husk.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
 ### llama.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### llama.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
 ### mooshroom.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### mooshroom.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
 ### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 5
 }
 ```
 
-### panda.json
-```JSON
+```json
 minecraft:variant: {
     "value": 6
 }
 ```
 
 ### parrot.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### parrot.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### parrot.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### parrot.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### parrot.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### piglin.json
-```JSON
+### pillager.json
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### piglin.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### pillager.json
-```JSON
+```json
+minecraft:variant: {
+    "value": 1
+}
+```
+
+### pufferfish.json
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### pillager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### pufferfish.json
-```JSON
-minecraft:variant: {
-    "value": 0
-}
-```
-
-### pufferfish.json
-```JSON
-minecraft:variant: {
-    "value": 1
-}
-```
-
-### pufferfish.json
-```JSON
-minecraft:variant: {
-    "value": 1
-}
-```
-
-### pufferfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
 ### rabbit.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### rabbit.json
-```JSON
+```json
 minecraft:variant: {
     "value": 5
 }
 ```
 
 ### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 5
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 6
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 8
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 12
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 10
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 13
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 14
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 9
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 7
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 16
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 15
 }
 ```
 
-### shulker.json
-```JSON
+```json
 minecraft:variant: {
     "value": 11
 }
 ```
 
 ### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### tropicalfish.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
 ### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
 ### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 5
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 6
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 7
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 8
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 9
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 10
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 11
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 12
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 13
 }
 ```
 
-### villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 14
 }
 ```
 
 ### vindicator.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### vindicator.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### vindicator.json
-```JSON
-minecraft:variant: {
-    "value": 1
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:variant: {
-    "value": 0
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:variant: {
-    "value": 0
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:variant: {
-    "value": 0
-}
-```
-
-### zombie_villager.json
-```JSON
-minecraft:variant: {
-    "value": 0
-}
-```
-
-### zombie_villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
 ### zombie_villager.json
-```JSON
+```json
+minecraft:variant: {
+    "value": 0
+}
+```
+
+```json
+minecraft:variant: {
+    "value": 0
+}
+```
+
+```json
+minecraft:variant: {
+    "value": 0
+}
+```
+
+```json
+minecraft:variant: {
+    "value": 0
+}
+```
+
+```json
 minecraft:variant: {
     "value": 1
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
+minecraft:variant: {
+    "value": 1
+}
+```
+
+```json
 minecraft:variant: {
     "value": 2
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 3
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
-### zombie_villager.json
-```JSON
+```json
 minecraft:variant: {
     "value": 4
 }
 ```
 
 ### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
 ```
 
-### zombie_villager_v2.json
-```JSON
+```json
 minecraft:variant: {
     "value": 0
 }
@@ -37042,21 +30789,21 @@ minecraft:variant: {
 
 # minecraft:water_movement
 ### panda.json
-```JSON
+```json
 minecraft:water_movement: {
     "drag_factor": 0.98
 }
 ```
 
 ### polar_bear.json
-```JSON
+```json
 minecraft:water_movement: {
     "drag_factor": 0.98
 }
 ```
 
 ### turtle.json
-```JSON
+```json
 minecraft:water_movement: {
     "drag_factor": 0.9
 }

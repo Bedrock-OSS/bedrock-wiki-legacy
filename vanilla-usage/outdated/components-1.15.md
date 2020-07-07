@@ -1,8 +1,10 @@
 ---
 layout: page
 title: Vanilla Components 1.15
-parent: Vanilla Usage
+parent: Outdated
+grand_parent: Vanilla Usage
 ---
+
 # Vanilla Components 1.15
 This documentation is auto-generated using a python script, written by SirLich. If there is an issue, please bring it to his attention by contacting him on discord: `SirLich#1658`
 

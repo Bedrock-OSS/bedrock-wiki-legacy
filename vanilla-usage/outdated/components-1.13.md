@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Vanilla Components 1.14
-parent: Vanilla Usage
+title: Vanilla Components 1.13
+parent: Outdated
+grand_parent: Vanilla Usage
 ---
-# Vanilla Components 1.14
+# Vanilla Components 1.13
 This documentation is auto-generated using a python script, written by SirLich. If there is an issue, please bring it to his attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
@@ -76,7 +77,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:behavior.mount_pathing](#minecraftbehaviormount_pathing)
  - [minecraft:behavior.move_indoors](#minecraftbehaviormove_indoors)
  - [minecraft:behavior.move_through_village](#minecraftbehaviormove_through_village)
- - [minecraft:behavior.move_to_block](#minecraftbehaviormove_to_block)
  - [minecraft:behavior.move_to_land](#minecraftbehaviormove_to_land)
  - [minecraft:behavior.move_to_random_block](#minecraftbehaviormove_to_random_block)
  - [minecraft:behavior.move_to_village](#minecraftbehaviormove_to_village)
@@ -100,7 +100,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:behavior.raid_garden](#minecraftbehaviorraid_garden)
  - [minecraft:behavior.random_breach](#minecraftbehaviorrandom_breach)
  - [minecraft:behavior.random_fly](#minecraftbehaviorrandom_fly)
- - [minecraft:behavior.random_hover](#minecraftbehaviorrandom_hover)
  - [minecraft:behavior.random_look_around](#minecraftbehaviorrandom_look_around)
  - [minecraft:behavior.random_look_around_and_sit](#minecraftbehaviorrandom_look_around_and_sit)
  - [minecraft:behavior.random_sitting](#minecraftbehaviorrandom_sitting)
@@ -147,7 +146,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:behavior.wither_random_attack_pos_goal](#minecraftbehaviorwither_random_attack_pos_goal)
  - [minecraft:behavior.wither_target_highest_damage](#minecraftbehaviorwither_target_highest_damage)
  - [minecraft:behavior.work](#minecraftbehaviorwork)
- - [minecraft:block_sensor](#minecraftblock_sensor)
  - [minecraft:boostable](#minecraftboostable)
  - [minecraft:boss](#minecraftboss)
  - [minecraft:break_blocks](#minecraftbreak_blocks)
@@ -178,7 +176,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:follow_range](#minecraftfollow_range)
  - [minecraft:genetics](#minecraftgenetics)
  - [minecraft:giveable](#minecraftgiveable)
- - [minecraft:grows_crop](#minecraftgrows_crop)
  - [minecraft:healable](#minecrafthealable)
  - [minecraft:health](#minecrafthealth)
  - [minecraft:hide](#minecrafthide)
@@ -219,7 +216,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:movement.fly](#minecraftmovementfly)
  - [minecraft:movement.generic](#minecraftmovementgeneric)
  - [minecraft:movement.glide](#minecraftmovementglide)
- - [minecraft:movement.hover](#minecraftmovementhover)
  - [minecraft:movement.jump](#minecraftmovementjump)
  - [minecraft:movement.skip](#minecraftmovementskip)
  - [minecraft:movement.sway](#minecraftmovementsway)
@@ -228,7 +224,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:navigation.float](#minecraftnavigationfloat)
  - [minecraft:navigation.fly](#minecraftnavigationfly)
  - [minecraft:navigation.generic](#minecraftnavigationgeneric)
- - [minecraft:navigation.hover](#minecraftnavigationhover)
  - [minecraft:navigation.walk](#minecraftnavigationwalk)
  - [minecraft:on_death](#minecrafton_death)
  - [minecraft:on_friendly_anger](#minecrafton_friendly_anger)
@@ -281,9 +276,9 @@ This documentation is auto-generated using a python script, written by SirLich. 
  - [minecraft:variant](#minecraftvariant)
  - [minecraft:water_movement](#minecraftwater_movement)
 
-
 # minecraft:addrider
 ### cave_spider.json
+
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
@@ -363,26 +358,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:ageable
-### bee.json
-```json
-"minecraft:ageable": {
-    "duration": 1200,
-    "feed_items": [
-        "minecraft:red_flower",
-        "minecraft:yellow_flower",
-        "minecraft:wither_rose",
-        "minecraft:double_plant:0",
-        "minecraft:double_plant:1",
-        "minecraft:double_plant:4",
-        "minecraft:double_plant:5"
-    ],
-    "grow_up": {
-        "event": "minecraft:ageable_grow_up",
-        "target": "self"
-    }
-}
-```
-
 ### cat.json
 ```json
 "minecraft:ageable": {
@@ -778,23 +753,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:ambient_sound_interval
-### bee.json
-```json
-"minecraft:ambient_sound_interval": {
-    "event_name": "ambient.pollinate",
-    "range": 3.0,
-    "value": 2.0
-}
-```
-
-```json
-"minecraft:ambient_sound_interval": {
-    "event_name": "ambient",
-    "range": 0.0,
-    "value": 0.0
-}
-```
-
 ### evocation_illager.json
 ```json
 "minecraft:ambient_sound_interval": {
@@ -862,24 +820,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:angry
-### bee.json
-```json
-"minecraft:angry": {
-    "duration": 25,
-    "broadcastAnger": true,
-    "broadcastRange": 20,
-    "broadcast_filters": {
-        "test": "is_family",
-        "operator": "!=",
-        "value": "pacified"
-    },
-    "calm_event": {
-        "event": "calmed_down",
-        "target": "self"
-    }
-}
-```
-
 ### cave_spider.json
 ```json
 "minecraft:angry": {
@@ -1167,29 +1107,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:attack
-### bee.json
-```json
-"minecraft:attack": {
-    "damage": 2
-}
-```
-
-```json
-"minecraft:attack": {
-    "damage": 2,
-    "effect_name": "poison",
-    "effect_duration": 10
-}
-```
-
-```json
-"minecraft:attack": {
-    "damage": 2,
-    "effect_name": "poison",
-    "effect_duration": 18
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:attack": {
@@ -2154,14 +2071,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.breed
-### bee.json
-```json
-"minecraft:behavior.breed": {
-    "priority": 6,
-    "speed_multiplier": 1.0
-}
-```
-
 ### cat.json
 ```json
 "minecraft:behavior.breed": {
@@ -2305,8 +2214,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ### wolf.json
 ```json
 "minecraft:behavior.breed": {
-    "priority": 2,
-    "speed_multiplier": 1.0
+    "priority": 7
 }
 ```
 
@@ -2870,13 +2778,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-### bee.json
-```json
-"minecraft:behavior.float": {
-    "priority": 20
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:behavior.float": {
@@ -3215,14 +3116,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.follow_parent
-### bee.json
-```json
-"minecraft:behavior.follow_parent": {
-    "priority": 8,
-    "speed_multiplier": 1.1
-}
-```
-
 ### chicken.json
 ```json
 "minecraft:behavior.follow_parent": {
@@ -3394,60 +3287,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.go_home
-### bee.json
-```json
-"minecraft:behavior.go_home": {
-    "priority": 5,
-    "speed_multiplier": 1.0,
-    "interval": 1,
-    "goal_radius": 1.2,
-    "on_home": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_block",
-                        "subject": "block",
-                        "value": "minecraft:bee_nest"
-                    },
-                    {
-                        "test": "is_block",
-                        "subject": "block",
-                        "value": "minecraft:beehive"
-                    }
-                ]
-            },
-            "event": "minecraft:bee_returned_to_hive",
-            "target": "block"
-        },
-        {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_block",
-                        "subject": "block",
-                        "operator": "!=",
-                        "value": "minecraft:bee_nest"
-                    },
-                    {
-                        "test": "is_block",
-                        "subject": "block",
-                        "operator": "!=",
-                        "value": "minecraft:beehive"
-                    }
-                ]
-            },
-            "event": "find_hive_event",
-            "target": "self"
-        }
-    ],
-    "on_failed": {
-        "event": "find_hive_event",
-        "target": "self"
-    }
-}
-```
-
 ### turtle.json
 ```json
 "minecraft:behavior.go_home": {
@@ -3551,13 +3390,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.hurt_by_target
-### bee.json
-```json
-"minecraft:behavior.hurt_by_target": {
-    "priority": 2
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:behavior.hurt_by_target": {
@@ -4465,38 +4297,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.melee_attack
-### bee.json
-```json
-"minecraft:behavior.melee_attack": {
-    "priority": 3,
-    "target_dist": 1.2,
-    "track_target": false,
-    "attack_once": true,
-    "reach_multiplier": 2.0,
-    "look_distance": 30,
-    "untrackable_cooldown_delay": 17,
-    "speed_multiplier": 9,
-    "target_tracking": {
-        "refresh_period_min": 4,
-        "refresh_period_max": 11,
-        "backoff": [
-            {
-                "distance_squared_gt": 256,
-                "refresh_period_delta": 50
-            },
-            {
-                "distance_squared_gt": 1024,
-                "refresh_period_delta": 100
-            }
-        ]
-    },
-    "on_attack": {
-        "event": "countdown_to_perish_event",
-        "target": "self"
-    }
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:behavior.melee_attack": {
@@ -4551,8 +4351,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 "minecraft:behavior.melee_attack": {
     "priority": 3,
     "speed_multiplier": 1,
-    "track_target": false,
-    "require_complete_path": true
+    "track_target": false
 }
 ```
 
@@ -5023,62 +4822,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-# minecraft:behavior.move_to_block
-### bee.json
-```json
-"minecraft:behavior.move_to_block": {
-    "priority": 11,
-    "tick_interval": 1,
-    "start_chance": 0.5,
-    "search_range": 6,
-    "search_height": 4,
-    "goal_radius": 1.0,
-    "stay_duration": 20.0,
-    "target_selection_method": "random",
-    "target_offset": [
-        0,
-        0.25,
-        0
-    ],
-    "target_blocks": [
-        "minecraft:red_flower",
-        "minecraft:yellow_flower",
-        "minecraft:wither_rose",
-        "minecraft:sweet_berry_bush",
-        "minecraft:double_plant:8",
-        "minecraft:double_plant:9",
-        "minecraft:double_plant:12",
-        "minecraft:double_plant:13"
-    ],
-    "on_stay_completed": [
-        {
-            "event": "collected_nectar",
-            "target": "self"
-        }
-    ]
-}
-```
-
-```json
-"minecraft:behavior.move_to_block": {
-    "priority": 11,
-    "search_range": 16,
-    "search_height": 10,
-    "tick_interval": 1,
-    "goal_radius": 0.633,
-    "target_blocks": [
-        "bee_nest",
-        "beehive"
-    ],
-    "on_reach": [
-        {
-            "event": "minecraft:bee_returned_to_hive",
-            "target": "block"
-        }
-    ]
-}
-```
-
 # minecraft:behavior.move_to_land
 ### turtle.json
 ```json
@@ -5370,23 +5113,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.nearest_attackable_target
-### bee.json
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 3,
-    "entity_types": [
-        {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "player"
-            },
-            "max_dist": 10
-        }
-    ]
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:behavior.nearest_attackable_target": {
@@ -7167,23 +6893,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.panic
-### bee.json
-```json
-"minecraft:behavior.panic": {
-    "priority": 4,
-    "speed_multiplier": 1.25,
-    "force": true
-}
-```
-
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "force": true
-}
-```
-
 ### cat.json
 ```json
 "minecraft:behavior.panic": {
@@ -7528,22 +7237,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
     "speed_multiplier": 1.0,
     "can_land_on_trees": true,
     "avoid_damage_blocks": true
-}
-```
-
-# minecraft:behavior.random_hover
-### bee.json
-```json
-"minecraft:behavior.random_hover": {
-    "priority": 12,
-    "xz_dist": 8,
-    "y_dist": 8,
-    "y_offset": -1,
-    "interval": 1,
-    "hover_height": [
-        1,
-        4
-    ]
 }
 ```
 
@@ -9217,25 +8910,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:behavior.tempt
-### bee.json
-```json
-"minecraft:behavior.tempt": {
-    "priority": 7,
-    "speed_multiplier": 1.25,
-    "within_radius": 8,
-    "can_tempt_vertically": true,
-    "items": [
-        "minecraft:red_flower",
-        "minecraft:yellow_flower",
-        "minecraft:wither_rose",
-        "minecraft:double_plant:0",
-        "minecraft:double_plant:1",
-        "minecraft:double_plant:4",
-        "minecraft:double_plant:5"
-    ]
-}
-```
-
 ### cat.json
 ```json
 "minecraft:behavior.tempt": {
@@ -9728,23 +9402,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-# minecraft:block_sensor
-### bee.json
-```json
-"minecraft:block_sensor": {
-    "sensor_radius": 16,
-    "on_break": [
-        {
-            "block_list": [
-                "minecraft:beehive",
-                "minecraft:bee_nest"
-            ],
-            "on_block_broken": "hive_destroyed"
-        }
-    ]
-}
-```
-
 # minecraft:boostable
 ### pig.json
 ```json
@@ -9823,14 +9480,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 "minecraft:breathable": {
     "total_supply": 15,
     "suffocate_time": 0
-}
-```
-
-### bee.json
-```json
-"minecraft:breathable": {
-    "totalSupply": 15,
-    "suffocateTime": 0
 }
 ```
 
@@ -10339,30 +9988,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:breedable
-### bee.json
-```json
-"minecraft:breedable": {
-    "require_tame": false,
-    "breeds_with": {
-        "mate_type": "minecraft:bee",
-        "baby_type": "minecraft:bee",
-        "breed_event": {
-            "event": "minecraft:entity_born",
-            "target": "baby"
-        }
-    },
-    "breed_items": [
-        "minecraft:red_flower",
-        "minecraft:yellow_flower",
-        "minecraft:wither_rose",
-        "minecraft:double_plant:0",
-        "minecraft:double_plant:1",
-        "minecraft:double_plant:4",
-        "minecraft:double_plant:5"
-    ]
-}
-```
-
 ### cat.json
 ```json
 "minecraft:breedable": {
@@ -10960,11 +10585,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 "minecraft:can_fly": {}
 ```
 
-### bee.json
-```json
-"minecraft:can_fly": {}
-```
-
 ### blaze.json
 ```json
 "minecraft:can_fly": {
@@ -11032,14 +10652,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 "minecraft:collision_box": {
     "width": 0.5,
     "height": 0.9
-}
-```
-
-### bee.json
-```json
-"minecraft:collision_box": {
-    "width": 0.55,
-    "height": 0.5
 }
 ```
 
@@ -12307,16 +11919,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-### bee.json
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "cause": "fall",
-        "deals_damage": false
-    }
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:damage_sensor": {
@@ -13325,65 +12927,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:environment_sensor
-### bee.json
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "event": "seek_shelter",
-            "filters": {
-                "all_of": [
-                    {
-                        "any_of": [
-                            {
-                                "test": "is_daytime",
-                                "value": false
-                            },
-                            {
-                                "test": "is_weather",
-                                "value": "clear",
-                                "operator": "!="
-                            }
-                        ]
-                    },
-                    {
-                        "test": "has_component",
-                        "value": "minecraft:is_charged",
-                        "operator": "!="
-                    },
-                    {
-                        "test": "has_biome_tag",
-                        "value": "overworld"
-                    }
-                ]
-            }
-        }
-    ]
-}
-```
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "event": "abort_sheltering",
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "is_weather",
-                        "value": "clear"
-                    },
-                    {
-                        "test": "is_daytime",
-                        "value": true
-                    }
-                ]
-            }
-        }
-    ]
-}
-```
-
 ### cave_spider.json
 ```json
 "minecraft:environment_sensor": {
@@ -14132,14 +13675,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:experience_reward
-### bee.json
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:experience_reward": {
@@ -14188,7 +13723,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ### dolphin.json
 ```json
 "minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
 }
 ```
 
@@ -14333,7 +13868,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
 }
 ```
 
@@ -14376,7 +13911,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ### polar_bear.json
 ```json
 "minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
 }
 ```
 
@@ -14484,7 +14019,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "query.last_hit_by_player ? Math.Random(1,4) : 0"
 }
 ```
 
@@ -14887,13 +14422,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:flying_speed
-### bee.json
-```json
-"minecraft:flying_speed": {
-    "value": 0.15
-}
-```
-
 ### ender_dragon.json
 ```json
 "minecraft:flying_speed": {
@@ -14902,13 +14430,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:follow_range
-### bee.json
-```json
-"minecraft:follow_range": {
-    "value": 1024
-}
-```
-
 ### blaze.json
 ```json
 "minecraft:follow_range": {
@@ -15117,15 +14638,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
             "target": "self"
         }
     }
-}
-```
-
-# minecraft:grows_crop
-### bee.json
-```json
-"minecraft:grows_crop": {
-    "charges": 10,
-    "chance": 0.03
 }
 ```
 
@@ -15390,14 +14902,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 "minecraft:health": {
     "value": 6,
     "max": 6
-}
-```
-
-### bee.json
-```json
-"minecraft:health": {
-    "value": 10,
-    "max": 10
 }
 ```
 
@@ -15996,11 +15500,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:home
-### bee.json
-```json
-"minecraft:home": {}
-```
-
 ### turtle.json
 ```json
 "minecraft:home": {}
@@ -16101,35 +15600,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
             },
             "cause": "lava",
             "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-### bee.json
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "filters": {
-                "test": "in_lava",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "cause": "lava",
-            "damage_per_tick": 4
-        }
-    ]
-}
-```
-
-```json
-"minecraft:hurt_on_condition": {
-    "damage_conditions": [
-        {
-            "cause": "none",
-            "damage_per_tick": 999
         }
     ]
 }
@@ -18733,11 +18203,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:is_baby
-### bee.json
-```json
-"minecraft:is_baby": {}
-```
-
 ### cat.json
 ```json
 "minecraft:is_baby": {}
@@ -18884,11 +18349,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:is_charged
-### bee.json
-```json
-"minecraft:is_charged": {}
-```
-
 ### creeper.json
 ```json
 "minecraft:is_charged": {}
@@ -19140,11 +18600,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 
 # minecraft:jump.static
 ### bat.json
-```json
-"minecraft:jump.static": {}
-```
-
-### bee.json
 ```json
 "minecraft:jump.static": {}
 ```
@@ -19445,15 +18900,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:leashable
-### bee.json
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
 ### boat.json
 ```json
 "minecraft:leashable": {
@@ -19482,15 +18928,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### cow.json
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-### dolphin.json
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -19580,25 +19017,7 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-### parrot.json
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
 ### pig.json
-```json
-"minecraft:leashable": {
-    "soft_distance": 4.0,
-    "hard_distance": 6.0,
-    "max_distance": 10.0
-}
-```
-
-### polar_bear.json
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -20187,13 +19606,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:mark_variant
-### bee.json
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
 ### horse.json
 ```json
 "minecraft:mark_variant": {
@@ -20589,13 +20001,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```json
 "minecraft:movement": {
     "value": 0.1
-}
-```
-
-### bee.json
-```json
-"minecraft:movement": {
-    "value": 0.3
 }
 ```
 
@@ -21383,12 +20788,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 }
 ```
 
-# minecraft:movement.hover
-### bee.json
-```json
-"minecraft:movement.hover": {}
-```
-
 # minecraft:movement.jump
 ### magma_cube.json
 ```json
@@ -21498,11 +20897,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### bat.json
-```json
-"minecraft:nameable": {}
-```
-
-### bee.json
 ```json
 "minecraft:nameable": {}
 ```
@@ -22026,19 +21420,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
     "can_walk": true,
     "can_sink": false,
     "avoid_damage_blocks": true
-}
-```
-
-# minecraft:navigation.hover
-### bee.json
-```json
-"minecraft:navigation.hover": {
-    "can_path_over_water": true,
-    "can_sink": false,
-    "can_path_from_air": true,
-    "avoid_water": true,
-    "avoid_damage_blocks": true,
-    "avoid_sun": false
 }
 ```
 
@@ -22578,14 +21959,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:on_target_acquired
-### bee.json
-```json
-"minecraft:on_target_acquired": {
-    "event": "attacked",
-    "target": "self"
-}
-```
-
 ### cave_spider.json
 ```json
 "minecraft:on_target_acquired": {
@@ -22931,11 +22304,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 ### bat.json
-```json
-"minecraft:physics": {}
-```
-
-### bee.json
 ```json
 "minecraft:physics": {}
 ```
@@ -24251,14 +23619,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
-    "is_pushable_by_piston": true
-}
-```
-
-### bee.json
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
     "is_pushable_by_piston": true
 }
 ```
@@ -25799,13 +25159,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:scale
-### bee.json
-```json
-"minecraft:scale": {
-    "value": 0.5
-}
-```
-
 ### cat.json
 ```json
 "minecraft:scale": {
@@ -27809,84 +27162,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
 ```
 
 # minecraft:timer
-### bee.json
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": [
-        20,
-        50
-    ],
-    "randomInterval": true,
-    "time_down_event": {
-        "event": "stop_panicking_after_fire",
-        "target": "self"
-    }
-}
-```
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": [
-        10,
-        60
-    ],
-    "randomInterval": true,
-    "time_down_event": {
-        "event": "perish_event",
-        "target": "self"
-    }
-}
-```
-
-```json
-"minecraft:timer": {
-    "looping": true,
-    "time": 5,
-    "time_down_event": {
-        "event": "calmed_down",
-        "target": "self"
-    }
-}
-```
-
-```json
-"minecraft:timer": {
-    "looping": true,
-    "time": 180,
-    "time_down_event": {
-        "event": "find_flower_timeout"
-    }
-}
-```
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": 180,
-    "time_down_event": {
-        "event": "find_hive_timeout",
-        "target": "self"
-    }
-}
-```
-
-```json
-"minecraft:timer": {
-    "looping": false,
-    "time": [
-        5,
-        20
-    ],
-    "randomInterval": true,
-    "time_down_event": {
-        "event": "find_hive_event",
-        "target": "self"
-    }
-}
-```
-
 ### dolphin.json
 ```json
 "minecraft:timer": {
@@ -28325,28 +27600,6 @@ This documentation is auto-generated using a python script, written by SirLich. 
     "family": [
         "bat",
         "mob"
-    ]
-}
-```
-
-### bee.json
-```json
-"minecraft:type_family": {
-    "family": [
-        "bee",
-        "mob",
-        "arthropod"
-    ]
-}
-```
-
-```json
-"minecraft:type_family": {
-    "family": [
-        "bee",
-        "mob",
-        "arthropod",
-        "pacified"
     ]
 }
 ```
