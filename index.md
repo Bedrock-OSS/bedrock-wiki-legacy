@@ -32,10 +32,9 @@ This wiki is a knowledge-sharing website for Technical Bedrock, containing docum
 
 Website looks weird?
 {: .label .label-red }
-- F12
-- click disable cache
-- reload
-- click disable cache again to re-enable it
+You might need to clear your browser's cache.
+- [Clear browser cache in Windows](https://clear-my-cache.com/windows)
+- [Clear browser cache in Mac OS / OS X](https://clear-my-cache.com/apple-mac-os)
 
 ## Navigating:
 
