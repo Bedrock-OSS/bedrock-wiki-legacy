@@ -6,6 +6,12 @@ parent: Tutorials
 
 # Boat Entities
 
+1.16 depreciation
+{: .label .label-yellow  }
+
+1.6 has made this tutorial pointless. See the new [Buoyant](https://bedrock.dev/docs/stable/Entities#minecraft:buoyant) component for more details.
+
+# 1.14 Boat Entities
 Be they jet-skis, sailboats, or paddle-boards, water-based entities are a pretty common task.
 
 Sadly, Minecraft makes this difficult by making the `minecraft:boat` one of the most hard-coded entities in the game. This tutorial will teach you how to create boat mechanics for yourself.
