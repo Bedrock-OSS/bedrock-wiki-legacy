@@ -44,10 +44,10 @@ Texture layering is achieved through the use of render controllers. If you aren'
 
 ### Entity
 
-You need to define all textures in the entity, and also use `entity_alphatest` material.
+You need to define all textures in the entity, and also use `villager_v2_masked` material.
 ```json
 "materials": {
-  "default": "entity_alphatest"
+  "default": "villager_v2_masked"
 },
 "textures": {
   "top_layer": "textures/top",
