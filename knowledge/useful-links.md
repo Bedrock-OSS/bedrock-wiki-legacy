@@ -29,6 +29,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
  - [Advancements](https://advancements.thedestruc7i0n.ca/)
  - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
+ - [Feature Rule Generator](https://machine-builder.github.io/feature_rule_generator_1.15.html)
  - [Block and Item Generator](https://gitwither.github.io/bedrock-item-generator/)
   
 ## Documentation Links:
@@ -38,6 +39,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Component Examples](vanilla-usage/components-1.4/)
  - [Playsound List](http://www.theredengineer.com/1.9-playsound-list)
  - [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
+ - [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
 
 ## Other useful Links:
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
