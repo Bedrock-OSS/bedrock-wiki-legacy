@@ -1,7 +1,7 @@
 ---
 layout: page
 title: tick.json
-parent: Documentation
+parent: Knowledge
 ---
  
 # Running functions through tick.json

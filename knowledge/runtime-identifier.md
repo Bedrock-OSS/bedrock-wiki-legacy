@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Runtime Identifiers
-parent: Documentation
+parent: Knowledge
 ---
 
 # Runtime Identifiers

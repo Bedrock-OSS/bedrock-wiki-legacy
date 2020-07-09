@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Can PlaceOn/Destroy
-parent: Documentation
+parent: Knowledge
 ---
 
 # CanPlaceOn and CanDestroy
