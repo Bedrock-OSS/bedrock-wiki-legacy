@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Items 1.16
+title: Items
 parent: Vanilla Usage
 ---
 
-# Items 1.16
+# Items
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # Table of contents
@@ -22,12 +22,12 @@ This documentation is stripped from the vanilla files using an automated script.
 # minecraft:block
 ### camera.json
 ```json
-minecraft:block: "minecraft:camera"
+"minecraft:block:" "minecraft:camera"
 ```
 
 # minecraft:camera
 ```json
-minecraft:camera: {
+"minecraft:camera:" {
     "black_bars_duration": 0.2,
     "black_bars_screen_ratio": 0.08,
     "shutter_duration": 0.2,
@@ -39,18 +39,18 @@ minecraft:camera: {
 # minecraft:foil
 ### appleEnchanted.json
 ```json
-minecraft:foil: true
+"minecraft:foil:" true
 ```
 
 ### golden_apple.json
 ```json
-minecraft:foil: false
+"minecraft:foil:" false
 ```
 
 # minecraft:food
 ### apple.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 4,
     "saturation_modifier": "low"
 }
@@ -58,7 +58,7 @@ minecraft:food: {
 
 ### appleEnchanted.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 4,
     "saturation_modifier": "supernatural",
     "can_always_eat": true,
@@ -93,7 +93,7 @@ minecraft:food: {
 
 ### baked_potato.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 5,
     "saturation_modifier": "normal"
 }
@@ -101,7 +101,7 @@ minecraft:food: {
 
 ### beef.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 3,
     "saturation_modifier": "low"
 }
@@ -109,7 +109,7 @@ minecraft:food: {
 
 ### beetroot.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 1,
     "saturation_modifier": "normal"
 }
@@ -117,7 +117,7 @@ minecraft:food: {
 
 ### beetroot_soup.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "normal",
     "using_converts_to": "bowl"
@@ -126,7 +126,7 @@ minecraft:food: {
 
 ### bread.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 5,
     "saturation_modifier": "normal"
 }
@@ -134,7 +134,7 @@ minecraft:food: {
 
 ### carrot.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 3,
     "saturation_modifier": "normal"
 }
@@ -142,7 +142,7 @@ minecraft:food: {
 
 ### chicken.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "low",
     "effects": [
@@ -158,7 +158,7 @@ minecraft:food: {
 
 ### chorus_fruit.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 4,
     "saturation_modifier": "low",
     "on_use_action": "chorus_teleport",
@@ -175,7 +175,7 @@ minecraft:food: {
 
 ### clownfish.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 1,
     "saturation_modifier": "poor"
 }
@@ -183,7 +183,7 @@ minecraft:food: {
 
 ### cooked_beef.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 8,
     "saturation_modifier": "good"
 }
@@ -191,7 +191,7 @@ minecraft:food: {
 
 ### cooked_chicken.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "normal"
 }
@@ -199,7 +199,7 @@ minecraft:food: {
 
 ### cooked_fish.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 5,
     "saturation_modifier": "normal"
 }
@@ -207,7 +207,7 @@ minecraft:food: {
 
 ### cooked_porkchop.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 8,
     "saturation_modifier": "good"
 }
@@ -215,7 +215,7 @@ minecraft:food: {
 
 ### cooked_rabbit.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 5,
     "saturation_modifier": "normal"
 }
@@ -223,7 +223,7 @@ minecraft:food: {
 
 ### cooked_salmon.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "good"
 }
@@ -231,7 +231,7 @@ minecraft:food: {
 
 ### cookie.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "poor"
 }
@@ -239,7 +239,7 @@ minecraft:food: {
 
 ### dried_kelp.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 1,
     "saturation_modifier": "poor"
 }
@@ -247,7 +247,7 @@ minecraft:food: {
 
 ### fish.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "poor"
 }
@@ -255,7 +255,7 @@ minecraft:food: {
 
 ### golden_apple.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 4,
     "saturation_modifier": "supernatural",
     "can_always_eat": true,
@@ -278,7 +278,7 @@ minecraft:food: {
 
 ### golden_carrot.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "supernatural"
 }
@@ -286,7 +286,7 @@ minecraft:food: {
 
 ### honey_bottle.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "poor",
     "can_always_eat": true,
@@ -299,7 +299,7 @@ minecraft:food: {
 
 ### melon.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "low"
 }
@@ -307,7 +307,7 @@ minecraft:food: {
 
 ### mushroom_stew.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "normal",
     "using_converts_to": "bowl"
@@ -316,7 +316,7 @@ minecraft:food: {
 
 ### muttonCooked.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "good"
 }
@@ -324,7 +324,7 @@ minecraft:food: {
 
 ### muttonRaw.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "low"
 }
@@ -332,7 +332,7 @@ minecraft:food: {
 
 ### poisonous_potato.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "low",
     "effects": [
@@ -348,7 +348,7 @@ minecraft:food: {
 
 ### porkchop.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 3,
     "saturation_modifier": "low"
 }
@@ -356,7 +356,7 @@ minecraft:food: {
 
 ### potato.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 1,
     "saturation_modifier": "low"
 }
@@ -364,7 +364,7 @@ minecraft:food: {
 
 ### pufferfish.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 1,
     "saturation_modifier": "poor",
     "effects": [
@@ -389,7 +389,7 @@ minecraft:food: {
 
 ### pumpkin_pie.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 8,
     "saturation_modifier": "low"
 }
@@ -397,7 +397,7 @@ minecraft:food: {
 
 ### rabbit.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 3,
     "saturation_modifier": "low"
 }
@@ -405,7 +405,7 @@ minecraft:food: {
 
 ### rabbit_stew.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 10,
     "saturation_modifier": "normal",
     "using_converts_to": "bowl"
@@ -414,7 +414,7 @@ minecraft:food: {
 
 ### rotten_flesh.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 4,
     "saturation_modifier": "poor",
     "effects": [
@@ -430,7 +430,7 @@ minecraft:food: {
 
 ### salmon.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "poor"
 }
@@ -438,7 +438,7 @@ minecraft:food: {
 
 ### spider_eye.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "good",
     "effects": [
@@ -454,7 +454,7 @@ minecraft:food: {
 
 ### suspicious_stew.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 6,
     "saturation_modifier": "normal",
     "using_converts_to": "bowl",
@@ -464,7 +464,7 @@ minecraft:food: {
 
 ### sweet_berries.json
 ```json
-minecraft:food: {
+"minecraft:food:" {
     "nutrition": 2,
     "saturation_modifier": "low",
     "is_meat": false
@@ -474,91 +474,91 @@ minecraft:food: {
 # minecraft:hand_equipped
 ### appleEnchanted.json
 ```json
-minecraft:hand_equipped: false
+"minecraft:hand_equipped:" false
 ```
 
 # minecraft:max_damage
 ### clownfish.json
 ```json
-minecraft:max_damage: 0
+"minecraft:max_damage:" 0
 ```
 
 ### cooked_fish.json
 ```json
-minecraft:max_damage: 0
+"minecraft:max_damage:" 0
 ```
 
 ### cooked_salmon.json
 ```json
-minecraft:max_damage: 0
+"minecraft:max_damage:" 0
 ```
 
 ### fish.json
 ```json
-minecraft:max_damage: 0
+"minecraft:max_damage:" 0
 ```
 
 ### pufferfish.json
 ```json
-minecraft:max_damage: 0
+"minecraft:max_damage:" 0
 ```
 
 ### salmon.json
 ```json
-minecraft:max_damage: 0
+"minecraft:max_damage:" 0
 ```
 
 # minecraft:max_stack_size
 ### beetroot_soup.json
 ```json
-minecraft:max_stack_size: 1
+"minecraft:max_stack_size:" 1
 ```
 
 ### honey_bottle.json
 ```json
-minecraft:max_stack_size: 16
+"minecraft:max_stack_size:" 16
 ```
 
 ### mushroom_stew.json
 ```json
-minecraft:max_stack_size: 1
+"minecraft:max_stack_size:" 1
 ```
 
 ### rabbit_stew.json
 ```json
-minecraft:max_stack_size: 1
+"minecraft:max_stack_size:" 1
 ```
 
 ### suspicious_stew.json
 ```json
-minecraft:max_stack_size: 1
+"minecraft:max_stack_size:" 1
 ```
 
 # minecraft:seed
 ### beetroot_seeds.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "beetroot"
 }
 ```
 
 ### carrot.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "carrots"
 }
 ```
 
 ### melon_seeds.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "melon_stem"
 }
 ```
 
 ### nether_wart.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "plant_at": "soul_sand",
     "crop_result": "nether_wart"
 }
@@ -566,21 +566,21 @@ minecraft:seed: {
 
 ### potato.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "potatoes"
 }
 ```
 
 ### pumpkin_seeds.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "pumpkin_stem"
 }
 ```
 
 ### sweet_berries.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "sweet_berry_bush",
     "plant_at": [
         "grass",
@@ -592,7 +592,7 @@ minecraft:seed: {
 
 ### wheat_seeds.json
 ```json
-minecraft:seed: {
+"minecraft:seed:" {
     "crop_result": "wheat"
 }
 ```
@@ -600,242 +600,242 @@ minecraft:seed: {
 # minecraft:stacked_by_data
 ### appleEnchanted.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### clownfish.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### cooked_fish.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### cooked_salmon.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### fish.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### golden_apple.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### pufferfish.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 ### salmon.json
 ```json
-minecraft:stacked_by_data: true
+"minecraft:stacked_by_data:" true
 ```
 
 # minecraft:use_duration
 ### apple.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### appleEnchanted.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### baked_potato.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### beef.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### beetroot.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### beetroot_soup.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### bread.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### camera.json
 ```json
-minecraft:use_duration: 100000
+"minecraft:use_duration:" 100000
 ```
 
 ### carrot.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### chicken.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### chorus_fruit.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### clownfish.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cooked_beef.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cooked_chicken.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cooked_fish.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cooked_porkchop.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cooked_rabbit.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cooked_salmon.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### cookie.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### dried_kelp.json
 ```json
-minecraft:use_duration: 16
+"minecraft:use_duration:" 16
 ```
 
 ### fish.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### golden_apple.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### golden_carrot.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### honey_bottle.json
 ```json
-minecraft:use_duration: 40
+"minecraft:use_duration:" 40
 ```
 
 ### melon.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### mushroom_stew.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### muttonCooked.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### muttonRaw.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### poisonous_potato.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### porkchop.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### potato.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### pufferfish.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### pumpkin_pie.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### rabbit.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### rabbit_stew.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### rotten_flesh.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### salmon.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### spider_eye.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### suspicious_stew.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
 ### sweet_berries.json
 ```json
-minecraft:use_duration: 32
+"minecraft:use_duration:" 32
 ```
 
