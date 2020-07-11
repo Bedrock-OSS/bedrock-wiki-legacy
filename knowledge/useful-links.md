@@ -26,6 +26,8 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Loot Table Generator](https://amaury.carrade.eu/minecraft/loot_tables)
  - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
+ - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
+ - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
 
  ## Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
