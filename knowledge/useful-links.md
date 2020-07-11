@@ -26,9 +26,10 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Loot Table Generator](https://amaury.carrade.eu/minecraft/loot_tables)
  - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
+
+ ## Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
  - [Advancements](https://advancements.thedestruc7i0n.ca/)
- - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
  - [Feature Rule Generator](https://machine-builder.github.io/feature_rule_generator_1.15.html)
  - [Block and Item Generator](https://gitwither.github.io/bedrock-item-generator/)
   
@@ -40,20 +41,27 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Playsound List](http://www.theredengineer.com/1.9-playsound-list)
  - [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
  - [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
-
-## Other useful Links:
- - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
  - [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac) (Thanks CyberPon3)
- - [Run Bedrock on Linux](https://github.com/Element-0/ElementZero) (Thanks Element-0)
- - [Scripting: Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
- - [Scripting: Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
- - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
- - [Block Models](https://blockmodels.com/)
+
+## Scripting Resources:
+ - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)
+ - [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
+ - [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
+ - [Get Started](https://minecraft-addon-tools.github.io/tutorials/)
 
 ## Vanilla Behavior & Resource Packs:
  - [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
  - [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
  - [Vanilla Beta Behavior Pack](https://aka.ms/MinecraftBetaBehaviors)
+
+## Other useful Links:
+ - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
+ - [Run Bedrock on Linux](https://github.com/Element-0/ElementZero) (Thanks Element-0)
+ - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
+ - [Block Models](https://blockmodels.com/)
+ - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
+
+
 
 
