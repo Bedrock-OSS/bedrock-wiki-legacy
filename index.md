@@ -4,6 +4,9 @@ title: Home
 nav_order: 0
 description: "Technical bedrock knowledge-sharing wiki."
 permalink: /
+sitemap:
+  priority: 1
+  changefreq: 'weekly'
 ---
 
 # Bedrock Wiki 
