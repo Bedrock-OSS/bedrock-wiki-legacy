@@ -5,6 +5,12 @@ nav_order: 0
 description: "Technical bedrock knowledge-sharing wiki."
 permalink: /
 ---
+
+<head>
+<!-- Google Search Console Verification - Do not remove -->
+<meta name="google-site-verification" content="W1d06OlO8-380Ed7HJtoadHPKsS6f9FmAESRZ8nM5qw" />
+</head>
+
 # Bedrock Wiki 
 
 <!-- <button class="btn js-toggle-dark-mode">Preview dark color scheme</button>
