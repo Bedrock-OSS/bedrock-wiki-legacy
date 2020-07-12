@@ -27,5 +27,3 @@ plugins:
   - jekyll-feed
 
 search_enabled: true
-
-footer_content: "<script src=\"/assets/js/dark.js\"><\\script>"
