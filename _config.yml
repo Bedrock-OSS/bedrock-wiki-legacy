@@ -27,3 +27,6 @@ plugins:
   - jekyll-feed
 
 search_enabled: true
+
+ga_tracking: UA-172450751-1
+ga_tracking_anonymize_ip: true
