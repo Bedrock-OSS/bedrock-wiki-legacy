@@ -9,7 +9,7 @@ parent: Tutorials
 A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad! 
 
 # Animation Controllers
-To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can learn more about animation controllers on the entity events section of [bedrock.dev](https://bedrock.dev/1.14.0.0/1.14.0.6/Entity%20Events). 
+To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can [learn more about animation controllers on the entity events section of bedrock.dev](https://bedrock.dev/1.14.0.0/1.14.0.6/Entity%20Events). 
 
 In short, animation controllers allow us to trigger events from behavior packs.
  - Slash commands (like `/say`)
@@ -69,7 +69,7 @@ To add this animation controller to our entity, we can use the following code in
 Once again, if you are confused about any of this step, please review the Entity Events documentation.
 
 # Triggering Commands using Events:
-Animation transitions are created using queries. You can read about queries [here](https://bedrock.dev/1.14.0.0/1.14.0.6/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
+Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/1.14.0.0/1.14.0.6/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
 
 I personally like using [skin_id](/vanilla-usage/components-1.13.html#minecraftskin_id).
 

@@ -276,4 +276,4 @@ Notes:
 - To assign a weight to a time in the list, add the weight to the value the randomized variable must be less than in the list's previous entry (e.g. 5 seconds has a weight of 90 - 30 = 60)
 - Any events or commands to run when the animation is finished are put inside on_exit
 
-Hopefully this spread some light on the subject of handling time in Minecraft Bedrock! As shown above, there are many possible ways it can be done, each with their own pros and cons. If you have any other useful methods for creating time-based events, please contribute to the wiki [here](https://github.com/SirLich/technical-bedrock)!
+Hopefully this spread some light on the subject of handling time in Minecraft Bedrock! As shown above, there are many possible ways it can be done, each with their own pros and cons. If you have any other useful methods for creating time-based events, please [contribute to the wiki](https://github.com/SirLich/technical-bedrock)!

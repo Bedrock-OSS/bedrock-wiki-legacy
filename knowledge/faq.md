@@ -64,14 +64,14 @@ No
 ### Is it possible to do "on_entry":["/execute @e[name=variable.some_name] ..."]?
 No
 
-### Where can i download the bedrock resources?
-[Link](https://discordapp.com/channels/523663022053392405/523663022498250762/715962598843089008)
+### Where can I download the bedrock resources?
+The [bedrock resources can be found here](https://discordapp.com/channels/523663022053392405/523663022498250762/715962598843089008).
 
 ### Is it possible to only damage an entity when holding specific item?
 Set up a damage_sensor and set deals_damage to false when they're not holding the item.
 
 ### Where do I find the molang variable list?
-[Link](https://bedrock.dev/1.14.0.0/1.14.30.51/MoLang)
+The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.30.51/MoLang).
 
 ### Can I use /give to get shulker box with items?
  - No
