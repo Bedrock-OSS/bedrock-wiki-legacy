@@ -10,7 +10,7 @@ Adding entities into Minecraft is a fairly easy process *once you get a hang of 
 
 ## The Environment
 
-The best way to prevent *invisible entity syndrome* and other nasty bugs is by setting yourself the correct environment. You should review [The Editor](/knowledge/the_editor) document for my editor recommendations. The most important part is getting a json-linter ([or using an online tool](https://jsonlint.com/)).
+The best way to prevent *invisible entity syndrome* and other nasty bugs is by setting yourself the correct environment. You should review [the editor document](/knowledge/the_editor) for my editor recommendations. The most important part is getting a json-linter, ([or using an online json-linter](https://jsonlint.com/)).
 
 ## Content Log
 
@@ -24,8 +24,8 @@ The content log is saved in `.txt` format at: `C:\Users\YOUR_USERNAME\AppData\Lo
 
 ## Using Vanilla Resources
 
-You should also download the vanilla resource and behavior pack. You can find these [here](https://www.minecraft.net/en-us/addons/). You can compare against the vanilla files if you have any issues.
+You should also download the vanilla resource and behavior pack. You can find [the vanilla resource and behavior pack here](https://www.minecraft.net/en-us/addons/). You can compare against the vanilla files if you have any issues.
 
 ## JSON-Schemas
 
-JSON-Schemas are a valuable tool for file validation. You can learn more about them here [here](/knowledge/using-schema).
+JSON-Schemas are a valuable tool for file validation. You can learn more about [JSON-Schemas here](/knowledge/using-schema).

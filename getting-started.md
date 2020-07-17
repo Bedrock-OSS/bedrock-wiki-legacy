@@ -18,12 +18,12 @@ You should join the following discord servers:
 
 ## What editor should I use?
 
-I highly suggest VSCode, or Bridge. I provide more information in my dedicated [editors](/knowledge/the-editor) document. You should also be using a [JSON-Schema](/knowledge/using-schema)
+I highly suggest VSCode, or Bridge. Bridge is an editor designed specifically for editing Minecraft addons. You can [find more information on editors here](/knowledge/the-editor). You should also be using a [JSON-Schema](/knowledge/using-schema)
 
 ## OK but how do I actually get started?
 
-The best place to start is probably the Bedrock [Beginners Guide](https://guide.bedrock.dev/). You should also bookmark the [documentation](https://bedrock.dev/). After that, your best bet is to just try things! Download the vanilla Behavior Pack and Resource Pack. Poke around. Try changing things.
+The best place to start is probably the [Minecraft Bedrock Beginners Guide](https://guide.bedrock.dev/). You should also bookmark the [Minecraft Bedrock Documentation](https://bedrock.dev/). After that, your best bet is to just try things! Download the vanilla Behavior Pack and Resource Pack. Poke around. Try changing things.
 
 ## What if my addon doesn't work?
 
-You will need to debug your entity. This [page](/knowledge/troubleshooting) can be useful.
+You will need to debug your entity. The [troubleshooting page](/knowledge/troubleshooting) can be useful.

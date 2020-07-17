@@ -5,7 +5,7 @@ parent: Documentation
 ---
 # Materials
 
-You can learn more about materials [here](https://wiki.bedrock.dev/tutorials/materials.html).
+You can [learn more about materials here](https://wiki.bedrock.dev/tutorials/materials.html).
 
 | Material                                  | Note                            |
 |-------------------------------------------|---------------------------------|

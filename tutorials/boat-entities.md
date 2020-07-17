@@ -9,7 +9,7 @@ parent: Tutorials
 1.16 depreciation
 {: .label .label-yellow  }
 
-1.6 has made this tutorial pointless. See the new [Buoyant](https://bedrock.dev/docs/stable/Entities#minecraft:buoyant) component for more details.
+1.6 has made this tutorial pointless. [See the new Buoyant component for more details](https://bedrock.dev/docs/stable/Entities#minecraft:buoyant).
 
 # 1.14 Boat Entities
 Be they jet-skis, sailboats, or paddle-boards, water-based entities are a pretty common task.
@@ -18,7 +18,7 @@ Sadly, Minecraft makes this difficult by making the `minecraft:boat` one of the 
 
 ## Using Runtime Identifiers
 
-You can read more about runtime identifiers [here](/documentation/runtime-identifier). I don't honestly know what will happen if you add `minecraft:boat` to your entity, but if somebody bothers to try, you should update the wiki :)
+You can [read more about runtime identifiers here](/documentation/runtime-identifier). I don't honestly know what will happen if you add `minecraft:boat` to your entity, but if somebody bothers to try, you should update the wiki :)
 
 In general though, runtime identifiers can be used to get hard-coded functionality into data-driven custom entities.
 

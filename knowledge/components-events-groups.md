@@ -10,7 +10,7 @@ There are three main structures that make up the base of a behavior-pack entity 
 
 # Components
 
-Components should be thought of as the logical building-blocks that make up minecraft-entities. All components are written by microsoft, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The full list of components can be found [here](https://bedrock.dev/docs/1.16.0.0/1.16.0.66/Entities#minecraft:color2).
+Components should be thought of as the logical building-blocks that make up minecraft-entities. All components are written by microsoft, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The [full list of components can be found here](https://bedrock.dev/docs/1.16.0.0/1.16.0.66/Entities#minecraft:color2).
 
 It is impossible to create your own components. The entire list of components is hard-coded, and provided by Microsoft. The `only` thing that should go intside the `components` object is components.
 
@@ -33,7 +33,7 @@ Here is an example:
 
 All component groups are custom-created. You cannot use component groups from other entities in your own entity. In the example above, `minecraft:cat_persian` is *not* a component. You cannot use it in your entity. If you want the `cat_persian` functionality in your entity, you must create your own group, or add the components directly into the your entities `components` object.
 
-`Note:` All minecraft component groups are prefixed with `minecraft:`. When you create your own groups, you should *not* follow this design. Rather, use your own [namespace](/knowledge/namespaces).s
+`Note:` All minecraft component groups are prefixed with `minecraft:`. When you create your own groups, you should *not* follow this design. Rather, use your own. [Here's more info on namespaces](/knowledge/namespaces).
 
 # Events
 
@@ -61,7 +61,7 @@ The only thing you can add/remove from an entity is `component groups`. As tempt
 
 # Triggering events
 
-Many components can trigger events. Particularly, components like [environment sensor](/vanilla-usage/components-1.14.html#minecraftenvironment_sensor) or [timer](/vanilla-usage/components-1.14.html#minecrafttimer).
+Many components can trigger events. Particularly, components like the [environment sensor](/vanilla-usage/components.html#minecraftenvironment_sensor) or [timer](/vanilla-usage/components.html#minecrafttimer).
 
 The flow is:
  - Add component to the entity

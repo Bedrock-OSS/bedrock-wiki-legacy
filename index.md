@@ -52,7 +52,7 @@ You might need to clear your browser's cache.
 
 Contributions are welcome!
 
-If you are familiar with GitHub, I accept pull requests. The repository can be found [here](https://github.com/SirLich/technical-bedrock). Website is located on the `gh-pages` branch.
+If you are familiar with GitHub, I accept pull requests. [The GitHub repository can be found here](https://github.com/SirLich/technical-bedrock). Website is located on the `gh-pages` branch.
 
-If you aren't comfortable with Git, you can contact me directly [here](https://discord.gg/XjV87YN), and we can work something out.
+If you aren't comfortable with Git, you can [contact me on Discord](https://discord.gg/XjV87YN), and we can work something out.
 
