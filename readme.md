@@ -28,4 +28,7 @@ Please provide proper commit messages when contributing, this will make it much 
 
 ## Contributing without GitHub
 
-Want to submit an article, but can't be bothered to learn Git, or GitHub? You can send me markdown articles directly, and I will add them manually. 
+Want to submit an article, but can't be bothered to learn Git, or GitHub? You can send me markdown articles directly, and I will add them manually.
+
+## Testing
+You can locally test the website by [installing Jekyll](https://jekyllrb.com/docs/installation/#guides) and then running `bundle exec jekyll serve`.
