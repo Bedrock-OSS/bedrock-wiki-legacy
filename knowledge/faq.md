@@ -78,3 +78,5 @@ The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.3
  - The workaround: Clone a chest to the player and /fill destroy it.
  - Another work-around: Spawn a dummy-entity with a loot-table, and then kill it.
 
+ ### What is the max seconds in a /effect command?
+  - 2147483647
