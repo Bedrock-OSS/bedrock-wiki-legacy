@@ -20,6 +20,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Bridge](https://discord.gg/NxKuWuA)
  - [Minecraft](https://discord.gg/minecraft)
  - [Skill Share](https://discord.gg/sZ7fkcN)
+ - [Amulet](https://discord.gg/dSnwqQf)
 
 ## Tools:
  - [Bridge Addon Editor](https://github.com/bridge-core/bridge.)
@@ -28,6 +29,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
+ - [Manifest Creator](https://geenium.github.io/pack-manifest-creator/)
 
  ## Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
