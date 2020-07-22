@@ -65,6 +65,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
  - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
+ - [VSCode Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
 
 
 
