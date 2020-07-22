@@ -4,9 +4,7 @@ title: Invulnerable Entities
 parent: Tutorials
 ---
 
-# Multiple Textures
-
-This is a stub. More information will be added later.
+# Invulnerable Entities
 
 ## Using Damage Sensor:
 ```json
