@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Шаблоны
+parent: Стартовая страница
 nav_order: 10
 nav_exclude: true
 has_children: true

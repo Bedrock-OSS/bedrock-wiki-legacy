@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Применение в ванилле
+parent: Стартовая страница
 has_children: true
 nav_order: 5
 nav_exclude: true
