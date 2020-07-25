@@ -40,4 +40,4 @@ sitemap:
 
 Если вы знакомы с GitHub, SirLich принимает пулл-реквесты. [GitHub репозиторий здесь](https://github.com/SirLich/technical-bedrock). Веб-сайт расположен на `gh-pages` ветке.
 
-Если вам неудобно работать с Git, вы можете [связаться с ЫшкДшср в Discord](https://discord.gg/XjV87YN), и что-нибудь придумайте.
+Если вам неудобно работать с Git, вы можете [связаться с SirLich в Discord](https://discord.gg/XjV87YN), и что-нибудь придумайте.
