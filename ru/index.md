@@ -1,9 +1,10 @@
 ---
 layout: default
 title: Стартовая страница
-nav_order: 0
+nav_order: 11
 description: "Обмен знаниями о техниках MCBE"
-permalink: /
+permalink: /ru/
+has_children: true
 sitemap:
   priority: 1
   changefreq: 'weekly'
