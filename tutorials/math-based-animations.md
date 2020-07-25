@@ -24,9 +24,14 @@ As you can see, Math-based animations are complicated, and hard to understand. F
 
 Math-based animations can be written by hand. Simply create a new animation file, and write the math expressions. The format is fundamentally similar to key-frame animations. The vanilla resource files can be a valuable source of inspiration, and you should definitely download the vanilla resource pack!
 
-### In blockbench
+### In Blockbench
 
-Is this possible? Somebody should edit the wiki :)
+You can write and preview math-based animations in Blockbench.
+If you just want to create a math powered animation, just create a keyframe at 0 seconds in your timeline and edit the MoLang expressions in the keyframe panel on the left sidebar. You can also mix and match numeric keyframes with math-based keyframes.
+Omit quotation marks around the expression, they are only required in raw JSON editing!
+
+Not all queries are supported in Blockbench due to missing context. If you want to preview an animation that uses a specific query, you can add it to the "Variable Placeholders" section right under the keyframe panel to simulate a value.
+For example, adding `query.modified_distance_moved = time*8` simulates the modified_distance_moved query with a speed of 8 blocks per second.
 
 # Using queries
 
@@ -35,6 +40,7 @@ The biggest tool you have access to when writing math-based animations, is using
 Common ones include:
  - `query.modified_distance_moved`
  - `query.modified_move_speed`
+ - `query.anim_time`
  - `query.life_time`
 
  The reason we want to use queries is it allows us to directly drive animations from gameplay. Things like the attack time, or distance moved, allows us to drive gameplay directly, and allows animations to match the speed of the action.
