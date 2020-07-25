@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Знания
+parent: Стартовая страница
 nav_order: 2
 nav_exclude: true
 has_children: true
