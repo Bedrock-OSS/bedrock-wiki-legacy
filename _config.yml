@@ -18,8 +18,9 @@ aux_links:
     - "https://bedrock.dev/"
   "Contribute":
     - "https://github.com/SirLich/technical-bedrock"
-  "Beginner Guide":
-    - "https://guide.bedrock.dev/"
+  "русский":
+    - "https://wiki.bedrock.dev/ru/"
+  
 
 # Build settings
 theme: just-the-docs
