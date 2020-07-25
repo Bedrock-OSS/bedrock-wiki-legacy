@@ -2,6 +2,7 @@
 layout: page
 title: Подготовка
 nav_order: 1
+nav_exclude: true
 ---
 
 # Подготовка к созданию аддонов

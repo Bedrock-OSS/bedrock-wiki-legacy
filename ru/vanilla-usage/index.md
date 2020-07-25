@@ -3,6 +3,7 @@ layout: page
 title: Применение в ванилле
 has_children: true
 nav_order: 5
+nav_exclude: true
 sitemap:
     priority: 0.75
     changefreq: 'weekly'

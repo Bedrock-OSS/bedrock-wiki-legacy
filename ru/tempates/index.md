@@ -2,6 +2,7 @@
 layout: default
 title: Шаблоны
 nav_order: 10
+nav_exclude: true
 has_children: true
 sitemap:
     priority: 0.75

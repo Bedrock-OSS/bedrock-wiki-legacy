@@ -3,6 +3,7 @@ layout: page
 title: Туториалы
 has_children: true
 nav_order: 4
+nav_exclude: true
 sitemap:
     priority: 0.75
     changefreq: 'weekly'

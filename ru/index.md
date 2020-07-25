@@ -3,29 +3,13 @@ layout: default
 title: Стартовая страница
 nav_order: 0
 description: "Обмен знаниями о техниках MCBE"
-permalink: /
+nav_exclude: true
 sitemap:
   priority: 1
   changefreq: 'weekly'
 ---
 
 # Bedrock Wiki 
-
-<!-- <button class="btn js-toggle-dark-mode">Предпосмотр тёмного режима</button>
-
-<script>
-const toggleDarkMode = document.querySelector('.js-toggle-dark-mode');
-
-jtd.addEvent(toggleDarkMode, 'click', function(){
-  if (jtd.getTheme() === 'dark') {
-    jtd.setTheme('light');
-    toggleDarkMode.textContent = 'Тёмная тема';
-  } else {
-    jtd.setTheme('dark');
-    toggleDarkMode.textContent = 'Светлая тема';
-  }
-});
-</script> -->
 
 <a href="https://discord.gg/XjV87YN" type="button" name="button" class="btn">Discord</a>
 <a href="https://bedrock.dev/" type="button" name="button" class="btn">Посетить Bedrock.dev</a>

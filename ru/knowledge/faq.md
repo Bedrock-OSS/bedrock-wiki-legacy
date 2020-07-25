@@ -2,6 +2,7 @@
 layout: page
 title: FAQ
 parent: Знания
+nav_exclude: true
 ---
 
 ### FAQ
