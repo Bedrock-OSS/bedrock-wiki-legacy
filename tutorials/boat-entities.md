@@ -6,86 +6,70 @@ parent: Tutorials
 
 # Boat Entities
 
-1.16 depreciation
-{: .label .label-yellow  }
-
-1.6 has made this tutorial pointless. [See the new Buoyant component for more details](https://bedrock.dev/docs/stable/Entities#minecraft:buoyant).
-
-# 1.14 Boat Entities
-Be they jet-skis, sailboats, or paddle-boards, water-based entities are a pretty common task.
-
-Sadly, Minecraft makes this difficult by making the `minecraft:boat` one of the most hard-coded entities in the game. This tutorial will teach you how to create boat mechanics for yourself.
 
 ## Using Runtime Identifiers
 
-You can [read more about runtime identifiers here](/documentation/runtime-identifier). I don't honestly know what will happen if you add `minecraft:boat` to your entity, but if somebody bothers to try, you should update the wiki :)
+You can [read more about runtime identifiers here](/documentation/runtime-identifier). Using runtime identifiers, you can implement most of the boat's hard-coded behaviors, however your boat won't rotate with you and it will always face North.
 
-In general though, runtime identifiers can be used to get hard-coded functionality into data-driven custom entities.
+##  Using Components
 
-#  Using Components
+Currently, the best way to create a boat entity is by using components. 1.16 introduced new components that we can use to our advantage: `minecraft:behavior.rise_to_liquid_level` and `minecraft:buoyant`. The first one is used by striders in vanilla to make them float on lava, but we can repurpose it for water as well.
 
-I believe the best way to create boat entities is by using components, and by offsetting the geometry so that it doesn't sink too far into the water. This section will cover how to achieve boats in this way.
-
-## Base Entity
-
-I don't actually remember what components are all necessary to get a good boat going, but this I've been reusing this boat code for a while.
+## 1st method: `minecraft:behavior.rise_to_liquid_level`
 
 ```json
 {
     "minecraft:entity": {
         "format_version": "1.14.0",
         "description": {
-            "identifier": "sirlich:boat",
+            "identifier": "foo:bar",
             "is_summonable": true,
             "is_spawnable": true,
             "is_experimental": false
         },
         "components": {
 
-            //Make sure the entity can float
-            "minecraft:behavior.float": {
-                "priority": 0
+            //This is the component that does the magic
+            "minecraft:behavior.rise_to_liquid_level": {
+                "priority": 0,
+                //This property can adjust how high your boat is above the water
+                "liquid_y_offset": 0.5,
+                //Positive vertical displacement, in other words, how much the boat will move up
+                "rise_delta": 0.05,
+                //Negative vertical displacement, in other words, how much the boat will move down
+                "sink_delta": 0.05
+                //Use rise_delta and sink_delta to simulate waves/bouncing effect
             },
 
-            //Sets the boat speed
+            //Sets the boat speed in water
             "minecraft:underwater_movement": {
                 "value": 5
             },
+            //This component is important, without it the boat will sink
             "minecraft:navigation.walk": {
-                "can_path_over_water": true,
-                "can_sink": false,
-                "avoid_damage_blocks": true,
-                "can_walk_in_water": true
-            },
-            "minecraft:can_climb": {
-            },
-            "minecraft:balloonable": {
-                "mass": 0.75
-            },
-            "minecraft:movement.amphibious": {
-
+                "can_sink": false
             },
             "minecraft:rideable": {
                 "seat_count": 1,
                 "family_types": [
-                    "player",
-                    "zombie"
+                    "player"
                 ],
                 "interact_text": "action.interact.enter_boat",
                 "seats": {
-                    "position": [
-                        0, 0, 0]
+                    "position": [0, 0, 0]
                 }
             },
+            //Add this component if you want your boat to be controlled with WASD
             "minecraft:input_ground_controlled": {},
-            "minecraft:type_family": {},
             "minecraft:health": {
                 "value": 10,
                 "max": 10
             },
+            //Sets the boat speed on ground (set this to zero if you don't want your boats to move on ground)
             "minecraft:movement": {
                 "value": 3
             },
+            //This is to prevent the boat from not stopping whenever a player exits said boat
             "minecraft:movement.basic": {},
             "minecraft:collision_box": {
                 "width": 1,
@@ -97,10 +81,77 @@ I don't actually remember what components are all necessary to get a good boat g
 }
 ```
 
-## Geometry Offset
+## 2nd method: `minecraft:buoyant`
 
-The boat will sink into the water. Open the model in [Blockbench](https://blockbench.net/), and move the entire model up a bit. This will allow it to "float" on top of the water more properly.
+```json
+{
+    "minecraft:entity": {
+        "format_version": "1.14.0",
+        "description": {
+            "identifier": "foo:bar",
+            "is_summonable": true,
+            "is_spawnable": true,
+            "is_experimental": false
+        },
+        "components": {
 
-# Skid-Boats
+            "minecraft:buoyant": {
+                //Determines whether gravity should be taken into account (useful with waterfalls)
+                "apply_gravity": true,
+                //Range: 0-1. This controls how high the boat is above the water
+                "base_buoyancy": 1.0,
+                //A "wave" makes the entity bounce up and down. A big wave simply amplifies this effect. Note: setting simulate_waves to false won't make the effect go away completely.
+                "simulate_waves": true,
+                //How likely a "big" wave will hit this boat
+                "big_wave_probability": 0.03,
+                //How strong the "big" wave will be
+                "big_wave_speed": 10.0,
+                //How strong will the boat be dragged down in case this component is removed
+                "drag_down_on_buoyancy_removed": 0,
+                //Blocks this entity can be buoyant in. Only actual liquids are allowed: lava and water
+                "liquid_blocks": ["water"]
+            },
 
-When the water level doesn't change, and the boat won't be interacted with in survival, its possible to create a skid-boat. A skid-boat is an entity that has no gravity, and therefor won't sink. This can be placed at the water level you like, and the boat will stay at that y level forever.
+            //Sets the boat speed in water
+            "minecraft:underwater_movement": {
+                "value": 5
+            },
+            //This component is important, without it the boat will sink
+            "minecraft:navigation.walk": {
+                "can_sink": false
+            },
+            "minecraft:rideable": {
+                "seat_count": 1,
+                "family_types": [
+                    "player"
+                ],
+                "interact_text": "action.interact.enter_boat",
+                "seats": {
+                    "position": [0, 0, 0]
+                }
+            },
+            //Add this component if you want your boat to be controlled with WASD
+            "minecraft:input_ground_controlled": {},
+            "minecraft:health": {
+                "value": 10,
+                "max": 10
+            },
+            //Sets the boat speed on ground (set this to zero if you don't want your boats to move on ground)
+            "minecraft:movement": {
+                "value": 3
+            },
+            //This is to prevent the boat from not stopping whenever a player exits said boat
+            "minecraft:movement.basic": {},
+            "minecraft:collision_box": {
+                "width": 1,
+                "height": 1
+            },
+            "minecraft:physics": {}
+        }
+    }
+}
+```
+
+## What method to use?
+
+Both methods are good, but have their pros and cons. If you want to disable the bouncing effect, use the first method. If you want more control over it, use the second method. Personally, I use the second method for static objects, such as buoys, and the first method for movable entities, such as boats, emulating the vanilla behavior.
