@@ -71,6 +71,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 - Disables death animation, sound, and particles
 - Disables entity shadow
 - Cannot be interacted with
+- Gives(or drops?) the player an arrow if the entity successfully hits the player
+ 
 
 ---
 ## `minecraft:thrown_trident`
@@ -82,4 +84,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ---
 ## `minecraft:piglin`
 ### Effects:
- - Allows `minecraft:celebrate_hunt` to function
+ - Allows `minecraft:celebrate_hunt` to function (which activates query.is_celebrating)
+
+---
+## `minecraft:spider`
+ - Allows cobwebs to not slow down entity
