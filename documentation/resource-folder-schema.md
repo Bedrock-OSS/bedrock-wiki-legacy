@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Behavior Folder Schema
+title: Resource Folder Schema
 parent: Documentation
 ---
 

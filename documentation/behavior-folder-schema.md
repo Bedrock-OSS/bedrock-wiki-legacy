@@ -4,9 +4,9 @@ title: Behavior Folder Schema
 parent: Documentation
 ---
 
-# Resource Pack Folder Schema
+# Behavior Pack Folder Schema
 
-This shows the top-level folder/file structure for a resource pack. Additional folder nesting can be used as needed.
+This shows the top-level folder/file structure for a behavior pack. Additional folder nesting can be used as needed.
 
 ```
 \---example_BP
