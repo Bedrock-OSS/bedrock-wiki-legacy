@@ -4,7 +4,7 @@ description: >-
   Knowledge-sharing Bedrock Wiki, containing documentation, tutorials, and general how-to information. Written and maintained by SirLich#1658.
 
 remote_theme: pmarsceill/just-the-docs
-color_scheme: discord_dark
+color_scheme: hybrid_dark
 
 github_username:  SirLich
 
