@@ -1,7 +1,7 @@
 ---
 layout: page
-title: craftable_spawners
-parent: Knowledge
+title: Craftable Spawn-Eggs
+parent: Tutorials
 ---
  
 # Using MoLang to create craftable spawn-eggs
@@ -35,3 +35,7 @@ This recipe will convert a piece of gunpowder to a creeper spawn egg.
     }
 }
 ```
+
+This method works for custom entities as well - just replace `minecraft:creeper` with the identifier of your entity.
+
+If you want your entity to drop its spawn-egg instead, check out the [tutorial](/tutorials/egg-drops) on spawn-egg drops.
