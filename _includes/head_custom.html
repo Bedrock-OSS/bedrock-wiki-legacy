@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | absolute_url }}"/>
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}"/>
+<script>
+    const DEFAULT_THEME = "Default";
+    let allThemes = {
+        "Default": "{{ '/assets/css/just-the-docs-default.css' | absolute_url }}",
+        "Dark": "{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}",
+        "Light": "{{ '/assets/css/just-the-docs-light.css' | absolute_url }}"
+    };
+    let theme = "";
+
+    function changeTheme(selected) {
+        if (!allThemes.hasOwnProperty(selected)) {
+            selected = DEFAULT_THEME;
+            console.log("Theme missing, changing theme to default");
+        }
+        theme = selected;
+        if (typeof window.localStorage != 'undefined') {
+            localStorage.setItem('theme', selected);
+        }
+        for (const index in document.styleSheets) {
+            if (!document.styleSheets.hasOwnProperty(index)) continue;
+            let stylesheet = document.styleSheets[index];
+            stylesheet.disabled = stylesheet.href !== allThemes[selected];
+        }
+    }
+
+    if (typeof window.localStorage != 'undefined') {
+        theme = localStorage.getItem('theme');
+        if (!theme) {
+            theme = DEFAULT_THEME;
+            localStorage.setItem('theme', theme);
+        }
+    }
+    changeTheme(theme);
+
+    window.addEventListener('load', () => {
+        let switcher = document.createElement("select");
+        switcher.addEventListener('change', () => {
+            changeTheme(switcher.value);
+        });
+        for (const key in allThemes) {
+            if (!allThemes.hasOwnProperty(key)) continue;
+            let option = document.createElement("option");
+            option.value = key;
+            option.innerText = key;
+            option.selected = key === theme;
+            switcher.append(option);
+        }
+        document.getElementsByClassName("site-footer")[0].prepend(switcher);
+    });
+</script>
