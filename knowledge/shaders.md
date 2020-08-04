@@ -13,6 +13,60 @@ you need to code shaders in both languages. For testing on Windows, hlsl is enou
 When rewriting shaders from one language to another, there are few things to change, 
 like HLSL `float3` is `vec3` in GLSL. [Mapping between those languages can be found here](https://anteru.net/blog/2016/mapping-between-HLSL-and-GLSL/)
 
+## Materials
+
+Vertex, fragment and sometimes geometry shaders are combined with some options 
+as materials and are required for custom shaders. To create new material, 
+you need to create file, which matches the name of .material file in vanilla resource pack.
+For example: `materials/particles.material`. Materials support inheritance by adding parent 
+material after colon. For example: `entity_alpha:entity_base` 
+
+### Common material definition fields
+
+| **Field name**   | **Description**                                                       | **Example value**                                        | **Notes**                                                                                                                                         |
+|------------------|-----------------------------------------------------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| `vertexShader`   | Path to the shader relative to hlsl/glsl folder                       |                                                          | For HLSL shader, `.hlsl` suffix is added.                                                                                                         |
+| `fragmentShader` | Path to the shader relative to hlsl/glsl folder                       |                                                          | For HLSL shader, `.hlsl` suffix is added.                                                                                                         |
+| `vertexFields`   | An array of fields passed to vertex shader                            |                                                          | It's better to copy this field from vanilla material.                                                                                             |
+| `variants`       | An array of objects, which define variants of the material            |                                                          | It's better to copy this field from vanilla material.                                                                                             |
+| `+defines`       | An array of `#define` directives to add to the shader source          |                                                          | Useful for reusing shader, but changing some minor setting.                                                                                       |
+| `+states`        | An array of states to enable                                          | `["Blending", "DisableAlphaWrite", "DisableDepthWrite"]` | For OpenGL implementation, this is equivalent to [glEnable](https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glEnable.xml) call.      |
+| `-defines`       | An array of `#defines` directives to remove from inherited `+defines` |                                                          |                                                                                                                                                   |
+| `+samplerStates` | An array of objects, defining how texture at certain index is treated | `{ "samplerIndex": 0, "textureFilter": "Point" }`        | `textureFilter` specifies how to sample the texture and `textureWrap` specifies the behavior, when accessing outside of the texture dimensions.   |
+| `msaaSupport`    | Multisample anti-aliasing support                                     | `Both`                                                   |                                                                                                                                                   |
+| `blendSrc`       | Specifies how the color source blending factors are computed          | `One`                                                    | For OpenGL implementation, this is equivalent to [glBlendFunc](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml) call. |
+| `blendDst`       | Specifies how the color destination blending factors are computed     | `One`                                                    | For OpenGL implementation, this is equivalent to [glBlendFunc](https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/glBlendFunc.xhtml) call. |
+
+Example:
+```json
+{
+  "materials": {
+    "version": "1.0.0",
+    "particle_debug": {
+      "vertexShader": "shaders/particle_generic.vertex",
+      "fragmentShader": "shaders/particle_debug.fragment",
+
+      "vertexFields": [
+        { "field": "Position" },
+        { "field": "Color" },
+        { "field": "UV0" }
+      ],
+
+      "+samplerStates": [
+        {
+          "samplerIndex": 0,
+          "textureFilter": "Point"
+        }
+      ],
+
+      "msaaSupport": "Both"
+    }
+  }
+}
+```
+
+For all the details about material file and possible field values, check [material file json schema](https://github.com/stirante/bedrock-shader-schema/blob/master/materials.schema.json).
+
 ## Troubleshooting
 
 ### Shader doesn’t change
@@ -78,3 +132,5 @@ int ascii = getFloatCharacter( cellIndex, <float4 vector here> );
 GLSL version of debug shader may crash Minecraft, use only for debugging.
 
 [Download debug shader](http://files.stirante.com/debugShader.zip)
+
+![](/assets/img/debugShader.gif)
