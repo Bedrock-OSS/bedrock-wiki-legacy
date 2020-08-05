@@ -2,7 +2,7 @@
 
 This is the code-base for the technical bedrock wiki. If you haven't checked out the website version yet, you can do so [here](https://wiki.bedrock.dev/).
 
-This wiki is community written and maintained. If you want to contribute, you have found the right place! 
+This wiki is community written and maintained. If you want to contribute, you have found the right place!
 
 # Contributing
 
@@ -31,4 +31,9 @@ Please provide proper commit messages when contributing, this will make it much 
 Want to submit an article, but can't be bothered to learn Git, or GitHub? You can send me markdown articles directly, and I will add them manually.
 
 ## Testing
-You can locally test the website by [installing Jekyll](https://jekyllrb.com/docs/installation/#guides) and then running `bundle exec jekyll serve`.
+You can locally test the website by [installing Jekyll](https://jekyllrb.com/docs/installation/#guides) and then running  `bundle install` and `bundle exec jekyll serve`.
+
+Assuming the Ruby dependencies installed correctly, the local server will run and you should see `http://127.0.0.1:4000`
+printed out.
+
+You can now make changes to any of the markdown files and you'll see the changes reflected at that URL in your browser! Note the site can take several seconds to rebuild, so have an eye on your terminal window
