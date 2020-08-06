@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Saving and Loading Data
-parent: Tutorials
+parent: Scripting
 ---
 # Saving and Loading data
 Saving and loading data in Bedrock is tricky because currently scripts cannot access the local file system directly.
