@@ -18,7 +18,7 @@ First of all, we need to make sure our item is ready. You can add custom models 
 
 ## Geometry
 
-Before implementing your custom item model into the game, make sure your item geometry is ready to be used. For your item to render correctly inside a player's hand, it must contain the player's bone skeleton. This means that your item model must contain all of the bones the player model has **without their respective elements (the player's bones must be empty!)**. Export it with a unique identifier. In our case it will be `geometry.drill`.
+Before implementing your custom item model into the game, make sure your item geometry is ready to be used. For your item to render correctly inside a player's hand, it must contain the player's bone skeleton. This means that your item model must contain all of the bones the player model has **without their respective elements (the player's bones must be empty!)**. Export it with a unique identifier. In our case it will be `geometry.drill`. A geometry file example is present at the end of the file.
 
 ![](/assets/images/tutorials/custom-item-models/drill-bone-structure.png)
 
@@ -413,4 +413,146 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-Pack download link: [Link](https://www.dropbox.com/s/qo4dmkmawvrvjr5/CustomItemModels.mcaddon?dl=1)Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
+`models/entity/drill.geo.json`
+```json
+{
+	"format_version": "1.12.0",
+	"minecraft:geometry": [
+		{
+			"description": {
+				"identifier": "geometry.drill",
+				"texture_width": 32,
+				"texture_height": 32,
+				"visible_bounds_width": 3,
+				"visible_bounds_height": 3,
+				"visible_bounds_offset": [0, 0, 0]
+			},
+			"bones": [
+				{
+					"name": "root",
+					"pivot": [0, 0, 0]
+				},
+				{
+					"name": "waist",
+					"parent": "root",
+					"pivot": [0, 12, 0]
+				},
+				{
+					"name": "body",
+					"parent": "waist",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "head",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "hat",
+					"parent": "head",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "cape",
+					"parent": "body",
+					"pivot": [0, 24, 3]
+				},
+				{
+					"name": "leftArm",
+					"parent": "body",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftSleeve",
+					"parent": "leftArm",
+					"pivot": [5, 22, 0]
+				},
+				{
+					"name": "leftItem",
+					"parent": "leftArm",
+					"pivot": [6, 15, 1]
+				},
+				{
+					"name": "rightArm",
+					"parent": "body",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "rightSleeve",
+					"parent": "rightArm",
+					"pivot": [-5, 22, 0]
+				},
+				{
+					"name": "rightItem",
+					"parent": "rightArm",
+					"pivot": [-6, 15, 1],
+					"locators": {
+						"lead_hold": [-6, 15, 1]
+					}
+				},
+				{
+					"name": "drill",
+					"parent": "rightArm",
+					"pivot": [-7.55, 8.95, 2.25],
+					"cubes": [
+						{"origin": [-8.55, 3.95, -2.75], "size": [6, 6, 6], "uv": [0, 0]}
+					]
+				},
+				{
+					"name": "rotator",
+					"parent": "drill",
+					"pivot": [-5.55, 6.95, -2.75],
+					"cubes": [
+						{"origin": [-7.55, 4.95, -7.75], "size": [4, 4, 5], "uv": [0, 12]}
+					]
+				},
+				{
+					"name": "inner_rotor",
+					"parent": "drill",
+					"pivot": [-5.55, 6.95, -7.75],
+					"cubes": [
+						{"origin": [-6.55, 5.95, -11.75], "size": [2, 2, 4], "uv": [18, 0]}
+					]
+				},
+				{
+					"name": "handle",
+					"parent": "drill",
+					"pivot": [-8.05, 14.95, 2.25],
+					"cubes": [
+						{"origin": [-6.05, 9.95, 2.25], "size": [1, 2, 1], "uv": [0, 0]},
+						{"origin": [-6.05, 11.95, -2.75], "size": [1, 1, 6], "uv": [12, 15]},
+						{"origin": [-6.05, 9.95, -2.75], "size": [1, 2, 1], "uv": [0, 3]}
+					]
+				},
+				{
+					"name": "jacket",
+					"parent": "body",
+					"pivot": [0, 24, 0]
+				},
+				{
+					"name": "leftLeg",
+					"parent": "root",
+					"pivot": [1.9, 12, 0]
+				},
+				{
+					"name": "leftPants",
+					"parent": "leftLeg",
+					"pivot": [1.9, 12, 0]
+				},
+				{
+					"name": "rightLeg",
+					"parent": "root",
+					"pivot": [-1.9, 12, 0]
+				},
+				{
+					"name": "rightPants",
+					"parent": "rightLeg",
+					"pivot": [-1.9, 12, 0]
+				}
+			]
+		}
+	]
+}
+```
+
+Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
