@@ -413,4 +413,4 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 }
 ```
 
-Pack download link: [Link](https://www.dropbox.com/s/qo4dmkmawvrvjr5/CustomItemModels.mcaddon?dl=1)
+Pack download link: [Link](https://www.dropbox.com/s/qo4dmkmawvrvjr5/CustomItemModels.mcaddon?dl=1)Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
