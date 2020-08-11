@@ -82,7 +82,7 @@ Next, let's create a render controller that will render our item. Create a new f
 	"render_controllers": {
 		"controller.render.<your_item_name>": {
 			"textures": [
-				"Texture.<item_texture>" //Tis is the texture you defined in the 'textures' object in player.entity.json
+				"Texture.<item_texture>" //This is the texture you defined in the 'textures' object in player.entity.json
 			],
 			"geometry": "Geometry.<item_geometry>", //This is the geometry you defined in the 'geometries' object in player.entity.json
 			"materials": [
@@ -397,17 +397,26 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 ```json
 {
 	"format_version": "1.8.0",
-	"render_controllers": {
-		"controller.render.drill": {
-			"textures": [
-				"Texture.drill"
-			],
-			"geometry": "Geometry.drill",
-			"materials": [
-				{
-					"*": "Material.default"
+	"animations": {
+		"animation.drill.hold": {
+			"loop": true,
+			"bones": {
+				"rotator": {
+					"rotation": [0, 0, "query.anim_time * 850"]
+				},
+				"inner_rotor": {
+					"rotation": [0, 0, "query.anim_time * -950"]
 				}
-			]
+			}
+		},
+		"animation.drill.first_person.hold": {
+			"loop": true,
+			"bones": {
+				"drill": {
+					"rotation": [87.5, 52.5, -7.5],
+					"position": [0, 7, 0]
+				}
+			}
 		}
 	}
 }
