@@ -88,4 +88,15 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 ## `minecraft:spider`
+### Effects:
  - Allows cobwebs to not slow down entity
+
+ ---
+## `minecraft:minecart`
+### Effects:
+ - Allows cobwebs to not slow down entity
+
+  ---
+## `minecraft:sheep`
+### Effects:
+ - Allows `query.is_grazing` to function with the `behavior.eat_block` component
