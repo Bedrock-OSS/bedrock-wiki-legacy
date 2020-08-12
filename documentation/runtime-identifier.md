@@ -94,7 +94,8 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
  ---
 ## `minecraft:minecart`
 ### Effects:
- - Allows cobwebs to not slow down entity
+ - Disables entity shadow
+ - Makes the entity drop a minecart on death
 
   ---
 ## `minecraft:sheep`
