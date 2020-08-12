@@ -77,3 +77,8 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 - Disables death animation, sound, and particles
 - Disables entity shadow
 - Not interactable
+
+## `minecraft:minecart`
+### Notes:
+- Disables entity shadow
+- Makes the entity drop a minecart on death
