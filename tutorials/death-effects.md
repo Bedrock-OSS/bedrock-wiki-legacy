@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Death Effects
 
+Intermediate
+{: .label .label-yellow }
+
 I define `Death Effects` as "Doing something when an Entity dies". There are a few wrong ways to achieve this that should be avoided, including:
  - Detecting death in the entity file, adding a component, and *then* trying to detect that component in the animation controller. This is wrong because the entity will be removed from the world before the animation controller has a chance to run.  
  - Detecting the entity death from an outside source, such as a ticking command block. This method isn't *strictly* wrong, and in some circumstances, it may even be preferred. However it is costly and easy to break.

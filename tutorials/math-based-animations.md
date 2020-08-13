@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Math-based Animations
 
+Intermediate
+{: .label .label-yellow }
+
 Math animations are a powerful alternative to key-frame animations. Generally speaking, `math based animations` is the concept of using Molang expressions to animate entity geometry. All vanilla animations are math-based:
 
 Here is an example:

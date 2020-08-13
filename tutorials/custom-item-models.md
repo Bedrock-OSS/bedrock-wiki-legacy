@@ -6,6 +6,9 @@ parent: Tutorials
 
 **Warning:** this tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [tutorial](/tutorials/render-controller) on render controllers before starting this tutorial.
 
+Expert
+{: .label .label-red }
+
 ## Concept & Idea
 
 Since Bedrock doesn't support custom item models out of the box, we have to get creative with their implementation. The idea behind this concept is very simple: we overlay an entity model onto the player model with the help of a render controller and adjust the display settings with a few animations.

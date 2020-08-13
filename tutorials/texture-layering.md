@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Texture Layering
 
+Intermediate
+{: .label .label-yellow }
+
 sometimes, it is useful to create layered textures for custom entities. Layered in this context simply means multiple textures overlayed on top of each other, where the top texture has alpha pixels, and allows the bottom texture to show through.
 
 As a very simple example, imagine a **painting** entity. The frame of the painting is always the same, but the picture itself can change. While you *could* duplicate the frame 10 times, and paint in 10 paintings, you now created a problem: What if you want to change the frame? Now you need to edit 10 textures.

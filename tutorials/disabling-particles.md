@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Disabling Particles
 
+Beginner
+{: .label .label-green }
+
 The basic idea of disabling a particle from emitting (as opposed to simply making the texture transparent) is as follows:
 
 ```json

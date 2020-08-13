@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Timers
 
+Intermediate
+{: .label .label-green }
+
 Time-based interactions are extremely useful tools for map making. This article hopes to provide an extensive list which details the many ways which timers can be made. For convenience, this page will be split up into two main sections: component-based timers and animation-based timers. Each has their own advantages and disadvantages, which will be outlined in their respective sections.
 
 ## Component-based timers

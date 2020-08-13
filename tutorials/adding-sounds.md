@@ -8,6 +8,9 @@ parent: Tutorials
 
 You can add unique sounds in Bedrock, without overwriting existing sound files. This is done by editing information in the Resource Pack.
 
+Intermediate
+{: .label .label-yellow }
+
 `protip:` The best way to learn about sounds is downloading and playing around with the default resource pack.
 
 There are two files you will need to edit:

@@ -36,6 +36,7 @@ This wiki is a knowledge-sharing website for Technical Bedrock, containing docum
 
 Website looks weird?
 {: .label .label-red }
+
 You might need to clear your browser's cache.
 - [Clear browser cache in Windows](https://clear-my-cache.com/windows)
 - [Clear browser cache in Mac OS / OS X](https://clear-my-cache.com/apple-mac-os)

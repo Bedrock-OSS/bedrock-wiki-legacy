@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Materials
 
+Expert
+{: .label .label-red }
+
 ## Overview
 
 Materials are used to specify the shaders that render the different parts of the game, along with states and settings the shaders should consider for each element.
