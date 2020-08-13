@@ -4,10 +4,12 @@ title: Custom Item Models
 parent: Tutorials
 ---
 
-**Warning:** this tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [tutorial](/tutorials/render-controller) on render controllers before starting this tutorial.
+# 3D Item Models
 
 Expert
 {: .label .label-red }
+
+**Warning:** this tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [tutorial](/tutorials/render-controller) on render controllers before starting this tutorial.
 
 ## Concept & Idea
 
