@@ -71,7 +71,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 - Disables death animation, sound, and particles
 - Disables entity shadow
 - Cannot be interacted with
-- Gives(or drops?) the player an arrow if the entity successfully hits the player
+- If spawned through an egg or /summon command, gives the player an arrow when the player comes into contact with the entity, then removes itself
  
 
 ---
