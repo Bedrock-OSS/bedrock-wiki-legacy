@@ -4,7 +4,23 @@ title: Remove Entity Shadows
 parent: Tutorials
 ---
 
-# Remove Entity Shadows
+# Removing Entity Shadows
+
+There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
+
+## Very small Collision Box
+
+Make the size of the collision component very, very small (does 0, 0 work?) this will make it impossible to interact/hit the entity, but it will make the shadow disappear!
+
+## Teleport underground
+
+If you have a dummy entity (invisible) that you need to interact with, you can telport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
+
+## using runtime identifier
+
+Some entities don't have shadows. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors. See the [runtime identifers document for more information](/documentation/runtime-identifiers)
+
+## Remove Entity Shadows for ALL Entities
 
 Change these lines in the `shadow.material` file under the Resource Pack / materials folder. 
 
