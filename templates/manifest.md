@@ -24,7 +24,7 @@ parent: Templates
     },
     "modules": [
         {
-            "type": "resources",
+            "type": "resources or data",
             "uuid": "b3570a8c-e4f3-461b-a614-31817da6e8a6",
             "version": [
                 1,
