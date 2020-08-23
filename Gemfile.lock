@@ -43,6 +43,8 @@ GEM
       rake (>= 12.3.1, < 13.1.0)
     kramdown (2.3.0)
       rexml
+    kramdown-parser-gfm (1.1.0)
+      kramdown (~> 2.0)
     liquid (4.0.3)
     listen (3.2.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -78,6 +80,7 @@ DEPENDENCIES
   jekyll (~> 3.6)
   jekyll-feed (~> 0.12)
   just-the-docs (~> 0.2.8)
+  kramdown-parser-gfm
   tzinfo (~> 1.2)
   tzinfo-data
   wdm (~> 0.1.1)
