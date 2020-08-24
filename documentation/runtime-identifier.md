@@ -97,6 +97,13 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ### Effects:
  - Disables entity shadow
  - Makes the entity drop a minecart on death
+ - Prevents the entity from rotating
+
+  ---
+## `minecraft:boat`
+### Effects:
+ - Adds the pocket boat UI when ridden
+ - Prevents the entity from rotating
 
   ---
 ## `minecraft:sheep`
