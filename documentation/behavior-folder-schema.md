@@ -24,7 +24,7 @@ This shows the top-level folder/file structure for a behavior pack. Additional f
     |       
     +---functions
     |       example.mcfunction
-    |       ticks.json
+    |       tick.json
     |       
     +---items
     |       example.item.json
