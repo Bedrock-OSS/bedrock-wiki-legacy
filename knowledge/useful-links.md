@@ -59,6 +59,10 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
  - [Pretty-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
  - [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+ - [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
+ - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+ - [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
+
 
 ## Scripting Resources:
  - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)
