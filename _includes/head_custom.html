@@ -39,6 +39,7 @@
         switcher.addEventListener('change', () => {
             changeTheme(switcher.value);
         });
+        switcher.classList.add('theme-switcher');
         for (const key in allThemes) {
             if (!allThemes.hasOwnProperty(key)) continue;
             let option = document.createElement("option");
