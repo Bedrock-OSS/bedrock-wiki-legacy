@@ -22,7 +22,7 @@ Some entities don't have shadows. By using the runtime identifier of these entit
 
 ## Remove Entity Shadows for ALL Entities
 
-Change these lines in the `shadow.material` file under the Resource Pack / materials folder. 
+Change these lines in the `shadows.material` file under the Resource Pack / materials folder. 
 
 **NOTE:** This folder is NOT included in the vanilla RP Pack examples and must be exported from a APK files or added by hand.
 
