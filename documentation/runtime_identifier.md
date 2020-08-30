@@ -69,11 +69,11 @@ Down below are a few Runtime Identifiers that you can add to your entity with th
 ## `minecraft:arrow`
 ### Notes:
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Not interactable
 
 ## `minecraft:thrown_trident`
 ### Notes:
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Not interactable
