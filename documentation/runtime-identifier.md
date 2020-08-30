@@ -36,7 +36,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 - The solid collision box's width and height cannot be changed.
 
 ---
-## `minecraft:end_crystal`
+## `minecraft:ender_crystal`
 ### Effects:
 - The entity will stick to the center of the block it's spawned in.
 - Unless teleported, the entity will always maintain its positions.
