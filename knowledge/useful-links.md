@@ -37,6 +37,8 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Feature Rules](https://machine-builder.github.io/feature_rule_generator_1.15.html)
  - [Block and Items](https://gitwither.github.io/bedrock-item-generator/)
  - [Manifests](https://geenium.github.io/pack-manifest-creator/)
+ - [behavior-builder (beta)](https://stirante.com/behavior/index.html)
+ - [controller-builder (beta)](https://stirante.com/controller/index.html)
   
 ## Documentation Links:
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
