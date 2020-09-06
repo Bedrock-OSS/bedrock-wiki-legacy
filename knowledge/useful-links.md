@@ -27,6 +27,9 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
+ - [Core Coder (paid)](https://hanprog.itch.io/core-coder)
+ - [Feature Rule Generator 2 (paid)](https://machine-builder.itch.io/frg-v2)
+ - [Add-on Json Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
 
 ## JSON Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
@@ -55,22 +58,15 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
  - [Vanilla Beta Behavior Pack](https://aka.ms/MinecraftBetaBehaviors)
 
-## VSCode Resources
- - [.mcfunction](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
- - [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
- - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
- - [Pretty-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
- - [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
- - [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
- - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
- - [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
-
-
 ## Scripting Resources:
  - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)
  - [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
  - [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
  - [Get Started](https://minecraft-addon-tools.github.io/tutorials/)
+
+## Shader Resources:
+ - [The book of Shaders](https://thebookofshaders.com/)
+ - [Lean OpenGL](https://learnopengl.com/)
 
 ## Other useful Links:
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
