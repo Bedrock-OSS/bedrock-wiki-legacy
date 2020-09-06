@@ -48,6 +48,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [TheDestruc7i0n Documentation](https://bedrock.dev/)
  - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
  - [Component Examples](vanilla-usage/components)
+ - [Json guis](https://geenium.com/bedrock/json-guis/)
  - [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
  - [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
  - [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac)
