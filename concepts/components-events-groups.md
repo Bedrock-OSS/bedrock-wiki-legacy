@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Components/Groups/Events
-parent: Knowledge
+parent: Concepts
 ---
 
 # Component Groups Vs. Components Vs. Events

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Math-based Animations
-parent: Tutorials
+parent: Concepts
 ---
 
 # Math-based Animations

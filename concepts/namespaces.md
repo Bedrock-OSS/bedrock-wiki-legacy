@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Namespaces
-parent: Knowledge
+parent: Concepts
 ---
 
 # Namespaces

@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Materials
-parent: Tutorials
+parent: Concepts
 ---
 
 # Materials

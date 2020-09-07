@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Shaders
-parent: Knowledge
+parent: Concepts
 ---
 
 # Shaders

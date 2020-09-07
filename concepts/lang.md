@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Understanding .lang
-parent: Knowledge
+title: .lang
+parent: Concepts
 ---
 
 # Understanding .lang 

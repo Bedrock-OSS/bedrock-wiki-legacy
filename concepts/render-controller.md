@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Render Controllers
-parent: Tutorials
+parent: Concepts
 ---
 
 # Render Controllers
