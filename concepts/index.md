@@ -2,7 +2,7 @@
 layout: page
 title: Concepts
 has_children: true
-nav_order: 0
+nav_order: 1.2
 sitemap:
     priority: 0.75
     changefreq: 'weekly'
