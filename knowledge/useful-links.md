@@ -42,6 +42,8 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Manifests](https://geenium.github.io/pack-manifest-creator/)
  - [behavior-builder (beta)](https://stirante.com/behavior/index.html)
  - [controller-builder (beta)](https://stirante.com/controller/index.html)
+ - [.lang](https://solveddev.github.io/AnyLanguage/)
+ - [Anvil Behavior Generator (beta)](https://anvil.starktma.com/)
   
 ## Documentation Links:
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)

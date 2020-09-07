@@ -24,7 +24,8 @@ For those who want a more bare-bones editor, I recommend using Microsoft Studio 
 [VSCode can be found at this link.](https://code.visualstudio.com/) 
 
 ### Setting it up:
-Many packaged exist for VSCode that make editing addons easier:
+Many packages exist for VSCode that make editing addons easier:
+ - [Blockceptions Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
  - [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
  - [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
  - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
