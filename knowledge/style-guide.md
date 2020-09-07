@@ -58,21 +58,15 @@ You can use sub-indexing in your entities:
 
 ## Groups and Events should complement each other
 
-Group:
-`sirlich:wild`
-
-event:
-`sirlich:become_wild`
-
-This is better than using `sirlich:wild` for both event and group.
+| Group        | Event               |
+|--------------|---------------------|
+| sirlich:wild | sirlich:become_wild |
 
 ## Functions should be nested
 
-Good:
-`teleport/zones/hell`
-
-Bad:
-`teleport_hellzone`
+| Good               | Bad               |
+|--------------------|-------------------|
+| teleport/zone/hell | teleport_hellzone |
 
 ## Group into files when possible
 
@@ -80,13 +74,23 @@ All animations for a specific entity should be grouped together into one file fo
 
 ## Split textures by path, not name
 
-Good:
-`dragon/blue`
-`dragon/red`
+| Good        | Bad         |
+|-------------|-------------|
+| dragon/blue | dragon_blue |
+| dragon/red  | dragon_red  |
 
-Bad:
-`boat_blue`
-`boat_red`
+## Acronyms when discussing
+
+| Acronym | Concept                            |
+|---------|------------------------------------|
+| BP      | Behavior Pack                      |
+| RP      | Resource pack                      |
+| VRP     | Vanilla Resource Pack              |
+| VBP     | Vanilla Behavior Pack              |
+| AC      | Animation Controller               |
+| RPAC    | Resource Pack Animation Controller |
+| BPAC    | Behavior Pack Animation Controller |
+| BB      | Blockbench                         |
 
 
 
