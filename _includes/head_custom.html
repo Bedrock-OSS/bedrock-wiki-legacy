@@ -7,6 +7,65 @@
         "Dark": "{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}",
         "Light": "{{ '/assets/css/just-the-docs-light.css' | absolute_url }}"
     };
+
+    /*
+    Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
+    */
+    let allCodeThemes = {
+        "Default": `
+        .highlight .nl {
+            color: #9CDCFE;
+        }
+        .highlight .s2 {
+            color: #ce9178;
+        }
+        .highlight .mi {
+            color: #b5cea8;
+        }
+        .highlight .kc {
+            color: #569cd6;
+        }
+        .highlight .p {
+            color: #C8C8C8;
+        }
+        .highlight .err {
+            color: #6A9955;
+        }
+        pre.highlight, figure.highlight {
+            background-color: 1E1E1E;
+        }
+        code {
+            background-color: 1E1E1E;
+        }
+        `,
+        "Dark": `
+        .highlight .nl {
+            color: #9CDCFE;
+        }
+        .highlight .s2 {
+            color: #ce9178;
+        }
+        .highlight .mi {
+            color: #b5cea8;
+        }
+        .highlight .kc {
+            color: #569cd6;
+        }
+        .highlight .p {
+            color: #C8C8C8;
+        }
+        .highlight .err {
+            color: #6A9955;
+        }
+        pre.highlight, figure.highlight {
+            background-color: 1E1E1E;
+        }
+        code {
+            background-color: 1E1E1E;
+        }
+        `,
+        "Light": ""
+    };
     let theme = "";
 
     function changeTheme(selected) {
@@ -23,6 +82,25 @@
             let stylesheet = document.styleSheets[index];
             stylesheet.disabled = stylesheet.href !== allThemes[selected];
         }
+        /*
+        Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
+        */
+        changeCodeTheme(theme);
+    }
+
+    /*
+    Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
+    */
+    function changeCodeTheme(selected) {
+        let codeThemeTag = document.getElementById("fixCodeTheme");
+        if (!codeThemeTag) {
+            codeThemeTag = document.createElement('style');
+            codeThemeTag.setAttribute('type', 'text/css');
+            codeThemeTag.id = "fixCodeTheme";
+            document.head.appendChild(codeThemeTag);
+        }
+        codeThemeTag.innerHTML = "";
+        codeThemeTag.appendChild(document.createTextNode(allCodeThemes[selected]));
     }
 
     if (typeof window.localStorage != 'undefined') {
