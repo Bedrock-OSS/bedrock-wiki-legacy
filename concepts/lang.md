@@ -25,6 +25,10 @@ Lang-codes can be used in any of the following places:
 
 As you can see, lang-codes can be used pretty much wherever you write text in your addon.
 
+When using lang codes in addons, you can usually just use the string.
+
+In game (signs, books, etc), use tellraw: `{"rawtext":[{"translate" : "my.lang.code"}]}`
+
 ## Why use lang?
 
 Even if you don't plan on translating your addon, using the `.lang` structure is advantageous, since it keeps all of your text in the same place, and makes it easier to edit, proof-read, and maintain.
