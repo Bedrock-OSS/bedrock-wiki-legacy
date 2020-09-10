@@ -20,11 +20,8 @@ This json contains geometry for both the Steve and Alex versions:
 
 `geometry.npc.alex`
 
-<details>
-  <summary>Click to expand</summary>
-  <pre>
-  <code>
-    {
+```json
+  {
     "format_version": "1.12.0",
     "minecraft:geometry": [
       {
@@ -451,10 +448,8 @@ This json contains geometry for both the Steve and Alex versions:
       }
     ]
   }
-  </code>
-  </pre>
-  
-  </details>
+```
+
 
 # Entity File
 
