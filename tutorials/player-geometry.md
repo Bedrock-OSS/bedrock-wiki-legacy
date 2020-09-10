@@ -20,6 +20,9 @@ This json contains geometry for both the Steve and Alex versions:
 
 `geometry.npc.alex`
 
+<details>
+  <summary>Click to expand</summary>
+	
 ```json
 {
     "format_version": "1.12.0",
@@ -450,6 +453,8 @@ This json contains geometry for both the Steve and Alex versions:
   }
   ```
   
+  </details>
+
 # Entity File
 
 Use this entity file if you would like to have animatinos for your geometry. This file includes error-free animations for:
