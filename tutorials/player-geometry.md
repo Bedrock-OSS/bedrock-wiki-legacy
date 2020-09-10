@@ -22,9 +22,9 @@ This json contains geometry for both the Steve and Alex versions:
 
 <details>
   <summary>Click to expand</summary>
-	
-```json
-{
+  <pre>
+  <code>
+    {
     "format_version": "1.12.0",
     "minecraft:geometry": [
       {
@@ -451,7 +451,8 @@ This json contains geometry for both the Steve and Alex versions:
       }
     ]
   }
-  ```
+  </code>
+  </pre>
   
   </details>
 
