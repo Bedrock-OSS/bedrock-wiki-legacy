@@ -1,6 +1,6 @@
 <p align="center">
     <h1 align="center">Bedrock Wiki</h1>
-    <p align="center">The Bedrock Wiki is a wnowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.<br>Here, you can contribute to this amazing, open-source resource!</p>
+    <p align="center">The Bedrock Wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.<br>Here, you can contribute to this amazing, open-source resource!</p>
     <p align="center"><strong><a href="https://wiki.bedrock.dev/">Visit the website!</a></strong></p>
     <br><br><br>
 </p>
