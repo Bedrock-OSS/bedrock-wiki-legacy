@@ -45,7 +45,9 @@ The following sound formats are accepted:
 }
 ```
 
-Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing. If the sound does not play, try restarting Minecraft. 
+Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing. 
+
+`note:` New files that are referenced by file path, such as sounds, DO need a full client restart in order to load. This means that if sounds don't work, you should restart your entire MC client, rather than just reloading the world.
 
 ## Top Level Keys
 
@@ -168,7 +170,7 @@ There are also many sound definitions, which *most likely* trigger automatically
  - shoot
  - warn
  - scream
- 
+
 ```json
 {
     "entity_sounds": {
