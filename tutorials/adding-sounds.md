@@ -9,18 +9,130 @@ parent: Tutorials
 Intermediate
 {: .label .label-yellow }
 
-You can add unique sounds in Bedrock, without overwriting existing sound files. This is done by editing information in the Resource Pack.
+In bedrock, we have the ability to add custom sounds, without overwriting any vanilla sounds. This is done by adding files to the resource pack. 
 
 `protip:` The best way to learn about sounds is downloading and playing around with the default resource pack.
 
-There are two files you will need to edit:
- - `sounds.json`, which is found at the top-level of the resource pack.
- - `sounds/sound_definitions.json`, note the nesting inside of the `sounds` folder.
+## Folder Structure
+There are two main files that we edit when we want to add sounds. Note how `sound_definition` is nested inside `sounds`.
 
-Additionally, you will need to include the actual sound files. This isn't an exhaustive list, but I believe that `.ogg` and `.wav` are supported. These files can be included inside the sounds folder, for example `sounds/elephant/trumpet.wav`.
+```
+└───example_RP
+    │   sounds.json
+    └───sounds
+            sound_definitions.json
+```
 
+## Sound Formats
 
-## Sound Categories
+The following sound formats are accepted:
+ - ogg (recommended)
+ - wav
+ - fsb
+
+# sound_definitions.json
+
+`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example `sound_definitions.json` that adds a new trumpet sound.
+
+```json
+{
+    "dirt.roar": {
+        "category": "neutral",
+        "sounds": [
+            "sounds/trumpet"
+        ]
+    }
+}
+```
+
+Sounds added in this way can be triggered using `/playsound`. Please note that `playsound` does not auto-correct, so you will need to be careful in your typing. If the sound does not play, try restarting Minecraft. 
+
+## Top Level Keys
+
+In the example above, I showed two `top-level` fields: `category`, and `sounds`. Sounds will be discussed in further detail bellow, but the other `top-level` keys will be discussed here:
+
+### Categories
+
+Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get different effects. 
+
+| Category | Note |
+|----------|------|
+| weather  |      |
+| block    |      |
+| bucket   |      |
+| bottle   |      |
+| ui       |      |
+| player   |      |
+| hostile  |      |
+| music    |      |
+| record   |      |
+| neutral  |      |
+
+### min_distance
+
+WIP
+
+### max_distance
+
+WIP
+
+## Sound definitions
+
+In the example above, I showed `sounds` as simply a list with a single path. This is good for simple sounds, but does not have much power. For starts, I can add multiple sounds into the list. These sounds will be randomized when played:
+```json
+"sounds": [
+    "sounds/trumpet",
+    "sounds/trumpet2",
+    "sounds/trumpet3"
+
+]
+```
+
+Second, we can define each sound as an object, instead of a string. This allows us finer control, and unlocks some new settings. The string/object style can be mixed and matched.
+
+### name
+
+The path to the file, such as: `"sounds/music/game/creative/creative1"`
+
+### stream
+
+WIP
+
+### volume
+
+How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made louder than originally encoded.
+
+### load_on_low_memory
+
+WIP
+
+### pitch
+
+The pitch of the sound (how low/high it sounds). Ranges from `0.0` to `1.0` (normal), but can be higher, such as `1.48`.
+
+## Example
+
+Here is a more realistic example containing these options:
+```json
+"block.beehive.drip": {
+    "category": "block",
+    "max_distance": 8,
+    "sounds": [
+        {
+            "name": "sounds/block/beehive/drip1",
+            "load_on_low_memory": true
+        },
+        "sounds/block/beehive/drip2",
+        "sounds/block/beehive/drip3",
+        "sounds/block/beehive/drip4"
+    ]
+}
+```
+# sounds.json
+
+If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to the entity.
+
+Note that when adding sounds this way, you don't need to trigger them using a `playsound` or anything. The step and ambient will play automatically, based on their configured triggers.
 
 Sounds in Minecraft are added in one of multiple categories:
  - **individual_event_sounds:** Contains sounds like beacon activation, chest-close, or explode.
@@ -56,37 +168,6 @@ There are also many sound definitions, which *most likely* trigger automatically
  - shoot
  - warn
  - scream
-
-# Example
-
-Here is an example of adding `step`, and `ambient` sound-definitions for an imaginary elephant mob.
-
-## sounds/sound_definitions.json
-
-This will create the sound definitions, and make them available to the engine. You can now test your sound by running a command like `/playsound elephant.step`.
-
-```json
-{
-	"elephant.step": {
-		"category": "neutral",
-		"sounds": [
-			"sounds/elephant/step"
-		]
-	},
-	"elephant.trumpet": {
-		"category": "neutral",
-		"sounds": [
-			"sounds/elephant/trumpet"
-		]
-	}
-}
-```
-
-## sounds.json
-
-If we want our sounds to run automatically, we can add them into the `sounds.json` file. This will tie the sound definitions directly to the entity.
-
-Note that when adding sounds this way, you don't need to trigger them using a `playsound` or anything. The step and ambient will play automatically, based on their configured triggers.
  
 ```json
 {
