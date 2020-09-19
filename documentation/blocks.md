@@ -97,14 +97,39 @@ Used to set the value of a block's property
 Used to set a block releative to this blocks position
 
 #### `trigger`
-Used to trigger a block event
+Used to trigger an event, this can be a block event or an entity event.
 ```json
 {
     "example:trigger_event": {
         "trigger": {
-            "event": "example:my_event"
+            "condition": "query.block_property('example:can_trigger_event') == true",
+            "event": "example:my_event",
+            "target": "self"              // If set to "other" an entity event can be defined, it will be triggered on the entity that causes the block event
         }
     }
+}
+```
+
+#### `sequence`
+Used to sequence event functions
+```json
+{
+	"example:sequence_event": {
+		"sequence": [
+			{
+				"set_block_property": {
+					"test:my_prop": true
+				}
+			},
+			{
+				"trigger": {
+					"event": "example:my_entity_event",
+					"target": "other",
+					"conditions": "query.block_propertry('test:my_prop') == true"
+				}
+			}
+		]
+	}
 }
 ```
 
@@ -189,3 +214,32 @@ Example:
     ]
   }
 ```
+
+## Block Tags
+
+_Needs more information_
+
+Block tags can be given to blocks to be queried or referenced with `any_tag` which is used inside item and entity files.
+A tag can be applied like this:
+```json
+{
+  "format_version": "1.16.100",
+  "minecraft:block": {
+    "description": {
+      "identifier": "example:my_block",
+    },
+    "components": {
+      "tag:example:my_tag": {}
+    }
+  }
+```
+
+and this tag can be queried with:
+- `query.all_tags`
+- `query.any_tag`
+- `query.equipped_item_all_tags`
+- `query.equipped_item_any_tag`
+- `query.block_has_all_tags`
+- `query.block_has_any_tag`
+- `query.relative_block_has_all_tags`
+- `query.relative_block_has_any_tag`
