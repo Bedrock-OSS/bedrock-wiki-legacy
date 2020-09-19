@@ -1,18 +1,15 @@
-# Welcome!
-
-This is the code-base for the technical bedrock wiki. If you haven't checked out the website version yet, you can do so [here](https://wiki.bedrock.dev/).
-
-This wiki is community written and maintained. If you want to contribute, you have found the right place!
+<p align="center">
+    <h1 align="center">Bedrock Wiki</h1>
+    <p align="center">The Bedrock Wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.<br>Here, you can contribute to this amazing, open-source resource!</p>
+    <p align="center"><strong><a href="https://wiki.bedrock.dev/">Visit the website!</a>     <a href="https://discord.gg/XjV87YN">Join the discord!</a></strong></p>
+    <br>
+</p>
 
 # Contributing
 
-## Communication
+## Discord
 
-You should probably join the [discord](https://discord.gg/XjV87YN), which is where all wiki-communication takes place. While small changes and new articles do not need permission, large-scale changes should go through community review.
-
-## Issue Tracking
-
-Issues are not currently tracked very well, since a large portion of the community does not use GitHub. I try to add issues as people report them though, and I highly encourage anyone to tackle them.
+Please join the [discord](https://discord.gg/XjV87YN), which is where all wiki-communication takes place. While small changes and new articles do not need permission, large-scale changes should go through community review.
 
 ## Using GitHub
 
