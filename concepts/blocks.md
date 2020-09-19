@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Blocks
-parent: Documentation
+title: Blocks [BETA]
+parent: Concepts
 ---
 
-# Blocks
+# Blocks [BETA]
 
 Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta
 ## Block Properties
