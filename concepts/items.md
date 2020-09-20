@@ -232,7 +232,7 @@ List of all new block components, with usage examples
 ```json
 {
   "minecraft:dye_powder": {
-      "color": "$general.number"
+      "color": 4
   }
 }
 ```
