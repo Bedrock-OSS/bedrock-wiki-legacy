@@ -120,6 +120,19 @@ Transforms the item into the item specified
 }
 ```
 
+#### `teleport`
+Teleports the target to a random location in the specified range
+```json
+{
+    "example:teleport_event": {
+        "teleport": {
+            "target": "holder",
+            "max_range": [8, 8, 8]
+        }
+    }
+}
+```
+
 #### `sequence`
 Used to sequence event functions
 ```json
@@ -219,7 +232,7 @@ List of all new block components, with usage examples
 ```json
 {
   "minecraft:dye_powder": {
-      "color": "$general.number"
+      "color": 4
   }
 }
 ```
@@ -296,6 +309,18 @@ List of all new block components, with usage examples
 }
 ```
 
+- minecraft:use_on
+```json
+{
+    "minecraft:use_on": {
+        "on_use": {
+            "event": "example:block_event",
+            "target": "block"
+        }
+    }
+}
+```
+
 - minecraft:knockback_resistance
 ```json
 {
@@ -316,23 +341,23 @@ List of all new block components, with usage examples
 ```
 
 ### Enchant slots
-|Slot Name     |
-|--------------|
-|bow           |
-|armor_feet    |
-|armor_torso   |
-|armor_head    |
-|armor_legs    |
-|hoe           |
-|axe           |
-|pickaxe       |
-|shovel        |
-|sword         |
-|elytra        |
-|fishing_rod   |
-|flintsteel    |
-|shears        |
-|cosmetic_head |
+|Slot Name     |Notes  |
+|--------------|-------|
+|bow           |       |
+|armor_feet    |       |
+|armor_torso   |       |
+|armor_head    |       |
+|armor_legs    |       |
+|hoe           |       |
+|axe           |       |
+|pickaxe       |       |
+|shovel        |       |
+|sword         |       |
+|elytra        |       |
+|fishing_rod   |       |
+|flintsteel    |       |
+|shears        |       |
+|cosmetic_head |       |
 
 
 - minecraft:shooter
@@ -391,7 +416,7 @@ List of all new block components, with usage examples
     "minecraft:weapon": {
         "on_hurt": {
             "event": "example_event",
-            "target": "holder"      // Can also be "self" to trigger an item event"
+            "target": "holder"      // Can also be 'self' to trigger an item event"
         }
     }
 }
@@ -421,7 +446,7 @@ List of all new block components, with usage examples
                 "repair_amount": 10,  // Can also be molang expression
                 "on_repaired": {
                     "event": "example_event",
-                    "target": "holder"    // Can also be "self" to trigger an item event"
+                    "target": "holder"    // Can also be 'self' to trigger an item event"
                 }
             }
         ]
@@ -501,11 +526,31 @@ _New Syntax_
     "minecraft:food": {
         "on_consume": {
             "event": "example_event",
-            "target": "holder"  // Can also be "self" to trigger an item event"
+            "target": "holder"  // Can also be 'self' to trigger an item event"
         },
         "nurtition": 3,
         "can_always_eat": true,
         "saturation_modifier": "normal"
     }
+}
+```
+
+## Breaking changes
+
+If your item isn't showing up in the beta, these changes might have broken your item.
+
+- Item behavior files now require a "category" to show up in the /give command and creative inventory.
+Example:
+```json
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "example:item",
+      "category" : "items"     // This line is required
+    },
+    "components": {...},
+    "events": {...}
+  }
 }
 ```
