@@ -185,6 +185,62 @@ And now we run the same 2 commands again:
 `/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
 
+Expert
+{: .label .label-red }
+
+- Now we're getting into some really advanced stuff that have to do with scoreboards and selectors. These are features that were introduces in [Bedrock Edition v1.16.100](https://minecraft.gamepedia.com/Bedrock_Edition_1.16.100)
+
+## Using player names with localization
+
+So you want to have an NPC that greets you when you get near it. Usually we'd have it say something like *"Hey there adventurer! Glad to see you again!"*. It has a nice ring to it, but it would be awesome if the NPC would call you by name! So how do we go from that to *"Hey there <insert player name here>! Glad to see you again!"*
+
+First of all we have to prepare the line in the `.lang` file:
+`npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`
+Notice how we put `%1` where we want the NPC to call us by our name.
+
+Now let's create the command:
+`/tellraw @a {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
+
+Just like we replaced `%1` with the new line when we created a book, now we replace it with the name of closest player by use of a `selector`.
+
+If we want to go one step further and **make sure** the NPC talks only to the closest player, we run that command from an `/execute`:
+`/execute @e[type=NPC] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
+
+## Using scoreboards with localization
+
+And just like that we reached the final form of what can be done with localization! Let's say you have a friendly competition between a few players. You do some scoreboard magic and manage to find the highest scoring player and record his/her score inside the `winner` objective.
+Let's announce the winner in style! Let's do it with a Title and Subtitle!
+
+**.lang** file:
+`winner.subtitle=They won with %1 points!`
+
+**Commands:**
+`/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`
+`/titleraw @a title {"rawtext":[{ "selector" : "@e[scores={winner=0..}]" }]}`
+
+ Since this objective has only 1 player attached to it, notice how we used a wildcard `*` for selection: `"name":"*"`.
+
+ Let's add to this and paint the name of the player in a bright green!
+
+ **.lang** file:
+`winner.subtitle=They won with %1 points!`
+`winner.title=§a%1`
+
+**Commands:**
+`/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`
+`/titleraw @a title {"rawtext":[{"translate":"winner.title","with":{"rawtext":[{ "selector" : "@a[scores={winner=0..}]" }]}}]}`
+
+Ok now let's combine all those commands and do a quick chat message to thank all the players for participating, and also to show them their scores. We'll use `gamescore` as out objective name that includes all the players.
+
+ **.lang** file:
+`players.thankyou.chat=Thank you all for participating %1! These are your scores: %2.`
+
+**Command:**
+`/tellraw @a {"rawtext":[{"translate":"players.thankyou.chat","with":{"rawtext":[{ "selector" : "@a[scores={gamescore=0..}]" },{"score" : {"name":"@a[scores={gamescore=0..}]","objective":"gamescore"}}]}}]}`
+
+Notice how we told Minecraft that we have 2 different items we want replaced inside that translation with the help of `%1` and `%2`.
+Also notice how we replaced the wildcard `*` and went from `"name":"*"` to `"name":"@a[scores={gamescore=0..}]"` for a more precise(and totally unnecessary) selection.
+
 So there you have it folks! All you need to know about localization in Minecraft Bedrock Edition. Hope you have a blast renaming stuff for your friend!
 
 ## Quick reference
@@ -210,6 +266,15 @@ So there you have it folks! All you need to know about localization in Minecraft
 `quest1.title=Victory`
 `/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
+
+- **Localization + Player names**
+`npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`
+`/tellraw @a {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
+
+- **Localization + Scoreboards + Player names**
+`players.thankyou.chat=Thank you all for participating %1! These are your scores: %2.`
+`/tellraw @a {"rawtext":[{"translate":"players.thankyou.chat","with":{"rawtext":[{ "selector" : "@a[scores={gamescore=0..}]" },{"score" : {"name":"@a[scores={gamescore=0..}]","objective":"gamescore"}}]}}]}`
+
 
 ## External links
 
