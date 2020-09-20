@@ -190,7 +190,7 @@ _This seems to be broken as of 1.16.100.56_
 {
     "example:execute_command_event": {
         "execute_command": {
-            "commands": ["say hi"]
+            "command": ["say hi"]
         }
     }
 }
@@ -341,24 +341,24 @@ List of all new block components, with usage examples
 ```
 
 ### Enchant slots
-|Slot Name     |Notes  |
-|--------------|-------|
-|bow           |       |
-|armor_feet    |       |
-|armor_torso   |       |
-|armor_head    |       |
-|armor_legs    |       |
-|hoe           |       |
-|axe           |       |
-|pickaxe       |       |
-|shovel        |       |
-|sword         |       |
-|elytra        |       |
-|fishing_rod   |       |
-|flintsteel    |       |
-|shears        |       |
-|cosmetic_head |       |
 
+| Slot Name     |
+|---------------|
+| bow           |
+| armor_feet    |
+| armor_torso   |
+| armor_head    |
+| armor_legs    |
+| hoe           |
+| axe           |
+| pickaxe       |
+| shovel        |
+| sword         |
+| elytra        |
+| fishing_rod   |
+| flintsteel    |
+| shears        |
+| cosmetic_head |
 
 - minecraft:shooter
 ```json
