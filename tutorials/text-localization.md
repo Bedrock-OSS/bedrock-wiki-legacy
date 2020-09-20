@@ -14,7 +14,7 @@ Beginner
 Language localization is the process of translating a game or software product for a specific country or region.
 
 As an example let's take the `Gold Ingot` from Minecraft. In the code of the game, the developers referred to it as `item.gold_ingot.name`.
-That's not a very nice way to call it all the time is it? So for each language that has a Minecraft translation, the developers created a translation(or Localization) file that asigns the proper name to that `item.gold_ingot.name`.
+That's not a very nice way to call it all the time is it? So for each language that has a Minecraft translation, the developers created a translation(or Localization) file that assigns the proper name to that `item.gold_ingot.name`.
 
 For example for US English they created a `en_US.lang` file and inside it you can find the line: `item.gold_ingot.name=Gold Ingot`
 For Spanish we have the `es_ES.lang` file and inside that one you can find the line: `item.gold_ingot.name=Lingote de oro`
@@ -25,6 +25,7 @@ You get the point! For more information about these localization files I recomme
 ## Why would you want to use localization?
 
 The boring and responsible answer is that you want to use localization so that your project can be easily translated into many languages and reach a much larger audience.
+
 The real answer: because like many of us you're lazy! Made a spelling mistake? You don't even need to open the game, just open the `.lang` file and fix it! That's it! DONE! You don't have to break and replace signs, you don't have to re-write books, you don't have to find that one command for that one NPC that said that one thing.
 
 
@@ -50,14 +51,15 @@ Inside `fr_FR.lang` write a new line with `sign.house_of_terrors=Maison des terr
 
 Before we get inside the game, do a quick restart of Minecraft just to make sure the game registered the new `.lang` files.
 
-Now for the most complicated part! Put down a sign and paste this inside it: `{"rawtext":[{"translate":"sign.house_of_terrors"}]}`
+Now for the most complicated part! Put down a sign and paste this inside it:
+`{"rawtext":[{"translate":"sign.house_of_terrors"}]}`
 
 When you exit the sign interface, you should see `House of terrors` written on it. AMAZING!!! And your friend should see `Maison des terreurs`.
 
 As you can see we can't just put `sign.house_of_terrors` inside the sign and hope Minecraft understands what we mean. We have to wrap our code inside a special formula.
 
 ## Writing a book
-> This book will have 2 pages with multiple paragraphs on each page.
+- This book will have 2 pages with multiple paragraphs on each page.
 
 Getting to some serious stuff now! Let's say you want to write a fancy story inside a book, and make sure your friend from Italy can read it in his native tongue.
 
@@ -82,33 +84,31 @@ of a town called Bel-air
 
 Unfortunately we can't put the text like that inside our `.lang` files. Everything has to be on a single row/line. To do that we need to tell Minecraft *"Listen, I have a line here for you to display but I want you to add some line breaks inside it"*. We do that by putting a `%1` instead of a new line.
 
-For the sake of learning let's transform our text step by step.
-
-**Step 1**: replace all new lines with a `%1`:
-First page:
-```
-Now this is the story all about how%1
-%1
-My life got flipped, turned upside down
-```
-Second page:
-```
-And I'd like to take a minute just sit right there%1
-%1
-I'll tell you how I became the prince%1
-%1
-of a town called Bel-air
-```
-
-**Step 2**: make it all one row:
-First page:
-```
-Now this is the story all about how%1%1My life got flipped, turned upside down
-```
-Second page:
-```
-And I'd like to take a minute just sit right there%1%1I'll tell you how I became the prince%1%1of a town called Bel-air
-```
+For the sake of learning let's transform our text step by step:
+- **Step 1**: replace all new lines with a `%1`:
+  - First page:
+    ```
+    Now this is the story all about how%1
+    %1
+    My life got flipped, turned upside down
+    ```
+  - Second page:
+    ```
+    And I'd like to take a minute just sit right there%1
+    %1
+    I'll tell you how I became the prince%1
+    %1
+    of a town called Bel-air
+    ```
+- **Step 2**: make it all one row:
+  - First page:
+    ```
+    Now this is the story all about how%1%1My life got flipped, turned upside down
+    ```
+  - Second page:
+    ```
+    And I'd like to take a minute just sit right there%1%1I'll tell you how I became the prince%1%1of a town called Bel-air
+    ```
 
 Now we're getting somewhere! Let's put it all together with our code and see how this whole text would fit inside out `.lang` files
 **en_US.lang**
@@ -131,20 +131,24 @@ When you click outside the pages you should see the story just like we wanted it
 Intermediate
 {: .label .label-yellow }
 
-> Making the next few examples **Intermediate** level because we're going to use command and stop mentioning all the restarts you have to make and what files to create.
+- Making the next few examples **Intermediate** level because we're going to use commands and stop mentioning all the restarts you have to do and what files to create.
 
 ## Make an NPC talk
 
 Usually when we want an NPC to talk we have to name it and use the `/say` or `/tell` commands. For localization purposes we are going to use the `/tellraw` command. This allows us to use that special formula to tell Minecraft we want something translated.
 
-For this example I want Bob the NPC to say hi to me. As usual we'll have a code in our `.lang` file: `npcdialogue.bob.msg1=Hey there stranger!`
-You know what, let's make it even more fancy! Let's have Bob's name in colors for this one: `npcdialogue.bob.msg1=<§6Bob§r> Hey there stranger!`
-> See the [official wiki](https://minecraft.gamepedia.com/Formatting_codes) for info on text formatting
+For this example I want Bob the NPC to say hi to me. As usual we'll have a code in our `.lang` file:
+`npcdialogue.bob.msg1=Hey there stranger!`
+You know what, let's make it even more fancy! Let's have Bob's name in colors for this one:
+`npcdialogue.bob.msg1=<§6Bob§r> Hey there stranger!`
+- See the [official wiki](https://minecraft.gamepedia.com/Formatting_codes) for info on text formatting
 
-Now let's create that command: `/tellraw @a {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
+Now let's create that command:
+`/tellraw @a {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
 
 Go ahead and run it! Since we used the `@a` selector, Bob is saying hi to all the players. If we want him to say hi only to the closes player we have to extend the command a little bit and also replace `@a` with `@p`.
-So the updated command would be: `/execute @e[name=Bob] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
+So the updated command would be:
+`/execute @e[name=Bob] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
 This new command is saying *"Find the entity called Bob and run the tellraw command for the closes player to that location."*
 
 ## Localize the Actionbar
@@ -154,7 +158,8 @@ So far we've put text on a sign, in a book and in the chat. Let's expand our hor
 Usually to show text in the Actionbar we do a quick `/title @a actionbar "Hello there!"` command. For localization we are going to use the `/titleraw` command. Let's do a quick example!
 
 Inside the `.lang` file: `actionbar.status.gamemode=You are now in Survival Mode`
-The final command: `/titleraw @a actionbar {"rawtext":[{"translate" : "actionbar.status.gamemode"}]}`
+The final command:
+`/titleraw @a actionbar {"rawtext":[{"translate" : "actionbar.status.gamemode"}]}`
 
 ## Localize Titles and Subtitles
 
