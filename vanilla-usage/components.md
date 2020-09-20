@@ -17,7 +17,7 @@ parent: Vanilla Usage
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
 
 # minecraft:addrider
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
@@ -31,12 +31,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ```json
+
+
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton.wither"
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:pillager"
@@ -77,7 +79,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton"
@@ -96,7 +98,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:zombie_pigman",
@@ -112,7 +114,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:admire_item
-### piglin
+#### piglin
 ```json
 "minecraft:admire_item": {
     "duration": 8,
@@ -121,7 +123,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:ageable
-### bee
+#### bee
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -141,7 +143,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -156,7 +158,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -173,7 +175,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -185,7 +187,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -200,7 +202,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -241,7 +243,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -253,7 +255,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -267,7 +269,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -308,7 +310,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -329,7 +331,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -341,7 +343,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -382,7 +384,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -397,7 +399,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -409,7 +411,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -425,7 +427,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -436,7 +438,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -452,7 +454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -464,7 +466,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -475,7 +477,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -489,7 +491,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -506,7 +508,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -517,7 +519,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -528,7 +530,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -552,7 +554,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:ageable": {
     "duration": 1200,
@@ -564,7 +566,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:ambient_sound_interval
-### bee
+#### bee
 ```json
 "minecraft:ambient_sound_interval": {
     "event_name": "ambient.pollinate",
@@ -581,7 +583,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -590,7 +592,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:ambient_sound_interval": {
     "event_name": "ambient"
@@ -611,7 +613,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -620,7 +622,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 4.0,
@@ -629,7 +631,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -638,7 +640,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:ambient_sound_interval": {
     "value": 2.0,
@@ -648,7 +650,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:angry
-### bee
+#### bee
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -666,7 +668,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:angry": {
     "duration": 10,
@@ -678,7 +680,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -691,7 +693,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -702,7 +704,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:angry": {
     "duration": 10,
@@ -720,7 +722,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:angry": {
     "duration": 4,
@@ -753,7 +755,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:angry": {
     "duration": 500,
@@ -788,7 +790,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:angry": {
     "duration": 30,
@@ -824,7 +826,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:angry": {
     "duration": 1,
@@ -849,7 +851,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:angry": {
     "duration": -1,
@@ -862,7 +864,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:angry": {
     "duration": 10,
@@ -874,7 +876,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:angry": {
     "duration": -1,
@@ -886,7 +888,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:angry": {
     "duration": 5,
@@ -907,7 +909,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -920,7 +922,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:angry": {
     "duration": 25,
@@ -934,17 +936,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:annotation.break_door
-### drowned
+#### drowned
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:annotation.break_door": {
     "break_time": 30,
@@ -952,39 +954,39 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:annotation.break_door": {}
 ```
 
 # minecraft:annotation.open_door
-### piglin
+#### piglin
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:annotation.open_door": {}
 ```
 
 # minecraft:area_attack
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:area_attack": {
     "damage_range": 0.2,
@@ -1008,7 +1010,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:attack
-### bee
+#### bee
 ```json
 "minecraft:attack": {
     "damage": 2
@@ -1031,14 +1033,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:attack": {
     "damage": 6
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:attack": {
     "damage": 2,
@@ -1063,70 +1065,70 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:attack": {
     "damage": 7
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:attack": {
     "damage": 0.5
@@ -1142,7 +1144,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:attack": {
     "damage": 3,
@@ -1151,7 +1153,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:attack": {
     "damage": {
@@ -1161,7 +1163,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:attack": {
     "damage": 6
@@ -1180,7 +1182,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:attack": {
     "damage": 2.0
@@ -1193,63 +1195,63 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:attack": {
     "damage": 6
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:attack": {
     "damage": 1
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:attack": {
     "damage": 6.0
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:attack": {
     "damage": 12.0
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:attack": {
     "damage": 1
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:attack": {
     "damage": 4
@@ -1268,21 +1270,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:attack": {
     "damage": 2
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:attack": {
     "damage": 3,
@@ -1291,21 +1293,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:attack": {
     "damage": 8
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:attack": {
     "damage": 4,
@@ -1314,7 +1316,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1327,7 +1329,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:attack": {
     "damage": 1
@@ -1343,28 +1345,28 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:attack": {
     "damage": 5
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:attack": {
     "damage": 3
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:attack": {
     "damage": 3
@@ -1372,7 +1374,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:attack_cooldown
-### hoglin
+#### hoglin
 ```json
 "minecraft:attack_cooldown": {
     "attack_cooldown_time": [
@@ -1386,7 +1388,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:attack_cooldown": {
     "attack_cooldown_time": [
@@ -1401,14 +1403,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:attack_damage
-### cat
+#### cat
 ```json
 "minecraft:attack_damage": {
     "value": 4
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:attack_damage": {
     "value": 4
@@ -1416,102 +1418,102 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:balloonable
-### chicken
+#### chicken
 ```json
 "minecraft:balloonable": {
     "mass": 0.5
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:balloonable": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:balloonable": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:balloonable": {
     "mass": 0.6
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:balloonable": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:balloonable": {
     "mass": 2.0
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:balloonable": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:balloonable": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:balloonable": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:balloonable": {
     "mass": 1.5
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:balloonable": {
     "mass": 0.75
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:balloonable": {
     "mass": 0.4
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:balloonable": {
     "mass": 0.75
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:balloonable": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:balloonable": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:balloonable": {}
 ```
 
 # minecraft:barter
-### piglin
+#### piglin
 ```json
 "minecraft:barter": {
     "barter_table": "loot_tables/entities/piglin_barter.json",
@@ -1540,7 +1542,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.avoid_block
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.avoid_block": {
     "priority": 1,
@@ -1568,7 +1570,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.avoid_block": {
     "priority": 9,
@@ -1592,7 +1594,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.avoid_mob_type
-### cat
+#### cat
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 6,
@@ -1611,7 +1613,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
@@ -1638,7 +1640,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 2,
@@ -1667,7 +1669,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -1686,7 +1688,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -1705,7 +1707,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -1754,7 +1756,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -1773,7 +1775,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 0,
@@ -1807,7 +1809,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -1826,7 +1828,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 5,
@@ -1847,7 +1849,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 0,
@@ -1875,7 +1877,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -1936,7 +1938,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -1975,7 +1977,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -1995,7 +1997,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2014,7 +2016,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2033,7 +2035,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 1,
@@ -2052,7 +2054,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
@@ -2095,7 +2097,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 4,
@@ -2138,7 +2140,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 2,
@@ -2181,7 +2183,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.avoid_mob_type": {
     "priority": 3,
@@ -2202,7 +2204,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.barter
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.barter": {
     "priority": 3
@@ -2210,7 +2212,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.beg
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.beg": {
     "priority": 9,
@@ -2237,7 +2239,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.breed
-### bee
+#### bee
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2245,7 +2247,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2253,7 +2255,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2261,7 +2263,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2276,7 +2278,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2284,7 +2286,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2292,7 +2294,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2300,7 +2302,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2308,7 +2310,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2316,7 +2318,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2331,7 +2333,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2339,7 +2341,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2354,7 +2356,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2362,7 +2364,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2377,7 +2379,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -2385,7 +2387,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.breed": {
     "priority": 4,
@@ -2393,7 +2395,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2401,7 +2403,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.breed": {
     "priority": 2,
@@ -2410,7 +2412,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.celebrate
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2431,7 +2433,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2452,7 +2454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2473,7 +2475,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2494,7 +2496,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.celebrate": {
     "priority": 5,
@@ -2516,7 +2518,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.charge_attack
-### vex
+#### vex
 ```json
 "minecraft:behavior.charge_attack": {
     "priority": 4,
@@ -2525,7 +2527,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.charge_held_item
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.charge_held_item": {
     "priority": 3,
@@ -2535,7 +2537,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.charge_held_item": {
     "priority": 3,
@@ -2546,7 +2548,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.circle_around_anchor
-### phantom
+#### phantom
 ```json
 "minecraft:behavior.circle_around_anchor": {
     "priority": 3,
@@ -2571,14 +2573,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.controlled_by_player
-### pig
+#### pig
 ```json
 "minecraft:behavior.controlled_by_player": {
     "priority": 0
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.controlled_by_player": {
     "priority": 0,
@@ -2587,7 +2589,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.defend_trusted_target
-### fox
+#### fox
 ```json
 "minecraft:behavior.defend_trusted_target": {
     "priority": 0,
@@ -2603,7 +2605,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.defend_village_target
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.defend_village_target": {
     "priority": 1,
@@ -2629,7 +2631,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.delayed_attack
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.delayed_attack": {
     "priority": 4,
@@ -2645,7 +2647,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.dragonchargeplayer
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:behavior.dragonchargeplayer": {
     "priority": 1
@@ -2702,7 +2704,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.drink_potion
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.drink_potion": {
     "priority": 1,
@@ -2801,7 +2803,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.drop_item_for
-### cat
+#### cat
 ```json
 "minecraft:behavior.drop_item_for": {
     "priority": 1,
@@ -2836,7 +2838,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.eat_block
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.eat_block": {
     "priority": 6,
@@ -2860,7 +2862,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.eat_carried_item
-### fox
+#### fox
 ```json
 "minecraft:behavior.eat_carried_item": {
     "priority": 12,
@@ -2869,7 +2871,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.enderman_leave_block
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.enderman_leave_block": {
     "priority": 10
@@ -2884,84 +2886,84 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.equip_item
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 2
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 2
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 5
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 2
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.equip_item": {
     "priority": 3
@@ -2969,7 +2971,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.explore_outskirts
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.explore_outskirts": {}
 ```
@@ -2984,7 +2986,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.find_cover
-### fox
+#### fox
 ```json
 "minecraft:behavior.find_cover": {
     "priority": 0,
@@ -3002,7 +3004,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.find_mount
-### husk
+#### husk
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3010,7 +3012,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 3,
@@ -3022,7 +3024,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3032,7 +3034,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3042,7 +3044,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3050,7 +3052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.find_mount": {
     "priority": 1,
@@ -3059,7 +3061,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.find_underwater_treasure
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.find_underwater_treasure": {
     "priority": 2,
@@ -3070,7 +3072,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.flee_sun
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
@@ -3078,7 +3080,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
@@ -3086,7 +3088,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 2,
@@ -3094,7 +3096,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 4,
@@ -3102,7 +3104,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.flee_sun": {
     "priority": 4,
@@ -3111,259 +3113,259 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.float
-### bat
+#### bat
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:behavior.float": {
     "priority": 19
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.float": {
     "priority": 2
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.float": {
     "priority": 0
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:behavior.float": {
     "priority": 1
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.float": {
     "priority": 0
@@ -3371,7 +3373,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.float_wander
-### bat
+#### bat
 ```json
 "minecraft:behavior.float_wander": {
     "xz_dist": 10,
@@ -3385,7 +3387,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:behavior.float_wander": {
     "priority": 2,
@@ -3394,7 +3396,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_caravan
-### llama
+#### llama
 ```json
 "minecraft:behavior.follow_caravan": {
     "priority": 3,
@@ -3411,7 +3413,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_mob
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.follow_mob": {
     "priority": 3,
@@ -3422,7 +3424,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_owner
-### cat
+#### cat
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 4,
@@ -3432,7 +3434,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 4,
@@ -3442,7 +3444,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 2,
@@ -3452,7 +3454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.follow_owner": {
     "priority": 6,
@@ -3463,7 +3465,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_parent
-### bee
+#### bee
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 11,
@@ -3471,7 +3473,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3479,7 +3481,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3494,7 +3496,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3502,7 +3504,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3510,7 +3512,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 9,
@@ -3518,7 +3520,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3526,7 +3528,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3534,7 +3536,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3542,7 +3544,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3557,7 +3559,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3565,7 +3567,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 13,
@@ -3573,7 +3575,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3581,7 +3583,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3589,7 +3591,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3597,7 +3599,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 5,
@@ -3612,7 +3614,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3620,7 +3622,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 6,
@@ -3628,7 +3630,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.follow_parent": {
     "priority": 4,
@@ -3637,7 +3639,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.follow_target_captain
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.follow_target_captain": {
     "priority": 5,
@@ -3647,7 +3649,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.follow_target_captain": {
     "priority": 5,
@@ -3658,7 +3660,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.go_home
-### bee
+#### bee
 ```json
 "minecraft:behavior.go_home": {
     "priority": 4,
@@ -3712,7 +3714,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.go_home": {
     "priority": 1,
@@ -3727,14 +3729,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.guardian_attack
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
@@ -3748,7 +3750,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.harvest_farm_block
-### villager
+#### villager
 ```json
 "minecraft:behavior.harvest_farm_block": {
     "priority": 9,
@@ -3756,7 +3758,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.harvest_farm_block": {}
 ```
@@ -3779,7 +3781,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.hold_ground
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.hold_ground": {
     "priority": 5,
@@ -3807,84 +3809,84 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.hurt_by_target
-### bee
+#### bee
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 3
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
@@ -3923,7 +3925,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
@@ -3931,21 +3933,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
@@ -3961,14 +3963,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2,
@@ -3984,14 +3986,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1,
@@ -3999,105 +4001,105 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 2
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 3
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4105,7 +4107,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.inspect_bookshelf
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.inspect_bookshelf": {}
 ```
@@ -4122,7 +4124,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.knockback_roar
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.knockback_roar": {
     "priority": 1,
@@ -4151,7 +4153,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.lay_down
-### panda
+#### panda
 ```json
 "minecraft:behavior.lay_down": {
     "priority": 5,
@@ -4161,7 +4163,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.lay_egg
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.lay_egg": {
     "priority": 1,
@@ -4177,7 +4179,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.leap_at_target
-### cat
+#### cat
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 3,
@@ -4185,7 +4187,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4202,7 +4204,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 3,
@@ -4210,7 +4212,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4219,7 +4221,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4228,7 +4230,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_entity
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.look_at_entity": {
     "priority": 10,
@@ -4241,7 +4243,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.look_at_entity": {
     "priority": 10,
@@ -4255,7 +4257,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:behavior.look_at_entity": {
     "priority": 9,
@@ -4270,14 +4272,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_player
-### cat
+#### cat
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4286,7 +4288,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4295,7 +4297,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4304,7 +4306,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -4312,7 +4314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4320,7 +4322,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4329,7 +4331,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4338,7 +4340,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4347,7 +4349,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4356,7 +4358,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -4365,7 +4367,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 14,
@@ -4374,7 +4376,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4383,7 +4385,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4392,7 +4394,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4401,7 +4403,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4410,7 +4412,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4419,7 +4421,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4428,7 +4430,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4437,7 +4439,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4446,7 +4448,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 0,
@@ -4455,14 +4457,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4471,7 +4473,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 1,
@@ -4479,7 +4481,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4488,7 +4490,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 11,
@@ -4496,7 +4498,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -4504,7 +4506,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -4513,14 +4515,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 11
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4530,7 +4532,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4539,7 +4541,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 1,
@@ -4548,7 +4550,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4556,7 +4558,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4565,7 +4567,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 3,
@@ -4573,7 +4575,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4582,7 +4584,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4590,7 +4592,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -4599,7 +4601,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4608,7 +4610,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 9,
@@ -4617,7 +4619,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 12,
@@ -4626,7 +4628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4635,7 +4637,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
@@ -4644,7 +4646,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4653,7 +4655,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 5,
@@ -4661,7 +4663,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -4669,7 +4671,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4677,7 +4679,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 6,
@@ -4686,7 +4688,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4695,7 +4697,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4704,7 +4706,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 7,
@@ -4713,7 +4715,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 8,
@@ -4722,7 +4724,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
@@ -4731,7 +4733,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 10,
@@ -4741,7 +4743,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_target
-### wither
+#### wither
 ```json
 "minecraft:behavior.look_at_target": {
     "priority": 5
@@ -4749,21 +4751,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.look_at_trading_player
-### villager
+#### villager
 ```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 2
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 7
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.look_at_trading_player": {
     "priority": 4
@@ -4771,14 +4773,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.make_love
-### villager
+#### villager
 ```json
 "minecraft:behavior.make_love": {
     "priority": 6
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.make_love": {
     "priority": 5
@@ -4786,7 +4788,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.melee_attack
-### bee
+#### bee
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
@@ -4799,7 +4801,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -4808,7 +4810,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -4826,7 +4828,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -4836,7 +4838,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
@@ -4844,7 +4846,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -4854,14 +4856,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -4869,7 +4871,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 10,
@@ -4888,7 +4890,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -4909,14 +4911,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 1,
@@ -4924,7 +4926,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 2,
@@ -4942,7 +4944,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 8,
@@ -4951,7 +4953,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -4959,7 +4961,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -4967,7 +4969,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -4976,7 +4978,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3,
@@ -4985,7 +4987,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -4994,14 +4996,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5010,14 +5012,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 5
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5026,14 +5028,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 3
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 4,
@@ -5041,14 +5043,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 6
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.melee_attack": {
     "priority": 6
@@ -5056,7 +5058,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.mingle
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.mingle": {}
 ```
@@ -5073,7 +5075,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.mount_pathing
-### cat
+#### cat
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5083,7 +5085,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5093,7 +5095,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5103,7 +5105,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5113,7 +5115,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5123,7 +5125,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5133,7 +5135,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5143,7 +5145,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5153,7 +5155,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5163,7 +5165,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5173,7 +5175,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5183,7 +5185,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5193,7 +5195,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5203,7 +5205,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5213,7 +5215,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5223,7 +5225,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5233,7 +5235,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5243,7 +5245,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 1,
@@ -5253,7 +5255,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5263,7 +5265,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5273,7 +5275,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 2,
@@ -5283,7 +5285,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5293,7 +5295,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.mount_pathing": {
     "priority": 5,
@@ -5304,7 +5306,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_indoors
-### villager
+#### villager
 ```json
 "minecraft:behavior.move_indoors": {
     "priority": 4,
@@ -5312,7 +5314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.move_indoors": {
     "priority": 6,
@@ -5322,7 +5324,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_through_village
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.move_through_village": {
     "priority": 3,
@@ -5332,7 +5334,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_block
-### bee
+#### bee
 ```json
 "minecraft:behavior.move_to_block": {
     "priority": 10,
@@ -5388,7 +5390,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_land
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.move_to_land": {
     "priority": 6,
@@ -5399,7 +5401,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_lava
-### strider
+#### strider
 ```json
 "minecraft:behavior.move_to_lava": {
     "priority": 7,
@@ -5411,7 +5413,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_random_block
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.move_to_random_block": {
     "priority": 6,
@@ -5421,7 +5423,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.move_to_random_block": {
     "priority": 5,
@@ -5432,7 +5434,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_village
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 6,
@@ -5440,7 +5442,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 5,
@@ -5449,7 +5451,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 5,
@@ -5458,7 +5460,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 4,
@@ -5467,7 +5469,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.move_to_village": {
     "priority": 3,
@@ -5477,7 +5479,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_to_water
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.move_to_water": {
     "priority": 1,
@@ -5486,7 +5488,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.move_to_water": {
     "priority": 4,
@@ -5507,14 +5509,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_towards_restriction
-### cat
+#### cat
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
@@ -5522,7 +5524,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
@@ -5534,7 +5536,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
@@ -5546,7 +5548,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
@@ -5554,7 +5556,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 4,
@@ -5562,7 +5564,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
@@ -5570,7 +5572,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 10,
@@ -5578,7 +5580,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
@@ -5586,7 +5588,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 5,
@@ -5594,14 +5596,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 6
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
@@ -5609,7 +5611,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.move_towards_restriction": {
     "priority": 7,
@@ -5618,7 +5620,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.move_towards_target
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.move_towards_target": {
     "priority": 2,
@@ -5628,7 +5630,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.nap
-### fox
+#### fox
 ```json
 "minecraft:behavior.nap": {
     "priority": 8,
@@ -5690,7 +5692,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.nearest_attackable_target
-### bee
+#### bee
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -5707,7 +5709,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -5725,7 +5727,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -5762,7 +5764,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -5827,7 +5829,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -5846,7 +5848,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -5952,7 +5954,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -5980,7 +5982,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
@@ -5999,7 +6001,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 5,
@@ -6027,7 +6029,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6082,7 +6084,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6100,7 +6102,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6155,7 +6157,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
@@ -6184,7 +6186,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6254,7 +6256,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -6283,7 +6285,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6313,7 +6315,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6331,7 +6333,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6367,7 +6369,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6389,7 +6391,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 7,
@@ -6511,7 +6513,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6563,7 +6565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
@@ -6597,7 +6599,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -6643,7 +6645,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -6659,7 +6661,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6691,7 +6693,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6736,7 +6738,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6768,7 +6770,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 1,
@@ -6785,7 +6787,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6818,7 +6820,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6863,7 +6865,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -6913,7 +6915,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -6994,7 +6996,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7026,7 +7028,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7063,7 +7065,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7108,7 +7110,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 4,
@@ -7199,7 +7201,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 3,
@@ -7229,7 +7231,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7300,7 +7302,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7369,7 +7371,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 2,
@@ -7431,7 +7433,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.nearest_prioritized_attackable_target
-### fox
+#### fox
 ```json
 "minecraft:behavior.nearest_prioritized_attackable_target": {
     "priority": 6,
@@ -7583,7 +7585,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.ocelot_sit_on_block
-### cat
+#### cat
 ```json
 "minecraft:behavior.ocelot_sit_on_block": {
     "priority": 7,
@@ -7591,7 +7593,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.ocelot_sit_on_block": {
     "priority": 6,
@@ -7600,7 +7602,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.ocelotattack
-### cat
+#### cat
 ```json
 "minecraft:behavior.ocelotattack": {
     "priority": 4,
@@ -7617,7 +7619,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.ocelotattack": {
     "priority": 4,
@@ -7635,7 +7637,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.offer_flower
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.offer_flower": {
     "priority": 5
@@ -7643,7 +7645,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.open_door
-### villager
+#### villager
 ```json
 "minecraft:behavior.open_door": {
     "priority": 6,
@@ -7651,7 +7653,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.open_door": {
     "priority": 6,
@@ -7660,7 +7662,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.owner_hurt_by_target
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.owner_hurt_by_target": {
     "priority": 1
@@ -7675,7 +7677,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.panic
-### bee
+#### bee
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7692,7 +7694,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7700,7 +7702,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7708,7 +7710,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7716,7 +7718,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7724,7 +7726,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7732,7 +7734,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7747,7 +7749,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7755,7 +7757,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -7763,7 +7765,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.panic": {
     "priority": 4,
@@ -7771,7 +7773,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7779,7 +7781,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7787,7 +7789,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7795,7 +7797,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7818,7 +7820,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.panic": {
     "priority": 0,
@@ -7826,7 +7828,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -7834,7 +7836,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7842,7 +7844,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.panic": {
     "priority": 2,
@@ -7850,7 +7852,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7858,7 +7860,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7866,7 +7868,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7874,7 +7876,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -7887,7 +7889,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.panic": {
     "priority": 0,
@@ -7896,7 +7898,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.panic": {
     "priority": 3,
@@ -7904,7 +7906,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7912,7 +7914,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7920,7 +7922,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -7929,7 +7931,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.pet_sleep_with_owner
-### cat
+#### cat
 ```json
 "minecraft:behavior.pet_sleep_with_owner": {
     "priority": 2,
@@ -7941,7 +7943,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.pickup_items
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -7953,7 +7955,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 11,
@@ -7963,7 +7965,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -7975,7 +7977,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -7988,7 +7990,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 7,
@@ -7998,7 +8000,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 5,
@@ -8010,7 +8012,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 5,
@@ -8022,7 +8024,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 9,
@@ -8033,7 +8035,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 4,
@@ -8044,7 +8046,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 5,
@@ -8055,7 +8057,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8067,7 +8069,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 6,
@@ -8079,7 +8081,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 8,
@@ -8091,7 +8093,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.pickup_items": {
     "priority": 8,
@@ -8104,7 +8106,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.play
-### villager
+#### villager
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
@@ -8112,7 +8114,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.play": {
     "priority": 8,
@@ -8121,33 +8123,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.player_ride_tamed
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.player_ride_tamed": {}
 ```
 
 # minecraft:behavior.raid_garden
-### fox
+#### fox
 ```json
 "minecraft:behavior.raid_garden": {
     "priority": 12,
@@ -8163,7 +8165,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.raid_garden": {
     "priority": 5,
@@ -8176,7 +8178,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_breach
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.random_breach": {
     "priority": 6,
@@ -8187,7 +8189,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_fly
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.random_fly": {
     "priority": 2,
@@ -8201,7 +8203,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_hover
-### bee
+#### bee
 ```json
 "minecraft:behavior.random_hover": {
     "priority": 12,
@@ -8217,238 +8219,238 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_look_around
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 6
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 15
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 12
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 10
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 4
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 10
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 5,
@@ -8456,56 +8458,56 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 7
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 8
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 9
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 11
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.random_look_around": {
     "priority": 11
@@ -8513,7 +8515,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_look_around_and_sit
-### fox
+#### fox
 ```json
 "minecraft:behavior.random_look_around_and_sit": {
     "priority": 12,
@@ -8526,7 +8528,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_sitting
-### panda
+#### panda
 ```json
 "minecraft:behavior.random_sitting": {
     "priority": 5,
@@ -8548,7 +8550,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_stroll
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
@@ -8556,7 +8558,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -8564,7 +8566,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8572,7 +8574,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8580,7 +8582,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8588,7 +8590,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
@@ -8596,7 +8598,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8604,7 +8606,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8612,7 +8614,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8620,7 +8622,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8628,7 +8630,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -8636,7 +8638,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 13,
@@ -8644,7 +8646,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8652,7 +8654,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8660,7 +8662,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8668,7 +8670,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8677,7 +8679,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8685,7 +8687,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8693,7 +8695,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8701,7 +8703,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -8709,7 +8711,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 14,
@@ -8717,7 +8719,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8725,7 +8727,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 10,
@@ -8733,7 +8735,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -8741,14 +8743,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8758,7 +8760,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8773,7 +8775,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8781,7 +8783,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8789,7 +8791,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8797,7 +8799,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 2,
@@ -8805,7 +8807,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8813,7 +8815,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8821,7 +8823,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -8829,7 +8831,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -8837,7 +8839,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 11,
@@ -8845,7 +8847,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 10,
@@ -8853,7 +8855,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -8861,7 +8863,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 4,
@@ -8869,7 +8871,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 5,
@@ -8877,7 +8879,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8885,7 +8887,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 8,
@@ -8893,7 +8895,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8901,7 +8903,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8909,7 +8911,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 6,
@@ -8917,7 +8919,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 7,
@@ -8925,7 +8927,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -8933,7 +8935,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.random_stroll": {
     "priority": 9,
@@ -8942,7 +8944,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.random_swim
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 5,
@@ -8951,7 +8953,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
@@ -8960,7 +8962,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
@@ -8971,7 +8973,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
@@ -8981,7 +8983,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
@@ -8992,7 +8994,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:behavior.random_swim": {
     "speed_multiplier": 1.0,
@@ -9003,7 +9005,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 3,
@@ -9014,7 +9016,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.random_swim": {
     "priority": 7,
@@ -9025,7 +9027,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.ranged_attack
-### blaze
+#### blaze
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 4,
@@ -9039,7 +9041,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 3,
@@ -9049,7 +9051,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 1,
@@ -9059,7 +9061,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
@@ -9087,7 +9089,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 8,
@@ -9100,7 +9102,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 4,
@@ -9110,7 +9112,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:behavior.ranged_attack": {
     "attack_interval_min": 1,
@@ -9119,7 +9121,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 0,
@@ -9138,7 +9140,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 1,
@@ -9148,7 +9150,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 0,
@@ -9167,7 +9169,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 2,
@@ -9179,14 +9181,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.receive_love
-### villager
+#### villager
 ```json
 "minecraft:behavior.receive_love": {
     "priority": 7
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.receive_love": {
     "priority": 6
@@ -9194,14 +9196,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.restrict_open_door
-### villager
+#### villager
 ```json
 "minecraft:behavior.restrict_open_door": {
     "priority": 5
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.restrict_open_door": {
     "priority": 5
@@ -9209,7 +9211,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.rise_to_liquid_level
-### strider
+#### strider
 ```json
 "minecraft:behavior.rise_to_liquid_level": {
     "priority": 0,
@@ -9220,7 +9222,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.roll
-### panda
+#### panda
 ```json
 "minecraft:behavior.roll": {
     "priority": 12,
@@ -9236,7 +9238,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.run_around_like_crazy
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -9244,7 +9246,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -9252,7 +9254,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -9260,7 +9262,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.run_around_like_crazy": {
     "priority": 1,
@@ -9269,7 +9271,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.scared
-### panda
+#### panda
 ```json
 "minecraft:behavior.scared": {
     "priority": 1,
@@ -9278,7 +9280,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.send_event
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.send_event": {
     "priority": 3,
@@ -9318,7 +9320,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.share_items
-### villager
+#### villager
 ```json
 "minecraft:behavior.share_items": {
     "priority": 8,
@@ -9337,7 +9339,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.share_items": {
     "priority": 9,
@@ -9357,7 +9359,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.silverfish_merge_with_stone
-### silverfish
+#### silverfish
 ```json
 "minecraft:behavior.silverfish_merge_with_stone": {
     "priority": 5
@@ -9372,7 +9374,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.skeleton_horse_trap
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:behavior.skeleton_horse_trap": {
     "within_radius": 10.0,
@@ -9382,7 +9384,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.sleep
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.sleep": {}
 ```
@@ -9400,14 +9402,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_attack
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:behavior.slime_attack": {
     "priority": 3
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:behavior.slime_attack": {
     "priority": 3
@@ -9415,7 +9417,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_float
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:behavior.slime_float": {
     "priority": 1,
@@ -9424,7 +9426,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:behavior.slime_float": {
     "priority": 1,
@@ -9434,7 +9436,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_keep_on_jumping
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:behavior.slime_keep_on_jumping": {
     "priority": 5,
@@ -9442,7 +9444,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:behavior.slime_keep_on_jumping": {
     "priority": 5,
@@ -9451,7 +9453,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.slime_random_direction
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:behavior.slime_random_direction": {
     "priority": 4,
@@ -9461,7 +9463,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:behavior.slime_random_direction": {
     "priority": 4,
@@ -9472,7 +9474,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.snacking
-### panda
+#### panda
 ```json
 "minecraft:behavior.snacking": {
     "priority": 2,
@@ -9591,7 +9593,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.squid_dive
-### squid
+#### squid
 ```json
 "minecraft:behavior.squid_dive": {
     "priority": 2
@@ -9627,7 +9629,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stalk_and_pounce_on_target
-### fox
+#### fox
 ```json
 "minecraft:behavior.stalk_and_pounce_on_target": {
     "priority": 7,
@@ -9649,28 +9651,28 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stay_while_sitting
-### cat
+#### cat
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 1
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:behavior.stay_while_sitting": {
     "priority": 3
@@ -9678,7 +9680,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stomp_attack
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:behavior.stomp_attack": {
     "priority": 1,
@@ -9690,7 +9692,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stomp_turtle_egg
-### drowned
+#### drowned
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -9702,7 +9704,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -9714,7 +9716,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -9726,7 +9728,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 5,
@@ -9738,7 +9740,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -9750,7 +9752,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:behavior.stomp_turtle_egg": {
     "priority": 4,
@@ -9763,7 +9765,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.stroll_towards_village
-### fox
+#### fox
 ```json
 "minecraft:behavior.stroll_towards_village": {
     "priority": 11,
@@ -9776,7 +9778,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.summon_entity
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:behavior.summon_entity": {
     "priority": 2,
@@ -9857,7 +9859,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swell
-### creeper
+#### creeper
 ```json
 "minecraft:behavior.swell": {
     "start_distance": 2.5,
@@ -9867,7 +9869,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swim_idle
-### fish
+#### fish
 ```json
 "minecraft:behavior.swim_idle": {
     "priority": 5,
@@ -9876,7 +9878,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:behavior.swim_idle": {
     "priority": 5,
@@ -9885,7 +9887,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:behavior.swim_idle": {
     "priority": 5,
@@ -9895,7 +9897,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swim_wander
-### fish
+#### fish
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
@@ -9906,7 +9908,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 5,
@@ -9917,7 +9919,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
@@ -9928,7 +9930,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:behavior.swim_wander": {
     "priority": 4,
@@ -9940,7 +9942,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swim_with_entity
-### dolphin
+#### dolphin
 ```json
 "minecraft:behavior.swim_with_entity": {
     "priority": 4,
@@ -9966,7 +9968,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.swoop_attack
-### phantom
+#### phantom
 ```json
 "minecraft:behavior.swoop_attack": {
     "priority": 2,
@@ -9980,14 +9982,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.take_flower
-### villager
+#### villager
 ```json
 "minecraft:behavior.take_flower": {
     "priority": 7
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.take_flower": {
     "priority": 9
@@ -9995,7 +9997,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.target_when_pushed
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:behavior.target_when_pushed": {
     "priority": 1,
@@ -10023,7 +10025,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.tempt
-### bee
+#### bee
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10042,7 +10044,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10068,7 +10070,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10082,7 +10084,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10093,7 +10095,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10113,7 +10115,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:behavior.tempt": {
     "priority": 3,
@@ -10126,7 +10128,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10139,7 +10141,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10150,7 +10152,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10170,7 +10172,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10196,7 +10198,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10207,7 +10209,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10221,7 +10223,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:behavior.tempt": {
     "priority": 3,
@@ -10234,7 +10236,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:behavior.tempt": {
     "priority": 4,
@@ -10245,7 +10247,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:behavior.tempt": {
     "priority": 5,
@@ -10262,7 +10264,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:behavior.tempt": {
     "priority": 3,
@@ -10274,7 +10276,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.trade_interest
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.trade_interest": {}
 ```
@@ -10422,7 +10424,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.trade_interest": {
     "priority": 3,
@@ -10435,21 +10437,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.trade_with_player
-### villager
+#### villager
 ```json
 "minecraft:behavior.trade_with_player": {
     "priority": 1
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.trade_with_player": {
     "priority": 2
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:behavior.trade_with_player": {
     "priority": 1
@@ -10457,7 +10459,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.wither_random_attack_pos_goal
-### wither
+#### wither
 ```json
 "minecraft:behavior.wither_random_attack_pos_goal": {
     "priority": 3
@@ -10472,7 +10474,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:behavior.work
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:behavior.work": {}
 ```
@@ -10546,7 +10548,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:block_sensor
-### bee
+#### bee
 ```json
 "minecraft:block_sensor": {
     "sensor_radius": 16,
@@ -10562,7 +10564,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:block_sensor": {
     "sensor_radius": 16,
@@ -10587,7 +10589,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:boostable
-### pig
+#### pig
 ```json
 "minecraft:boostable": {
     "speed_multiplier": 2.0,
@@ -10602,7 +10604,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:boostable": {
     "speed_multiplier": 2.0,
@@ -10618,7 +10620,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:boss
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:boss": {
     "should_darken_sky": false,
@@ -10626,7 +10628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:boss": {
     "should_darken_sky": true,
@@ -10635,7 +10637,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:break_blocks
-### ravager
+#### ravager
 ```json
 "minecraft:break_blocks": {
     "breakable_blocks": [
@@ -10676,7 +10678,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:breathable
-### bat
+#### bat
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10684,7 +10686,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:breathable": {
     "totalSupply": 15,
@@ -10692,7 +10694,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10700,7 +10702,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10708,7 +10710,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10716,7 +10718,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10724,7 +10726,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10732,7 +10734,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:breathable": {
     "total_supply": 240,
@@ -10743,7 +10745,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10751,7 +10753,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10761,14 +10763,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:breathable": {
     "breathes_water": true
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10776,7 +10778,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10784,7 +10786,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10792,7 +10794,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10802,7 +10804,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:breathable": {
     "totalSupply": 15,
@@ -10810,7 +10812,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10818,14 +10820,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:breathable": {
     "breathes_water": true
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10833,7 +10835,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10841,7 +10843,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10850,7 +10852,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10858,7 +10860,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10867,7 +10869,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10875,7 +10877,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10883,7 +10885,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10891,7 +10893,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10899,7 +10901,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10907,7 +10909,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10917,7 +10919,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10925,7 +10927,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10933,7 +10935,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10941,7 +10943,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10951,7 +10953,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10959,7 +10961,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10969,7 +10971,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10977,7 +10979,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:breathable": {
     "suffocate_time": 0,
@@ -10985,7 +10987,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -10995,7 +10997,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11003,7 +11005,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11011,7 +11013,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11019,7 +11021,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11028,7 +11030,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11037,7 +11039,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11045,7 +11047,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11053,7 +11055,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11061,26 +11063,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_air": false,
-    "breathes_water": true
-}
-```
-
-### stray
-```json
-"minecraft:breathable": {
-    "total_supply": 15,
-    "suffocate_time": 0,
-    "breathes_water": true
-}
-```
-
-### tropicalfish
+#### squid
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11090,7 +11073,26 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### stray
+```json
+"minecraft:breathable": {
+    "total_supply": 15,
+    "suffocate_time": 0,
+    "breathes_water": true
+}
+```
+
+#### tropicalfish
+```json
+"minecraft:breathable": {
+    "total_supply": 15,
+    "suffocate_time": 0,
+    "breathes_air": false,
+    "breathes_water": true
+}
+```
+
+#### turtle
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11101,7 +11103,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11109,7 +11111,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11117,7 +11119,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11125,7 +11127,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11133,7 +11135,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11141,7 +11143,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11149,7 +11151,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11158,7 +11160,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11166,7 +11168,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11175,7 +11177,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11185,7 +11187,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11194,7 +11196,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11203,7 +11205,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11212,7 +11214,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -11222,7 +11224,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:breedable
-### bee
+#### bee
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11246,7 +11248,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -11267,7 +11269,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11288,7 +11290,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11304,7 +11306,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -11335,7 +11337,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11351,7 +11353,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11375,7 +11377,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -11406,7 +11408,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -11431,7 +11433,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11452,7 +11454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11471,7 +11473,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11496,7 +11498,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11516,7 +11518,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:breedable": {
     "breed_items": [
@@ -11535,7 +11537,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11547,7 +11549,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11565,7 +11567,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:breedable": {
     "require_tame": false,
@@ -11584,7 +11586,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:breedable": {
     "require_tame": true,
@@ -11614,7 +11616,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:bribeable
-### dolphin
+#### dolphin
 ```json
 "minecraft:bribeable": {
     "bribe_items": [
@@ -11625,318 +11627,318 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:burns_in_daylight
-### drowned
+#### drowned
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:burns_in_daylight": false
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:burns_in_daylight": {}
 ```
 
 # minecraft:can_climb
-### blaze
+#### blaze
 ```json
 "minecraft:can_climb": {}
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:can_climb": {}
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:can_climb": {}
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:can_climb": {}
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:can_climb": {}
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:can_climb": {}
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:can_climb": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:can_climb": {}
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:can_climb": {}
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:can_climb": {}
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:can_climb": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:can_climb": {}
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:can_climb": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:can_climb": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:can_climb": {}
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:can_climb": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:can_climb": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:can_climb": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:can_climb": {}
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:can_climb": {}
 ```
 
-### player
+#### player
 ```json
 "minecraft:can_climb": {}
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:can_climb": {}
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:can_climb": {}
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:can_climb": {}
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:can_climb": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:can_climb": {}
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:can_climb": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:can_climb": {}
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:can_climb": {}
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:can_climb": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:can_climb": {}
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:can_climb": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:can_climb": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:can_climb": {}
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:can_climb": {}
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:can_climb": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:can_climb": {}
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:can_climb": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:can_climb": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:can_climb": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:can_climb": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:can_climb": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:can_climb": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:can_climb": {}
 ```
 
 # minecraft:can_fly
-### bat
+#### bat
 ```json
 "minecraft:can_fly": {}
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:can_fly": {}
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:can_fly": {}
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:can_fly": {
     "value": true
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:can_fly": {}
 ```
 
 # minecraft:can_power_jump
-### donkey
+#### donkey
 ```json
 "minecraft:can_power_jump": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:can_power_jump": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:can_power_jump": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:can_power_jump": {}
 ```
 
 # minecraft:celebrate_hunt
-### piglin
+#### piglin
 ```json
 "minecraft:celebrate_hunt": {
     "celebration_targets": {
@@ -11959,7 +11961,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:collision_box
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -11967,7 +11969,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### arrow
+#### arrow
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -11975,7 +11977,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bat
+#### bat
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -11983,7 +11985,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:collision_box": {
     "width": 0.55,
@@ -11991,7 +11993,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -11999,7 +12001,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12007,7 +12009,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12015,7 +12017,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:collision_box": {
     "width": 0.7,
@@ -12023,7 +12025,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12031,7 +12033,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12039,7 +12041,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12047,7 +12049,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12055,7 +12057,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12063,7 +12065,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12071,7 +12073,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12079,7 +12081,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dragon_fireball
+#### dragon_fireball
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -12087,7 +12089,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12095,7 +12097,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### egg
+#### egg
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12103,7 +12105,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:collision_box": {
     "width": 1.99,
@@ -12111,7 +12113,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12119,7 +12121,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -12127,7 +12129,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12135,7 +12137,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:collision_box": {
     "width": 13,
@@ -12143,7 +12145,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_pearl
+#### ender_pearl
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12151,7 +12153,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12159,7 +12161,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### eye_of_ender_signal
+#### eye_of_ender_signal
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12167,7 +12169,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fireball
+#### fireball
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -12175,7 +12177,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fireworks_rocket
+#### fireworks_rocket
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12183,7 +12185,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12191,7 +12193,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fishing_hook
+#### fishing_hook
 ```json
 "minecraft:collision_box": {
     "width": 0.15,
@@ -12199,7 +12201,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12207,7 +12209,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:collision_box": {
     "width": 4,
@@ -12215,7 +12217,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:collision_box": {
     "width": 0.85,
@@ -12223,7 +12225,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:collision_box": {
     "width": 0.85,
@@ -12238,7 +12240,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12246,7 +12248,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12254,7 +12256,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12262,7 +12264,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12270,7 +12272,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### lingering_potion
+#### lingering_potion
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12278,7 +12280,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12286,7 +12288,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama_spit
+#### llama_spit
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -12294,7 +12296,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:collision_box": {
     "width": 2.08,
@@ -12316,7 +12318,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12324,7 +12326,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12332,7 +12334,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12340,7 +12342,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12348,7 +12350,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12356,7 +12358,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:collision_box": {
     "width": 1.7,
@@ -12364,7 +12366,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -12372,7 +12374,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12380,7 +12382,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12388,7 +12390,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12396,7 +12398,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12404,7 +12406,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12412,7 +12414,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:collision_box": {
     "width": 1.3,
@@ -12420,7 +12422,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:collision_box": {
     "width": 0.8,
@@ -12428,7 +12430,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:collision_box": {
     "width": 0.67,
@@ -12436,7 +12438,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:collision_box": {
     "height": 1.9,
@@ -12444,7 +12446,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:collision_box": {
     "width": 0.5,
@@ -12452,7 +12454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12460,7 +12462,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker_bullet
+#### shulker_bullet
 ```json
 "minecraft:collision_box": {
     "width": 0.625,
@@ -12468,7 +12470,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -12476,7 +12478,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12484,7 +12486,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12492,7 +12494,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:collision_box": {
     "width": 2.08,
@@ -12514,7 +12516,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### small_fireball
+#### small_fireball
 ```json
 "minecraft:collision_box": {
     "width": 0.31,
@@ -12522,7 +12524,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snowball
+#### snowball
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12530,7 +12532,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -12538,7 +12540,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12546,7 +12548,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### splash_potion
+#### splash_potion
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12554,7 +12556,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:collision_box": {
     "width": 0.95,
@@ -12562,7 +12564,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12570,7 +12572,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:collision_box": {
     "width": 0.9,
@@ -12578,7 +12580,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### thrown_trident
+#### thrown_trident
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12586,7 +12588,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt
+#### tnt
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12594,7 +12596,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:collision_box": {
     "width": 0.98,
@@ -12602,7 +12604,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tripod_camera
+#### tripod_camera
 ```json
 "minecraft:collision_box": {
     "width": 0.75,
@@ -12610,7 +12612,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -12618,7 +12620,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12633,7 +12635,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:collision_box": {
     "width": 0.4,
@@ -12641,7 +12643,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12649,7 +12651,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12657,7 +12659,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12665,7 +12667,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12673,7 +12675,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12681,7 +12683,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:collision_box": {
     "width": 1,
@@ -12689,7 +12691,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:collision_box": {
     "width": 0.72,
@@ -12697,7 +12699,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull
+#### wither_skull
 ```json
 "minecraft:collision_box": {
     "width": 0.15,
@@ -12705,7 +12707,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull_dangerous
+#### wither_skull_dangerous
 ```json
 "minecraft:collision_box": {
     "width": 0.15,
@@ -12713,7 +12715,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12721,7 +12723,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### xp_bottle
+#### xp_bottle
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12729,7 +12731,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### xp_orb
+#### xp_orb
 ```json
 "minecraft:collision_box": {
     "width": 0.25,
@@ -12737,7 +12739,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:collision_box": {
     "width": 0.85,
@@ -12752,7 +12754,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12760,7 +12762,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:collision_box": {
     "width": 1.4,
@@ -12768,7 +12770,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12776,7 +12778,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12784,7 +12786,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:collision_box": {
     "width": 0.6,
@@ -12793,14 +12795,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:color
-### cat
+#### cat
 ```json
 "minecraft:color": {
     "value": 14
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:color": {
     "value": 0
@@ -12843,7 +12845,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:color": {
     "value": 0
@@ -13066,7 +13068,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:color": {
     "value": 14
@@ -13074,7 +13076,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:color2
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:color2": {
     "value": 0
@@ -13298,7 +13300,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:custom_hit_test
-### hoglin
+#### hoglin
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
@@ -13331,7 +13333,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:custom_hit_test": {
     "hitboxes": [
@@ -13365,7 +13367,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:damage_over_time
-### dolphin
+#### dolphin
 ```json
 "minecraft:damage_over_time": {
     "damage_per_hurt": 1,
@@ -13374,7 +13376,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:damage_sensor
-### bat
+#### bat
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13384,7 +13386,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13394,7 +13396,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13404,7 +13406,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13414,7 +13416,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13424,7 +13426,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13441,7 +13443,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13451,7 +13453,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -13469,7 +13471,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13479,7 +13481,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13489,7 +13491,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13515,7 +13517,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13525,7 +13527,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -13577,7 +13579,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13587,7 +13589,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13597,7 +13599,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13607,7 +13609,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13624,7 +13626,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13673,7 +13675,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13687,7 +13689,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13703,7 +13705,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13713,7 +13715,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13724,7 +13726,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -13768,7 +13770,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -13812,7 +13814,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13861,7 +13863,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:damage_sensor": {
     "triggers": [
@@ -13890,7 +13892,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -13907,91 +13909,91 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:despawn
-### bat
+#### bat
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -14001,133 +14003,133 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -14137,21 +14139,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -14161,70 +14163,70 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {
@@ -14234,21 +14236,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:despawn": {
     "remove_child_entities": true,
@@ -14278,28 +14280,28 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:despawn": {
     "filters": {
@@ -14344,35 +14346,35 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
@@ -14380,7 +14382,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:dweller
-### cat
+#### cat
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14393,7 +14395,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14406,7 +14408,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14419,7 +14421,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14432,7 +14434,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14445,7 +14447,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14627,7 +14629,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14640,7 +14642,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:dweller": {
     "dwelling_type": "village",
@@ -14654,7 +14656,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:economy_trade_table
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:economy_trade_table": {}
 ```
@@ -14776,7 +14778,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:economy_trade_table": {
     "display_name": "entity.wandering_trader.name",
@@ -14786,7 +14788,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:entity_sensor
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:entity_sensor": {
     "sensor_range": 2.5,
@@ -14893,7 +14895,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:environment_sensor
-### bee
+#### bee
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -14953,7 +14955,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -14980,7 +14982,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -15043,7 +15045,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -15185,7 +15187,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15214,7 +15216,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -15259,7 +15261,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15283,7 +15285,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15312,7 +15314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15341,7 +15343,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15364,7 +15366,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -15441,7 +15443,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15468,7 +15470,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -15545,7 +15547,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15604,7 +15606,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:environment_sensor": {
     "triggers": {
@@ -15647,68 +15649,68 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:equip_item
-### drowned
+#### drowned
 ```json
 "minecraft:equip_item": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:equip_item": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:equip_item": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:equip_item": {}
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:equip_item": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:equip_item": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:equip_item": {}
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:equip_item": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:equip_item": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:equip_item": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:equip_item": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:equip_item": {}
 ```
 
 # minecraft:equipment
-### drowned
+#### drowned
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/drowned_ranged_equipment.json",
@@ -15733,7 +15735,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/fox_equipment.json",
@@ -15746,14 +15748,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_equipment.json"
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/piglin_gear_ranged.json"
@@ -15766,7 +15768,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/pillager_gear.json"
@@ -15797,35 +15799,35 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/skeleton_gear.json"
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/skeleton_gear.json"
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombified_piglin_rider_gear.json"
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vex_gear.json"
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vindicator_gear.json"
@@ -15856,21 +15858,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/wither_skeleton_gear.json"
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_equipment.json"
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_pigman_gear.json"
@@ -15878,7 +15880,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:equippable
-### donkey
+#### donkey
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -15899,7 +15901,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -15930,7 +15932,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -15945,7 +15947,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:equippable": {
     "slots": [
@@ -15967,7 +15969,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:experience_reward
-### bee
+#### bee
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -15975,14 +15977,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -15990,14 +15992,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16005,7 +16007,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16013,21 +16015,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16035,7 +16037,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -16048,42 +16050,42 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 3 : 0"
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:experience_reward": {
     "on_death": "10"
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16091,21 +16093,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 10 : 0"
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16113,7 +16115,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16121,7 +16123,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -16134,7 +16136,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16142,14 +16144,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16157,22 +16159,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### ocelot
-```json
-"minecraft:experience_reward": {
-    "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
-}
-```
-
-### panda
+#### ocelot
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16180,21 +16174,29 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### panda
+```json
+"minecraft:experience_reward": {
+    "on_bred": "Math.Random(1,7)",
+    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+}
+```
+
+#### parrot
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16202,7 +16204,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 1 + (query.equipment_count * Math.Random(1,2)) : 0"
@@ -16215,35 +16217,35 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:experience_reward": {
     "on_death": "Math.Min(query.player_level * 7, 100)"
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16251,21 +16253,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 20 : 0"
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16273,63 +16275,63 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? query.variant : 0"
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:experience_reward": {
     "on_death": "!query.is_baby && query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16337,14 +16339,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16352,42 +16354,42 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? (query.is_baby ? 12 : 5) + (Math.die_roll(query.equipment_count,1,3)) : 0"
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:experience_reward": {
     "on_death": "50"
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 5 + (query.equipment_count * Math.Random(1,3)) : 0"
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16395,7 +16397,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
@@ -16403,7 +16405,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -16416,14 +16418,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -16436,7 +16438,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -16449,7 +16451,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:experience_reward": {
     "on_death": "query.last_hit_by_player ? 12 + (query.equipment_count * Math.Random(1,3)) : 0"
@@ -16463,7 +16465,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:explode
-### creeper
+#### creeper
 ```json
 "minecraft:explode": {
     "fuse_length": 1.5,
@@ -16504,7 +16506,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -16515,7 +16517,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fireball
+#### fireball
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -16527,7 +16529,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt
+#### tnt
 ```json
 "minecraft:explode": {
     "fuse_length": 4,
@@ -16549,7 +16551,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:explode": {
     "fuse_length": 4,
@@ -16568,7 +16570,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull
+#### wither_skull
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -16579,7 +16581,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull_dangerous
+#### wither_skull_dangerous
 ```json
 "minecraft:explode": {
     "fuse_length": 0,
@@ -16592,68 +16594,68 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:fire_immune
-### blaze
+#### blaze
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:fire_immune": true
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:fire_immune": true
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:fire_immune": true
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:fire_immune": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:fire_immune": {}
 ```
 
 # minecraft:flocking
-### dolphin
+#### dolphin
 ```json
 "minecraft:flocking": {
     "in_water": false,
@@ -16677,7 +16679,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -16701,7 +16703,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -16725,7 +16727,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -16749,7 +16751,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:flocking": {
     "in_water": true,
@@ -16774,14 +16776,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:flying_speed
-### bee
+#### bee
 ```json
 "minecraft:flying_speed": {
     "value": 0.15
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:flying_speed": {
     "value": 0.6
@@ -16789,14 +16791,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:follow_range
-### bee
+#### bee
 ```json
 "minecraft:follow_range": {
     "value": 1024
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:follow_range": {
     "value": 48,
@@ -16804,7 +16806,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:follow_range": {
     "value": 48,
@@ -16812,7 +16814,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:follow_range": {
     "value": 16,
@@ -16820,7 +16822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:follow_range": {
     "value": 32,
@@ -16828,14 +16830,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:follow_range": {
     "value": 64,
@@ -16843,7 +16845,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:follow_range": {
     "value": 16,
@@ -16851,14 +16853,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:follow_range": {
     "value": 40,
@@ -16866,7 +16868,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:follow_range": {
     "value": 64,
@@ -16874,56 +16876,56 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:follow_range": {
     "value": 48
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:follow_range": {
     "value": 1024
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:follow_range": {
     "value": 128
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:follow_range": {
     "value": 64
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -16931,7 +16933,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:genetics
-### panda
+#### panda
 ```json
 "minecraft:genetics": {
     "mutation_rate": 0.03125,
@@ -17015,7 +17017,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:group_size
-### hoglin
+#### hoglin
 ```json
 "minecraft:group_size": {
     "radius": 32,
@@ -17035,7 +17037,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:group_size": {
     "radius": 32,
@@ -17056,7 +17058,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:grows_crop
-### bee
+#### bee
 ```json
 "minecraft:grows_crop": {
     "charges": 10,
@@ -17065,7 +17067,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:healable
-### cat
+#### cat
 ```json
 "minecraft:healable": {
     "items": [
@@ -17081,7 +17083,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:healable": {
     "items": [
@@ -17117,7 +17119,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:healable": {
     "items": [
@@ -17153,7 +17155,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:healable": {
     "items": [
@@ -17169,7 +17171,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:healable": {
     "items": [
@@ -17205,7 +17207,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:healable": {
     "force_use": true,
@@ -17231,7 +17233,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:healable": {
     "items": [
@@ -17312,7 +17314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:health
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17320,7 +17322,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bat
+#### bat
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17328,7 +17330,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17336,7 +17338,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17344,7 +17346,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17359,7 +17361,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:health": {
     "value": 12,
@@ -17367,7 +17369,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:health": {
     "value": 4,
@@ -17375,7 +17377,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17383,7 +17385,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17391,7 +17393,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17399,7 +17401,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:health": {
     "value": {
@@ -17409,7 +17411,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17417,7 +17419,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:health": {
     "value": 80,
@@ -17425,7 +17427,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:health": {
     "value": 40,
@@ -17433,7 +17435,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:health": {
     "value": 8,
@@ -17441,7 +17443,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:health": {
     "value": 1,
@@ -17449,7 +17451,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:health": {
     "value": 200,
@@ -17457,7 +17459,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:health": {
     "value": 24,
@@ -17465,7 +17467,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17473,7 +17475,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17481,7 +17483,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17489,7 +17491,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:health": {
     "value": 30,
@@ -17497,7 +17499,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:health": {
     "value": 40,
@@ -17505,7 +17507,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:health": {
     "value": {
@@ -17515,7 +17517,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17523,7 +17525,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:health": {
     "value": 100,
@@ -17531,7 +17533,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:health": {
     "value": {
@@ -17541,7 +17543,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:health": {
     "value": 16,
@@ -17563,7 +17565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17571,7 +17573,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:health": {
     "value": {
@@ -17581,7 +17583,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17596,7 +17598,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17611,7 +17613,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17619,7 +17621,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17627,7 +17629,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17635,7 +17637,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:health": {
     "value": 16,
@@ -17643,7 +17645,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:health": {
     "value": 24,
@@ -17651,14 +17653,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:health": {
     "value": 30
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17666,7 +17668,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:health": {
     "value": 3,
@@ -17674,7 +17676,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:health": {
     "max": 100,
@@ -17682,7 +17684,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17704,7 +17706,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:health": {
     "value": 8,
@@ -17712,7 +17714,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:health": {
     "value": 30,
@@ -17720,7 +17722,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:health": {
     "value": 8,
@@ -17728,7 +17730,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17736,7 +17738,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:health": {
     "value": 15,
@@ -17744,7 +17746,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:health": {
     "value": 16,
@@ -17766,7 +17768,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:health": {
     "value": 4,
@@ -17774,7 +17776,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:health": {
     "value": 16,
@@ -17782,7 +17784,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:health": {
     "value": 10,
@@ -17790,7 +17792,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17798,7 +17800,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:health": {
     "value": 15,
@@ -17806,7 +17808,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tripod_camera
+#### tripod_camera
 ```json
 "minecraft:health": {
     "value": 4,
@@ -17814,7 +17816,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17822,14 +17824,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:health": {
     "value": 30
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:health": {
     "value": 14,
@@ -17837,7 +17839,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17845,7 +17847,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17853,7 +17855,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:health": {
     "value": 24,
@@ -17861,7 +17863,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17869,7 +17871,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:health": {
     "value": 26,
@@ -17877,7 +17879,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:health": {
     "value": 600,
@@ -17885,7 +17887,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17893,7 +17895,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:health": {
     "value": 8,
@@ -17908,7 +17910,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### xp_orb
+#### xp_orb
 ```json
 "minecraft:health": {
     "value": 5,
@@ -17916,7 +17918,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:health": {
     "value": 40,
@@ -17924,7 +17926,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17932,7 +17934,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:health": {
     "value": 15,
@@ -17940,7 +17942,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17948,7 +17950,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17956,7 +17958,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:health": {
     "value": 20,
@@ -17965,31 +17967,31 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:hide
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:hide": {}
 ```
 
 # minecraft:home
-### bee
+#### bee
 ```json
 "minecraft:home": {}
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:home": {}
 ```
 
 # minecraft:horse.jump_strength
-### donkey
+#### donkey
 ```json
 "minecraft:horse.jump_strength": {
     "value": 0.5
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:horse.jump_strength": {
     "value": {
@@ -17999,14 +18001,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:horse.jump_strength": {
     "value": 0.5
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:horse.jump_strength": {
     "value": {
@@ -18016,7 +18018,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:horse.jump_strength": {
     "value": {
@@ -18027,7 +18029,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:hurt_on_condition
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18045,7 +18047,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### arrow
+#### arrow
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18063,7 +18065,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bat
+#### bat
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18081,7 +18083,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18110,7 +18112,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18127,7 +18129,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18145,7 +18147,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18163,7 +18165,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18181,7 +18183,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18199,7 +18201,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18217,7 +18219,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18235,7 +18237,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18253,7 +18255,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18271,7 +18273,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18289,7 +18291,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18307,7 +18309,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18334,7 +18336,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18352,7 +18354,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18370,7 +18372,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18388,7 +18390,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18406,7 +18408,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18424,7 +18426,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18442,7 +18444,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18460,7 +18462,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18478,7 +18480,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18496,7 +18498,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18514,7 +18516,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18532,7 +18534,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18550,7 +18552,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18568,7 +18570,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18586,7 +18588,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18604,7 +18606,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18622,7 +18624,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18640,7 +18642,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18658,7 +18660,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18676,7 +18678,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18694,7 +18696,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18712,7 +18714,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18730,7 +18732,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18748,7 +18750,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18766,7 +18768,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18784,7 +18786,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18802,7 +18804,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18820,7 +18822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18838,7 +18840,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18856,7 +18858,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18874,7 +18876,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18910,7 +18912,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18928,7 +18930,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18946,7 +18948,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18964,7 +18966,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18981,7 +18983,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tripod_camera
+#### tripod_camera
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -18999,7 +19001,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19017,7 +19019,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19035,7 +19037,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19053,7 +19055,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19071,7 +19073,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19089,7 +19091,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19107,7 +19109,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19125,7 +19127,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19143,7 +19145,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19161,7 +19163,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19179,7 +19181,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19197,7 +19199,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -19216,28 +19218,28 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:input_ground_controlled
-### donkey
+#### donkey
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:input_ground_controlled": {}
 ```
 
 # minecraft:insomnia
-### player
+#### player
 ```json
 "minecraft:insomnia": {
     "days_until_insomnia": 3
@@ -19245,7 +19247,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:interact
-### cow
+#### cow
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -19276,7 +19278,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:interact": {
     "interactions": {
@@ -19312,7 +19314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -19344,7 +19346,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -19376,7 +19378,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -19947,7 +19949,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -19979,7 +19981,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20001,7 +20003,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20033,7 +20035,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20079,7 +20081,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20543,7 +20545,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20582,7 +20584,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20604,7 +20606,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:interact": {
     "interactions": [
@@ -20675,7 +20677,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:interact": {
     "interactions": {
@@ -20704,7 +20706,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:interact": {
     "interactions": {
@@ -20734,7 +20736,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:inventory
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:inventory": {
     "container_type": "minecart_chest",
@@ -20743,12 +20745,12 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:inventory": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:inventory": {
     "inventory_size": 16,
@@ -20756,7 +20758,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:inventory": {
     "container_type": "minecart_hopper",
@@ -20765,7 +20767,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:inventory": {
     "inventory_size": 2,
@@ -20773,7 +20775,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:inventory": {
     "inventory_size": 16,
@@ -20782,7 +20784,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:inventory": {
     "inventory_size": 16,
@@ -20790,7 +20792,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:inventory": {
     "inventory_size": 1,
@@ -20798,14 +20800,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:inventory": {
     "inventory_size": 8
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:inventory": {
     "inventory_size": 8,
@@ -20813,7 +20815,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:inventory": {
     "inventory_size": 8,
@@ -20822,219 +20824,219 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:is_baby
-### bee
+#### bee
 ```json
 "minecraft:is_baby": {}
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:is_baby": {}
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:is_baby": {}
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:is_baby": {}
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:is_baby": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:is_baby": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:is_baby": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:is_baby": {}
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:is_baby": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:is_baby": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:is_baby": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:is_baby": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:is_baby": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:is_baby": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:is_baby": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:is_baby": {}
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:is_baby": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:is_baby": {}
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:is_baby": {}
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:is_baby": {}
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:is_baby": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:is_baby": {}
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:is_baby": {}
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:is_baby": {}
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:is_baby": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:is_baby": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:is_baby": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:is_baby": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:is_baby": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:is_baby": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:is_baby": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:is_baby": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:is_baby": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:is_baby": {}
 ```
 
 # minecraft:is_charged
-### bee
+#### bee
 ```json
 "minecraft:is_charged": {}
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:is_charged": {}
 ```
 
 # minecraft:is_chested
-### donkey
+#### donkey
 ```json
 "minecraft:is_chested": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:is_chested": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:is_chested": {}
 ```
 
 # minecraft:is_dyeable
-### cat
+#### cat
 ```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:is_dyeable": {
     "interact_text": "action.interact.dye"
@@ -21042,18 +21044,18 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:is_hidden_when_invisible
-### player
+#### player
 ```json
 "minecraft:is_hidden_when_invisible": {}
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:is_hidden_when_invisible": {}
 ```
 
 # minecraft:is_ignited
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:is_ignited": {}
 ```
@@ -21063,7 +21065,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:is_illager_captain
-### pillager
+#### pillager
 ```json
 "minecraft:is_illager_captain": {}
 ```
@@ -21072,7 +21074,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_illager_captain": {}
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:is_illager_captain": {}
 ```
@@ -21082,57 +21084,38 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:is_saddled
-### donkey
+#### donkey
 ```json
 "minecraft:is_saddled": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:is_saddled": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:is_saddled": {}
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:is_saddled": {}
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:is_saddled": {}
 ```
 
 # minecraft:is_shaking
-### hoglin
+#### hoglin
 ```json
 "minecraft:is_shaking": {}
 ```
 
-### husk
-```json
-"minecraft:is_shaking": {}
-```
-
-```json
-"minecraft:is_shaking": {}
-```
-
-### piglin
-```json
-"minecraft:is_shaking": {}
-```
-
-### strider
-```json
-"minecraft:is_shaking": {}
-```
-
-### zombie
+#### husk
 ```json
 "minecraft:is_shaking": {}
 ```
@@ -21141,121 +21124,140 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_shaking": {}
 ```
 
-### zombie_villager
+#### piglin
 ```json
 "minecraft:is_shaking": {}
 ```
 
-### zombie_villager_v2
+#### strider
+```json
+"minecraft:is_shaking": {}
+```
+
+#### zombie
+```json
+"minecraft:is_shaking": {}
+```
+
+```json
+"minecraft:is_shaking": {}
+```
+
+#### zombie_villager
+```json
+"minecraft:is_shaking": {}
+```
+
+#### zombie_villager_v2
 ```json
 "minecraft:is_shaking": {}
 ```
 
 # minecraft:is_sheared
-### sheep
+#### sheep
 ```json
 "minecraft:is_sheared": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:is_sheared": {}
 ```
 
 # minecraft:is_stackable
-### boat
+#### boat
 ```json
 "minecraft:is_stackable": {}
 ```
 
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:is_stackable": {
     "value": true
 }
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:is_stackable": {}
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:is_stackable": {}
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:is_stackable": {}
 ```
 
 # minecraft:is_stunned
-### ravager
+#### ravager
 ```json
 "minecraft:is_stunned": {}
 ```
 
 # minecraft:is_tamed
-### cat
+#### cat
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:is_tamed": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:is_tamed": {}
 ```
 
 # minecraft:item_controllable
-### pig
+#### pig
 ```json
 "minecraft:item_controllable": {
     "control_items": "carrotOnAStick"
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:item_controllable": {
     "control_items": "warped_fungus_on_a_stick"
@@ -21263,322 +21265,322 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:item_hopper
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:item_hopper": {}
 ```
 
 # minecraft:jump.dynamic
-### rabbit
+#### rabbit
 ```json
 "minecraft:jump.dynamic": {}
 ```
 
 # minecraft:jump.static
-### bat
+#### bat
 ```json
 "minecraft:jump.static": {}
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:jump.static": {}
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:jump.static": {}
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:jump.static": {}
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:jump.static": {}
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:jump.static": {}
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:jump.static": {}
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:jump.static": {}
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:jump.static": {
     "jump_power": 0.6
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:jump.static": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:jump.static": {}
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:jump.static": {}
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:jump.static": {}
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:jump.static": {}
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:jump.static": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:jump.static": {}
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:jump.static": {}
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:jump.static": {}
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:jump.static": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:jump.static": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:jump.static": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:jump.static": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:jump.static": {}
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:jump.static": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:jump.static": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:jump.static": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:jump.static": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:jump.static": {}
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:jump.static": {}
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:jump.static": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:jump.static": {}
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:jump.static": {}
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:jump.static": {}
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:jump.static": {}
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:jump.static": {}
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:jump.static": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:jump.static": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:jump.static": {}
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:jump.static": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:jump.static": {}
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:jump.static": {}
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:jump.static": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:jump.static": {}
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:jump.static": {}
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:jump.static": {}
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:jump.static": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:jump.static": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:jump.static": {}
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:jump.static": {}
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:jump.static": {}
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:jump.static": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:jump.static": {}
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:jump.static": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:jump.static": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:jump.static": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:jump.static": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:jump.static": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:jump.static": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:jump.static": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:jump.static": {}
 ```
 
 # minecraft:knockback_resistance
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:knockback_resistance": {
     "value": 100,
@@ -21586,28 +21588,28 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:knockback_resistance": {
     "value": 0.5
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:knockback_resistance": {
     "value": 1.0
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:knockback_resistance": {
     "value": 0.5
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:knockback_resistance": {
     "value": 0.5
@@ -21615,7 +21617,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:lava_movement
-### strider
+#### strider
 ```json
 "minecraft:lava_movement": {
     "value": 0.32
@@ -21623,7 +21625,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:leashable
-### bee
+#### bee
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21632,7 +21634,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21641,7 +21643,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21650,7 +21652,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21659,7 +21661,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21668,7 +21670,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21677,7 +21679,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21686,7 +21688,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21695,7 +21697,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21704,7 +21706,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21713,7 +21715,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21722,7 +21724,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21732,7 +21734,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21741,7 +21743,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21750,7 +21752,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21767,7 +21769,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21776,7 +21778,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21785,7 +21787,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21794,7 +21796,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21803,7 +21805,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21812,7 +21814,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21821,7 +21823,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21830,7 +21832,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21839,7 +21841,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21848,7 +21850,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21865,7 +21867,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21874,7 +21876,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:leashable": {
     "soft_distance": 4.0,
@@ -21884,7 +21886,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:lookat
-### enderman
+#### enderman
 ```json
 "minecraft:lookat": {
     "search_radius": 64.0,
@@ -21910,112 +21912,112 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:loot
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/armor_stand.json"
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/blaze.json"
 }
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/boat.json"
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/cat.json"
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/spider.json"
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/chicken.json"
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/cow.json"
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/creeper.json"
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/dolphin.json"
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/drowned.json"
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/elder_guardian.json"
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/enderman.json"
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/evocation_illager.json"
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/fish.json"
 }
 ```
 
-### fishing_hook
+#### fishing_hook
 ```json
 "minecraft:loot": {
     "table": "loot_tables/gameplay/fishing.json"
@@ -22028,63 +22030,63 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/fox.json"
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ghast.json"
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/guardian.json"
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/hoglin.json"
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/iron_golem.json"
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/llama.json"
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/magma_cube.json"
@@ -22097,56 +22099,56 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/mooshroom.json"
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/horse.json"
 }
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ocelot.json"
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/panda.json"
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/parrot.json"
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/phantom.json"
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pig.json"
@@ -22159,14 +22161,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/piglin.json"
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pillager.json"
@@ -22179,42 +22181,42 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/polar_bear.json"
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/pufferfish.json"
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/rabbit.json"
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/ravager.json"
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/salmon_normal.json"
@@ -22233,7 +22235,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sheep_sheared.json"
@@ -22246,70 +22248,70 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/shulker.json"
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/silverfish.json"
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/skeleton.json"
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/skeleton_horse.json"
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/slime.json"
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/snowman.json"
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/spider.json"
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/squid.json"
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/stray.json"
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/strider_saddled.json"
@@ -22322,28 +22324,28 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tripod_camera
+#### tripod_camera
 ```json
 "minecraft:loot": {
     "table": "loot_tables/empty.json"
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/tropicalfish.json"
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/sea_turtle.json"
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/vindication_illager.json"
@@ -22356,70 +22358,70 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/witch.json"
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wither_boss.json"
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wither_skeleton.json"
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/wolf.json"
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zoglin.json"
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie_horse.json"
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie_pigman.json"
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/zombie.json"
@@ -22427,20 +22429,20 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:managed_wandering_trader
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:managed_wandering_trader": {}
 ```
 
 # minecraft:mark_variant
-### bee
+#### bee
 ```json
 "minecraft:mark_variant": {
     "value": 1
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -22471,7 +22473,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -22484,7 +22486,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:mark_variant": {
     "value": -1
@@ -22557,7 +22559,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -22726,7 +22728,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:mark_variant": {
     "value": 0
@@ -22769,7 +22771,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:mark_variant": {
     "value": 1
@@ -22807,7 +22809,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:mob_effect
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:mob_effect": {
     "effect_range": 0.2,
@@ -22831,77 +22833,77 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement
-### bat
+#### bat
 ```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:movement": {
     "value": 0.175
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:movement": {
     "value": 0.23
@@ -22914,14 +22916,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:movement": {
     "value": 0.3
@@ -22934,56 +22936,56 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:movement": {
     "value": 0.03
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:movement": {
     "value": 0.12
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:movement": {
     "value": 0.36
@@ -22996,7 +22998,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:movement": {
     "value": {
@@ -23006,7 +23008,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -23019,21 +23021,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:movement": {
     "value": 0.75
@@ -23052,35 +23054,35 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:movement": {
     "value": 0.175
 }
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:movement": {
     "value": 0.15
@@ -23093,28 +23095,28 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:movement": {
     "value": 0.4
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:movement": {
     "value": 1.8
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:movement": {
     "value": 0.42
@@ -23127,42 +23129,42 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:movement": {
     "value": 0.13
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:movement": {
     "value": 0.0
@@ -23175,21 +23177,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:movement": {
     "value": 0.12
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:movement": {
     "value": 0.0,
@@ -23197,28 +23199,28 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:movement": {
     "value": 0.6
@@ -23237,126 +23239,126 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:movement": {
     "value": 0.16
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:movement": {
     "value": 0.12
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:movement": {
     "value": 0.1
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:movement": {
     "value": 1.0
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:movement": {
     "value": 0.35
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:movement": {
     "value": 0.5
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:movement": {
     "value": 0.3
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:movement": {
     "value": 0.25
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -23369,21 +23371,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:movement": {
     "value": 0.2
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:movement": {
     "value": 0.23
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -23396,7 +23398,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -23410,7 +23412,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.amphibious
-### turtle
+#### turtle
 ```json
 "minecraft:movement.amphibious": {
     "max_turn": 5.0
@@ -23418,277 +23420,277 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.basic
-### bat
+#### bat
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:movement.basic": {
     "max_turn": 180.0
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:movement.basic": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:movement.basic": {}
 ```
 
 # minecraft:movement.fly
-### parrot
+#### parrot
 ```json
 "minecraft:movement.fly": {}
 ```
 
 # minecraft:movement.generic
-### drowned
+#### drowned
 ```json
 "minecraft:movement.generic": {}
 ```
 
 # minecraft:movement.glide
-### phantom
+#### phantom
 ```json
 "minecraft:movement.glide": {
     "start_speed": 0.1,
@@ -23697,13 +23699,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.hover
-### bee
+#### bee
 ```json
 "minecraft:movement.hover": {}
 ```
 
 # minecraft:movement.jump
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:movement.jump": {
     "jump_delay": [
@@ -23731,7 +23733,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:movement.jump": {
     "jump_delay": [
@@ -23760,44 +23762,44 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:movement.skip
-### rabbit
+#### rabbit
 ```json
 "minecraft:movement.skip": {}
 ```
 
 # minecraft:movement.sway
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:movement.sway": {}
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:movement.sway": {}
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:movement.sway": {
     "sway_amplitude": 0.0
@@ -23805,147 +23807,147 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:nameable
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:nameable": {}
 ```
 
-### bat
+#### bat
 ```json
 "minecraft:nameable": {}
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:nameable": {}
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:nameable": {}
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:nameable": {}
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:nameable": {}
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:nameable": {}
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:nameable": {}
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:nameable": {}
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:nameable": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:nameable": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:nameable": {}
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:nameable": {}
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:nameable": {}
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:nameable": {}
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:nameable": {}
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:nameable": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:nameable": {}
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:nameable": {}
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:nameable": {}
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:nameable": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:nameable": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:nameable": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:nameable": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:nameable": {}
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:nameable": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:nameable": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:nameable": {}
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:nameable": {
     "always_show": true,
@@ -23953,42 +23955,42 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:nameable": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:nameable": {}
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:nameable": {}
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:nameable": {}
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:nameable": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:nameable": {}
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:nameable": {}
 ```
 
-### player
+#### player
 ```json
 "minecraft:nameable": {
     "always_show": true,
@@ -23996,112 +23998,112 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:nameable": {}
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:nameable": {}
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:nameable": {}
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:nameable": {}
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:nameable": {}
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:nameable": {}
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:nameable": {}
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:nameable": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:nameable": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:nameable": {}
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:nameable": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:nameable": {}
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:nameable": {}
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:nameable": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:nameable": {}
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:nameable": {}
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:nameable": {}
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:nameable": {}
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:nameable": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:nameable": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:nameable": {}
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:nameable": {
     "default_trigger": {
@@ -24120,65 +24122,65 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:nameable": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:nameable": {}
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:nameable": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:nameable": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:nameable": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:nameable": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:nameable": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:nameable": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:nameable": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:nameable": {}
 ```
 
 # minecraft:navigation.climb
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:navigation.climb": {
     "can_path_over_water": true
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:navigation.climb": {
     "can_path_over_water": true
@@ -24186,14 +24188,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.float
-### bat
+#### bat
 ```json
 "minecraft:navigation.float": {
     "can_path_over_water": true
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:navigation.float": {
     "can_path_over_water": true
@@ -24201,7 +24203,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.fly
-### parrot
+#### parrot
 ```json
 "minecraft:navigation.fly": {
     "can_path_over_water": true,
@@ -24210,7 +24212,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.generic
-### dolphin
+#### dolphin
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -24255,7 +24257,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -24289,7 +24291,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -24300,7 +24302,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -24312,7 +24314,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -24323,7 +24325,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -24335,7 +24337,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -24347,7 +24349,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": false,
@@ -24359,7 +24361,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:navigation.generic": {
     "is_amphibious": true,
@@ -24372,7 +24374,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.hover
-### bee
+#### bee
 ```json
 "minecraft:navigation.hover": {
     "can_path_over_water": true,
@@ -24386,7 +24388,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:navigation.walk
-### blaze
+#### blaze
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24395,7 +24397,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:navigation.walk": {
     "can_float": true,
@@ -24404,7 +24406,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24412,7 +24414,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24421,14 +24423,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24437,7 +24439,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": false,
@@ -24445,14 +24447,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24462,7 +24464,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24471,7 +24473,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24480,7 +24482,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24489,7 +24491,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24499,7 +24501,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": false,
@@ -24508,7 +24510,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24516,7 +24518,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24524,7 +24526,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24533,7 +24535,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24542,7 +24544,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24551,7 +24553,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:navigation.walk": {
     "can_float": true,
@@ -24560,7 +24562,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24569,7 +24571,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24577,14 +24579,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24592,7 +24594,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24600,7 +24602,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:navigation.walk": {
     "avoid_damage_blocks": true,
@@ -24609,7 +24611,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24617,19 +24619,19 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:navigation.walk": {}
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24638,7 +24640,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24646,7 +24648,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24654,14 +24656,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:navigation.walk": {
     "avoid_water": true
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24669,7 +24671,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24678,7 +24680,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_lava": true,
@@ -24688,14 +24690,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24707,7 +24709,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24717,7 +24719,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true
@@ -24732,7 +24734,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24742,7 +24744,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24750,7 +24752,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24758,7 +24760,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24767,7 +24769,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -24775,7 +24777,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24785,7 +24787,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24795,7 +24797,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24803,7 +24805,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24814,7 +24816,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24834,7 +24836,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:navigation.walk": {
     "is_amphibious": true,
@@ -24855,7 +24857,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:npc
-### npc
+#### npc
 ```json
 "minecraft:npc": {
     "npc_data": {
@@ -24950,7 +24952,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_death
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:on_death": {
     "event": "minecraft:start_death",
@@ -24959,7 +24961,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_friendly_anger
-### llama
+#### llama
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:defend_wandering_trader",
@@ -24967,7 +24969,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
@@ -24975,7 +24977,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:on_friendly_anger": {
     "event": "minecraft:on_anger",
@@ -24984,7 +24986,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_hurt
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:on_hurt": {
     "event": "minecraft:crystal_explode",
@@ -24992,7 +24994,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:on_hurt": {
     "event": "minecraft:ranged_mode",
@@ -25037,7 +25039,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_start_landing
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:on_start_landing": {
     "event": "minecraft:start_land",
@@ -25054,7 +25056,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_target_acquired
-### bee
+#### bee
 ```json
 "minecraft:on_target_acquired": {
     "event": "attacked",
@@ -25062,14 +25064,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -25081,7 +25083,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:on_target_acquired": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:has_target",
@@ -25089,7 +25091,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -25097,7 +25099,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:on_target_acquired": {
     "event": "become_angry_event",
@@ -25105,7 +25107,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:on_target_acquired": {
     "filters": {
@@ -25128,7 +25130,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggressive",
@@ -25136,7 +25138,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_scared",
@@ -25155,7 +25157,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:on_target_acquired": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:on_target_acquired": {
     "event": "become_angry_event",
@@ -25163,7 +25165,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:on_scared",
@@ -25178,7 +25180,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -25186,7 +25188,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggressive",
@@ -25194,7 +25196,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
@@ -25207,7 +25209,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_aggro",
@@ -25215,7 +25217,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:on_target_acquired": {}
 ```
@@ -25227,7 +25229,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry",
@@ -25236,7 +25238,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_target_escape
-### creeper
+#### creeper
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:stop_exploding",
@@ -25252,7 +25254,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:on_target_escape": {}
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:on_calm",
@@ -25260,7 +25262,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:lost_target",
@@ -25268,7 +25270,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:on_target_escape": {
     "filters": {
@@ -25291,7 +25293,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:become_calm",
@@ -25299,7 +25301,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:on_calm",
@@ -25307,7 +25309,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:calm",
@@ -25322,7 +25324,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:become_calm",
@@ -25330,7 +25332,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:stop_aggro",
@@ -25339,7 +25341,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_wake_with_owner
-### cat
+#### cat
 ```json
 "minecraft:on_wake_with_owner": {
     "event": "minecraft:pet_slept_with_owner",
@@ -25348,7 +25350,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:peek
-### shulker
+#### shulker
 ```json
 "minecraft:peek": {
     "on_open": {
@@ -25364,170 +25366,170 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:persistent
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:persistent": {}
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:persistent": {}
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:persistent": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:persistent": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:persistent": {}
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:persistent": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:persistent": {}
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:persistent": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:persistent": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:persistent": {}
 ```
 
 # minecraft:physics
-### area_effect_cloud
+#### area_effect_cloud
 ```json
 "minecraft:physics": {
     "has_collision": false
 }
 ```
 
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:physics": {}
 ```
 
-### arrow
+#### arrow
 ```json
 "minecraft:physics": {}
 ```
 
-### bat
+#### bat
 ```json
 "minecraft:physics": {}
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:physics": {}
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:physics": {}
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:physics": {}
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:physics": {}
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:physics": {}
 ```
 
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:physics": {}
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:physics": {}
 ```
 
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:physics": {}
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:physics": {}
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:physics": {}
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:physics": {}
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:physics": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:physics": {}
 ```
 
-### egg
+#### egg
 ```json
 "minecraft:physics": {}
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:physics": {}
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:physics": {}
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:physics": {}
 ```
 
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:physics": {}
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:physics": {
     "has_gravity": false,
@@ -25535,304 +25537,304 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_pearl
+#### ender_pearl
 ```json
 "minecraft:physics": {}
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:physics": {}
 ```
 
-### eye_of_ender_signal
+#### eye_of_ender_signal
 ```json
 "minecraft:physics": {}
 ```
 
-### fireball
+#### fireball
 ```json
 "minecraft:physics": {}
 ```
 
-### fireworks_rocket
+#### fireworks_rocket
 ```json
 "minecraft:physics": {}
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
-### fishing_hook
+#### fishing_hook
 ```json
 "minecraft:physics": {}
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:physics": {}
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:physics": {}
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:physics": {}
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:physics": {}
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:physics": {}
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:physics": {}
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:physics": {}
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:physics": {}
 ```
 
-### lingering_potion
+#### lingering_potion
 ```json
 "minecraft:physics": {}
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:physics": {}
 ```
 
-### llama_spit
+#### llama_spit
 ```json
 "minecraft:physics": {}
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:physics": {}
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:physics": {}
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:physics": {}
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:physics": {}
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:physics": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:physics": {}
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:physics": {}
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:physics": {}
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:physics": {}
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:physics": {}
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:physics": {}
 ```
 
-### player
+#### player
 ```json
 "minecraft:physics": {}
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:physics": {}
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:physics": {}
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:physics": {}
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:physics": {}
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:physics": {}
 ```
 
-### shulker_bullet
+#### shulker_bullet
 ```json
 "minecraft:physics": {
     "has_collision": false
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:physics": {}
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:physics": {}
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:physics": {}
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:physics": {}
 ```
 
-### small_fireball
+#### small_fireball
 ```json
 "minecraft:physics": {}
 ```
 
-### snowball
+#### snowball
 ```json
 "minecraft:physics": {}
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:physics": {}
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:physics": {}
 ```
 
-### splash_potion
+#### splash_potion
 ```json
 "minecraft:physics": {}
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:physics": {}
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:physics": {}
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:physics": {}
 ```
 
-### thrown_trident
+#### thrown_trident
 ```json
 "minecraft:physics": {}
 ```
 
-### tnt
+#### tnt
 ```json
 "minecraft:physics": {}
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:physics": {}
 ```
 
-### tripod_camera
+#### tripod_camera
 ```json
 "minecraft:physics": {}
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:physics": {
     "has_gravity": false
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:physics": {}
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:physics": {
     "has_gravity": false,
@@ -25840,98 +25842,98 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:physics": {}
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:physics": {}
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:physics": {}
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:physics": {}
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:physics": {}
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:physics": {}
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:physics": {}
 ```
 
-### wither_skull
+#### wither_skull
 ```json
 "minecraft:physics": {}
 ```
 
-### wither_skull_dangerous
+#### wither_skull_dangerous
 ```json
 "minecraft:physics": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:physics": {}
 ```
 
-### xp_bottle
+#### xp_bottle
 ```json
 "minecraft:physics": {}
 ```
 
-### xp_orb
+#### xp_orb
 ```json
 "minecraft:physics": {}
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:physics": {}
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:physics": {}
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:physics": {}
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:physics": {}
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:physics": {}
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:physics": {}
 ```
 
 # minecraft:player.exhaustion
-### player
+#### player
 ```json
 "minecraft:player.exhaustion": {
     "value": 0,
@@ -25963,7 +25965,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:preferred_path
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
@@ -26050,7 +26052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:preferred_path": {
     "max_fall_blocks": 1,
@@ -26224,7 +26226,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:projectile
-### arrow
+#### arrow
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26353,7 +26355,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dragon_fireball
+#### dragon_fireball
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26389,7 +26391,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### egg
+#### egg
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26420,7 +26422,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_pearl
+#### ender_pearl
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26454,7 +26456,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fireball
+#### fireball
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26483,7 +26485,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fishing_hook
+#### fishing_hook
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26492,7 +26494,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### lingering_potion
+#### lingering_potion
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26512,7 +26514,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama_spit
+#### llama_spit
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26537,7 +26539,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker_bullet
+#### shulker_bullet
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26576,7 +26578,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### small_fireball
+#### small_fireball
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26607,7 +26609,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snowball
+#### snowball
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26636,7 +26638,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### splash_potion
+#### splash_potion
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26651,7 +26653,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### thrown_trident
+#### thrown_trident
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26684,7 +26686,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull
+#### wither_skull
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26721,7 +26723,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull_dangerous
+#### wither_skull_dangerous
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26760,7 +26762,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### xp_bottle
+#### xp_bottle
 ```json
 "minecraft:projectile": {
     "on_hit": {
@@ -26778,7 +26780,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:pushable
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -26786,7 +26788,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### arrow
+#### arrow
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -26794,7 +26796,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26802,7 +26804,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26810,7 +26812,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26818,7 +26820,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26826,7 +26828,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26834,7 +26836,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26842,7 +26844,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26850,7 +26852,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26858,7 +26860,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26866,7 +26868,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26874,7 +26876,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26882,7 +26884,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26890,7 +26892,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26898,7 +26900,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### egg
+#### egg
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26906,7 +26908,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26914,7 +26916,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26922,7 +26924,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26930,7 +26932,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_crystal
+#### ender_crystal
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26938,7 +26940,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_pearl
+#### ender_pearl
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26946,7 +26948,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26954,7 +26956,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### eye_of_ender_signal
+#### eye_of_ender_signal
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26962,7 +26964,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fireball
+#### fireball
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26970,7 +26972,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fireworks_rocket
+#### fireworks_rocket
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26978,7 +26980,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -26986,191 +26988,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fishing_hook
-```json
-"minecraft:pushable": {
-    "is_pushable": false,
-    "is_pushable_by_piston": true
-}
-```
-
-### fox
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### ghast
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### guardian
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### hoglin
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### hopper_minecart
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### horse
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### husk
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### iron_golem
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### lingering_potion
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### llama
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### llama_spit
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### magma_cube
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### minecart
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### mooshroom
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### mule
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### ocelot
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### panda
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### parrot
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### phantom
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### pig
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### piglin
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### pillager
-```json
-"minecraft:pushable": {
-    "is_pushable": true,
-    "is_pushable_by_piston": true
-}
-```
-
-### player
+#### fishing_hook
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -27178,7 +26996,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### fox
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27186,7 +27004,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### ghast
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27194,7 +27012,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### guardian
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27202,7 +27020,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### hoglin
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27210,7 +27028,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### hopper_minecart
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27218,7 +27036,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### horse
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27226,7 +27044,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### husk
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27234,7 +27052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### iron_golem
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27242,7 +27060,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### lingering_potion
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27250,7 +27068,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### llama
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27258,7 +27076,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### small_fireball
+#### llama_spit
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27266,7 +27084,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snowball
+#### magma_cube
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27274,7 +27092,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### minecart
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27282,7 +27100,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### mooshroom
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27290,7 +27108,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### splash_potion
+#### mule
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27298,7 +27116,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
+#### ocelot
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27306,7 +27124,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### panda
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27314,7 +27132,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### parrot
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27322,7 +27140,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### thrown_trident
+#### phantom
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27330,7 +27148,31 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt
+#### pig
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### piglin
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### pillager
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### player
 ```json
 "minecraft:pushable": {
     "is_pushable": false,
@@ -27338,7 +27180,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt_minecart
+#### polar_bear
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27346,7 +27188,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### pufferfish
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27354,7 +27196,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### rabbit
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27362,7 +27204,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### ravager
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27370,7 +27212,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### salmon
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27378,7 +27220,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### sheep
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27386,7 +27228,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### silverfish
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27394,7 +27236,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### skeleton
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27402,7 +27244,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### skeleton_horse
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27410,7 +27252,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### slime
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27418,7 +27260,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull
+#### small_fireball
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27426,7 +27268,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skull_dangerous
+#### snowball
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27434,7 +27276,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### snow_golem
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27442,7 +27284,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### xp_bottle
+#### spider
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27450,7 +27292,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### xp_orb
+#### splash_potion
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27458,7 +27300,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### squid
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27466,7 +27308,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### stray
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27474,7 +27316,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### strider
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27482,7 +27324,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### thrown_trident
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27490,7 +27332,15 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### tnt
+```json
+"minecraft:pushable": {
+    "is_pushable": false,
+    "is_pushable_by_piston": true
+}
+```
+
+#### tnt_minecart
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27498,7 +27348,159 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### tropicalfish
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### turtle
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### villager
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### villager_v2
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### vindicator
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### wandering_trader
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### witch
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### wither
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### wither_skeleton
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### wither_skull
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### wither_skull_dangerous
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### wolf
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### xp_bottle
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### xp_orb
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### zoglin
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### zombie
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### zombie_horse
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### zombie_pigman
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### zombie_villager
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
+#### zombie_villager_v2
 ```json
 "minecraft:pushable": {
     "is_pushable": true,
@@ -27507,7 +27509,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:raid_trigger
-### player
+#### player
 ```json
 "minecraft:raid_trigger": {
     "triggered_event": {
@@ -27518,33 +27520,33 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:rail_movement
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:rail_movement": {}
 ```
 
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:rail_movement": {}
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:rail_movement": {}
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:rail_movement": {}
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:rail_movement": {}
 ```
 
 # minecraft:rail_sensor
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:rail_sensor": {
     "check_block_types": true,
@@ -27571,7 +27573,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:rail_sensor": {
     "on_activate": {
@@ -27588,14 +27590,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:rail_sensor": {
     "eject_on_activate": true
 }
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:rail_sensor": {}
 ```
@@ -27623,7 +27625,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:ravager_blocked
-### ravager
+#### ravager
 ```json
 "minecraft:ravager_blocked": {
     "knockback_strength": 3.0,
@@ -27643,7 +27645,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:rideable
-### boat
+#### boat
 ```json
 "minecraft:rideable": {
     "seat_count": 2,
@@ -27687,7 +27689,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27704,7 +27706,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27769,7 +27771,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27786,7 +27788,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27803,7 +27805,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27840,7 +27842,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:rideable": {
     "seat_count": 3,
@@ -27876,7 +27878,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27913,7 +27915,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27931,7 +27933,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27967,7 +27969,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -27983,7 +27985,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28000,7 +28002,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28037,7 +28039,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28054,7 +28056,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28071,7 +28073,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28105,7 +28107,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:rideable": {
     "seat_count": 2,
@@ -28138,7 +28140,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28157,7 +28159,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28190,7 +28192,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28233,7 +28235,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28298,7 +28300,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:rideable": {
     "priority": 0,
@@ -28354,7 +28356,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28387,7 +28389,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28405,7 +28407,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28423,7 +28425,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28441,7 +28443,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28458,7 +28460,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -28476,20 +28478,20 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:scaffolding_climber
-### player
+#### player
 ```json
 "minecraft:scaffolding_climber": {}
 ```
 
 # minecraft:scale
-### bee
+#### bee
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:scale": {
     "value": 0.4
@@ -28502,56 +28504,56 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:scale": {
     "value": 0.65
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:scale": {
     "value": 1.0
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:scale": {
     "value": 0.53125
@@ -28564,21 +28566,21 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -28591,7 +28593,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:scale": {
     "value": 1.0
@@ -28604,35 +28606,35 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:scale": {
     "value": 1.2
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:scale": {
     "value": 0.4
@@ -28645,7 +28647,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -28664,98 +28666,98 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:scale": {
     "value": 1.3
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:scale": {
     "value": 0.16
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:scale": {
     "value": 1.2
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:scale": {
     "value": 0.5
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:scale": {
     "value": 0.5
@@ -28763,7 +28765,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:scale_by_age
-### donkey
+#### donkey
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -28771,7 +28773,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -28779,7 +28781,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -28787,7 +28789,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -28795,7 +28797,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:scale_by_age": {
     "start_scale": 0.5,
@@ -28804,7 +28806,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:scheduler
-### fox
+#### fox
 ```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
@@ -28863,7 +28865,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:scheduler": {
     "min_delay_secs": 0,
@@ -29472,7 +29474,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:shareables
-### drowned
+#### drowned
 ```json
 "minecraft:shareables": {
     "items": [
@@ -29696,7 +29698,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:shareables": {
     "all_items": true,
@@ -29896,7 +29898,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:shareables": {
     "items": [
@@ -30108,7 +30110,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:shareables": {
     "items": [
@@ -30394,7 +30396,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:shareables": {
     "items": [
@@ -30408,7 +30410,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:shareables": {
     "items": [
@@ -30626,7 +30628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:shareables": {
     "items": [
@@ -30844,7 +30846,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:shareables": {
     "items": [
@@ -30926,7 +30928,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:shareables": {
     "items": [
@@ -31058,7 +31060,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:shareables": {
     "items": [
@@ -31414,7 +31416,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:shareables": {
     "items": [
@@ -31626,7 +31628,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:shareables": {
     "items": [
@@ -31838,7 +31840,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:shareables": {
     "items": [
@@ -32050,7 +32052,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:shareables": {
     "items": [
@@ -32263,21 +32265,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:shooter
-### blaze
+#### blaze
 ```json
 "minecraft:shooter": {
     "def": "minecraft:small_fireball"
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:shooter": {
     "def": "minecraft:thrown_trident"
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:shooter": {
     "type": "dragonfireball",
@@ -32285,42 +32287,42 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:shooter": {
     "def": "minecraft:fireball"
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:shooter": {
     "def": "minecraft:llama_spit"
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow"
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow"
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:shooter": {
     "def": "minecraft:shulker_bullet"
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow"
@@ -32333,14 +32335,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:shooter": {
     "def": "minecraft:snowball"
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow",
@@ -32356,28 +32358,28 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:sittable
-### cat
+#### cat
 ```json
 "minecraft:sittable": {}
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:sittable": {}
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:sittable": {}
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:sittable": {}
 ```
 
 # minecraft:skin_id
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:skin_id": {
     "value": 0
@@ -32414,7 +32416,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:skin_id": {
     "value": 0
@@ -32452,7 +32454,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spawn_entity
-### chicken
+#### chicken
 ```json
 "minecraft:spawn_entity": {
     "entities": {
@@ -32470,7 +32472,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:spawn_entity": {
     "entities": [
@@ -32488,7 +32490,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:spell_effects
-### player
+#### player
 ```json
 "minecraft:spell_effects": {
     "add_effects": [
@@ -32511,7 +32513,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:spell_effects": {
     "add_effects": [
@@ -32528,7 +32530,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:spell_effects": {
     "add_effects": [
@@ -32546,7 +32548,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:strength
-### llama
+#### llama
 ```json
 "minecraft:strength": {
     "value": 1,
@@ -32583,7 +32585,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:tameable
-### cat
+#### cat
 ```json
 "minecraft:tameable": {
     "probability": 0.33,
@@ -32598,7 +32600,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:tameable": {
     "probability": 0.33,
@@ -32615,7 +32617,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:tameable": {
     "probability": 0.33,
@@ -32628,7 +32630,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:tamemount
-### donkey
+#### donkey
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -32685,7 +32687,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -32742,7 +32744,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -32783,7 +32785,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:tamemount": {
     "min_temper": 0,
@@ -32841,7 +32843,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:target_nearby_sensor
-### creeper
+#### creeper
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 2.5,
@@ -32870,7 +32872,7 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:target_nearby_sensor": {}
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
@@ -32886,7 +32888,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
@@ -32910,7 +32912,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:teleport
-### enderman
+#### enderman
 ```json
 "minecraft:teleport": {
     "random_teleports": true,
@@ -32927,7 +32929,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:timer
-### bee
+#### bee
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33005,7 +33007,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33016,7 +33018,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:timer": {
     "time": [
@@ -33031,7 +33033,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33042,7 +33044,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33053,7 +33055,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33064,7 +33066,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:timer": {
     "time": [
@@ -33079,7 +33081,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33124,7 +33126,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33135,7 +33137,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33156,7 +33158,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33168,13 +33170,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:trade_resupply
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:trade_resupply": {}
 ```
 
 # minecraft:trade_table
-### villager
+#### villager
 ```json
 "minecraft:trade_table": {
     "display_name": "entity.villager.farmer",
@@ -33272,7 +33274,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:trail
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:trail": {
     "block_type": "minecraft:snow_layer",
@@ -33285,7 +33287,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:transformation
-### hoglin
+#### hoglin
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zoglin",
@@ -33294,7 +33296,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie<minecraft:as_adult>",
@@ -33317,14 +33319,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:transformation": {
     "into": "minecraft:cow"
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:transformation": {
     "into": "minecraft:pig_zombie",
@@ -33332,7 +33334,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_pigman",
@@ -33341,7 +33343,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:transformation": {
     "into": "minecraft:skeleton",
@@ -33349,7 +33351,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:transformation": {
     "into": "minecraft:witch",
@@ -33370,7 +33372,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:transformation": {
     "into": "minecraft:witch",
@@ -33385,7 +33387,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:transformation": {
     "into": "minecraft:drowned<minecraft:as_adult>",
@@ -33408,7 +33410,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_villager_v2",
@@ -33434,7 +33436,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:transformation": {
     "into": "minecraft:villager_v2",
@@ -33455,13 +33457,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:trust
-### fox
+#### fox
 ```json
 "minecraft:trust": {}
 ```
 
 # minecraft:trusting
-### ocelot
+#### ocelot
 ```json
 "minecraft:trusting": {
     "probability": 0.33,
@@ -33477,7 +33479,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:type_family
-### armor_stand
+#### armor_stand
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33488,7 +33490,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bat
+#### bat
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33498,7 +33500,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### bee
+#### bee
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33520,7 +33522,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### blaze
+#### blaze
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33531,7 +33533,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### boat
+#### boat
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33541,7 +33543,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cat
+#### cat
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33551,7 +33553,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cave_spider
+#### cave_spider
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33563,7 +33565,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chest_minecart
+#### chest_minecart
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33573,7 +33575,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### chicken
+#### chicken
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33583,7 +33585,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### command_block_minecart
+#### command_block_minecart
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33593,7 +33595,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### cow
+#### cow
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33603,7 +33605,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### creeper
+#### creeper
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33614,7 +33616,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### dolphin
+#### dolphin
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33624,7 +33626,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### donkey
+#### donkey
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33634,7 +33636,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33647,7 +33649,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33658,7 +33660,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### enderman
+#### enderman
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33669,7 +33671,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### endermite
+#### endermite
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33681,7 +33683,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ender_dragon
+#### ender_dragon
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33691,7 +33693,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### evocation_illager
+#### evocation_illager
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33703,7 +33705,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33713,7 +33715,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33723,7 +33725,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ghast
+#### ghast
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33734,7 +33736,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33745,7 +33747,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hoglin
+#### hoglin
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33777,7 +33779,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### hopper_minecart
+#### hopper_minecart
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33787,7 +33789,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
+#### horse
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33797,7 +33799,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### husk
+#### husk
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33810,7 +33812,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### iron_golem
+#### iron_golem
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33820,7 +33822,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### lightning_bolt
+#### lightning_bolt
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33829,7 +33831,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### llama
+#### llama
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33839,7 +33841,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### magma_cube
+#### magma_cube
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33850,7 +33852,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### minecart
+#### minecart
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33860,7 +33862,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mooshroom
+#### mooshroom
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33870,7 +33872,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### mule
+#### mule
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33880,7 +33882,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### npc
+#### npc
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33890,7 +33892,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ocelot
+#### ocelot
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33900,7 +33902,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### panda
+#### panda
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33919,7 +33921,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### parrot
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33938,7 +33940,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### phantom
+#### phantom
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33950,7 +33952,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pig
+#### pig
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33960,7 +33962,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### piglin
+#### piglin
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33980,7 +33982,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
+#### pillager
 ```json
 "minecraft:type_family": {
     "family": [
@@ -33992,7 +33994,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### player
+#### player
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34001,7 +34003,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34011,7 +34013,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34021,7 +34023,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### rabbit
+#### rabbit
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34031,7 +34033,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### ravager
+#### ravager
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34043,7 +34045,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34053,7 +34055,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### sheep
+#### sheep
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34063,7 +34065,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+#### shulker
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34074,7 +34076,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### silverfish
+#### silverfish
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34086,7 +34088,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton
+#### skeleton
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34098,7 +34100,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34109,7 +34111,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### slime
+#### slime
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34120,7 +34122,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### snow_golem
+#### snow_golem
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34130,7 +34132,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### spider
+#### spider
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34142,7 +34144,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### squid
+#### squid
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34152,7 +34154,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### stray
+#### stray
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34165,7 +34167,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
+#### strider
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34195,7 +34197,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt
+#### tnt
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34205,7 +34207,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tnt_minecart
+#### tnt_minecart
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34215,7 +34217,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tripod_camera
+#### tripod_camera
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34226,7 +34228,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34236,7 +34238,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34256,7 +34258,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vex
+#### vex
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34267,7 +34269,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34407,7 +34409,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34579,7 +34581,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34591,7 +34593,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wandering_trader
+#### wandering_trader
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34611,7 +34613,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### witch
+#### witch
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34622,7 +34624,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither
+#### wither
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34635,7 +34637,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wither_skeleton
+#### wither_skeleton
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34648,7 +34650,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### wolf
+#### wolf
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34658,7 +34660,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zoglin
+#### zoglin
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34681,7 +34683,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie
+#### zombie
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34693,7 +34695,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_horse
+#### zombie_horse
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34704,7 +34706,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_pigman
+#### zombie_pigman
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34716,7 +34718,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:type_family": {
     "family": [
@@ -34873,7 +34875,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:type_family": {
     "family": [
@@ -35070,14 +35072,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:underwater_movement
-### dolphin
+#### dolphin
 ```json
 "minecraft:underwater_movement": {
     "value": 0.15
 }
 ```
 
-### drowned
+#### drowned
 ```json
 "minecraft:underwater_movement": {
     "value": 0.06
@@ -35090,56 +35092,56 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### elder_guardian
+#### elder_guardian
 ```json
 "minecraft:underwater_movement": {
     "value": 0.3
 }
 ```
 
-### fish
+#### fish
 ```json
 "minecraft:underwater_movement": {
     "value": 0.1
 }
 ```
 
-### guardian
+#### guardian
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
 ```
 
-### pufferfish
+#### pufferfish
 ```json
 "minecraft:underwater_movement": {
     "value": 0.13
 }
 ```
 
-### salmon
+#### salmon
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
 ```
 
-### skeleton_horse
+#### skeleton_horse
 ```json
 "minecraft:underwater_movement": {
     "value": 0.08
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:underwater_movement": {
     "value": 0.12
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:underwater_movement": {
     "value": 0.06
@@ -35153,7 +35155,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:variant
-### cat
+#### cat
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35220,7 +35222,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### fox
+#### fox
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35233,95 +35235,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### horse
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 5
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 6
-}
-```
-
-### husk
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-### llama
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-### mooshroom
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-### panda
+#### horse
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35364,7 +35278,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### parrot
+#### husk
+```json
+"minecraft:variant": {
+    "value": 2
+}
+```
+
+#### llama
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35389,13 +35310,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-### piglin
+#### mooshroom
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35408,51 +35323,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### pillager
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-### pufferfish
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 2
-}
-```
-
-### rabbit
+#### panda
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35489,7 +35360,138 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### shulker
+```json
+"minecraft:variant": {
+    "value": 6
+}
+```
+
+#### parrot
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 2
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 3
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 4
+}
+```
+
+#### piglin
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+#### pillager
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+#### pufferfish
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 2
+}
+```
+
+#### rabbit
+```json
+"minecraft:variant": {
+    "value": 0
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 2
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 3
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 4
+}
+```
+
+```json
+"minecraft:variant": {
+    "value": 5
+}
+```
+
+#### shulker
 ```json
 "minecraft:variant": {
     "value": 5
@@ -35592,7 +35594,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### tropicalfish
+#### tropicalfish
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35737,7 +35739,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager
+#### villager
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35810,7 +35812,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### villager_v2
+#### villager_v2
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35901,7 +35903,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### vindicator
+#### vindicator
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35920,7 +35922,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager
+#### zombie_villager
 ```json
 "minecraft:variant": {
     "value": 0
@@ -35993,7 +35995,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### zombie_villager_v2
+#### zombie_villager_v2
 ```json
 "minecraft:variant": {
     "value": 0
@@ -36085,21 +36087,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:water_movement
-### panda
+#### panda
 ```json
 "minecraft:water_movement": {
     "drag_factor": 0.98
 }
 ```
 
-### polar_bear
+#### polar_bear
 ```json
 "minecraft:water_movement": {
     "drag_factor": 0.98
 }
 ```
 
-### turtle
+#### turtle
 ```json
 "minecraft:water_movement": {
     "drag_factor": 0.9
