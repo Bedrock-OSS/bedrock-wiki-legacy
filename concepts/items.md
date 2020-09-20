@@ -120,6 +120,19 @@ Transforms the item into the item specified
 }
 ```
 
+#### `teleport`
+Teleports the target to a random location in the specified range
+```json
+{
+    "example:teleport_event": {
+        "teleport": {
+            "target": "holder",
+            "max_range": [8, 8, 8]
+        }
+    }
+}
+```
+
 #### `sequence`
 Used to sequence event functions
 ```json
