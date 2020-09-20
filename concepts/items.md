@@ -534,3 +534,23 @@ _New Syntax_
     }
 }
 ```
+
+## Breaking changes
+
+If your item isn't showing up in the beta, these changes might have broken your item.
+
+- Item behavior files now require a "category" to show up in the /give command and creative inventory.
+Example:
+```json
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "example:item",
+      "category" : "items"     // This line is required
+    },
+    "components": {...},
+    "events": {...}
+  }
+}
+```
