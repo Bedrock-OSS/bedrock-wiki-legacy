@@ -416,7 +416,7 @@ List of all new block components, with usage examples
     "minecraft:weapon": {
         "on_hurt": {
             "event": "example_event",
-            "target": "holder"      // Can also be "self" to trigger an item event"
+            "target": "holder"      // Can also be 'self' to trigger an item event"
         }
     }
 }
@@ -446,7 +446,7 @@ List of all new block components, with usage examples
                 "repair_amount": 10,  // Can also be molang expression
                 "on_repaired": {
                     "event": "example_event",
-                    "target": "holder"    // Can also be "self" to trigger an item event"
+                    "target": "holder"    // Can also be 'self' to trigger an item event"
                 }
             }
         ]
@@ -526,7 +526,7 @@ _New Syntax_
     "minecraft:food": {
         "on_consume": {
             "event": "example_event",
-            "target": "holder"  // Can also be "self" to trigger an item event"
+            "target": "holder"  // Can also be 'self' to trigger an item event"
         },
         "nurtition": 3,
         "can_always_eat": true,

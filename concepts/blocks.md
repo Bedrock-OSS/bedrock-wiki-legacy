@@ -114,7 +114,7 @@ Used to trigger an event, this can be a block event or an entity event.
         "trigger": {
             "condition": "query.block_property('example:can_trigger_event') == true",
             "event": "example:my_event",
-            "target": "self"              // If set to "other" an entity event can be defined, it will be triggered on the entity that causes the block event
+            "target": "self"              // If set to 'other' an entity event can be defined, it will be triggered on the entity that causes the block event
         }
     }
 }
@@ -306,7 +306,7 @@ List of all new block components, with usage examples
   "minecraft:material_instances": {
     "*": {
       "texture": "texture_name", // References texture defined in terrain_textures.json
-      "render_method": "blend" // Options ["blend", "opaque", "alpha_test"]
+      "render_method": "blend" // Options 'blend', 'opaque', 'alpha_test'
     }
   }
 }
