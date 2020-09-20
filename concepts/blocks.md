@@ -33,7 +33,7 @@ Properties can be queried with `query.block_property`, like this:
 
 ## Block Events
 
-Using Events:
+### Using Events
 
 ```json
 {
@@ -59,7 +59,7 @@ Using Events:
 
 This example spawns a loot table when an entity stands on the block.
 
-### Event functions:
+### Event functions
 
 #### `spawn_loot`
 Summons a loot table when the event is triggered.
@@ -95,6 +95,16 @@ Used to set the value of a block's property
 
 #### `set_block_at_pos`
 Used to set a block releative to this blocks position
+```json
+{
+  "example:trigger_event": {
+    "set_block_at_pos": {
+      "block_type": "minecraft:stone",
+      "block_offset": [0, 0, 0]
+    }
+  }
+}
+```
 
 #### `trigger`
 Used to trigger an event, this can be a block event or an entity event.
@@ -217,8 +227,6 @@ Example:
 
 ## Block Tags
 
-_Needs more information_
-
 Block tags can be given to blocks to be queried or referenced with `any_tag` which is used inside item and entity files.
 A tag can be applied like this:
 ```json
@@ -243,3 +251,249 @@ and this tag can be queried with:
 - `query.block_has_any_tag`
 - `query.relative_block_has_all_tags`
 - `query.relative_block_has_any_tag`
+
+Example of querying a tag:
+```json
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "category": "equipment",
+      "identifier": "example:pickaxe"
+    },
+    "components": {
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": {
+              "tags": "query.any_tag('example:my_tag', 'stone', 'metal')"
+            },
+            "speed": 6
+          }
+        ]
+      }
+    }
+  }
+}
+```
+
+## Block components
+
+List of all new block components, with usage examples
+
+- minecraft:unit_cube
+```json
+{
+  "minecraft:unit_cube": {}
+}
+```
+
+- minecraft:crafting_table
+```json
+{
+  "minecraft:crafting_table": {
+    "custom_description": "Example Crafting Table",
+    "grid_size": 3,
+    "crafting_tags": ["crafting_table", "custom_crafting_tag"]
+  }
+}
+```
+
+- minecraft:material_instances
+```json
+{
+  "minecraft:material_instances": {
+    "*": {
+      "texture": "texture_name", // References texture defined in terrain_textures.json
+      "render_method": "blend" // Options ["blend", "opaque", "alpha_test"]
+    }
+  }
+}
+```
+
+- minecraft:geometry
+```json
+{
+  "minecraft:geometry": "geometry.example" // Geometry identifier from geo file in 'RP/models/entity' folder
+}
+```
+
+- minecraft:on_step_on
+```json
+{
+  "minecraft:on_step_on": {
+    "event": "block_event",
+    "target": "self",
+    "condition": "query.block_property('example:block_property') == true"
+  }
+}
+```
+
+- minecraft:on_step_off
+```json
+{
+  "minecraft:on_step_off": {
+    "event": "block_event",
+    "target": "self",
+    "condition": "query.block_property('example:block_property') == true"
+  }
+}
+```
+
+- minecraft:on_fall_on
+```json
+{
+  "minecraft:on_fall_on": {
+    "event": "block_event",
+    "target": "self",
+    "condition": "query.block_property('example:block_property') == true",
+    "min_fall_distance": 5
+  }
+}
+```
+
+- minecraft:on_placed
+```json
+{
+  "minecraft:on_placed": {
+    "event": "block_event",
+    "target": "self",
+    "condition": "query.block_property('example:block_property') == true"
+  }
+}
+```
+
+- minecraft:on_player_placing
+```json
+{
+  "minecraft:on_player_placing": {
+    "event": "block_event",
+    "target": "self",
+    "condition": "query.block_property('example:block_property') == true"
+  }
+}
+```
+
+- minecraft:on_interact
+```json
+{
+  "minecraft:on_interact": {
+    "event": "block_event",
+    "target": "self",
+    "condition": "query.block_property('example:block_property') == true"
+  }
+}
+```
+
+- minecraft:ticking
+```json
+{
+  "minecraft:ticking": {
+    "looping": true,
+    "range": [4, 4],
+    "on_tick": {
+      "event": "block_event",
+      "target": "self",
+      "condition": "query.block_property('example:block_property') == true"
+    }
+  }
+}
+```
+
+- minecraft:random_ticking
+```json
+{
+  "minecraft:random_ticking": {
+    "on_tick": {
+      "event": "block_event",
+      "target": "self",
+      "condition": "query.block_property('example:block_property') == true"
+    }
+  }
+}
+```
+
+- minecraft:entity_collision
+```json
+{
+  "minecraft:entity_collision": {
+    "origin": [-8, 0, -8],
+    "size": [16, 16, 16]
+  }
+}
+
+{
+  "minecraft:entity_collision": false
+}
+```
+
+- minecraft:pick_collision
+```json
+{
+  "minecraft:pick_collision": {
+    "origin": [-8, 0, -8],
+    "size": [16, 16, 16]
+  }
+}
+
+{
+  "minecraft:pick_collision": false
+}
+```
+
+- minecraft:breakonpush
+```json
+{
+  "minecraft:breakonpush": true
+}
+```
+
+- minecraft:immovable
+```json
+{
+  "minecraft:immovable": true
+}
+```
+
+- minecraft:onlypistonpush
+```json
+{
+  "minecraft:onlypistonpush": true
+}
+```
+
+- minecraft:placement_filter
+```json
+{
+  "minecraft:placement_filter": {
+    "conditions": [
+      {
+        "block_filter": "minecraft:dirt",
+        "allowed_faces": ["up"]
+      }
+    ]
+  }
+}
+```
+
+- minecraft:preventsjumping
+```json
+{
+  "minecraft:preventsjumping": true
+}
+```
+
+- minecraft:rotation
+```json
+{
+  "minecraft:rotation": [90, 180, 0]
+}
+```
+
+- minecraft:unwalkable
+```json
+{
+  "minecraft:unwalkable": true
+}
+```
