@@ -190,7 +190,7 @@ _This seems to be broken as of 1.16.100.56_
 {
     "example:execute_command_event": {
         "execute_command": {
-            "commands": ["say hi"]
+            "command": ["say hi"]
         }
     }
 }
