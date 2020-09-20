@@ -95,6 +95,16 @@ Used to set the value of a block's property
 
 #### `set_block_at_pos`
 Used to set a block releative to this blocks position
+```json
+{
+  "example:trigger_event": {
+    "set_block_at_pos": {
+      "block_type": "minecraft:stone",
+      "block_offset": [0, 0, 0]
+    }
+  }
+}
+```
 
 #### `trigger`
 Used to trigger an event, this can be a block event or an entity event.
@@ -217,8 +227,6 @@ Example:
 
 ## Block Tags
 
-_Needs more information_
-
 Block tags can be given to blocks to be queried or referenced with `any_tag` which is used inside item and entity files.
 A tag can be applied like this:
 ```json
@@ -243,3 +251,29 @@ and this tag can be queried with:
 - `query.block_has_any_tag`
 - `query.relative_block_has_all_tags`
 - `query.relative_block_has_any_tag`
+
+Example of querying a tag:
+```json
+{
+  "format_version": "1.16.100",
+  "minecraft:item": {
+    "description": {
+      "category": "equipment",
+      "identifier": "example:pickaxe"
+    },
+    "components": {
+      "minecraft:digger": {
+        "use_efficiency": true,
+        "destroy_speeds": [
+          {
+            "block": {
+              "tags": "query.any_tag('example:my_tag', 'stone', 'metal')"
+            },
+            "speed": 6
+          }
+        ]
+      }
+    }
+  }
+}
+```
