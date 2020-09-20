@@ -6,9 +6,9 @@ parent: Knowledge
 
 # Entity Troubleshooting
 
-<details open markdown="block">
+<details closed markdown="block">
   <summary>
-    Table of contents
+    Table of contents [Click to Show]
   </summary>
   {: .text-delta }
 1. TOC
