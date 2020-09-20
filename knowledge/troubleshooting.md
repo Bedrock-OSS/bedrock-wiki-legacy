@@ -6,6 +6,15 @@ parent: Knowledge
 
 # Entity Troubleshooting
 
+<details open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Creating Addons for Minecraft is a fairly easy process *once you get a hang of it*. The first time is usually a difficult, bug-prone process. This document contains some tips and tricks for fixing those dastardly bugs, as well as best practice information.
 
 ## The Environment
