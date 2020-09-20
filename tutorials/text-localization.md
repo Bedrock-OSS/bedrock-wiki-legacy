@@ -184,30 +184,33 @@ So there you have it folks! All you need to know about localization in Minecraft
 
 ## Quick reference
 
-**Simple text on a sign:**
+- **Simple text on a sign:**
 `sign.house_of_terrors=House of terrors`
 `{"rawtext":[{"translate":"sign.house_of_terrors"}]}`
 
-**Writing inside a book with new lines:**
+- **Writing inside a book with new lines:**
 `book.mystory.page1=Now this is the story all about how%1%1My life got flipped, turned upside down`
 `{"rawtext":[{"translate":"book.mystory.page1","with":["\n"]}]}`
 
-**Text in chat:**
+- **Text in chat:**
 `npcdialogue.bob.msg1=Hey there stranger!`
 `/tellraw @a {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
 
-**Actionbar:**
+- **Actionbar:**
 `actionbar.status.gamemode=You are now in Survival Mode`
 `/titleraw @a actionbar {"rawtext":[{"translate" : "actionbar.status.gamemode"}]}`
 
-**Title and Subtitle:**
+- **Title and Subtitle:**
 `quest1.subtitle=The Hero has won!`
 `quest1.title=Victory`
-
 `/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
 
-> For more info on the JSON format used, check the [official wiki](https://minecraft.gamepedia.com/Raw_JSON_text_format).
+## External links
 
-### Credits
-Scai(of [Scai Quest](https://twitter.com/ScaiQuest))
+- For more info on the JSON format used, check the [official wiki](https://minecraft.gamepedia.com/Raw_JSON_text_format).
+- For more info on `.lang` file composition/preparation check the [official Compass](https://compass.minecraft.partners/hc/en-us/articles/360052473054-Preparing-Raw-Text-for-Localization).
+- For more info on text formatting see the [official wiki](https://minecraft.gamepedia.com/Formatting_codes).
+
+## Credits
+- Created by Scai([Scai Quest](https://twitter.com/ScaiQuest)) [2020.Sep.20]
