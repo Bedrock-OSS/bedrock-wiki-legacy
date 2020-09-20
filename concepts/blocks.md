@@ -422,12 +422,12 @@ List of all new block components, with usage examples
     "size": [16, 16, 16]
   }
 }
-
+```
+```json
 {
   "minecraft:entity_collision": false
 }
 ```
-
 - minecraft:pick_collision
 ```json
 {
@@ -436,7 +436,8 @@ List of all new block components, with usage examples
     "size": [16, 16, 16]
   }
 }
-
+```
+```json
 {
   "minecraft:pick_collision": false
 }
