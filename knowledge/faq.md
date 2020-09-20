@@ -20,7 +20,7 @@ This page contains a list of frequently asked questions in the technical-bedrock
 ---
 
 ### What is the default friction of vanilla blocks?
-0.5
+0.6
 
 ---
 
