@@ -309,6 +309,18 @@ List of all new block components, with usage examples
 }
 ```
 
+- minecraft:use_on
+```json
+{
+    "minecraft:use_on": {
+        "on_use": {
+            "event": "example:block_event",
+            "target": "block"
+        }
+    }
+}
+```
+
 - minecraft:knockback_resistance
 ```json
 {
