@@ -217,7 +217,7 @@ List of all new block components, with usage examples
 - minecraft:damage
 ```json
 {
-  "minecraft:damage": true
+  "minecraft:damage": 4
 }
 ```
 
@@ -485,7 +485,7 @@ List of all new block components, with usage examples
 ```json
 {
     "minecraft:fertilizer": {
-        "type": "bonemeal" // Can also be "rapid"
+        "type": "bonemeal" // Can also be 'rapid'
     }
 }
 ```
@@ -526,9 +526,9 @@ _New Syntax_
     "minecraft:food": {
         "on_consume": {
             "event": "example_event",
-            "target": "holder"  // Can also be 'self' to trigger an item event"
+            "target": "holder"  // Can also be 'self' to trigger an item event
         },
-        "nurtition": 3,
+        "nutrition": 3,
         "can_always_eat": true,
         "saturation_modifier": "normal"
     }
