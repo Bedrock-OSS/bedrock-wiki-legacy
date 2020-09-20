@@ -19,7 +19,7 @@
         .highlight .s2 {
             color: #ce9178;
         }
-        .highlight .mi {
+        .highlight .mi, .highlight .mf {
             color: #b5cea8;
         }
         .highlight .kc {
@@ -45,7 +45,7 @@
         .highlight .s2 {
             color: #ce9178;
         }
-        .highlight .mi {
+        .highlight .mi, .highlight .mf {
             color: #b5cea8;
         }
         .highlight .kc {
@@ -128,4 +128,23 @@
         }
         document.getElementsByClassName("site-footer")[0].prepend(switcher);
     });
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                const id = entry.target.getAttribute('id');
+                if (entry.intersectionRatio > 0) {
+                    document.querySelector(`#toc li a[href="#${id}"]`).parentElement.classList.add('active');
+                } else {
+                    document.querySelector(`#toc li a[href="#${id}"]`).parentElement.classList.remove('active');
+                }
+            });
+        });
+        document.querySelectorAll('h1[id], h2[id]').forEach((section) => {
+            observer.observe(section);
+        });
+
+    });
+
+
 </script>
