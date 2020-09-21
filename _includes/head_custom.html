@@ -68,6 +68,8 @@
     };
     let theme = "";
 
+    let ticking = false;
+
     function changeTheme(selected) {
         if (!allThemes.hasOwnProperty(selected)) {
             selected = DEFAULT_THEME;
@@ -127,24 +129,33 @@
             switcher.append(option);
         }
         document.getElementsByClassName("site-footer")[0].prepend(switcher);
+
+        document.querySelector('.main-content-wrap').addEventListener('scroll', updateTOC);
+        updateTOC();
     });
 
-    window.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                const id = entry.target.getAttribute('id');
-                if (entry.intersectionRatio > 0) {
-                    document.querySelector(`#toc li a[href="#${id}"]`).parentElement.classList.add('active');
-                } else {
-                    document.querySelector(`#toc li a[href="#${id}"]`).parentElement.classList.remove('active');
+    function updateTOC() {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                let wrapper = document.querySelector('.main-content-wrap');
+                let selector = 'h1[id], h2[id]';
+                if (document.querySelector(`#toc`).classList.contains('top-level')) {
+                    selector = 'h1[id]';
                 }
+                document.querySelectorAll(`#toc li.active`).forEach(value => value.classList.remove('active'));
+                let nodes = document.querySelectorAll(selector);
+                let closest = null;
+                for (let i = 0; i < nodes.length; i++) {
+                    if (closest === null || (Math.abs(wrapper.scrollTop - closest.offsetTop) > Math.abs(wrapper.scrollTop - nodes[i].offsetTop))) {
+                        closest = nodes[i];
+                    }
+                }
+                document.querySelector(`#toc li a[href='#${closest.getAttribute('id')}']`).parentElement.classList.add('active');
+                ticking = false;
             });
-        });
-        document.querySelectorAll('h1[id], h2[id]').forEach((section) => {
-            observer.observe(section);
-        });
-
-    });
+            ticking = true;
+        }
+    }
 
 
 </script>

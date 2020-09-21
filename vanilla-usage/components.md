@@ -4,7 +4,7 @@ title: Components
 parent: Vanilla Usage
 ---
 
-<details id="toc" open markdown="block">
+<details id="toc" class="top-level" open markdown="block">
   <summary>
     Table of contents
   </summary>
@@ -31,8 +31,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ```json
-
-
 "minecraft:addrider": {
     "entity_type": "minecraft:skeleton.wither"
 }

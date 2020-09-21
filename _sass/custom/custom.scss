@@ -58,8 +58,22 @@
   #toc ol > li::before {
     content: none;
   }
+
+  #toc code {
+    font-size: 1.2em;
+    background: none;
+  }
+
+  #toc pre {
+    background: none;
+  }
+
 }
 
 #toc > ol > li > ol > li > ol {
+  display: none;
+}
+
+#toc.top-level > ol > li > ol {
   display: none;
 }
