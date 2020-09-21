@@ -130,14 +130,13 @@
         }
         document.getElementsByClassName("site-footer")[0].prepend(switcher);
 
-        document.querySelector('.main-content-wrap').addEventListener('scroll', updateTOC);
+        window.addEventListener('scroll', updateTOC);
         updateTOC();
     });
 
     function updateTOC() {
         if (!ticking) {
             window.requestAnimationFrame(function () {
-                let wrapper = document.querySelector('.main-content-wrap');
                 let selector = 'h1[id], h2[id]';
                 if (document.querySelector(`#toc`).classList.contains('top-level')) {
                     selector = 'h1[id]';
@@ -146,7 +145,7 @@
                 let nodes = document.querySelectorAll(selector);
                 let closest = null;
                 for (let i = 0; i < nodes.length; i++) {
-                    if (closest === null || (Math.abs(wrapper.scrollTop - closest.offsetTop) > Math.abs(wrapper.scrollTop - nodes[i].offsetTop))) {
+                    if (closest === null || (Math.abs(window.scrollY - closest.offsetTop) > Math.abs(window.scrollY - nodes[i].offsetTop))) {
                         closest = nodes[i];
                     }
                 }
