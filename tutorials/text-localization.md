@@ -110,20 +110,24 @@ For the sake of learning let's transform our text step by step:
     And I'd like to take a minute just sit right there%1%1I'll tell you how I became the prince%1%1of a town called Bel-air
     ```
 
-Now we're getting somewhere! Let's put it all together with our code and see how this whole text would fit inside out `.lang` files
-**en_US.lang**
-`book.mystory.page1=Now this is the story all about how%1%1My life got flipped, turned upside down`
-`book.mystory.page2=And I'd like to take a minute just sit right there%1%1I'll tell you how I became the prince%1%1of a town called Bel-air`
+Now we're getting somewhere! Let's put it all together with our code and see how this whole text would fit inside out `.lang` files:\
+**en_US.lang**\
+```
+book.mystory.page1=Now this is the story all about how%1%1My life got flipped, turned upside down
+book.mystory.page2=And I'd like to take a minute just sit right there%1%1I'll tell you how I became the prince%1%1of a town called Bel-air
+```
 
-**it_IT.lang**
-`book.mystory.page1=Ora questa è tutta la storia su come%1%1La mia vita è stata capovolta, capovolta`
-`book.mystory.page2=E mi piacerebbe prendere un minuto seduto proprio lì%1%1Ti dirò come sono diventato il principe%1%1di una città chiamata Bel-air`
+**it_IT.lang**\
+```
+book.mystory.page1=Ora questa è tutta la storia su come%1%1La mia vita è stata capovolta, capovolta
+book.mystory.page2=E mi piacerebbe prendere un minuto seduto proprio lì%1%1Ti dirò come sono diventato il principe%1%1di una città chiamata Bel-air
+```
 
 Like we did before, let's do a complete restart of Minecraft just to make sure the game registered the new `.lang` files.
 
-Now go inside the game, open a book to write in and paste this on the first page:
-`{"rawtext":[{"translate":"book.mystory.page1","with":["\n"]}]}`
-And this on the second page:
+Now go inside the game, open a book to write in and paste this on the first page:\
+`{"rawtext":[{"translate":"book.mystory.page1","with":["\n"]}]}`\
+And this on the second page:\
 `{"rawtext":[{"translate":"book.mystory.page2","with":["\n"]}]}`
 
 When you click outside the pages you should see the story just like we wanted it to show. So again, like with the sign, we can't just paste `book.mystory.page1` and hope it works. We have to wrap our code inside a special formula and tell minecraft *"I want you to replace each `%1` with a new line"*
@@ -137,18 +141,18 @@ Intermediate
 
 Usually when we want an NPC to talk we have to name it and use the `/say` or `/tell` commands. For localization purposes we are going to use the `/tellraw` command. This allows us to use that special formula to tell Minecraft we want something translated.
 
-For this example I want Bob the NPC to say hi to me. As usual we'll have a code in our `.lang` file:
-`npcdialogue.bob.msg1=Hey there stranger!`
-You know what, let's make it even more fancy! Let's have Bob's name in colors for this one:
+For this example I want Bob the NPC to say hi to me. As usual we'll have a code in our `.lang` file:\
+`npcdialogue.bob.msg1=Hey there stranger!`\
+You know what, let's make it even more fancy! Let's have Bob's name in colors for this one:\
 `npcdialogue.bob.msg1=<§6Bob§r> Hey there stranger!`
 - See the [official wiki](https://minecraft.gamepedia.com/Formatting_codes) for info on text formatting
 
-Now let's create that command:
+Now let's create that command:\
 `/tellraw @a {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
 
-Go ahead and run it! Since we used the `@a` selector, Bob is saying hi to all the players. If we want him to say hi only to the closes player we have to extend the command a little bit and also replace `@a` with `@p`.
-So the updated command would be:
-`/execute @e[name=Bob] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
+Go ahead and run it! Since we used the `@a` selector, Bob is saying hi to all the players. If we want him to say hi only to the closes player we have to extend the command a little bit and also replace `@a` with `@p`.\
+So the updated command would be:\
+`/execute @e[name=Bob] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`\
 This new command is saying *"Find the entity called Bob and run the tellraw command for the closes player to that location."*
 
 ## Localize the Actionbar
@@ -157,8 +161,8 @@ So far we've put text on a sign, in a book and in the chat. Let's expand our hor
 
 Usually to show text in the Actionbar we do a quick `/title @a actionbar "Hello there!"` command. For localization we are going to use the `/titleraw` command. Let's do a quick example!
 
-Inside the `.lang` file: `actionbar.status.gamemode=You are now in Survival Mode`
-The final command:
+Inside the `.lang` file: `actionbar.status.gamemode=You are now in Survival Mode`\
+The final command:\
 `/titleraw @a actionbar {"rawtext":[{"translate" : "actionbar.status.gamemode"}]}`
 
 ## Localize Titles and Subtitles
@@ -166,23 +170,23 @@ The final command:
 This is one of the best things in terms of localization since fried rice! So listen up!
 You know how the Title is this __**H U G E**__ piece of text on the screen that blocks your view right? What if it would be possible to only show the Subtitle? It's a pretty big text in it's own right, and it's not that intrusive.
 
-Ok, so usually so show a Title and Subtitle you would have to use 2 command in a specific order.
-First you run the Subtitle command: `/title @a subtitle The Hero has won!`
+Ok, so usually so show a Title and Subtitle you would have to use 2 command in a specific order.\
+First you run the Subtitle command: `/title @a subtitle The Hero has won!`\
 Next you run the Title command: `/title @a title Victory`
 
-Let's move those lines inside the `.lang` file:
-`quest1.subtitle=The Hero has won!`
+Let's move those lines inside the `.lang` file:\
+`quest1.subtitle=The Hero has won!`\
 `quest1.title=Victory`
 
-Now let's use the `/titleraw` command again:
-`/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`
+Now let's use the `/titleraw` command again:\
+`/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`\
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
 
-But like I said, I want it all just in the subtitle! Do achieve that I simply put an empty space instead of "Victory"
-`quest1.subtitle=Victory! The Hero has won!`
-`quest1.title= ` <-- that there is an empty space after `=`
-And now we run the same 2 commands again:
-`/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`
+But like I said, I want it all just in the subtitle! Do achieve that I simply put an empty space instead of "Victory"\
+`quest1.subtitle=Victory! The Hero has won!`\
+`quest1.title= ` <-- that there is an empty space after `=`\
+And now we run the same 2 commands again:\
+`/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`\
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
 
 Expert
@@ -194,16 +198,16 @@ Expert
 
 So you want to have an NPC that greets you when you get near it. Usually we'd have it say something like *"Hey there adventurer! Glad to see you again!"*. It has a nice ring to it, but it would be awesome if the NPC would call you by name! So how do we go from that to *"Hey there <insert player name here>! Glad to see you again!"*
 
-First of all we have to prepare the line in the `.lang` file:
-`npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`
+First of all we have to prepare the line in the `.lang` file:\
+`npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`\
 Notice how we put `%1` where we want the NPC to call us by our name.
 
-Now let's create the command:
+Now let's create the command:\
 `/tellraw @a {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
 
 Just like we replaced `%1` with the new line when we created a book, now we replace it with the name of closest player by use of a `selector`.
 
-If we want to go one step further and **make sure** the NPC talks only to the closest player, we run that command from an `/execute`:
+If we want to go one step further and **make sure** the NPC talks only to the closest player, we run that command from an `/execute`:\
 `/execute @e[type=NPC] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
 
 ## Using scoreboards with localization
@@ -211,68 +215,68 @@ If we want to go one step further and **make sure** the NPC talks only to the cl
 And just like that we reached the final form of what can be done with localization! Let's say you have a friendly competition between a few players. You do some scoreboard magic and manage to find the highest scoring player and record his/her score inside the `winner` objective.
 Let's announce the winner in style! Let's do it with a Title and Subtitle!
 
-**.lang** file:
+**.lang** file:\
 `winner.subtitle=They won with %1 points!`
 
-**Commands:**
-`/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`
+**Commands:**\
+`/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`\
 `/titleraw @a title {"rawtext":[{ "selector" : "@e[scores={winner=0..}]" }]}`
 
  Since this objective has only 1 player attached to it, notice how we used a wildcard `*` for selection: `"name":"*"`.
 
  Let's add to this and paint the name of the player in a bright green!
 
- **.lang** file:
-`winner.subtitle=They won with %1 points!`
+ **.lang** file:\
+`winner.subtitle=They won with %1 points!`\
 `winner.title=§a%1`
 
-**Commands:**
-`/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`
+**Commands:**\
+`/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`\
 `/titleraw @a title {"rawtext":[{"translate":"winner.title","with":{"rawtext":[{ "selector" : "@a[scores={winner=0..}]" }]}}]}`
 
 Ok now let's combine all those commands and do a quick chat message to thank all the players for participating, and also to show them their scores. We'll use `gamescore` as out objective name that includes all the players.
 
- **.lang** file:
+ **.lang** file:\
 `players.thankyou.chat=Thank you all for participating %1! These are your scores: %2.`
 
-**Command:**
+**Command:**\
 `/tellraw @a {"rawtext":[{"translate":"players.thankyou.chat","with":{"rawtext":[{ "selector" : "@a[scores={gamescore=0..}]" },{"score" : {"name":"@a[scores={gamescore=0..}]","objective":"gamescore"}}]}}]}`
 
-Notice how we told Minecraft that we have 2 different items we want replaced inside that translation with the help of `%1` and `%2`.
+Notice how we told Minecraft that we have 2 different items we want replaced inside that translation with the help of `%1` and `%2`.\
 Also notice how we replaced the wildcard `*` and went from `"name":"*"` to `"name":"@a[scores={gamescore=0..}]"` for a more precise(and totally unnecessary) selection.
 
 So there you have it folks! All you need to know about localization in Minecraft Bedrock Edition. Hope you have a blast renaming stuff for your friend!
 
 ## Quick reference
 
-- **Simple text on a sign:**
-`sign.house_of_terrors=House of terrors`
+- **Simple text on a sign:**\
+`sign.house_of_terrors=House of terrors`\
 `{"rawtext":[{"translate":"sign.house_of_terrors"}]}`
 
-- **Writing inside a book with new lines:**
-`book.mystory.page1=Now this is the story all about how%1%1My life got flipped, turned upside down`
+- **Writing inside a book with new lines:**\
+`book.mystory.page1=Now this is the story all about how%1%1My life got flipped, turned upside down`\
 `{"rawtext":[{"translate":"book.mystory.page1","with":["\n"]}]}`
 
-- **Text in chat:**
-`npcdialogue.bob.msg1=Hey there stranger!`
+- **Text in chat:**\
+`npcdialogue.bob.msg1=Hey there stranger!`\
 `/tellraw @a {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`
 
-- **Actionbar:**
-`actionbar.status.gamemode=You are now in Survival Mode`
+- **Actionbar:**\
+`actionbar.status.gamemode=You are now in Survival Mode`\
 `/titleraw @a actionbar {"rawtext":[{"translate" : "actionbar.status.gamemode"}]}`
 
-- **Title and Subtitle:**
-`quest1.subtitle=The Hero has won!`
-`quest1.title=Victory`
-`/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`
+- **Title and Subtitle:**\
+`quest1.subtitle=The Hero has won!`\
+`quest1.title=Victory`\
+`/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`\
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
 
-- **Localization + Player names**
-`npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`
+- **Localization + Player names**\
+`npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`\
 `/tellraw @a {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
 
-- **Localization + Scoreboards + Player names**
-`players.thankyou.chat=Thank you all for participating %1! These are your scores: %2.`
+- **Localization + Scoreboards + Player names**\
+`players.thankyou.chat=Thank you all for participating %1! These are your scores: %2.`\
 `/tellraw @a {"rawtext":[{"translate":"players.thankyou.chat","with":{"rawtext":[{ "selector" : "@a[scores={gamescore=0..}]" },{"score" : {"name":"@a[scores={gamescore=0..}]","objective":"gamescore"}}]}}]}`
 
 
