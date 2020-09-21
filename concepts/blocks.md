@@ -486,7 +486,7 @@ List of all new block components, with usage examples
   	"minecraft:placement_filter": {
 		"conditions": [
 	  		{
-				"block_filter": "minecraft:dirt",
+				"block_filter": ["minecraft:dirt"],
 				"allowed_faces": ["up"]
 	  		}
 		]
