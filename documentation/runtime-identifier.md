@@ -70,7 +70,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ## `minecraft:arrow`
 ### Effects:
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Cannot be interacted with
 - If spawned through an egg or /summon command, gives the player an arrow when the player comes into contact with the entity, then removes itself
  
@@ -79,7 +79,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ## `minecraft:thrown_trident`
 ### Effects:
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Cannot be interacted with
 
 ---
