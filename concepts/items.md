@@ -13,33 +13,33 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 ```json
 {
-  "format_version": "1.16.100",
-  "minecraft:item": {
-    "description": {
-      "identifier": "example:food_item",
-      "category" : "items"
-    },
-    "components": {
-      "minecraft:use_duration": 1.6,
-      "minecraft:food": {
-        "nutrition": 4,
-        "saturation_modifier": "low",
-        "can_always_eat": true,
-        "on_consume": {
-          "event": "on_consume",
-          "target": "self"
-        }      
-      }
-    },
-    "events": {
-      "on_consume": {
-        "remove_mob_effect": {
-          "effect": "nausea",
-          "target": "holder"
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "example:food_item",
+            "category" : "items"
+        },
+        "components": {
+            "minecraft:use_duration": 1.6,
+            "minecraft:food": {
+                "nutrition": 4,
+                "saturation_modifier": "low",
+                "can_always_eat": true,
+                "on_consume": {
+                    "event": "on_consume",
+                    "target": "self"
+                }      
+            }
+        },
+        "events": {
+            "on_consume": {
+                "remove_mob_effect": {
+                "effect": "nausea",
+                "target": "holder"
+                }
+            }
         }
-      }
     }
-  }
 }
 ```
 
@@ -185,12 +185,12 @@ Used to randomize event functions
 
 #### `execute_command`
 Used to execute commands
-_This seems to be broken as of 1.16.100.56_
 ```json
 {
     "example:execute_command_event": {
         "execute_command": {
-            "command": ["say hi"]
+            "command": ["say hi"],
+            "target": "other"
         }
     }
 }
@@ -203,82 +203,82 @@ List of all new block components, with usage examples
 - minecraft:ignores_permission
 ```json
 {
-  "minecraft:ignores_permission": true
+    "minecraft:ignores_permission": true
 }
 ```
 
 - minecraft:mining_speed
 ```json
 {
-  "minecraft:mining_speed": 1
+    "minecraft:mining_speed": 1
 }
 ```
 
 - minecraft:damage
 ```json
 {
-  "minecraft:damage": 4
+    "minecraft:damage": true
 }
 ```
 
 - minecraft:can_destroy_in_creative
 ```json
 {
-  "minecraft:can_destroy_in_creative": true
+    "minecraft:can_destroy_in_creative": true
 }
 ```
 
 - minecraft:dye_powder
 ```json
 {
-  "minecraft:dye_powder": {
-      "color": 4
-  }
+    "minecraft:dye_powder": {
+        "color": 4
+    }
 }
 ```
 
 - minecraft:mirrored_art
 ```json
 {
-  "minecraft:mirrord_art": true
+    "minecraft:mirrord_art": true
 }
 ```
 
 - minecraft:explodable
 ```json
 {
-  "minecraft:explodable": true
+    "minecraft:explodable": true
 }
 ```
 
 - minecraft:should_despawn
 ```json
 {
-  "minecraft:should_despawn": true
+    "minecraft:should_despawn": true
 }
 ```
 
 - minecraft:liquid_clipped
 ```json
 {
-  "minecraft:liquid_clipped": true
+    "minecraft:liquid_clipped": true
 }
 ```
 
 - minecraft:allow_off_hand
 ```json
 {
-  "minecraft:allow_off_hand": true
+    "minecraft:allow_off_hand": true
 }
 ```
 
 - minecraft:projectile
 ```json
 {
-  "minecraft:projectile": {
-      "projectile_entity": "minecraft:arrow",
-      "minimum_critical_power": 0.5
-  }
+    "minecraft:projectile": {
+        "projectile_entity": "minecraft:arrow",
+        "minimum_critical_power": 0.5
+    }
 }
 ```
 
@@ -485,7 +485,7 @@ List of all new block components, with usage examples
 ```json
 {
     "minecraft:fertilizer": {
-        "type": "bonemeal" // Can also be 'rapid'
+        "type": "bonemeal" // Can also be "rapid"
     }
 }
 ```
@@ -526,14 +526,37 @@ _New Syntax_
     "minecraft:food": {
         "on_consume": {
             "event": "example_event",
-            "target": "holder"  // Can also be 'self' to trigger an item event
+            "target": "holder"  // Can also be 'self' to trigger an item event"
         },
-        "nutrition": 3,
+        "nurtition": 3,
         "can_always_eat": true,
         "saturation_modifier": "normal"
     }
 }
 ```
+
+## Item Tags
+
+Item tags work the same as block tags and can be applied like this:
+```json
+{
+  	"format_version": "1.16.100",
+  	"minecraft:item": {
+		"description": {
+	  		"identifier": "example:my_item",
+		},
+		"components": {
+	  		"tag:example:my_tag": {}
+		}
+  	}
+}
+```
+
+They can then be queried with:
+- `query.any_tag`
+- `query.all_tags`
+- `query.equipped_item_all_tags`
+- `query.equipped_item_any_tag`
 
 ## Breaking changes
 
@@ -543,14 +566,14 @@ If your item isn't showing up in the beta, these changes might have broken your 
 Example:
 ```json
 {
-  "format_version": "1.16.100",
-  "minecraft:item": {
-    "description": {
-      "identifier": "example:item",
-      "category" : "items"     // This line is required
-    },
-    "components": {...},
-    "events": {...}
-  }
+    "format_version": "1.16.100",
+    "minecraft:item": {
+        "description": {
+            "identifier": "example:item",
+            "category" : "items"     // This line is required
+        },
+        "components": {...},
+        "events": {...}
+    }
 }
 ```
