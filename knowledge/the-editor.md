@@ -27,6 +27,9 @@ Due to the nature of the file versioning system, most scripts and tools will con
 
 For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev).
 
+## CoreCoder
+[CoreCoder](https://hanprog.itch.io/core-coder/) is a new addon editing paid app. You can find out more on the webpage.
+
 ## My Recommendation:
 I recommend using Microsoft Studio Code. It contains all of the features I that I feel are important, and it contains little/no bloat.
 
