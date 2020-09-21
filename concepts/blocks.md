@@ -101,12 +101,24 @@ Used to set the value of a block's property
 Used to set a block releative to this blocks position
 ```json
 {
-  "example:trigger_event": {
-	"set_block_at_pos": {
-	  "block_type": "minecraft:stone",
-	  "block_offset": [0, 0, 0]
-	}
-  }
+  	"example:trigger_event": {
+		"set_block_at_pos": {
+	  		"block_type": "minecraft:stone",
+	  		"block_offset": [0, 0, 0]
+		}
+  	}
+}
+```
+
+#### `execute_command`
+Used to execute a command
+```json
+{
+  	"example:execute_event": {
+		"execute_command": {
+	  		"command": ["summon pig"]
+		}
+  	}
 }
 ```
 
