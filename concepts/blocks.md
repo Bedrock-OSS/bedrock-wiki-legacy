@@ -263,8 +263,6 @@ A tag can be applied like this:
 and this tag can be queried with:
 - `query.all_tags`
 - `query.any_tag`
-- `query.equipped_item_all_tags`
-- `query.equipped_item_any_tag`
 - `query.block_has_all_tags`
 - `query.block_has_any_tag`
 - `query.relative_block_has_all_tags`

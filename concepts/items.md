@@ -535,6 +535,29 @@ _New Syntax_
 }
 ```
 
+## Item Tags
+
+Item tags work the same as block tags and can be applied like this:
+```json
+{
+  	"format_version": "1.16.100",
+  	"minecraft:item": {
+		"description": {
+	  		"identifier": "example:my_item",
+		},
+		"components": {
+	  		"tag:example:my_tag": {}
+		}
+  	}
+}
+```
+
+They can then be queried with:
+- `query.any_tag`
+- `query.all_tags`
+- `query.equipped_item_all_tags`
+- `query.equipped_item_any_tag`
+
 ## Breaking changes
 
 If your item isn't showing up in the beta, these changes might have broken your item.
