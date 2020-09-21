@@ -23,7 +23,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Amulet](https://discord.gg/dSnwqQf)
 
 ## Tools:
- - [Bridge Addon Editor](https://github.com/bridge-core/bridge.)
+ - [Bridge Addon Editor](https://bridge-core.github.io/)
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)

@@ -38,7 +38,7 @@ Many packages exist for VSCode that make editing addons easier:
 ## Bridge
 For those new to addons, or for those who want more support while creating addons, I recommend bridge.
 
-[Bridge](https://github.com/bridge-core/bridge.) is an Editor designed specifically for editing Minecraft addons. It has some very powerful features, such as auto-complete, file validation and easy creation of new packs.
+[Bridge](https://bridge-core.github.io/) is an Editor designed specifically for editing Minecraft addons. It has some very powerful features, such as auto-complete, file validation and easy creation of new packs.
 
 If you choose to use Bridge, you should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and Bridge creates a bit of an overhead in your workflow (more later). The app builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
 1) Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without Bridge
