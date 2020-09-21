@@ -48,6 +48,13 @@ Due to the nature of the file versioning system, most scripts and tools will con
 
 For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev).
 
+## Core Coder
+Another IDE made specifically for minecraft like bridge. Core Coder brings real time JSON highlighter, means any typos and errors are shown up immediately on the app.
+[Core Coder](https://hanprog.itch.io/core-coder/) is brand new compared to bridge, most of it's features are still not mature enough. I (Hanprogrammer) am recommending Core Coder for those who loves editing JSONs as a raw text, rather than TreeView.
+Another great features of Core Coder is it's ability to open up Web Browser directly in the app. So no longer need to open up Chrome at the same time.
+
+For further information about this app, feel free to contanct [Hanprogramer](https://discord.gg/BEwRGQ3)
+
 ## Other good editors:
  - Sublime text
  - Notepad++
