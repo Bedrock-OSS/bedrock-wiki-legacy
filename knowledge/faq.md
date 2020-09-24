@@ -25,7 +25,12 @@ This page contains a list of frequently asked questions in the technical-bedrock
 ---
 
 ### Can I make custom, transparent blocks?
-No
+Yes, starting from the beta 1.16.100 it is possible by including this component: ```"render_method": "alpha_test"```
+
+---
+
+### Why is my entity moving chaotically/aimlessly/really fast?
+Your entity is missing a naviagtion component or a movement speed component. Make sure your entity behavior file includes them.
 
 ---
 
