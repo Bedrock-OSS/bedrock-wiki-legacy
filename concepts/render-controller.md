@@ -1,10 +1,13 @@
 ---
 layout: page
 title: Render Controllers
-parent: Tutorials
+parent: Concepts
 ---
 
 # Render Controllers
+
+Beginner
+{: .label .label-green }
 
 Render controllers are an often-missunderstood part of the Resource Pack ecosystem. You should think of render-controllers as logic packs that take short-name definitions from the Resource Entity File (from now on, the entity file), and determine how they will be combined/layered/rendered in-game.
 

@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Respawn Commands
 
+Intermediate
+{: .label .label-yellow }
+
 This animation controller can be used to run commands, such as re-adding potion effects or giving items when the player respawns.
 
 Simply add the animation controller to the `player.json`, and 

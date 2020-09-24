@@ -4,7 +4,7 @@ description: >-
   Knowledge-sharing Bedrock Wiki, containing documentation, tutorials, and general how-to information. Written and maintained by SirLich#1658.
 
 remote_theme: pmarsceill/just-the-docs
-color_scheme: discord_dark
+color_scheme: hybrid_dark
 
 github_username:  SirLich
 
@@ -17,6 +17,9 @@ gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into t
 
 coderay_default_lang: JSON
 
+kramdown:
+  parse_block_html: true
+  
 markdown: kramdown
 url: https://wiki.bedrock.dev
 aux_links:

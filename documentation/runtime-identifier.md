@@ -19,7 +19,7 @@ It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 }
 ```
 
-It's important to remember that `runtime_identifier` will only parse the hard-coded properties of an entity. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity.
+It's important to remember that `runtime_identifier` will only parse the hard-coded properties of an entity. This means that using a 100% datadriven mob as the Runtime Identifier will not add any new properties to your entity. Additionally, some entity runtimes may overwrite properties found in datadriven components even if they are added in the components section, such as the collision box size for the shulker entity. 
 
 # Known runtime-identifier effects:
 
@@ -31,12 +31,12 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ### Effects:
 - A solid collision box of 1x1x1.
 - The entity will stick to the center of the block it's spawned in.
-- If the block it's attached to is removed, the entity will teleport to another location nearby.
-- If the entity is spawned on a non-full block (e.g. bed, slab, etc...), it will teleport to another location nearby.
+- If the block it's attached to is removed, the entity will teleport to another unobstructed location nearby.
+- If the entity is spawned on a non-full block (e.g. bed, slab, etc...), it will teleport to another unobstructed location nearby.
 - The solid collision box's width and height cannot be changed.
 
 ---
-## `minecraft:end_crystal`
+## `minecraft:ender_crystal`
 ### Effects:
 - The entity will stick to the center of the block it's spawned in.
 - Unless teleported, the entity will always maintain its positions.
@@ -56,12 +56,13 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ## `minecraft:armor_stand`
 ### Effects:
  - Disables entity shadows
+ - Punching the entity will cause it to instantly despawn
  - Equipment placeable on/removable from entity
 
 ---
 ## `minecraft:iron_golem`
 ### Effects:
-- Allows launching attack (player knockback?)
+- Allows launching attack (attacks deal increased knockback with a vertical amplification)
 - Speeds up arm and leg animation (can be fixed manually, ~1/4 speed)
 - May interact poorly with village/villager logic.
 
@@ -69,16 +70,16 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ## `minecraft:arrow`
 ### Effects:
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Cannot be interacted with
-- Gives(or drops?) the player an arrow if the entity successfully hits the player
+- If spawned through an egg or /summon command, gives the player an arrow when the player comes into contact with the entity, then removes itself
  
 
 ---
 ## `minecraft:thrown_trident`
 ### Effects:
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Cannot be interacted with
 
 ---
@@ -88,4 +89,28 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 
 ---
 ## `minecraft:spider`
+### Effects:
  - Allows cobwebs to not slow down entity
+
+ ---
+## `minecraft:minecart`
+### Effects:
+ - Disables entity shadow
+ - Makes the entity drop a minecart on death
+ - Prevents the entity from rotating
+
+  ---
+## `minecraft:boat`
+### Effects:
+ - Adds the pocket boat UI when ridden
+ - Prevents the entity from rotating
+
+  ---
+## `minecraft:sheep`
+### Effects:
+ - Allows `query.is_grazing` to function with the `behavior.eat_block` component
+ 
+  ---
+## `minecraft:panda`
+### Effects:
+ - Allows `query.is_grazing` and `query.sit_mount` to function with the `minecraft:behavior.random_sitting` component

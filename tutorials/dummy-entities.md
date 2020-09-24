@@ -21,6 +21,8 @@ This is a non-exhaustive list of how dummies can be used:
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
+entities/dummy.json  
+
 ```json
 {
     "minecraft:entity": {
@@ -62,6 +64,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 ```
 
 ## Resource Entity
+entity/dummy.json  
 
 ```json
 {
@@ -87,6 +90,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 ```
 
 ## Geometry
+models/entity/dummy.json  
 
 ```json
 {
@@ -103,7 +107,8 @@ You can use whatever behaviors you like, but here is a good template. The import
 }
 ```
 
-## Render Controller
+## Render Controller (Optional)
+render_controllers/dummy.json
 
 ```json
 {
@@ -124,6 +129,6 @@ You can use whatever behaviors you like, but here is a good template. The import
 }
 ```
 
-## Texture
+## Texture (Optional)
 
 You can either leave the texture location blank, or open the model in block-bench and create a blank texture.

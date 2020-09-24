@@ -6,6 +6,8 @@ parent: Tutorials
 
 # Boat Entities
 
+Intermediate
+{: .label .label-yellow }
 
 ## Using Runtime Identifiers
 

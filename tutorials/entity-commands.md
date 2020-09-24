@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Entity Commands
 
+Intermediate
+{: .label .label-yellow }
+
 A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad! 
 
 # Animation Controllers

@@ -9,7 +9,7 @@ parent: Knowledge
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! I will do my best to keep this list up to date as I continue to find useful content.
 
 ## Tutorials:
- - [Beginner Tutorials](https://sites.google.com/view/mcbe-add-on-tutorial/guide?authuser=0)
+ - [Beginner Tutorials](https://guide.bedrock.dev/)
 
 ## Discord Links:
 
@@ -23,10 +23,13 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Amulet](https://discord.gg/dSnwqQf)
 
 ## Tools:
- - [Bridge Addon Editor](https://github.com/bridge-core/bridge.)
+ - [Bridge Addon Editor](https://bridge-core.github.io/)
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
+ - [Core Coder (paid)](https://hanprog.itch.io/core-coder)
+ - [Feature Rule Generator 2 (paid)](https://machine-builder.itch.io/frg-v2)
+ - [Add-on Json Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
 
 ## JSON Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
@@ -37,12 +40,17 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Feature Rules](https://machine-builder.github.io/feature_rule_generator_1.15.html)
  - [Block and Items](https://gitwither.github.io/bedrock-item-generator/)
  - [Manifests](https://geenium.github.io/pack-manifest-creator/)
+ - [behavior-builder (beta)](https://stirante.com/behavior/index.html)
+ - [controller-builder (beta)](https://stirante.com/controller/index.html)
+ - [.lang](https://solveddev.github.io/AnyLanguage/)
+ - [Anvil Behavior Generator (beta)](https://anvil.starktma.com/)
   
 ## Documentation Links:
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
  - [TheDestruc7i0n Documentation](https://bedrock.dev/)
  - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
  - [Component Examples](vanilla-usage/components)
+ - [Json guis](https://geenium.com/bedrock/json-guis/)
  - [Bedrock Edition Data Values](https://minecraft.gamepedia.com/Bedrock_Edition_data_values)
  - [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
  - [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac)
@@ -53,18 +61,15 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
  - [Vanilla Beta Behavior Pack](https://aka.ms/MinecraftBetaBehaviors)
 
-## VSCode Resources
- - [.mcfunction](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
- - [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
- - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
- - [Pretty-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
- - [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
-
 ## Scripting Resources:
  - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)
  - [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
  - [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
  - [Get Started](https://minecraft-addon-tools.github.io/tutorials/)
+
+## Shader Resources:
+ - [The book of Shaders](https://thebookofshaders.com/)
+ - [Lean OpenGL](https://learnopengl.com/)
 
 ## Other useful Links:
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)

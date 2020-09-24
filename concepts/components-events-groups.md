@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Components/Groups/Events
-parent: Knowledge
+parent: Concepts
 ---
 
 # Component Groups Vs. Components Vs. Events
@@ -27,7 +27,7 @@ Here is an example:
     "minecraft:variant": { //A list of valid components. Add as many as you like.
         "value": 6
     },
-    "minecraft:physics: {}
+    "minecraft:physics": {}
 }
 ```
 

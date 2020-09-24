@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vanilla Biomes 1.16
+title: Biomes
 parent: Vanilla Usage
 ---
 

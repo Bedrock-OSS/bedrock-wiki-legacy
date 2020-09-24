@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Invulnerable Entities
 
+Beginner
+{: .label .label-green }
+
 ## Using Damage Sensor:
 ```json
 "minecraft:damage_sensor": {

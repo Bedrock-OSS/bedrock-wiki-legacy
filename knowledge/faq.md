@@ -20,12 +20,17 @@ This page contains a list of frequently asked questions in the technical-bedrock
 ---
 
 ### What is the default friction of vanilla blocks?
-0.5
+0.6
 
 ---
 
 ### Can I make custom, transparent blocks?
-No
+Yes, starting from the beta 1.16.100 it is possible by including this component: ```"render_method": "alpha_test"```
+
+---
+
+### Why is my entity moving chaotically/aimlessly/really fast?
+Your entity is missing a naviagtion component or a movement speed component. Make sure your entity behavior file includes them.
 
 ---
 
@@ -56,7 +61,11 @@ No
 
 ---
 ### How can I test if a player is in the Nether or End?
-You can't
+Detailed explanation of how to do it:
+Create a component group for each dimension, or just one if you're only testing one dimension. Then add an environment sensor to the player.json file testing for the ```is_biome``` query. Set the tested biome to ```the_end``` if you are testing for the End dimension. If you are doing the Nether, change the ```all_of``` statement at the beginning of the sensor to ```any_of``` and then run five different biome tests for the five different biome IDs of the 1.16 Nether: ```hell```, ```crimson_forest```, ```warped_forest```, ```soulsand_valley``` and ```basalt_deltas```. Then make an ```is_in_nether``` (or is_in_end, depending on which you do) component group for the player, and make the environment sensor run an event that adds the respective dimension's component group to the player, removing any others if necessary. Each component group will spawn its own custom entity which will run an animation controller to add a tag to the player incidating they are in a certain dimension (for example, /tag @p add inNether), removing other dimensions' tags if necessary. The entity(s) doesn't matter much; just make it despawn after a tick or two. After that, feel free to do whatever you want with the players tagged in their respective dimensions. Back to the previous example, identifying all the players in the Nether dimension will look like @a[tag=inNether].
+
+Tl;dr version:
+It can be done through an environment sensor and a bit of json magic.
 
 ---
 ### How do I stop my entity from being pushed around?
@@ -107,3 +116,7 @@ The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.3
 ---
 ### What is the max seconds in a /effect command?
  - 2147483647
+
+### How can I freeze an animation when it completes?
+
+- Use `"loop": "hold_on_last_frame". This will pause the animation on its last frame, instead of resetting back to the base pose. Useful for things like chests, which need to open and *stay open* until closed.

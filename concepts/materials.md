@@ -1,10 +1,13 @@
 ---
 layout: page
 title: Materials
-parent: Tutorials
+parent: Concepts
 ---
 
 # Materials
+
+Expert
+{: .label .label-red }
 
 ## Overview
 
@@ -136,4 +139,4 @@ which can then finally be followed to "entity_static"
 
 ## Useful custom material presets
 
-WIP
+A list of [material presets can be found here](/documentation/materials.html).

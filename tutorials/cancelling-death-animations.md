@@ -6,6 +6,9 @@ parent: Tutorials
 
 # Cancelling Death Animations
 
+Intermediate
+{: .label .label-yellow }
+
 Death animation refers to the rotation of the entity as it dies. This is accompanied by a red coloring, and followed shortly after by the disappearance of the entity geometry, and the appearance of the death particles.
 
 # Teleporting the Entity

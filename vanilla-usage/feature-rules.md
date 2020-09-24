@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Vanilla Feature Rules 1.16
+title: Feature Rules
 parent: Vanilla Usage
 ---
 
