@@ -1,14 +1,23 @@
 ---
 layout: page
-title: Armor Values
+title: Molang
 parent: Documentation
 ---
 
-# Armor Values
+# Molang
 
-Bedrock uses a number-id system for checking the armor texture. Use these tables.
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
-## query.armor_texture_slot
+The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, *where possible*. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
+
+# query.armor_texture_slot
 
 Formatted like: `query.armor_texture_slot(x) = y`. 
 
@@ -38,7 +47,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 
 `query.armor_texture_slot(3) == 2`: queries for Iron Boots.
 
-## query.armor_material_slot
+# query.armor_material_slot
 
 Formatted like: `query.armor_material_slot(x) = y`. 
 
