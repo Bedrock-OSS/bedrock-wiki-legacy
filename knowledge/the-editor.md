@@ -48,6 +48,10 @@ Due to the nature of the file versioning system, most scripts and tools will con
 
 For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev).
 
+## CoreCoder
+[CoreCoder](https://hanprog.itch.io/core-coder/) is a new addon editing paid app. You can find out more on the webpage.
+
+## Recommendations from community members:
 ## Other good editors:
  - Sublime text
  - Notepad++
