@@ -116,3 +116,7 @@ The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.3
 ---
 ### What is the max seconds in a /effect command?
  - 2147483647
+
+### How can I freeze an animation when it completes?
+
+- Use `"loop": "hold_on_last_frame". This will pause the animation on its last frame, instead of resetting back to the base pose. Useful for things like chests, which need to open and *stay open* until closed.
