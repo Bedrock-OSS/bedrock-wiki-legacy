@@ -1,13 +1,16 @@
 ---
 layout: page
-title: Software and preparation;
+title: Software and preparation
 parent: Beginners Guide
 ---
 
-#### **You will:** 
-- [ ] Download the necessary [**tools and software**](#downloading-the-software);
-- [ ] Locate and understand your [**com.mojang folder**](#the-com.mojang-folder-and-your-workspace);
-- [ ] Be introduced to [**referencing**](learning-to-reference).  
+___
+___
+<!-- #### **You will:**  -->
+
+- [Tools and software](#downloading-the-software);
+- [com.mojang folder](#the-com.mojang-folder-and-your-workspace);
+- [Referencing](learning-to-reference).
 
 ___
 ___
