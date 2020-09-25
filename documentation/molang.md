@@ -24,6 +24,7 @@ Formatted like: `query.armor_texture_slot(x) = y`.
 Where `x` and `y` are both integer arguments, from the following table:
 
 ### X
+
 | Argument | Slot       |
 |----------|------------|
 | 0        | Helmet     |
@@ -32,6 +33,7 @@ Where `x` and `y` are both integer arguments, from the following table:
 | 3        | Boots      |
 
 ### Y
+
 | Argument | Type                  |
 |----------|-----------------------|
 | 0        | chain armor piece     |
@@ -54,6 +56,7 @@ Formatted like: `query.armor_material_slot(x) = y`.
 Where `x` and `y` are both integer arguments, from the following table:
 
 ### X
+
 | Argument | Slot       |
 |----------|------------|
 | 0        | Helmet     |
