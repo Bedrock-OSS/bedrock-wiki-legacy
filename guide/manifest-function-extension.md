@@ -32,9 +32,7 @@ Like all other code files in your pack, it's written in JSON [Java Script Object
 You can learn more about JSON [here](https://www.w3schools.com/whatis/whatis_json.asp).
 ___
 Let's create our Resource Pack manifest first by copying the code below into `res/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).
-<table>
-<tr>
-<td>
+
 
 ```jsonc
 {
@@ -67,8 +65,7 @@ Let's create our Resource Pack manifest first by copying the code below into `re
     ]
 }
 ```
-</td>
-<td>
+
 Let's break up the code now.
 
 - "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version, use it. 
@@ -83,9 +80,6 @@ Let's break up the code now.
 
 - In "`modules`", write the same "`version`" number, a new UUID under "uuid" and define the "`type`" to be "`resources`". This makes your pack a *Resource Pack*, also called a *Client pack* or a *Texture pack*. It changes things in-game visually.
 
-</td>
-</tr>
-</table>
 
 
 ###### Note: if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
@@ -140,10 +134,10 @@ The next step is, naturally, creating your `bhv/manifest.json`. it is very much 
 
 The last thing to do is to add your `pack_icon.png` file to both bhv and ``res``. I'm going to use this image here for now.
 
-<img src="https://lh4.googleusercontent.com/pAZ5XOSxZhsOQkue7DZVYp6Ye_V8_tw1kQfItIPR_eow_Jg1uFE-PIatVRVryxWZxNAwSzH-=w1280" alt="pack_icon.png" width="100" height="100">
+![Pack icon](/assets/guide/pack_icon.png)
 
 If you have done everything correctly, your packs should show up in Minecraft now!
-![](https://lh5.googleusercontent.com/cOMSfomz05GXtTuNf4MMd3pv2uTjQsJPEcd2Iv31Fpk6O9x4jJpc3jCWPK0uyhT6xVuz95Lmm3t3pkG8q3KVREM2-viZeZ93wS6RnaFL0tcLK9OhPw=w1280)
+![](/assets/guide/behavior_pack_existing.jpg)
 ___
 
 ## Creating your testing world.
@@ -157,12 +151,12 @@ Now to create a testing world to test your new add-on!
 
 3. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
-![](https://lh4.googleusercontent.com/tvxlUACvewO747WZPs4VcNkgTQU0YIb2vF6F5AUOlVKkiTlfW1Wf_tGJoU5hUw04MuYq848FDR00Kh2rau5PP6dUZkgOpaGpGGS2tlOtvAmsaPtCxTo=w1280)
-![](https://lh4.googleusercontent.com/zmiX0xuSPifm0OaSll_2F9KRNJ_fTU_8NQLKkizL_P0epYJxAyhl_nucUYEdM5_I8282mFa7ELSjsddH9O-tAvwt2hHol3XRe0stiZgDD9mPare_Mk4=w1280)
-![](https://lh3.googleusercontent.com/ucrFnKkKFyJc1q-FKIh7BXF_XDZrah5VO8GpQf2rbVlBmBYe4fYJqgzdvui48MTmG-CS-kzGinbpaRrxpbtKeC66Q0Of3_nii96PGbccaW2fQciKMSgJ=w1280)
+![](/assets/guide/world_params_1.jpg)
+![](/assets/guide/world_params_2.jpg)
+![](/assets/guide/world_params_3.jpg)
 
 Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too, otherwise, it'll be applied automatically). Check if **[EX]**(Experimental Gameplay) is turned on, and click '**Create**'. You might need a separate '*Infinite*' world to test entity spawning too.
-![](https://lh3.googleusercontent.com/cinm3FPFOD6ltJETojv4_MSFUUumTU7tie_Wfb0wgRDmNkUojM-7-7sfe7GwQrPPtuRhgSO3qxR8WAWpMvEXyCbKmszhG5UeDtroqOVpu_Dn2jdyMPM=w1280)
+![](/assets/guide/behavior_pack_applied.jpg)
 
 _____________
 ___
@@ -173,21 +167,21 @@ ___
 ### .mcstructure 
 An  `.mcstructure`  file literally includes a Minecraft structure, consisting of blocks and entities. It can be exported via a Structure Block(`*/give @s structure_block*`) and is Win10 Edition only. 
 If you store one of these files in the `bhv/structures` folder you'll be able to '**load**' the structure from structure blocks on any world with the pack applied. (*A reliable method to transfer structures between worlds!*). See the Custom Structures article to make your Structures automatically generate in your world!   
-![Structure Block Example](https://lh3.googleusercontent.com/etM61aRfY9Bs620FIhERNhGvz_nT3pLGbxoOT0l77WIgfNi5pqiZuBl0FDzMhHQcLgXJqpD5-iLuJORVxgk8lJFJrD6mfaaaT9SOrqS8VszvSKL1x_8=w1280)
+![Structure Block Example](/assets/guide/structure_block_example.jpg)
 ___
 ### .mcfunction
 An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `bhv/functions/`. VSC will treat it like a normal .txt file.   
 Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:   
-![.mcstructure in VSC](https://lh6.googleusercontent.com/L22taym6TU39a1Bt-VQVVn_fSoRq4HmGx2oSFD8xa1lXBlCWPdsh3ehAJD7BaeNQa6XeuCjYMmRg6bltWkI76TgkG0MDKQyOcUuZEgKab0HgQciEBiw6=w1280)
+![.mcstructure in VSC](/assets/guide/function_code.jpg)
 ##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors.
 
 Now you can run the function by typing `/function diamond_tools` (*`/function {filename}`*) in the in-game chat!   
-![function in-game](https://lh6.googleusercontent.com/e_e0T8zgqVsfy6KrtA2_PmR77YadWAP9q0aQagOLSBBOQKQeNwynCxP3QRZ6TdyhekKmVb72cwHlqiSaQUG_n8vRa3X_jTZfTJ3oQVTMnMPdQcAcBB8=w1280)   
+![function in-game](/assets/guide/function_in_game.jpg)   
 ___
 ## .mcpack, .mcaddon & .mcworld
 Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `bhv` or your `res`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)   
 
-![](https://lh5.googleusercontent.com/liQIAt2WI_spFNK4KqtItVzWC2-_I8A1m_SzVdcPC0zVI0RL-5A4yEqSx4vTSIeJRZFmKQufgoL4-9cyPCTFwo4cfXlIOAS9Q_atc_kmoFMY7O_ZcQ=w1280)
+![](/assets/guide/transpiled_mcpack.png)
 
 What if you want both your resource pack and your behavior pack to be imported at once? Make both `.mcpacks`, then select them and choose `send to>compressed(zipped) folder`. Then change `.zip` to `.mcaddon`. Done!
 ##### Note: Some external programs like AJG and bridge do that automatically.
