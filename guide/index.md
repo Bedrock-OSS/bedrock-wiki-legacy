@@ -34,7 +34,7 @@ You will make your first steps in creating an add-on here, by learning to create
 
 Now it's time to begin writing the first features of you add-on. In this section you'll create a simple "Gem" item, and a custom food, as well as you'll learn linking textures via short names.
 
-- = Custom Items; Linking Textures(short names); 
+- Custom Items; Linking Textures(short names); 
 
 Next up are custom blocks. You'll create a simple block, an animated block with a flipbook texture, a "Compass" block that has different textures for every direction and a block that imitates a Log.
 

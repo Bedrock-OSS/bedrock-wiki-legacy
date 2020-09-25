@@ -1,3 +1,8 @@
+---
+layout: page
+title: Software and preparation;
+parent: Beginners Guide
+---
 
 #### **You will:** 
 - [ ] Download the necessary [**tools and software**](#downloading-the-software);

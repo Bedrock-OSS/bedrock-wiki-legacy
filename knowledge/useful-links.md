@@ -9,7 +9,7 @@ parent: Knowledge
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! I will do my best to keep this list up to date as I continue to find useful content.
 
 ## Tutorials:
- - [Beginner Tutorials](https://guide.bedrock.dev/)
+ - [Beginner Guide](https://guide.bedrock.dev/)
 
 ## Discord Links:
 
@@ -27,8 +27,9 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
- - [Core Coder (paid)](https://hanprog.itch.io/core-coder)
- - [Feature Rule Generator 2 (paid)](https://machine-builder.itch.io/frg-v2)
+ - [CoreCoder (paid) [Code Editor]](https://hanprog.itch.io/core-coder)
+ - [Feature Rule Generator v2 (paid version)](https://machine-builder.itch.io/frg-v2)
+ - [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
  - [Add-on Json Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
 
 ## JSON Generators
