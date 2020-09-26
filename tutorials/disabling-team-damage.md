@@ -50,4 +50,5 @@ Now add this damage sensor component into your `player.json`s `"components": {}`
                   "deals_damage":false //if any of these filters evaluate to true in the current attack interaction, the target will not be hurt.
                }
             ]
-         }```
+         }
+         ```
