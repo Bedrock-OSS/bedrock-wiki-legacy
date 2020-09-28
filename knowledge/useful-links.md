@@ -73,7 +73,9 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Lean OpenGL](https://learnopengl.com/)
 
 ## Other useful Links:
+ - [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
+ - [Minecraft Marketplace partner Twitter list](https://twitter.com/i/lists/1191945551853629442?s=09)
  - [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
