@@ -191,7 +191,7 @@ Now lets create events so we can easily add these groups:
     "command_zombies": {
         "add": {
             "component_groups": [
-                "command_zombie"
+                "command_zombies"
             ]
         }
     }
@@ -217,7 +217,7 @@ This component will spawn zombies whenever you click on him.
                     }
                 ]
             },
-            "event": "command_zombie"
+            "event": "command_zombies"
         }
     }]
 }
