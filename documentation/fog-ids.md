@@ -80,4 +80,4 @@ parent: Documentation
 
 ---
 
-(Original Credit](https://www.youtube.com/watch?time_continue=52&v=SA79ulIgypg&feature=emb_logo)
+[Original Credit](https://www.youtube.com/watch?time_continue=52&v=SA79ulIgypg&feature=emb_logo)
