@@ -130,8 +130,10 @@
         }
         document.getElementsByClassName("site-footer")[0].prepend(switcher);
 
-        window.addEventListener('scroll', updateTOC);
-        updateTOC();
+        if (document.querySelector(`#toc`)) {
+            window.addEventListener('scroll', updateTOC);
+            updateTOC();
+        }
     });
 
     function updateTOC() {
