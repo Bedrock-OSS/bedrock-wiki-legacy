@@ -56,6 +56,7 @@ parent: Documentation
 | minecraft:fog_mesa_bryce                       |      |
 | minecraft:fog_mesa_mutated                     |      |
 | minecraft:fog_mesa_plateau                     |      |
+| minecraft:fog_mesa_plateau_stone               |      |
 | minecraft:fog_mushroom_island                  |      |
 | minecraft:fog_mushroom_island_shore            |      |
 | minecraft:fog_ocean                            |      |
@@ -79,4 +80,4 @@ parent: Documentation
 
 ---
 
-(Original Credit](https://www.youtube.com/watch?time_continue=52&v=SA79ulIgypg&feature=emb_logo)
+[Original Credit](https://www.youtube.com/watch?time_continue=52&v=SA79ulIgypg&feature=emb_logo)
