@@ -7,7 +7,7 @@
   padding: .2rem 2.5rem .2rem .75rem;
   margin: 1rem 0;
   outline: none;
-  background-color: $base-button-color;
+  background-color: $body-background-color;
   color: $link-color;
   font-size: inherit;
   appearance: none;
@@ -20,9 +20,9 @@
   #toc {
     position: fixed;
     top: calc(60px + 2rem);
-    left: calc((100% - 1064px) / 2 + 1064px);
+    left: calc((100% - 1528px) / 2 + 1164px);
     border-left: 1px solid $border-color;
-    max-width: calc(100% - ((100% - 1064px) / 2 + 1092px));
+    max-width: 364px;
     overflow-y: auto;
     max-height: calc(100% - 60px - 2rem);
     padding-left: 12px;
@@ -66,6 +66,21 @@
 
   #toc pre {
     background: none;
+  }
+  .side-bar {
+    width: calc((100% - 1528px) / 2 + 364px);
+    min-width: 364px;
+  }
+  //main-content and main are the same class but in 2 different theme versions
+  .main-content, .main {
+    margin-left: calc((100% - 1528px) / 2 + 364px);
+  }
+  //navigation and site-nav are the same class but in 2 different theme versions
+  .navigation,
+  .site-nav,
+  .site-header,
+  .site-footer {
+    width: 364px;
   }
 
 }
