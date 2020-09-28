@@ -174,10 +174,10 @@ Now lets create events so we can easily add these groups:
             ]
         }
     },
-    "execute_no_command": {
+    "execute_no_commands": {
         "add": {
             "component_groups": [
-                "execute_no_command"
+                "execute_no_commands"
             ]
         }
     },
@@ -191,7 +191,7 @@ Now lets create events so we can easily add these groups:
     "command_zombies": {
         "add": {
             "component_groups": [
-                "command_zombies"
+                "command_zombie"
             ]
         }
     }
