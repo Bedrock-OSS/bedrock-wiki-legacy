@@ -71,12 +71,9 @@
     width: calc((100% - 1528px) / 2 + 364px);
     min-width: 364px;
   }
-  //main-content and main are the same class but in 2 different theme versions
-  .main-content, .main {
+  .main {
     margin-left: calc((100% - 1528px) / 2 + 364px);
   }
-  //navigation and site-nav are the same class but in 2 different theme versions
-  .navigation,
   .site-nav,
   .site-header,
   .site-footer {
