@@ -91,5 +91,5 @@ Defines the name that will show when selecting the subpacks.
 A number specifying the order of the subpacks on the slider. (Starts at 0)
 
 - folder_name
-This specifys the nameof the folder to be used in this subpack, for 
+This corresponds to the name of the folder to be used in this subpack, for 
 example in the examples above this would be "subpack_1" or "other_subpack"
