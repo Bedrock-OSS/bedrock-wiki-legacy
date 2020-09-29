@@ -2,7 +2,7 @@
 layout: page
 title: Manifest; Custom Function; .mc file extensions
 parent: Beginners Guide
-nav_order: 2
+nav_order: 3
 ---
 
 # Simple custom Item - Creating a 'Gem'
