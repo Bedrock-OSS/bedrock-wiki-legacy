@@ -8,19 +8,12 @@ parent: Documentation
 
 ## What are subpacks?
 
-Subpacks are what cause the gear icon to appear on packs.
-They were originally intended for texture resolutions to 
-load on different memory capacities, but can also be use 
-to create file variations in behavior and resource packs 
-which can then be chosen by clicking the gear icon and 
-adjusting the slider.
+Subpacks are what cause the gear icon to appear on packs. They were originally intended for texture resolutions to load on different memory capacities, but can also be use to create file variations in behavior and resource packs which can then be chosen by clicking the gear icon and adjusting the slider.
 
 ## Creating subpacks
 
-- To start adding a subpack you need to create a `subpacks` folder inside 
-the root of your BP or RP.
-- Then inside the `subpacks` folder add a folder for each subpack 
-you want to have
+- To start adding a subpack you need to create a `subpacks` folder inside the root of your BP or RP.
+- Then inside the `subpacks` folder add a folder for each subpack you want to have
 e.g.
 ```
 \---subpacks
@@ -49,9 +42,7 @@ e.g.
 
 ## Adding subpacks to manifests
 
-To register the subpacks in the manifest 
-you need to add `subpacks` and this contains 
-an array of subpacks.
+To register the subpacks in the manifest you need to add `subpacks` and this contains an array of subpacks.
 Example:
 ```jsonc
 {
@@ -91,5 +82,4 @@ Defines the name that will show when selecting the subpacks.
 A number specifying the order of the subpacks on the slider. (Starts at 0)
 
 - folder_name
-This corresponds to the name of the folder to be used in this subpack, for 
-example in the examples above this would be "subpack_1" or "other_subpack"
+This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be "subpack_1" or "other_subpack"
