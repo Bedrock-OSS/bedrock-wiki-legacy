@@ -4,3 +4,6 @@ _site
 .jekyll-metadata
 vendor
 .DS_Store
+
+# asdf version file
+.tool-versions
