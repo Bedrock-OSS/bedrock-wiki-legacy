@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Manifest; Custom Function; .mc file extensions
+title: Custom Items; Linking Textures; Short Names
 parent: Beginners Guide
 nav_order: 3
 ---
