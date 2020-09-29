@@ -2,6 +2,7 @@
 layout: page
 title: Manifest; Custom Function; .mc file extensions
 parent: Beginners Guide
+nav_order: 2
 ---
 
 ___
@@ -31,7 +32,8 @@ Like all other code files in your pack, it's written in JSON [Java Script Object
 
 You can learn more about JSON [here](https://www.w3schools.com/whatis/whatis_json.asp).
 ___
-Let's create our Resource Pack manifest first by copying the code below into `res/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).
+
+Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).
 
 
 ```jsonc
@@ -85,7 +87,7 @@ Let's break up the code now.
 ###### Note: if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
 
 #
-The next step is, naturally, creating your `bhv/manifest.json`. it is very much like a Resource pack manifest, except the "`type`" is "`data`"(for a *Data Pack*/*Behavior Pack*). There's also an optional field "`dependencies`", where you can define the needed resource packs by including their main UUID. Dependent resource packs will be applied to any world with the behavior pack automatically, if they exist on the device.
+The next step is, naturally, creating your `BP/manifest.json`. it is very much like a Resource pack manifest, except the "`type`" is "`data`"(for a *Data Pack*/*Behavior Pack*). There's also an optional field "`dependencies`", where you can define the needed resource packs by including their main UUID. Dependent resource packs will be applied to any world with the behavior pack automatically, if they exist on the device.
 
 *Remember that same UUIDs cannot be used twice, which means that you have to generate NEW ones for the behavior manifest, and not use the ones already used in the resource manifest.*
 
@@ -132,7 +134,7 @@ The next step is, naturally, creating your `bhv/manifest.json`. it is very much 
 ```
 #
 
-The last thing to do is to add your `pack_icon.png` file to both bhv and ``res``. I'm going to use this image here for now.
+The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for now.
 
 ![Pack icon](/assets/guide/pack_icon.png)
 
@@ -166,11 +168,11 @@ Now it's time to talk about some file extensions you'll be using during the deve
 ___
 ### .mcstructure 
 An  `.mcstructure`  file literally includes a Minecraft structure, consisting of blocks and entities. It can be exported via a Structure Block(`*/give @s structure_block*`) and is Win10 Edition only. 
-If you store one of these files in the `bhv/structures` folder you'll be able to '**load**' the structure from structure blocks on any world with the pack applied. (*A reliable method to transfer structures between worlds!*). See the Custom Structures article to make your Structures automatically generate in your world!   
+If you store one of these files in the `BP/structures` folder you'll be able to '**load**' the structure from structure blocks on any world with the pack applied. (*A reliable method to transfer structures between worlds!*). See the Custom Structures article to make your Structures automatically generate in your world!   
 ![Structure Block Example](/assets/guide/structure_block_example.jpg)
 ___
 ### .mcfunction
-An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `bhv/functions/`. VSC will treat it like a normal .txt file.   
+An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `BP/functions/`. VSC will treat it like a normal .txt file.   
 Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:   
 ![.mcstructure in VSC](/assets/guide/function_code.jpg)
 ##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors.
@@ -179,7 +181,7 @@ Now you can run the function by typing `/function diamond_tools` (*`/function {f
 ![function in-game](/assets/guide/function_in_game.jpg)   
 ___
 ## .mcpack, .mcaddon & .mcworld
-Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `bhv` or your `res`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)   
+Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `BP` or your `RP`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)   
 
 ![](/assets/guide/transpiled_mcpack.png)
 
