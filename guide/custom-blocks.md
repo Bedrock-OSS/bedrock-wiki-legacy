@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Custom Items; Linking Textures; Short Names
+title: Custom Blocks; Flipbook Textures;
 parent: Beginners Guide
 nav_order: 4
 ---
@@ -124,6 +124,7 @@ These "gorgeous" textures are the ones I'm going to use for my example blocks. T
 
 ![](/assets/guide/tut_sb_up.png)
 ![](/assets/guide/tut_sb_down.png)
+
 ![](/assets/guide/tut_sb_north.png)
 ![](/assets/guide/tut_sb_south.png)
 ![](/assets/guide/tut_sb_west.png)
@@ -202,8 +203,9 @@ A **flipbook texture** file is created like this:
 - Image height is `16*3`, as we have three different block textures/**frames** to fade. If you wanted a flipbook with 12 different textures, the height would be `16*12`. 
 **Done!** All of our blocks work perfectly.
 
-![](/assets/guide/custom_blocks_done.mp4)
-
+<video width="320" height="240" controls>
+  <source src="/assets/guide/custom_blocks_done.mp4" type="video/mp4">
+</video>
 
 # Setting block names
 And, finally, let's define our block's names in `/RP/texts/en_US.lang` like we did with items, somewhatlike this:
