@@ -64,7 +64,7 @@ The com.mojang folder is the folder we're going to be working with throughout th
 ____
 Let's create you first add-on workspace in Visual Studio Code now.
 1. Open VSC(*Visual Studio Code, the code editor*);
-1. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**.
+1. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, according to the[Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
 1. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
 1. Go to `File>Add folder to workspace...`  and choose `BP`. Do the same with `RP`.
 1. Press `File>Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace in VSC for quick access to both add-on folders.
