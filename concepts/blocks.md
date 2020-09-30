@@ -150,6 +150,16 @@ Used to execute a command
 }
 ```
 
+###### `decrement_stack`
+Removes the current block and replaces it with the defined block in the same position.
+```jsonc
+{
+	"example:remove_one": {
+		"decrement_stack": {}
+	}
+}
+```
+
 #### `trigger`
 Used to trigger an event, this can be a block event or an entity event.
 ```jsonc
