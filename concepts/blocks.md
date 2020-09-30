@@ -110,12 +110,12 @@ Used to set a block releative to this blocks position
 }
 ```
 
-#### `execute_command`
+#### `run_command`
 Used to execute a command
 ```json
 {
   	"example:execute_event": {
-		"execute_command": {
+		"run_command": {
 	  		"command": ["summon pig"]
 		}
   	}
@@ -195,6 +195,7 @@ Block components to trigger block events:
 - `minecraft:on_fall_on`
 - `minecraft:on_placed`
 - `minecraft:on_player_placing`
+- `minecraft:on_player_destroyed`
 
 - `minecraft:ticking` and `minecraft:random_ticking` can both be used to trigger events after a set amount of time or at random times depending on which component you use
 
@@ -299,14 +300,14 @@ Example of querying a tag:
 List of all new block components, with usage examples
 
 - minecraft:unit_cube
-```json
+```jsonc
 {
   	"minecraft:unit_cube": {}
 }
 ```
 
 - minecraft:crafting_table
-```json
+```jsonc
 {
   	"minecraft:crafting_table": {
 		"custom_description": "Example Crafting Table",
@@ -317,7 +318,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:material_instances
-```json
+```jsonc
 {
   	"minecraft:material_instances": {
 		"*": {
@@ -329,14 +330,14 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:geometry
-```json
+```jsonc
 {
   	"minecraft:geometry": "geometry.example" // Geometry identifier from geo file in 'RP/models/entity' folder
 }
 ```
 
 - minecraft:on_step_on
-```json
+```jsonc
 {
   	"minecraft:on_step_on": {
 		"event": "block_event",
@@ -347,7 +348,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_step_off
-```json
+```jsonc
 {
   	"minecraft:on_step_off": {
 		"event": "block_event",
@@ -358,7 +359,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_fall_on
-```json
+```jsonc
 {
   	"minecraft:on_fall_on": {
 		"event": "block_event",
@@ -370,7 +371,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_placed
-```json
+```jsonc
 {
   	"minecraft:on_placed": {
 		"event": "block_event",
@@ -381,7 +382,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_player_placing
-```json
+```jsonc
 {
   	"minecraft:on_player_placing": {
 		"event": "block_event",
@@ -391,8 +392,19 @@ List of all new block components, with usage examples
 }
 ```
 
+- minecraft:on_player_destroyed
+```jsonc
+{
+  	"minecraft:on_player_destroyed": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('example:block_property') == true"
+  	}
+}
+```
+
 - minecraft:on_interact
-```json
+```jsonc
 {
   	"minecraft:on_interact": {
 		"event": "block_event",
@@ -403,7 +415,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:ticking
-```json
+```jsonc
 {
   	"minecraft:ticking": {
 		"looping": true,
@@ -418,7 +430,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:random_ticking
-```json
+```jsonc
 {
   	"minecraft:random_ticking": {
 		"on_tick": {
@@ -431,7 +443,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:entity_collision
-```json
+```jsonc
 {
   	"minecraft:entity_collision": {
 		"origin": [-8, 0, -8],
@@ -439,13 +451,13 @@ List of all new block components, with usage examples
   	}
 }
 ```
-```json
+```jsonc
 {
   	"minecraft:entity_collision": false
 }
 ```
 - minecraft:pick_collision
-```json
+```jsonc
 {
   	"minecraft:pick_collision": {
 		"origin": [-8, 0, -8],
@@ -453,35 +465,42 @@ List of all new block components, with usage examples
   	}
 }
 ```
-```json
+```jsonc
 {
   	"minecraft:pick_collision": false
 }
 ```
 
 - minecraft:breakonpush
-```json
+```jsonc
 {
   	"minecraft:breakonpush": true
 }
 ```
 
+- minecraft:breathability
+```jsonc
+{
+  	"minecraft:breathability": "solid"  // Also accepts 'air'
+}
+```
+
 - minecraft:immovable
-```json
+```jsonc
 {
   	"minecraft:immovable": true
 }
 ```
 
 - minecraft:onlypistonpush
-```json
+```jsonc
 {
   	"minecraft:onlypistonpush": true
 }
 ```
 
 - minecraft:placement_filter
-```json
+```jsonc
 {
   	"minecraft:placement_filter": {
 		"conditions": [
@@ -495,21 +514,21 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:preventsjumping
-```json
+```jsonc
 {
   	"minecraft:preventsjumping": true
 }
 ```
 
 - minecraft:rotation
-```json
+```jsonc
 {
   	"minecraft:rotation": [90, 180, 0]
 }
 ```
 
 - minecraft:unwalkable
-```json
+```jsonc
 {
   	"minecraft:unwalkable": true
 }
