@@ -379,10 +379,10 @@ List of all new block components, with usage examples
 }
 ```
 
-- minecraft:damageable
+- minecraft:durability
 ```json
 {
-    "minecraft:damageable": {
+    "minecraft:durability": {
         "max_damage": 100,
         "damage_chance": {
             "min": 5,
