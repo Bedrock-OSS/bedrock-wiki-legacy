@@ -11,7 +11,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 ### Using Events
 
-```json
+```jsonc
 {
     "format_version": "1.16.100",
     "minecraft:item": {
@@ -46,7 +46,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 ### Event Functions
 
 #### `swing`
-```json
+```jsonc
 {
     "example:swing_event": {
         "swing": {}
@@ -56,7 +56,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 #### `shoot`
 Shoots a projectile when triggered
-```json
+```jsonc
 {
     "example:shoot_event": {
         "shoot": {
@@ -69,7 +69,7 @@ Shoots a projectile when triggered
 ```
 
 #### `damage`
-```json
+```jsonc
 {
     "example:damage_event": {
         "damage": {
@@ -80,9 +80,19 @@ Shoots a projectile when triggered
 }
 ```
 
+#### `decrement_stack`
+Decrements the stack
+```jsonc
+{
+	"example:remove_one": {
+		"decrement_stack": {}
+	}
+}
+```
+
 #### `add_mob_effect`
 Adds a mob effect when triggered
-```json
+```jsonc
 {
     "example:effect_event": {
         "add_mob_effect": {
@@ -97,7 +107,7 @@ Adds a mob effect when triggered
 
 #### `remove_mob_effect`
 Removes a mob effect when triggered
-```json
+```jsonc
 {
     "example:remove_effect_event": {
         "remove_mob_effect": {
@@ -110,7 +120,7 @@ Removes a mob effect when triggered
 
 #### `transform_item`
 Transforms the item into the item specified
-```json
+```jsonc
 {
     "example:transform_event": {
         "transform_item": {
@@ -122,7 +132,7 @@ Transforms the item into the item specified
 
 #### `teleport`
 Teleports the target to a random location in the specified range
-```json
+```jsonc
 {
     "example:teleport_event": {
         "teleport": {
@@ -135,7 +145,7 @@ Teleports the target to a random location in the specified range
 
 #### `sequence`
 Used to sequence event functions
-```json
+```jsonc
 {
 	"example:sequence_event": {
 		"sequence": [
@@ -159,7 +169,7 @@ Used to sequence event functions
 
 #### `randomize`
 Used to randomize event functions
-```json
+```jsonc
 {
    "example:randomize_events": {
         "randomize": [
@@ -185,7 +195,7 @@ Used to randomize event functions
 
 #### `execute_command`
 Used to execute commands
-```json
+```jsonc
 {
     "example:execute_command_event": {
         "execute_command": {
@@ -201,35 +211,35 @@ Used to execute commands
 List of all new block components, with usage examples
 
 - minecraft:ignores_permission
-```json
+```jsonc
 {
     "minecraft:ignores_permission": true
 }
 ```
 
 - minecraft:mining_speed
-```json
+```jsonc
 {
     "minecraft:mining_speed": 1
 }
 ```
 
 - minecraft:damage
-```json
+```jsonc
 {
     "minecraft:damage": true
 }
 ```
 
 - minecraft:can_destroy_in_creative
-```json
+```jsonc
 {
     "minecraft:can_destroy_in_creative": true
 }
 ```
 
 - minecraft:dye_powder
-```json
+```jsonc
 {
     "minecraft:dye_powder": {
         "color": 4
@@ -238,42 +248,42 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:mirrored_art
-```json
+```jsonc
 {
     "minecraft:mirrord_art": true
 }
 ```
 
 - minecraft:explodable
-```json
+```jsonc
 {
     "minecraft:explodable": true
 }
 ```
 
 - minecraft:should_despawn
-```json
+```jsonc
 {
     "minecraft:should_despawn": true
 }
 ```
 
 - minecraft:liquid_clipped
-```json
+```jsonc
 {
     "minecraft:liquid_clipped": true
 }
 ```
 
 - minecraft:allow_off_hand
-```json
+```jsonc
 {
     "minecraft:allow_off_hand": true
 }
 ```
 
 - minecraft:projectile
-```json
+```jsonc
 {
     "minecraft:projectile": {
         "projectile_entity": "minecraft:arrow",
@@ -283,7 +293,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:block_placer
-```json
+```jsonc
 {
     "minecraft:block_placer": {
       "block": "minecraft:grass",
@@ -293,7 +303,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:entity_placer
-```json
+```jsonc
 {
     "minecraft:entity_placer": {
       "entity": "minecraft:zombie",
@@ -310,7 +320,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:use_on
-```json
+```jsonc
 {
     "minecraft:use_on": {
         "on_use": {
@@ -322,7 +332,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:knockback_resistance
-```json
+```jsonc
 {
     "minecraft:knockback_resistance": {
       "protection": 0.4
@@ -331,7 +341,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:enchantable
-```json
+```jsonc
 {
     "minecraft:enchantable": {
       "slot": "bow",     // Can be any of the enchant slot listed below
@@ -361,7 +371,7 @@ List of all new block components, with usage examples
 | cosmetic_head |
 
 - minecraft:shooter
-```json
+```jsonc
 {
     "minecraftshooter": {
         "max_draw_duration": 1,
@@ -379,10 +389,10 @@ List of all new block components, with usage examples
 }
 ```
 
-- minecraft:damageable
-```json
+- minecraft:durability
+```jsonc
 {
-    "minecraft:damageable": {
+    "minecraft:durability": {
         "max_damage": 100,
         "damage_chance": {
             "min": 5,
@@ -393,7 +403,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:armor
-```json
+```jsonc
 {
     "minecraft:armor": {
         "protection": 4
@@ -402,7 +412,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:wearable
-```json
+```jsonc
 {
     "minecraft:wearable": {
         "slot": "slot.armor.feet"
@@ -411,7 +421,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:weapon
-```json
+```jsonc
 {
     "minecraft:weapon": {
         "on_hurt": {
@@ -423,7 +433,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:record
-```json
+```jsonc
 {
     "minecraft:record": {
         "sound_event": "cat",
@@ -434,7 +444,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:repairable
-```json
+```jsonc
 {
     "minecraft:repairable": {
         "repair_items": [
@@ -455,7 +465,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:cooldown
-```json
+```jsonc
 {
     "minecraft:cooldown": {
         "category": "ender_pearl",
@@ -465,7 +475,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:digger
-```json
+```jsonc
 {
     "minecraft:digger": {
         "use_efficiency": true,
@@ -482,7 +492,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:fertilizer
-```json
+```jsonc
 {
     "minecraft:fertilizer": {
         "type": "bonemeal" // Can also be "rapid"
@@ -491,7 +501,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:fuel
-```json
+```jsonc
 {
     "minecraft:fuel": {
         "duration": 20
@@ -500,7 +510,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:throwable
-```json
+```jsonc
 {
     "minecraft:throwable": {
         "do_swing_animation": true,
@@ -511,7 +521,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:creative_category
-```json
+```jsonc
 {
     "minecraft:creative_category": {
         "parent": "itemGroup.name.nature"
@@ -521,7 +531,7 @@ List of all new block components, with usage examples
 
 - minecraft:food
 _New Syntax_
-```json
+```jsonc
 {
     "minecraft:food": {
         "on_consume": {
@@ -538,7 +548,7 @@ _New Syntax_
 ## Item Tags
 
 Item tags work the same as block tags and can be applied like this:
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:item": {
@@ -564,7 +574,7 @@ If your item isn't showing up in the beta, these changes might have broken your 
 
 - Item behavior files now require a "category" to show up in the /give command and creative inventory.
 Example:
-```json
+```jsonc
 {
     "format_version": "1.16.100",
     "minecraft:item": {
