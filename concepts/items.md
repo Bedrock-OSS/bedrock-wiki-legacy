@@ -80,6 +80,16 @@ Shoots a projectile when triggered
 }
 ```
 
+#### `decrement_stack`
+Decrements the stack
+```jsonc
+{
+	"example:remove_one": {
+		"decrement_stack": {}
+	}
+}
+```
+
 #### `add_mob_effect`
 Adds a mob effect when triggered
 ```json
