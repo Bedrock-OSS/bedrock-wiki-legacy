@@ -11,7 +11,7 @@ Better documentation on the new block format introduced in the 1.16.100.56 Minec
 
 Defining Properties:
 
-```json
+```jsonc
 {
 	"minecraft:block": {
 		"description": {
@@ -35,7 +35,7 @@ Properties can be queried with `query.block_property`, like this:
 
 ### Using Events
 
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:block": {
@@ -65,7 +65,7 @@ This example spawns a loot table when an entity stands on the block.
 
 #### `add_mob_effect`
 Adds a mob effect when triggered
-```json
+```jsonc
 {
     "example:effect_event": {
         "add_mob_effect": {
@@ -80,7 +80,7 @@ Adds a mob effect when triggered
 
 #### `spawn_loot`
 Summons a loot table when the event is triggered.
-```json
+```jsonc
 {
 	"example:drop_loot": {
 		"spawn_loot": {
@@ -92,7 +92,7 @@ Summons a loot table when the event is triggered.
 
 #### `set_block`
 Removes the current block and replaces it with the defined block in the same position.
-```json
+```jsonc
 {
 	"example:place_block": {
 		"set_block": "minecraft:grass"
@@ -102,7 +102,7 @@ Removes the current block and replaces it with the defined block in the same pos
 
 #### `set_block_property`
 Used to set the value of a block's property
-```json
+```jsonc
 {
 	"example:change_color": {
 		"set_block_property": {
@@ -114,7 +114,7 @@ Used to set the value of a block's property
 
 #### `set_block_at_pos`
 Used to set a block releative to this blocks position
-```json
+```jsonc
 {
   	"example:trigger_event": {
 		"set_block_at_pos": {
@@ -127,7 +127,7 @@ Used to set a block releative to this blocks position
 
 #### `run_command`
 Used to execute a command
-```json
+```jsonc
 {
   	"example:execute_event": {
 		"run_command": {
@@ -137,9 +137,22 @@ Used to execute a command
 }
 ```
 
+#### `damage`
+```jsonc
+{
+    "example:damage_event": {
+        "damage": {
+            "type": "magic",
+            "target": "other",
+            "amount": 4
+        }
+    }
+}
+```
+
 #### `trigger`
 Used to trigger an event, this can be a block event or an entity event.
-```json
+```jsonc
 {
 	"example:trigger_event": {
 		"trigger": {
@@ -153,7 +166,7 @@ Used to trigger an event, this can be a block event or an entity event.
 
 #### `sequence`
 Used to sequence event functions
-```json
+```jsonc
 {
 	"example:sequence_event": {
 		"sequence": [
@@ -176,7 +189,7 @@ Used to sequence event functions
 
 #### `randomize`
 Used to randomize event functions
-```json
+```jsonc
 {
    "example:randomize_events": {
 		"randomize": [
@@ -221,7 +234,7 @@ Block permutations are a way of conditionally applying components to a block wit
 
 Example:
 
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:block": {
@@ -262,7 +275,7 @@ Example:
 
 Block tags can be given to blocks to be queried or referenced with `any_tag` which is used inside item and entity files.
 A tag can be applied like this:
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:block": {
@@ -285,7 +298,7 @@ and this tag can be queried with:
 - `query.relative_block_has_any_tag`
 
 Example of querying a tag:
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:item": {
