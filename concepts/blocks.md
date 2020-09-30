@@ -78,6 +78,19 @@ Adds a mob effect when triggered
 }
 ```
 
+#### `remove_mob_effect`
+Removes a mob effect when triggered
+```json
+{
+    "example:remove_effect_event": {
+        "remove_mob_effect": {
+            "effect": "poison",
+            "target": "other"
+        }
+    }
+}
+```
+
 #### `spawn_loot`
 Summons a loot table when the event is triggered.
 ```jsonc
@@ -150,13 +163,51 @@ Used to execute a command
 }
 ```
 
-###### `decrement_stack`
-Removes the current block and replaces it with the defined block in the same position.
+#### `decrement_stack`
+Decrements the stack
 ```jsonc
 {
 	"example:remove_one": {
 		"decrement_stack": {}
 	}
+}
+```
+
+#### `die`
+Kills the target or destroys the block
+```json
+{
+    "example:destroy": {
+        "die": {
+            "target": "self"
+        }
+    }
+}
+```
+
+#### `play_effect`
+Runs a particle effect on the target
+```json
+{
+    "example:particle_effect": {
+        "remove_mob_effect": {
+            "effect": "minecraft:campfire_smoke",
+            "target": "self"
+        }
+    }
+}
+```
+
+#### `play_sound`
+Plays a sound on the target
+```json
+{
+    "example:play_sound": {
+        "play_sound": {
+            "sound": "mob.enderman.death",
+            "target": "self"
+        }
+    }
 }
 ```
 
