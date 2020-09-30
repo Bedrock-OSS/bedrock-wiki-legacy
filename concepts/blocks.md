@@ -63,6 +63,21 @@ This example spawns a loot table when an entity stands on the block.
 
 ### Event functions
 
+#### `add_mob_effect`
+Adds a mob effect when triggered
+```json
+{
+    "example:effect_event": {
+        "add_mob_effect": {
+            "effect": "poison",
+            "target": "other",
+            "duration": 8,
+            "amplifier": 3
+        }
+    }
+}
+```
+
 #### `spawn_loot`
 Summons a loot table when the event is triggered.
 ```json
