@@ -1,6 +1,6 @@
 ---
 layout: page
-title: tick.json
+title: .mcfunction
 parent: Knowledge
 ---
 
