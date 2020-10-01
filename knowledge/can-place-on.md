@@ -6,6 +6,15 @@ parent: Knowledge
 
 # CanPlaceOn and CanDestroy
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 NBT data for Bedrock edition is very limited. Two of the only values we have access to is `CanPlaceOn` and `CanDestroy`. These are used as part of a `/give` command, and edit the place/break properties of players while in adventure mode.
 
 # Format

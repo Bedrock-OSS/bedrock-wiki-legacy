@@ -6,6 +6,15 @@ parent: Knowledge
 
 # What's a Schema?
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 A JSON schema gives you two things: validation to be sure that your JSON has the correct structure, and (depending on editor support) intellisense to help you write your JSON correctly to begin with. Schemas are nice because they give you instant feedback when you screw something up, but they can't catch everything.
 
 JSON schemas are just JSON files themselves and don't do anything on their own. You can write your own or use somebody else's. There's a handful of schemas for Bedrock out there already. Since none of the schemas are "official" (that I know of), and since Bedrock is a moving target, there will probably be some inaccuracies in any schema that you find. So keep that in mind: sometimes the issue will be in your code, sometimes the schema may be wrong. If you find a wrong schema, consider improving it and giving the author a pull request, to our collective benefit.

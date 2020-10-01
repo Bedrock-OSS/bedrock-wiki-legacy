@@ -6,6 +6,15 @@ parent: Concepts
 
 # Component Groups Vs. Components Vs. Events
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 There are three main structures that make up the base of a behavior-pack entity file. This doc will explain what each of them means, and how to use them.
 
 # Components

@@ -7,6 +7,15 @@ nav_order: 3
 
 # Simple custom Item - Creating a 'Gem'
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Every item, block or entity requires a `Behavior` file in the BP folder (to define how the item is going to behave) and a Resource file in the `RP` folder (to define how the item will look in-game).
 
 Let's start off by creating our simple item's behavior file: `BP/items/gem.item.json` (In some steps, like this one, you will first need to create a folder before the file can be created). 

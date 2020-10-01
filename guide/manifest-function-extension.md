@@ -5,6 +5,16 @@ parent: Beginners Guide
 nav_order: 2
 ---
 
+# Getting Started
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 ___
 ___
 <!-- #### **You will:**  -->

@@ -6,6 +6,15 @@ parent: Concepts
 
 # Shaders
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ## Disclaimer
 
 The way to create shaders described in this page is not working on consoles (PS4, Xbox, Switch) and in new rendering 

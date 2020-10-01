@@ -1,10 +1,19 @@
 ---
 layout: page
-title: tick.json
+title: .mcfunction
 parent: Knowledge
 ---
 
 # Understanding .mcfunction
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 `mcfunction` files are stored in your BP as `BP/functions/my_function.mcfunction`. You can add as many functions as you like. 
 

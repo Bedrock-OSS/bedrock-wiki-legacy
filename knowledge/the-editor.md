@@ -6,6 +6,15 @@ parent: Knowledge
 
 # The Editor
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 The coding world is filled with editors. Ranging from command-line tools like VIM or Emacs, all the way up to full IDEs such as InteliJ or Eclipse. 
 
 For editing JSON files, something in the middle is probably the best. Something that offers you a good amount of power, without the bloat of a full on IDE.

@@ -15,6 +15,7 @@ parent: Documentation
 {:toc}
 </details>
 
+
 The bedrock documentation for Molang is notoriously bad. This page will attempt to remedy this by providing additional details for individual queries, *where possible*. This page is intended to be searched, not read in full. Use the side-bar, or use `ctrl-f` to navigate.
 
 # query.armor_texture_slot

@@ -6,12 +6,21 @@ parent: Concepts
 
 # Blocks [BETA]
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Better documentation on the new block format introduced in the 1.16.100.56 Minecraft beta
 ## Block Properties
 
 Defining Properties:
 
-```json
+```jsonc
 {
 	"minecraft:block": {
 		"description": {
@@ -35,7 +44,7 @@ Properties can be queried with `query.block_property`, like this:
 
 ### Using Events
 
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:block": {
@@ -63,9 +72,37 @@ This example spawns a loot table when an entity stands on the block.
 
 ### Event functions
 
+#### `add_mob_effect`
+Adds a mob effect when triggered
+```jsonc
+{
+    "example:effect_event": {
+        "add_mob_effect": {
+            "effect": "poison",
+            "target": "other",
+            "duration": 8,
+            "amplifier": 3
+        }
+    }
+}
+```
+
+#### `remove_mob_effect`
+Removes a mob effect when triggered
+```json
+{
+    "example:remove_effect_event": {
+        "remove_mob_effect": {
+            "effect": "poison",
+            "target": "other"
+        }
+    }
+}
+```
+
 #### `spawn_loot`
 Summons a loot table when the event is triggered.
-```json
+```jsonc
 {
 	"example:drop_loot": {
 		"spawn_loot": {
@@ -77,7 +114,7 @@ Summons a loot table when the event is triggered.
 
 #### `set_block`
 Removes the current block and replaces it with the defined block in the same position.
-```json
+```jsonc
 {
 	"example:place_block": {
 		"set_block": "minecraft:grass"
@@ -87,7 +124,7 @@ Removes the current block and replaces it with the defined block in the same pos
 
 #### `set_block_property`
 Used to set the value of a block's property
-```json
+```jsonc
 {
 	"example:change_color": {
 		"set_block_property": {
@@ -99,7 +136,7 @@ Used to set the value of a block's property
 
 #### `set_block_at_pos`
 Used to set a block releative to this blocks position
-```json
+```jsonc
 {
   	"example:trigger_event": {
 		"set_block_at_pos": {
@@ -110,21 +147,82 @@ Used to set a block releative to this blocks position
 }
 ```
 
-#### `execute_command`
+#### `run_command`
 Used to execute a command
-```json
+```jsonc
 {
   	"example:execute_event": {
-		"execute_command": {
+		"run_command": {
 	  		"command": ["summon pig"]
 		}
   	}
 }
 ```
 
+#### `damage`
+```jsonc
+{
+    "example:damage_event": {
+        "damage": {
+            "type": "magic",
+            "target": "other",
+            "amount": 4
+        }
+    }
+}
+```
+
+#### `decrement_stack`
+Decrements the stack
+```jsonc
+{
+	"example:remove_one": {
+		"decrement_stack": {}
+	}
+}
+```
+
+#### `die`
+Kills the target or destroys the block
+```json
+{
+    "example:destroy": {
+        "die": {
+            "target": "self"
+        }
+    }
+}
+```
+
+#### `play_effect`
+Runs a particle effect on the target
+```json
+{
+    "example:particle_effect": {
+        "remove_mob_effect": {
+            "effect": "minecraft:campfire_smoke",
+            "target": "self"
+        }
+    }
+}
+```
+
+#### `play_sound`
+Plays a sound on the target
+```json
+{
+    "example:play_sound": {
+        "play_sound": {
+            "sound": "mob.enderman.death",
+            "target": "self"
+        }
+    }
+}
+```
+
 #### `trigger`
 Used to trigger an event, this can be a block event or an entity event.
-```json
+```jsonc
 {
 	"example:trigger_event": {
 		"trigger": {
@@ -138,7 +236,7 @@ Used to trigger an event, this can be a block event or an entity event.
 
 #### `sequence`
 Used to sequence event functions
-```json
+```jsonc
 {
 	"example:sequence_event": {
 		"sequence": [
@@ -161,7 +259,7 @@ Used to sequence event functions
 
 #### `randomize`
 Used to randomize event functions
-```json
+```jsonc
 {
    "example:randomize_events": {
 		"randomize": [
@@ -195,6 +293,7 @@ Block components to trigger block events:
 - `minecraft:on_fall_on`
 - `minecraft:on_placed`
 - `minecraft:on_player_placing`
+- `minecraft:on_player_destroyed`
 
 - `minecraft:ticking` and `minecraft:random_ticking` can both be used to trigger events after a set amount of time or at random times depending on which component you use
 
@@ -205,7 +304,7 @@ Block permutations are a way of conditionally applying components to a block wit
 
 Example:
 
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:block": {
@@ -246,7 +345,7 @@ Example:
 
 Block tags can be given to blocks to be queried or referenced with `any_tag` which is used inside item and entity files.
 A tag can be applied like this:
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:block": {
@@ -269,7 +368,7 @@ and this tag can be queried with:
 - `query.relative_block_has_any_tag`
 
 Example of querying a tag:
-```json
+```jsonc
 {
   	"format_version": "1.16.100",
   	"minecraft:item": {
@@ -299,14 +398,14 @@ Example of querying a tag:
 List of all new block components, with usage examples
 
 - minecraft:unit_cube
-```json
+```jsonc
 {
   	"minecraft:unit_cube": {}
 }
 ```
 
 - minecraft:crafting_table
-```json
+```jsonc
 {
   	"minecraft:crafting_table": {
 		"custom_description": "Example Crafting Table",
@@ -317,7 +416,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:material_instances
-```json
+```jsonc
 {
   	"minecraft:material_instances": {
 		"*": {
@@ -329,14 +428,14 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:geometry
-```json
+```jsonc
 {
   	"minecraft:geometry": "geometry.example" // Geometry identifier from geo file in 'RP/models/entity' folder
 }
 ```
 
 - minecraft:on_step_on
-```json
+```jsonc
 {
   	"minecraft:on_step_on": {
 		"event": "block_event",
@@ -347,7 +446,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_step_off
-```json
+```jsonc
 {
   	"minecraft:on_step_off": {
 		"event": "block_event",
@@ -358,7 +457,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_fall_on
-```json
+```jsonc
 {
   	"minecraft:on_fall_on": {
 		"event": "block_event",
@@ -370,7 +469,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_placed
-```json
+```jsonc
 {
   	"minecraft:on_placed": {
 		"event": "block_event",
@@ -381,7 +480,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:on_player_placing
-```json
+```jsonc
 {
   	"minecraft:on_player_placing": {
 		"event": "block_event",
@@ -391,8 +490,19 @@ List of all new block components, with usage examples
 }
 ```
 
+- minecraft:on_player_destroyed
+```jsonc
+{
+  	"minecraft:on_player_destroyed": {
+		"event": "block_event",
+		"target": "self",
+		"condition": "query.block_property('example:block_property') == true"
+  	}
+}
+```
+
 - minecraft:on_interact
-```json
+```jsonc
 {
   	"minecraft:on_interact": {
 		"event": "block_event",
@@ -403,7 +513,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:ticking
-```json
+```jsonc
 {
   	"minecraft:ticking": {
 		"looping": true,
@@ -418,7 +528,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:random_ticking
-```json
+```jsonc
 {
   	"minecraft:random_ticking": {
 		"on_tick": {
@@ -431,7 +541,7 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:entity_collision
-```json
+```jsonc
 {
   	"minecraft:entity_collision": {
 		"origin": [-8, 0, -8],
@@ -439,13 +549,13 @@ List of all new block components, with usage examples
   	}
 }
 ```
-```json
+```jsonc
 {
   	"minecraft:entity_collision": false
 }
 ```
 - minecraft:pick_collision
-```json
+```jsonc
 {
   	"minecraft:pick_collision": {
 		"origin": [-8, 0, -8],
@@ -453,35 +563,42 @@ List of all new block components, with usage examples
   	}
 }
 ```
-```json
+```jsonc
 {
   	"minecraft:pick_collision": false
 }
 ```
 
 - minecraft:breakonpush
-```json
+```jsonc
 {
   	"minecraft:breakonpush": true
 }
 ```
 
+- minecraft:breathability
+```jsonc
+{
+  	"minecraft:breathability": "solid"  // Also accepts 'air'
+}
+```
+
 - minecraft:immovable
-```json
+```jsonc
 {
   	"minecraft:immovable": true
 }
 ```
 
 - minecraft:onlypistonpush
-```json
+```jsonc
 {
   	"minecraft:onlypistonpush": true
 }
 ```
 
 - minecraft:placement_filter
-```json
+```jsonc
 {
   	"minecraft:placement_filter": {
 		"conditions": [
@@ -495,21 +612,21 @@ List of all new block components, with usage examples
 ```
 
 - minecraft:preventsjumping
-```json
+```jsonc
 {
   	"minecraft:preventsjumping": true
 }
 ```
 
 - minecraft:rotation
-```json
+```jsonc
 {
   	"minecraft:rotation": [90, 180, 0]
 }
 ```
 
 - minecraft:unwalkable
-```json
+```jsonc
 {
   	"minecraft:unwalkable": true
 }
