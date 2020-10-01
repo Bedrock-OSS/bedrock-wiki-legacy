@@ -6,6 +6,15 @@ parent: Documentation
 
 # Subpacks
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ## What are subpacks?
 
 Subpacks are what cause the gear icon to appear on packs. They were originally intended for texture resolutions to load on different memory capacities, but can also be use to create file variations in behavior and resource packs which can then be chosen by clicking the gear icon and adjusting the slider.

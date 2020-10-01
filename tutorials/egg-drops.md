@@ -6,6 +6,15 @@ parent: Tutorials
 
 # Egg Drops in loot tables
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Here is how to make entities drop their own eggs when killed:
 
 ## Add loot table to BP entity

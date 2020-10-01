@@ -5,6 +5,17 @@ parent: Beginners Guide
 nav_order: 1
 ---
 
+# Software and Preparation
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 ___
 ___
 <!-- #### **You will:**  -->

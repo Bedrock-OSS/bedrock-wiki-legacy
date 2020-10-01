@@ -5,6 +5,16 @@ parent: Beginners Guide
 nav_order: 13
 ---
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+# Skin Packs
 - [Skin pack Manifest](#Skin pack Manifest)
 - [skins.json](#skins.json)
 - [texts/en_US.lang](#texts/en_US.lang)
