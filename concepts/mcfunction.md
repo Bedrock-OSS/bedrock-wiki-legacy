@@ -1,7 +1,7 @@
 ---
 layout: page
 title: .mcfunction
-parent: Knowledge
+parent: Concepts
 ---
 
 # Understanding .mcfunction
