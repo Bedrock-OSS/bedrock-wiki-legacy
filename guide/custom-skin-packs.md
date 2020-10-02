@@ -15,10 +15,10 @@ nav_order: 13
 </details>
 
 # Skin Packs
-- [Skin pack Manifest](#Skin pack Manifest)
+<!-- - [Skin pack Manifest](#Skin pack Manifest)
 - [skins.json](#skins.json)
 - [texts/en_US.lang](#texts/en_US.lang)
-- [What you learned](#What you learned:)
+- [What you learned](#What you learned:) -->
 
 ----
 

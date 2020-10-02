@@ -309,9 +309,12 @@ It's a good idea to proceed checking out other feature and feature_rule vanilla 
 
 # Custom Structures
 
-Yes, as of MCBE v1.16.20, **Custom Generated structures are possible**.
+As of MCBE v1.16.20, **Custom Generated structures are possible**.
+A simple way to generate Structures is [this](https://machine-builder.itch.io/frg-v2) auto generator by MACHINE_BUILDER, mentioned earlier. It generates all three of the required files for your structure: `feature_rules/mystructure.feature_rule.json`, `feature_rules/mystructure.feature.json` and `structures/mystructure.mcstructure.` You can learn more about defining `.mcstructures` with Structure Blocks in Minecraft itself [here](https://wiki.bedrock.dev/guide/manifest-function-extension.html#mcstructure).
 
-Writing a *Feature* is a tiny bit more complicated.
+___
+
+Now that you have your `.mcstructure`, time to write your `feature` and `feature rule`. The last is the same as with ores (see the beginning of this article). Let's continue to the **Feature**.
 
 - Remember that the namespace is not required and that the filename must match the identifier, excluding the namespace. So if you have a feature rule with the identifier `tut:myfeaturerule` or simply `myfeaturerule`, the file name can be be `myfeaturerule.json` in both cases.
 
@@ -341,12 +344,6 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
 
 - `structure_name` is the structure's identifier, the one you saved via a Structure Block.
 
-*This article needs completion here*
-
-
-Now for the **Feature Rule** which will place the **Feature** containing your **Structure** in the World. Refer to the Ore placement Feature Rules above and to the [Guide's files repository](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES).
-
-The Structure generator linked above will generate the files automatically. I prefer to generate my Structure Rules with it, but I tend to use my own `.mcstructures`, exported via Structure Blocks.
 
 That's pretty much it! Now you're able to generate your own custom Structures in the world.
 

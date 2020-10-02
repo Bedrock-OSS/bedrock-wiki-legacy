@@ -18,12 +18,12 @@ nav_order: 2
 ___
 ___
 <!-- #### **You will:**  -->
-- [Manifests](#manifests);
+<!-- - [Manifests](#manifests);
 - [Testing World](#creating-your-testing-world);
 - [Files with .mc extensions](mc-file-extensions):
    - [.mcstructure](#.mcstructure)
    - [.mcfunction](#.mcfunction)
-   - [.mcpack, .mcaddon & .mcworld](#.mcpack,-.mcaddon-&-.mcworld)
+   - [.mcpack, .mcaddon & .mcworld](#.mcpack,-.mcaddon-&-.mcworld) -->
 
 
 ___
