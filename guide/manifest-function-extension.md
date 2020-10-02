@@ -142,7 +142,6 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
     ]
 }
 ```
-#
 
 The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for the BP:
 ![Pack icon](/assets/guide/pack_icon_BP.png)

@@ -62,7 +62,7 @@ The next sub-chapter: Here you'll create custom particles and sounds and learn t
 
 Let's move to something way different now: World generation!
 
- - [Custom Generation: Biomes, Features, Feature Rules;]
+ - [Custom Generation: Biomes, Features, Feature Rules;]()
 
  
 
