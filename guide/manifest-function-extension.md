@@ -144,9 +144,11 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 ```
 #
 
-The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for now.
+The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for the BP:
+![Pack icon](/assets/guide/pack_icon_BP.png)
+And this one for the RP:
+![Pack icon](/assets/guide/pack_icon_RP.png)
 
-![Pack icon](/assets/guide/pack_icon.png)
 
 If you have done everything correctly, your packs should show up in Minecraft now!
 ![](/assets/guide/behavior_pack_existing.jpg)
