@@ -97,7 +97,7 @@ nav_exclude: true
 
 ---
 ### Где можно найти список переменных в molang?
-[Список переменных в molang](https://bedrock.dev/1.14.0.0/1.14.30.51/MoLang).
+[Список переменных в molang](https://bedrock.dev/docs/stable/MoLang).
 
 ---
 ### Можно ли использовать /give чтобы получить шалкер-ящик с вещами?

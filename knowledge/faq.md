@@ -114,7 +114,7 @@ Set up a damage_sensor and set deals_damage to false when they're not holding th
 
 ---
 ### Where do I find the molang variable list?
-The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.30.51/MoLang).
+The [molang variable list can be found here](https://bedrock.dev/docs/stable/MoLang).
 
 ---
 ### Can I use /give to get shulker box with items?
