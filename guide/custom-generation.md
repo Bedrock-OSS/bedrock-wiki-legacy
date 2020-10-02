@@ -15,9 +15,9 @@ nav_order: 12
 </details>
 
 
-----
+<!-- ---- -->
 
-*This tutorial was created in the version 1.14.60, and is subject to change. It will be updated shortly after generation rules are updated. It's also in need of certain clarifications or improvements: please visit the [Home Page](https://wiki.bedrock.dev/)  if you are able to contribute.*
+<!-- *This tutorial was created in the version 1.14.60, and is subject to change. It will be updated shortly after generation rules are updated. It's also in need of certain clarifications or improvements: please visit the [Home Page](https://wiki.bedrock.dev/)  if you are able to contribute.* -->
 
 
 # Custom Generation

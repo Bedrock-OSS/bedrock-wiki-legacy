@@ -15,19 +15,19 @@ nav_order: 2
 1. TOC
 {:toc}
 </details>
+<!-- ___
 ___
-___
-<!-- #### **You will:**  -->
-<!-- - [Manifests](#manifests);
+#### **You will:** 
+- [Manifests](#manifests);
 - [Testing World](#creating-your-testing-world);
 - [Files with .mc extensions](mc-file-extensions):
    - [.mcstructure](#.mcstructure)
    - [.mcfunction](#.mcfunction)
-   - [.mcpack, .mcaddon & .mcworld](#.mcpack,-.mcaddon-&-.mcworld) -->
+   - [.mcpack, .mcaddon & .mcworld](#.mcpack,-.mcaddon-&-.mcworld)
 
 
 ___
-___
+___ -->
 
 ## Manifests
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
