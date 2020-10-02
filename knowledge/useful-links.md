@@ -89,3 +89,4 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
  - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
+ - [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
