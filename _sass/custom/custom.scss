@@ -29,7 +29,6 @@
   }
 
   #toc ul, #toc ol {
-    list-style: none;
     margin: 0;
     padding: 0;
   }
@@ -55,7 +54,7 @@
   #toc a:focus {
     color: $body-text-color;
   }
-  #toc ol > li::before {
+  #toc:not(.numbered) ol > li::before  {
     content: none;
   }
 
@@ -82,10 +81,32 @@
 
 }
 
+#toc pre {
+  overflow: hidden !important;
+}
+
 #toc > ol > li > ol > li > ol {
   display: none;
 }
 
 #toc.top-level > ol > li > ol {
   display: none;
+}
+
+.numbered ol {
+  list-style-type: none;
+  counter-reset: toc !important;
+}
+
+.numbered ol > li:before {
+  content: counters(toc, ".") ". "!important;
+  counter-increment: toc !important;
+}
+
+.numbered li ol > li:before {
+  content: counters(toc, ".") " ";
+}
+
+.numbered li ol > li {
+  padding-left: 1em;
 }
