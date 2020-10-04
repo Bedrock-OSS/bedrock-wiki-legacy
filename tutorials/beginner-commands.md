@@ -1,3 +1,23 @@
+---
+layout: page
+title: Commands Tutorial
+parent: Tutorials
+---
+
+# Command Tutorial
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+     
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+
+
 # Command Tutorial
 ##### Written by VideoCarp<br>
 
