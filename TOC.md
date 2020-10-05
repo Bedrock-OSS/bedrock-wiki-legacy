@@ -1,3 +1,10 @@
+---
+layout: default
+title: Table of contents usage
+nav_exclude: true
+search_exclude: true
+---
+
 # Table of contents
 
 ## Basic usage
