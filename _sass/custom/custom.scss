@@ -110,3 +110,16 @@
 .numbered li ol > li {
   padding-left: 1em;
 }
+
+#contributors {
+  display: flex;
+}
+
+#contributors > a {
+  padding:10px;
+  background: none;
+}
+
+#contributors img {
+  width: 30px;
+}
