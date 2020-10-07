@@ -4,6 +4,7 @@ title: NBT Commands
 parent: Knowledge
 ---
 
+# NBT Commands
 
 <details id="toc" open markdown="block">
   <summary>
@@ -52,15 +53,14 @@ For non-player entities, the item will not be present in their inventory after d
 
 Gamerule /keepinventory set to true functions as if all items in a player's inventory had `"minecraft:keep_on_death":{}`, however the NBT component is most useful for filtering on specific items that one wishes for a player to remain in his or her inventory as opposed to all items.
 
-KeepOnDeath works in both adventure and survival.
+KeepOnDeath functions identically in both adventure and survival mode.
 
 # Combining NBT components
 
-`/give @a bow 1 0 {"minecraft:item_lock":{ "mode": "lock_in_slot" }, "minecraft:keep_on_death":{}}`
 
-Give all players a bow that locks in a specific inventory slot and is kept on death.
+Give all players a bow that locks in a specific inventory slot and is kept on death: `/give @a bow 1 0 {"minecraft:item_lock":{ "mode": "lock_in_slot" }, "minecraft:keep_on_death":{}}`
 
-`/give @s stone_shovel 1 0 {"minecraft:can_destroy":{"blocks":["dirt", "sand"]},"minecraft:item_lock":{ "mode": "lock_in_inventory" }}` 
+Give all players a bow that locks in a specific inventory slot and is kept on death: `/give @s stone_shovel 1 0 {"minecraft:can_destroy":{"blocks":["dirt", "sand"]},"minecraft:item_lock":{ "mode": "lock_in_inventory" }}` 
 
 Give self a stone shovel that can only dig up gravel and sand, and locks in inventory.
 
@@ -69,13 +69,16 @@ Give self a stone shovel that can only dig up gravel and sand, and locks in inve
 Assigning specific blocks and items with specific data values using `"minecraft:can_place_on"` and `"minecraft:can_destroy"` will return an error stating the NBT "could not be updated, which seems to be an unintended bug in this case.
 
 `/give @s cobblestone 64 0 {"minecraft:can_place_on":{"blocks":["stained_glass:2"]}}`
+
 `/give @a wooden_axe 16 0 {"minecraft:can_destroy":{"blocks":["wool:5"]}}`
+
 
 Similarly to the issue above, specifying commands that generally do not make sense will also return a "could not be updated" error. Some examples include:
 
 `/give @a diamond 10 0 {"minecraft:can_place_on":{"blocks":["dirt"]}}`
 
 (cannot place items on blocks)
+
 
 # Giving in trade/Loot-tables
 
