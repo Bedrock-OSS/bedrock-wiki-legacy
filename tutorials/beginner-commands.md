@@ -97,6 +97,7 @@ X, Y, and Z are used to represent the number, whatever it is, is where your legs
 tildes on the next section, they will be necessary.
 ### What are Tildes?
 ----
+
 Tildes are the `~` character, which in English means **about**, **near**, or **here**.<br>
 Same thing goes for coordinates in Minecraft.<br>
 Each tilde in a command represents from where the command is being executed, and math can be done on those.<br>
@@ -109,8 +110,17 @@ Now what is `target` you may ask. Target means the entity the command is being e
 This command moves the player 10 blocks up from the command block if there is one, or the person who executed it.<br>
 Don't worry yet about making the player do it, we'll cover it now.<br>
 
-You may also want to see `Caret Notation`, which is also recommended, tildes are relative X, Y, and Z, caret notation is a bit different, and is relative to player looking direction, i.e: `/tp @a ^+2 ^ ^` is different to `/tp @a ~+2 ~ ~`.<br>
+# Local Coordinates (Caret Notation)
+----
 
+‘Caret Notation’ is another important part in Minecraft commands, it is local coordinates, it's a bit like tildes, however it's based on direction. Here's a quick summary:
+* `X` The Z axis moves player **to the left**.
+* `Y` The Y axis moves player **up**.
+* `Z` The Z axis moves player **forward**.
+
+You may have thought that not all directions are covered in Caret notation, but really, they are. Tildes and Carets both take
+`+` and `-`, so to go backwards, you can teleport the player using `^ ^ ^-1`, and that will send the player 1 block backwards.<br>
+Adding `-` in carets will go to the opposite direction of the axis, `right` and `down` are done the same way as backwards, except with the different coordinate. Both carets and tildes are `X Y Z` (`^ ^ ^`).
 ## Entity Management
 ----
 This section is on how to manage entities.
