@@ -24,6 +24,7 @@ parent: Documentation
 | Gray (gray)                 | §7   |
 | Dark Gray (dark_gray)       | §8   |
 | Black (black)               | §0   |
+| Minecoin Gold               | §g   |
 
 ## Format Codes
 
