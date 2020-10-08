@@ -328,13 +328,25 @@ List of all new block components, with usage examples
 }
 ```
 
-- minecraft:use_on
+- minecraft:on_use_on
 ```jsonc
 {
-    "minecraft:use_on": {
-        "on_use": {
+    "minecraft:on_use_on": {
+        "on_use_on": {
             "event": "example:block_event",
             "target": "block"
+        }
+    }
+}
+```
+
+- minecraft:on_use
+```jsonc
+{
+    "minecraft:on_use": {
+        "on_use": {
+            "event": "example:item_event",
+            "target": "self"
         }
     }
 }
@@ -382,7 +394,7 @@ List of all new block components, with usage examples
 - minecraft:shooter
 ```jsonc
 {
-    "minecraftshooter": {
+    "minecraft:shooter": {
         "max_draw_duration": 1,
         "charge_on_draw": false,
         "scale_power_by_draw_duration": true,
@@ -402,7 +414,7 @@ List of all new block components, with usage examples
 ```jsonc
 {
     "minecraft:durability": {
-        "max_damage": 100,
+        "max_durability": 100,
         "damage_chance": {
             "min": 5,
             "max": 10
@@ -433,7 +445,7 @@ List of all new block components, with usage examples
 ```jsonc
 {
     "minecraft:weapon": {
-        "on_hurt": {
+        "on_hurt_entity": {
             "event": "example_event",
             "target": "holder"      // Can also be 'self' to trigger an item event"
         }
@@ -596,3 +608,5 @@ Example:
     }
 }
 ```
+
+- RP item files are no longer used, `minecraft:icon` should be used in the BP item file

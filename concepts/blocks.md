@@ -199,7 +199,7 @@ Runs a particle effect on the target
 ```json
 {
     "example:particle_effect": {
-        "remove_mob_effect": {
+        "play_effect": {
             "effect": "minecraft:campfire_smoke",
             "target": "self"
         }
@@ -575,6 +575,13 @@ List of all new block components, with usage examples
   	"minecraft:breakonpush": true
 }
 ```
+- minecraft:display_name
+```jsonc
+{
+  	"minecraft:display_name": "Name"
+}
+```
+
 
 - minecraft:breathability
 ```jsonc
