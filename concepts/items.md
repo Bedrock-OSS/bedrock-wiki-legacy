@@ -323,7 +323,7 @@ List of all new block components, with usage examples
 ```jsonc
 {
     "minecraft:on_use_on": {
-        "on_use": {
+        "on_use_on": {
             "event": "example:block_event",
             "target": "block"
         }
