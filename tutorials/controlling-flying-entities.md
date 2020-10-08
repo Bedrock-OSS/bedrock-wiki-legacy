@@ -238,4 +238,27 @@ Now, we need a copy of the player's behavior file, which we are going to modify 
 }
 ```
 
+The entity can now be controlled with the jump key, but there's a bug. If the player dismounts the entity while holding the jump key, it will continue rising. We can fix this with an animation controller on entity itself that resets the levitation whenever a player dismounts it.
+
+```
+"controller.animation.reset_levitation": {
+	"initial_state": "no_rider",
+	"states": {
+		"no_rider": {
+			"transitions": [
+				{ "has_rider": "query.has_rider" }
+			]
+		},
+		"has_rider": {
+			"on_exit": [
+				"/effect @s levitation 0"
+			],
+			"transitions": [
+				{ "no_rider": "!query.has_rider" }
+			]
+		}
+	}
+}
+```
+
 ### **Original Author:** assassin (assassin#1634), 4/24/2020
