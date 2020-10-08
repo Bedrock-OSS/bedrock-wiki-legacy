@@ -319,13 +319,25 @@ List of all new block components, with usage examples
 }
 ```
 
-- minecraft:use_on
+- minecraft:on_use_on
 ```jsonc
 {
-    "minecraft:use_on": {
+    "minecraft:on_use_on": {
         "on_use": {
             "event": "example:block_event",
             "target": "block"
+        }
+    }
+}
+```
+
+- minecraft:on_use
+```jsonc
+{
+    "minecraft:on_use": {
+        "on_use": {
+            "event": "example:item_event",
+            "target": "self"
         }
     }
 }
