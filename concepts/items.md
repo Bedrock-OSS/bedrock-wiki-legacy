@@ -609,4 +609,4 @@ Example:
 }
 ```
 
-- RP item files are no longer used, `minecraft:icon` should be used in the BP item file
+- RP item files are no longer used, `minecraft:icon` and all other RP components should be used in the BP item file.
