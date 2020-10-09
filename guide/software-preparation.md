@@ -5,6 +5,8 @@ parent: Beginners Guide
 nav_order: 1
 ---
 
+<link rel="icon" type="image/png" href="/assets/guide/Guide_LOGO.png"/>
+
 # Software and Preparation
 
 <details id="toc" open markdown="block">
