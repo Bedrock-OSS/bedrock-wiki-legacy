@@ -54,7 +54,7 @@
   #toc a:focus {
     color: $body-text-color;
   }
-  #toc:not(.numbered) ol > li::before  {
+  #toc:not(.numbered) ol > li::before {
     content: none;
   }
 
@@ -99,7 +99,7 @@
 }
 
 .numbered ol > li:before {
-  content: counters(toc, ".") ". "!important;
+  content: counters(toc, ".") ". " !important;
   counter-increment: toc !important;
 }
 
@@ -116,10 +116,16 @@
 }
 
 #contributors > a {
-  padding:10px;
+  padding: 10px;
   background: none;
 }
 
 #contributors img {
   width: 30px;
+}
+
+.post {
+  background: $table-background-color;
+  padding: 10px;
+  margin-bottom: 10px;
 }

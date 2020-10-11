@@ -42,3 +42,7 @@ search_enabled: true
 
 ga_tracking: UA-172450751-1
 ga_tracking_anonymize_ip: true
+
+paginate: 10
+paginate_path: "/news/page:num/"
+excerpt_separator: <!--more-->

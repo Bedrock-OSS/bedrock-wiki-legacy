@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<h1>Posts with tag {{ page.tag }}</h1>
+
+{{ content }}
+
+{% for post in site.posts %}
+{% if post.tags contains page.tag %}
+<div class="post">
+    <h2 class="post-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <small class="post-date">{{ post.date | date: "%-d %B %Y" }}</small>
+    <span class="post-excerpt">{{ post.excerpt }}</span>
+</div>
+{% endif %}
+{% endfor %}
