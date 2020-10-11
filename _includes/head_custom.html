@@ -179,12 +179,8 @@
         /*
         Add contributors section
         */
-        let filepath = document.location.pathname.replace('.html', '.md');
-        if (!filepath.endsWith('.md')) {
-            filepath += '/index.md';
-        } else if (filepath.endsWith('/')) {
-            filepath += 'index.md';
-        }
+        let filepath = document.querySelector('.main-content footer a').getAttribute('href');
+        filepath = filepath.substr(filepath.indexOf('gh-pages/') + 9);
         fetch(CONTRIBUTORS_URL + "?path=" + filepath)
             .then(response => response.json())
             .then(commits => {
