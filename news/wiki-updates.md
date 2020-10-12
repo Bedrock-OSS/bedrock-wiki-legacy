@@ -1,6 +1,6 @@
 ---
 layout: tag_index
-title:  "wiki-updates"
+title:  "Wiki Updates"
 tag: wiki-updates
 parent: News
 ---
