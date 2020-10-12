@@ -6,7 +6,7 @@ tags: guide-updates
 
 The Beginner's Guide, https://guide.bedrock.dev, is currently actual as of v1.16.0. I have covered almost every single aspect of Add-On creation in it.  
 However, the Guide has grown too big to manage myself, to bring in edits and new subGuides every time the Add-On API is changed. That is why the Guide is now going fully Open Source!  
-Since GitHub provides much better collaboration techniques, the Guide is currently being ported over there, to be eventually merged with https://wiki.bedrock.dev. (The `guide.bedrock.dev` will start pointing to the new location).  
+Since GitHub provides much better collaboration techniques, the Guide is currently being ported over there, to be eventually merged with https://wiki.bedrock.dev. <!--more--> (The `guide.bedrock.dev` will start pointing to the new location).  
 And **you** can help!
 
 - *Has the guide helped you do your first steps in Add-On creation?*
