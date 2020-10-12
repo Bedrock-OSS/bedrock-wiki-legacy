@@ -106,6 +106,14 @@ Where `slot` and `channel` are both integer arguments, from the following tables
 
 Query returns color value in specified channel.
 
+# query.is_ghost
+
+Formatted like: `is_ghost = query.is_ghost`. 
+
+Return 1.0 or 0.0 based on whether the entity is a ghost.
+
+Currently, only returns 1.0 for a guardian ghost and is used by its renderer.
+
 # query.is_jumping
 
 Formatted like: `is_jumping = query.is_jumping`. 
