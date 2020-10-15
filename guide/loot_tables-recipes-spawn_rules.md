@@ -15,7 +15,7 @@ nav_order: 5
 </details>
 
 ___
-# Custom loot Tables
+# Custom Loot Tables
 Loot tables are powerful tools that define what blocks drop upon destruction, what entities upon death, what equipment can entities use, what can a player fish out of a river and what loot ends up in the game's loot chests. In order to understand loot tables better, I recommend looking into the `loot_tables` folder of the Example Vanilla Behavior pack, but I'll trow in some examples from there into here nevertheless.  \
 One can even make a loot that drops half-removed blocks like glowingobsidian and netherreactors!
 
@@ -588,7 +588,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
         },
 ```
 
-- "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity:born`" (as baby). Can be used in any event. 
+- "`minecraft:herd`" can also be used like this to make the second entity spawned [in this scenario] with the "`minecraft:entity:born`" (as baby). Can be used in any event.
 `"event_skip_count": 2`, for example, means that the first two entities will not be spawned with this event, but all the next ones will.
 
 *Why not create some more custom blocks, items, recipes and loot tables before moving onto the next big chapter?*
