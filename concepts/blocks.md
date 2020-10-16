@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Blocks [BETA]
+title: Blocks
 parent: Concepts
+badge: BETA
+badge_color: red
 ---
 
 # Blocks [BETA]
