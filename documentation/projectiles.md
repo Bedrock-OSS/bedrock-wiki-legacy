@@ -203,13 +203,14 @@ Spawns experience orbs giving a set amount of experience.
 
 *Exact behavior unknown*
 
+_Requires education edition to be enabled._
 Freezes water on hit.
 
 | Name          | Type    | Description                          |
 |---------------|---------|--------------------------------------|
 | shape         | String  | "sphere" or "cube"                   |
-| snap_to_block | Boolean | Maximum amount of experience to give |
-| size          | Integer |                                      |
+| snap_to_block | Boolean |                                      |
+| size          | Integer | The size of the freeze effect        |
 
 ### hurt_owner
 
