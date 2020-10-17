@@ -8,6 +8,8 @@ sitemap:
     changefreq: 'weekly'
 ---
 
+<link rel="icon" href="/assets/guide/Guide_LOGO.png">
+
 # Beginners Guide
 
 ### **What is this guide?** 
