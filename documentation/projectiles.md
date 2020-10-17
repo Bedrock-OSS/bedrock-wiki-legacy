@@ -6,7 +6,7 @@ parent: Documentation
 
 # Projectiles
 
-<details id="toc" class="top-level" open markdown="block">
+<details id="toc" open markdown="block">
   <summary>
     Table of contents
   </summary>
