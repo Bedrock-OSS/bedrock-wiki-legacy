@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: page
 title: "Animation Controllers - Attack AI, Behavior animations - Entity Commands"
 parent: Beginners Guide
 nav_order: 10
