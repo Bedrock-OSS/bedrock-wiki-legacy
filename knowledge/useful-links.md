@@ -40,7 +40,9 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Feature Rule Generator v2 (paid version)](https://machine-builder.itch.io/frg-v2)
  - [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
  - [Add-on Json Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
-
+ - [NBT Editor](https://www.universalminecrafteditor.com/)
+ - [World Converter(free)](http://www.mcctoolchest.com/)
+ - [world Converter (paid)](https://www.universalminecraftconverter.com/download)
 ## JSON Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
  - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
