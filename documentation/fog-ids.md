@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Fog IDs (Beta)
+title: Fog IDs
 parent: Documentation
+badge: BETA
+badge_color: red
 ---
 
 # Here is a list of all `fog` command IDs (Beta)

@@ -1,7 +1,9 @@
 ---
 layout: page
-title: Block Model Materials [BETA]
+title: Block Model Materials
 parent: Documentation
+badge: BETA
+badge_color: red
 ---
 
 # Block Model Materials [BETA]
