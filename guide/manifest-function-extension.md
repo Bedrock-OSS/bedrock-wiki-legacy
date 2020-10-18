@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: Manifest; Custom Function; .mc file extensions
 parent: Beginners Guide
 nav_order: 2
@@ -17,7 +17,7 @@ nav_order: 2
 </details>
 <!-- ___
 ___
-#### **You will:** 
+#### **You will:**
 - [Manifests](#manifests);
 - [Testing World](#creating-your-testing-world);
 - [Files with .mc extensions](mc-file-extensions):
@@ -80,13 +80,13 @@ Let's create our Resource Pack manifest first by copying the code below into `RP
 
 Let's break up the code now.
 
-- "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version, use it. 
+- "`format_version`" defines what version of manifest syntax you are using. Version 2 is the most recent stable version, use it.
 
 - "`name`" is the name of your behavior pack. "description" will show up under it in-game.
 
 - The "`uuid`" field is a very important one. A UUID(*Universally Unique IDentifier*) identifies your pack for other programs(in this case, Minecraft) to read. NEVER USE THE SAME UUID TWICE. You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like *Bridge*, *AJG* and *CoreCoder* generate UUIDS automatically.. Every manifest file uses 2 different UUIDs.
 
-- "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds. 
+- "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
 - "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. Set it to `1.16.0` or the latest versionof Minecraft.
 
@@ -177,22 +177,22 @@ ___
 ## .mc file extensions;
 Now it's time to talk about some file extensions you'll be using during the development.
 ___
-### .mcstructure 
-An  `.mcstructure`  file literally includes a Minecraft structure, consisting of blocks and entities. It can be exported via a Structure Block(`*/give @s structure_block*`) and is Win10 Edition only. 
-If you store one of these files in the `BP/structures` folder you'll be able to '**load**' the structure from structure blocks on any world with the pack applied. (*A reliable method to transfer structures between worlds!*). See the Custom Structures article to make your Structures automatically generate in your world!   
+### .mcstructure
+An  `.mcstructure`  file literally includes a Minecraft structure, consisting of blocks and entities. It can be exported via a Structure Block(`*/give @s structure_block*`) and is Win10 Edition only.
+If you store one of these files in the `BP/structures` folder you'll be able to '**load**' the structure from structure blocks on any world with the pack applied. (*A reliable method to transfer structures between worlds!*). See the Custom Structures article to make your Structures automatically generate in your world!
 ![Structure Block Example](/assets/guide/structure_block_example.jpg)
 ___
 ### .mcfunction
-An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `BP/functions/`. VSC will treat it like a normal .txt file.   
-Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:   
+An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `BP/functions/`. VSC will treat it like a normal .txt file.
+Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:
 ![.mcstructure in VSC](/assets/guide/function_code.jpg)
 ##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors.
 
-Now you can run the function by typing `/function diamond_tools` (*`/function {filename}`*) in the in-game chat!   
-![function in-game](/assets/guide/function_in_game.jpg)   
+Now you can run the function by typing `/function diamond_tools` (*`/function {filename}`*) in the in-game chat!
+![function in-game](/assets/guide/function_in_game.jpg)
 ___
 ## .mcpack, .mcaddon & .mcworld
-Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `BP` or your `RP`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)   
+Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `BP` or your `RP`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)
 
 ![](/assets/guide/transpiled_mcpack.png)
 

@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: Custom Trades; Trade tables
 parent: Beginners Guide
 nav_order: 9
