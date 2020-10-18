@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: page
 title: Custom Generation
 parent: Beginners Guide
 nav_order: 12
