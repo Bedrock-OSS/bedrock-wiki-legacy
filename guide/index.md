@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: page
 title: Beginners Guide
 has_children: true
 nav_order: 3
@@ -8,25 +8,27 @@ sitemap:
     changefreq: 'weekly'
 ---
 
+<link rel="icon" href="/assets/guide/Guide_LOGO.png">
+
 # Beginners Guide
 
-### **What is this guide?**
-The guide is a beginner tutorial, created in order to make it possible for more people to start 'modding' Minecraft Bedrock Edition. The guide will guide you from the very fundamentals to being able to create advanced packs yourself.
+### **What is this guide?** 
+The guide is a beginner tutorial, created in order to make it possible for more people to start 'modding' Minecraft Bedrock Edition. The guide will guide you from the very fundamentals to being able to create advanced packs yourself. 
 
-### **What exactly are Add-ons?**
+### **What exactly are Add-ons?** 
 An add-on is basically the Minecraft Bedrock Edition(Windows 10, iOS, Android, Console) equivalent to Java mods. However, it's development is done officially by Mojang, who plan to make it so everything that is in the game will eventually be possible to fully recreate with add-ons.  \
-### **What do I need in order to create Add-ons?**
+### **What do I need in order to create Add-ons?** 
 This guide will be focusing on creating add-ons on a Windows 10 PC for any Bedrock platform. However, the process is much the same when working on Android or iOS, even if I do not prefer it. If something works differently on a mobile device, a note will state that.
 
 
 
-Currently the latest release version of Minecraft is 1.16.0 and everything in this guide will work flawlessly in this version (you can check your minecraft version in the bottom-right corner of the start screen). Many things won't work in previous versions, and some will be changed in later ones. I will keep the guide as up-to-date is possible, so no need to worry.
+Currently the latest release version of Minecraft is 1.16.0 and everything in this guide will work flawlessly in this version (you can check your minecraft version in the bottom-right corner of the start screen). Many things won't work in previous versions, and some will be changed in later ones. I will keep the guide as up-to-date is possible, so no need to worry.  
 
 
 ### Content
-Let's start by setting up your tools, which you will use throughout the development of your add-ons. In this section I'll show you exactly what software is needed, where to set up your add-ons, how to create a workspace and where to get additional info on the syntax.
+Let's start by setting up your tools, which you will use throughout the development of your add-ons. In this section I'll show you exactly what software is needed, where to set up your add-ons, how to create a workspace and where to get additional info on the syntax.  
 
-- [Tools and Software; com.mojang folder; Referencing;](/guide/software-preparation.html);
+- [Tools and Software; com.mojang folder; Referencing;](/guide/software-preparation.html); 
 
 You will make your first steps in creating an add-on here, by learning to create manifests and pack_icons, as well as learn to use some of the .mc file extensions. No previous coding experience required. After you'll create a testing World where you'll be able to test the first feature of your add-on - a custom /function.
 
@@ -64,7 +66,7 @@ Let's move to something way different now: World generation!
 
  - [Custom Generation: Biomes, Features, Feature Rules;]()
 
-
+ 
 
 Something way different from everything we've done before: a Bonus tutorial the creation of custom Skin packs!
 
@@ -72,6 +74,6 @@ Something way different from everything we've done before: a Bonus tutorial the 
 
 The guide will be updated regularly, in order to eventually lead you from "Beginner" to "I can create whatever I want".
 
-*Currently the guide is being ported from guide.bedrock.dev to wiki.bedrock.dev/guide/. All help is greatly appreciated. Once the exiting subpages are migrated, guide.bedrock.dev will start pointing to the new directory.
+*Currently the guide is being ported from guide.bedrock.dev to wiki.bedrock.dev/guide/. All help is greatly appreciated. Once the exiting subpages are migrated, guide.bedrock.dev will start pointing to the new directory. 
 
 ###### The Guide has been originally written by KaiFireborn#1551 on Discord [here](https://sites.google.com/view/mcbe-add-on-tutorial/-?authuser=0), which was previosuly accessible by the subdomain of this subsite, `guide.bedrock.dev` and it's maintanance is discountinued. Instead, the Guide is now OOS and being [ported] maintained by the Bedrock Wiki community.

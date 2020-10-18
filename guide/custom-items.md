@@ -1,5 +1,5 @@
 ---
-layout: guide
+layout: page
 title: Custom Items; Linking Textures; Short Names
 parent: Beginners Guide
 nav_order: 3
@@ -18,7 +18,7 @@ nav_order: 3
 
 Every item, block or entity requires a `Behavior` file in the BP folder (to define how the item is going to behave) and a Resource file in the `RP` folder (to define how the item will look in-game).
 
-Let's start off by creating our simple item's behavior file: `BP/items/gem.item.json` (In some steps, like this one, you will first need to create a folder before the file can be created).
+Let's start off by creating our simple item's behavior file: `BP/items/gem.item.json` (In some steps, like this one, you will first need to create a folder before the file can be created). 
 
 ## Gem Behavior Code (BP)
 
@@ -45,7 +45,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
  - `components` are "qualities" the object always has. We'll look deeper into them when creating a custom entity. Let's break up everything in "components".
    - `minecraft:hand_equipped` defines whether the item 'equips' in your hand, this controls how the item is displayed on your character. For example, a Wooden Sword is hand equipped, but an Apple isn't.
    - `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example
-   - the item "minecraft:dye" with aux value 0, which is an Ink Sack (`/give @s dye  1 0`), doesn't stack with "minecraft:dye" with aux value 12, which is a Cocoa Bean (`/give @s dye 1 12`).
+   - the item "minecraft:dye" with aux value 0, which is an Ink Sack (`/give @s dye  1 0`), doesn't stack with "minecraft:dye" with aux value 12, which is a Cocoa Bean (`/give @s dye 1 12`). 
    - "minecraft:foil" defines whether the item will have the enchantment glint on it. An enchanted Shovel has this component set to true, but a disenchanted one to false.
    - `minecraft:max_stack_size` sets how many items can stack in a single inventory slot. Cannot be larger than 64. Set this to 1 for an unstackable item.
    - `minecraft:max_damage` can be not included, since it's for tools and weapons. It basically defines the item's durability and is rarely used in simple items.
@@ -82,7 +82,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ## Gem Textures and Shortnames
 
-In order to define your item's texture's shortname (to be able to use the texture on an item), you first need to create the texture. Create a 16*16 image file, draw a gem on it, and save it into `RP/textures/items/gem.png`.
+In order to define your item's texture's shortname (to be able to use the texture on an item), you first need to create the texture. Create a 16*16 image file, draw a gem on it, and save it into `RP/textures/items/gem.png`. 
 
 Now let's create the file where texture short names will be defined: `RP/textures/item_texture.json`, and copy this code into it:
 
