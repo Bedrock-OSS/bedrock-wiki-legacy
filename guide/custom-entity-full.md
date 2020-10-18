@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: "Custom Entity; Full Resource and Behavior definition, Attributes, Components"
 parent: Beginners Guide
 nav_order: 7

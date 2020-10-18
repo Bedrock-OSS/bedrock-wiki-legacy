@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: Custom Loot Tables, Recipes, Spawn Rules
 parent: Beginners Guide
 nav_order: 5
