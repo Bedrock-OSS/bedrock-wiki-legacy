@@ -1,6 +1,6 @@
 title: Bedrock Wiki
 email: sirlich.business@gmail.com
-description: >- 
+description: >-
   Knowledge-sharing Bedrock Wiki, containing documentation, tutorials, and general how-to information. Written and maintained by SirLich#1658.
 
 remote_theme: pmarsceill/just-the-docs
@@ -19,7 +19,7 @@ coderay_default_lang: JSON
 
 kramdown:
   parse_block_html: true
-  
+
 markdown: kramdown
 url: https://wiki.bedrock.dev
 aux_links:
@@ -29,9 +29,8 @@ aux_links:
     - "https://bedrock.dev/"
   "Contribute":
     - "https://github.com/SirLich/technical-bedrock"
-  "русский":
-    - "https://wiki.bedrock.dev/ru/"
   
+
 
 # Build settings
 theme: just-the-docs
