@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: Custom Skin Packs
 parent: Beginners Guide
 nav_order: 13

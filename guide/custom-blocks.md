@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: Custom Blocks; Flipbook Textures;
 parent: Beginners Guide
 nav_order: 4
@@ -33,7 +33,7 @@ Note: you can find the custom blocks documentation on https://bedrock.dev/r/Bloc
             "minecraft:loot": "loot_tables/blocks/blocky.json",
             "minecraft:destroy_time": 3,
             "minecraft:explosion_resistance": 3,
-            "minecraft:friction": 0.6, 
+            "minecraft:friction": 0.6,
             "minecraft:flammable": {
                 "flame_odds": 0,
                 "burn_odds": 0
@@ -65,7 +65,7 @@ You can play around with changing the component values for each of these. Now le
 
 
 # Custom block resource definition;
-Unlike items(`RP/items/itemname.json`), all custom block resource definition happens in a single file: `RP/blocks.json`. 
+Unlike items(`RP/items/itemname.json`), all custom block resource definition happens in a single file: `RP/blocks.json`.
 
 ```jsonc
 {
@@ -104,7 +104,7 @@ Unlike items(`RP/items/itemname.json`), all custom block resource definition hap
 }
 ```
 
-As you can see, every block's identifier is applied with textures and step sounds. All of these blocks have a different type of textures, let's look through them. 
+As you can see, every block's identifier is applied with textures and step sounds. All of these blocks have a different type of textures, let's look through them.
 
 - "`tut:blocky`" has "`textures`" set to the texture shortname "`**blocky**`". We'll define it in a file similiar to `RP/textures/item_texture.json`, `RP/textures/terrain_texture.json` later.
 - "`tut:sapp_log`"'s "textures" are broken up in 3 parts: "`up`"(for the upper face of the block), "`down`"(for the bottom face of the block), and "`side`"(for the remaining four faces). Each one of these has a seperate texture shortname applied.
@@ -195,12 +195,12 @@ As you might have already guessed, flipbook texture shortnames are defined in a 
 ```
 
 - "`flipbbok_texture`" is the path to your texture file, which is named "`flashing_flipbook`" in this scenario.
-- "`atlas_tile`" is basically the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `tut:flashing` block in `res/blocks.json`. 
+- "`atlas_tile`" is basically the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `tut:flashing` block in `res/blocks.json`.
 - "`ticks_per_frame`" defines how quickly the different textures will fade into the block, in other words the speed of the animation.
 
-A **flipbook texture** file is created like this: 
+A **flipbook texture** file is created like this:
 - The image width is 16;
-- Image height is `16*3`, as we have three different block textures/**frames** to fade. If you wanted a flipbook with 12 different textures, the height would be `16*12`. 
+- Image height is `16*3`, as we have three different block textures/**frames** to fade. If you wanted a flipbook with 12 different textures, the height would be `16*12`.
 **Done!** All of our blocks work perfectly.
 
 <video width="320" height="240" controls>

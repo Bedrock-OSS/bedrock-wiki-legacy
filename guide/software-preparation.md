@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: guide
 title: Software and preparation
 parent: Beginners Guide
 nav_order: 1
@@ -20,7 +20,7 @@ nav_order: 1
 
 <!-- ___
 ___
-#### **You will:** 
+#### **You will:**
 
 - [Tools and software](#downloading-the-software);
 - [com.mojang folder](#the-com.mojang-folder-and-your-workspace);
@@ -39,7 +39,7 @@ In order to be able to code add-ons you'll need a certain set of software instal
 
 1. **A code editor**. This can be any text editor (even the Windows-pre-installed Notepad would do), however it's much more comfortable to work in a dedicated Code Editor, like [Visual Studio Code](https://code.visualstudio.com/), which I prefer. [Sublime Text](https://www.sublimetext.com/) is another great code editor with huge theme customization capabilities. [CoreCoder](https://hanprog.itch.io/core-coder) is a unique Code Editor developed specifically for Add-On creation.   Alternatives for mobile:
    - Android: _ES File Explorer_;
-   - iOS: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481);  
+   - iOS: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481);
 
    Alternatively, you can use [_Bridge_](https://github.com/bridge-core/bridge.), a visual software for Minecraft Add-On development. It offers JSON in tree view, which I personally do not prefer over "pure" JSON in a code editor such as VSC. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
 
@@ -58,18 +58,18 @@ ___
    Now that you have your tools installed, let's move onto some pre-organisation:
 
 ## The com.mojang folder and your Workspace
-The com.mojang folder is the folder we're going to be working with throughout the Guide and Add-On development in general. It's the way to communicate with your game - you can find it in: 
+The com.mojang folder is the folder we're going to be working with throughout the Guide and Add-On development in general. It's the way to communicate with your game - you can find it in:
  - Windows: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`;
 - Android: `Phone>games>com.mojang`;
-- iOS: `My iDevice>Minecaraft>games>com.mojang`);  
- I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.  
+- iOS: `My iDevice>Minecaraft>games>com.mojang`);
+ I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.
    You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
 
 ![com.mojang folder](/assets/guide/com_mojang_folder.png)
 
 
- `development_..._packs` are for developing add-ons -  if you do some changes to them, _then exit and re-enter a world with the packs applied_, the packs will _update_. That way you can quickly test the changes without having to change the pack version and reloading the game. Thus we'll work with these folders.  
- (In `..._packs`, on the other hand, stable add-ons, including those imported via `.mcpack` are stored. They're also used to submit add-ons to Realms. We do not need them right now.)  
+ `development_..._packs` are for developing add-ons -  if you do some changes to them, _then exit and re-enter a world with the packs applied_, the packs will _update_. That way you can quickly test the changes without having to change the pack version and reloading the game. Thus we'll work with these folders.
+ (In `..._packs`, on the other hand, stable add-ons, including those imported via `.mcpack` are stored. They're also used to submit add-ons to Realms. We do not need them right now.)
 
 
 
