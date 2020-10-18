@@ -1,6 +1,8 @@
 ---
 layout: page
-title: Block Tags [BETA]
+title: Block Tags
+badge: BETA
+badge_color: red
 parent: Documentation
 ---
 
