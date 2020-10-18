@@ -204,12 +204,12 @@ Used to randomize event functions
 }
 ```
 
-#### `execute_command`
+#### `run_command`
 Used to execute commands
 ```jsonc
 {
     "example:execute_command_event": {
-        "execute_command": {
+        "run_command": {
             "command": ["say hi"],
             "target": "other"
         }
