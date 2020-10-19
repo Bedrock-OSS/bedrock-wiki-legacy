@@ -91,10 +91,18 @@ __*Note*__: *A template Add-On, containing all code examples from this guide can
 
 <!-- *Currently the guide is being ported from guide.bedrock.dev to wiki.bedrock.dev/guide/. All help is greatly appreciated. Once the exiting subpages are migrated, guide.bedrock.dev will start pointing to the new directory. -->
 
+<br>
 
 
-<details> <!--Insited to keep-->
-  <summary>Timeline</summary>
+ <!--Insited to keep-->
+
+<details> 
+
+  <summary>
+
+    Timeline
+
+  </summary>
 
 - 13.04.2020: The guide has been originally written and published by *KaiFireborn*#1551 on Discord [here](https://sites.google.com/view/mcbe-add-on-tutorial/-?authuser=0).
  - 04.05.2020: Accessible by the domain/link [`guide.bedrock.dev`](https://guide.bedrock.dev) thanks to *destruc7i0n*.
@@ -103,4 +111,7 @@ __*Note*__: *A template Add-On, containing all code examples from this guide can
  Currently, the Guide is fully OSS and accepting contributions from *you*.
 
  <!-- The Guide has been originally written by KaiFireborn#1551 on Discord [here](https://sites.google.com/view/mcbe-add-on-tutorial/-?authuser=0), which was previosuly accessible by the subdomain of this subsite, `guide.bedrock.dev` and it's maintanance is discountinued. Instead, the Guide is now OOS and being [ported] maintained by the Bedrock Wiki community. -->
+
 </details>
+
+___
