@@ -57,12 +57,9 @@ KeepOnDeath functions identically in both adventure and survival mode.
 
 # Combining NBT components
 
-
 Give all players a bow that locks in a specific inventory slot and is kept on death: `/give @a bow 1 0 {"minecraft:item_lock":{ "mode": "lock_in_slot" }, "minecraft:keep_on_death":{}}`
 
-Give all players a bow that locks in a specific inventory slot and is kept on death: `/give @s stone_shovel 1 0 {"minecraft:can_destroy":{"blocks":["dirt", "sand"]},"minecraft:item_lock":{ "mode": "lock_in_inventory" }}` 
-
-Give self a stone shovel that can only dig up gravel and sand, and locks in inventory.
+Give self a stone shovel that can only dig up gravel and sand, and locks in inventory: `/give @s stone_shovel 1 0 {"minecraft:can_destroy":{"blocks":["dirt", "sand"]},"minecraft:item_lock":{ "mode": "lock_in_inventory" }}` 
 
 # Additional Notes
 
