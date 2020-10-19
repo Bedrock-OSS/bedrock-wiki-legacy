@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Custom Entity; Full Resource and Behavior definition, Attributes, Components"
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 7
 ---
 
@@ -502,6 +502,11 @@ ___
 
 ___
 
+<details>
+
+  <summary>
+    Example Entity BP (From the guide's Template packs)
+  </summary>
 
 `BP/entities/skele_yaklin.json`
 ```jsonc
@@ -790,3 +795,5 @@ ___
     }
 }
 ```
+
+</details>

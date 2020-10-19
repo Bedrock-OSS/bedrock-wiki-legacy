@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Creating entity visuals in Blockbench: Modeling, Texturing, Animating"
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 6
 ---
 

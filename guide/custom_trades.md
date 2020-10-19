@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Custom Trades; Trade tables
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 9
 ---
 

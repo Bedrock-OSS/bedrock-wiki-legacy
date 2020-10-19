@@ -2,6 +2,8 @@
 layout: page
 title: The Editor
 parent: Knowledge
+nav_exclude: true
+search_exclude: true
 ---
 
 # The Editor

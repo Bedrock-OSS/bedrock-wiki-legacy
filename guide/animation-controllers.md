@@ -1,14 +1,14 @@
 ---
 layout: guide
 title: "Animation Controllers - Attack AI, Behavior animations - Entity Commands"
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 10
 ---
 
 <details id="toc" open markdown="block">
   <summary>
     Table of contents
-  </summary>
+</summary>
   {: .text-delta }
 1. TOC
 {:toc}

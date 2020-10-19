@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Custom Generation
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 12
 ---
 

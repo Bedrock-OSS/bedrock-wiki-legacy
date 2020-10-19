@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Custom Loot Tables, Recipes, Spawn Rules
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 5
 ---
 
@@ -15,287 +15,296 @@ nav_order: 5
 </details>
 
 ___
+
 # Custom Loot Tables
 Loot tables are powerful tools that define what blocks drop upon destruction, what entities upon death, what equipment can entities use, what can a player fish out of a river and what loot ends up in the game's loot chests. In order to understand loot tables better, I recommend looking into the `loot_tables` folder of the Example Vanilla Behavior pack, but I'll trow in some examples from there into here nevertheless.  \
 One can even make a loot that drops half-removed blocks like glowingobsidian and netherreactors!
 
+
 <details>
-<summary>Example Loot Tables</summary>
 
-```jsonc
-//BP/loot_tables/entities/ghast/json
+  <summary>
+    Example Loot Tables
+  </summary>
 
-{
+
+  ```jsonc
+  //BP/loot_tables/entities/ghast/json
+
+  {
+      "pools": [
+          {
+              "rolls": 1,
+              "entries": [
+                  {
+                      "type": "item",
+                      "name": "minecraft:ghast_tear",
+                      "weight": 1,
+                      "functions": [
+                          {
+                              "function": "set_count",
+                              "count": {
+                                  "min": 0,
+                                  "max": 1
+                              }
+                          },
+                          {
+                              "function": "looting_enchant",
+                              "count": {
+                                  "min": 0,
+                                  "max": 1
+                              }
+                          }
+                      ]
+                  }
+              ]
+          },
+          {
+              "rolls": 1,
+              "entries": [
+                  {
+                      "type": "item",
+                      "name": "minecraft:gunpowder",
+                      "weight": 1,
+                      "functions": [
+                          {
+                              "function": "set_count",
+                              "count": {
+                                  "min": 0,
+                                  "max": 2
+                              }
+                          },
+                          {
+                              "function": "looting_enchant",
+                              "count": {
+                                  "min": 0,
+                                  "max": 1
+                              }
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+  ```
+  ```jsonc
+  //BP/loot_tables/chests/equipment.low_tier_items.json
+
+  {
     "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:ghast_tear",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 0,
-                                "max": 1
-                            }
-                        },
-                        {
-                            "function": "looting_enchant",
-                            "count": {
-                                "min": 0,
-                                "max": 1
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:gunpowder",
-                    "weight": 1,
-                    "functions": [
-                        {
-                            "function": "set_count",
-                            "count": {
-                                "min": 0,
-                                "max": 2
-                            }
-                        },
-                        {
-                            "function": "looting_enchant",
-                            "count": {
-                                "min": 0,
-                                "max": 1
-                            }
-                        }
-                    ]
-                }
-            ]
-        }
-    ]
-}
-```
-```jsonc
-//BP/loot_tables/chests/equipment.low_tier_items.json
-
-{
-  "pools": [
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "minecraft:leather_chestplate",
-          "weight": 1
-        },
-        {
-          "type": "item",
-          "name": "minecraft:iron_chestplate",
-          "weight": 1
-        },
-        {
-          "type": "empty",
-          "weight": 5
-        }
-      ]
-    },
-    {
-      "rolls": 1,
-      "entries": [
-        {
-          "type": "item",
-          "name": "minecraft:leather_helmet",
-          "weight": 1
-        },
-        {
-          "type": "item",
-          "name": "minecraft:iron_helmet",
-          "weight": 1
-        },
-        {
-          "type": "empty",
-          "weight": 5
-        }
-      ]
-    }
-  ]
-}
-```
-
-```jsonc
-//BP/loot_tables/chests/village/village_cartographer.json
-
-{
-  "pools": [
-    {
-      "rolls": {
-        "min": 1,
-        "max": 5
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "item",
+            "name": "minecraft:leather_chestplate",
+            "weight": 1
+          },
+          {
+            "type": "item",
+            "name": "minecraft:iron_chestplate",
+            "weight": 1
+          },
+          {
+            "type": "empty",
+            "weight": 5
+          }
+        ]
       },
-      "entries": [
-        {
-          "type": "item",
-          "weight": 10,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 3
-              }
-            }
-          ],
-          "name": "minecraft:map"
-        },
-        {
-          "type": "item",
-          "weight": 15,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 5
-              }
-            }
-          ],
-          "name": "minecraft:paper"
-        },
-        {
-          "type": "item",
-          "weight": 5,
-          "name": "minecraft:compass"
-        },
-        {
-          "type": "item",
-          "weight": 15,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 4
-              }
-            }
-          ],
-          "name": "minecraft:bread"
-        },
-        {
-          "type": "item",
-          "weight": 5,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 1,
-                "max": 2
-              }
-            },
-            {
-              "function": "set_data",
-              "data": 0
-            }
-          ],
-          "name": "minecraft:sapling"
-        }
-      ]
-    }
-  ]
-}
-```
-```jsonc
-//BP/loot_tables/gameplay/fishing/treasure.json
-
-{
-    "pools": [
-        {
-            "rolls": 1,
-            "entries": [
-                {
-                    "type": "item",
-                    "name": "minecraft:nautilus_shell",
-                    "weight": 5
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:waterlily",
-                    "weight": 5
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:name_tag",
-                    "weight": 5
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:saddle",
-                    "weight": 5
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:bow",
-                    "weight": 5,
-                    "functions": [
-                        {
-                            "function": "set_damage",
-                            "damage": {
-                                "min": 0,
-                                "max": 0.25
-                            }
-                        },
-                        {
-                            "function": "enchant_with_levels",
-                            "levels": 30,
-                            "treasure": true
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:fishing_rod",
-                    "weight": 5,
-                    "functions": [
-                        {
-                            "function": "set_damage",
-                            "damage": {
-                                "min": 0,
-                                "max": 0.25
-                            }
-                        },
-                        {
-                            "function": "enchant_with_levels",
-                            "levels": 30,
-                            "treasure": true
-                        }
-                    ]
-                },
-                {
-                    "type": "item",
-                    "name": "minecraft:book",
-                    "weight": 6,
-                    "functions": [
-                        {
-                            "function": "enchant_with_levels",
-                            "levels": 30,
-                            "treasure": true
-                        }
-                    ]
-                }
-            ]
-        }
+      {
+        "rolls": 1,
+        "entries": [
+          {
+            "type": "item",
+            "name": "minecraft:leather_helmet",
+            "weight": 1
+          },
+          {
+            "type": "item",
+            "name": "minecraft:iron_helmet",
+            "weight": 1
+          },
+          {
+            "type": "empty",
+            "weight": 5
+          }
+        ]
+      }
     ]
-}
-```
+  }
+  ```
+
+  ```jsonc
+  //BP/loot_tables/chests/village/village_cartographer.json
+
+  {
+    "pools": [
+      {
+        "rolls": {
+          "min": 1,
+          "max": 5
+        },
+        "entries": [
+          {
+            "type": "item",
+            "weight": 10,
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 3
+                }
+              }
+            ],
+            "name": "minecraft:map"
+          },
+          {
+            "type": "item",
+            "weight": 15,
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 5
+                }
+              }
+            ],
+            "name": "minecraft:paper"
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "name": "minecraft:compass"
+          },
+          {
+            "type": "item",
+            "weight": 15,
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 4
+                }
+              }
+            ],
+            "name": "minecraft:bread"
+          },
+          {
+            "type": "item",
+            "weight": 5,
+            "functions": [
+              {
+                "function": "set_count",
+                "count": {
+                  "min": 1,
+                  "max": 2
+                }
+              },
+              {
+                "function": "set_data",
+                "data": 0
+              }
+            ],
+            "name": "minecraft:sapling"
+          }
+        ]
+      }
+    ]
+  }
+  ```
+  ```jsonc
+  //BP/loot_tables/gameplay/fishing/treasure.json
+
+  {
+      "pools": [
+          {
+              "rolls": 1,
+              "entries": [
+                  {
+                      "type": "item",
+                      "name": "minecraft:nautilus_shell",
+                      "weight": 5
+                  },
+                  {
+                      "type": "item",
+                      "name": "minecraft:waterlily",
+                      "weight": 5
+                  },
+                  {
+                      "type": "item",
+                      "name": "minecraft:name_tag",
+                      "weight": 5
+                  },
+                  {
+                      "type": "item",
+                      "name": "minecraft:saddle",
+                      "weight": 5
+                  },
+                  {
+                      "type": "item",
+                      "name": "minecraft:bow",
+                      "weight": 5,
+                      "functions": [
+                          {
+                              "function": "set_damage",
+                              "damage": {
+                                  "min": 0,
+                                  "max": 0.25
+                              }
+                          },
+                          {
+                              "function": "enchant_with_levels",
+                              "levels": 30,
+                              "treasure": true
+                          }
+                      ]
+                  },
+                  {
+                      "type": "item",
+                      "name": "minecraft:fishing_rod",
+                      "weight": 5,
+                      "functions": [
+                          {
+                              "function": "set_damage",
+                              "damage": {
+                                  "min": 0,
+                                  "max": 0.25
+                              }
+                          },
+                          {
+                              "function": "enchant_with_levels",
+                              "levels": 30,
+                              "treasure": true
+                          }
+                      ]
+                  },
+                  {
+                      "type": "item",
+                      "name": "minecraft:book",
+                      "weight": 6,
+                      "functions": [
+                          {
+                              "function": "enchant_with_levels",
+                              "levels": 30,
+                              "treasure": true
+                          }
+                      ]
+                  }
+              ]
+          }
+      ]
+  }
+  ```
 
 </details>
 
+<br>
+
+___
 
 
 The most important thing in a loot table is the *file name*, since loot tables have no other identifier. They can be called by the path of the file in `BP/blocks/blockname.json/"minecraft:loot: {}"` for block loot, `BP/entities/entityname.json/"minecraft:loot: {}"` for entities and `BP/entities/entityname.json/"minecraft:equipment: {}"` for entity equipment (most hostile mobs use `low_tier_items.json`).\

@@ -1,11 +1,9 @@
 ---
 layout: guide
 title: Software and preparation
-parent: Beginners Guide
+parent: Beginner Guide
 nav_order: 1
 ---
-
-<link rel="icon" type="image/png" href="/assets/guide/Guide_LOGO.png"/>
 
 # Software and Preparation
 
@@ -22,17 +20,82 @@ ___
 
 ## Downloading the software.
 
-In order to be able to code add-ons you'll need a certain set of software installed. While Windows 10 offers the largest variet of tools, alternatives can be foundy
+In order to be able to code add-ons you'll need a certain set of software installed. While Windows 10 offers the largest variet of tools, alternatives can be found on other platforms, including mobile.
 
  1. The official **Minecraft v.1.16.0+**, _Bedrock Codebase_
     - Windows 10: [Minecraft](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab) [_Wind10 Edition, Bedrock_] from Microsoft Store;
     - [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en) and [iOS](https://apps.apple.com/us/app/minecraft/id479516143): the official Minecraft from the respective stores;
 
-1. **A code editor**. This can be any text editor (even the Windows-pre-installed Notepad would do), however it's much more comfortable to work in a dedicated Code Editor, like [Visual Studio Code](https://code.visualstudio.com/), which I prefer. [Sublime Text](https://www.sublimetext.com/) is another great code editor with huge theme customization capabilities. [CoreCoder](https://hanprog.itch.io/core-coder) is a unique Code Editor developed specifically for Add-On creation.   Alternatives for mobile:
-   - Android: _ES File Explorer_;
-   - iOS: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481);
+2. **A code editor**. This can be any text editor (even the Windows-pre-installed Notepad would do), however it's much more comfortable to work in a dedicated Code Editor, like VSC, which I prefer.    
 
-   Alternatively, you can use [_Bridge_](https://github.com/bridge-core/bridge.), a visual software for Minecraft Add-On development. It offers JSON in tree view, which I personally do not prefer over "pure" JSON in a code editor such as VSC. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
+ - [_Visual Studio Code_](https://code.visualstudio.com/) - is optimal in many cases. Also has a variety of extensions for Add-On development available (*See below*). (*Warning*: not *Visual Studio*, which is an IDE)
+ - [_Sublime Text_](https://www.sublimetext.com/) is another great code editor with huge theme customization capabilities. 
+- [_CoreCoder_](https://hanprog.itch.io/core-coder) is a unique Code Editor developed specifically for Add-On creation.   
+- [_Atom_](https://atom.io/) 
+- Alternatives for mobile:
+    - Android: _ES File Explorer_;
+    - iOS: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481);
+
+- [_Bridge_](https://github.com/bridge-core/bridge.), a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge. (*See note below*)
+
+___
+### Notes
+
+
+<details> 
+
+   <summary>
+      Features to look for in a Code Editor
+   </summary>
+
+   - **Opening Folders:** When editing Addons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks. 
+   - **Json Linting/Prettify:** Linting is the ability to validate code as correct in real-time. Linting for json will mark things like missing commas, misplaced parens, or other formatting issues so that you can fix them. [Linting can also be found online](https://jsonlint.com/), but having real-time linting built directly into your editor is very much preferred.
+   - **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
+
+</details>
+
+
+<details>
+
+   <summary>
+      VSC Extensions for Add-On developing
+   </summary>
+
+Many packages exist for VSCode that make editing addons easier:
+ - [Blockceptions Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
+ - [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
+ - [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
+ - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
+ - [Prettt-json](https://marketplace.visualstudio.com/items?itemName=mohsen1.prettify-json)
+ - [Spell Checker (for writing wiki)](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker)
+ - [Snowstorm Particle Editor](https://marketplace.visualstudio.com/items?itemName=JannisX11.snowstorm)
+ - [Bracket Pair Colorizer](https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer-2)
+ - [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
+
+</details>
+
+
+
+<details>
+
+   <summary>
+      If you choose to use bridge.
+   </summary>
+
+   You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
+1) Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without bridge.
+2) Add files that you want to edit without bridge. to a `.no-cache` file at the root of your behavior pack
+
+Due to the nature of the file versioning system, most scripts and tools will continue to work as expected.
+
+For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), with announcements, plugin discussion, add-on help, and more.
+
+</details>
+
+<br>
+
+___
+
 
 ![VSC Workspace](/assets/guide/vsc_workspace.png)
 
