@@ -196,7 +196,7 @@ Behavior animations are able to execute slash(/) commands and to trigger events 
 
 Here's an example of a Behavior Animation that executes multiple slash commands on an entity.
 
-`BP/animations/misc.bhv.animations.json`
+`BP/animations/misc.BP.animations.json`
 ```jsonc
 {
   "format_version": "1.8.0",
@@ -232,7 +232,7 @@ This animation file includes two animations: "animation.grufallo.revenge" and "a
 
 Here's an example  that can be used to track AFK players. (You can scroll the code box for better readability)
 
-`BP/animation_controllers/afk_controller.bhv.animation.controller.json`
+`BP/animation_controllers/afk_controller.BP.animation.controller.json`
 ```jsonc
 {
   "format_version": "1.10.0",

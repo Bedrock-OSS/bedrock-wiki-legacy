@@ -42,7 +42,7 @@ If you don't feel confident with events and component groups, make sure you're f
 **Note:** If you add the component in components, it will cause all kinds of problems, including blank trading UIs for all entities in the world. Because of an issue with the trading AI goals, they must be added in component groups. !!!
 
 # Writing the Trade Table itself:
-The Trade Table syntax is somewhat similar to that of Loot Tables. It's located in any subfolder of bhv/trades/. The trade table file name is important, since it's path is referenced/called in the behavior file. Let's break it up somewhat:
+The Trade Table syntax is somewhat similar to that of Loot Tables. It's located in any subfolder of BP/trades/. The trade table file name is important, since it's path is referenced/called in the behavior file. Let's break it up somewhat:
 
 ![](/assets/guide/trade_table_tree_1.png)
 

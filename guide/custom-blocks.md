@@ -197,7 +197,7 @@ As you might have already guessed, flipbook texture shortnames are defined in a 
 ```
 
 - "`flipbbok_texture`" is the path to your texture file, which is named "`flashing_flipbook`" in this scenario.
-- "`atlas_tile`" is basically the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `tut:flashing` block in `res/blocks.json`.
+- "`atlas_tile`" is basically the shortname definition. As you know, we already applied "`flashing`" texture shortname to the `tut:flashing` block in RPblocks.json`.
 - "`ticks_per_frame`" defines how quickly the different textures will fade into the block, in other words the speed of the animation.
 
 A **flipbook texture** file is created like this:

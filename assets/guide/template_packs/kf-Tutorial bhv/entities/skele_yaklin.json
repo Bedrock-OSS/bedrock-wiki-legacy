@@ -1,4 +1,4 @@
-//bhv/entities/skele_yaklin.json
+//BP/entities/skele_yaklin.json
 //It's reommended to change your language setting from `json` to `jsonc`[bottom right corner] in order for the comments not to display as errors.
 {
     "format_version": "1.14.0",
@@ -65,7 +65,7 @@
                         }
                     ]
                 },
-                //what the mob drops. Defined in `bhv/loot_tables/entities/skele_yaklin.json` in this scenario
+                //what the mob drops. Defined in `BP/loot_tables/entities/skele_yaklin.json` in this scenario
                 "minecraft:loot": {
                     "table": "loot_tables/entities/skele_yaklin.json"
                 },

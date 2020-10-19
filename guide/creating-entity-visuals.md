@@ -229,5 +229,5 @@ __
 - Created a custom Entity walking Animation
 
 **What are you to do next:**
-- Define your custom entity's blank behaviors in bhv/entites
+- Define your custom entity's blank behaviors in BP/entites
 - Define your entity's visuals' shortnames and trigger the animation

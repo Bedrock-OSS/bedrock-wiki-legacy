@@ -530,7 +530,7 @@ ___
 Spawn rules define how vanilla Entities and custom entities spawn. In the next chapter we'll be creating a custom entity, so make sure to prepare a custom spawn rule for it! Check out the vanilla example files for more information. ;)
 
 ```jsonc
-//bhv/spawn_rules/zombie.json
+//BP/spawn_rules/zombie.json
 
 {
   "format_version": "1.8.0",
