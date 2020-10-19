@@ -214,7 +214,9 @@ which would do practically the same as:
 { "head": "query.variant == 0"}
 ```
 
-----
+___
+___
+
 
 # Your progress so far:
 

@@ -13,6 +13,7 @@ nav_order: 12
 1. TOC
 {:toc}
 </details>
+___
 
 
 <!-- ---- -->
@@ -347,7 +348,8 @@ Here's an code example from the [Features Documentation](https://bedrock.dev/r/F
 
 That's pretty much it! Now you're able to generate your own custom Structures in the world.
 
-----
+___
+___
 
 # Your progress so far:
 

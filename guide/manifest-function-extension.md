@@ -15,19 +15,8 @@ nav_order: 2
 1. TOC
 {:toc}
 </details>
-<!-- ___
-___
-#### **You will:**
-- [Manifests](#manifests);
-- [Testing World](#creating-your-testing-world);
-- [Files with .mc extensions](mc-file-extensions):
-   - [.mcstructure](#.mcstructure)
-   - [.mcfunction](#.mcfunction)
-   - [.mcpack, .mcaddon & .mcworld](#.mcpack,-.mcaddon-&-.mcworld)
-
 
 ___
-___ -->
 
 ## Manifests
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
@@ -41,6 +30,7 @@ Like all other code files in your pack, it's written in JSON [Java Script Object
 - **Every `{` must be closed by `}`, every `[` with `]`, same with `{}`, `[]`, `""`, `''`, etc.**
 
 You can learn more about JSON [here](https://www.w3schools.com/whatis/whatis_json.asp).
+
 ___
 
 Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).

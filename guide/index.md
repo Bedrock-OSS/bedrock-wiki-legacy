@@ -1,14 +1,12 @@
 ---
 layout: guide
-title: Beginners Guide
+title: Beginner Guide
 has_children: true
 nav_order: 1
 sitemap:
     priority: 0.73
     changefreq: 'weekly'
 ---
-
-<link rel="icon" href="/assets/guide/Guide_LOGO.png">
 
 # Beginners Guide
 
@@ -36,41 +34,45 @@ You will make your first steps in creating an add-on here, by learning to create
 
 Now it's time to begin writing the first features of you add-on. In this section you'll create a simple "Gem" item, and a custom food, as well as you'll learn linking textures via short names.
 
-- [Custom Items; Linking Textures(short names); ](/guide/custom_blocks.html)
+- [Custom Items; Linking Textures(short names); ](/guide/custom-items.html)
 
 Next up are custom blocks. You'll create a simple block, an animated block with a flipbook texture, a "Compass" block that has different textures for every direction and a block that imitates a Log.
 
-- [Custom blocks; Terrain and Flipbook textures;](/guide/custom_blocks.html)
+- [Custom blocks; Terrain and Flipbook textures;](/guide/custom-blocks.html)
 
 Since you can now easily create custom blocks and items, it's time to learn about their custom Loot Tables and Recipes. While we're about it, we'll take a short look on entity Spawn Rules too.
 
-- [Custom: Loot Tables; Recipes; Spawn Rules;]()
+- [Custom: Loot Tables; Recipes; Spawn Rules;](/guide/loot_tables-recipes-spawn_rules.html)
 
 Now we're finally ready to create... Custom Entities. Make sure to polish your existing knowledge a bit before starting this chapter, as it will be a bit more complicated. First, we'll be using Blockbench to create the visuals, and then we'll define the Behaviors!
 
- - [Creating entity visuals in Blockbench: Modelling, Texturing, Animating;]()
+ - [Creating entity visuals in Blockbench: Modelling, Texturing, Animating;](/guide/creating-entity-visuals.html)
 
- - [Custom entity full Resource and Behavior definition; Attributes, Components;]()
+ - [Custom entity full Resource and Behavior definition; Attributes, Components;](/guide/custom-entity-full.html)
+
+ And, additionally, a short Trading attribute tutorial:
+
+ - [Custom trades; Trade Tables](/guide/custom_trades.html)
 
 It's time to learn controlling how your Entity renders and what animations are played on a higher level:
 
- - [Render controllers; Entity Texture Variations;]
+ - [Render controllers; Entity Texture Variations;](/guide/render-controllers.html)
 
- - [Animation Controllers - Attack AI; Behavior animations - Entity Commands]()
+ - [Animation Controllers - Attack AI; Behavior animations - Entity Commands](/guide/animation-controllers.html)
 
 The next sub-chapter: Here you'll create custom particles and sounds and learn to trigger them via animations are auto triggers.
 
- - [Custom Particles, Particles in Animation, Custom Sounds Definition;]()
+ - [Custom Particles, Particles in Animation, Custom Sounds Definition;](/guide/custom-particles.html)
 
 Let's move to something way different now: World generation!
 
- - [Custom Generation: Biomes, Features, Feature Rules;]()
+ - [Custom Generation: Biomes, Features, Feature Rules;](/guide/custom-generation.html)
 
 
 
 Something way different from everything we've done before: a Bonus tutorial the creation of custom Skin packs!
 
-- [Custom Skin Packs](/guide/custom-skin-packs)
+- [Custom Skin Packs](/guide/custom-skin-packs.html)
 
 The guide will be updated regularly, in order to eventually lead you from "Beginner" to "I can create whatever I want".
 

@@ -16,6 +16,8 @@ nav_order: 3
 {:toc}
 </details>
 
+___
+
 Every item, block or entity requires a `Behavior` file in the BP folder (to define how the item is going to behave) and a Resource file in the `RP` folder (to define how the item will look in-game).
 
 Let's start off by creating our simple item's behavior file: `BP/items/gem.item.json` (In some steps, like this one, you will first need to create a folder before the file can be created).
@@ -214,6 +216,7 @@ item.tut:meal.name=Meal
 
 ___
 ___
+
 ## Your progress so far:
 **What you've done:**
 - [x] Created a simple item

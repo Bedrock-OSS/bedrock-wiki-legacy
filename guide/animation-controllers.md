@@ -323,7 +323,8 @@ You can find out more about animation controllers by checking out these guides:
 1. Other documentations related with animations: [bedrock.dev/r/MoLang](https://bedrock.dev/r/MoLang), [bedrock.dev/r/Animations](https://bedrock.dev/r/Animations).
 1. [SirLich's Entity Commands Tutorial](/tutorials/entity-commands.html)
 
-----
+___
+___
 
 # Your progress so far
 

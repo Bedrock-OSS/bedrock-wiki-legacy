@@ -482,7 +482,8 @@ Don't worry if you didn't grasp something for the first time: coding entities is
 
 *I'll include the full entity behavior file at the bottom of this page, for you to check whether you have written down everything correctly.*
 
-----
+___
+___
 
 # Your progress so far:
 
@@ -497,6 +498,10 @@ Don't worry if you didn't grasp something for the first time: coding entities is
 **What you are going to do next:**
 - Create variations for your custom entity.
 - Learn more about Render Controllers.
+
+
+___
+
 
 `BP/entities/skele_yaklin.json`
 ```jsonc

@@ -310,7 +310,8 @@ Let's see how the sounds of the skele_yaklin are called in the entity's object.
 
 That's it! Turn up your Sound volume in Settings>Audio, spawn in your mobs, and listen to the melodic cacophony of their new voices!
 
-----
+___
+___
 
 # Your progress so far:
 

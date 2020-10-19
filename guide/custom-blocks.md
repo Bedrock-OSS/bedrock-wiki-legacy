@@ -14,6 +14,8 @@ nav_order: 4
 {:toc}
 </details>
 
+___
+
 
 
 # Custom block behavior definition
@@ -220,6 +222,7 @@ tile.tut:flashing.name=Block of Flashing Matter
 
 ___
 ___
+
 ## Your progress so far:
 **What you've done:**
 - [x] Learned about custom block behavior components;

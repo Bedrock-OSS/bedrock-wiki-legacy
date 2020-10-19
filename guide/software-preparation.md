@@ -18,16 +18,7 @@ nav_order: 1
 {:toc}
 </details>
 
-<!-- ___
 ___
-#### **You will:**
-
-- [Tools and software](#downloading-the-software);
-- [com.mojang folder](#the-com.mojang-folder-and-your-workspace);
-- [Referencing](learning-to-reference).
-
-___
-___ -->
 
 ## Downloading the software.
 

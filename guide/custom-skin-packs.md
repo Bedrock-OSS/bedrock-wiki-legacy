@@ -14,13 +14,15 @@ nav_order: 13
 {:toc}
 </details>
 
+___
+
 # Skin Packs
 <!-- - [Skin pack Manifest](#Skin pack Manifest)
 - [skins.json](#skins.json)
 - [texts/en_US.lang](#texts/en_US.lang)
 - [What you learned](#What you learned:) -->
 
-----
+
 
 Many people wrongly assume that skin packs are only available for creation to Marketplace Partners. No! It's a very easy process, which can easily be fully automated by python. But that's not it: let's learn the syntax as usual:
 
@@ -127,7 +129,8 @@ Exporting the pack is easy: simply zip everything in the SkinpackName folder and
 
 *Note: Skin packs can be instantly generated from a folder with skins with [AJG](https://kaifireborn.itch.io/add-on-json-generator).*
 
-
+___
+___
 ## What you learned:
 - Creating a custom Skin Pack and exporting it
 - Defining skin and skinpack names in `.lang`

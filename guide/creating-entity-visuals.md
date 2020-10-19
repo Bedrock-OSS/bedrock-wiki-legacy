@@ -218,7 +218,8 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
 }
 ```
 
-----
+__
+__
 
 # Your progress so far:
 
