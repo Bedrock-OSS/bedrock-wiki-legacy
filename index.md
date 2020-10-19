@@ -23,9 +23,6 @@ This wiki is a knowledge-sharing website for Technical Bedrock, containing docum
 
 ## Contributing:
 
-Contributions are welcome!
-
-If you are familiar with GitHub, I accept pull requests. [The GitHub repository can be found here](https://github.com/SirLich/technical-bedrock). Website is located on the `gh-pages` branch.
-
-If you aren't comfortable with Git, you can [contact me on Discord](https://discord.gg/XjV87YN), and we can work something out.
+**Contributions are welcome!**
+If you feel you can help the Bedrock Add-Ons community or improve this Wiki with your knowledge, feel free to contribute! [Here's how](/contribute.html).
 
