@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Custom Particles, Particles in Animation, Custom Sounds Definition"
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 11
 ---
 

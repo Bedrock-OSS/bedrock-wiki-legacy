@@ -5,4 +5,4 @@ tag: guide-updates
 parent: News
 ---
 
-These posts are about updates to the beginner Guide at .../guide/.
+These posts are about updates to the Beginners Guide at .../guide/.

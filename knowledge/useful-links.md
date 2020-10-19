@@ -18,7 +18,7 @@ parent: Knowledge
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
 
 ## Tutorials:
- - [Beginner Guide](https://guide.bedrock.dev/)
+ - [Beginners Guide](https://guide.bedrock.dev/)
 
 ## Discord Links:
  - [Bedrock Wiki](https://discord.gg/XjV87YN)
@@ -74,7 +74,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
  - [Vanilla Beta Behavior Pack](https://aka.ms/MinecraftBetaBehaviors)
  - Other
-   - [Beginner Guide template packs](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/guide/template_packs)
+   - [Beginners Guide template packs](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/guide/template_packs)
 
 ## Scripting Resources:
  - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)

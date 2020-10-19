@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Beginner Guide
+title: Beginners Guide
 has_children: true
 nav_order: 1
 sitemap:
@@ -10,7 +10,7 @@ sitemap:
 
 Sometimes creating Add-Ons can be a pain, especially when you're just starting out. Fear not, for making the Beginning as comfortable as possible is the exact reason of this Guide's existance.
 
-# Beginner Guide
+# Beginners Guide
 
 ### **What is this guide?**
 The guide is a beginner tutorial, created to make it possible for more people to start 'modding' Minecraft Bedrock Edition. The guide will guide you from the very fundamentals to being able to create advanced packs yourself.

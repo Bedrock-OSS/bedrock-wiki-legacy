@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: "Render controllers; Entity Texture Variations"
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 8
 ---
 

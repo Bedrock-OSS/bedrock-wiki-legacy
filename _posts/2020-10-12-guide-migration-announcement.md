@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "The Beginner Guide is being migrated to the Wiki - And you can help!"
+title:  "The Beginners Guide is being migrated to the Wiki - And you can help!"
 tags: guide-updates
 ---
 

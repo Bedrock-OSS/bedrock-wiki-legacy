@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Software and preparation
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 1
 ---
 

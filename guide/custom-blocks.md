@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Custom Blocks; Flipbook Textures;
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 4
 ---
 

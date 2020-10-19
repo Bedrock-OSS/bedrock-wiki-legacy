@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Custom Skin Packs
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 13
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Custom Items; Linking Textures; Short Names
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 3
 ---
 

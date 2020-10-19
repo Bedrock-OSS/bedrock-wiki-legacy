@@ -1,7 +1,7 @@
 ---
 layout: guide
 title: Manifest; Custom Function; .mc file extensions
-parent: Beginner Guide
+parent: Beginners Guide
 nav_order: 2
 ---
 
