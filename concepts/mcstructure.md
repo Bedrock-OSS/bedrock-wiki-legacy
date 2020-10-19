@@ -4,7 +4,7 @@ title: .mcstructure
 parent: Concepts
 ---
 
-int]: https://i.imgur.com/aOoHjFc.png
+[int]: https://i.imgur.com/aOoHjFc.png
 [list]: https://i.imgur.com/quP0K47.png
 [compound]: https://i.imgur.com/GXsHWoh.png
 [string]: https://i.imgur.com/D75Q22x.png
