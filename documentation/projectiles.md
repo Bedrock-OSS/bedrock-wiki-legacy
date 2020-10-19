@@ -143,12 +143,41 @@ Spawns an area of effect cloud of potion effect.
 |---------------------|-------------------------|----------------------------------------------------------------------------|
 | radius              | Decimal                 | Radius of the cloud                                                        |
 | radius_on_use       | Decimal                 |                                                                            |
-| potion              | Integer                 | Potion ID [List](https://minecraft.gamepedia.com/Status_effect#Effect_IDs) |
+| potion              | Integer                 | Lingering Potion ID                                                        |
 | particle            | String                  | Particle emitter of the cloud                                              |
-| duration            | Integer                 | Duration of the cloud                                                      |
+| duration            | Integer                 | Duration of the cloud in seconds                                           |
 | color               | Integer array [r, g, b] | Color of the particles                                                     |
 | affect_owner        | Boolean                 | Is potion effect affecting the shooter                                     |
-| reapplication_delay | Integer                 | Delay between application of the potion effect                             |
+| reapplication_delay | Integer                 | Delay in ticks between application of the potion effect                    |
+
+Potion IDs
+
+*Note, that crossed out IDs were not working, when tested on 1.16.100.60*
+
+| Potion                    | Regular | Extended | Enhanced (Level II) |
+|---------------------------|---------|----------|---------------------|
+| Water Bottle              | 0       |          |                     |
+| Mundane Potion            | 1       | 2        |                     |
+| Thick Potion              | 3       |          |                     |
+| Awkward Potion            | 4       |          |                     |
+| Potion of Night Vision    | 5       | ~~6~~    |                     |
+| Potion of Invisibility    | 7       | 8        | ~~9~~               |
+| Potion of Leaping         | 10      | 11       |                     |
+| Potion of Fire Resistance | 12      | 13       |                     |
+| Potion of Swiftness       | 14      | 15       | 16                  |
+| Potion of Slowness        | 17      | 18       |                     |
+| Potion of Water Breathing | 19      | 20       |                     |
+| Potion of Healing         | ~~21~~  |          | ~~22~~              |
+| Potion of Harming         | 23      |          | 24                  |
+| Potion of Poison          | 25      | 26       | 27                  |
+| Potion of Regeneration    | 28      | 29       | 30                  |
+| Potion of Strength        | 31      | 32       | 33                  |
+| Potion of Weakness        | 34      | 35       |                     |
+| Potion of Decay           | 36      |          |                     |
+| Potion of Turtle Master   | 37      | 38       | 39                  |
+| Potion of Slow Falling    | 40      | 41       |                     |
+| Potion of Slowness IV     | 42      |          |                     |
+| Potion of Crashing        | 43+     |          |                     |
 
 ### spawn_chance
 
