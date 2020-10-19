@@ -137,7 +137,7 @@ Used to set the value of a block's property
 ```
 
 #### `set_block_at_pos`
-Used to set a block releative to this blocks position
+Used to set a block relative to this blocks position
 ```jsonc
 {
   	"example:trigger_event": {
