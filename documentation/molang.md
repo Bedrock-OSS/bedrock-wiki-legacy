@@ -112,7 +112,15 @@ Formatted like: `is_ghost = query.is_ghost`.
 
 Return 1.0 or 0.0 based on whether the entity is a ghost.
 
-Currently, only returns 1.0 for a guardian ghost and is used by its renderer.
+*Currently, only returns 1.0 for a guardian ghost and is used by its renderer.*
+
+# query.is_grazing
+
+Formatted like: `is_grazing = query.is_grazing`. 
+
+Return 1.0 or 0.0 based on whether the entity is eating a block.
+
+*Currently, only returns 1.0 for a sheep and entities using runtime identifier of a sheep.*
 
 # query.is_jumping
 
