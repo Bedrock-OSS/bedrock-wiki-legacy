@@ -3,13 +3,15 @@
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | absolute_url }}"/>
 <link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}"/>
+<link rel="stylesheet" href="{{ '/assets/css/discord-dark.css' | absolute_url }}"/>
 <script>
     const CONTRIBUTORS_URL = "https://api.github.com/repos/SirLich/bedrock-wiki/commits";
     const DEFAULT_THEME = "Default";
     let allThemes = {
         "Default": "{{ '/assets/css/just-the-docs-default.css' | absolute_url }}",
         "Dark": "{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}",
-        "Light": "{{ '/assets/css/just-the-docs-light.css' | absolute_url }}"
+        "Light": "{{ '/assets/css/just-the-docs-light.css' | absolute_url }}",
+        "Discord Dark": "{{ '/assets/css/discord-dark.css' | absolute_url }}"
     };
 
     /*
@@ -43,6 +45,32 @@
         }
         `,
         "Dark": `
+        .highlight .nl {
+            color: #9CDCFE;
+        }
+        .highlight .s2 {
+            color: #ce9178;
+        }
+        .highlight .mi, .highlight .mf {
+            color: #b5cea8;
+        }
+        .highlight .kc {
+            color: #569cd6;
+        }
+        .highlight .p {
+            color: #C8C8C8;
+        }
+        .highlight .err {
+            color: #6A9955;
+        }
+        pre.highlight, figure.highlight {
+            background-color: 1E1E1E;
+        }
+        code {
+            background-color: 1E1E1E;
+        }
+        `,
+        "Discord Dark": `
         .highlight .nl {
             color: #9CDCFE;
         }

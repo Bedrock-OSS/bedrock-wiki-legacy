@@ -138,3 +138,14 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+.search-input {
+  color: $body-text-color;
+}
+
+details#toc summary::-webkit-details-marker {
+  display:none;
+}
+details#toc  > summary {
+  list-style: none;
+}
