@@ -158,6 +158,10 @@ Value example:
  - Entity is ignited: value is 0 and starts counting up 1 every tick
  - Entity is on fire for 2 seconds already: value is 40 and still counts up 1 every tick
  - Entity stops being on fire: value resets to 0 and continues to count up 1 every tick despite not being on fire
+ - Entity is ignited second time: value resets to 0 and continues counting up 1 every tick
+ - Entity stops being on fire the second time: value resets to 0 and continues to count up 1 every tick despite not being on fire
+
+Basically it's tick timer that starts after entity is first ignited and resets every time it changes from/to being on fire.
 
 # query.structural_integrity
 
