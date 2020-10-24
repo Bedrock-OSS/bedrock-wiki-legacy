@@ -3,6 +3,9 @@ layout: guide
 title: Software and preparation
 parent: Beginners Guide
 nav_order: 1
+badge: 1
+badge_color: blue
+badge_justification: left
 ---
 
 # Software and Preparation
