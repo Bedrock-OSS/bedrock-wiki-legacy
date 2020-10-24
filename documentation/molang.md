@@ -133,6 +133,32 @@ For the player, conditions for its activation are:
  - OR auto-jump is triggered
  - OR swimming with auto-jump
 
+# query.modified_move_speed
+
+Formatted like: `modified_move_speed = query.modified_move_speed`. 
+
+Returns the current walk speed of the entity modified by status flags such as is_baby or on_fire
+
+Value example:
+ - Player is walking: around 0.86
+ - Player is sprinting: 1.0
+ - Player is sprinting and jumping: 0.35
+ - Player is walking on fire: 1.0
+ - Player is sprinting on fire: 1.0
+ - Player is sprinting and jumping on fire: 0.525
+
+# query.on_fire_time
+
+Formatted like: `on_fire_time = query.on_fire_time`. 
+
+Returns the time in ticks since the entity started or stopped being on fire, else it returns 0.0
+
+Value example:
+ - Entity is summoned: value is 0
+ - Entity is ignited: value is 0 and starts counting up 1 every tick
+ - Entity is on fire for 2 seconds already: value is 40 and still counts up 1 every tick
+ - Entity stops being on fire: value is reset to 0 and continues to count up 1 every tick
+
 # query.structural_integrity
 
 Formatted like: `structural_integrity = query.structural_integrity`. 
