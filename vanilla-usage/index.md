@@ -2,7 +2,6 @@
 layout: page
 title: Vanilla Usage
 has_children: true
-nav_order: 5
 sitemap:
     priority: 0.75
     changefreq: 'weekly'
