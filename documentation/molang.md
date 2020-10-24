@@ -157,7 +157,7 @@ Value example:
  - Entity is summoned: value is 0
  - Entity is ignited: value is 0 and starts counting up 1 every tick
  - Entity is on fire for 2 seconds already: value is 40 and still counts up 1 every tick
- - Entity stops being on fire: value is reset to 0 and continues to count up 1 every tick
+ - Entity stops being on fire: value resets to 0 and continues to count up 1 every tick despite not being on fire
 
 # query.structural_integrity
 
