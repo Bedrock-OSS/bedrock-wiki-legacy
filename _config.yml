@@ -29,6 +29,8 @@ aux_links:
     - "https://bedrock.dev/"
   "Contribute":
     - "/contribute.html"
+  "News":
+   - "/news/"
   
 
 
