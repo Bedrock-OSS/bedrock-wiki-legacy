@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: Custom Trades; Trade tables
+title: Trade Tables
 parent: Beginners Guide
 nav_order: 9
+badge: 9
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

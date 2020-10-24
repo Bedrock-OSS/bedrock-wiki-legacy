@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: "Creating entity visuals in Blockbench: Modeling, Texturing, Animating"
+title: "Blockbench: Modeling, Texturing, Animating"
 parent: Beginners Guide
 nav_order: 6
+badge: 6
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

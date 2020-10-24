@@ -1,7 +1,10 @@
 ---
 layout: guide
-title: "Render controllers; Entity Texture Variations"
+title: Render controllers
 parent: Beginners Guide
+badge: 8
+badge_color: blue
+badge_justification: left
 nav_order: 8
 ---
 

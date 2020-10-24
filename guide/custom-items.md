@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: Custom Items; Linking Textures; Short Names
+title: Items
 parent: Beginners Guide
 nav_order: 3
+badge: 3
+badge_color: blue
+badge_justification: left
 ---
 
 # Simple custom Item - Creating a 'Gem'

@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: "Animation Controllers - Attack AI, Behavior animations - Entity Commands"
+title: Animation Controllers
 parent: Beginners Guide
 nav_order: 10
+badge: 10
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

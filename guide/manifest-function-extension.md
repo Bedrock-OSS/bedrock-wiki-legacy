@@ -2,6 +2,9 @@
 layout: guide
 title: Manifest; Custom Function; .mc file extensions
 parent: Beginners Guide
+badge: 2
+badge_color: blue
+badge_justification: left
 nav_order: 2
 ---
 

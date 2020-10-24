@@ -3,6 +3,9 @@ layout: guide
 title: Custom Generation
 parent: Beginners Guide
 nav_order: 12
+badge: 12
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

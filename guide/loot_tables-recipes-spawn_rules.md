@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: Custom Loot Tables, Recipes, Spawn Rules
+title: Loot Tables, Recipes, Spawn Rules
 parent: Beginners Guide
 nav_order: 5
+badge: 5
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

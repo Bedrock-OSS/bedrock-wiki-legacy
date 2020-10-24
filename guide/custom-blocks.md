@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: Custom Blocks; Flipbook Textures;
+title: Blocks
 parent: Beginners Guide
 nav_order: 4
+badge: 4
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

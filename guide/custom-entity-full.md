@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: "Custom Entity; Full Resource and Behavior definition, Attributes, Components"
+title: Entities
 parent: Beginners Guide
 nav_order: 7
+badge: 7
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">

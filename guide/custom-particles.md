@@ -1,8 +1,11 @@
 ---
 layout: guide
-title: "Custom Particles, Particles in Animation, Custom Sounds Definition"
+title: "Particles and Sounds"
 parent: Beginners Guide
 nav_order: 11
+badge: 11
+badge_color: blue
+badge_justification: left
 ---
 
 <details id="toc" open markdown="block">
