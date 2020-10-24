@@ -64,7 +64,7 @@
         {%- if node.has_children -%}
         <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
         {%- endif -%}
-        <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{{ node.title }}{%- if node.badge != nil -%}<span class="label label-{{node.badge_color}}">{{ node.badge }}</span>{%- endif -%}</a>
+        <a href="{{ node.url | absolute_url }}" class="nav-list-link{% if page.url == node.url %} active{% endif %}">{%- if node.badge != nil and node.badge_justification == "left"-%}<span class="label label-{{node.badge_color}}">{{ node.badge }}</span>{%- endif -%}{{ node.title }}{%- if node.badge != nil and (node.badge_justification == nil or node.badge_justification == "right")-%}<span class="label label-{{node.badge_color}}">{{ node.badge }}</span>{%- endif -%}</a>
         {%- if node.has_children -%}
         {%- assign children_list = pages_list | where: "parent", node.title -%}
         <ul class="nav-list ">
@@ -74,14 +74,14 @@
                 {%- if child.has_children -%}
                 <a href="#" class="nav-list-expander"><svg viewBox="0 0 24 24"><use xlink:href="#svg-arrow-right"></use></svg></a>
                 {%- endif -%}
-                <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{{ child.title }}{%- if child.badge != nil -%}<span class="label label-{{child.badge_color}}">{{ child.badge }}</span>{%- endif -%}</a>
+                <a href="{{ child.url | absolute_url }}" class="nav-list-link{% if page.url == child.url %} active{% endif %}">{%- if child.badge != nil and child.badge_justification == "left"-%}<span class="label label-{{child.badge_color}}">{{ child.badge }}</span>{%- endif -%}{{ child.title }}{%- if child.badge != nil and (child.badge_justification == nil or child.badge_justification == "right")-%}<span class="label label-{{child.badge_color}}">{{ child.badge }}</span>{%- endif -%}</a>
                 {%- if child.has_children -%}
                 {%- assign grand_children_list = pages_list | where: "parent", child.title | where: "grand_parent", node.title -%}
                 <ul class="nav-list">
                     {%- for grand_child in grand_children_list -%}
                     {%- unless grand_child.nav_exclude -%}
                     <li class="nav-list-item {% if page.url == grand_child.url %} active{% endif %}">
-                        <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{{ grand_child.title }}{%- if grand_child.badge != nil -%}<span class="label label-{{grand_child.badge_color}}">{{ grand_child.badge }}</span>{%- endif -%}</a>
+                        <a href="{{ grand_child.url | absolute_url }}" class="nav-list-link{% if page.url == grand_child.url %} active{% endif %}">{%- if grand_child.badge != nil and grand_child.badge_justification == "left"-%}<span class="label label-{{grand_child.badge_color}}">{{ node.badge }}</span>{%- endif -%}{{ grand_child.title }}{%- if grand_child.badge != nil and (grand_child.badge_justification == nil or grand_child.badge_justification == "right")-%}<span class="label label-{{grand_child.badge_color}}">{{ grand_child.badge }}</span>{%- endif -%}</a>
                     </li>
                     {%- endunless -%}
                     {%- endfor -%}
