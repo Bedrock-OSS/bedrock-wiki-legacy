@@ -4,7 +4,7 @@ title: "Blockbench: Modeling, Texturing, Animating"
 parent: Beginners Guide
 nav_order: 6
 badge: 6
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 

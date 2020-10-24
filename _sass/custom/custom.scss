@@ -144,8 +144,24 @@
 }
 
 details#toc summary::-webkit-details-marker {
-  display:none;
+  display: none;
 }
-details#toc  > summary {
+
+details#toc > summary {
   list-style: none;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
+  background-image: none;
+  background: $feedback-color;
+  border-radius: 4px;
+}
+
+.label-guide {
+  background-color: #7253ed;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  margin-left: 0;
+  padding: 0;
 }

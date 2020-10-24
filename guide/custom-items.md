@@ -4,7 +4,7 @@ title: Items
 parent: Beginners Guide
 nav_order: 3
 badge: 3
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 

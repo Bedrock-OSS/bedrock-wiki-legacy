@@ -4,7 +4,7 @@ title: Trade Tables
 parent: Beginners Guide
 nav_order: 9
 badge: 9
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 
