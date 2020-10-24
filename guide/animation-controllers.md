@@ -4,7 +4,7 @@ title: Animation Controllers
 parent: Beginners Guide
 nav_order: 10
 badge: 10
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 

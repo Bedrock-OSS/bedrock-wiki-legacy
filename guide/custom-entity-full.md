@@ -4,7 +4,7 @@ title: Entities
 parent: Beginners Guide
 nav_order: 7
 badge: 7
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 

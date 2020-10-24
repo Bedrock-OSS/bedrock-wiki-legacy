@@ -4,7 +4,7 @@ title: Blocks
 parent: Beginners Guide
 nav_order: 4
 badge: 4
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 

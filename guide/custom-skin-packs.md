@@ -4,7 +4,7 @@ title: Skin Packs
 parent: Beginners Guide
 nav_order: 13
 badge: 13
-badge_color: blue
+badge_color: guide
 badge_justification: left
 ---
 
