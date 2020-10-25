@@ -51,7 +51,7 @@ Bit dummies store a single bit of information. Namely `True` or `False`. For exa
 | Bit  | query.can_power_jump     | minecraft:can_power_jump     | Allows the entity to power jump like the horse does in vanilla.                                                                   |
 | Bit  | query.is_ignited         | minecraft:is_ignited         |                                                                                                                                   |
 
-## Colors for the color and color2 components:
+## Colors for the color and color2 components
 - black	
 - blue	
 - brown	

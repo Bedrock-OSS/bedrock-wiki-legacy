@@ -56,7 +56,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 
 ### Event Functions
 
-#### `swing`
+#### swing
 ```jsonc
 {
     "example:swing_event": {
@@ -65,7 +65,7 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
 }
 ```
 
-#### `shoot`
+#### shoot
 Shoots a projectile when triggered
 ```jsonc
 {
@@ -79,7 +79,7 @@ Shoots a projectile when triggered
 }
 ```
 
-#### `damage`
+#### damage
 ```jsonc
 {
     "example:damage_event": {
@@ -91,7 +91,7 @@ Shoots a projectile when triggered
 }
 ```
 
-#### `decrement_stack`
+#### decrement_stack
 Decrements the stack
 ```jsonc
 {
@@ -101,7 +101,7 @@ Decrements the stack
 }
 ```
 
-#### `add_mob_effect`
+#### add_mob_effect
 Adds a mob effect when triggered
 ```jsonc
 {
@@ -116,7 +116,7 @@ Adds a mob effect when triggered
 }
 ```
 
-#### `remove_mob_effect`
+#### remove_mob_effect
 Removes a mob effect when triggered
 ```jsonc
 {
@@ -129,7 +129,7 @@ Removes a mob effect when triggered
 }
 ```
 
-#### `transform_item`
+#### transform_item
 Transforms the item into the item specified
 ```jsonc
 {
@@ -141,7 +141,7 @@ Transforms the item into the item specified
 }
 ```
 
-#### `teleport`
+#### teleport
 Teleports the target to a random location in the specified range
 ```jsonc
 {
@@ -154,7 +154,7 @@ Teleports the target to a random location in the specified range
 }
 ```
 
-#### `sequence`
+#### sequence
 Used to sequence event functions
 ```jsonc
 {
@@ -178,7 +178,7 @@ Used to sequence event functions
 }
 ```
 
-#### `randomize`
+#### randomize
 Used to randomize event functions
 ```jsonc
 {
@@ -204,7 +204,7 @@ Used to randomize event functions
 }
 ```
 
-#### `run_command`
+#### run_command
 Used to execute commands
 ```jsonc
 {

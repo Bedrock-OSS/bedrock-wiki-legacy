@@ -89,7 +89,7 @@ Adds a mob effect when triggered
 }
 ```
 
-#### `remove_mob_effect`
+#### remove_mob_effect
 Removes a mob effect when triggered
 ```json
 {
@@ -102,7 +102,7 @@ Removes a mob effect when triggered
 }
 ```
 
-#### `spawn_loot`
+#### spawn_loot
 Summons a loot table when the event is triggered.
 ```jsonc
 {
@@ -114,7 +114,7 @@ Summons a loot table when the event is triggered.
 }
 ```
 
-#### `set_block`
+#### set_block
 Removes the current block and replaces it with the defined block in the same position.
 ```jsonc
 {
@@ -124,7 +124,7 @@ Removes the current block and replaces it with the defined block in the same pos
 }
 ```
 
-#### `set_block_property`
+#### set_block_property
 Used to set the value of a block's property
 ```jsonc
 {
@@ -136,7 +136,7 @@ Used to set the value of a block's property
 }
 ```
 
-#### `set_block_at_pos`
+#### set_block_at_pos
 Used to set a block relative to this blocks position
 ```jsonc
 {
@@ -149,7 +149,7 @@ Used to set a block relative to this blocks position
 }
 ```
 
-#### `run_command`
+#### run_command
 Used to execute a command
 ```jsonc
 {
@@ -161,7 +161,7 @@ Used to execute a command
 }
 ```
 
-#### `damage`
+#### damage
 ```jsonc
 {
     "example:damage_event": {
@@ -174,7 +174,7 @@ Used to execute a command
 }
 ```
 
-#### `decrement_stack`
+#### decrement_stack
 Decrements the stack
 ```jsonc
 {
@@ -184,7 +184,7 @@ Decrements the stack
 }
 ```
 
-#### `die`
+#### die
 Kills the target or destroys the block
 ```json
 {
@@ -196,7 +196,7 @@ Kills the target or destroys the block
 }
 ```
 
-#### `play_effect`
+#### play_effect
 Runs a particle effect on the target
 ```json
 {
@@ -209,7 +209,7 @@ Runs a particle effect on the target
 }
 ```
 
-#### `play_sound`
+#### play_sound
 Plays a sound on the target
 ```json
 {
@@ -222,7 +222,7 @@ Plays a sound on the target
 }
 ```
 
-#### `trigger`
+#### trigger
 Used to trigger an event, this can be a block event or an entity event.
 ```jsonc
 {
@@ -236,7 +236,7 @@ Used to trigger an event, this can be a block event or an entity event.
 }
 ```
 
-#### `sequence`
+#### sequence
 Used to sequence event functions
 ```jsonc
 {
@@ -259,7 +259,7 @@ Used to sequence event functions
 }
 ```
 
-#### `randomize`
+#### randomize
 Used to randomize event functions
 ```jsonc
 {

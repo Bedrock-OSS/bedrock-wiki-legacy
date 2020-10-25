@@ -221,7 +221,7 @@ ___
 ___
 
 
-# Your progress so far:
+# Your progress so far
 
 **What you've done:**
 - Learned -a lot- everything about Render Controllers;

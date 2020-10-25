@@ -488,7 +488,7 @@ Don't worry if you didn't grasp something for the first time: coding entities is
 ___
 ___
 
-# Your progress so far:
+# Your progress so far
 
 **What you've done:**
 - Defined the resources of your entity, which you created previously.

@@ -17,10 +17,10 @@ parent: Knowledge
 
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
 
-## Tutorials:
+## Tutorials
  - [Beginners Guide](https://guide.bedrock.dev/)
 
-## Discord Links:
+## Discord Links
  - [Bedrock Wiki](https://discord.gg/XjV87YN)
  - [Minecraft Commands](https://discord.gg/QAFXFtZ)
  - [Blockbench](http://discord.gg/fZQbxbg)
@@ -30,7 +30,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Skill Share](https://discord.gg/sZ7fkcN)
  - [Amulet](https://discord.gg/dSnwqQf)
 
-## Software:
+## Software
  - [Bridge Addon Editor](https://bridge-core.github.io/)
  - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
@@ -57,7 +57,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [.lang](https://solveddev.github.io/AnyLanguage/)
  - [Anvil Behavior Generator (beta)](https://anvil.starktma.com/)
   
-## Documentation Links:
+## Documentation Links
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
  - [TheDestruc7i0n Documentation - bedrock.dev](https://bedrock.dev/)
  - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
@@ -68,7 +68,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac)
  - [Loot- and Trade Table functions Doc](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
 
-## Vanilla Behavior & Resource Packs:
+## Vanilla Behavior & Resource Packs
  - [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
  - [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate)
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
@@ -76,17 +76,17 @@ There is loads of useful information about Bedrock Development online, but somet
  - Other
    - [Beginners Guide template packs](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/guide/template_packs)
 
-## Scripting Resources:
+## Scripting Resources
  - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)
  - [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
  - [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
  - [Get Started](https://minecraft-addon-tools.github.io/tutorials/)
 
-## Shader Resources:
+## Shader Resources
  - [The book of Shaders](https://thebookofshaders.com/)
  - [Lean OpenGL](https://learnopengl.com/)
 
-## Other useful Links:
+## Other useful Links
  - [UUID v4 Generator (online)](https://www.uuidgenerator.net/version4)
  - [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)

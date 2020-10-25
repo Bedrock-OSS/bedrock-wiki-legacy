@@ -69,7 +69,7 @@ Let's create some more blocks in `BP/blocks`. I created these for four for the t
 You can play around with changing the component values for each of these. Now let's move over to the resource definition.
 
 
-# Custom block resource definition;
+# Custom block resource definition
 Unlike items(`RP/items/itemname.json`), all custom block resource definition happens in a single file: `RP/blocks.json`.
 
 ```jsonc
@@ -186,7 +186,7 @@ Next, all our texture shortnames have been defined. These shortnames were alread
 
 But, we still have to define the `tut:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as purple-and-black tiled texture right now.
 
-## Block flipbook texture definition;
+## Block flipbook texture definition
 As you might have already guessed, flipbook texture shortnames are defined in a different place then `RP/textures/terrain_texture.json`. Let's create another file, `RP/textures/flipbook_textures.json`.
 
 ```jsonc
@@ -226,7 +226,7 @@ tile.tut:flashing.name=Block of Flashing Matter
 ___
 ___
 
-## Your progress so far:
+## Your progress so far
 **What you've done:**
 - [x] Learned about custom block behavior components;
 - [x] Created a custom block with simple textures;

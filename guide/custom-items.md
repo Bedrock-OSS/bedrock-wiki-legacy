@@ -220,7 +220,7 @@ item.tut:meal.name=Meal
 ___
 ___
 
-## Your progress so far:
+## Your progress so far
 **What you've done:**
 - [x] Created a simple item
 - [x] Created a custom food

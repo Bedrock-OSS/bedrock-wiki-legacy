@@ -134,6 +134,6 @@ Exporting the pack is easy: simply zip everything in the SkinpackName folder and
 
 ___
 ___
-## What you learned:
+## What you learned
 - Creating a custom Skin Pack and exporting it
 - Defining skin and skinpack names in `.lang`

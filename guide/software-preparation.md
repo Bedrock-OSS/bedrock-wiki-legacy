@@ -21,7 +21,7 @@ badge_justification: left
 
 ___
 
-## Downloading the software.
+## Downloading the software
 
 In order to be able to code add-ons you'll need a certain set of software installed. While Windows 10 offers the largest variet of tools, alternatives can be found on other platforms, including mobile.
 
@@ -150,7 +150,7 @@ The most important thing to check all the time are the official documentations. 
 ___
 ___
 
-## Your progress so far:
+## Your progress so far
 **What you've done:**
 
 - [x] Installed the necessary software;

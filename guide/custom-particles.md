@@ -316,7 +316,7 @@ That's it! Turn up your Sound volume in Settings>Audio, spawn in your mobs, and 
 ___
 ___
 
-# Your progress so far:
+# Your progress so far
 
 **What you've done:**
 - Learned to include Particles in Animations

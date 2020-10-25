@@ -22,7 +22,7 @@ ___
 A Trade Table is a file that controls an entity's trading UI and functionality. Vanilla example: Villager. As of right now, trading entities are often used to simulate UI blocks.
 ___
 ___
-# Adding the trading AI to an entity:
+# Adding the trading AI to an entity
 This goal is accomplished via `minecraft:trade_table` or `minecraft:economy_trade_table` components. Both of them will open a trading UI from the given path, but the economy trades component has some more options referring to some Village and Pillage trading mechanics. Other AI goals you'll need are `minecraft:behavior.trade_with_player`, optionally `minecraft.behavior:trade_interest` (allows the mob to hold/offer an item) and, potentially, `"minecraft:trade_resupply": {}`.
 
 For a simple trading UI, `trade_table` + `trade_with_player` components should do the trick.
@@ -44,7 +44,7 @@ If you don't feel confident with events and component groups, make sure you're f
 
 **Note:** If you add the component in components, it will cause all kinds of problems, including blank trading UIs for all entities in the world. Because of an issue with the trading AI goals, they must be added in component groups. !!!
 
-# Writing the Trade Table itself:
+# Writing the Trade Table itself
 The Trade Table syntax is somewhat similar to that of Loot Tables. It's located in any subfolder of BP/trades/. The trade table file name is important, since it's path is referenced/called in the behavior file. Let's break it up somewhat:
 
 ![](/assets/guide/trade_table_tree_1.png)
@@ -143,7 +143,7 @@ To some it all up, the Trades are divided into **Tiers**, which get unlocked whe
 
 ___
 ___
-## Your progress so far:
+## Your progress so far
 **What you've done:**
 - [x] Creating Trade Tables;
 - [x] Adding the ability to trade to custom Entities;

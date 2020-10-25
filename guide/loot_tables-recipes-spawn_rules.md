@@ -410,7 +410,7 @@ After b1.16.100 also accepts tags of custom benches.
 
 Let's look through some recipe-specific syntax next.
 
-### This is a smelting recipe.
+### Smelting recipe example
 
 ```jsonc
 {
@@ -438,7 +438,7 @@ Let's look through some recipe-specific syntax next.
 - "`output`": the item that the furnace outputs after smelting.
 
 
-### This is a shaped recipe
+### Shaped recipe example
 ```jsonc
 {
 "format_version": "1.12",
@@ -473,7 +473,7 @@ Let's look through some recipe-specific syntax next.
 - "`key`" defines each character to mean an item. Here, 'P' means a Wooden Shovel and '`#`' means a '`planks`' block with aux value `4`, which is the Acacia Planks block.
 - "`result`" means same as output. Her it's an Acacia Boat('`boat`' with aux id `4`).
 
-### These are shapeless recipes.
+### Shapeless recipe example
 
 ```jsonc
 {
@@ -607,7 +607,7 @@ Spawn rules define how vanilla Entities and custom entities spawn. In the next c
 
 ___
 ___
-## Your progress so far:
+## Your progress so far
 **What you've done:**
 - [x] Learned to create Loot Tables;
 - [x] Learned to create  custom Recipes of different types;

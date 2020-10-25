@@ -6,10 +6,9 @@ badge_color: red
 parent: Documentation
 ---
 
+# Block Tags
 Tags are used for various block properties. Block tags can be called when testing for block arguments in commands.
 Some tags are prefixed with can_be, or can_hurt, one would expect these to have a boolan response.
-
-# Block Tags
 
 | BlockTags                  | Description                                                                                                |
 |----------------------------|------------------------------------------------------------------------------------------------------------|

@@ -25,7 +25,7 @@ ___
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
 Like all other code files in your pack, it's written in JSON [Java Script Object Notation].\
 
-### **JSON Syntax Rules:**
+### **JSON Syntax Rules**
 - **Data is in name/value pairs;**
 - **Data is separated by commas;**
 - **Curly braces hold objects;**
@@ -146,7 +146,7 @@ If you have done everything correctly, your packs should show up in Minecraft no
 ![](/assets/guide/behavior_pack_existing.jpg)
 ___
 
-## Creating your testing world.
+## Creating your testing world
 Now to create a testing world to test your new add-on!
 
 1. Click "**Create new world**";
@@ -167,7 +167,7 @@ Now activate your behavior pack. If you haven't set up dependencies in the manif
 _____________
 ___
 
-## .mc file extensions;
+## .mc file extensions
 Now it's time to talk about some file extensions you'll be using during the development.
 ___
 ### .mcstructure
@@ -179,7 +179,7 @@ ___
 An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `BP/functions/`. VSC will treat it like a normal .txt file.
 Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:
 ![.mcstructure in VSC](/assets/guide/function_code.jpg)
-##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors.
+##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors
 
 Now you can run the function by typing `/function diamond_tools` (*`/function {filename}`*) in the in-game chat!
 ![function in-game](/assets/guide/function_in_game.jpg)
@@ -190,7 +190,7 @@ Next up are `.mcpack` files. These are used to *import external add-ons*. To cre
 ![](/assets/guide/transpiled_mcpack.png)
 
 What if you want both your resource pack and your behavior pack to be imported at once? Make both `.mcpacks`, then select them and choose `send to>compressed(zipped) folder`. Then change `.zip` to `.mcaddon`. Done!
-##### Note: Some external programs like AJG and bridge do that automatically.
+##### Note: Some external programs like AJG and bridge do that automatically
 
 *Note: same method can be used to compile a world folder from com.mojang/minecraftWorlds and changing the `.zip` to `.mcworld`. On Win10 devices one can click "*Export world*" in the world settings to achieve the same result. `.mcworld`s usually include all add-ons applied (as long as they come from `..._packs`.).*
 ___

@@ -354,7 +354,7 @@ That's pretty much it! Now you're able to generate your own custom Structures in
 ___
 ___
 
-# Your progress so far:
+# Your progress so far
 
 **What you've done:**
 - Created you very first biome.
