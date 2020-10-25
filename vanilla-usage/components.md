@@ -4,6 +4,8 @@ title: Components
 parent: Vanilla Usage
 ---
 
+# Components
+
 <details id="toc" class="top-level" open markdown="block">
   <summary>
     Table of contents
@@ -13,8 +15,9 @@ parent: Vanilla Usage
 {:toc}
 </details>
 
-# Components
 This documentation is stripped from the vanilla files using an automated script. If there is an issue, please bring it to the authors attention by contacting him on discord: `SirLich#1658`
+
+
 
 # minecraft:addrider
 ### cave_spider
@@ -796,6 +799,9 @@ This documentation is stripped from the vanilla files using an automated script.
     "broadcast_anger_on_attack": true,
     "broadcast_anger_on_being_attacked": true,
     "broadcast_range": 16,
+    "broadcast_targets": [
+        "piglin"
+    ],
     "calm_event": {
         "event": "become_calm_event",
         "target": "self"
@@ -813,6 +819,39 @@ This documentation is stripped from the vanilla files using an automated script.
                 "subject": "self",
                 "operator": "!=",
                 "value": "minecraft:attack_cooldown"
+            }
+        ]
+    },
+    "angry_sound": "angry",
+    "sound_interval": {
+        "range_min": 2.0,
+        "range_max": 5.0
+    }
+}
+```
+
+### piglin_brute
+```json
+"minecraft:angry": {
+    "duration": 30,
+    "broadcast_anger": false,
+    "broadcast_anger_on_attack": false,
+    "broadcast_anger_on_being_attacked": true,
+    "broadcast_range": 16,
+    "broadcast_targets": [
+        "piglin"
+    ],
+    "calm_event": {
+        "event": "become_calm_event",
+        "target": "self"
+    },
+    "filters": {
+        "all_of": [
+            {
+                "test": "is_family",
+                "subject": "other",
+                "operator": "!=",
+                "value": "piglin"
             }
         ]
     },
@@ -969,6 +1008,11 @@ This documentation is stripped from the vanilla files using an automated script.
 
 # minecraft:annotation.open_door
 ### piglin
+```json
+"minecraft:annotation.open_door": {}
+```
+
+### piglin_brute
 ```json
 "minecraft:annotation.open_door": {}
 ```
@@ -1204,6 +1248,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:attack": {
     "damage": 5
+}
+```
+
+### piglin_brute
+```json
+"minecraft:attack": {
+    "damage": 7
 }
 ```
 
@@ -2269,13 +2320,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
 ### donkey
 ```json
 "minecraft:behavior.breed": {
@@ -2324,13 +2368,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
 ### ocelot
 ```json
 "minecraft:behavior.breed": {
@@ -2340,13 +2377,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### panda
-```json
-"minecraft:behavior.breed": {
-    "priority": 3,
-    "speed_multiplier": 1.0
-}
-```
-
 ```json
 "minecraft:behavior.breed": {
     "priority": 3,
@@ -3712,6 +3742,20 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:behavior.go_home": {
+    "priority": 6,
+    "interval": 200,
+    "speed_multiplier": 0.6,
+    "goal_radius": 4.0,
+    "on_failed": {
+        "event": "go_back_to_spawn_failed",
+        "target": "self"
+    }
+}
+```
+
 ### turtle
 ```json
 "minecraft:behavior.go_home": {
@@ -3735,12 +3779,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
-```json
-"minecraft:behavior.guardian_attack": {
-    "priority": 4
-}
-```
-
 ```json
 "minecraft:behavior.guardian_attack": {
     "priority": 4
@@ -3939,6 +3977,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:behavior.hurt_by_target": {
+    "priority": 1
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:behavior.hurt_by_target": {
     "priority": 1
@@ -4186,14 +4231,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### cave_spider
-```json
-"minecraft:behavior.leap_at_target": {
-    "priority": 4,
-    "yd": 0.4,
-    "must_be_on_ground": false
-}
-```
-
 ```json
 "minecraft:behavior.leap_at_target": {
     "priority": 4,
@@ -4492,6 +4529,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:behavior.look_at_player": {
     "priority": 11,
+    "look_distance": 8
+}
+```
+
+### piglin_brute
+```json
+"minecraft:behavior.look_at_player": {
+    "priority": 8,
     "look_distance": 8
 }
 ```
@@ -4947,6 +4992,15 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:behavior.melee_attack": {
     "priority": 8,
     "speed_multiplier": 1.0,
+    "track_target": true
+}
+```
+
+### piglin_brute
+```json
+"minecraft:behavior.melee_attack": {
+    "priority": 4,
+    "speed_multiplier": 1,
     "track_target": true
 }
 ```
@@ -6128,33 +6182,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.nearest_attackable_target": {
-    "priority": 1,
-    "entity_types": [
-        {
-            "filters": {
-                "any_of": [
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "squid"
-                    }
-                ]
-            },
-            "max_dist": 16
-        }
-    ],
-    "attack_interval_min": 1.0,
-    "must_see": true
-}
-```
-
 ### hoglin
 ```json
 "minecraft:behavior.nearest_attackable_target": {
@@ -6498,6 +6525,23 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:behavior.nearest_attackable_target": {
     "priority": 7,
+    "entity_types": [
+        {
+            "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            "max_dist": 16
+        }
+    ]
+}
+```
+
+### piglin_brute
+```json
+"minecraft:behavior.nearest_attackable_target": {
+    "priority": 3,
     "entity_types": [
         {
             "filters": {
@@ -7582,6 +7626,36 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:behavior.nearest_prioritized_attackable_target": {
+    "priority": 3,
+    "within_radius": 12.0,
+    "persist_time": 2.0,
+    "must_see": true,
+    "entity_types": [
+        {
+            "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "player"
+            },
+            "max_dist": 12,
+            "priority": 0
+        },
+        {
+            "filters": {
+                "test": "is_family",
+                "subject": "other",
+                "value": "wither"
+            },
+            "max_dist": 12,
+            "priority": 1
+        }
+    ]
+}
+```
+
 # minecraft:behavior.ocelot_sit_on_block
 ### cat
 ```json
@@ -7676,14 +7750,6 @@ This documentation is stripped from the vanilla files using an automated script.
 
 # minecraft:behavior.panic
 ### bee
-```json
-"minecraft:behavior.panic": {
-    "priority": 1,
-    "speed_multiplier": 1.25,
-    "force": true
-}
-```
-
 ```json
 "minecraft:behavior.panic": {
     "priority": 1,
@@ -8371,6 +8437,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:behavior.random_look_around": {
+    "priority": 9
+}
+```
+
 ### pillager
 ```json
 "minecraft:behavior.random_look_around": {
@@ -8733,6 +8806,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:behavior.random_stroll": {
+    "priority": 7,
+    "speed_multiplier": 0.6
+}
+```
+
 ### pillager
 ```json
 "minecraft:behavior.random_stroll": {
@@ -9069,24 +9150,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 2,
-    "attack_radius": 64,
-    "charge_shoot_trigger": 2,
-    "charge_charged_trigger": 1
-}
-```
-
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 2,
-    "attack_radius": 64,
-    "charge_shoot_trigger": 2,
-    "charge_charged_trigger": 1
-}
-```
-
 ### piglin
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -9129,15 +9192,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
-}
-```
-
 ### snow_golem
 ```json
 "minecraft:behavior.ranged_attack": {
@@ -9149,15 +9203,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
-```json
-"minecraft:behavior.ranged_attack": {
-    "priority": 0,
-    "attack_interval_min": 1.0,
-    "attack_interval_max": 3.0,
-    "attack_radius": 15.0
-}
-```
-
 ```json
 "minecraft:behavior.ranged_attack": {
     "priority": 0,
@@ -10290,138 +10335,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
-```json
-"minecraft:behavior.trade_interest": {
-    "priority": 5,
-    "within_radius": 6.0,
-    "interest_time": 45.0,
-    "remove_item_time": 1.0,
-    "carried_item_switch_time": 2.0,
-    "cooldown": 2.0
-}
-```
-
 ### wandering_trader
 ```json
 "minecraft:behavior.trade_interest": {
@@ -10494,57 +10407,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:behavior.work": {
-    "priority": 7,
-    "active_time": 250,
-    "speed_multiplier": 0.5,
-    "goal_cooldown": 200,
-    "sound_delay_min": 100,
-    "sound_delay_max": 200,
-    "can_work_in_rain": false,
-    "work_in_rain_tolerance": 100,
-    "on_arrival": {
-        "event": "minecraft:resupply_trades",
-        "target": "self"
-    }
-}
-```
-
-```json
-"minecraft:behavior.work": {
-    "priority": 7,
-    "active_time": 250,
-    "speed_multiplier": 0.5,
-    "goal_cooldown": 200,
-    "sound_delay_min": 100,
-    "sound_delay_max": 200,
-    "can_work_in_rain": false,
-    "work_in_rain_tolerance": 100,
-    "on_arrival": {
-        "event": "minecraft:resupply_trades",
-        "target": "self"
-    }
-}
-```
-
-```json
-"minecraft:behavior.work": {
-    "priority": 7,
-    "active_time": 250,
-    "speed_multiplier": 0.5,
-    "goal_cooldown": 200,
-    "sound_delay_min": 100,
-    "sound_delay_max": 200,
-    "can_work_in_rain": false,
-    "work_in_rain_tolerance": 100,
-    "on_arrival": {
-        "event": "minecraft:resupply_trades",
-        "target": "self"
-    }
-}
-```
-
 # minecraft:block_sensor
 ### bee
 ```json
@@ -10575,6 +10437,26 @@ This documentation is stripped from the vanilla files using an automated script.
                 "minecraft:gold_ore",
                 "minecraft:chest",
                 "minecraft:trapped_chest",
+                "minecraft:ender_chest",
+                "minecraft:barrel",
+                "minecraft:shulker_box",
+                "minecraft:undyed_shulker_box"
+            ],
+            "on_block_broken": "important_block_destroyed_event"
+        }
+    ]
+}
+```
+
+### piglin_brute
+```json
+"minecraft:block_sensor": {
+    "sensor_radius": 16,
+    "on_break": [
+        {
+            "block_list": [
+                "minecraft:gold_block",
+                "minecraft:chest",
                 "minecraft:ender_chest",
                 "minecraft:barrel",
                 "minecraft:shulker_box",
@@ -10926,6 +10808,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:breathable": {
+    "total_supply": 15,
+    "suffocate_time": 0
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:breathable": {
     "total_supply": 15,
@@ -12396,6 +12286,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:collision_box": {
+    "width": 0.6,
+    "height": 1.9
+}
+```
+
 ### pillager
 ```json
 "minecraft:collision_box": {
@@ -12934,138 +12832,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:color": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 11
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 6
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 10
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 9
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 5
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 14
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 14
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 14
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:color": {
-    "value": 9
-}
-```
-
 ### wolf
 ```json
 "minecraft:color": {
@@ -13162,138 +12928,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:color2": {
     "value": 14
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 14
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 7
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 6
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 14
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:color2": {
-    "value": 4
 }
 ```
 
@@ -13649,30 +13283,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_damage",
-                        "value": "fatal"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    }
-                ]
-            },
-            "event": "minecraft:gain_bad_omen",
-            "target": "other"
-        }
-    }
-}
-```
-
 ### skeleton
 ```json
 "minecraft:damage_sensor": {
@@ -13813,30 +13423,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### vindicator
-```json
-"minecraft:damage_sensor": {
-    "triggers": {
-        "on_damage": {
-            "filters": {
-                "all_of": [
-                    {
-                        "test": "has_damage",
-                        "value": "fatal"
-                    },
-                    {
-                        "test": "is_family",
-                        "subject": "other",
-                        "value": "player"
-                    }
-                ]
-            },
-            "event": "minecraft:gain_bad_omen",
-            "target": "other"
-        }
-    }
-}
-```
-
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
@@ -14110,6 +13696,51 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:despawn": {
     "despawn_from_distance": {}
+}
+```
+
+### piglin_brute
+```json
+"minecraft:despawn": {
+    "filters": {
+        "any_of": [
+            {
+                "all_of": [
+                    {
+                        "test": "is_persistent",
+                        "value": false
+                    },
+                    {
+                        "test": "distance_to_nearest_player",
+                        "operator": ">",
+                        "value": 54
+                    }
+                ]
+            },
+            {
+                "all_of": [
+                    {
+                        "test": "is_persistent",
+                        "value": false
+                    },
+                    {
+                        "test": "inactivity_timer",
+                        "subject": "self",
+                        "value": 30
+                    },
+                    {
+                        "test": "random_chance",
+                        "value": 800
+                    },
+                    {
+                        "test": "distance_to_nearest_player",
+                        "operator": ">",
+                        "value": 32
+                    }
+                ]
+            }
+        ]
+    }
 }
 ```
 
@@ -15312,6 +14943,35 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:environment_sensor": {
+    "triggers": {
+        "filters": {
+            "test": "in_nether",
+            "subject": "self",
+            "operator": "==",
+            "value": false
+        },
+        "event": "start_zombification_event"
+    }
+}
+```
+
+```json
+"minecraft:environment_sensor": {
+    "triggers": {
+        "filters": {
+            "test": "in_nether",
+            "subject": "self",
+            "operator": "==",
+            "value": true
+        },
+        "event": "stop_zombification_event"
+    }
+}
+```
+
 ### pillager
 ```json
 "minecraft:environment_sensor": {
@@ -15395,31 +15055,6 @@ This documentation is stripped from the vanilla files using an automated script.
     "triggers": [
         {
             "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
-}
-```
-
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
                 "all_of": [
                     {
                         "test": "in_water",
@@ -15469,31 +15104,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
-```json
-"minecraft:environment_sensor": {
-    "triggers": [
-        {
-            "filters": {
-                "test": "is_underwater",
-                "subject": "self",
-                "operator": "==",
-                "value": true
-            },
-            "event": "minecraft:melee_mode"
-        },
-        {
-            "filters": {
-                "test": "has_ranged_weapon",
-                "subject": "self",
-                "operator": "==",
-                "value": false
-            },
-            "event": "minecraft:melee_mode"
-        }
-    ]
-}
-```
-
 ```json
 "minecraft:environment_sensor": {
     "triggers": [
@@ -15766,22 +15376,17 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:equipment": {
+    "table": "loot_tables/entities/piglin_brute_gear.json"
+}
+```
+
 ### pillager
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/pillager_gear.json"
-}
-```
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/pillager_captain_equipment.json",
-    "slot_drop_chance": [
-        {
-            "slot": "slot.armor.chest",
-            "drop_chance": 1.0
-        }
-    ]
 }
 ```
 
@@ -15829,18 +15434,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/vindicator_gear.json"
-}
-```
-
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/vindicator_captain_equipment.json",
-    "slot_drop_chance": [
-        {
-            "slot": "slot.armor.chest",
-            "drop_chance": 1.0
-        }
-    ]
 }
 ```
 
@@ -16215,6 +15808,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:experience_reward": {
+    "on_death": "query.last_hit_by_player ? 10 : 0"
+}
+```
+
 ### pillager
 ```json
 "minecraft:experience_reward": {
@@ -16464,26 +16064,6 @@ This documentation is stripped from the vanilla files using an automated script.
 
 # minecraft:explode
 ### creeper
-```json
-"minecraft:explode": {
-    "fuse_length": 1.5,
-    "fuse_lit": true,
-    "power": 3,
-    "causes_fire": false,
-    "destroy_affected_by_griefing": true
-}
-```
-
-```json
-"minecraft:explode": {
-    "fuse_length": 1.5,
-    "fuse_lit": true,
-    "power": 6,
-    "causes_fire": false,
-    "destroy_affected_by_griefing": true
-}
-```
-
 ```json
 "minecraft:explode": {
     "fuse_length": 1.5,
@@ -16875,6 +16455,13 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:follow_range": {
+    "value": 64
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:follow_range": {
     "value": 64
@@ -17643,6 +17230,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:health": {
+    "value": 50,
+    "max": 50
+}
+```
+
 ### pillager
 ```json
 "minecraft:health": {
@@ -17683,20 +17278,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
-```json
-"minecraft:health": {
-    "value": 6,
-    "max": 6
-}
-```
-
 ```json
 "minecraft:health": {
     "value": 6,
@@ -17972,6 +17553,11 @@ This documentation is stripped from the vanilla files using an automated script.
 
 # minecraft:home
 ### bee
+```json
+"minecraft:home": {}
+```
+
+### piglin_brute
 ```json
 "minecraft:home": {}
 ```
@@ -18623,6 +18209,24 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:hurt_on_condition": {
+    "damage_conditions": [
+        {
+            "filters": {
+                "test": "in_lava",
+                "subject": "self",
+                "operator": "==",
+                "value": true
+            },
+            "cause": "lava",
+            "damage_per_tick": 4
+        }
+    ]
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:hurt_on_condition": {
     "damage_conditions": [
@@ -20019,6 +19623,12 @@ This documentation is stripped from the vanilla files using an automated script.
                             "test": "is_family",
                             "subject": "other",
                             "value": "player"
+                        },
+                        {
+                            "test": "has_component",
+                            "subject": "self",
+                            "operator": "!=",
+                            "value": "minecraft:is_baby"
                         }
                     ]
                 }
@@ -21058,25 +20668,13 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_ignited": {}
 ```
 
-```json
-"minecraft:is_ignited": {}
-```
-
 # minecraft:is_illager_captain
 ### pillager
 ```json
 "minecraft:is_illager_captain": {}
 ```
 
-```json
-"minecraft:is_illager_captain": {}
-```
-
 ### vindicator
-```json
-"minecraft:is_illager_captain": {}
-```
-
 ```json
 "minecraft:is_illager_captain": {}
 ```
@@ -21118,11 +20716,12 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:is_shaking": {}
 ```
 
+### piglin
 ```json
 "minecraft:is_shaking": {}
 ```
 
-### piglin
+### piglin_brute
 ```json
 "minecraft:is_shaking": {}
 ```
@@ -21133,10 +20732,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### zombie
-```json
-"minecraft:is_shaking": {}
-```
-
 ```json
 "minecraft:is_shaking": {}
 ```
@@ -21428,6 +21023,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:jump.static": {}
+```
+
+### piglin_brute
 ```json
 "minecraft:jump.static": {}
 ```
@@ -22091,12 +21691,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/magma_cube.json"
-}
-```
-
 ### mooshroom
 ```json
 "minecraft:loot": {
@@ -22166,6 +21760,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:loot": {
+    "table": "loot_tables/entities/piglin.json"
+}
+```
+
 ### pillager
 ```json
 "minecraft:loot": {
@@ -22215,12 +21816,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### salmon
-```json
-"minecraft:loot": {
-    "table": "loot_tables/entities/salmon_normal.json"
-}
-```
-
 ```json
 "minecraft:loot": {
     "table": "loot_tables/entities/salmon_normal.json"
@@ -22493,12 +22088,6 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:mark_variant": {
-    "value": -1
-}
-```
-
-```json
-"minecraft:mark_variant": {
     "value": 0
 }
 ```
@@ -22591,138 +22180,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:mark_variant": {
     "value": 5
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 2
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 5
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 2
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:mark_variant": {
-    "value": 3
 }
 ```
 
@@ -23121,6 +22578,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+```json
+"minecraft:movement": {
+    "value": 0.35
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:movement": {
     "value": 0.35
@@ -23533,6 +22997,11 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:movement.basic": {}
 ```
 
+### piglin_brute
+```json
+"minecraft:movement.basic": {}
+```
+
 ### pillager
 ```json
 "minecraft:movement.basic": {}
@@ -23716,15 +23185,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:movement.jump": {
     "jump_delay": [
-        2.0,
-        6.0
-    ]
-}
-```
-
-```json
-"minecraft:movement.jump": {
-    "jump_delay": [
         0.667,
         2.0
     ]
@@ -23732,15 +23192,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### slime
-```json
-"minecraft:movement.jump": {
-    "jump_delay": [
-        0.5,
-        1.5
-    ]
-}
-```
-
 ```json
 "minecraft:movement.jump": {
     "jump_delay": [
@@ -23979,6 +23430,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:nameable": {}
+```
+
+### piglin_brute
 ```json
 "minecraft:nameable": {}
 ```
@@ -24244,17 +23700,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": true,
-    "can_path_over_water": true,
-    "can_swim": true,
-    "can_walk": true,
-    "can_breach": false,
-    "can_jump": false
-}
-```
-
 ### drowned
 ```json
 "minecraft:navigation.generic": {
@@ -24273,17 +23718,6 @@ This documentation is stripped from the vanilla files using an automated script.
     "can_path_over_water": false,
     "can_break_doors": true,
     "can_swim": true,
-    "can_walk": true,
-    "avoid_sun": true
-}
-```
-
-```json
-"minecraft:navigation.generic": {
-    "is_amphibious": true,
-    "can_path_over_water": false,
-    "can_break_doors": true,
-    "can_swim": false,
     "can_walk": true,
     "avoid_sun": true
 }
@@ -24570,6 +24004,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:navigation.walk": {
+    "can_path_over_water": true,
+    "can_open_doors": true
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:navigation.walk": {
     "can_path_over_water": true,
@@ -25000,35 +24442,7 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:on_hurt": {
-    "event": "minecraft:ranged_mode",
-    "target": "self"
-}
-```
-
-```json
-"minecraft:on_hurt": {
-    "event": "minecraft:ranged_mode",
-    "target": "self"
-}
-```
-
 # minecraft:on_hurt_by_player
-```json
-"minecraft:on_hurt_by_player": {
-    "event": "minecraft:ranged_mode",
-    "target": "self"
-}
-```
-
-```json
-"minecraft:on_hurt_by_player": {
-    "event": "minecraft:ranged_mode",
-    "target": "self"
-}
-```
-
 ```json
 "minecraft:on_hurt_by_player": {
     "event": "minecraft:ranged_mode",
@@ -25163,6 +24577,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:on_target_acquired": {
+    "event": "become_angry_event",
+    "target": "self"
+}
+```
+
 ### polar_bear
 ```json
 "minecraft:on_target_acquired": {
@@ -25195,12 +24617,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### spider
-```json
-"minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry"
-}
-```
-
 ```json
 "minecraft:on_target_acquired": {
     "event": "minecraft:become_angry"
@@ -25242,10 +24658,6 @@ This documentation is stripped from the vanilla files using an automated script.
     "event": "minecraft:stop_exploding",
     "target": "self"
 }
-```
-
-```json
-"minecraft:on_target_escape": {}
 ```
 
 ```json
@@ -25308,13 +24720,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### pillager
-```json
-"minecraft:on_target_escape": {
-    "event": "minecraft:calm",
-    "target": "self"
-}
-```
-
 ```json
 "minecraft:on_target_escape": {
     "event": "minecraft:calm",
@@ -25680,6 +25085,11 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:physics": {}
+```
+
+### piglin_brute
 ```json
 "minecraft:physics": {}
 ```
@@ -27162,6 +26572,14 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:pushable": {
+    "is_pushable": true,
+    "is_pushable_by_piston": true
+}
+```
+
 ### pillager
 ```json
 "minecraft:pushable": {
@@ -27601,10 +27019,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ```json
-"minecraft:rail_sensor": {}
-```
-
-```json
 "minecraft:rail_sensor": {
     "on_activate": {
         "filters": {
@@ -27716,22 +27130,6 @@ This documentation is stripped from the vanilla files using an automated script.
             0.0,
             0.3,
             0.0
-        ]
-    }
-}
-```
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "skeleton"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.3,
-            -0.1
         ]
     }
 }
@@ -28214,25 +27612,6 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:rideable": {}
 ```
 
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "player",
-        "skeleton",
-        "zombie"
-    ],
-    "interact_text": "action.interact.ride.horse",
-    "seats": {
-        "position": [
-            0.0,
-            1.2,
-            -0.2
-        ]
-    }
-}
-```
-
 ### spider
 ```json
 "minecraft:rideable": {
@@ -28245,38 +27624,6 @@ This documentation is stripped from the vanilla files using an automated script.
             0.0,
             0.54,
             -0.1
-        ]
-    }
-}
-```
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "skeleton"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.54,
-            0.0
-        ]
-    }
-}
-```
-
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "skeleton"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.54,
-            0.0
         ]
     }
 }
@@ -28355,22 +27702,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### wolf
-```json
-"minecraft:rideable": {
-    "seat_count": 1,
-    "family_types": [
-        "zombie"
-    ],
-    "seats": {
-        "position": [
-            0.0,
-            0.675,
-            -0.1
-        ]
-    }
-}
-```
-
 ```json
 "minecraft:rideable": {
     "seat_count": 1,
@@ -29949,13 +29280,13 @@ This documentation is stripped from the vanilla files using an automated script.
             "priority": 1
         },
         {
-            "item": "minecraft:chainmail_helmet",
+            "item": "minecraft:iron_helmet",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 2
         },
         {
-            "item": "minecraft:iron_helmet",
+            "item": "minecraft:chainmail_helmet",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 3
@@ -30009,13 +29340,13 @@ This documentation is stripped from the vanilla files using an automated script.
             "priority": 1
         },
         {
-            "item": "minecraft:chainmail_chestplate",
+            "item": "minecraft:iron_chestplate",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 2
         },
         {
-            "item": "minecraft:iron_chestplate",
+            "item": "minecraft:chainmail_chestplate",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 3
@@ -30045,13 +29376,13 @@ This documentation is stripped from the vanilla files using an automated script.
             "priority": 1
         },
         {
-            "item": "minecraft:chainmail_leggings",
+            "item": "minecraft:iron_leggings",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 2
         },
         {
-            "item": "minecraft:iron_leggings",
+            "item": "minecraft:chainmail_leggings",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 3
@@ -30081,13 +29412,13 @@ This documentation is stripped from the vanilla files using an automated script.
             "priority": 1
         },
         {
-            "item": "minecraft:chainmail_boots",
+            "item": "minecraft:iron_boots",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 2
         },
         {
-            "item": "minecraft:iron_boots",
+            "item": "minecraft:chainmail_boots",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 3
@@ -30116,84 +29447,98 @@ This documentation is stripped from the vanilla files using an automated script.
             "item": "minecraft:golden_sword",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_axe",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_hoe",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_pickaxe",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_shovel",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_rail",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_helmet",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_chestplate",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_leggings",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_boots",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_apple",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:appleEnchanted",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:golden_carrot",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:gold_block",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
@@ -30205,24 +29550,28 @@ This documentation is stripped from the vanilla files using an automated script.
             "item": "minecraft:gold_ore",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:nether_gold_ore",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:gilded_blackstone",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:horsearmorgold",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
@@ -30339,24 +29688,28 @@ This documentation is stripped from the vanilla files using an automated script.
             "item": "minecraft:bell",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:clock",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:speckled_melon",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
             "item": "minecraft:light_weighted_pressure_plate",
             "priority": 2,
             "admire": true,
+            "pickup_limit": 1,
             "stored_in_inventory": true
         },
         {
@@ -30927,56 +30280,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### villager_v2
-```json
-"minecraft:shareables": {
-    "items": [
-        {
-            "item": "minecraft:bread",
-            "want_amount": 3,
-            "surplus_amount": 6,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:carrot",
-            "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:potato",
-            "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:beetroot",
-            "want_amount": 60,
-            "surplus_amount": 24,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:wheat_seeds",
-            "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:beetroot_seeds",
-            "want_amount": 64,
-            "surplus_amount": 64,
-            "stored_in_inventory": true
-        },
-        {
-            "item": "minecraft:wheat",
-            "want_amount": 45,
-            "surplus_amount": 18,
-            "craft_into": "minecraft:bread",
-            "stored_in_inventory": true
-        }
-    ]
-}
-```
-
 ```json
 "minecraft:shareables": {
     "items": [
@@ -32327,12 +31630,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:shooter": {
-    "def": "minecraft:arrow"
-}
-```
-
 ### snow_golem
 ```json
 "minecraft:shooter": {
@@ -32341,13 +31638,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### stray
-```json
-"minecraft:shooter": {
-    "def": "minecraft:arrow",
-    "aux_val": 19
-}
-```
-
 ```json
 "minecraft:shooter": {
     "def": "minecraft:arrow",
@@ -32866,10 +32156,6 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:target_nearby_sensor": {}
 ```
 
-```json
-"minecraft:target_nearby_sensor": {}
-```
-
 ### drowned
 ```json
 "minecraft:target_nearby_sensor": {
@@ -32887,17 +32173,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### guardian
-```json
-"minecraft:target_nearby_sensor": {
-    "inside_range": 3.0,
-    "outside_range": 4.0,
-    "on_inside_range": {
-        "event": "minecraft:target_too_close",
-        "target": "self"
-    }
-}
-```
-
 ```json
 "minecraft:target_nearby_sensor": {
     "inside_range": 3.0,
@@ -33054,6 +32329,17 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:timer": {
+    "looping": false,
+    "time": 15,
+    "time_down_event": {
+        "event": "become_zombie_event"
+    }
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:timer": {
     "looping": false,
@@ -33333,6 +32619,15 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 ### piglin
+```json
+"minecraft:transformation": {
+    "into": "minecraft:zombie_pigman",
+    "transformation_sound": "converted_to_zombified",
+    "keep_level": true
+}
+```
+
+### piglin_brute
 ```json
 "minecraft:transformation": {
     "into": "minecraft:zombie_pigman",
@@ -33975,6 +33270,18 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:type_family": {
     "family": [
         "piglin",
+        "monster"
+    ]
+}
+```
+
+### piglin_brute
+```json
+"minecraft:type_family": {
+    "family": [
+        "piglin",
+        "adult_piglin",
+        "piglin_brute",
         "monster"
     ]
 }
@@ -35408,6 +34715,13 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### piglin_brute
+```json
+"minecraft:variant": {
+    "value": 1
+}
+```
+
 ### pillager
 ```json
 "minecraft:variant": {
@@ -35421,22 +34735,10 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
 ### pufferfish
 ```json
 "minecraft:variant": {
     "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
 }
 ```
 
@@ -35605,166 +34907,10 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
 ### villager
 ```json
 "minecraft:variant": {
     "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
 }
 ```
 
@@ -35783,24 +34929,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:variant": {
     "value": 3
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 4
 }
 ```
 
@@ -35914,40 +35042,10 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-```json
-"minecraft:variant": {
-    "value": 1
-}
-```
-
 ### zombie_villager
 ```json
 "minecraft:variant": {
     "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 1
 }
 ```
 
@@ -35971,113 +35069,11 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ```json
 "minecraft:variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 3
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 4
-}
-```
-
-```json
-"minecraft:variant": {
     "value": 4
 }
 ```
 
 ### zombie_villager_v2
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
-```json
-"minecraft:variant": {
-    "value": 0
-}
-```
-
 ```json
 "minecraft:variant": {
     "value": 0
