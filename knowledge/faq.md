@@ -128,4 +128,4 @@ The [molang variable list can be found here](https://bedrock.dev/docs/stable/MoL
 
 ### How can I freeze an animation when it completes?
 
-- Use `"loop": "hold_on_last_frame". This will pause the animation on its last frame, instead of resetting back to the base pose. Useful for things like chests, which need to open and *stay open* until closed.
+- Use `"loop": "hold_on_last_frame"`. This will pause the animation on its last frame, instead of resetting back to the base pose. Useful for things like chests, which need to open and *stay open* until closed.
