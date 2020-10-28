@@ -77,7 +77,7 @@ There is loads of useful information about Bedrock Development online, but somet
    - [Beginners Guide template packs](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/guide/template_packs)
 
 ## Scripting Resources
- - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/Timer)
+ - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)
  - [Get Block Details](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/getBlockDetails)
  - [Events](https://gist.github.com/jocopa3/5f718f4198f1ea91a37e3a9da468675c)
  - [Get Started](https://minecraft-addon-tools.github.io/tutorials/)
