@@ -77,10 +77,10 @@ For example, the render controller above is used for the `minecraft:cow` entity.
  - `default` texture
  - `default` material
 
- # Creating custom render controllers
+# Creating custom render controllers
 
  Often we want more power over the rendering of our entities, such as rendering layered textures, multiple geometries, or applying different materials to different bones. To create a custom render controller, simply copy and paste a vanilla render controller into the `render_controllers` folder, and edit to your liking!
 
- # Texture layering
+# Texture layering
 
  Layering textures is currently written as a wiki article here: [Texture Layering](/tutorials/texture-layering).
