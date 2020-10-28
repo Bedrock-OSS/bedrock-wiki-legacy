@@ -20,7 +20,7 @@ this is expressed with `{"rawtext":[{"text":""}]}`
 This sends the words in the last set of quotes
 ```/tellraw @a {"rawtext":[{"text":"Hello"}]}```
 
-To use quotaitons in a tellraw message place a backslash to the left side of the quotation mark
+To use quotations in a tellraw message place a backslash to the left side of the quotation mark
 ```/tellraw @a {"rawtext":[{"text":"§bColor text"}]}```
 
 To insert a line break use \n
