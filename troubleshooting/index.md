@@ -37,7 +37,7 @@ You should download the vanilla resource and behavior pack. You can find [the va
 
 ## JSON-Schemas
 
-JSON-Schemas are a valuable tool for file validation. You can learn more about [JSON-Schemas here](/knowledge/using-schema).
+JSON-Schemas are a valuable tool for file validation. You can learn more about [JSON-Schemas here](/knowledge/using-schemas).
 
 ## Reload
 
