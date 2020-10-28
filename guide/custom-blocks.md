@@ -114,7 +114,7 @@ As you can see, every block's identifier is applied with textures and step sound
 - "`tut:blocky`" has "`textures`" set to the texture shortname "`**blocky**`". We'll define it in a file similiar to `RP/textures/item_texture.json`, `RP/textures/terrain_texture.json` later.
 - "`tut:sapp_log`"'s "textures" are broken up in 3 parts: "`up`"(for the upper face of the block), "`down`"(for the bottom face of the block), and "`side`"(for the remaining four faces). Each one of these has a seperate texture shortname applied.
 - "`tut:compass_block`"'s "`textures`" are broken up in even more sub-textures. Instead of "`side`"s, we have a different texture shortname set for the "`north`" side, the "`south`" side, the "`west`" side and the "`east`" side.
-- And, lastly, "`tut_flashing`" simply has "`flashing`" defined in the same way as "`tut_blocky`". \
+- And, lastly, "`tut_flashing`" simply has "`flashing`" defined in the same way as "`tut_blocky`".
 
 ## Block terrain texture definition
 

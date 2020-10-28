@@ -314,7 +314,7 @@ The most important thing in a loot table is the *file name*, since loot tables h
 
 If you want to change what can a player fish out of a jungle river, simply create your own loot table under `BP/loot_tables/gameplay/fishing/jungle_fish.json and BP/loot_tables/gameplay/fishing/jungle_junk.json` to overwrite the Vanilla loot tables. This can be done with most other Vanilla files too (if the aspect is data-driven).
 
-You can aslo use `loot_tables.empty.json` for no loot.
+You can also use `loot_tables.empty.json` for no loot.
 
 Let's break up the Loot table structure somewhat. I took a simple zombie loot table as an example.
 
