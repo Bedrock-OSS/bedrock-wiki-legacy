@@ -105,7 +105,7 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 ## Additional Addon-creation Software
 
  - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *($$$)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
- - You may also be recommended software such as [AJG *($$$)*](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG *($$$)*](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
+ - You may also be recommended software such as [AJG ($$$)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG *($$$)*](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
 
 ![Blockbench Workspace](/assets/guide/blockbench_workspace.png)
 
