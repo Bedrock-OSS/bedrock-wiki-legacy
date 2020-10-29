@@ -19,13 +19,9 @@ badge_justification: left
 {:toc}
 </details>
 
-___
-
-## Downloading the Software
-
 In order to be able to code addons you'll need a certain set of software installed. While Windows 10 offers the best development environment, and largest variety of tools, alternatives can be found on other platforms, including mobile.
 
-### A valid copy of Bedrock Minecraft
+## A valid copy of Bedrock Minecraft
 - [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
 - [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
 - [iOS](https://apps.apple.com/us/app/minecraft/id479516143)
