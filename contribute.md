@@ -8,7 +8,7 @@ nav_exclude: true
 
 ## Contributions are welcome!
 
-[The GitHub repository can be found here](https://github.com/SirLich/bedrock-wiki){: .btn .btn-blue }
+[GitHub](https://github.com/SirLich/bedrock-wiki){: .btn .btn-blue }
 
 If you are familiar with GitHub, the Wiki accepts pull requests. Website is located on the `gh-pages` branch.
 
