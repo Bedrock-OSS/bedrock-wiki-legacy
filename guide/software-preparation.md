@@ -21,32 +21,41 @@ badge_justification: left
 
 ___
 
-## Downloading the software
+## Downloading the Software
 
-In order to be able to code add-ons you'll need a certain set of software installed. While Windows 10 offers the largest variet of tools, alternatives can be found on other platforms, including mobile.
+In order to be able to code addons you'll need a certain set of software installed. While Windows 10 offers the best development environment, and largest variety of tools, alternatives can be found on other platforms, including mobile.
 
- 1. The official **Minecraft v.1.16.0+**, _Bedrock Codebase_
-    - Windows 10: [Minecraft](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab) [_Wind10 Edition, Bedrock_] from Microsoft Store;
-    - [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en) and [iOS](https://apps.apple.com/us/app/minecraft/id479516143): the official Minecraft from the respective stores;
+### A valid copy of Bedrock Minecraft
+- [Windows 10](https://www.microsoft.com/en-us/p/minecraft-for-windows-10/9nblggh2jhxj?activetab=pivot:overviewtab)
+- [Android](https://play.google.com/store/apps/details?id=com.mojang.minecraftpe&hl=en)
+- [iOS](https://apps.apple.com/us/app/minecraft/id479516143)
 
-2. **A code editor**. This can be any text editor (even the Windows-pre-installed Notepad would do), however it's much more comfortable to work in a dedicated Code Editor, like VSC, which I prefer.    
+## Picking an Editor
 
- - [_Visual Studio Code_](https://code.visualstudio.com/) - is optimal in many cases. Also has a variety of extensions for Add-On development available (*See below*). (*Warning*: not *Visual Studio*, which is an IDE)
- - [_Sublime Text_](https://www.sublimetext.com/) is another great code editor with huge theme customization capabilities. 
-- [_CoreCoder_](https://hanprog.itch.io/core-coder) is a unique Code Editor developed specifically for Add-On creation.   
-- [_Atom_](https://atom.io/) 
-- Alternatives for mobile:
-    - Android: _ES File Explorer_;
-    - iOS: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481);
+Bedrock Addons can be created using any text editor (even the Windows-pre-installed Notepad), however it's much more comfortable to work in a dedicated Code Editor.
 
-- [_Bridge_](https://github.com/bridge-core/bridge.), a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge. (*See note below*)
+There are strong opinions about the best editor for beginners, but generally speaking you cannot go wrong selecting any of the following editors.
 
-___
-### Notes
+Editor recommendations are starred.
 
+### Plaintext Editors
+ - ⭐[_VSCode Code_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
+- [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
+- [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
+ 
+
+### Graphical Editors
+ - ⭐[_Bridge_](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
+- [_CoreCoder ($$$)_](https://hanprog.itch.io/core-coder) - is a unique Code Editor developed specifically for Addon creation.   
+
+### Mobile Alternatives
+- **Android**: [_ES File Explorer_](https://play.google.com/store/apps/details?id=com.File.Manager.Filemanager&hl=de&gl=US)
+- **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
+
+
+### Additional Notes
 
 <details> 
-
    <summary>
       Features to look for in a Code Editor
    </summary>
@@ -61,7 +70,7 @@ ___
 <details>
 
    <summary>
-      VSC Extensions for Add-On developing
+      VSCode Extensions for Addon development
    </summary>
 
 Many packages exist for VSCode that make editing addons easier:
@@ -97,18 +106,14 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 
 <br>
 
-___
+## Additional Addon-creation Software
 
-
-![VSC Workspace](/assets/guide/vsc_workspace.png)
-
-3. [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like GIMP, Photoshop or paint.net, is recommended to be used along.
+ - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *($$$)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
+ - You may also be recommended software such as [AJG *($$$)*](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG *($$$)*](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
 
 ![Blockbench Workspace](/assets/guide/blockbench_workspace.png)
 
 
-
-As a further note, you may might other recommended software like [AJG](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG](https://machine-builder.itch.io/frg-v2) for quick custom structure creation helpful.
 
 ___
 
