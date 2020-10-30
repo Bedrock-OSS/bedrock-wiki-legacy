@@ -115,7 +115,7 @@ ___
 
    Now that you have your tools installed, let's move onto some pre-organisation:
 
-## The com.mojang
+## The com.mojang folder
 The com.mojang folder is the folder we're going to be working with throughout the Guide and Addon development in general. All files we access or create will be placed somewhere in this folder:
 
 I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
