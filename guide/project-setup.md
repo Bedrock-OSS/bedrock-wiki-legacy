@@ -1,6 +1,6 @@
 ---
 layout: guide
-title: Manifest; Custom Function; .mc file extensions
+title: Project Setup
 parent: Beginners Guide
 badge: 2
 badge_color: guide
@@ -8,7 +8,7 @@ badge_justification: left
 nav_order: 2
 ---
 
-# Getting Started
+# Project Setup
 
 <details id="toc" open markdown="block">
   <summary>
@@ -19,11 +19,9 @@ nav_order: 2
 {:toc}
 </details>
 
-___
-
 ## Manifests
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
-Like all other code files in your pack, it's written in JSON [Java Script Object Notation].\
+Like all other code files in your pack, it's written in [json](https://www.json.org/json-en.html).
 
 ### **JSON Syntax Rules**
 - **Data is in name/value pairs;**
@@ -32,7 +30,7 @@ Like all other code files in your pack, it's written in JSON [Java Script Object
 - **Square brackets hold arrays;**
 - **Every `{` must be closed by `}`, every `[` with `]`, same with `{}`, `[]`, `""`, `''`, etc.**
 
-You can learn more about JSON [here](https://www.w3schools.com/whatis/whatis_json.asp).
+[Learn more about JSON](https://www.w3schools.com/whatis/whatis_json.asp){: .btn .btn-blue }
 
 ___
 
