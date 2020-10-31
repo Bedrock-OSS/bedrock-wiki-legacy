@@ -219,3 +219,24 @@ There are also many sound events, which *most likely* trigger automatically, but
     }
 }
 ```
+# Adding sounds to Animations
+
+Sounds played in animations function based off of `short-name` definitions in the RP entity file.
+
+This example shows playing a wing-flap sound, synced with an animation.
+
+`RP/entities/dragon.entity.rp.json`
+```jsonc
+"sound_effects": {
+    "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound definited in sound_definitions
+}
+```
+
+`RP/animations/dragon.animation.json`
+```jsonc
+"sound_effects": {
+    "3.16": {
+        "effect": "wing_flap"
+    }
+}
+```
