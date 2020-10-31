@@ -178,7 +178,7 @@ ___
 ### .mcfunction
 An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `BP/functions/`. VSC will treat it like a normal .txt file.
 Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:
-![.mcstructure in VSC](/assets/guide/function_code.jpg)
+![.mcstructure in VSC](/assets/guide/function_code.png)
 ##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors
 
 Now you can run the function by typing `/function diamond_tools` (*`/function {filename}`*) in the in-game chat!
