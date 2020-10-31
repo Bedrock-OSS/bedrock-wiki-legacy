@@ -238,7 +238,7 @@ List of all new block components, with usage examples
 - minecraft:damage
 ```jsonc
 {
-    "minecraft:damage": true
+    "minecraft:damage": 5
 }
 ```
 
