@@ -82,12 +82,12 @@ Here's the example on removing the damage overlay color.
 The code above will remove the red damage overlay color.
 
 You can also change the damage color overlay to different colors just by putting different values in rgba.You can check out different websites to get the rgba values of all colors.
-Here's another example in which the damage overlay color becomes pink.
+Here's another example in which the damage color overlay becomes pink.
   ```json
 {
     "format_version": "1.8.0",
     "render_controllers": {
-        "controller.render.lunae": {
+        "controller.render.kbg": {
             "geometry": "Geometry.default",
             "materials": [
                 {
