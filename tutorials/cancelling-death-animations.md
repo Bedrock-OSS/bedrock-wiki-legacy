@@ -40,7 +40,79 @@ Animation:
 "rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
 
 ```
+# Changing Damage Color Overlay
 
+You can also cancel the death animation  of any entity by removing their damage color overlay.
+
+Before starting you must have the basics of render controller so check out the  [tutorial](/concepts/render-controller) of render controller.
+
+To remove the damage overlay color  of any entity you want when it gets damage  we will use `is_hurt_color` and to remove damage overlay color when an entity gets damage due to lava and fire we will use `on_fire _color`.
+First you need to make the rgba values to 0
+Here's the example on removing the damage overlay color.
+```json
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.kbg": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+            "is_hurt_color": {
+                "r": "0",
+                "g": "0",
+                "b": "0",
+                "a": "0"
+            },
+            "on_fire_color": {
+                "r": "0",
+                "g": "0",
+                "b": "0",
+                "a": "0"
+            }
+        }
+    }
+}
+```
+The code above will remove the red damage overlay color.
+
+You can also change the damage color overlay to different colors just by putting different values in rgba.You can check out different websites to get the rgba values of all colors.
+Here's another example in which the damage overlay color becomes pink.
+  ```json
+{
+    "format_version": "1.8.0",
+    "render_controllers": {
+        "controller.render.lunae": {
+            "geometry": "Geometry.default",
+            "materials": [
+                {
+                    "*": "Material.default"
+                }
+            ],
+            "textures": [
+                "Texture.default"
+            ],
+               "is_hurt_color": {
+                "r": "1.0",
+                "g": "0.4",
+                "b": "0.7",
+                "a": "0.5"
+            },
+            "on_fire_color": {
+                "r": "1.0",
+                "g": "0.4",
+                "b": "0.7",
+                "a": "0.5"
+            }
+        }
+    }
+    }
+```
 ---
 ### Credits
-MrPengoiun & Energyxxer
+MrPengoiun, Energyxxer & Ishan[KBG]
