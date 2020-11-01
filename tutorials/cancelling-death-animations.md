@@ -113,6 +113,6 @@ Here's another example in which the damage color overlay becomes pink.
     }
     }
 ```
----
-### Credits
-MrPengoiun, Energyxxer & Ishan[KBG]
+
+
+
