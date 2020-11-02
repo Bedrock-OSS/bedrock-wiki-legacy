@@ -38,12 +38,11 @@ Editor recommendations are starred.
  - ⭐[_VSCode Code_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
 - [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
-- [_CoreCoder (≈$5.00)_](https://hanprog.itch.io/core-coder) - is a unique Code Editor developed specifically for Addon creation.   
-
  
 
-### Graphical Editors
+### Dedicated Editors
  - ⭐[_Bridge_](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
+- [_CoreCoder (≈$5.00)_](https://hanprog.itch.io/core-coder) - is a unique Code Editor developed specifically for Addon creation.   
 
 ### Mobile Alternatives
 - **Android**: [_ES File Explorer_](https://play.google.com/store/apps/details?id=com.File.Manager.Filemanager&hl=de&gl=US)
