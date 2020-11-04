@@ -66,6 +66,11 @@
   #toc pre {
     background: none;
   }
+
+  #toc div.highlighter-rouge {
+    border: 0;
+  }
+
   .side-bar {
     width: calc((100% - 1528px) / 2 + 364px);
     min-width: 364px;
@@ -164,4 +169,28 @@ details#toc > summary {
   text-align: center;
   margin-left: 0;
   padding: 0;
+}
+
+.filepath {
+  font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+  margin-bottom: 0;
+  border: $border-color 1px solid;
+  padding: 0 0.5em;
+  border-bottom: 0;
+}
+
+.filepath::before {
+  content: '> ';
+  font-weight: 900;
+  color: $nav-child-link-color;
+}
+
+.path-separator {
+  padding: 0 4px;
+  font-weight: 900;
+}
+
+div.highlighter-rouge {
+  border-radius: 0;
+  border: $border-color 1px solid;
 }

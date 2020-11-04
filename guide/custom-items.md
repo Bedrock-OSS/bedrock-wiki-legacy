@@ -27,6 +27,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 
 ## Gem Behavior Code (BP)
 
+{% include filepath.html path="BP/items/gem.item.json" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -61,6 +62,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ## Gem Resource Code (RP)
 
+{% include filepath.html path="RP/items/gem.item.json" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -91,6 +93,7 @@ In order to define your item's texture's shortname (to be able to use the textur
 
 Now let's create the file where texture short names will be defined: `RP/textures/item_texture.json`, and copy this code into it:
 
+{% include filepath.html path="RP/textures/item_texture.json" %}
 ```jsonc
 {
 	"resource_pack_name": "tut",
@@ -118,6 +121,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal BP Code
 
+{% include filepath.html path="BP/items/meal.item.json" %}
 ```jsonc
 {
 	"format_version": "1.12.0",
@@ -164,6 +168,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal RP Code
 
+{% include filepath.html path="RP/items/meal.item.json" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -187,6 +192,7 @@ The following code goes in `RP/items/meal.item.json`, similarly to the Gem.
 
 ## Meal Textures and Shortnames
 
+{% include filepath.html path="RP/textures/item_texture.json" %}
 ```jsonc
 {
 	"resource_pack_name": "tut",
@@ -210,6 +216,7 @@ Make sure to check out the current Item documentation for even more components o
 
 Your items should now show up in game, but they have weird names, which consist of their identifiers. For example, `tut:gem` shows up as `item.tut:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`. You can find file names for other languages in the example resource pack's texts folder. Paste the following "code" into res/texts/en_US.lang. Now your items will have the correct names:
 
+{% include filepath.html path="RP/texts/en_US.lang" %}
 ```
 item.tut:gem.name=Gem
 item.tut:meal.name=Meal
