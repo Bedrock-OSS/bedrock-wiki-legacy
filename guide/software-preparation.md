@@ -40,9 +40,9 @@ Editor recommendations are starred.
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
  
 
-### Graphical Editors
+### Dedicated Editors
  - ⭐[_Bridge_](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
-- [_CoreCoder ($$$)_](https://hanprog.itch.io/core-coder) - is a unique Code Editor developed specifically for Addon creation.   
+- [_CoreCoder (≈$5.00)_](https://hanprog.itch.io/core-coder) - is a unique Code Editor developed specifically for Addon creation.   
 
 ### Mobile Alternatives
 - **Android**: [_ES File Explorer_](https://play.google.com/store/apps/details?id=com.File.Manager.Filemanager&hl=de&gl=US)
@@ -104,8 +104,8 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 
 ## Additional Addon-creation Software
 
- - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *($$$)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
- - You may also be recommended software such as [AJG (\$\$\$)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (\$\$\$)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
+ - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *(≈$10/m)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
+ - You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
 
 ![Blockbench Workspace](/assets/guide/blockbench_workspace.png)
 
@@ -115,40 +115,51 @@ ___
 
    Now that you have your tools installed, let's move onto some pre-organisation:
 
-## The com.mojang folder and your Workspace
-The com.mojang folder is the folder we're going to be working with throughout the Guide and Add-On development in general. It's the way to communicate with your game - you can find it in:
- - Windows: `C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`;
-- Android: `Phone>games>com.mojang`;
-- iOS: `My iDevice>Minecaraft>games>com.mojang`);
- I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.
-   You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
+## The com.mojang folder
+The com.mojang folder is the folder we're going to be working with throughout the Guide and Addon development in general. All files we access or create will be placed somewhere in this folder:
+
+I strongly recommend creating a shortcut to the folder on your Desktop, in order to be able to easily access it at any time.You'll find a lot of folders and files in the folder, among them: `behavior_packs`, `development_behavior_packs`, `resource_packs`, `development_resource_packs`.
 
 ![com.mojang folder](/assets/guide/com_mojang_folder.png)
 
+### Windows
+`C:\Users\USERNAME\AppData\Local\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang`
 
- `development_..._packs` are for developing add-ons -  if you do some changes to them, _then exit and re-enter a world with the packs applied_, the packs will _update_. That way you can quickly test the changes without having to change the pack version and reloading the game. Thus we'll work with these folders.
- (In `..._packs`, on the other hand, stable add-ons, including those imported via `.mcpack` are stored. They're also used to submit add-ons to Realms. We do not need them right now.)
+### Android
+`Phone>games>com.mojang`
 
+### iOS
+`My iDevice>Minecaraft>games>com.mojang`
 
+### Folder concents
 
+We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folder, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft. 
+ 
+Thus we'll work with these folders.
 
-____
+`resource_packs` and `behavior_packs` on the other hand contain stable add-ons, including those imported via `.mcpack`. We can ignore these folders for now.
+
+## Setting up your workspace
+_The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
+
 Let's create you first add-on workspace in Visual Studio Code now.
-1. Open VSC(*Visual Studio Code, the code editor*);
-1. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, according to the[Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
-1. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
-1. Go to `File>Add folder to workspace...`  and choose `BP`. Do the same with `RP`.
-1. Press `File>Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your add-on, all you have to do is open the workspace in VSC for quick access to both add-on folders.
+
+1. Open VSCode (*Visual Studio Code, the code editor*)
+2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
+3. Create a folder "`your_pack_name_BP`" in `development_behavior_packs`. **I'll refer to this folder as `BP`**.
+4. Go to `File > Add folder to workspace...`  and choose `BP`. Do the same with `RP`.
+5. Press `File > Save Workpsace as...` to save the workspace file to your Desktop. Whenever you're working on your addon, all you have to do is open the workspace by double-clicking, and you will get quick access to both BP and RP folders.
 
 ## Learning to reference
- Referencing means looking at other add-ons to find out how certain results are achieved. Minecraft's unmodified files are a good place to start. Download these zips of the Example resource packs and Example behavior packs and get creative! I recommend adding them to your workspace, but not changing them.
 
-The most important thing to check all the time are the official documentations. bedrock.dev is an amazing collection of all  the documentations and schemes, and typing `bedrock.dev/r` in your search window will immediately show you the documentations of the most recent official Minecraft release. (`bedrock.dev/b` results in the latest beta's docs.)
+## Vanilla Packs
+Referencing means looking at other add-ons to find out how certain results are achieved. Minecraft's unmodified files are a good place to start. Download the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) and [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate) and get creative! I recommend adding them to your workspace for easy referencing.
 
- Once you are though with this guide, you could download and reference some open-source add-ons from, for example, MCPEDL.com (You might also share your own ones there).
+Once you complete this guide, you can download and reference some open-source addons from, for example, [MCPEDL](https://mcpedl.com/?cookie_check=1). You can also upload your own addons there.
 
+## Documentation
+The best tool you have when learning about addons is the documentation. [bedrock.dev](https://bedrock.dev/) contains the best, and most up to date addon documentation. Make sure you are using the documentation for the current edition (bedrock.dev/docs/stable).
 
-___
 ___
 
 ## Your progress so far
