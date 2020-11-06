@@ -201,7 +201,7 @@ Now for the folder setup.<br>
 
 Function Pack Structure:
 
-> `(your pack name)`📂<br>
+`(your pack name)`📂<br>
 > `<pack_icon.png>`📄<br>
 > > `(functions)`📂, [`<manifest.json>`📄](https://wiki.bedrock.dev/guide/manifest-function-extension.html#manifests) , `<pack_icon.png>`📄<br>
 > > > `<filename.mcfunction>`📄<br>
