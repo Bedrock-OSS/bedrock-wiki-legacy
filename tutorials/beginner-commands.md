@@ -73,10 +73,15 @@ This most likely happened because the person didn't put an argument afterwards, 
 
 ### How do I read a syntax?
 ----
-Here's a quick sumnary, it isn't really accurate (I personally don't read them and somehow know it):
+Here's a quick sumnary, it isn't really accurate (I personally don't read them and somehow know it):<br>
+**Don't** try to memorize the `something: type` ones if you don't understand.<br>
 * `<text_here>`. These brackets mean that this argument is **required**.
 * `[text_here]`. These brackets mean that this argument is **optional**.
 * `(option1 | option2)`. These brackets mean that this argument **must be one in the list**.
+* `|`. This character in a bracket means ’**or**‘.
+* `something: int`. If `: int` is after something, that means the argument **must be a whole number**, also known as integers.
+* `something: string`. If these are after something, that means the argument **must be text**, also known as string or str.
+* `something: float` or `something: double`. If these are after something, that means the argument **has a decimal place**.
 ## Coordinate Management
 ----
 This is a crucial part in commands.
@@ -86,10 +91,8 @@ This is a crucial part in commands.
 To put it in my way, coordinates are really just the location of an object. But how do you know the coordinates?<br>
 How are coordinates formatted? Well, regarding both of them, there are three [axes](https://www.dictionary.com/browse/axis), namely X, Y, and Z.<br>
 **How are they formatted?**<br>
-The X and Y axes should be clear, otherwise click on the hyperlink.<br>
-Things start on the Z axis, that's what different, it's kind of like X, think of it as just another X, the reason
-for the existence of the Z axis is because the game is in 3D, don't worry too much about it for now.<br>
-**How does one get the coordinates of an object?**<br>
+They are formatted in the standard way, `x y z`, and you'll see more about those later.<br>
+**How does one get the coordinates of something?**<br>
 It's quite simple to do this, you **do not need to teleport** yourself. You can simply run this command:<br>
 `/gamerule showcoordinates true` and your coordinates should show **at the top left**. Once they're showing, read the numbers after<br>
 `Position`. It should look somewhat like this: `Position: X, Y, Z`. If it doesn't show exactly like that, don't panic.
@@ -110,11 +113,11 @@ Now what is `target` you may ask. Target means the entity the command is being e
 This command moves the player 10 blocks up from the command block if there is one, or the person who executed it.<br>
 Don't worry yet about making the player do it, we'll cover it now.<br>
 
-# Local Coordinates (Caret Notation)
+### Local Coordinates (Caret Notation)
 ----
 
 ‘Caret Notation’ is another important part in Minecraft commands, it is local coordinates, it's a bit like tildes, however it's based on direction. Here's a quick summary:
-* `X` The Z axis moves player **to the left**.
+* `X` The X axis moves player **to the left**.
 * `Y` The Y axis moves player **up**.
 * `Z` The Z axis moves player **forward**.
 
@@ -131,7 +134,7 @@ It's very easy to delete an entity, you can simply use the kill command to delet
 But what if you wanted to delete a dropped item, or perhaps a specific mob? Below is more info.<br>
 ### Targetting
 ----
-You can use the target selector argument, which I will be specifying information about right here.<br>
+You can use the target selector argument, which I will be specifying information about right here. 
 You can use the `@e` targetting, but further than that is what we'll be focusing on.<br>
 **Target Selectors**
 What are these? Well, I like to explain these as the main argument in selecting which entity to use.<br>
@@ -151,16 +154,18 @@ You see those things in the `[]` brackets? They will be covered next.<br>
 specific mob type, etc, it can find any entity type. But what if you wanted a specific entity?<br>
 `@e[type=<entity_type>,name=<name>`. With that, you'll find one of a name.<br>
 A very common issue I find others doing is when they're getting the name, they usually
-forget to add quotes after the `=` sign. If the mob has a space in the name, simply<br>
+forget to add quotes after the `=` sign. If the mob has a space in the name, simply
 instead of `<name>`, imagine it becomes `"<name>"`.<br>
-The name may be ugly, and so here is an alternative, this is also a way to group entities.
+The `name` argument may be ugly, and so here is an alternative, this is also a way to group entities.
 `/tag <target> (add | remove) <name: string>`.<br>
 This will add a new group to the targetted entity, after adding it you can remove the name, if there is one.<br>
-Now `string` means to add quotes, just like the name in the target selector.<br>
+Now `string` means to add quotes, just like the name in the target selector. In commands, and programming, `string` is just 
+text data, which in most cases are set by `"`. In Minecraft, use `"`.<br>
+An example of a string is: `"Hello World!"`. In Minecraft, if you wrap with these quotes, you can use any character for any argument, including spaces.
 You may want to check for the range, here's how:<br>
 `@e[r=<range number>]`<br>
 In most guides, `number` will be represented as `int` or `integer`. They both mean a number. However, an `int` is not
-`float` nor `double` (if you're unsure ignore those two words), it cannot take a decimal value. `1.01` for example, is not an integer.<br>
+`float` nor `double` (if you're unsure ignore those two words), it cannot take a decimal value. `1.01` for example, is not an integer. An integer is just a whole number.<br>
 ## Execute
 ---
 **This is an extremely important section!**
