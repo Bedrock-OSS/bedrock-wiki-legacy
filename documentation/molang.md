@@ -169,3 +169,18 @@ Formatted like: `structural_integrity = query.structural_integrity`.
 
 Used by boats and minecrafts for destroying it. It will decrease when attacking the entity and will recover with time. 
 Probably unusable by anything other than boats and minecrafts.
+
+# variable.attack_time
+
+### Explanation
+This variable is setup as IF it was a query. In other words, it can be used on any entity, regardless of whether you setup/define the variable correctly. 
+
+### For entities
+The variable tracks when the entity is swinging to attack. When not attacking it will be 0, when attacking it will range from 0 to the total attack time, which may be around 0.3 or something similar.
+
+### For the Player
+For the player, the variable will track whenever the arm bones are swinging, this includes:
+ - placing blocks
+ - placing entities
+ - interacting (when swing is enabled)
+ - melee attack
