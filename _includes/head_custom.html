@@ -217,7 +217,7 @@
             .then(commits => {
                 let contributors = [];
                 for (let i = 0; i < commits.length; i++) {
-                    if (commits[i].author && contributors.filter(value => value.login === commits[i].author.login).length === 0) {
+                    if (commits[i].author && commits[i].author.login && contributors.filter(value => value.login === commits[i].author.login).length === 0) {
                         contributors.push(commits[i].author);
                     }
                 }
