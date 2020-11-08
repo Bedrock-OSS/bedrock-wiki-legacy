@@ -27,7 +27,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 
 ## Gem Behavior Code (BP)
 
-{% include filepath.html path="BP/items/gem.item.json" %}
+{% include filepath.html path="BP/items/gem.item.json" id="bp_gem_item" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -62,7 +62,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ## Gem Resource Code (RP)
 
-{% include filepath.html path="RP/items/gem.item.json" %}
+{% include filepath.html path="RP/items/gem.item.json" id="rp_gem_item" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -121,7 +121,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal BP Code
 
-{% include filepath.html path="BP/items/meal.item.json" %}
+{% include filepath.html path="BP/items/meal.item.json" id="bp_meal_item" %}
 ```jsonc
 {
 	"format_version": "1.12.0",
@@ -168,7 +168,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal RP Code
 
-{% include filepath.html path="RP/items/meal.item.json" %}
+{% include filepath.html path="RP/items/meal.item.json" id="rp_meal_item" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -223,6 +223,47 @@ item.tut:meal.name=Meal
 ```
 
 [You can learn more about .lang here](https://wiki.bedrock.dev/concepts/lang.html)
+
+<div markdown="0" class="folder-structure">
+    <ul>
+        <li><span class="folder">BP</span>
+            <ul>
+                <li><span class="folder">items</span>
+                    <ul>
+                        <li><a href="#bp_gem_item" class="file">gem.item.json</a></li>
+                        <li><a href="#bp_meal_item" class="file">meal.item.json</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="folder">RP</span>
+            <ul>
+                <li><span class="folder">items</span>
+                    <ul>
+                        <li><a href="#rp_gem_item" class="file">gem.item.json</a></li>
+                        <li><a href="#rp_meal_item" class="file">meal.item.json</a></li>
+                    </ul>
+                </li>
+                <li><span class="folder">texts</span>
+                    <ul>
+                        <li><span class="file">en_US.lang</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">textures</span>
+                    <ul>
+                        <li><span class="file">item_texture.json</span></li>
+                        <li><span class="folder">items</span>
+                            <ul>
+                                <li><span class="image">gem.png</span></li>
+                                <li><span class="image">meal.png</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 ___
 ___

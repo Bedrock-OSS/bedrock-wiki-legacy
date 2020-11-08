@@ -1,3 +1,7 @@
+/*
+  Theme switcher
+*/
+
 .theme-switcher {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none'%3e%3cpath d='M7 7l3-3 3 3m0 6l-3 3-3-3' stroke='%239fa6b2' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
   border-width: 1px;
@@ -15,6 +19,10 @@
   background-size: 1.5em 1.5em;
   background-repeat: no-repeat;
 }
+
+/*
+  Table of contents
+*/
 
 @media (min-width: 93rem) {
   #toc {
@@ -116,6 +124,18 @@
   padding-left: 1em;
 }
 
+details#toc summary::-webkit-details-marker {
+  display: none;
+}
+
+details#toc > summary {
+  list-style: none;
+}
+
+/*
+  Contributors widget
+*/
+
 #contributors {
   display: flex;
 }
@@ -129,6 +149,10 @@
   width: 30px;
 }
 
+/*
+  News
+*/
+
 .post {
   background: $table-background-color;
   padding: 10px;
@@ -139,27 +163,13 @@
   line-break: anywhere;
 }
 
+/*
+  Navigation labels
+*/
+
 .nav-list-link .label {
   padding-top: 0;
   padding-bottom: 0;
-}
-
-.search-input {
-  color: $body-text-color;
-}
-
-details#toc summary::-webkit-details-marker {
-  display: none;
-}
-
-details#toc > summary {
-  list-style: none;
-}
-
-.nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
-  background-image: none;
-  background: $feedback-color;
-  border-radius: 4px;
 }
 
 .label-guide {
@@ -170,6 +180,10 @@ details#toc > summary {
   margin-left: 0;
   padding: 0;
 }
+
+/*
+  File path include
+*/
 
 .filepath {
   font-family: "SFMono-Regular", Menlo, Consolas, monospace;
@@ -193,4 +207,69 @@ details#toc > summary {
 div.highlighter-rouge {
   border-radius: 0;
   border: $border-color 1px solid;
+}
+
+/*
+  Directory structure include
+*/
+
+.folder-structure ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.folder-structure li {
+  padding-left: 20px;
+  position: relative;
+  line-height: 2em;
+  margin: 0;
+}
+
+.folder-structure li:before {
+  position: absolute;
+  left: 5px;
+  top: -2px;
+  content: '' !important;
+  display: block;
+  height: 1em;
+  border-bottom: 1px solid #bbb;
+  width: 10px;
+  margin-left: 0 !important;
+}
+
+.folder-structure li:after {
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  content: '';
+  display: block;
+  border-left: 1px solid #bbb;
+  height: 100%;
+}
+
+.file::before {
+  content: '📝';
+}
+
+.folder::before {
+  content: '📁';
+}
+
+.image::before {
+  content: '🖼️';
+}
+
+/*
+  Misc fixes
+*/
+
+.search-input {
+  color: $body-text-color;
+}
+
+.nav-list .nav-list-item .nav-list-link:hover, .nav-list .nav-list-item .nav-list-link.active {
+  background-image: none;
+  background: $feedback-color;
+  border-radius: 4px;
 }
