@@ -24,11 +24,11 @@ markdown: kramdown
 url: https://wiki.bedrock.dev
 aux_links:
   "Discord":
-    - "/discord.html"
+    - "/discord"
   "Bedrock.dev":
     - "https://bedrock.dev/"
   "Contribute":
-    - "/contribute.html"
+    - "/contribute"
   "News":
    - "/news/"
   
@@ -47,3 +47,5 @@ ga_tracking_anonymize_ip: true
 paginate: 10
 paginate_path: "/news/page:num/"
 excerpt_separator: <!--more-->
+
+permalink: /:title
