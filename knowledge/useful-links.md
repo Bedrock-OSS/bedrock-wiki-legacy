@@ -17,14 +17,11 @@ parent: Knowledge
 
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
 
-## Tutorials
- - [Beginners Guide](https://guide.bedrock.dev/)
-
 ## Discord Links
- - [Bedrock Wiki](https://discord.gg/XjV87YN)
+ - [Bedrock Addons](https://discord.gg/46JUdQb)
+ - [Bedrock OSS](https://discord.gg/XjV87YN)
  - [Minecraft Commands](https://discord.gg/QAFXFtZ)
  - [Blockbench](http://discord.gg/fZQbxbg)
- - [Bedrock Scripting](https://discord.gg/46JUdQb)
  - [Bridge](https://discord.gg/NxKuWuA)
  - [Minecraft](https://discord.gg/minecraft)
  - [Skill Share](https://discord.gg/sZ7fkcN)

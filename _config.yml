@@ -24,7 +24,7 @@ markdown: kramdown
 url: https://wiki.bedrock.dev
 aux_links:
   "Discord":
-    - "https://discord.gg/XjV87YN"
+    - "/discord.html"
   "Bedrock.dev":
     - "https://bedrock.dev/"
   "Contribute":
