@@ -29,6 +29,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Minecraft](https://discord.gg/minecraft)
  - [Skill Share](https://discord.gg/sZ7fkcN)
  - [Amulet](https://discord.gg/dSnwqQf)
+ - [Minecraft Map Testing](https://discord.gg/QRE99eS)
 
 ## Software
  - [Bridge Addon Editor](https://bridge-core.github.io/)
@@ -41,7 +42,7 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
  - [NBT Editor](https://www.universalminecrafteditor.com/)
  - [World Converter(free)](http://www.mcctoolchest.com/)
- - [world Converter (paid)](https://www.universalminecraftconverter.com/download)
+ - [world Converter (paid)](https://www.universalminecraftconverter.com/download
  
 ## JSON Generators
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
@@ -98,3 +99,4 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
  - [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
  - [MCPEDL - a place to publish Add-ons](http://mcpedl.com/?cookie_check=1)
+ - [Addon Obfuscator](https://pixelpoly.co/creator-tools/obfuscator)
