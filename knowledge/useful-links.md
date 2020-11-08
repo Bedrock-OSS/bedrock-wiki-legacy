@@ -17,9 +17,11 @@ parent: Knowledge
 
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
 
+Important links are have ⭐.
+
 ## Discord Links
- - [Bedrock Addons](https://discord.gg/46JUdQb)
- - [Bedrock OSS](https://discord.gg/XjV87YN)
+ - ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
+ - ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
  - [Minecraft Commands](https://discord.gg/QAFXFtZ)
  - [Blockbench](http://discord.gg/fZQbxbg)
  - [Bridge](https://discord.gg/NxKuWuA)
@@ -29,8 +31,8 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Minecraft Map Testing](https://discord.gg/QRE99eS)
 
 ## Software
+ - ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bridge Addon Editor](https://bridge-core.github.io/)
- - [Blockbench: A boxy 3D model editor](https://blockbench.net/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
  - [CoreCoder (paid) [Code Editor]](https://hanprog.itch.io/core-coder)
@@ -39,11 +41,11 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
  - [NBT Editor](https://www.universalminecrafteditor.com/)
  - [World Converter(free)](http://www.mcctoolchest.com/)
- - [world Converter (paid)](https://www.universalminecraftconverter.com/download
+ - [World Converter (paid)](https://www.universalminecraftconverter.com/download)
  
 ## JSON Generators
+ - ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
  - [Crafting Recipes](https://crafting.thedestruc7i0n.ca/)
- - [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)
  - [Loot Tables](https://amaury.carrade.eu/minecraft/loot_tables)
  - [Loot Tables (beta)](http://155.138.235.83)
  - [Advancements](https://advancements.thedestruc7i0n.ca/)
@@ -56,8 +58,8 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Anvil Behavior Generator (beta)](https://anvil.starktma.com/)
   
 ## Documentation Links
+ - ⭐[bedrock.dev](https://bedrock.dev/)
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
- - [TheDestruc7i0n Documentation - bedrock.dev](https://bedrock.dev/)
  - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
  - [Component Examples](vanilla-usage/components)
  - [JSON guis](https://geenium.com/bedrock/json-guis/)
@@ -85,15 +87,14 @@ There is loads of useful information about Bedrock Development online, but somet
  - [Lean OpenGL](https://learnopengl.com/)
 
 ## Other useful Links
+ - ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
  - [UUID v4 Generator (online)](https://www.uuidgenerator.net/version4)
- - [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
  - [Minecraft Marketplace partner Twitter list](https://twitter.com/i/lists/1191945551853629442?s=09)
  - [Minecraft.net Official Add-ons page](https://www.minecraft.net/en-us/addons)
  - [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
- - [Sphere Structure Viewer](https://www.plotz.co.uk/plotz-model.php?model=Sphere)
  - [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
  - [MCPEDL - a place to publish Add-ons](http://mcpedl.com/?cookie_check=1)
  - [Addon Obfuscator](https://pixelpoly.co/creator-tools/obfuscator)
