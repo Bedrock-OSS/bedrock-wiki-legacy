@@ -25,7 +25,13 @@ Death animation refers to the rotation of the entity as it dies. This is accompa
 A fairly common way to remove entities without causing death-effects, is to simply teleport them into the void. This can be done from animation controllers like:
 `/teleport @s ~ ~-1000 ~`
 
-Please note that this will remove all death-effects, including sound, particles, loot, and the visual death of the entity. 
+Please note that this will remove all death-effects, including sound, particles, loot, and the visual death of the entity.
+
+# Transforming the Entity
+
+Similar to teleporting the entity is triggering an entity transform on death. Query is_alive and transform the entity to another entity if is_alive == false. The new entity can have the despawn component with no filter, causing the entity to immediately despawn on creation.
+
+Plesea note that this will remove all death-effects, including sound, particles, loot, and the visual death of the entity.
 
 # Cancelling the Animation
 
