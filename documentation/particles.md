@@ -11,6 +11,7 @@ Here is the complete list of Bedrock particles. For some inexplicable reason, Be
 And for some other inexplicable reason, it doesn't have autocomplete for these.
 
 ### Working particles
+
 | minecraft:basic_flame_particle              |
 | minecraft:basic_portal_particle             |
 | minecraft:basic_smoke_particle              |
