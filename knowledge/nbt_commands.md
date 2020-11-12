@@ -20,7 +20,7 @@ NBT data for Bedrock edition is very limited. Four of the only values we have ac
 
 # CanPlaceOn and CanDestroy
 
-Destroy: `/give @p diamond_pickaxe 1 0 {"minecraft:can_destroy":{"blocks":["planks, skull"]}}`
+Destroy: `/give @p diamond_pickaxe 1 0 {"minecraft:can_destroy":{"blocks":["planks", "skull"]}}`
 
 Place on: `/give @p stone 1 0 {"minecraft:can_place_on":{"blocks":["stone"]}}`
 
