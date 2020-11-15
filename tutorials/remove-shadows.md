@@ -362,8 +362,3 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 }
 ```
 I hope this helps, if you find other ways to disable shadow please let us know so we can add them.
-
----
-
-**Credit:** by Outlandishly Crafted updated by Jeremy Benisek AKA CyberAxe
-06212020

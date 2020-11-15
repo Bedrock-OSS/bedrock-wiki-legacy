@@ -45,6 +45,3 @@ The basic idea of disabling a particle from emitting is as follows:
     }
 }
 ```
-
----
-### **Original Author:** [ambient](ambient#2309)

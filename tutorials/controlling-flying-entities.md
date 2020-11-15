@@ -260,5 +260,3 @@ The entity can now be controlled with the jump key, but there's a bug. If the pl
 	}
 }
 ```
-
-### **Original Author:** assassin (assassin#1634), 4/24/2020
