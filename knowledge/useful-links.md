@@ -40,8 +40,11 @@ Important links are have ⭐.
  - [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
  - [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
  - [NBT Editor](https://www.universalminecrafteditor.com/)
- - [World Converter(free)](http://www.mcctoolchest.com/)
+ - [World Converter (free)](http://www.mcctoolchest.com/)
  - [World Converter (paid)](https://www.universalminecraftconverter.com/download)
+ - [Json Obfuscator](https://pixelpoly.co/creator-tools/obfuscator)
+ - [NBT Studio](https://github.com/tryashtar/nbt-studio)
+ - [Foxynotail Tools](https://www.foxynotail.com/tools/)
  
 ## JSON Generators
  - ⭐ [Snowstorm Particle Generator](https://jannisx11.github.io/snowstorm/)

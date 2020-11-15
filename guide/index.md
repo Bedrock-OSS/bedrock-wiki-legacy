@@ -31,7 +31,7 @@ Let's start by setting up your tools, which you will use throughout the developm
 
 You will make your first steps in creating an add-on here, by learning to create **manifests** and **pack_icons** (a.k.a initializing an Add-On), as well as learn to use some of the .mc file extensions. No previous coding experience required. After you'll create a testing World where you'll be able to test the first feature of your add-on - a custom **/function**. We'll also learn about **transpiling Add-ons** and other **`.mc` file extensions**.
 
-- [Getting Started](/guide/getting-started.html)
+- [Getting Started](/guide/project-setup.html)
 
 Now it's time to begin writing the first features of you add-on. In this section you'll create a **simple** "Gem" **item**, and a **custom food**, as well as learn to link textures via **short names**.
 
