@@ -47,7 +47,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 ```
 
  - `format_version` defines what format the file uses. We'll be using 1.10.
- - `identifier` in `description` is used in blocks, recipes and entities. It will be used to define your item. [For example, you can use /give with the identifier like this: `/give @s tut:gem`). The part of the identifier is your pack's namespace. It's best to use the same namespace throughout your pack. It can be anything you like(e.g `kf:`, `jdot:`, `ve:`, `kai:`) providing it isn't too long. A namespace CANNOT be `minecraft:` or `minecon:`. The second part of the identifier is the name of the item, entity, recipe or block.
+ - `identifier` in `description` is used in blocks, recipes and entities. It will be used to define your item. For example, you can use /give with the identifier like this: `/give @s tut:gem`. The first part of the identifier is your pack's namespace. It's best to use the same namespace throughout your pack. It can be anything you like (e.g `kf:`, `jdot:`, `ve:`, `kai:`) providing it isn't too long. A namespace CANNOT be `minecraft:` or `minecon:`. The second part of the identifier is the name of the item, entity, recipe or block.
  - `components` are "qualities" the object always has. We'll look deeper into them when creating a custom entity. Let's break up everything in "components".
    - `minecraft:hand_equipped` defines whether the item 'equips' in your hand, this controls how the item is displayed on your character. For example, a Wooden Sword is hand equipped, but an Apple isn't.
    - `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example
@@ -81,15 +81,15 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 - Set the same `identifier` under `description`, as in the item's behavior file.
 - `category` defines the category of items of the item in creative inventory. It can be set to "Nature", "Equipment", "Construction" or "Items".
-- Note that due to a bug  items will not display in the Creative Inventory how they are supposed to, and you'll have to use `/give` to get them.
+- Note that due to a bug items will not display in the Creative Inventory how they are supposed to, and you'll have to use `/give` to get them.
 - Here are the components, explained:
   - `minecraft:render_offsets` defines how the item should be rendered. Can be set to pretty much any Vanilla item name, for example "apple".
   - `minecraft:use_animation` defines what animation to use when the player is using the item (Can be set to "bow", "eat", "drink", "crossbow", "camera"). It isn't needed in simple items, only foods and weapons.
-  - `minecraft:icon` defines the item's texture's short name. Let's look more into it.
+  - `minecraft:icon` defines the item texture's short name. Let's look more into it.
 
 ## Gem Textures and Shortnames
 
-In order to define your item's texture's shortname (to be able to use the texture on an item), you first need to create the texture. Create a 16*16 image file, draw a gem on it, and save it into `RP/textures/items/gem.png`.
+In order to define your item texture's shortname (to be able to use the texture on an item), you first need to create the texture. Create a 16*16 image file, draw a gem on it, and save it into `RP/textures/items/gem.png`.
 
 Now let's create the file where texture short names will be defined: `RP/textures/item_texture.json`, and copy this code into it:
 
@@ -186,7 +186,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 }
 ```
 
-The following code goes in `RP/items/meal.item.json`, similarly to the Gem.
+The preceding code goes in `RP/items/meal.item.json`, similarly to the Gem.
 
 - `minecraft:use_animation` defines what animation to use when the player is using the item (Can be set to "bow", "eat", "drink", "crossbow", "camera"). It isn't needed in simple items, only foods and weapons.
 
