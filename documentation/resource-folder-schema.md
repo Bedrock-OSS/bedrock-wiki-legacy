@@ -49,7 +49,12 @@ This shows the top-level folder/file structure for a resource pack. Additional f
         |   item_texture.json
         |   
         +---blocks
-        |       example.block.png
+        |   |---example.block.png
+        |   |
+        |   \---example.texture.variant.block
+        |           0.png
+        |           1.png
+        |           ...
         |       
         +---entity
         |       example.entity.png
