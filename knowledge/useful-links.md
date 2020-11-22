@@ -59,6 +59,7 @@ Important links are have ⭐.
  - [controller-builder (beta)](https://stirante.com/controller/index.html)
  - [.lang](https://solveddev.github.io/AnyLanguage/)
  - [Anvil Behavior Generator (beta)](https://anvil.starktma.com/)
+ - [Java to Bedrock Texture converter](https://ozelot379.github.io/ConvertJavaTextureToBedrock/)
   
 ## Documentation Links
  - ⭐[bedrock.dev](https://bedrock.dev/)
@@ -89,15 +90,19 @@ Important links are have ⭐.
  - [The book of Shaders](https://thebookofshaders.com/)
  - [Lean OpenGL](https://learnopengl.com/)
 
+## Addon Marketplaces
+ - [MC bedrock](https://www.mc-bedrock.com/)
+ - [MCPEDL](http://mcpedl.com/?cookie_check=1)
+ - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
+
 ## Other useful Links
  - ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
  - [UUID v4 Generator (online)](https://www.uuidgenerator.net/version4)
- - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
  - [Minecraft Marketplace partner Twitter list](https://twitter.com/i/lists/1191945551853629442?s=09)
  - [Minecraft.net Official Add-ons page](https://www.minecraft.net/en-us/addons)
  - [Run Bedrock on Linux](https://github.com/Element-0/ElementZero)
  - [Linux Packaging Scripts](https://github.com/ChristopherHX/linux-packaging-scripts)
  - [Block Models](https://blockmodels.com/)
+ - [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
  - [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
- - [MCPEDL - a place to publish Add-ons](http://mcpedl.com/?cookie_check=1)
  - [Addon Obfuscator](https://pixelpoly.co/creator-tools/obfuscator)
