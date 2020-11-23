@@ -59,7 +59,10 @@ Important links are have ⭐.
  - [controller-builder (beta)](https://stirante.com/controller/index.html)
  - [.lang](https://solveddev.github.io/AnyLanguage/)
  - [Anvil Behavior Generator (beta)](https://anvil.starktma.com/)
+
+### Tools
  - [Java to Bedrock Texture converter](https://ozelot379.github.io/ConvertJavaTextureToBedrock/)
+ - [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
   
 ## Documentation Links
  - ⭐[bedrock.dev](https://bedrock.dev/)
