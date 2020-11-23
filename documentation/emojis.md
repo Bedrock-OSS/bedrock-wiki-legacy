@@ -15,10 +15,10 @@ parent: Documentation
 {:toc}
 </details>
 
-Minecraft has a bunch of hard-coded Chineese symbols that it automatically converts to Emoji-like symbols.
+Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.
 
-Below you can find platform specific Emoji's, as well as general symbols.
+Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter collum directly into Minecraft.
 
 ## General
 
