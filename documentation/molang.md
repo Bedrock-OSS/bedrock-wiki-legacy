@@ -38,18 +38,18 @@ Where `x` and `y` are both integer arguments, from the following table:
 | Argument | Type                  |
 |----------|-----------------------|
 | -1       | none                  |
-| 0        | chain armor piece     |
-| 1        | iron armor piece      |
-| 2        | diamond armor piece   |
+| 0        | Chain armor piece     |
+| 1        | Iron armor piece      |
+| 2        | Diamond armor piece   |
 | 3        | Boots of any type     |
-| 4        | gold armor piece      |
-| 5        | elytra                |
-| 6        | turtle helmet         |
-| 7        | netherite armor piece |
+| 4        | Gold armor piece      |
+| 5        | Elytra                |
+| 6        | Turtle helmet         |
+| 7        | Netherite armor piece |
 
 ### Example
 
-`query.armor_texture_slot(3) == 2`: queries for Iron Boots.
+`query.armor_texture_slot(3) == 1`: queries for Iron Boots.
 
 # query.armor_material_slot
 
