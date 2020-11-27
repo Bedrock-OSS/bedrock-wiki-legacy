@@ -185,7 +185,7 @@ For the player, the variable will track whenever the arm bones are swinging, thi
  - interacting (when swing is enabled)
  - melee attack
 
- # query.is_roaring
+# query.is_roaring
 
 Evaluates to true when a `knockback_roar` attack is happening.
 
