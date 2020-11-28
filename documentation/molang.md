@@ -173,10 +173,10 @@ Probably unusable by anything other than boats and minecrafts.
 # variable.attack_time
 
 ### Explanation
-This variable is setup as IF it was a query. In other words, it can be used on any entity, regardless of whether you setup/define the variable correctly. 
+This variable is setup as IF it was a query. In other words, it can be used on any entity, both on the client and server, regardless of whether you setup/define the variable correctly. 
 
 ### For entities
-The variable tracks when the entity is swinging to attack. When not attacking it will be 0, when attacking it will range from 0 to the total attack time, which may be around 0.3 or something similar.
+The variable tracks when the entity is swinging to attack. When not attacking, it will return 0.0, when attacking it will range from 0.0 to the total attack time, which may be around 0.3 or something similar. For players, this value ranges from 0.0 to 1.0. The variable returns a percentage, in the form of a decimal, for how far into the attack the entity is. For example, if an entity is halfway into its attack swing, then the variable will return 0.5. It increments linearly.
 
 ### For the Player
 For the player, the variable will track whenever the arm bones are swinging, this includes:
