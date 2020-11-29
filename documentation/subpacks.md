@@ -31,16 +31,8 @@ e.g.
             <ul>
                 <li><span class="folder">subpacks</span>
                     <ul>
-                        <li><span class="folder">subpack_1</span>
-                            <ul>
-                                <li><span class="folder"></span></li>
-                            </ul>
-                        </li>
-                        <li><span class="folder">subpack_2</span>
-                            <ul>
-                                <li><span class="folder"></span></li>
-                            </ul>
-                        </li>
+                        <li><span class="file">subpack_1</span></li>
+                        <li><span class="file">subpack_2</span></li>
                     </ul>
                 </li>
             </ul>
