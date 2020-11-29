@@ -97,6 +97,8 @@ e.g.
 To register the subpacks in the manifest you need to add `subpacks` and this contains an array of subpacks.
 
 Example:
+
+{% include filepath.html path="RP/manifest.json" %}
 ```jsonc
 {
      "format_version": 2,
