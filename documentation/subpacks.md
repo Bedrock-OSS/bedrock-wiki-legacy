@@ -24,34 +24,86 @@ Subpacks are what cause the gear icon to appear on packs. They were originally i
 - To start adding a subpack you need to create a `subpacks` folder inside the root of your BP or RP.
 - Then inside the `subpacks` folder add a folder for each subpack you want to have
 e.g.
-```
-\---subpacks
-    +---subpack_1
-    +---other_subpack
-```
+
+<div markdown="0" class="folder-structure">
+    <ul>
+        <li><span class="folder">RP</span>
+            <ul>
+                <li><span class="folder">subpacks</span>
+                    <ul>
+                        <li><span class="folder">subpack_1</span>
+                            <ul>
+                                <li><span class="folder"></span></li>
+                            </ul>
+                        </li>
+                        <li><span class="folder">subpack_2</span>
+                            <ul>
+                                <li><span class="folder"></span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
 - Inside each of these folders you can add the content of each subpack.
 This can be anything that normally goes in your behavior or resource pack.
 e.g.
-```
-\---subpacks
-    +---subpack_1
-         +---textures
-              +---blocks
-              |      dirt_1.png
-              |
-          +---items
-          |      item_example.json
-          |
-    +---other_subpack
-         +---textures
-              +---blocks
-              |      dirt_2.png
-              |
-```
+<div markdown="0" class="folder-structure">
+    <ul>
+        <li><span class="folder">RP</span>
+            <ul>
+                <li><span class="folder">subpacks</span>
+                    <ul>
+                        <li><span class="folder">subpack_1</span>
+                            <ul>
+                                <li><span class="folder">textures</span>
+                                    <ul>
+                                        <li><span class="folder">blocks</span>
+                                            <ul>
+                                                <li><span class="image">dirt.png</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="folder">items</span>
+                                            <ul>
+                                                <li><span class="image">example_item.png</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><span class="folder">subpack_2</span>
+                            <ul>
+                                <li><span class="folder">textures</span>
+                                    <ul>
+                                        <li><span class="folder">blocks</span>
+                                            <ul>
+                                                <li><span class="image">dirt.png</span></li>
+                                            </ul>
+                                        </li>
+                                        <li><span class="folder">items</span>
+                                            <ul>
+                                                <li><span class="image">example_item.png</span></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 ## Adding subpacks to manifests
 
 To register the subpacks in the manifest you need to add `subpacks` and this contains an array of subpacks.
+
 Example:
 ```jsonc
 {
@@ -77,12 +129,13 @@ Example:
                "memory_tier": 0
           },
           {
-               "folder_name": "other_subpack",
-               "name": "Other Subpack",
+               "folder_name": "subpack_2",
+               "name": "Second Subpack",
                "memory_tier": 1
           }
      ]
 }
+
 ```
 - name
 Defines the name that will show when selecting the subpacks.
@@ -91,4 +144,4 @@ Defines the name that will show when selecting the subpacks.
 A number specifying the order of the subpacks on the slider. (Starts at 0)
 
 - folder_name
-This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be "subpack_1" or "other_subpack"
+This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be `subpack_1` or `subpack_2`. These names can be anything you want, they don't need to follow the `subpack_n` format.
