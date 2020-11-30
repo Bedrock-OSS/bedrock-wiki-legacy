@@ -119,6 +119,78 @@ Here's another example in which the damage color overlay becomes pink.
     }
     }
 ```
+# Using Damage Sensor to Trigger Instant Despawn and One Item Drop
 
+You can use the damage_sensor component to trigger an event upon fatal damage; this event adds a special despawning component group containing the spawn_entity and instant_despawn components. Spawn_entity with 0 wait time will drop an item just before the entity is despawned. For simple entities like furniture, which only need one item, this is very convenient.
 
+Please note that you will have to find another work to drop multiple loot or for entities with inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event.
 
+Heres an example "cart.json" file in the BP 
+```
+{
+  "format_version": "1.14.0",
+  "min_engine_version": "1.16.100",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "beluga:cart",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": true
+    },
+    "component_groups": {
+      "beluga:despawn": {
+        "minecraft:spawn_entity": {
+          "max_wait_time": 0.0,
+          "min_wait_time": 0.0,
+          "spawn_item": "egg",
+          "single_use": true
+        },
+        "minecraft:instant_despawn": {}
+      }
+    },
+    "components": {
+      "minecraft:type_family": {
+        "family": [ "cart", "inanimate"]
+      },
+      "minecraft:collision_box": {
+        "width": 0.8,
+        "height": 0.5
+      },
+      "minecraft:health": {
+        "value": 8,
+        "max": 8
+      },
+      "minecraft:physics": {
+      },
+      "minecraft:pushable": {
+        "is_pushable": true,
+        "is_pushable_by_piston": true
+      },
+      "minecraft:damage_sensor": {
+        "triggers": {
+          "on_damage": {
+            "filters": {
+                "test": "has_damage",
+                "value": "fatal"
+            },
+            "event": "beluga:despawn",
+            "target": "self"
+          }
+        }
+      }
+    },
+    "events": {
+      "minecraft:entity_spawned": {
+        "remove": {}
+      },
+      "beluga:despawn": {
+        "add": {
+            "component_groups": [
+                "beluga:despawn"
+            ]
+        }
+      }
+    }
+  }
+}
+```
