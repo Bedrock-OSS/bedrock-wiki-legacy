@@ -44,9 +44,9 @@ Rotation needs to be applied to a bone parent to all other bones, with a pivot a
 Animation:
 ```json
 "rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
-
 ```
-Animation Controller:
+
+Animation Controller: (query.all_animations_finished is only needed for respawning entities, like players)
 
 ```json
 {
@@ -68,14 +68,15 @@ Animation Controller:
           ],
           "transitions": [
             {
-              "default": "query.is_alive && query.all_animations_finished" //query.all_animations_finished is only needed for respawning entities, like players
+              "default": "query.is_alive && query.all_animations_finished"
             }
           ]
         }
       }
     }
   }
-}```
+}
+```
 
 # Changing Damage Color Overlay
 
