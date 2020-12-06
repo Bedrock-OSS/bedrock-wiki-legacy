@@ -35,7 +35,7 @@ There are strong opinions about the best editor for beginners, but generally spe
 Editor recommendations are starred.
 
 ### Plaintext Editors
- - ⭐[_VSCode Code_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
+ - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
 - [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
  
@@ -133,7 +133,7 @@ I strongly recommend creating a shortcut to the folder on your Desktop, in order
 
 ### Folder concents
 
-We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folder, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft. 
+We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft. 
  
 Thus we'll work with these folders.
 
