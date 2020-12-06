@@ -17,7 +17,7 @@ parent: Knowledge
 
 There is loads of useful information about Bedrock Development online, but sometimes it is hard to find! We will do our best to keep this list up to date as we continue to find useful content.
 
-Important links are have ⭐.
+Important links have a ⭐.
 
 ## Discord Links
  - ⭐ [Bedrock Addons](https://discord.gg/46JUdQb)
