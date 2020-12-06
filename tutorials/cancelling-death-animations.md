@@ -44,8 +44,40 @@ Rotation needs to be applied to a bone parent to all other bones, with a pivot a
 Animation:
 ```json
 "rotation" : [ 0, 0, "Math.min(Math.sqrt(Math.max(0, query.anim_time * 20 - 0.5) / 20 * 1.6), 1) * -90" ]
-
 ```
+
+Animation Controller: (query.all_animations_finished is only needed for respawning entities, like players)
+
+```json
+{
+  "format_version": "1.10.0",
+  "animation_controllers": {
+    "controller.animation.player.cancel_death_animaton": {
+      "initial_state": "default",
+      "states": {
+        "default": {
+          "transitions": [
+            {
+              "cancel_animation": "query.is_alive"
+            }
+          ]
+        },
+        "cancel_animation": {
+          "animations": [
+          	"my.animation"
+          ],
+          "transitions": [
+            {
+              "default": "query.is_alive && query.all_animations_finished"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
+```
+
 # Changing Damage Color Overlay
 
 You can also cancel the death animation  of any entity by removing their damage color overlay.
@@ -54,33 +86,17 @@ Before starting you must have the basics of render controller so check out the  
 
 To remove the damage overlay color  of any entity you want when it gets damage  we will use `is_hurt_color` and to remove damage overlay color when an entity gets damage due to lava and fire we will use `on_fire _color`.
 First you need to make the rgba values to 0
-Here's the example on removing the damage overlay color.
+Here's the example on removing the damage and fire overlay color.
 ```json
 {
     "format_version": "1.8.0",
     "render_controllers": {
-        "controller.render.kbg": {
+        "controller.render.sample": {
             "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                "Texture.default"
-            ],
-            "is_hurt_color": {
-                "r": "0",
-                "g": "0",
-                "b": "0",
-                "a": "0"
-            },
-            "on_fire_color": {
-                "r": "0",
-                "g": "0",
-                "b": "0",
-                "a": "0"
-            }
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Texture.default" ],
+            "is_hurt_color": {},
+            "on_fire_color": {}
         }
     }
 }
@@ -95,14 +111,8 @@ Here's another example in which the damage color overlay becomes pink.
     "render_controllers": {
         "controller.render.kbg": {
             "geometry": "Geometry.default",
-            "materials": [
-                {
-                    "*": "Material.default"
-                }
-            ],
-            "textures": [
-                "Texture.default"
-            ],
+            "materials": [ { "*": "Material.default" } ],
+            "textures": [ "Texture.default" ],
                "is_hurt_color": {
                 "r": "1.0",
                 "g": "0.4",
@@ -125,14 +135,14 @@ You can use the damage_sensor component to trigger an event upon fatal damage; t
 
 Please note that you will have to find another work to drop multiple loot or for entities with inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event.
 
-Heres an example "cart.json" file in the BP 
+Heres an example file in the BP 
 ```
 {
   "format_version": "1.14.0",
   "min_engine_version": "1.16.100",
   "minecraft:entity": {
     "description": {
-      "identifier": "beluga:cart",
+      "identifier": "example:entity",
       "is_spawnable": true,
       "is_summonable": true,
       "is_experimental": true
@@ -140,8 +150,8 @@ Heres an example "cart.json" file in the BP
     "component_groups": {
       "beluga:despawn": {
         "minecraft:spawn_entity": {
-          "max_wait_time": 0.0,
-          "min_wait_time": 0.0,
+          "max_wait_time": 0,
+          "min_wait_time": 0,
           "spawn_item": "egg",
           "single_use": true
         },
@@ -150,7 +160,7 @@ Heres an example "cart.json" file in the BP
     },
     "components": {
       "minecraft:type_family": {
-        "family": [ "cart", "inanimate"]
+        "family": [ "cart", "inanimate" ]
       },
       "minecraft:collision_box": {
         "width": 0.8,
@@ -160,8 +170,7 @@ Heres an example "cart.json" file in the BP
         "value": 8,
         "max": 8
       },
-      "minecraft:physics": {
-      },
+      "minecraft:physics": {},
       "minecraft:pushable": {
         "is_pushable": true,
         "is_pushable_by_piston": true
@@ -170,8 +179,8 @@ Heres an example "cart.json" file in the BP
         "triggers": {
           "on_damage": {
             "filters": {
-                "test": "has_damage",
-                "value": "fatal"
+              "test": "has_damage",
+              "value": "fatal"
             },
             "event": "beluga:despawn",
             "target": "self"
@@ -180,14 +189,11 @@ Heres an example "cart.json" file in the BP
       }
     },
     "events": {
-      "minecraft:entity_spawned": {
-        "remove": {}
-      },
       "beluga:despawn": {
         "add": {
-            "component_groups": [
-                "beluga:despawn"
-            ]
+          "component_groups": [
+            "beluga:despawn"
+          ]
         }
       }
     }
