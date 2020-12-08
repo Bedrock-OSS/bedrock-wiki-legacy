@@ -1,8 +1,4 @@
----
-layout: page
-title: Behavior Folder Schema
-parent: Documentation
----
+ v
 
 # Behavior Pack Folder Schema
 

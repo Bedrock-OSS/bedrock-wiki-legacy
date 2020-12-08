@@ -6,6 +6,15 @@ parent: Documentation
 
 # Runtime Identifiers
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 `runtime_identifier` is an optional parameter that sits inside the description of the entity's behavior file, and is used to imitate a vanilla entity's hard-coded elements.
 It accepts Vanilla Minecraft identifiers, like `minecraft:shulker`.
 
@@ -24,11 +33,9 @@ It's important to remember that `runtime_identifier` will only parse the hard-co
 # Known runtime-identifier effects:
 
 ---
-## `minecraft:shulker`
+## minecraft:shulker
 Perfect for imitating a block, as long as the player is in Adventure Mode.
 
-
-### Effects:
 - A solid collision box of 1x1x1.
 - The entity will stick to the center of the block it's spawned in.
 - If the block it's attached to is removed, the entity will teleport to another unobstructed location nearby.
@@ -36,8 +43,7 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 - The solid collision box's width and height cannot be changed.
 
 ---
-## `minecraft:ender_crystal`
-### Effects:
+## minecraft:ender_crystal
 - The entity will stick to the center of the block it's spawned in.
 - Unless teleported, the entity will always maintain its positions.
 - Can be placed on any surface
@@ -46,71 +52,60 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 - Cannot change the direction it faces.
 
 ---
-## `minecraft:parrot`
-### Effects:
+## minecraft:parrot
  - makes the wing flap animation able to work.
  - makes the mob fall slowly.
  - makes it dance to music discs.
 
 ---
-## `minecraft:armor_stand`
-### Effects:
+## minecraft:armor_stand
  - Disables entity shadows
  - Punching the entity will cause it to instantly despawn
  - Equipment placeable on/removable from entity
 
 ---
-## `minecraft:iron_golem`
-### Effects:
+## minecraft:iron_golem
 - Allows launching attack (attacks deal increased knockback with a vertical amplification)
 - Speeds up arm and leg animation (can be fixed manually, ~1/4 speed)
 - May interact poorly with village/villager logic.
 
 ---
-## `minecraft:arrow`
-### Effects:
+## minecraft:arrow
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Cannot be interacted with
 - If spawned through an egg or /summon command, gives the player an arrow when the player comes into contact with the entity, then removes itself
  
-
 ---
-## `minecraft:thrown_trident`
-### Effects:
+## minecraft:thrown_trident
 - Disables death animation, sound, and particles
-- Disables entity shadow
+- Makes entity's shadow small, but it doesn't make it disappear
 - Cannot be interacted with
 
----
-## `minecraft:piglin`
-### Effects:
+--
+## minecraft:piglin
  - Allows `minecraft:celebrate_hunt` to function (which activates query.is_celebrating)
 
 ---
-## `minecraft:spider`
-### Effects:
+
+## minecraft:spider
  - Allows cobwebs to not slow down entity
 
- ---
-## `minecraft:minecart`
-### Effects:
+---
+## minecraft:minecart
  - Disables entity shadow
  - Makes the entity drop a minecart on death
  - Prevents the entity from rotating
 
-  ---
-## `minecraft:boat`
-### Effects:
+---
+## minecraft:boat
  - Adds the pocket boat UI when ridden
  - Prevents the entity from rotating
 
-  ---
-## `minecraft:sheep`
-### Effects:
+---
+## minecraft:sheep
  - Allows `query.is_grazing` to function with the `behavior.eat_block` component
  
-  ---
-## `minecraft:panda`
-### Effects:
+---
+## minecraft:panda
  - Allows `query.is_grazing` and `query.sit_mount` to function with the `minecraft:behavior.random_sitting` component

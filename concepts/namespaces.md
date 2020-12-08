@@ -6,6 +6,15 @@ parent: Concepts
 
 # Namespaces
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Namespaces are identifiers that marks content ownership. You can think of them as folders. Namespaces are useful, because they keep naming conflicts from happening.
 
 Namespaces in addon creation can essentially be thought of as "the part to the left of the colon". For example, `minecraft` is the namespace of `minecraft:zombie`. The general form is `namespace:name`.

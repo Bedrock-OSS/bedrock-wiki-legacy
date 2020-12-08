@@ -4,7 +4,16 @@ title: FAQ
 parent: Knowledge
 ---
 
-### FAQ
+# FAQ
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
 This page contains a list of frequently asked questions in the technical-bedrock community that do not deserve a long-form wiki entry. Please contribute your own questions/answers, so we can grow this resource!
 
@@ -20,12 +29,17 @@ This page contains a list of frequently asked questions in the technical-bedrock
 ---
 
 ### What is the default friction of vanilla blocks?
-0.5
+0.6
 
 ---
 
 ### Can I make custom, transparent blocks?
-No
+Yes, starting from the beta 1.16.100 it is possible by including this component: ```"render_method": "alpha_test"```
+
+---
+
+### Why is my entity moving chaotically/aimlessly/really fast?
+Your entity is missing a naviagtion component or a movement speed component. Make sure your entity behavior file includes them.
 
 ---
 
@@ -100,7 +114,7 @@ Set up a damage_sensor and set deals_damage to false when they're not holding th
 
 ---
 ### Where do I find the molang variable list?
-The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.30.51/MoLang).
+The [molang variable list can be found here](https://bedrock.dev/docs/stable/MoLang).
 
 ---
 ### Can I use /give to get shulker box with items?
@@ -111,3 +125,7 @@ The [molang variable list can be found here](https://bedrock.dev/1.14.0.0/1.14.3
 ---
 ### What is the max seconds in a /effect command?
  - 2147483647
+
+### How can I freeze an animation when it completes?
+
+- Use `"loop": "hold_on_last_frame"`. This will pause the animation on its last frame, instead of resetting back to the base pose. Useful for things like chests, which need to open and *stay open* until closed.

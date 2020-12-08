@@ -6,11 +6,20 @@ parent: Concepts
 
 # Component Groups Vs. Components Vs. Events
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 There are three main structures that make up the base of a behavior-pack entity file. This doc will explain what each of them means, and how to use them.
 
 # Components
 
-Components should be thought of as the logical building-blocks that make up minecraft-entities. All components are written by microsoft, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The [full list of components can be found here](https://bedrock.dev/docs/1.16.0.0/1.16.0.66/Entities#minecraft:color2).
+Components should be thought of as the logical building-blocks that make up minecraft-entities. All components are written by microsoft, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The [full list of components can be found here](https://bedrock.dev/docs/stable/Entities).
 
 It is impossible to create your own components. The entire list of components is hard-coded, and provided by Microsoft. The `only` thing that should go intside the `components` object is components.
 

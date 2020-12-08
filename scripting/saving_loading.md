@@ -4,6 +4,16 @@ title: Saving and Loading Data
 parent: Scripting
 ---
 # Saving and Loading data
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Saving and loading data in Bedrock is tricky because currently scripts cannot access the local file system directly.
 
 Nonetheless, we can save data by [tagging](https://www.youtube.com/watch?v=tjragqkAlMc) a [dummy entity](https://wiki.bedrock.dev/tutorials/dummy-entities.html).  

@@ -6,13 +6,22 @@ parent: Tutorials
 
 # Entity Commands
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Intermediate
 {: .label .label-yellow }
 
 A very common task is triggering slash commands (such as `/playsound`, or `/summon`) from inside Behavior Pack entities. This is a somewhat complicated topic, but once you get a handle on it, it isn't that bad! 
 
 # Animation Controllers
-To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can [learn more about animation controllers on the entity events section of bedrock.dev](https://bedrock.dev/1.14.0.0/1.14.0.6/Entity%20Events). 
+To trigger slash commands, we are going to use Behavior Pack animation controllers. Animation controllers should be placed like: `animation_controllers/some_controller.json`. You can [learn more about animation controllers on the entity events section of bedrock.dev](https://bedrock.dev/docs/stable/Entity%20Events). 
 
 In short, animation controllers allow us to trigger events from behavior packs.
  - Slash commands (like `/say`)
@@ -20,7 +29,7 @@ In short, animation controllers allow us to trigger events from behavior packs.
  - Entity Events (such as `namespace:my_event`)
 
 Here is an example animation controller:
-```json
+```jsonc
 {
     "format_version": "1.10.0",
     "animation_controllers": {
@@ -55,7 +64,7 @@ If you need to stop this from happening, you need to add additional queries, suc
 # Using Animation Controllers
 To add this animation controller to our entity, we can use the following code in the entity definition description:
 
-```json
+```jsonc
 "description": {
     "identifier": "sirlich:entity_commands",
     "scripts": {
@@ -72,13 +81,13 @@ To add this animation controller to our entity, we can use the following code in
 Once again, if you are confused about any of this step, please review the Entity Events documentation.
 
 # Triggering Commands using Events:
-Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/1.14.0.0/1.14.0.6/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
+Animation transitions are created using queries. You can [read about queries here](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries). In our first example, our query was simply `true`, which means the commands run automatically. We can use more complicate queries to create more interesting effect. A really convenient method is using components as Molang filters to trigger the commands.
 
 I personally like using [skin_id](/vanilla-usage/components-1.13.html#minecraftskin_id).
 
 We can update our animation controller to trigger based on `skin_id`:
 
-```json
+```jsonc
 {
     "format_version": "1.10.0",
     "animation_controllers": {
@@ -101,7 +110,7 @@ We can update our animation controller to trigger based on `skin_id`:
                         }
                     ],
                     "on_entry": [
-                        "/say Command One!"
+                        "/say Command One!",
                         "@s execute_no_commands"
                     ]
                 },
@@ -116,7 +125,7 @@ We can update our animation controller to trigger based on `skin_id`:
                         "/summon minecraft:zombie",
                         "/summon minecraft:zombie",
                         "/summon minecraft:zombie",
-                        "/summon minecraft:zombie"
+                        "/summon minecraft:zombie",
                         "@s execute_no_commands"
                     ]
                 }
@@ -134,14 +143,14 @@ The syntax is `@s` followed by the name of an entity event. This allows us to ad
 Back in our entity file, we can set the `skin_id` using the `skin_id` component.
 
 The `skin_id` component looks like this:
-```json
+```jsonc
 "minecraft:skin_id": {
     "value": 1
 }
 ```
 
 We can add component groups that contains skin_ids:
-```json
+```jsonc
 "component_groups": {
     "execute_no_commands": {
         "minecraft:skin_id": {
@@ -165,7 +174,7 @@ We can add component groups that contains skin_ids:
 
 Now lets create events so we can easily add these groups:
 
-```json
+```jsonc
 "events": {
     "minecraft:entity_spawned": {
         "add": {
@@ -174,10 +183,10 @@ Now lets create events so we can easily add these groups:
             ]
         }
     },
-    "execute_no_command": {
+    "execute_no_commands": {
         "add": {
             "component_groups": [
-                "execute_no_command"
+                "execute_no_commands"
             ]
         }
     },
@@ -205,7 +214,7 @@ There are loads of ways to trigger events in Minecraft. Lets look at two specifi
 ## Interact Component:
 
 This component will spawn zombies whenever you click on him.
-```json
+```jsonc
 "minecraft:interact": {
     "interactions": [{
         "on_interact": {
@@ -217,7 +226,7 @@ This component will spawn zombies whenever you click on him.
                     }
                 ]
             },
-            "event": "command_zombie"
+            "event": "command_zombies"
         }
     }]
 }
@@ -226,7 +235,7 @@ This component will spawn zombies whenever you click on him.
 ## Timer
 
 This component will trigger the example command every 10 seconds:
-```json
+```jsonc
 "minecraft:timer": {
         "looping": true,
         "time": 1,

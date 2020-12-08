@@ -6,6 +6,20 @@ parent: Concepts
 
 # Shaders
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+## Disclaimer
+
+The way to create shaders described in this page is not working on consoles (PS4, Xbox, Switch) and in new rendering 
+engine (renderdragon, which is in the newest Windows version beta). 
+
 ## Overview
 
 Shaders are divided into 2 folders: glsl and hlsl. For shaders to work on every device, 

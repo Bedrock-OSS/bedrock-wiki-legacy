@@ -6,10 +6,19 @@ parent: Tutorials
 
 # 3D Item Models
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Expert
 {: .label .label-red }
 
-**Warning:** this tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [tutorial](/tutorials/render-controller) on render controllers before starting this tutorial.
+**Warning:** this tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [tutorial](/concepts/render-controller) on render controllers before starting this tutorial.
 
 ## Concept & Idea
 

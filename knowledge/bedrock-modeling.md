@@ -6,6 +6,15 @@ parent: Knowledge
 
 # Bedrock Modeling Introduction 
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 This will be a guide with tips, tricks, and things you should know when modeling for Minecraft Bedrock Edition.
 
 ## Texture Glitch
@@ -88,5 +97,5 @@ NOTE: you can have an animation in loop clicking on the following setting
 [Setting Image](https://cdn.discordapp.com/attachments/306562251987615744/740315853219692624/unknown.png "https://cdn.discordapp.com/attachments/306562251987615744/740315853219692624/unknown.png")
 
 Is with this function & creativity that animals & dinosaurs are animated into walking, running & attacking.
-You can learn more about querys & functions on the following link
-https://bedrock.dev/docs/1.14.0.0/1.14.30.2/MoLang
+You can learn more about queries & functions at the following link:
+[https://bedrock.dev/docs/stable/MoLang](https://bedrock.dev/docs/stable/MoLang)

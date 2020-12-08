@@ -6,6 +6,15 @@ parent: Tutorials
 
 # Timers
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Intermediate
 {: .label .label-green }
 
@@ -93,7 +102,7 @@ A particularly useful way to handle time events is using a single, looping `mine
   }
 ```
 
-### [minecraft:environment_sensor](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entities#minecraft:environment_sensor)
+### [minecraft:environment_sensor](https://bedrock.dev/docs/stable/Entities#minecraft:environment_sensor)
 
 Another component which can be very useful for time-based events is `minecraft:environment_sensor`. Pairing this sensor with the `hourly_clock_time` or `clock_time` filters can be used to trigger events based off in-game time.
 
@@ -113,7 +122,7 @@ Here is an example which is used to fire an event 800 ticks after the start of t
   }
 ```
 
-### [minecraft:ageable](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entities#minecraft:ageable)
+### [minecraft:ageable](https://bedrock.dev/docs/stable/Entities#minecraft:ageable)
 
 If this component is not being used in the entity's behavior for a different purpose, it can be useful as an additional timer. It's important to note that it requires the `minecraft:is_baby` component to be defined in order to function.
 

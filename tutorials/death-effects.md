@@ -6,6 +6,15 @@ parent: Tutorials
 
 # Death Effects
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Intermediate
 {: .label .label-yellow }
 
@@ -131,5 +140,5 @@ For this to work please put the animation controller in BP not RP
 
 ## Related links
 For further information on these topics got to the following bedrock.dev pages:
-- [Animations](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Animations)
-- [Entity Events](https://bedrock.dev/docs/1.14.0.0/1.14.30.2/Entity%20Events)
+- [Animations](https://bedrock.dev/docs/stable/Animations)
+- [Entity Events](https://bedrock.dev/docs/stable/Entity%20Events)

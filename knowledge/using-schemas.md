@@ -6,13 +6,34 @@ parent: Knowledge
 
 # What's a Schema?
 
-JSON Schema is a vocabulary that allows you to annotate and validate JSON documents.
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
 
-Using this Minecraft Bedrock Add-On Schema will help you make files by providing auto-completions, descriptions, and file validation.
+A JSON schema gives you two things: validation to be sure that your JSON has the correct structure, and (depending on editor support) intellisense to help you write your JSON correctly to begin with. Schemas are nice because they give you instant feedback when you screw something up, but they can't catch everything.
 
-# Adding Schema to File
+JSON schemas are just JSON files themselves and don't do anything on their own. You can write your own or use somebody else's. There's a handful of schemas for Bedrock out there already. Since none of the schemas are "official" (that I know of), and since Bedrock is a moving target, there will probably be some inaccuracies in any schema that you find. So keep that in mind: sometimes the issue will be in your code, sometimes the schema may be wrong. If you find a wrong schema, consider improving it and giving the author a pull request, to our collective benefit.
 
-To use this schema inside your JSON file in VS code, simply add this line to your root object.
+To get the validation working, you'll need a validator. You have many options here, including editor-specific options.
+# Schemas
+
+Many schemas exist, with many small differences. Try out different schemas and see which one works best for you:
+
+| Author                                                                  | Supports                                                                                                       | Note                                             |
+|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
+| [Assassin](https://github.com/aexer0e/bedrock-schema)                   | Behavior pack entity file                                                                                      | The original Schema this article was written for |
+| [BlueFrog130](https://github.com/BlueFrog130/minecraft-add-on-schemas/) | Behavior pack entity file                                                                                      |                                                  |
+| [Tschrock's](https://github.com/bedrock-studio/bedrock-json-schemas/)   | Manifest, Actor Animation Controller, Actor Animations, Actor Resource Definition, Render Controller, Geometry |                                                  |
+| [stirante](https://github.com/stirante/bedrock-shader-schema/)          | Shaders                                                                                                        |                                                  |
+
+# VSCode
+
+To use this schema inside your JSON file in VSCode, simply add this line to your root object:
 
 `"$schema": "https://aexer0e.github.io/bedrock-schema/"`
 
@@ -22,7 +43,7 @@ It should look like something like this:
 "$schema": "https://aexer0e.github.io/bedrock-schema/"
 ```
 
-# Adding Schema to Workspaces
+## Adding Schema to Workspaces
 
 If you want to utilize this schema to work with all of your files inside your Workspace, you can add it to your VS Code Workspace's settings.
 
@@ -41,13 +62,3 @@ To do this, make sure you're in your workspace, then, press `Ctrl+Shift+P` and t
 ```
 
 To test if it works, create a `.json` file, open an object, and see if you get the auto-completion options. (You can also press `Ctrl+Space` to force it into showing the available options.)
-
-# Other Schemas
-
-There are a plethora of schemas for Bedrock with varying degrees of support. Here is a list of more schemas:
-
-- BlueFrog130's Add-On Schema: https://github.com/BlueFrog130/minecraft-add-on-schemas/
-- Tschrock's Bedrock JSON Schema: https://github.com/bedrock-studio/bedrock-json-schemas/
-- stirante's Bedrock Shader Schema: https://github.com/stirante/bedrock-shader-schema/
-- Blockception's Bedrock Development VSCode Extension: https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension
-

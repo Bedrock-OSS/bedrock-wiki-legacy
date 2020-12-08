@@ -6,6 +6,15 @@ parent: Tutorials
 
 # Removing Entity Shadows
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
 
 ## Very small Collision Box
@@ -21,6 +30,8 @@ If you have a dummy entity (invisible) that you need to interact with, you can t
 Some entities don't have shadows. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors. See the [runtime identifers document for more information](/documentation/runtime-identifiers)
 
 ## Remove Entity Shadows for ALL Entities
+
+`warning:` Can crash your game, or get you rejected on Marketplace!
 
 Change these lines in the `shadows.material` file under the Resource Pack / materials folder. 
 
@@ -351,8 +362,3 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 }
 ```
 I hope this helps, if you find other ways to disable shadow please let us know so we can add them.
-
----
-
-**Credit:** by Outlandishly Crafted updated by Jeremy Benisek AKA CyberAxe
-06212020

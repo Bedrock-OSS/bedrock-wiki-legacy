@@ -6,6 +6,15 @@ parent: Tutorials
 
 # Disabling Particles
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Beginner
 {: .label .label-green }
 
@@ -36,6 +45,3 @@ The basic idea of disabling a particle from emitting is as follows:
     }
 }
 ```
-
----
-### **Original Author:** [ambient](ambient#2309)
