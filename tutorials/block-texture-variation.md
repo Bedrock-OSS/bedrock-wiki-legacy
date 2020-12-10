@@ -27,7 +27,7 @@ To enable texture variations you create a terrain_texture.json file in the textu
 This is an example on how to create texture variations for the dirt block with three images:
 - Create a `textures/terrain_texture.json` file in the resource pack
 - in the json file you need to define the blocks that have variation as shown below
-'''json
+```jsonc
 {
    "num_mip_levels" : 0,
    "padding" : 0,
@@ -45,7 +45,7 @@ This is an example on how to create texture variations for the dirt block with t
 	},
 	"texture_name" : "atlas.terrain"
 }
-'''
+```
 
 - Create or modify three dirt textures, name them `dirt0.png`, `dirt1.png`, and `dirt2.png`
 - Copy the `dirt0.png`, `dirt1.png`, and `dirt2.png` to the location noted in path varible. this could contain additional folders if you want to be orderly
@@ -53,7 +53,7 @@ This is an example on how to create texture variations for the dirt block with t
 ## Example of weighted dirt amounts
 
 After you have comleted the example above if you want to adjust the weights, simply edit the terrain_textures.json to include a weight field as shown below.
-'''json
+```jsonc
 {
    "num_mip_levels" : 0,
    "padding" : 0,
@@ -71,7 +71,7 @@ After you have comleted the example above if you want to adjust the weights, sim
 	},
 	"texture_name" : "atlas.terrain"
 }
-'''
+```
 
 Some notes:
 - This does appear to grab texture set file, however the texture set files do not seem to grab the MER or normal file defined in the texture set.
