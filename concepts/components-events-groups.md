@@ -27,7 +27,7 @@ All components begin with `minecraft:`.
 
 # Component groups
 
-Component groups should be thought of as `folders` for components. The group components together and can be added or removed using `events` to create custom game-play.
+Component groups should be thought of as `folders` for components. They group components together, and can be added or removed using `events` to create custom game-play.
 
 Here is an example:
 
@@ -63,6 +63,12 @@ An example:
     }
 },
 ```
+
+Like component-groups, events are 100% custom created inside each entity. You cannot use events from other entities on your own. Do not be tempted to use `"minecraft:ageable_grow_up"` in your own entity. If you want grow-up functionality, you need to define the component-groups and events yourself.
+
+The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible. 
+
+# Advanced Usage
 
 Conditional events are events using "filters" to return a component group depending on your filter see the below example.
 We are testing if a tag exists and if it doesn't return the "prefix:is_false" component but if it does exist return "prefix:is_true".
@@ -110,10 +116,6 @@ An example:
         ]
       }
 ```
-
-Like component-groups, events are 100% custom created inside each entity. You cannot use events from other entities on your own. Do not be tempted to use `"minecraft:ageable_grow_up"` in your own entity. If you want grow-up functionality, you need to define the component-groups and events yourself.
-
-The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible. 
 
 # Triggering events
 
