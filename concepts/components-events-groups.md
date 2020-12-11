@@ -127,7 +127,7 @@ Many components can trigger events. Particularly, components like the [environme
 An example.
 ```json
         //Command usage to send an event to all creepers.
-        /event @e[type=creeper] minecraft:become_charged
+        /event entity @e[type=creeper] minecraft:become_charged
 ```
 
 The flow is:
