@@ -41,6 +41,7 @@ We can annotate these states with the two pieces of information described above:
     - move to `ground state` if on the ground
 
 Here is the state-machine, visualized as a flow-chart:
+
 ![](/assets/images/concepts/animation-controllers/two_state_FSM.png)
 
 In this flowchart, states are represented by rectangles, and arrows represent *transitions* from one state to another.
