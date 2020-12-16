@@ -36,7 +36,7 @@ ___
 
 Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).
 
-
+{% include filepath.html path="RP/manifest.json"%}
 ```jsonc
 {
     "format_version": 2,
@@ -85,13 +85,14 @@ Let's break up the code now.
 
 
 
-###### Note: if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
+`Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
 
 #
 The next step is, naturally, creating your `BP/manifest.json`. it is very much like a Resource pack manifest, except the "`type`" is "`data`"(for a *Data Pack*/*Behavior Pack*). There's also an optional field "`dependencies`", where you can define the needed resource packs by including their main UUID. Dependent resource packs will be applied to any world with the behavior pack automatically, if they exist on the device.
 
 *Remember that same UUIDs cannot be used twice, which means that you have to generate NEW ones for the behavior manifest, and not use the ones already used in the resource manifest.*
 
+{% include filepath.html path="BP/manifest.json"%}
 ```jsonc
 {
     "format_version": 2,
@@ -191,7 +192,7 @@ What if you want both your resource pack and your behavior pack to be imported a
 ##### Note: Some external programs like AJG and bridge do that automatically
 
 *Note: same method can be used to compile a world folder from com.mojang/minecraftWorlds and changing the `.zip` to `.mcworld`. On Win10 devices one can click "*Export world*" in the world settings to achieve the same result. `.mcworld`s usually include all add-ons applied (as long as they come from `..._packs`.).*
-___
+
 ___
 ## Your progress so far:
 **What you've done:**
