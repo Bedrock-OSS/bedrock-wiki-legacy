@@ -54,13 +54,13 @@ Let's say you want to have a sign in your world that says `House of terrors` but
 
 Inside your Resource Pack find the `texts` folder and make sure you have inside it the `en_US.lang` file and the `fr_FR.lang` file. If not, just make 2 simple `.txt` files and rename them.
 
-As with our quick example we need a code for this text, let's go with `sign.house_of_terrors`. Now let's paste this code inside the 2 files and assign the translation to each one:
-Inside `en_US.lang` write a new line with `sign.house_of_terrors=House of terrors`
+As with our quick example we need a code for this text, let's go with `sign.house_of_terrors`. Now let's paste this code inside the 2 files and assign the translation to each one:  
+Inside `en_US.lang` write a new line with `sign.house_of_terrors=House of terrors`  
 Inside `fr_FR.lang` write a new line with `sign.house_of_terrors=Maison des terreurs`
 
 Before we get inside the game, do a quick restart of Minecraft just to make sure the game registered the new `.lang` files.
 
-Now for the most complicated part! Put down a sign and paste this inside it:
+Now for the most complicated part! Put down a sign and paste this inside it:  
 `{"rawtext":[{"translate":"sign.house_of_terrors"}]}`
 
 When you exit the sign interface, you should see `House of terrors` written on it. AMAZING!!! And your friend should see `Maison des terreurs`.
@@ -162,7 +162,7 @@ Now let's create that command:
 Go ahead and run it! Since we used the `@a` selector, Bob is saying hi to all the players. If we want him to say hi only to the closes player we have to extend the command a little bit and also replace `@a` with `@p`.  
 So the updated command would be:  
 `/execute @e[name=Bob] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.bob.msg1"}]}`  
-This new command is saying *"Find the entity called Bob and run the tellraw command for the closes player to that location."*
+This new command is saying *"Find the entity called Bob and run the tellraw command for the closest player to that location."*
 
 ## Localize the Actionbar
 
@@ -170,16 +170,17 @@ So far we've put text on a sign, in a book and in the chat. Let's expand our hor
 
 Usually to show text in the Actionbar we do a quick `/title @a actionbar "Hello there!"` command. For localization we are going to use the `/titleraw` command. Let's do a quick example!
 
-Inside the `.lang` file: `actionbar.status.gamemode=You are now in Survival Mode`  
+Inside the `.lang` file:  
+`actionbar.status.gamemode=You are now in Survival Mode`  
 The final command:  
 `/titleraw @a actionbar {"rawtext":[{"translate" : "actionbar.status.gamemode"}]}`
 
 ## Localize Titles and Subtitles
 
 This is one of the best things in terms of localization since fried rice! So listen up!
-You know how the Title is this __**H U G E**__ piece of text on the screen that blocks your view right? What if it would be possible to only show the Subtitle? It's a pretty big text in it's own right, and it's not that intrusive.
+You know how the Title is this **H U G E** piece of text on the screen that blocks your view right? What if it would be possible to only show the Subtitle? It's a pretty big text in it's own right, and it's not that intrusive.
 
-Ok, so usually so show a Title and Subtitle you would have to use 2 command in a specific order.  
+Ok, so usually to show a Title and Subtitle you would have to use 2 command in a specific order.  
 First you run the Subtitle command: `/title @a subtitle The Hero has won!`  
 Next you run the Title command: `/title @a title Victory`
 
@@ -194,18 +195,21 @@ Now let's use the `/titleraw` command again:
 But like I said, I want it all just in the subtitle! Do achieve that I simply put an empty space instead of "Victory"  
 `quest1.subtitle=Victory! The Hero has won!`  
 `quest1.title= ` <-- that there is an empty space after `=`  
+`quest1.title=§r` if you're OCD and need to see something there, just put in a reset code. It won't show anything on screen.
+
 And now we run the same 2 commands again:  
 `/titleraw @a subtitle {"rawtext":[{"translate" : "quest1.subtitle"}]}`  
 `/titleraw @a title {"rawtext":[{"translate" : "quest1.title"}]}`
+
+## Using player names with localization
 
 Expert
 {: .label .label-red }
 
 - Now we're getting into some really advanced stuff that have to do with scoreboards and selectors. These are features that were introduces in [Bedrock Edition v1.16.100](https://minecraft.gamepedia.com/Bedrock_Edition_1.16.100)
 
-## Using player names with localization
-
-So you want to have an NPC that greets you when you get near it. Usually we'd have it say something like *"Hey there adventurer! Glad to see you again!"*. It has a nice ring to it, but it would be awesome if the NPC would call you by name! So how do we go from that to *"Hey there <insert player name here>! Glad to see you again!"*
+So you want to have an NPC that greets you when you get near it. Usually we'd have it say something like *"Hey there adventurer! Glad to see you again!"*. It has a nice ring to it, but it would be awesome if the NPC would call you by name! So how do we go from that to  
+`"Hey there <insert player name here>! Glad to see you again!"`
 
 First of all we have to prepare the line in the `.lang` file:  
 `npcdialogue.guard.msg1=Hey there %1! Glad to see you again!`  
@@ -214,7 +218,7 @@ Notice how we put `%1` where we want the NPC to call us by our name.
 Now let's create the command:  
 `/tellraw @a {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
 
-Just like we replaced `%1` with the new line when we created a book, now we replace it with the name of closest player by use of a `selector`.
+Just like we replaced `%1` with the new line when we created a book, now we replace it with the name of the closest player by using a `selector`.
 
 If we want to go one step further and **make sure** the NPC talks only to the closest player, we run that command from an `/execute`:  
 `/execute @e[type=NPC] ~~~ tellraw @p {"rawtext":[{"translate":"npcdialogue.guard.msg1","with":{"rawtext":[{ "selector" : "@p" }]}}]}`
@@ -243,7 +247,7 @@ Let's announce the winner in style! Let's do it with a Title and Subtitle!
 `/titleraw @a subtitle {"rawtext":[{"translate":"winner.subtitle","with":{"rawtext":[{"score" : {"name":"*","objective":"winner"}}]}}]}`  
 `/titleraw @a title {"rawtext":[{"translate":"winner.title","with":{"rawtext":[{ "selector" : "@a[scores={winner=0..}]" }]}}]}`
 
-Ok now let's combine all those commands and do a quick chat message to thank all the players for participating, and also to show them their scores. We'll use `gamescore` as out objective name that includes all the players.
+Ok now let's combine all those commands and do a quick chat message to thank all the players for participating, and also to show them their scores. We'll use `gamescore` as our objective name that includes all the players.
 
  **.lang** file:  
 `players.thankyou.chat=Thank you all for participating %1! These are your scores: %2.`
@@ -254,7 +258,7 @@ Ok now let's combine all those commands and do a quick chat message to thank all
 Notice how we told Minecraft that we have 2 different items we want replaced inside that translation with the help of `%1` and `%2`.  
 Also notice how we replaced the wildcard `*` and went from `"name":"*"` to `"name":"@a[scores={gamescore=0..}]"` for a more precise(and totally unnecessary) selection.
 
-So there you have it folks! All you need to know about localization in Minecraft Bedrock Edition. Hope you have a blast renaming stuff for your friend!
+So there you have it folks! All you need to know about localization in Minecraft Bedrock Edition. Hope you have a blast renaming stuff for your friends!
 
 ## Quick reference
 

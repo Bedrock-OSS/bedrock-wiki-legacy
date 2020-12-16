@@ -103,7 +103,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:addrider": {
     "entity_type": "minecraft:zombie_pigman",
-    "spawn_event": "spawn_zombified_piglin_rider"
+    "spawn_event": "minecraft:spawn_as_strider_jockey"
 }
 ```
 
@@ -197,7 +197,7 @@ This documentation is stripped from the vanilla files using an automated script.
         "salmon"
     ],
     "grow_up": {
-        "event": "minecraft:ageable_grow_up",
+        "event": "ageable_grow_up",
         "target": "self"
     }
 }
@@ -688,7 +688,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "broadcast_anger": true,
     "broadcast_range": 16,
     "calm_event": {
-        "event": "minecraft:on_calm",
+        "event": "on_calm",
         "target": "self"
     }
 }
@@ -1173,7 +1173,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### hoglin
 ```json
 "minecraft:attack": {
-    "damage": 0.5
+    "damage": 1.0
 }
 ```
 
@@ -1608,7 +1608,8 @@ This documentation is stripped from the vanilla files using an automated script.
     "target_selection_method": "nearest",
     "target_blocks": [
         "minecraft:warped_fungus",
-        "minecraft:portal"
+        "minecraft:portal",
+        "minecraft:respawn_anchor"
     ],
     "on_escape": [
         {
@@ -2549,8 +2550,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### vex
 ```json
 "minecraft:behavior.charge_attack": {
-    "priority": 4,
-    "speed_multiplier": 2.0
+    "priority": 4
 }
 ```
 
@@ -2835,6 +2835,26 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:behavior.drop_item_for": {
     "priority": 1,
+    "seconds_before_pickup": 0.0,
+    "cooldown": 0.25,
+    "drop_item_chance": 0.7,
+    "offering_distance": 5.0,
+    "minimum_teleport_distance": 2.0,
+    "max_head_look_at_height": 10.0,
+    "target_range": [
+        5.0,
+        5.0,
+        5.0
+    ],
+    "teleport_offset": [
+        0.0,
+        1.0,
+        0.0
+    ],
+    "time_of_day_range": [
+        0.74999,
+        0.8
+    ],
     "speed_multiplier": 1.0,
     "search_range": 5,
     "search_height": 2,
@@ -2850,14 +2870,7 @@ This documentation is stripped from the vanilla files using an automated script.
             "max_dist": 6
         }
     ],
-    "max_dist": 5,
-    "drop_item_chance": 0.7,
-    "offering_distance": 5,
     "loot_table": "loot_tables/entities/cat_gift.json",
-    "time_of_day_range": [
-        0.74999,
-        0.8
-    ],
     "on_drop_attempt": {
         "event": "minecraft:cat_gifted_owner",
         "target": "self"
@@ -3007,9 +3020,21 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:behavior.explore_outskirts": {
     "priority": 9,
+    "next_xz": 5,
+    "next_y": 3,
+    "min_wait_time": 3.0,
+    "max_wait_time": 10.0,
+    "max_travel_time": 60.0,
+    "speed_multiplier": 0.6,
     "explore_dist": 6.0,
-    "wait_time": 200,
-    "speed_multiplier": 0.6
+    "min_perimeter": 1.0,
+    "min_dist_from_target": 2.5,
+    "timer_ratio": 2.0,
+    "dist_from_boundary": [
+        5.0,
+        0.0,
+        5.0
+    ]
 }
 ```
 
@@ -3802,6 +3827,9 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:behavior.harvest_farm_block": {
     "priority": 8,
+    "max_seconds_before_search": 1.0,
+    "search_cooldown_max_seconds": 8.0,
+    "seconds_until_new_task": 0.5,
     "speed_multiplier": 0.5
 }
 ```
@@ -4847,9 +4875,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### blaze
 ```json
 "minecraft:behavior.melee_attack": {
-    "priority": 3,
-    "track_target": true,
-    "random_stop_interval": 2
+    "priority": 3
 }
 ```
 
@@ -5452,14 +5478,15 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-# minecraft:behavior.move_to_lava
+# minecraft:behavior.move_to_liquid
 ### strider
 ```json
-"minecraft:behavior.move_to_lava": {
+"minecraft:behavior.move_to_liquid": {
     "priority": 7,
     "search_range": 16,
     "search_height": 10,
     "goal_radius": 0.9,
+    "material_type": "Lava",
     "search_count": 30
 }
 ```
@@ -5546,8 +5573,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "priority": 4,
     "search_range": 16,
     "search_height": 5,
-    "search_count": 1,
-    "goal_radius": 0.1
+    "goal_radius": 1.5
 }
 ```
 
@@ -5560,114 +5586,51 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-# minecraft:behavior.move_towards_restriction
+# minecraft:behavior.move_towards_dwelling_restriction
 ### cat
 ```json
-"minecraft:behavior.move_towards_restriction": {
+"minecraft:behavior.move_towards_dwelling_restriction": {
     "priority": 7
-}
-```
-
-### drowned
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 5,
-    "speed_multiplier": 1
-}
-```
-
-### elder_guardian
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 5,
-    "speed_multiplier": 1.0,
-    "control_flags": [
-        "move",
-        "look"
-    ]
-}
-```
-
-### guardian
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 5,
-    "speed_multiplier": 1.0,
-    "control_flags": [
-        "move",
-        "look"
-    ]
-}
-```
-
-### husk
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 5,
-    "speed_multiplier": 1
 }
 ```
 
 ### iron_golem
 ```json
-"minecraft:behavior.move_towards_restriction": {
+"minecraft:behavior.move_towards_dwelling_restriction": {
     "priority": 4,
     "speed_multiplier": 1
 }
 ```
 
-### villager
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 7,
-    "speed_multiplier": 0.6
-}
-```
-
 ### villager_v2
 ```json
-"minecraft:behavior.move_towards_restriction": {
+"minecraft:behavior.move_towards_dwelling_restriction": {
     "priority": 10,
     "speed_multiplier": 0.6
 }
 ```
 
-### wandering_trader
+# minecraft:behavior.move_towards_home_restriction
+### bee
 ```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 7,
-    "speed_multiplier": 0.6
+"minecraft:behavior.move_towards_home_restriction": {
+    "priority": 9
 }
 ```
 
-### zombie
+### elder_guardian
 ```json
-"minecraft:behavior.move_towards_restriction": {
+"minecraft:behavior.move_towards_home_restriction": {
     "priority": 5,
-    "speed_multiplier": 1
+    "speed_multiplier": 1.0
 }
 ```
 
-### zombie_pigman
+### guardian
 ```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 6
-}
-```
-
-### zombie_villager
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 7,
-    "speed_multiplier": 1
-}
-```
-
-### zombie_villager_v2
-```json
-"minecraft:behavior.move_towards_restriction": {
-    "priority": 7,
-    "speed_multiplier": 1
+"minecraft:behavior.move_towards_home_restriction": {
+    "priority": 5,
+    "speed_multiplier": 1.0
 }
 ```
 
@@ -6305,6 +6268,40 @@ This documentation is stripped from the vanilla files using an automated script.
                 ]
             },
             "within_default": 10
+        },
+        {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "hoglin"
+                    },
+                    {
+                        "test": "is_difficulty",
+                        "operator": "!=",
+                        "value": "peaceful"
+                    }
+                ]
+            },
+            "max_dist": 16
+        },
+        {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "zoglin"
+                    },
+                    {
+                        "test": "is_difficulty",
+                        "operator": "!=",
+                        "value": "peaceful"
+                    }
+                ]
+            },
+            "max_dist": 16
         }
     ]
 }
@@ -7119,6 +7116,23 @@ This documentation is stripped from the vanilla files using an automated script.
                 "test": "is_family",
                 "subject": "other",
                 "value": "player"
+            },
+            "max_dist": 16
+        },
+        {
+            "filters": {
+                "all_of": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "piglin"
+                    },
+                    {
+                        "test": "is_difficulty",
+                        "operator": "!=",
+                        "value": "peaceful"
+                    }
+                ]
             },
             "max_dist": 16
         },
@@ -8286,7 +8300,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### blaze
 ```json
 "minecraft:behavior.random_look_around": {
-    "priority": 6
+    "priority": 5
 }
 ```
 
@@ -8624,7 +8638,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### blaze
 ```json
 "minecraft:behavior.random_stroll": {
-    "priority": 5,
+    "priority": 4,
     "speed_multiplier": 1.0
 }
 ```
@@ -9109,7 +9123,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### blaze
 ```json
 "minecraft:behavior.ranged_attack": {
-    "priority": 4,
+    "priority": 3,
     "burst_shots": 3,
     "burst_interval": 0.3,
     "charge_charged_trigger": 0.0,
@@ -10299,6 +10313,7 @@ This documentation is stripped from the vanilla files using an automated script.
         "warped_fungus",
         "warped_fungus_on_a_stick"
     ],
+    "can_tempt_while_ridden": true,
     "tempt_sound": "tempt",
     "sound_interval": {
         "range_min": 2.0,
@@ -10437,26 +10452,6 @@ This documentation is stripped from the vanilla files using an automated script.
                 "minecraft:gold_ore",
                 "minecraft:chest",
                 "minecraft:trapped_chest",
-                "minecraft:ender_chest",
-                "minecraft:barrel",
-                "minecraft:shulker_box",
-                "minecraft:undyed_shulker_box"
-            ],
-            "on_block_broken": "important_block_destroyed_event"
-        }
-    ]
-}
-```
-
-### piglin_brute
-```json
-"minecraft:block_sensor": {
-    "sensor_radius": 16,
-    "on_break": [
-        {
-            "block_list": [
-                "minecraft:gold_block",
-                "minecraft:chest",
                 "minecraft:ender_chest",
                 "minecraft:barrel",
                 "minecraft:shulker_box",
@@ -11514,6 +11509,46 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+# minecraft:buoyant
+### boat
+```json
+"minecraft:buoyant": {
+    "base_buoyancy": 1.0,
+    "apply_gravity": true,
+    "simulate_waves": true,
+    "big_wave_probability": 0.03,
+    "big_wave_speed": 10.0,
+    "liquid_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+    ]
+}
+```
+
+```json
+"minecraft:buoyant": {
+    "base_buoyancy": 1.0,
+    "apply_gravity": true,
+    "simulate_waves": false,
+    "liquid_blocks": [
+        "minecraft:water",
+        "minecraft:flowing_water"
+    ],
+    "drag_down_on_buoyancy_removed": 0.7
+}
+```
+
+### xp_orb
+```json
+"minecraft:buoyant": {
+    "apply_gravity": false,
+    "liquid_blocks": [
+        "minecraft:flowing_water",
+        "minecraft:water"
+    ]
+}
+```
+
 # minecraft:burns_in_daylight
 ### drowned
 ```json
@@ -11794,9 +11829,7 @@ This documentation is stripped from the vanilla files using an automated script.
 
 ### parrot
 ```json
-"minecraft:can_fly": {
-    "value": true
-}
+"minecraft:can_fly": {}
 ```
 
 ### wither
@@ -12931,6 +12964,759 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+# minecraft:conditional_bandwidth_optimization
+### area_effect_cloud
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### armor_stand
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### arrow
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### bat
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### bee
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### blaze
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### boat
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 60.0,
+        "max_dropped_ticks": 20,
+        "use_motion_prediction_hints": true
+    },
+    "conditional_values": [
+        {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "use_motion_prediction_hints": true,
+            "conditional_values": [
+                {
+                    "test": "is_moving",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
+```
+
+### cat
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### cave_spider
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### chest_minecart
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 60.0,
+        "max_dropped_ticks": 20,
+        "use_motion_prediction_hints": true
+    },
+    "conditional_values": [
+        {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "conditional_values": [
+                {
+                    "test": "is_moving",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
+```
+
+### chicken
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### command_block_minecart
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 60.0,
+        "max_dropped_ticks": 20,
+        "use_motion_prediction_hints": true
+    },
+    "conditional_values": [
+        {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "conditional_values": [
+                {
+                    "test": "is_moving",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
+```
+
+### cow
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### creeper
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### dolphin
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### donkey
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### drowned
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### egg
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### elder_guardian
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### enderman
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### endermite
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### ender_crystal
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### ender_dragon
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### ender_pearl
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### evocation_illager
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### eye_of_ender_signal
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### fireball
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### fireworks_rocket
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### fish
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### fishing_hook
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### fox
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### ghast
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### guardian
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### hoglin
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### hopper_minecart
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 60.0,
+        "max_dropped_ticks": 20,
+        "use_motion_prediction_hints": true
+    },
+    "conditional_values": [
+        {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "conditional_values": [
+                {
+                    "test": "is_moving",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
+```
+
+### horse
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### husk
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### iron_golem
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### lightning_bolt
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### lingering_potion
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### llama
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### llama_spit
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### magma_cube
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### minecart
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 60.0,
+        "max_dropped_ticks": 20,
+        "use_motion_prediction_hints": true
+    },
+    "conditional_values": [
+        {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "conditional_values": [
+                {
+                    "test": "is_moving",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
+```
+
+### mooshroom
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### mule
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### npc
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### ocelot
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### panda
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### parrot
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### phantom
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### pig
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### piglin
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### piglin_brute
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### pillager
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### player
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### polar_bear
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### pufferfish
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### rabbit
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### ravager
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### salmon
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### sheep
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### shulker
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### shulker_bullet
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### silverfish
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### skeleton
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### skeleton_horse
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### slime
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### small_fireball
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### snowball
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 100.0,
+        "max_dropped_ticks": 5,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### snow_golem
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### spider
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### splash_potion
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### squid
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### stray
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### strider
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### thrown_trident
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### tnt
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### tnt_minecart
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 60.0,
+        "max_dropped_ticks": 20,
+        "use_motion_prediction_hints": true
+    },
+    "conditional_values": [
+        {
+            "max_optimized_distance": 0.0,
+            "max_dropped_ticks": 0,
+            "conditional_values": [
+                {
+                    "test": "is_moving",
+                    "subject": "self",
+                    "operator": "==",
+                    "value": true
+                }
+            ]
+        }
+    ]
+}
+```
+
+### tripod_camera
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### tropicalfish
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### turtle
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### vex
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### villager
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### villager_v2
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### vindicator
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### wandering_trader
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### witch
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### wither
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### wither_skeleton
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### wither_skull
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### wither_skull_dangerous
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### wolf
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### xp_bottle
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### xp_orb
+```json
+"minecraft:conditional_bandwidth_optimization": {
+    "default_values": {
+        "max_optimized_distance": 80.0,
+        "max_dropped_ticks": 10,
+        "use_motion_prediction_hints": true
+    }
+}
+```
+
+### zoglin
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### zombie
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### zombie_horse
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### zombie_pigman
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### zombie_villager
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
+### zombie_villager_v2
+```json
+"minecraft:conditional_bandwidth_optimization": {}
+```
+
 # minecraft:custom_hit_test
 ### hoglin
 ```json
@@ -13246,11 +14032,18 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:damage_sensor": {
     "triggers": {
         "on_damage": {
-            "filters": {
-                "test": "is_family",
-                "subject": "other",
-                "value": "lightning"
-            },
+            "filters": [
+                {
+                    "test": "is_family",
+                    "subject": "other",
+                    "value": "lightning"
+                },
+                {
+                    "test": "is_difficulty",
+                    "operator": "!=",
+                    "value": "peaceful"
+                }
+            ],
             "event": "become_zombie"
         },
         "deals_damage": false
@@ -13384,11 +14177,18 @@ This documentation is stripped from the vanilla files using an automated script.
     "triggers": [
         {
             "on_damage": {
-                "filters": {
-                    "test": "is_family",
-                    "subject": "other",
-                    "value": "lightning"
-                },
+                "filters": [
+                    {
+                        "test": "is_family",
+                        "subject": "other",
+                        "value": "lightning"
+                    },
+                    {
+                        "test": "is_difficulty",
+                        "operator": "!=",
+                        "value": "peaceful"
+                    }
+                ],
                 "event": "become_witch"
             },
             "deals_damage": false
@@ -14295,7 +15095,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.farmer",
     "table": "trading/economy_trades/farmer_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14304,7 +15112,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.fisherman",
     "table": "trading/economy_trades/fisherman_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14313,7 +15129,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.shepherd",
     "table": "trading/economy_trades/shepherd_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14322,7 +15146,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.fletcher",
     "table": "trading/economy_trades/fletcher_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14331,7 +15163,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.librarian",
     "table": "trading/economy_trades/librarian_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14340,7 +15180,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.cartographer",
     "table": "trading/economy_trades/cartographer_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14349,7 +15197,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.cleric",
     "table": "trading/economy_trades/cleric_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14358,7 +15214,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.armor",
     "table": "trading/economy_trades/armorer_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14367,7 +15231,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.weapon",
     "table": "trading/economy_trades/weapon_smith_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14376,7 +15248,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.tool",
     "table": "trading/economy_trades/tool_smith_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14385,7 +15265,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.butcher",
     "table": "trading/economy_trades/butcher_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14394,7 +15282,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.leather",
     "table": "trading/economy_trades/leather_worker_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14403,7 +15299,15 @@ This documentation is stripped from the vanilla files using an automated script.
     "display_name": "entity.villager.mason",
     "table": "trading/economy_trades/stone_mason_trades.json",
     "new_screen": true,
-    "persist_trades": true
+    "persist_trades": true,
+    "cured_discount": [
+        -100,
+        -100
+    ],
+    "max_cured_discount": [
+        -500,
+        -500
+    ]
 }
 ```
 
@@ -14630,7 +15534,7 @@ This documentation is stripped from the vanilla files using an automated script.
                     }
                 ]
             },
-            "event": "minecraft:navigation_on_land"
+            "event": "navigation_on_land"
         }
     ]
 }
@@ -14645,7 +15549,7 @@ This documentation is stripped from the vanilla files using an automated script.
                 "operator": "==",
                 "value": true
             },
-            "event": "minecraft:stop_dryingout"
+            "event": "stop_dryingout"
         }
     ]
 }
@@ -14660,7 +15564,7 @@ This documentation is stripped from the vanilla files using an automated script.
                 "operator": "==",
                 "value": true
             },
-            "event": "minecraft:navigation_off_land"
+            "event": "navigation_off_land"
         },
         {
             "filters": {
@@ -14668,7 +15572,7 @@ This documentation is stripped from the vanilla files using an automated script.
                 "operator": "!=",
                 "value": true
             },
-            "event": "minecraft:start_dryingout"
+            "event": "start_dryingout"
         }
     ]
 }
@@ -15416,13 +16320,6 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
-### strider
-```json
-"minecraft:equipment": {
-    "table": "loot_tables/entities/zombified_piglin_rider_gear.json"
-}
-```
-
 ### vex
 ```json
 "minecraft:equipment": {
@@ -15467,6 +16364,12 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:equipment": {
     "table": "loot_tables/entities/zombie_pigman_gear.json"
+}
+```
+
+```json
+"minecraft:equipment": {
+    "table": "loot_tables/entities/zombified_piglin_rider_gear.json"
 }
 ```
 
@@ -15702,7 +16605,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
@@ -15811,7 +16714,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### piglin_brute
 ```json
 "minecraft:experience_reward": {
-    "on_death": "query.last_hit_by_player ? 10 : 0"
+    "on_death": "query.last_hit_by_player ? 20 : 0"
 }
 ```
 
@@ -15999,7 +16902,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ```json
 "minecraft:experience_reward": {
     "on_bred": "Math.Random(1,7)",
-    "on_death": "query.last_hit_by_player ? Math.Random(1,3) : 0"
+    "on_death": "query.last_hit_by_player ? 5 : 0"
 }
 ```
 
@@ -17382,8 +18285,8 @@ This documentation is stripped from the vanilla files using an automated script.
 ### strider
 ```json
 "minecraft:health": {
-    "value": 15,
-    "max": 15
+    "value": 20,
+    "max": 20
 }
 ```
 
@@ -17554,7 +18457,27 @@ This documentation is stripped from the vanilla files using an automated script.
 # minecraft:home
 ### bee
 ```json
-"minecraft:home": {}
+"minecraft:home": {
+    "restriction_radius": 22,
+    "home_block_list": [
+        "minecraft:bee_nest",
+        "minecraft:beehive"
+    ]
+}
+```
+
+### elder_guardian
+```json
+"minecraft:home": {
+    "restriction_radius": 16
+}
+```
+
+### guardian
+```json
+"minecraft:home": {
+    "restriction_radius": 16
+}
 ```
 
 ### piglin_brute
@@ -18838,6 +19761,47 @@ This documentation is stripped from the vanilla files using an automated script.
 ### skeleton_horse
 ```json
 "minecraft:input_ground_controlled": {}
+```
+
+# minecraft:inside_block_notifier
+### boat
+```json
+"minecraft:inside_block_notifier": {
+    "block_list": [
+        {
+            "block": {
+                "name": "minecraft:bubble_column",
+                "states": {
+                    "drag_down": true
+                }
+            },
+            "entered_block_event": {
+                "event": "minecraft:entered_bubble_column_down",
+                "target": "self"
+            },
+            "exited_block_event": {
+                "event": "minecraft:exited_bubble_column",
+                "target": "self"
+            }
+        },
+        {
+            "block": {
+                "name": "minecraft:bubble_column",
+                "states": {
+                    "drag_down": false
+                }
+            },
+            "entered_block_event": {
+                "event": "minecraft:entered_bubble_column_up",
+                "target": "self"
+            },
+            "exited_block_event": {
+                "event": "minecraft:exited_bubble_column",
+                "target": "self"
+            }
+        }
+    ]
+}
 ```
 
 # minecraft:insomnia
@@ -20161,6 +21125,9 @@ This documentation is stripped from the vanilla files using an automated script.
             "cooldown": 2.5,
             "use_item": false,
             "hurt_item": 1,
+            "spawn_items": {
+                "table": "loot_tables/entities/snow_golem_shear.json"
+            },
             "play_sounds": "shear",
             "interact_text": "action.interact.shear",
             "on_interact": {
@@ -24426,6 +25393,14 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_hurt
+### blaze
+```json
+"minecraft:on_hurt": {
+    "event": "minecraft:on_hurt_event",
+    "target": "self"
+}
+```
+
 ### ender_crystal
 ```json
 "minecraft:on_hurt": {
@@ -24443,6 +25418,15 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:on_hurt_by_player
+### blaze
+```json
+"minecraft:on_hurt_by_player": {
+    "event": "minecraft:on_hurt_event",
+    "target": "self"
+}
+```
+
+### pillager
 ```json
 "minecraft:on_hurt_by_player": {
     "event": "minecraft:ranged_mode",
@@ -24486,7 +25470,7 @@ This documentation is stripped from the vanilla files using an automated script.
 ### dolphin
 ```json
 "minecraft:on_target_acquired": {
-    "event": "minecraft:become_angry",
+    "event": "become_angry",
     "target": "self"
 }
 ```
@@ -24667,7 +25651,6 @@ This documentation is stripped from the vanilla files using an automated script.
 ### dolphin
 ```json
 "minecraft:on_target_escape": {
-    "event": "minecraft:on_calm",
     "target": "self"
 }
 ```
@@ -24750,6 +25733,12 @@ This documentation is stripped from the vanilla files using an automated script.
     "event": "minecraft:pet_slept_with_owner",
     "target": "self"
 }
+```
+
+# minecraft:out_of_control
+### boat
+```json
+"minecraft:out_of_control": {}
 ```
 
 # minecraft:peek
@@ -27678,7 +28667,7 @@ This documentation is stripped from the vanilla files using an automated script.
     "seats": {
         "position": [
             0.0,
-            1.8,
+            1.65,
             -0.2
         ]
     }
@@ -29623,7 +30612,37 @@ This documentation is stripped from the vanilla files using an automated script.
             "priority": 8
         },
         {
+            "item": "minecraft:skull:2",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 8
+        },
+        {
+            "item": "minecraft:skull:3",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 8
+        },
+        {
+            "item": "minecraft:skull:4",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 8
+        },
+        {
+            "item": "minecraft:skull:5",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 8
+        },
+        {
             "item": "minecraft:carved_pumpkin",
+            "want_amount": 1,
+            "surplus_amount": 1,
+            "priority": 8
+        },
+        {
+            "item": "minecraft:turtle_helmet",
             "want_amount": 1,
             "surplus_amount": 1,
             "priority": 8
@@ -29646,6 +30665,10 @@ This documentation is stripped from the vanilla files using an automated script.
         },
         {
             "item": "minecraft:leather_chestplate",
+            "priority": 7
+        },
+        {
+            "item": "minecraft:elytra",
             "priority": 7
         },
         {
@@ -29734,6 +30757,10 @@ This documentation is stripped from the vanilla files using an automated script.
         },
         {
             "item": "minecraft:wooden_sword",
+            "priority": 7
+        },
+        {
+            "item": "minecraft:shield",
             "priority": 7
         },
         {
@@ -32131,6 +33158,23 @@ This documentation is stripped from the vanilla files using an automated script.
 ```
 
 # minecraft:target_nearby_sensor
+### blaze
+```json
+"minecraft:target_nearby_sensor": {
+    "inside_range": 2.0,
+    "outside_range": 3.0,
+    "must_see": true,
+    "on_inside_range": {
+        "event": "switch_to_melee",
+        "target": "self"
+    },
+    "on_outside_range": {
+        "event": "switch_to_ranged",
+        "target": "self"
+    }
+}
+```
+
 ### creeper
 ```json
 "minecraft:target_nearby_sensor": {
@@ -32280,13 +33324,25 @@ This documentation is stripped from the vanilla files using an automated script.
 }
 ```
 
+### boat
+```json
+"minecraft:timer": {
+    "looping": false,
+    "time": 3,
+    "time_down_event": {
+        "event": "minecraft:sink",
+        "target": "self"
+    }
+}
+```
+
 ### dolphin
 ```json
 "minecraft:timer": {
     "looping": false,
-    "time": 20,
+    "time": 120,
     "time_down_event": {
-        "event": "minecraft:dried_out"
+        "event": "dried_out"
     }
 }
 ```
@@ -32623,7 +33679,9 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:transformation": {
     "into": "minecraft:zombie_pigman",
     "transformation_sound": "converted_to_zombified",
-    "keep_level": true
+    "keep_level": true,
+    "drop_inventory": true,
+    "preserve_equipment": true
 }
 ```
 
@@ -32632,7 +33690,8 @@ This documentation is stripped from the vanilla files using an automated script.
 "minecraft:transformation": {
     "into": "minecraft:zombie_pigman",
     "transformation_sound": "converted_to_zombified",
-    "keep_level": true
+    "keep_level": true,
+    "preserve_equipment": true
 }
 ```
 

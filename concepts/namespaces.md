@@ -36,6 +36,8 @@ Some good examples:
  - `sirlich`
  - `cubeworld`
  - `bworks`
+ 
+**DO NOT USE** `minecraft` or `minecon` as a namespace unless editing a vanilla file. Not only is it a terrible idea but Minecraft reserves these and it won't even work. 
 
 # Where to use namespaces?
 
@@ -55,7 +57,7 @@ For example: `controller.animation.namespace.entity_name.action` is better than 
 
 The actual file structure does not need namespaces. 
 
-`animations/namespace/my_entity/animation` is more confusing than `animation/my_entity/animation`.
+`animations/namespace/my_entity/animation` is more confusing than `animations/my_entity/animation`.
 
 
 

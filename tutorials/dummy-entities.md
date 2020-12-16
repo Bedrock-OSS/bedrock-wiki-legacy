@@ -35,38 +35,36 @@ entities/dummy.json
 ```json
 {
     "minecraft:entity": {
-        "format_version": "1.13.0",
         "description": {
-            "identifier": "sirlich:dummy",
+	    "format_version": "1.16.0",
+            "identifier": "wiki:dummy",
             "is_summonable": true,
             "is_spawnable": true,
             "is_experimental": false
         },
         "components": {
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "pivot": [ 0, 100, 0 ],
+                        "width": 0,
+                        "height": 0
+                    }
+                ]
+            },
             "minecraft:damage_sensor": {
                 "triggers": {
-                    "on_damage": {
-                        "filters": {}
-                    },
                     "deals_damage": false
                 }
             },
-            "minecraft:health": {
-                "value": 1,
-                "max": 1
-            },
-            "minecraft:knockback_resistance": {
-                "value": 1,
-                "max": 1
-            },
-            "minecraft:push_through": {
-                "value": 1
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
             },
             "minecraft:collision_box": {
-                "width": 1,
-                "height": 1
-            },
-            "minecraft:physics": {}
+                "width": 0.0001,
+                "height": 0.0001
+            }
         }
     }
 }

@@ -100,7 +100,7 @@ All animations for a specific entity should be grouped together into one file fo
 | RPAC    | Resource Pack Animation Controller |
 | BPAC    | Behavior Pack Animation Controller |
 | BB      | Blockbench                         |
-| EZ      | Element Zero                       |
+| BDS     | Bedrock Dedicated Server           |
 
 
 
