@@ -35,8 +35,8 @@ entities/dummy.json
 ```json
 {
     "minecraft:entity": {
-        "format_version": "1.16.0",
         "description": {
+	    "format_version": "1.16.0",
             "identifier": "wiki:dummy",
             "is_summonable": true,
             "is_spawnable": true,
