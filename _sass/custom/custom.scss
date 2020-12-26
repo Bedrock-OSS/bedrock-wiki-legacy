@@ -199,6 +199,13 @@ details#toc > summary {
   color: $nav-child-link-color;
 }
 
+
+.local_path::before {
+  content: '#';
+  font-weight: 900;
+  color: $nav-child-link-color;
+}
+
 .path-separator {
   padding: 0 4px;
   font-weight: 900;

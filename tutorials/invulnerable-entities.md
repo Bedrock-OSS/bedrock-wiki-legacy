@@ -37,7 +37,7 @@ The best way to learn about this component is by using the [vanilla examples for
 
 ### Disable Damage from Player
 
-{% include filepath.html path="BP/entities/entity.json ➤ Components"%}
+{% include filepath.html path="BP/entities/entity.json local_path="#/minecraft:entity/components"%}
 ```json
 "minecraft:damage_sensor": {
     "triggers": {
