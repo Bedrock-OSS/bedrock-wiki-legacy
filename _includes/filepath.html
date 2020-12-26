@@ -7,4 +7,4 @@ Params:
  - id: optional parameter, which will add ID to the element
 -->
 {% endcomment %}
-<p class="filepath" {% if include.id %}id="{{include.id}}"{% endif %}>{{ include.path | replace: "/", "<span class='path-separator'>/</span>" }}</p>
+<p class="filepath" {% if include.id %}id="{{include.id}}"{% endif %}>{{ include.path | replace: "/", "<span class='path-separator'>/</span>" }}  {% if include.local_path %}{{ include.local_path }}{% endif %}</p>
