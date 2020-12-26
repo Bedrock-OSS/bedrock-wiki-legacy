@@ -40,7 +40,8 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
                     "event": "on_consume",
                     "target": "self"
                 }      
-            }
+            },
+	    "minecraft:use_animation": "eat"
         },
         "events": {
             "on_consume": {
@@ -370,6 +371,18 @@ List of all new block components, with usage examples
       "slot": "bow",     // Can be any of the enchant slot listed below
       "value": 10
     }
+}
+```
+
+- minecraft:use_animation
+```jsonc
+{
+    "minecraft:use_animation": "eat"
+}
+```
+```jsonc
+{
+    "minecraft:use_animation": "drink"
 }
 ```
 
