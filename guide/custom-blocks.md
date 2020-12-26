@@ -17,14 +17,15 @@ badge_justification: left
 {:toc}
 </details>
 
-___
+# Custom Blocks
+Bedrock Minecraft allows us to add custom blocks into our world, with various vanilla-like properties. In the newest beta , custom blocks can have multiple stages (like plants), directional facing, among other features. This tutorial will cover how to create some simple blocks, for the stable version of Minecraft Bedrock.
 
+[You can find the full bedrock.dev block documentation here.](https://bedrock.dev/r/Blocks.)
 
+# Block Behavior File
+Block behaviors are structured similarly to entities: They contain description, as well as a list of components that describes the blocks behavior.
 
-# Custom block behavior definition
-is pretty straight-forward in it's whole. [Located in BP/blocks/blockname.json] Note that custom blocks will not show up in creative inventory as of 1.16.0.
-Note: you can find the custom blocks documentation on https://bedrock.dev/r/Blocks.
-
+{% include filepath.html path="BP/blocks/blockname.json"%}
 ```jsonc
 {
     "format_version": "1.12.0",
@@ -69,43 +70,44 @@ Let's create some more blocks in `BP/blocks`. I created these for four for the t
 You can play around with changing the component values for each of these. Now let's move over to the resource definition.
 
 
-# Custom block resource definition
-Unlike items(`RP/items/itemname.json`), all custom block resource definition happens in a single file: `RP/blocks.json`.
+# Block Resource File
+The resource definition for blocks differs from entities/items, because all the definitions appear in a single file.
 
+{% include filepath.html path="BP/blocks.json"%}
 ```jsonc
 {
-  "format_version": [
-    1,
-    1,
-    0
-  ],
-  "tut:blocky": {
-    "textures": "blocky",
-    "sound": "stone"
-  },
-  "tut:sapp_log": {
-    "textures": {
-      "up": "sapp_log_top",
-      "down": "sapp_log_top",
-      "side": "sapp_log_side"
+    "format_version": [
+        1,
+        1,
+        0
+    ],
+    "tut:blocky": {
+        "textures": "blocky",
+        "sound": "stone"
     },
-    "sound": "wood"
-  },
-  "tut:compass_block": {
-    "textures": {
-      "up": "compass_block_up",
-      "down": "compass_block_down",
-      "north": "compass_block_north",
-      "south": "compass_block_south",
-      "west": "compass_block_west",
-      "east": "compass_block_east"
+    "tut:sapp_log": {
+        "textures": {
+            "up": "sapp_log_top",
+            "down": "sapp_log_top",
+            "side": "sapp_log_side"
+        },
+        "sound": "wood"
     },
-    "sound": "wool"
-  },
-  "tut:flashing": {
-    "textures": "flashing",
-    "sound": "glass"
-  }
+    "tut:compass_block": {
+        "textures": {
+            "up": "compass_block_up",
+            "down": "compass_block_down",
+            "north": "compass_block_north",
+            "south": "compass_block_south",
+            "west": "compass_block_west",
+            "east": "compass_block_east"
+        },
+        "sound": "wool"
+    },
+    "tut:flashing": {
+        "textures": "flashing",
+        "sound": "glass"
+    }
 }
 ```
 
@@ -138,6 +140,7 @@ These "gorgeous" textures are the ones I'm going to use for my example blocks. T
 
 All textures need to be defines a **shortname**, (and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`), but this time in `RP/textures/terrain_texture.json`
 
+{% include filepath.html path="RP/textures/terrain_texture.json"%}
 ```jsonc
 {
   "resource_pack_name": "tut",
@@ -189,6 +192,7 @@ But, we still have to define the `tut:flashing`'s texture(third from the left), 
 ## Block flipbook texture definition
 As you might have already guessed, flipbook texture shortnames are defined in a different place then `RP/textures/terrain_texture.json`. Let's create another file, `RP/textures/flipbook_textures.json`.
 
+{% include filepath.html path="RP/textures/flipbook_textures.json"%}
 ```jsonc
 [
   {
@@ -223,7 +227,6 @@ tile.tut:flashing.name=Block of Flashing Matter
 
 [You can learn more about .lang here](https://wiki.bedrock.dev/concepts/lang.html)
 
-___
 ___
 
 ## Your progress so far
