@@ -374,18 +374,6 @@ List of all new block components, with usage examples
 }
 ```
 
-- minecraft:use_animation
-```jsonc
-{
-    "minecraft:use_animation": "eat"
-}
-```
-```jsonc
-{
-    "minecraft:use_animation": "drink"
-}
-```
-
 ### Enchant slots
 
 | Slot Name     |
@@ -578,6 +566,13 @@ _New Syntax_
         "can_always_eat": true,
         "saturation_modifier": "normal"
     }
+}
+```
+
+- minecraft:use_animation
+```jsonc
+{
+    "minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. Can also be changed to "drink".
 }
 ```
 
