@@ -40,7 +40,8 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
                     "event": "on_consume",
                     "target": "self"
                 }      
-            }
+            },
+	    "minecraft:use_animation": "eat"
         },
         "events": {
             "on_consume": {
@@ -565,6 +566,13 @@ _New Syntax_
         "can_always_eat": true,
         "saturation_modifier": "normal"
     }
+}
+```
+
+- minecraft:use_animation
+```jsonc
+{
+    "minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. Can also be changed to "drink".
 }
 ```
 
