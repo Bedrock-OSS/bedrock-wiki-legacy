@@ -502,7 +502,7 @@ Let's also look into a recipe that gives you more than one item as a result.
 }
 ```
 
-- "`count`" defines how many items you get when you craft this. Here you get 9 coal from deconstructing a coal_block.
+- "`count`" defines how many items you get when you craft this. Here you get 9 coal from deconstructing a coal block.
 
 ### Shapeless recipe example
 
