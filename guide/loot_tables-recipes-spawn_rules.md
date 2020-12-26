@@ -471,7 +471,38 @@ Let's look through some recipe-specific syntax next.
 
 - "`pattern`" consists of 3 rows each consisting of 3 character keys. Each character symbolizes an item in a slot of the crafting grid.
 - "`key`" defines each character to mean an item. Here, 'P' means a Wooden Shovel and '`#`' means a '`planks`' block with aux value `4`, which is the Acacia Planks block.
-- "`result`" means same as output. Her it's an Acacia Boat('`boat`' with aux id `4`).
+- "`result`" means same as output. Here it's an Acacia Boat('`boat`' with aux id `4`).
+
+Let's also look into a recipe that gives you more than one item as a result. 
+
+```jsonc
+{
+  "format_version": "1.12",
+  "minecraft:recipe_shaped": {
+    "description": {
+    "identifier": "minecraft:coal"
+    },
+
+    
+    "tags": [ "crafting_table" ],
+    "pattern": [
+      "#"
+    ],
+    "key": {
+      "#": {
+        "item": "minecraft:coal_block"
+      }
+    },
+    "result": {
+      "item": "minecraft:coal",
+      "data": 0,
+      "count": 9
+    }
+  }
+}
+```
+
+- "`count`" defines how many items you get when you craft this. Here you get 9 coal from deconstructing a coal_block.
 
 ### Shapeless recipe example
 
