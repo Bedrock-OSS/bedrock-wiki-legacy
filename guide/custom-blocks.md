@@ -73,7 +73,7 @@ You can play around with changing the component values for each of these. Now le
 # Block Resource File
 The resource definition for blocks differs from entities/items, because all the definitions appear in a single file.
 
-{% include filepath.html path="BP/blocks.json"%}
+{% include filepath.html path="RP/blocks.json"%}
 ```jsonc
 {
     "format_version": [
