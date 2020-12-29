@@ -254,7 +254,14 @@ Great! Our item works but there is a small problem: you can see that our item sp
 
 To fix this, simply set the opacity of the item texture to 1 in a free image editor like GIMP.
 
+Using Gimp:
+**NOTE:** It can be difficult to find your Minecraft folder to either import or export the item sprite in the Gimp export/import-searchbar, since it doesn't support custom shortcuts. I suggest you open your add-on's Minecraft resourcepack-folder and also Gimp and simply drag and drop the item sprite into Gimp.
+
+If you have the item sprite ready in Gimp, go to the top bar and select `Colors`. Then go to button `Levels`, which says `Adjust color levels` when you hover over it. A new screen will pop up, the same as seen in the picture below. Change the channel to `Alpha` and then adjust the level (next to `Clamp output`) to 1, as seen in the example below. 
+
 ![](/assets/images/tutorials/custom-item-models/drill-opacity.png)
+
+Gimp doesn't let you normally save the picture as a png when pressing `Ctrl+S` so you'll have to export it. To do this, go to the top bar and select `File`. There you can either choose `Overwrite <your picture_name.png>`, which will automatically export and save it in the same name and same format (which should be `.png`) and overwrite the item sprite you imported. Or you can choose `Export as ...`, which lets you choose the location you want to save it in and the name you save it as. Again, make sure it saves as a `.png`  format, since this format supports transparent backgrounds and translucent pixels.
 
 ## The Files
 
