@@ -75,7 +75,7 @@ Shoots a projectile when triggered
             "projectile": "minecraft:snowball",
             "launch_power": 5,
             "angle_offset": 20
-        },
+        }
     }
 }
 ```
