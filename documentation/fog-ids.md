@@ -5,6 +5,7 @@ parent: Documentation
 ---
 
 # Here is a list of all `fog` command IDs
+
 | ID                                             | Note                                                                           |
 |------------------------------------------------|--------------------------------------------------------------------------------|
 | minecraft:fog_bamboo_jungle                    |Fog used in the bamboo jungle.                                                  |
