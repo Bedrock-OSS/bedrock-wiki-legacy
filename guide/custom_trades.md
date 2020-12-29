@@ -33,10 +33,10 @@ For a simple trading UI, `trade_table` + `trade_with_player` components should d
 
 ```jsonc
 "minecraft:trade_table": {
-          "display_name": "Trading Entity", //String can be replaced with any text to be displayed.
-          "table": "trading/trading_entity_trades.json", //path to the Trade Table file
-          "new_screen": true //If set to false, the UI will display as the pre-Village&Pillage one.
-        }
+  "display_name": "Trading Entity", //String can be replaced with any text to be displayed.
+  "table": "trading/trading_entity_trades.json", //path to the Trade Table file
+  "new_screen": true //If set to false, the UI will display as the pre-Village&Pillage one.
+}
 ```
 
 3. Now make sure the component group is added to the entity via an event. It's a good idea to add it in `minecraft:entity_spawned` event, since it triggers on spawn.

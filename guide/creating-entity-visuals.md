@@ -83,6 +83,8 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
 *Meanwhile, why not upgrading the visuals of your own unique entities' or creating another one?*
 
 `RP/models/entity/skele_yaklin.geo.json`
+
+{% include filepath.html path="RP/models/entity/skele_yaklin.geo.json"%}
 ```jsonc
 {
   "format_version": "1.12.0",
@@ -173,7 +175,7 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
 }
 ```
 
-`RP/animations/skele_yaklin.animations.json`
+{% include filepath.html path="RP/animations/skele_yaklin.animations.json"%}
 ```jsonc
 {
   "format_version": "1.8.0",
@@ -220,8 +222,6 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
   }
 }
 ```
-
-__
 __
 
 # Your progress so far:

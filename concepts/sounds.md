@@ -226,14 +226,13 @@ Sounds played in animations function based off of `short-name` definitions in th
 
 This example shows playing a wing-flap sound, synced with an animation.
 
-`RP/entities/dragon.entity.rp.json`
+{% include filepath.html path="RP/entities/dragon.json" local_path="minecraft:client_entity/description"%}
 ```jsonc
 "sound_effects": {
     "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound definited in sound_definitions
 }
 ```
-
-`RP/animations/dragon.animation.json`
+{% include filepath.html path="RP/animations/dragon.json" local_path="animations/animation.dragon.flying"%}
 ```jsonc
 "sound_effects": {
     "3.16": {

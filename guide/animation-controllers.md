@@ -45,40 +45,42 @@ Create `RP/animation_controllers/entityName.animation.controller.json`. Let's go
 Let's go through the states themselves.
 
 `RP//animation_controllers/skele_yaklin.controller.animation.json`
+
+{% include filepath.html path="RP/animation_controllers/skele_yaklin.ac.json"%}
 ```jsonc
 {
-  "format_version": "1.10.0",
-  "animation_controllers": {
-    "controller.animation.skele_yaklin.attack": {
-      "initial_state": "default_state",
-      "states": {
-        "default_state": {
-          "animations": [
-            {
-              "walk": "query.modified_move_speed"
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.skele_yaklin.attack": {
+            "initial_state": "default_state",
+            "states": {
+                "default_state": {
+                    "animations": [
+                        {
+                            "walk": "query.modified_move_speed"
+                        }
+                    ],
+                    "transitions": [
+                        {
+                            "attack_state": "variable.attack_time > 0"
+                        }
+                    ],
+                    "blend_transition": 0.1
+                },
+                "attack_state": {
+                    "animations": [
+                        "attack"
+                    ],
+                    "transitions": [
+                        {
+                            "default_state": "variable.attack_time == 0"
+                        }
+                    ],
+                    "blend_transition": 0.1
+                }
             }
-          ],
-          "transitions": [
-            {
-              "attack_state": "variable.attack_time > 0"
-            }
-          ],
-          "blend_transition": 0.1
-        },
-        "attack_state": {
-          "animations": [
-            "attack"
-          ],
-          "transitions": [
-            {
-              "default_state": "variable.attack_time == 0"
-            }
-          ],
-          "blend_transition": 0.1
         }
-      }
     }
-  }
 }
 ```
 
@@ -96,30 +98,29 @@ The showcased animation controller is a great example of a resource animation co
 
 ## Resource and Behavior file edits
 
-`part of RP/entity/skele_yaklin.entity.json`
-full file [here](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES)
+{% include filepath.html path="RP/entity/skele_yaklin.entity.json" local_path="minecraft:client_entity/description"%}
 ```jsonc
-  "animations": {
+"animations": {
     "walk": "animation.skele_yaklin.walk",
     "attack": "animation.skele_yaklin.attack",
     "humanoid_big_head": "animation.humanoid.big_head",
     "look_at_target": "animation.humanoid.look_at_target.default.v1.0",
     "ctrl": "controller.animation.skele_yaklin.attack"
-  },
-  "scripts": {
+},
+"scripts": {
     "animate": [
-      "ctrl",
-      {
-        "humanoid_big_head": "query.is_baby"
-      },
-      "look_at_target"
+        "ctrl",
+        {
+            "humanoid_big_head": "query.is_baby"
+        },
+        "look_at_target"
     ]
-  },
+}
 ```
 
 Now, let's define the animation controller and the attack animation in the .entity file. The animation controller shortname should be included in "scripts/animate", so it's active all the time.
 
-`part of BP/entities/skele_yaklin.json, full file [here](https://github.com/KaiFireborn/Minecraft-Bedrock-Full-Beginner-Add-on-development-Guide-FILES)`
+{% include filepath.html path="BP/entities/skele_yaklin.json" local_path="minecraft:entity/components"%}
 ```jsonc
   //make the entity attack back
   "minecraft:behavior.hurt_by_target": {
@@ -199,7 +200,7 @@ Behavior animations are able to execute slash(/) commands and to trigger events 
 
 Here's an example of a Behavior Animation that executes multiple slash commands on an entity.
 
-`BP/animations/misc.BP.animations.json`
+{% include filepath.html path="BP/animations/misc.animation.json"%}
 ```jsonc
 {
   "format_version": "1.8.0",
@@ -235,41 +236,41 @@ This animation file includes two animations: "animation.grufallo.revenge" and "a
 
 Here's an example  that can be used to track AFK players. (You can scroll the code box for better readability)
 
-`BP/animation_controllers/afk_controller.BP.animation.controller.json`
+{% include filepath.html path="BP/animation_controllers/afk_controller.ac.json"%}
 ```jsonc
 {
-  "format_version": "1.10.0",
-  "animation_controllers": {
-    "controller.animation.player.afk": {
-      "states": {
-	"default": {
-	  "transitions": [
-	    {
-	      "stands_still": "!query.is_moving"
-	    }
-	  ]
-	},
-	"stands_still": {
-          "on_entry":[
-	    "/tag @s add AFK",
-            "/say I'm now AFK"
-	  ],
-	  "animations": [
-	    "afk_animation"
-	  ],
-	  "transitions" : [
-	    {
-	      "default" : "query.is_moving"
-	    }
-	  ],
-          "on_exit":[
-	    "/tag @s remove AFK",
-            "/say I'm no longer AFK"
-	  ],
-	}
-      }
+    "format_version": "1.10.0",
+    "animation_controllers": {
+        "controller.animation.player.afk": {
+            "states": {
+                "default": {
+                    "transitions": [
+                        {
+                            "stands_still": "!query.is_moving"
+                        }
+                    ]
+                },
+                "stands_still": {
+                    "on_entry": [
+                        "/tag @s add AFK",
+                        "/say I'm now AFK"
+                    ],
+                    "animations": [
+                        "afk_animation"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.is_moving"
+                        }
+                    ],
+                    "on_exit": [
+                        "/tag @s remove AFK",
+                        "/say I'm no longer AFK"
+                    ]
+                }
+            }
+        }
     }
-  }
 }
 ```
 
@@ -296,24 +297,24 @@ Just like resource animations and animation controllers, Behavior animations and
 
 Here's an example:
 
-`part of BP/entities/grufallo.json`
+{% include filepath.html path="BP/entities/grufallo.json" local_path="minecraft:client_entity"%}
 ```jsonc
-  "description": {
+"description": {
     "identifier": "jdot:grufallo",
     "is_spawnable": true,
     "is_summonable": true,
     "is_experimental": false,
     "animations": {
-      "revenge": "animation.grufallo.revenge"
+        "revenge": "animation.grufallo.revenge"
     },
     "scripts": {
-      "animate": [
-        {
-          "revenge": "!query.is_alive"
-        }
-      ]
+        "animate": [
+            {
+                "revenge": "!query.is_alive"
+            }
+        ]
     }
-  },
+}
 ```
 
 The "description" object in a behavior file is where the entity's identifier and some configurations are stored. After the "is_experimental" config we added "animations" and `"scripts"/"animate", exactly like in an .entity file.
@@ -326,7 +327,6 @@ You can find out more about animation controllers by checking out these guides:
 1. Other documentations related with animations: [bedrock.dev/r/MoLang](https://bedrock.dev/r/MoLang), [bedrock.dev/r/Animations](https://bedrock.dev/r/Animations).
 1. [SirLich's Entity Commands Tutorial](/tutorials/entity-commands.html)
 
-___
 ___
 
 # Your progress so far
