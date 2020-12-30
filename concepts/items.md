@@ -564,7 +564,8 @@ _New Syntax_
         },
         "nurtition": 3,
         "can_always_eat": true,
-        "saturation_modifier": "normal"
+        "saturation_modifier": "normal",
+	"using_converts_to": minecraft:item // Changes the food or drink into another item when consumed. Can be changed to any item.
     }
 }
 ```
