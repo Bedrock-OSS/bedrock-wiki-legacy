@@ -146,6 +146,7 @@ The following particles exist in-game but cannot be spawned because they require
 | minecraft:portal_east_west       |
 | minecraft:portal_north_south     |
 | minecraft:colored_flame_particle |
+*See blue_flame_particle.*
 
 ---
 [Original Credit](https://www.reddit.com/r/MinecraftCommands/comments/cbd56p/i_need_a_list_of_bedrock_particles/etg8rt7/)
