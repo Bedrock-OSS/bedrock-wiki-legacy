@@ -15,38 +15,82 @@ parent: Concepts
 {:toc}
 </details>
 
-Three main structures make up the base of a behavior-pack entity file. This doc will explain what each of them means, and how to use them.
+Three main structures make up the base of a behavior-pack entity file. This document will explain what each of them means, and how to use them. 
+
+Confusing component groups with components is a very common source of errors. Pay attention closely to understand the difference.
 
 # Components
 
-Components should be thought of as the logical building blocks that make up Minecraft-entities. All components are written by Mojang, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The [full list of components can be found here](https://bedrock.dev/docs/stable/Entities).
+Components are logical building blocks that make up Minecraft-entities. All components are written by Mojang, and provided to us for use. Components can do all sorts of things, like set the size of an entity, or give it the ability to swim. The [full list of components can be found here](https://bedrock.dev/docs/stable/Entities).
 
-It is impossible to create your own components. The entire list of components is hard-coded and provided by Microsoft. The `only` thing that should go inside the `components` object is components.
+It is *impossible* to create your own components. The entire list of components is hard-coded and provided by Microsoft. 
 
-All components begin with `minecraft:`.
+When you want to add behavior to your entity, you do so by adding `components` into the `components` object of `minecraft:entity`. For example, if we want to give the entity the ability to climb, we can do so by adding this component: `"minecraft:can_climb": {}`. 
 
-# Component groups
+All components are formatted like `"minecraft:<name>": { <setting> }`. Every component takes different kinds of settings.
 
-Component groups should be thought of as `folders` for components. They group components together, and can be added or removed using `events` to create custom game-play.
+Here is an example of a few components, inside an entity:
 
-Here is an example:
-
-```json
-"minecraft:cat_persian": { //the name of the component group
-    "minecraft:variant": { //A list of valid components. Add as many as you like.
-        "value": 6
+{% include filepath.html path="BP/entities/example.json" local_path="minecraft:entity"%}
+```jsonc
+"components": {
+    "minecraft:type_family": {
+        "family": [
+            "player"
+        ]
     },
-    "minecraft:physics": {}
+    "minecraft:collision_box": {
+        "width": 0.6,
+        "height": 1.8
+    },
+    "minecraft:can_climb": {},
 }
 ```
 
-All component groups are custom-created. You cannot use component groups from other entities in your entity. In the example above, `minecraft:cat_persian` is *not* a component. You cannot use it in your entity. If you want the `cat_persian` functionality in your entity, you must create your group, or add the components directly into your entities  `components` object.
+Notice how the `components` list *only* contains components. 
 
-`Note:` All Minecraft component groups are prefixed with `minecraft:`. When you create your groups, you should *not* follow this design. Rather, use your own. [Here's more info on namespaces](/knowledge/namespaces).
+# Component groups
+
+Component groups are "folders" for components. They group components together, and can be added or removed using `events` to create custom game-play.
+
+Here is an example:
+
+{% include filepath.html path="BP/entities/example.json" local_path="minecraft:entity"%}
+```jsonc
+"component_groups": {
+
+    //the name of the component group
+    "minecraft:cat_persian": { 
+
+        //A list of valid components. Add as many as you like.
+        "minecraft:variant": { 
+            "value": 6
+        },
+        "minecraft:physics": {}
+    },
+
+    //the name of a second component group
+    "wiki:example_group": {
+        "minecraft:type_family": {
+            "family": [
+                "wiki_is_awesome!"
+            ]
+        }
+    }
+}
+```
+
+All component groups are custom-created. You cannot use component groups from other entities in your entity.
+
+In vanilla minecraft entities, component groups are namespaced with `minecraft:` -like `minecraft:cat_persian` above. But it is important to remember that they are *not components*. When you create your own component groups, you can use whatever name/namespace:name combination you want. For example `wiki:example_group` above. [Here's more info on namespaces](/knowledge/namespaces).
+
+When a component is placed into a group, is it *not* automatically added to your entity. In fact, it won't do anything at all until the group is added. When the group is added, the component will become active, and start effecting the behavior of your entity.
+
 
 # Events
 
-Events are a special syntax for adding and removing component-groups. 
+Events are a special syntax for adding and removing component-groups. By adding/removing groups, we can create dynamic behavior for our entities.
+
 
 An example:
 ```json
