@@ -17,11 +17,13 @@ parent: Knowledge
 
 This document will present the officially supported Bedrock-Wiki style-guide for addon-creation. The goal of this guide is to promote best-practices while creating addons, and create a consistent format for everyone to follow.
 
-## Structuring
+The style-guide is a living, breathing document, which will evolve as addon-creation evolves. Please get in touch if you think something needs to be updated ot changed. 
 
-No spaces in your file paths. `use_underscores`.
-
-No `CAPITALS` in your identifiers, file names, or folder names, except at the top level.
+## Folder Structure
+ - No spaces in your file paths. `use_underscores`.
+ - No `CAPITALS` in your identifiers, file names, or folder names, except at the top level.
+ - The total character-length of any path must not exceed 80 characters (console limitation).
+ - Content folders should use consistent pluralization: Don't mix and match. 
 
 ## File and Folder names
 
@@ -46,21 +48,35 @@ No `CAPITALS` in your identifiers, file names, or folder names, except at the to
 
 ## Namespaces
 
-A good namespace is completely unique to you. Something like `mob` or `cars` or `content` or `custom` would be a **bad** namespace, since another developer might come up with the same namespace as you.
+A good namespace should be completely unique to you, or your team. Something like `mob` or `cars` or `content` or `custom` would be a **bad** namespace, since another developer might come up with the same namespace as you. 
+
+`minecraft` and `minecon` are reserved. Don't use these.
 
 For personal projects, use a convenient version of your player name, and for team projects, use a convenient version of your team name.
 
 When multiple developers work a project together, the namespace should always be shared. If credit is required, use sub-indexing: `sapphire.sirlich:dragon`
 
+Where to use name-spaces:
+ - entities
+ - particles
+ - component-groups
+ - events
+
+When not to use name-spaces:
+ - do not include your name-space in any folder path or file-name
+
+
 ## Sub-indexing
 
 Sub indexing is the use of `.` to separate chained concepts. Sub-indexing should go in descending order from big to small:
 
-`animation.controller.dragon.flying.taking_off` **NOT** `animation.controller.dragon_take_off_flying`
+✔️ `animation.controller.dragon.flying.taking_off` 
+❌ `animation.controller.dragon_take_off_flying`
 
-`_` should be used as spaces when sub-indexing -don't use another dot. 
+When using sub-indexing, use `_` as a space, not another `.`. 
 
-`animation.controller.dragon.flying.taking_off` **NOT** `animation.controller.dragon.flying.taking.off`
+✔️ `animation.controller.dragon.flying.taking_off`
+❌ `animation.controller.dragon.flying.taking.off`
 
 You can use sub-indexing in your entities:
 `sirlich:dragon.drake`
@@ -69,24 +85,46 @@ You can use sub-indexing in your entities:
 
 | Group        | Event               |
 |--------------|---------------------|
-| sirlich:wild | sirlich:become_wild |
+| sirlich:wild | ✔️ sirlich:become_wild |
+| sirlich:wild | ❌ sirlich:wild |
+| sirlich:tame | ✔️ sirlich:on_tame |
+| sirlich:tame | ❌ sirlich:tame |
 
 ## Functions should be nested
 
-| Good               | Bad               |
-|--------------------|-------------------|
-| teleport/zone/hell | teleport_hellzone |
+✔️ `function teleport/zone/hell`
+❌ `function teleport_hellzone`
 
-## Group into files when possible
+## Group animations files when possible
 
-All animations for a specific entity should be grouped together into one file for example.
-
+Example:
+```jsonc
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.dragon.sit": {...},
+    "animation.dragon.fly": {...},
+		"animation.dragon.roar": {...},
+  }
+}
+```
 ## Split textures by path, not name
 
-| Good        | Bad         |
-|-------------|-------------|
-| dragon/blue | dragon_blue |
-| dragon/red  | dragon_red  |
+✔️ textures/dragon/red
+❌ textures/dragon_red_skin
+
+✔️ textures/npc/dragon_hunter/archer
+❌ textures npc/dragon_hunter_archer
+
+## .lang File Comments
+
+Comments intended for the localizer should always be in-line, in the following format:
+
+`the.key=The string<\t>## Comment, intended for the one localizing`
+
+`<\t>` represents a tab-character.
+
+Own-line comments can be used for organizational purposes, but should not store localization-critical information.
 
 ## Acronyms when discussing
 
@@ -101,6 +139,8 @@ All animations for a specific entity should be grouped together into one file fo
 | BPAC    | Behavior Pack Animation Controller |
 | BB      | Blockbench                         |
 | BDS     | Bedrock Dedicated Server           |
+| FPV     | First Person View                  |
+
 
 
 
