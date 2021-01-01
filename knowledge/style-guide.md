@@ -71,11 +71,13 @@ When not to use name-spaces:
 Sub indexing is the use of `.` to separate chained concepts. Sub-indexing should go in descending order from big to small:
 
 ✔️ `animation.controller.dragon.flying.taking_off` 
+
 ❌ `animation.controller.dragon_take_off_flying`
 
 When using sub-indexing, use `_` as a space, not another `.`. 
 
 ✔️ `animation.controller.dragon.flying.taking_off`
+
 ❌ `animation.controller.dragon.flying.taking.off`
 
 You can use sub-indexing in your entities:
@@ -93,6 +95,7 @@ You can use sub-indexing in your entities:
 ## Functions should be nested
 
 ✔️ `function teleport/zone/hell`
+
 ❌ `function teleport_hellzone`
 
 ## Group animations files when possible
@@ -110,11 +113,13 @@ Example:
 ```
 ## Split textures by path, not name
 
-✔️ textures/dragon/red
-❌ textures/dragon_red_skin
+✔️ `textures/dragon/red`
 
-✔️ textures/npc/dragon_hunter/archer
-❌ textures npc/dragon_hunter_archer
+❌ `textures/dragon_red_skin`
+
+✔️ `textures/npc/dragon_hunter/archer`
+
+❌ `textures npc/dragon_hunter_archer`
 
 ## .lang File Comments
 
