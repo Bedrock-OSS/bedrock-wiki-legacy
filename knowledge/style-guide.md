@@ -25,6 +25,9 @@ The style-guide is a living, breathing document, which will evolve as addon-crea
  - The total character-length of any path must not exceed 80 characters (console limitation).
  - Content folders should use consistent pluralization: Don't mix and match. 
 
+## Identifiers
+Do not use identifiers that begin with a number, and especially don't use an identifier that is *only* a number. This applies to entities, component_groups, events, and anything else that takes a `namespace:name` pair.
+
 ## File and Folder names
 
 | Concept              | Example Identifier         |
@@ -91,6 +94,14 @@ You can use sub-indexing in your entities:
 | sirlich:wild | ❌ sirlich:wild |
 | sirlich:tame | ✔️ sirlich:on_tame |
 | sirlich:tame | ❌ sirlich:tame |
+
+## Short-Names should be Generic
+Short-names are file-specific identifiers, which are used to map between an identifier and a pretty name. They are extremely useful, because they allow us to re-use animation controllers, and render controllers. For this reason, your short-names should be generic.
+
+✔️ `"sit": "animation.dragon.sit"`
+❌ `"dragon_sitting": "animation.dragon.sit"`
+
+When we make short-names of this form, we can use a generic "sit" animation controller for all of them, since we can use the `sit` short-name to play the sit animation.
 
 ## Functions should be nested
 
