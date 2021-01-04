@@ -99,6 +99,7 @@ You can use sub-indexing in your entities:
 Short-names are file-specific identifiers, which are used to map between an identifier and a pretty name. They are extremely useful, because they allow us to re-use animation controllers, and render controllers. For this reason, your short-names should be generic.
 
 ✔️ `"sit": "animation.dragon.sit"`
+
 ❌ `"dragon_sitting": "animation.dragon.sit"`
 
 When we make short-names of this form, we can use a generic "sit" animation controller for all of them, since we can use the `sit` short-name to play the sit animation.
