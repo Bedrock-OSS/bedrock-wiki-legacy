@@ -26,7 +26,7 @@ Here is a tutorial of how to make solid Hitbox in four different ways, with `run
 
 Those components below are required to make the entity act like a block, and also don't add the "minecraft:physics": {} component in here, this will make your entity fall of have collision with some blocks like water or lava.
 
-```json
+```jsonc
 {
     "minecraft:knockback_resistance": {//Knockback resistance is needed to make it not be Knocked off by an entity.
         "value": 1
@@ -53,7 +53,7 @@ Those components below are required to make the entity act like a block, and als
 
 To align your entity in rotation, you will need some Math.
 
-```json
+```jsonc
 "rotation" : [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
 ```
 
@@ -74,7 +74,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/entities/your_entity.json" local_path="minecraft:entity/events"%}
 
-```json
+```jsonc
 "minecraft:entity_spawned": {//Event in the original entity.
    "add": {
       "components_groups": [
@@ -91,7 +91,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/entities/your_entity.json" local_path="minecraft:entity/component_groups"%}
 
-```json
+```jsonc
 "component_groups": {//Component Group in the original entity.
    "despawn": {
       "minecraft:despawn": {}
@@ -101,7 +101,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/blocks/your_dummy_block.json"%}
 
-```json
+```jsonc
 {
     "format_version": "1.16.100",
     "minecraft:block": {
@@ -146,7 +146,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 {% include filepath.html path="BP/entities/your_dummy_entity.json"%}
 
-```json
+```jsonc
 {
     "format_version": "1.13.0",
     "minecraft:entity": {
