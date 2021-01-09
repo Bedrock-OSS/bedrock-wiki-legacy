@@ -21,6 +21,20 @@ There are quite a few ways to remove shadows from entities. This document will c
 
 Make the size of the collision component very, very small (does 0, 0 work?) this will make it impossible to interact/hit the entity, but it will make the shadow disappear!
 
+But you can also add the custom hit test component, to at least make it possible to hit the entity, you will not be abble to interact wih it, but at least you can hit it.
+
+```jsonc
+"minecraft:custom_hit_test": {
+    "hitboxes": [
+        {
+            "pivot": [0, 0.5, 0],//This is the position of the hitbox, you can change the X, Y and Z values.
+            "width": 0.8,
+            "height": 0.7
+        }//And you can add many more hitboxes as you want, just copy-paste the hitbox inside the "hitboxes" array. 
+    ]
+}
+```
+
 ## Teleport underground
 
 If you have a dummy entity (invisible) that you need to interact with, you can telport like `/teleport @x ~ ~-0.01 ~`. This will slightly insert the entity into the ground, and stop shadows from showing.
