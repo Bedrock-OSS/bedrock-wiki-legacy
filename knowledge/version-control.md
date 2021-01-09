@@ -96,5 +96,6 @@ The main things to remember about working with VCS:
  - Commit and `push` often
  - Always `push` before stopping work
  - If you screw up your files super bad, you can always reset to the last working version. If you commit/push often, hopefully this wasn't too long ago.
-
-
+ - Always, and I mean `always` make proper commit message. It's vital when you have to roll back.
+ 
+ 
