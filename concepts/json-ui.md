@@ -6,7 +6,7 @@ badge: NEW
 badge_color: blue
 ---
 
-# Items [BETA]
+# Json UI
 
 <details id="toc" open markdown="block">
   <summary>
@@ -17,8 +17,6 @@ badge_color: blue
 {:toc}
 </details>
 
-
-# Json UI
 
 ## Introduction
 All editable vanilla UIs are stored in `RP/ui/` in `.json` files.
