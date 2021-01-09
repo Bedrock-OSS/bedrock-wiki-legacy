@@ -30,7 +30,7 @@ Simply create an animation controller with a transition based on `is_alive`. The
 
 Here is a sample animation controller:
 
-{% include filepath.html path="BP/animation_controllers/death.json""%}
+{% include filepath.html path="BP/animation_controllers/death.json"%}
 ```json
 {
     "format_version": "1.10.0",
