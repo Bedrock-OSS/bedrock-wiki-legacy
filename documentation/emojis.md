@@ -53,8 +53,8 @@ Below you can find platform specific Emoji's, as well as general symbols. Copy/p
 | Name                 | Letter (Copy/Paste This) | Unicode                      | Image                                      |
 |----------------------|--------------------------|------------------------------|--------------------------------------------|
 | Left Click           |                         | U+E060                       |![)](/assets/images/Documentation/emojis/pc/left_click.png)|
-| Right Click          |                         | U+E061                       |![)](/assets/images/Documentation/emojis/pc/middle_click.png)|
-| Middle Click         |                         | U+E062                       |![)](/assets/images/Documentation/emojis/pc/right_click.png)|
+| Right Click          |                         | U+E061                       |![)](/assets/images/Documentation/emojis/pc/right_click.png)|
+| Middle Click         |                         | U+E062                       |![)](/assets/images/Documentation/emojis/pc/middle_click.png)|
 
 
 ## Xbox (One/Series X/Series S)
