@@ -2,7 +2,7 @@
 layout: page
 title: Json-UI
 parent: Concepts
-badge: New!
+badge: NEW
 badge_color: blue
 ---
 
