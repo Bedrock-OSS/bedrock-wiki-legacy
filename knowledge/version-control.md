@@ -2,6 +2,8 @@
 layout: page
 title: Version Control
 parent: Knowledge
+badge: NEW
+badge_color: blue
 ---
 
 # What is Version Control?
