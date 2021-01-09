@@ -224,7 +224,7 @@ ___
 # Your progress so far
 
 **What you've done:**
-- Learned -a lot- everything about Render Controllers;
+- Learned ~~a lot~~ everything about Render Controllers;
 - Made your custom entity spawn with random textures;
 - Learned how to hide certain parts of an entity when needed.
 
