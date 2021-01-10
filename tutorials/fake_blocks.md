@@ -20,11 +20,11 @@ Intermediate
 
 ## Creating the Hitbox
 
-Here is a tutorial of how to make solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
+Here is a tutorial of how to make a solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
 
 ## Basic Components
 
-Those components below are required to make the entity act like a block, and also don't add the "minecraft:physics": {} component in here, this will make your entity fall of have collision with some blocks like water or lava.
+Those components below are required to make the entity act like a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have collision with some blocks like water or lava.
 
 ```jsonc
 {
@@ -54,17 +54,17 @@ Those components below are required to make the entity act like a block, and als
 To align your entity in rotation, you will need some Math.
 
 ```jsonc
-"rotation" : [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
+"rotation": [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
 ```
 
-Apply that code on the core folder of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visul bugs. And also you don't need to add components like:
+Apply that code on the core folder(that has all the other groups inside) of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visual bugs. And also you don't need to add components like:
 
-`minecraft:behavior.look_at_entity
-minecraft:behavior.look_at_player
-minecraft:behavior.look_at_target
+`"minecraft:behavior.look_at_entity": {}
+"minecraft:behavior.look_at_player": {}
+"minecraft:behavior.look_at_target": {}
 ...`
 
-The reason why is because this will change the Target Y Rotation, acusing it to move the Body Y Rotation so the Model will move, don't add walk component too.
+The reason why is because this will change the Target Y Rotation, causing it to move the Body Y Rotation so the Model will move. Don't add walk components too.
 
 ## Aligning the Entity Position
 
@@ -194,7 +194,7 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
 
 ## Cracking Texture
 
-Vanilla blocks have a cracking-texture that appears when you break them. Here i will show you hwo to add this effect to your entity.
+Vanilla blocks have a cracking-texture that appears when you break them. Here i will show you how to add this effect to your entity.
 
 First we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
 
@@ -214,12 +214,12 @@ First we have to add some textures to your .entity file, make sure that you are 
 }
 ```
 
-And a geometry/model that has inflate 0.1 in all their cubes, this to avoid Z-Fighting.
+And add a geometry that has inflate 0.1 in all their cubes, this to avoid Z-Fighting.
 
 ```jsonc
 "geometry": {
     "default": "geometry.your_geometry",
-    "broken": "geometry.broken",
+    "broken": "geometry.broken"
 }
 ```
 
