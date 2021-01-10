@@ -191,3 +191,67 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
     }
 }
 ```
+
+## Cracking Texture
+
+Vanilla blocks have a cracking-texture that appears when you break them. Here i will show you hwo to add this effect to your entity.
+
+First we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
+
+```jsonc
+"textures": {
+    "default": "textures/entity/your_texture",
+    "destroy_stage_0": "textures/environment/destroy_stage_0",
+    "destroy_stage_1": "textures/environment/destroy_stage_1",
+    "destroy_stage_2": "textures/environment/destroy_stage_2",
+    "destroy_stage_3": "textures/environment/destroy_stage_3",
+    "destroy_stage_4": "textures/environment/destroy_stage_4",
+    "destroy_stage_5": "textures/environment/destroy_stage_5",
+    "destroy_stage_6": "textures/environment/destroy_stage_6",
+    "destroy_stage_7": "textures/environment/destroy_stage_7",
+    "destroy_stage_8": "textures/environment/destroy_stage_8",
+    "destroy_stage_9": "textures/environment/destroy_stage_9"
+}
+```
+
+And a geometry/model that has inflate 0.1 in all their cubes, this to avoid Z-Fighting.
+
+```jsonc
+"geometry": {
+    "default": "geometry.your_geometry",
+    "broken": "geometry.broken",
+}
+```
+
+And now we have to add a new render controller. This is going to select different textures between the destroys stages.(Remember to not replace your actual controller, you need two controllers, the first one is just the one that adds model, textures and material to your normal entity, and the second one is this one, that defines the cracking texture)
+
+```jsonc
+"controller.render.broken": {
+    "arrays": {
+        "textures": {
+            "array.broken": [
+                "texture.destroy_stage_9",
+                "texture.destroy_stage_8",
+                "texture.destroy_stage_7",
+                "texture.destroy_stage_6",
+                "texture.destroy_stage_5",
+                "texture.destroy_stage_4",
+                "texture.destroy_stage_3",
+                "texture.destroy_stage_2",
+                "texture.destroy_stage_1",
+                "texture.destroy_stage_0",
+                "texture.normal"
+            ]
+        }
+    },
+    "geometry": "Geometry.broken",
+    "materials": [
+        {
+            "*": "Material.default"
+        }
+    ],
+    "textures": [
+        "array.broken[query.health * 1]"//Here you can caculate the health of your entity to make sure it isn't buggy, if your entity just have 10 health, leave it as it. If it has 20, it should be `[query.health * 0.5]`, if it is 40, it has to be 0.25, etc...
+    ]
+}
+```
