@@ -6,7 +6,19 @@ parent: Tutorials
 
 # Controlling Flying Entities
 
-Whether making a plane or a dragon, adding controllability to flying entities will probably be a challenge to most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 2 main workaround ways you can use to achieve this.
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+Intermediate
+{: .label .label-yellow }
+
+Whether making a plane or a dragon, adding controllability to flying entities will probably be a challenge to most devs who haven't dabbled around this concept. Since there is no "right" way of adding a piloting mechanic to flying entities, I'll showcase 3 main workaround ways you can use to achieve this.
 
 # Great Jump, Slow Fall
 
@@ -166,8 +178,85 @@ execute @a[rxm=-5,rx=20] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] levita
 execute @a[rxm=20,rx=35] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] slow_falling 1 1 true
 execute @a[rxm=35,rx=90] ~~~ effect @e[type=ass:dragon,r=1,tag=has_rider] clear
 ```
----
-There is also another method of controlling a flying entity through holding the jump button to go upwards, and releasing it to go down. This is done through an animation controller that's animated from the player's json, but I won't be covering that in this tutorial for now.
 
----
-### **Original Author:** assassin (assassin#1634), 4/24/2020
+# Controlling Through Jumping
+
+A third method of controlling flying entities uses the player's jump button. The entity rises when the player is holding the jump button and falls when the player releases their jump button.
+
+To do this, we need an animation controller attached to the player rather than the entity itself so we can detect when the player uses their jump button. We also need to disable dismounting when the player presses the jump button.
+
+First, on the entity, disable dismounting and jumping:
+
+```
+"minecraft:horse.jump_strength": {
+    "value": 0
+},
+"minecraft:can_power_jump": {}
+```
+
+Next we need an animation controller that causes the entity to levitate when the player uses their jump button and resets the levitation when they release their jump button.
+
+```
+"controller.animation.fly_dragon": {
+	"initial_state": "falling",
+	"states": {
+		"falling": {
+			"on_entry": [
+				"/effect @e[type=ass:dragon,r=1,c=1] levitation 0"
+			],
+			"transitions": [
+				{ "rising": "query.is_jumping" }
+			]
+		},
+		"rising": {
+			"on_entry": [
+				"/effect @e[type=ass:dragon,r=1,c=1] levitation 100000 6 true"
+			],
+			"transitions": [
+				{ "falling": "!query.is_jumping" }
+			]
+		}
+	}
+}
+```
+
+Now, we need a copy of the player's behavior file, which we are going to modify slightly. You can find the player's behavior file in the vanilla behavior pack provided by Mojang (found [here](https://aka.ms/behaviorpacktemplate)). Once you have copied the player's behavior file to your own behavior pack, find their `"description"` object and add the animation controller. We also want to ensure that the entity will only respond to the player's jump input when the player is actually riding it, so we can use a MoLang query in the player's behavior to only activate the animation controller when the player is riding.
+
+```
+"description": {
+	"identifier": "minecraft:player",
+	"is_spawnable": false,
+	"is_summonable": false,
+	"animations": {
+		"fly_dragon": "controller.animation.fly_dragon"
+	},
+	"scripts": {
+		"animate": [
+			{ "fly_dragon": "query.is_riding" }
+		]
+	}
+}
+```
+
+The entity can now be controlled with the jump key, but there's a bug. If the player dismounts the entity while holding the jump key, it will continue rising. We can fix this with an animation controller on the entity itself that resets the levitation whenever a player dismounts it.
+
+```
+"controller.animation.reset_levitation": {
+	"initial_state": "no_rider",
+	"states": {
+		"no_rider": {
+			"transitions": [
+				{ "has_rider": "query.has_rider" }
+			]
+		},
+		"has_rider": {
+			"on_exit": [
+				"/effect @s levitation 0"
+			],
+			"transitions": [
+				{ "no_rider": "!query.has_rider" }
+			]
+		}
+	}
+}
+```

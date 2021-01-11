@@ -1,0 +1,249 @@
+{% if layout.favicon %}
+<link rel="icon" href="{{layout.favicon}}">
+{% endif %}
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-light.css' | absolute_url }}"/>
+<link rel="stylesheet" href="{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}"/>
+<link rel="stylesheet" href="{{ '/assets/css/discord-dark.css' | absolute_url }}"/>
+<script>
+    const CONTRIBUTORS_URL = "https://api.github.com/repos/SirLich/bedrock-wiki/commits";
+    const DEFAULT_THEME = "Default";
+    let allThemes = {
+        "Default": "{{ '/assets/css/just-the-docs-default.css' | absolute_url }}",
+        "Dark": "{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}",
+        "Light": "{{ '/assets/css/just-the-docs-light.css' | absolute_url }}",
+        "Discord Dark": "{{ '/assets/css/discord-dark.css' | absolute_url }}"
+    };
+
+    /*
+    Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
+    */
+    let allCodeThemes = {
+        "Default": `
+        .highlight .nl {
+            color: #9CDCFE;
+        }
+        .highlight .s2 {
+            color: #ce9178;
+        }
+        .highlight .mi, .highlight .mf {
+            color: #b5cea8;
+        }
+        .highlight .kc {
+            color: #569cd6;
+        }
+        .highlight .p {
+            color: #C8C8C8;
+        }
+        .highlight .err {
+            color: #6A9955;
+        }
+        pre.highlight, figure.highlight {
+            background-color: 1E1E1E;
+        }
+        code {
+            background-color: 1E1E1E;
+        }
+        `,
+        "Dark": `
+        .highlight .nl {
+            color: #9CDCFE;
+        }
+        .highlight .s2 {
+            color: #ce9178;
+        }
+        .highlight .mi, .highlight .mf {
+            color: #b5cea8;
+        }
+        .highlight .kc {
+            color: #569cd6;
+        }
+        .highlight .p {
+            color: #C8C8C8;
+        }
+        .highlight .err {
+            color: #6A9955;
+        }
+        pre.highlight, figure.highlight {
+            background-color: 1E1E1E;
+        }
+        code {
+            background-color: 1E1E1E;
+        }
+        `,
+        "Discord Dark": `
+        .highlight .nl {
+            color: #9CDCFE;
+        }
+        .highlight .s2 {
+            color: #ce9178;
+        }
+        .highlight .mi, .highlight .mf {
+            color: #b5cea8;
+        }
+        .highlight .kc {
+            color: #569cd6;
+        }
+        .highlight .p {
+            color: #C8C8C8;
+        }
+        .highlight .err {
+            color: #6A9955;
+        }
+        pre.highlight, figure.highlight {
+            background-color: 1E1E1E;
+        }
+        code {
+            background-color: 1E1E1E;
+        }
+        `,
+        "Light": ""
+    };
+    let theme = "";
+
+    /*
+    Simple field, which limits the number of updates.
+    Scroll event can be called multiple timer per animation frame, which might cause poor performance
+    */
+    let ticking = false;
+
+    /*
+    Simple function, which changes the theme
+    */
+    function changeTheme(selected) {
+        if (!allThemes.hasOwnProperty(selected)) {
+            selected = DEFAULT_THEME;
+            console.log("Theme missing, changing theme to default");
+        }
+        theme = selected;
+        if (typeof window.localStorage != 'undefined') {
+            localStorage.setItem('theme', selected);
+        }
+        for (const index in document.styleSheets) {
+            if (!document.styleSheets.hasOwnProperty(index)) continue;
+            let stylesheet = document.styleSheets[index];
+            stylesheet.disabled = stylesheet.href !== allThemes[selected];
+        }
+        /*
+        Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
+        */
+        changeCodeTheme(theme);
+    }
+
+    /*
+    Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
+    */
+    function changeCodeTheme(selected) {
+        let codeThemeTag = document.getElementById("fixCodeTheme");
+        if (!codeThemeTag) {
+            codeThemeTag = document.createElement('style');
+            codeThemeTag.setAttribute('type', 'text/css');
+            codeThemeTag.id = "fixCodeTheme";
+            document.head.appendChild(codeThemeTag);
+        }
+        codeThemeTag.innerHTML = "";
+        codeThemeTag.appendChild(document.createTextNode(allCodeThemes[selected]));
+    }
+
+    /*
+    This function highlights current section in TOC
+    */
+    function updateTOC() {
+        if (!ticking) {
+            window.requestAnimationFrame(function () {
+                let selector = 'h1[id], h2[id]';
+                if (document.querySelector(`#toc`).classList.contains('top-level')) {
+                    selector = 'h1[id]';
+                }
+                document.querySelectorAll(`#toc li.active`).forEach(value => value.classList.remove('active'));
+                let nodes = document.querySelectorAll(selector);
+                let closest = null;
+                for (let i = 0; i < nodes.length; i++) {
+                    if (closest === null || (Math.abs(window.scrollY - closest.offsetTop) > Math.abs(window.scrollY - nodes[i].offsetTop))) {
+                        closest = nodes[i];
+                    }
+                }
+                document.querySelector(`#toc li a[href='#${closest.getAttribute('id')}']`).parentElement.classList.add('active');
+                ticking = false;
+            });
+            ticking = true;
+        }
+    }
+
+    /*
+    Try to set the theme based on the one saved in browser. Fallback to default, if none found.
+    */
+    if (typeof window.localStorage != 'undefined') {
+        theme = localStorage.getItem('theme');
+        if (!theme) {
+            theme = DEFAULT_THEME;
+            localStorage.setItem('theme', theme);
+        }
+    }
+    changeTheme(theme);
+
+    window.addEventListener('load', () => {
+        /*
+        Add theme switcher
+        */
+        let switcher = document.createElement("select");
+        switcher.addEventListener('change', () => {
+            changeTheme(switcher.value);
+        });
+        switcher.classList.add('theme-switcher');
+        for (const key in allThemes) {
+            if (!allThemes.hasOwnProperty(key)) continue;
+            let option = document.createElement("option");
+            option.value = key;
+            option.innerText = key;
+            option.selected = key === theme;
+            switcher.append(option);
+        }
+        document.getElementsByClassName("site-footer")[0].prepend(switcher);
+
+        /*
+        Add scroll listener, which updates TOC
+        */
+        if (document.querySelector(`#toc`)) {
+            window.addEventListener('scroll', updateTOC);
+            updateTOC();
+        }
+        /*
+        Add contributors section
+        */
+        let filepath = document.querySelector('.main-content footer a').getAttribute('href');
+        filepath = filepath.substr(filepath.indexOf('gh-pages/') + 9);
+        fetch(CONTRIBUTORS_URL + "?path=" + filepath)
+            .then(response => response.json())
+            .then(commits => {
+                let contributors = [];
+                for (let i = 0; i < commits.length; i++) {
+                    if (commits[i].author && commits[i].author.login && contributors.filter(value => value.login === commits[i].author.login).length === 0) {
+                        contributors.push(commits[i].author);
+                    }
+                }
+
+                if (contributors.length > 0) {
+                    let grid = document.createElement("div");
+                    grid.id = "contributors";
+                    for (const contributor of contributors) {
+                        let cont = document.createElement("img");
+                        cont.setAttribute("src", contributor.avatar_url);
+                        cont.setAttribute("alt", contributor.login);
+                        let a = document.createElement("a");
+                        a.setAttribute("href", contributor.html_url);
+                        a.setAttribute("alt", contributor.login);
+                        a.setAttribute("target", "_blank");
+                        a.append(cont);
+                        grid.append(a);
+                    }
+                    let footer = document.querySelector(".main-content footer");
+                    let title = document.createElement('h3');
+                    title.innerText = "Contributors to this page";
+                    footer.append(title);
+                    footer.append(grid);
+                }
+            });
+    });
+
+
+</script>

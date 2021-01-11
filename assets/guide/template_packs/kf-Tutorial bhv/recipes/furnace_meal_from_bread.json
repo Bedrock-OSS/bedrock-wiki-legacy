@@ -1,0 +1,14 @@
+{
+  "format_version": "1.12",
+  "minecraft:recipe_furnace": {
+    "description": {
+      "identifier": "tut:furnace_meal_from_bread"
+    },
+    "tags": [
+      "furnace",
+      "smoker"
+    ],
+    "input": "minecraft:bread",
+    "output": "tut:meal"
+  }
+}

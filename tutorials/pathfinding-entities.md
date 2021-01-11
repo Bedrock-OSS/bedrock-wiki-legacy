@@ -6,6 +6,18 @@ parent: Tutorials
 
 # Pathfinding
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+Beginner
+{: .label .label-green }
+
 Making entities go places is one of the most common requests for Marketplace content. This tutorial will show you the most common way to do pathfinding.
 
 ## Using marker entities

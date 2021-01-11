@@ -6,6 +6,15 @@ parent: Tutorials
 
 # Dummy Entities
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
 Dummy entities are invisible entities which are used behind the scenes for game-play purposes. Dummy entities are a very useful tool, and this document will cover some of the ways they are utilized, as well as showing how to set up the resource side of things.
 
 # Using Dummies
@@ -21,47 +30,48 @@ This is a non-exhaustive list of how dummies can be used:
 
 You can use whatever behaviors you like, but here is a good template. The important aspects are: no damage, and can't be pushed.
 
+entities/dummy.json  
+
 ```json
 {
     "minecraft:entity": {
-        "format_version": "1.13.0",
         "description": {
-            "identifier": "sirlich:dummy",
+	    "format_version": "1.16.0",
+            "identifier": "wiki:dummy",
             "is_summonable": true,
             "is_spawnable": true,
             "is_experimental": false
         },
         "components": {
+            "minecraft:custom_hit_test": {
+                "hitboxes": [
+                    {
+                        "pivot": [ 0, 100, 0 ],
+                        "width": 0,
+                        "height": 0
+                    }
+                ]
+            },
             "minecraft:damage_sensor": {
                 "triggers": {
-                    "on_damage": {
-                        "filters": {}
-                    },
                     "deals_damage": false
                 }
             },
-            "minecraft:health": {
-                "value": 1,
-                "max": 1
-            },
-            "minecraft:knockback_resistance": {
-                "value": 1,
-                "max": 1
-            },
-            "minecraft:push_through": {
-                "value": 1
+            "minecraft:pushable": {
+                "is_pushable": false,
+                "is_pushable_by_piston": false
             },
             "minecraft:collision_box": {
-                "width": 1,
-                "height": 1
-            },
-            "minecraft:physics": {}
+                "width": 0.0001,
+                "height": 0.0001
+            }
         }
     }
 }
 ```
 
 ## Resource Entity
+entity/dummy.json  
 
 ```json
 {
@@ -87,6 +97,7 @@ You can use whatever behaviors you like, but here is a good template. The import
 ```
 
 ## Geometry
+models/entity/dummy.json  
 
 ```json
 {
@@ -103,7 +114,8 @@ You can use whatever behaviors you like, but here is a good template. The import
 }
 ```
 
-## Render Controller
+## Render Controller (Optional)
+render_controllers/dummy.json
 
 ```json
 {
@@ -124,6 +136,6 @@ You can use whatever behaviors you like, but here is a good template. The import
 }
 ```
 
-## Texture
+## Texture (Optional)
 
 You can either leave the texture location blank, or open the model in block-bench and create a blank texture.

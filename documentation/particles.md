@@ -10,6 +10,8 @@ Here is the complete list of Bedrock particles. For some inexplicable reason, Be
 
 And for some other inexplicable reason, it doesn't have autocomplete for these.
 
+### Working particles
+
 | minecraft:basic_flame_particle              |
 | minecraft:basic_portal_particle             |
 | minecraft:basic_smoke_particle              |
@@ -65,6 +67,8 @@ And for some other inexplicable reason, it doesn't have autocomplete for these.
 | minecraft:water_evaporation_bucket_emitter  |
 | minecraft:water_splash_particle_manual      |
 
+### Particles with issues
+
 The following particles can be spawned, but might spam you with content log errors because they rely on variables that /particle cannot set:
 
 | minecraft:arrow_spell_emitter                   |
@@ -98,6 +102,8 @@ The following particles can be spawned, but might spam you with content log erro
 | minecraft:water_wake_particle                   |
 | minecraft:wither_boss_invulnerable              |
 
+### Bubble particles
+
 The following particles are various bubbles that only show up underwater. Some of them spam content log errors:
 
 | minecraft:basic_bubble_particle        |
@@ -119,6 +125,8 @@ The following particles are various bubbles that only show up underwater. Some o
 | minecraft:squid_move_particle          |
 | minecraft:underwater_torch_particle    |
 
+### Permanent particles
+
 The following particles are permanent and will not be removed once spawned until you exit the game:
 
 | minecraft:mobflame_emitter            |
@@ -126,6 +134,7 @@ The following particles are permanent and will not be removed once spawned until
 | minecraft:phantom_trail_particle      |
 | minecraft:stunned_emitter             |
 
+## Broken particles
 The following particles exist in-game but cannot be spawned because they require context that cannot be provided by `/particle` or are simply bugged:
 
 | minecraft:block_destruct         |

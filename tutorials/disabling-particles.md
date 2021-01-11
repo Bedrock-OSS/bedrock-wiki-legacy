@@ -6,7 +6,21 @@ parent: Tutorials
 
 # Disabling Particles
 
-The basic idea of disabling a particle from emitting (as opposed to simply making the texture transparent) is as follows:
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+Beginner
+{: .label .label-green }
+
+In the event that you want to disable a particle, it is recommended to do so from the particle file itself as opposed to simply making the particle texture transparent in `particles.png`. Additionally, disabling a particle might offer a slight performance boost compared to making it transparent, as transparent particles are still emitted (but not visible).
+
+The basic idea of disabling a particle from emitting is as follows:
 
 ```json
 {
@@ -31,6 +45,3 @@ The basic idea of disabling a particle from emitting (as opposed to simply makin
     }
 }
 ```
-
----
-### **Original Author:** [ambientturtle](ambient#2309)

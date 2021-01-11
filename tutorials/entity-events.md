@@ -6,6 +6,18 @@ parent: Tutorials
 
 # Entity Events
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+Beginner
+{: .label .label-green }
+
 Entity events are one of the fundamental building blocks of behavior alongside components and component groups. They serve as the control center for component groups and can be called from components, animations, animation controllers, and other events. This tutorial aims to cover the basics of events and their more advanced usage.
 
 # Basic Usage

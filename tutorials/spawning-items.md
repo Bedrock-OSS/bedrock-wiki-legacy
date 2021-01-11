@@ -6,6 +6,18 @@ parent: Tutorials
 
 # Spawning Items
 
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+Intermediate
+{: .label .label-yellow }
+
 It is often desired to be able to spawn items in their dropped form in a number of scenarios. Here we will examine how to accomplish this through entity deaths, interactions, and an all-purpose method.
 
 ## Entity Deaths
