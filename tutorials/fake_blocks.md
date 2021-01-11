@@ -20,11 +20,11 @@ Intermediate
 
 ## Creating the Hitbox
 
-Here is a tutorial of how to make solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
+Here is a tutorial of how to make a solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
 
 ## Basic Components
 
-Those components below are required to make the entity act like a block, and also don't add the "minecraft:physics": {} component in here, this will make your entity fall of have collision with some blocks like water or lava.
+Those components below are required to make the entity act like a block, and also don't add the `"minecraft:physics": {}` component in there, because this will make your entity fall or have collision with some blocks like water or lava.
 
 ```jsonc
 {
@@ -54,17 +54,17 @@ Those components below are required to make the entity act like a block, and als
 To align your entity in rotation, you will need some Math.
 
 ```jsonc
-"rotation" : [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
+"rotation": [ 0, "-query.body_y_rotation + (Math.round(query.body_y_rotation / 90) * 90)", 0 ]
 ```
 
-Apply that code on the core folder of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visul bugs. And also you don't need to add components like:
+Apply that code on the core folder(that has all the other groups inside) of your model in an animation, make sure the pivot point is 0 in the X and Z Axis, to avoid visual bugs. And also you don't need to add components like:
 
-`minecraft:behavior.look_at_entity
-minecraft:behavior.look_at_player
-minecraft:behavior.look_at_target
+`"minecraft:behavior.look_at_entity": {}
+"minecraft:behavior.look_at_player": {}
+"minecraft:behavior.look_at_target": {}
 ...`
 
-The reason why is because this will change the Target Y Rotation, acusing it to move the Body Y Rotation so the Model will move, don't add walk component too.
+The reason why is because this will change the Target Y Rotation, causing it to move the Body Y Rotation so the Model will move. Don't add walk components too.
 
 ## Aligning the Entity Position
 
@@ -189,5 +189,69 @@ First, in the `minecraft:entity_spawned` event, make it places a custom block wi
             }
         }
     }
+}
+```
+
+## Cracking Texture
+
+Vanilla blocks have a cracking-texture that appears when you break them. Here i will show you how to add this effect to your entity.
+
+First we have to add some textures to your .entity file, make sure that you are using the vanilla textures instead of custom ones(this is to make it compatible with your resource packs)
+
+```jsonc
+"textures": {
+    "default": "textures/entity/your_texture",
+    "destroy_stage_0": "textures/environment/destroy_stage_0",
+    "destroy_stage_1": "textures/environment/destroy_stage_1",
+    "destroy_stage_2": "textures/environment/destroy_stage_2",
+    "destroy_stage_3": "textures/environment/destroy_stage_3",
+    "destroy_stage_4": "textures/environment/destroy_stage_4",
+    "destroy_stage_5": "textures/environment/destroy_stage_5",
+    "destroy_stage_6": "textures/environment/destroy_stage_6",
+    "destroy_stage_7": "textures/environment/destroy_stage_7",
+    "destroy_stage_8": "textures/environment/destroy_stage_8",
+    "destroy_stage_9": "textures/environment/destroy_stage_9"
+}
+```
+
+And add a geometry that has inflate 0.1 in all their cubes, this to avoid Z-Fighting.
+
+```jsonc
+"geometry": {
+    "default": "geometry.your_geometry",
+    "broken": "geometry.broken"
+}
+```
+
+And now we have to add a new render controller. This is going to select different textures between the destroys stages.(Remember to not replace your actual controller, you need two controllers, the first one is just the one that adds model, textures and material to your normal entity, and the second one is this one, that defines the cracking texture)
+
+```jsonc
+"controller.render.broken": {
+    "arrays": {
+        "textures": {
+            "array.broken": [
+                "texture.destroy_stage_9",
+                "texture.destroy_stage_8",
+                "texture.destroy_stage_7",
+                "texture.destroy_stage_6",
+                "texture.destroy_stage_5",
+                "texture.destroy_stage_4",
+                "texture.destroy_stage_3",
+                "texture.destroy_stage_2",
+                "texture.destroy_stage_1",
+                "texture.destroy_stage_0",
+                "texture.normal"
+            ]
+        }
+    },
+    "geometry": "Geometry.broken",
+    "materials": [
+        {
+            "*": "Material.default"
+        }
+    ],
+    "textures": [
+        "array.broken[query.health * 1]"//Here you can caculate the health of your entity to make sure it isn't buggy, if your entity just have 10 health, leave it as it. If it has 20, it should be `[query.health * 0.5]`, if it is 40, it has to be 0.25, etc...
+    ]
 }
 ```

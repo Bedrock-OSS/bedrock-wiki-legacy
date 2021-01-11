@@ -41,7 +41,7 @@ Whether or no the transparency or emissive textures in your models work in-game,
 |----------------|-------------------------------|
 |entity|basic opaque material         |
 |entity_alphatest|supports transparent pixels         |
-|entity_alphablend|supports translucent pixeks|
+|entity_alphablend|supports translucent pixels|
 |entity_emissive|solid, alpha channel is used as the emissive channel         |
 |entity_emissive_alpha|alpha channel is used for emissiveness, completely black + transparent pixels are rendered transparently|
 
