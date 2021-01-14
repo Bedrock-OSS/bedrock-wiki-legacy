@@ -19,12 +19,12 @@ badge_color: blue
 
 
 ## Introduction
-All editable vanilla UIs are stored in `RP/ui/` in `.json` files.
+All editable vanilla UIs are stored in `RP/ui/` in `.json` files. Though the file can have any extension since it will be read always as a JSON file.
 
 They can be divided into three groups:
 - Screens: `hud_screen.json`, `inventory_screen.json` etc.
-- Additional files: (templates, like `ui_common.json`, `ui_templates_*.json` etc.
 - System files: `_global_varibles.json` and `_ui_defs.json`
+- Additional files: (templates, like `ui_common.json`, `ui_templates_*.json` etc.
 
 ## Screens
 Screen files contain UIs which are shown in appropriate situations:
@@ -82,7 +82,7 @@ You should remember that `controls` property is an array and if you add it to a 
 Also you can use a string variable after `@`, its value will be interpreted as a superior element name. You may use it before `@` as well, its value will become the derived element name, but that'd be a strange move.
 
 ### Binding names
-There are `#things` that have a hash sign in the beginning. They're not quite understood, but they're mostly used in `"property_bag"` objects in form of `"#property": "value"` and in `"bindings"` arrays. They can store the same types that `$variables` can store. More about binding later.
+There are `#things` that have a hash sign in the beginning. They're mostly used in `"property_bag"` objects in form of `"#property": "value"` and in `"bindings"` arrays. They can store the same types that `$variables` can store. More about binding later.
 
 ## Namespaces
 Namespaces are used to access elements in some file across all other files.
@@ -106,7 +106,7 @@ An example:
 }
 ```
 
-This definitely works with UI elements. It is unknown if it works with variables yet.
+WARNING! Don't create new files using vanilla pre-existing namespaces.
 
 
 ## UI Elements
@@ -163,13 +163,13 @@ And here's an example of binding one element property to other element property:
   ]
 }
 ```
-- `"binding_type"` isn't studied enough, but it may have values of `"collection"`, `"collection_details"`, `"view"` and `"global"`.
+- `"binding_type"` It may have values of `"collection"`, `"collection_details"`, `"view"` and `"global"`.
 - `"binding_condition"` is for deciding when binding happens, it may take any boolean variable or these values:
   - `always` - binding works constantly
-  - `always_when_visible` - binding works only when visible
+  - `always_when_visible` - binding works when visible and does it constantly
   - `once` - seems to happen only once when the element is created
   - `visibility_changed` - seems to happen only when the visibility of the element has changed
-  - `visible` - ?
+  - `visible` - when the element is visible
 
 ## Hardcoded magic
 If you have looked through vanilla UI files, you may have noticed some thing that don't have any origin. As you may guess, they are hardcoded. What we know about them so far:
@@ -181,12 +181,10 @@ If you have looked through vanilla UI files, you may have noticed some thing tha
 Seems that all binding names that are put in `"binding_name"` are hardcoded variables.
 
 ### Collections
-It's yet unknown what exactly collections contain, but they have several objects inside. Inventory items, hotbar items, armor items and etc. are stored in collections.
+It's a hardcoded collection of specific items. Inventory items, hotbar items, armor items and etc. are stored in collections.
 
 ### Access to data
-Different screens can access different variables and #-properties.
-It's a trial and error experience, but what we know so far:
-- HUD can't access inventory collection (only hotbar), armor collection and perspective change #-properties. That means no F5 addons (F1 works differently).
+Some #names only work on specific screens.
 
 ## Element types
 
@@ -197,8 +195,11 @@ Like `<div>` in html, `panel` is a usual container.
 `stack_panel` is a panel that stacks children depending on `orientation` property value (`horizontal` or `vertical`).
 
 ### Grid
-An element that draws a grid of elements. Requires these properties:
+An element that draws a grid of elements. Grid properties:
 - `grid_dimensions` - number of rows and columns in form of `[x_size, y_size]`
+- `maximum_grid_items` - numbers of items the grid has
+- `grid_rescaling_type` - grid rescaling orientation and possible values are `"vertical"` and `"horizontal"`
+- `grid_fill_direction` - possible values are `"vertical"` and `"horizontal"`
 - `grid_item_template` - an element capable of handling collections (e.g. `"common.container_item"`)
 - `collection_name` - what collection will be parsed (`"hotbar_items"`, `"container_items"`, `"inventory_items"` and etc.)
 
@@ -223,21 +224,29 @@ If you want to pick an element inside of a grid, create a child derived from the
 `label` is a text element. Its properties are:
 - `text` - text to display
 - `color` - text color, an array of R,G,B with values from 0.0 to 1.0 (e.g. `[0.0, 0.6, 1.0]`)
+- `locked_color` - same as `color`. It will be applied instead of `color` if the parent element is locked.
 - `text_alignment` - text alignment, takes values `"left"`, `"right"` and `"center".`
+- `font_type` - a string. Possible values are `default` (default value), `smooth`, `rune` (enchantment font), `MinecraftSeven`, `MinecraftTen`, `MinecraftTenEmoticon` or a custom font type/family.
+- `font_size` - a string. Possible values are `small`, `normal` (default), `large` and `extra-large`
+- `font_scale_factor` - a float or an integer. It scales the size of the text.`1` is the default value (It's better to use this rather than `font_size`).
 - `shadow` - a boolean
 
 ### Image
 `image` is a textured element. Its properties are:
-- `texture` - required, a path string (e.g. `"textures\ui\title"`)
+- `texture` - required, a path string (e.g. `"textures/ui/title
+- `tiled` - tiles the image. Can be a boolean or a string with possible values being `x` and `y` (which orientation it tiles)
+- `tiled_scale` - sets the scale of the tiles (if tiled property is true)
+- `bilinear` - a boolean. Applies bilinear filtering to the image.
+- `grayscale`- a boolean. Makes image black and white.
 - `clip_direction` - when `#clip_ratio` is used, tells in which direction will clip go (`down` will tell to clip from the top to the bottom), possible values are `"up"`,`"down"`,`"left"`,`"right"`.
 
 To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with binding condition `"always"`. Progress arrow and fuel images in furnace UI work like this.
 
 ### Button
-`button` is a button. It's recommended to use ready templates. Properties to be documented.
+`button` is a button and it can have 4 states (default, hover, pressed and locked). It's recommended to use ready templates if you're not very experienced with them. Properties to be documented.
 
 ### Toggle
-`toggle` is a toggle (has 2 states). It's recommended to use ready templates. Properties to be documented.
+`toggle` is a toggle and it has 2 states (checked or unchecked). Each state has a hover and locked varient. It's recommended to use ready templates if you're not very experienced with them. Properties to be documented.
 Their toggle state can be binded to something by using `"#toggle_state"`.
 
 ### Other known types
