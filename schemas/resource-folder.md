@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Resource Folder Schema
-parent: Documentation
+parent: Schemas
 ---
 
 # Resource Pack Folder Schema
