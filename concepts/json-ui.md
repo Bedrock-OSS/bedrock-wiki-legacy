@@ -50,7 +50,7 @@ Variables can store numbers, booleans, strings and arrays. It's unknown if they 
 {% include filepath.html path="RP/ui/example_file.json"%}
 ```jsonc
 {
-  "cool_element":{
+  "cool_element": {
     ...
     "$foo": 100,         // a number variable
     "$bar": "string",    // a string variable
@@ -185,27 +185,117 @@ And here's an example of binding one element property to other element property:
 - `"resolve_sibling_scope"` - boolean
 
 ## Button Mappings
+Button mappings can be applied to any kind of input elements (`button`, `toggle`, `slider` and `input_panel`).
+
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "button": {
+    ...
+    "button_mappings": [
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_exit", // When clicked it will exit the current screen
+        "mapping_type": "pressed"
+      },
+      {
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_exit", // When double clicked it will exit the current screen
+        "mapping_type": "double_pressed"
+      },
+      {
+        "from_button_id": "button.menu_ok",
+        "to_button_id": "button.menu_exit", // When focused and pressed Enter it will exit the current screen
+        "mapping_type": "focused"
+      }
+    ]
+  }
+}
+```
+You can ignore a mapping using the `ignored` property
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "toggle": {
+    ...
+    "$ignore_double_click_mapping|default": true,
+    "button_mappings": [
+      {
+        "ignored": "$ignore_double_click_mapping",
+        "from_button_id": "button.menu_select",
+        "to_button_id": "button.menu_exit",
+        "mapping_type": "double_pressed"
+      }
+    ]
+  }
+}
+```
 - `"from_button_id"` - button (action) id that fires
 - `"to_button_id"` - button (action) id that results
 - `"handle_select` - boolean 
 - `"handle_deselect` - boolean 
 - `"mapping_type"`
-  - `pressed`
-  - `focused`
+  - `pressed` - mouse click
+  - `double_pressed` - double mouse click
+  - `focused` - element focused
   - `global`
 - `"scope"`
   - `view`
-  - `controller` 
+  - `controller`
 - `"input_mode_condition"`
   - `gamepad_and_not_gaze`
   - `not_gaze` 
 - `"button_up_right_of_first_refusal"` - boolean 
 
+## Variables
+- `requires` - condition
+
+If you only have one variable to use, you should just use `"variables": {}`
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "element": {
+    ...
+    "size": "$el_size",
+    "$el_size|default": ["100%", 20],
+    "variables": {
+      "requires": "$var_condition",
+      "$el_size": ["100%", 30]
+    }
+  }
+}
+```
+
+If you have multiple variables use `"variables": [{}]`
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "element": {
+    ...
+    "size": "$el_size",
+    "offset": "$el_offset",
+    "$el_offset|default": [0, 40],
+    "$el_size|default": ["100%", 20],
+    "variables": [
+      {
+        "requires": "$var_condition",
+        "$el_size": ["100%", 30]
+      },
+      {
+        "requires": "$other_var_condition",
+        "$el_offset": [0, 15],
+        "$el_size": ["90%", 35]
+      }
+    ]
+  }
+}
+```
+
 ## Hardcoded magic
 If you have looked through vanilla UI files, you may have noticed some thing that don't have any origin. As you may guess, they are hardcoded. What we know about them so far:
 
 ### Binding names
-Seems that all binding names that are put in `"binding_name"` are hardcoded variables.
+Seems that all binding names that are put in `binding_name` are hardcoded ""variables"".
 
 ### Collections
 It's a hardcoded collection of specific items. Inventory items, hotbar items, armor items and etc. are stored in collections.
@@ -228,7 +318,7 @@ Some #names only work on specific screens.
 - `max_size` - max width and height for the element
 - `min_size` - min width and height the element can have
 - `anchor_from` and `anchor_to` - position origin of the element. Possible values for both of them are `top_left`, `top_middle`, `top_right`, `left_middle`, `center` (default value), `right_middle`, `bottom_left`, `bottom_middle` and `bottom_right`
-- `offset`- how far in pixels or percentage from the position origin the element is (`[x_offset, y_offset]`). Possible values include `0`, `"0px"`, `"0%"`, `"0%c"`, `"100%cm"`, `"0%y"` and `"0%x"
+- `offset`- how far in pixels or percentage from the position origin the element is (`[x_offset, y_offset]`). Possible values include `0`, `"0px"`, `"0%"`, `"0%c"`, `"100%cm"`, `"0%y"` and `"0%x`
 - `clips_children` - boolean
 - `allow_clipping` - boolean
 - `layer` - a number (positive or negative). the layer (like `z-index` in CSS) of the element relative to it's parent and so on. An element with a greater layer will be in front of an element with a lower layer.
@@ -238,15 +328,15 @@ Some #names only work on specific screens.
 - `alpha` - number from 0.0 to 1.0. Opacity of the image or text. If it's defined in any other type it won't affect any image/text child inside of it. For that you need to enable `propagate_alpha`
 - `locked_alpha` - same as `alpha`. It will be applied instead of `alpah` if the parent element is locked
 - `propagate_alpha` - boolean. Propagate the alpha property to any image or text child.
-- `anims`
-- `animation_reset_name`
-- `variables`
-- `property_bag`
-- `controls`
-- `bindings`
+- `anims` - `[]`. Name of the animations that will apply to the element
+- `animation_reset_name` - string
+- `variables` - `[]` or `{}`
+- `property_bag` - `{}`
+- `controls` - `[]`
+- `bindings` - `[]`
 
 ## Focus Properties
-- `focus_identifier`
+- `focus_identifier` - string
 - `focus_enabled` - boolean
 - `focus_wrap_enabled` - boolean 
 - `focus_magnet_enabled` - boolean 
@@ -262,20 +352,43 @@ Some #names only work on specific screens.
 - `focus_nagivation_mode_left` - possible values are  `none`, `stop`, `custom` and `contained`
 - `focus_nagivation_mode_right` - possible values are  `none`, `stop`, `custom` and `contained`
 - `focus_container_custom_up`
+  - `other_focus_container_name` - name of the object that will receive focus when the focus of this container ends on `button.menu_up`
 - `focus_container_custom_down`
 - `focus_container_custom_left`
 - `focus_container_custom_right`
 
+For `focus_container_custom_*`
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "other_panel": {
+    ...
+    "focus_container": true,
+    "controls": [
+      ...
+    ]
+  },
+
+  "input_panel": {
+    ...
+    "focus_container_custom_up": [
+      {
+        "other_focus_container_name": ""
+      }
+    ]
+  }
+}
+```
+
 ## TTS Properties
-- `tts_name`
-- `tts_control_header`
-- `tts_section_header`
+- `tts_name` - string
+- `tts_control_header` - string
+- `tts_section_header` - string
 - `tts_control_type_order_priority` - number
 - `tts_index_priority` - number
-- `tts_override_control_value`
+- `tts_override_control_value` - string
 - `tts_ignore_count` - boolean
 - `tts_inherit_siblings` - boolean
- 
 
 ## Element Types
 
@@ -283,13 +396,16 @@ Some #names only work on specific screens.
 Like `<div>` in HTML, `panel` is a usual container.
 
 ### Stack Panel
-`stack_panel` is a panel that stacks children depending on `orientation` property value (`horizontal` or `vertical` (default)).
+`stack_panel` is a panel that stacks children depending on `orientation` property value.
+
+Specific properties:
+- `orientation` - values are `vertical` (default) and `horizontal`
 
 ### Input Panel
 `input_panel` is a panel that can receive input.
 
 Specific properties:
-- `modal` - boolean 
+- `modal` - boolean
 - `inline_modal` - boolean
 - `hover_enabled` - boolean
 - `prevent_touch_input` - boolean
@@ -297,13 +413,16 @@ Specific properties:
 - `always_handle_controller_direction` - boolean
 
 ### Grid
-An element that draws a grid of elements. Grid properties:
+An element that draws a grid of elements.
+
+- `collection_name` - what collection will be parsed (`"hotbar_items"`, 
+  
+Specific properties:
 - `grid_dimensions` - number of rows and columns in form of `[x_size, y_size]`
 - `maximum_grid_items` - numbers of items the grid has
 - `grid_rescaling_type` - grid rescaling orientation and possible values are `"vertical"` and `"horizontal"`
 - `grid_fill_direction` - possible values are `"vertical"` and `"horizontal"`
-- `grid_item_template` - an element capable of handling collections (e.g. `"common.container_item"`)
-- `collection_name` - what collection will be parsed (`"hotbar_items"`, `"container_items"`, `"inventory_items"` and etc.)
+- `grid_item_template` - an element capable of handling collections (e.g. `"common.container_item"`), `"container_items"`, `"inventory_items"` and etc.)
 - `grid_dimension_binding` - binding name for grid dimensions
 
 If you want to pick an element inside of a grid, create a child derived from the item template and with `"grid_position"` property:
@@ -333,10 +452,46 @@ If you want to pick an element inside of a grid, create a child derived from the
 - `font_size` - a string. Possible values are `small`, `normal` (default), `large` and `extra-large`
 - `font_scale_factor` - a float or an integer. It scales the size of the text.`1` is the default value (It's better to use this rather than `font_size`).
 - `shadow` - a boolean. Adds a shadow to text
-- `localize` - a boolean. Translate the text using the *_*.lang files
+- `localize` - a boolean. Translate the text using the \*_\*.lang files
 - `enable_profanity_filter` - a boolean. Filters bad words included on the `profanity_filter.wlist` file
 - `hide_hyphen` - a boolean. Hide all hyphens in the text
-- `notify_on_ellipses`
+- `notify_on_ellipses` - `[]` array of the name of the objects it will receive #using_ellipses when the text has '...'
+
+Use of `notify_on_ellipses`. Mostly used with hardcoded texts.
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "label": {
+    ...
+    "notify_on_ellipses": [
+      "my_button",
+      "my_other_button"
+    ]
+  },
+
+  "my_button": {
+    ...
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_property_name": "#using_ellipses",
+        "target_property_name": "#visible"
+      }
+    ]
+  },
+
+  "my_other_button": {
+    ...
+    "bindings": [
+      {
+        "binding_type": "view",
+        "source_property_name": "#using_ellipses",
+        "target_property_name": "#visible"
+      }
+    ]
+  }
+}
+```
 
 ### Image
 `image` is a textured element. Its properties are:
@@ -346,6 +501,7 @@ If you want to pick an element inside of a grid, create a child derived from the
 - `bilinear` - a boolean. Applies bilinear filtering to the image
 - `grayscale`- a boolean. Makes image black and white
 - `fill` - boolean
+- color - same as the `color` from `label` type. Only works if the texture is fully white or black 
 - `$fit_to_width`- boolean
 - `keep_ratio` - boolean. Keep the image ratio
 - `clip_direction` - when `#clip_ratio` is used, tells in which direction will clip go (`down` will tell to clip from the top to the bottom), possible values are `"up"`,`"down"`,`"left"`,`"right"`.
@@ -353,9 +509,9 @@ If you want to pick an element inside of a grid, create a child derived from the
 - `uv_size` - `[width, height]`
 - `nineslice_size` - a number, `[x, y]` or `[x1, y1, x2, y2]`
 - `base_size` - `[base_width, base_height]`
-- `zip_folder`
-- `texture_file_system`
-- `force_texture_reload` - boolean
+- `zip_folder` - string. Used with hardcoded paths
+- `texture_file_system` - string. Used with hardcoded paths
+- `force_texture_reload` - boolean. Reload image when the texture path is changed
 
 To use clipping, bind a `#*_ratio` binding name to a `#clip-ratio` property with binding condition `"always"`. Progress arrow and fuel images in furnace UI work like this.
 
@@ -376,12 +532,12 @@ Specific properties:
 Their toggle state can be binded to something by using `"#toggle_state"`.
 
 Specific properties:
-- `toggle_name`
-- `toggle_default_state`
+- `toggle_name` - string
+- `toggle_default_state` - boolean
 - `radio_toggle_group` - boolean.
-- `toggle_group_forced_index` 
-- `toggle_group_default_selected`
-- `toggle_grid_collection_name`
+- `toggle_group_forced_index` - number
+- `toggle_group_default_selected` - index of the default toggle of the its group
+- `toggle_grid_collection_name` - name of the collection the toggle belongs to
 - `enable_directional_toggling` - boolean
 - `toggle_on_button` - toggle (action) id
 - `toggle_off_button` - toggle (action) id
@@ -399,8 +555,8 @@ Specific properties:
 - `sound_pitch` - number
 
 Specific TTS:
-- `tts_toggle_on`
-- `tts_toggle_off`
+- `tts_toggle_on` - string
+- `tts_toggle_off` - string
 
 Specific property bag:
 - `#toggle_state` - boolean
@@ -409,7 +565,7 @@ Specific property bag:
 `slider` is a slider.
 
 Specific properties:
-- `slider_name`
+- `slider_name` - string
 - `slider_direction` - the orientation of the slider. Possible values `vertical` and `horizontal`
 - `slider_steps` - number of possible values
 - `slider_track_button` - button (action) id
@@ -428,7 +584,7 @@ Specific properties:
 - `slider_select_on_hover` -  boolean. Focus slider when it's hovered.
 
 Specific TTS
-- `tts_value_changed`
+- `tts_value_changed` - string
 
 Specific property bag:
 - `#slider_steps` - number
@@ -461,7 +617,7 @@ Specific properties:
 - `locked_control` - name of the child that will be displayed only in locked state
 - `text_control` - name of the child that will be used for display the text
 - `place_holder_control` - name of the child that will be used for display the placeholder text
-- `virtual_keyboard_buffer_control`
+- `virtual_keyboard_buffer_control` - string
 
 ### Scroll View
 `scroll_view` creates a scrolling panel element.
@@ -493,15 +649,15 @@ Specific properties:
 `dropdown` is a toggle for dropdown purposes.
 
 Specific properties (includes toggle properties):
-- `dropdown_name`
+- `dropdown_name` - string
 - `dropdown_content_control` - name of the child that will have the dropdown content
-- `dropdown_area`
+- `dropdown_area` - string
 
 ### Factory
 `factory`
 
 Specific properties:
-- `control_ids`
+- `control_ids` - `{}`
 
 ### Custom
 `custom`
@@ -562,8 +718,84 @@ Specific properties:
 - `close_on_player_hurt` - boolean. Closes the screen if the player is hurted
 
 ## Animations
-`anim_type`
+`anim_type` and possible values are `wait`, `size`, `offset`, `alpha` and `flipbook`
 
+Offset animation example.
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "namespace": "example_nm",
+
+  "anim_offset": {
+    "anim_type": "offset",
+    "from": [0, 0],
+    "to": [10, 10],
+    "duration": 2
+  },
+
+  "element": {
+    ...
+    "offset": "@example_nm.anim_offset"
+  } 
+}
+```
+
+Wait animation example. It's mostly used when you want no animation between two other animtions.
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "namespace": "example_nm",
+
+  "anim_size_0": {
+    "anim_type": "size",
+    "from": ["100%", 27],
+    "to": ["100% + 3px", 30],
+    "duration": 1.25,
+    "next": "@example_nm.anim_wait"
+  },
+
+  "anim_wait": {
+    "anim_type": "wait",
+    "duration": 1,
+    "next": "@example_nm.anim_size_1"
+  },
+
+  "anim_size_1": {
+    "anim_type": "size",
+    "from": ["100% + 3px", 30],
+    "to": ["100%", 27],
+    "duration": 1.25,
+    "next": "@example_nm.anim_size_0"
+  },
+
+  "element": {
+    ...
+    "size": "@example_nm.anim_size_0"
+  } 
+}
+```
+
+Flipbook animation example.
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "namespace": "example_nm",
+
+  "anim_flip_book": {
+    "anim_type": "flip_book",
+    "initial_uv": [0, 0], // initial_uv is always [0, 0]
+    "frame_count": 50,
+    "frame_step": 1,
+    "fps": 15
+    ...
+  },
+
+  "image": {
+    ...
+    "uv": "@example_nm.anim_flip_book"
+  } 
+}
+```
 - `initial_uv` - `[0, 0]`
 - `frame_count` - number
 - `frame_steps` - number
@@ -571,14 +803,46 @@ Specific properties:
 - `scale_from_starting_alpha` - boolean
 - `fps` - number of frames per second
 - `easing` - possible values are `linear`, `spring`, `in_sine`, `in_quart`, `in_quint`, `in_expo`, `out_expo`, `out_cubic` and `out_back` 
-- `duration` - number. Duration of the animation
+- `duration` - number. Duration of the animation in seconds
 - `from` - number (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset)
 - `to` - number (`anim_type` alpha) or a `size`/`offset` array (`anim_type` size/offset) 
-- `destroy_at_end` - name of the object to destroy (stop rendering/ignored) when the animation ends
+- `destroy_at_end` - name of the object to destroy (stop rendering/ignored) when the animation ends. Doesn't require namespace
 - `next` - name of the animation that will play after this ends
 - `resettable` - boolean
 - `play_event` - name of the event when the animation starts 
-- `end_event` - name of the event when the animation ends 
+- `end_event` - name of the event when the animation ends
+
+Instead of saying `"offset": "@..."`, `"size": "@..."`, `"alpha": "@..."`, etc, you can reference the animations that will applied to the element using the `anims` property.
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "namespace": "example_nm",
+
+  "anim_size": {
+    "anim_type": "size",
+    "from": ["100%", 27],
+    "to": ["100% + 3px", 30],
+    "duration": 1.25,
+    "next": "@..."
+  },
+
+  "anim_alpha": {
+    "anim_type": "size",
+    "from": 1,
+    "to": 0.5,
+    "duration": 2,
+    "next": "@..."
+  },
+
+  "element": {
+    ...
+    "anims": [
+      "@example_nm.anim_size",
+      "@example_nm.anim_alpha"
+    ]
+  } 
+}
+```
 
 ## Hardcoded Variables
 - `$trial` - if it is in the trial version of the game
@@ -621,9 +885,191 @@ Specific properties:
 ## Hardcoded Button IDs
 Some of them only work in specific screens.
 
+### Buttons IDs (`from_button_id`):
 - `button.menu_exit`
+- `button.menu_cancel` (`Escape` key or Controller `B`)
+- `button.menu_inventory_cancel` (`Open Inventory` keybinding)
+- `button.menu_ok` (`Enter` key)
+- `button.menu_select` (Mouse click)
+- `button.controller_select` (Controller `X`)
+- `button.menu_secondary_select`
+- `button.controller_secondary_select`
+- `button.controller_secondary_select_left`
+- `button.controller_secondary_select_right` (Controller `R3`)
+- `button.controller_start`
+- `button.menu_up` (`Arrow Up` key)
+- `button.menu_down` (`Arrow Down` key)
+- `button.menu_left` (`Arrow Left` key)
+- `button.menu_right` (`Arrow Right` key)
+- `button.menu_tab_left` (`Menu Tab Left` keybinding or Controller `Left Bumper`)
+- `button.menu_tab_right` (`Menu Tab Right` keybinding or Controller `Right Bumper`)
+- `button.menu_alternate_tab_left`
+- `button.menu_alternate_tab_right`
+- `button.menu_autocomplete` (Uses `Tab` key)
+- `button.menu_autocomplete_back`
+- `button.controller_autocomplete`
+- `button.controller_autocomplete_back`
+- `button.menu_textedit_up` (Uses `Arrow Up` key)
+- `button.menu_textedit_down` (Uses `Arrow Down` key)
+- `button.controller_textedit_up`
+- `button.controller_textedit_down`
+- `button.menu_auto_place`
+- `button.menu_inventory_drop` (`Drop Item` keybinding)
+- `button.menu_inventory_drop_all` (`Drop Item` + `Control` key)
+- `button.menu_clear`
+- `button.chat` (`Open Chat` keybinding)
+- `button.mobeffects` (`Mob Effects` keybinding)
+- `key.emote` (`Emote` keybinding)
+- `button.slot1` (Emote Wheel) (`1` key)
+- `button.slot2` (Emote Wheel) (`2` key)
+- `button.slot3` (Emote Wheel) (`3` key)
+- `button.slot4` (Emote Wheel) (`4` key)
+- `button.slot5` (Emote Wheel) (`5` key)
+- `button.slot6` (Emote Wheel) (`6` key)
+- `button.inventory_right` (`Mouse Wheel Up`)
+- `button.inventory_left` (`Mouse Wheel Down`)
+- `button.scoreboard`
+- `button.hide_gui` (`F1` key)
+- `button.hide_tooltips`
+- `button.hide_paperdoll` 
+- `button.slot0`
+- `button.slot1` (`1` key)
+- `button.slot2` (`2` key)
+- `button.slot3` (`3` key)
+- `button.slot4` (`4` key)
+- `button.slot5` (`5` key)
+- `button.slot6` (`6` key)
+- `button.slot7` (`7` key)
+- `button.slot8` (`8` key)
+- `button.slot9` (`9` key)
+- `button.menu_vr_realign`
+- `any` (literally the name of it)
+
+### Specific Screen Button IDs:
+#### Settings (`settings_screen.json`)
+- `button.open_content_log_history`
+- `button.clear_content_log_files`
+- `button.clear_msa_token_button`
+- `button.terms_and_conditions_popup`
+- `button.credits`
+- `button.unlink_msa`
+- `button.attribute_popup`
+- `button.licensed_content`
+- `button.font_license`
+- `button.tos_hyperlink`
+- `button.privpol_hyperlink`
+- `button.tos_popup`
+- `button.privpol_popup`
+- `button.binding_button`
+- `button.reset_binding`
+- `button.reset_keyboard_bindings`
+- `button.view_account_errors`
+
+#### Book (`book_screen.json`)
+- `button.prev_page`
+- `button.next_page`
+- `button.book_exit`
+
+#### Chat (`chat_screen.json`)
+- `button.send`
+- `button.chat_autocomplete`
+- `button.chat_autocomplete_back`
+- `button.chat_previous_message`
+- `button.chat_next_message`
+- `button.chat_menu_cancel`
+
+#### Command Block (`command_block_screen.json`)
+- `command_block.input_minimize`
+- `button.chat_autocomplete`
+- `button.chat_autocomplete_back`
+
+#### Comment (`comment_screen.json`)
+- `button.comment_options_close`
+- `button.comment_feed_options_close`
+- `button.close_comments`
+- `button.comment_next_button`
+- `button.comment_prev_button`
+
+#### Credits (`credits_screen.json`)
+- `button.show_skip`
+
+#### Death Menu (`death_screen.json`)
+- `button.respawn_button`
+- `button.main_menu_button`
+
+#### Emote Wheel (`emote_screen_wheel.json`)
+- `button.rebind_mode`
+- `button.dressing_room`
+- `button.emote_selected`
+- `button.select_emote_slot_0`
+- `button.select_emote_slot_1`
+- `button.select_emote_slot_2`
+- `button.select_emote_slot_3`
+- `button.select_emote_slot_4`
+- `button.select_emote_slot_5`
+- `button.iterate_selection_left`
+- `button.iterate_selection_right`
+
+#### Feed (`feed_screen.json`)
+- `button.feed_image`
+- `button.newpost`
+- `button.add_screenshot`
+- `button.feed_comment`
+- `button.feed_prev_button`
+- `button.feed_next_button`
+- `button.feed_new_post_close`
+- `button.feed_options_close`
+- `button.close_feed`
+
+#### Game Menu (`pause_screen.json`)
+- `button.to_profile_or_skins_screen`
+- `button.player_profile_card`
+- `button.menu_continue`
+- `button.menu_server_store`
+- `button.screenshot`
+- `button.menu_how_to_play`
+- `button.menu_feedback`
+- `button.menu_permission`
+- `button.menu_invite_players`
+- `button.menu_quit`
+- `button.menu_feed`
+- `button.pause_focus_filler`
+
+#### In Bed (`in_bed_screen.json`)
+- `button.wake_up_button`
+
+#### Invite (`invite_screen.json`)
+- `button.add_friend`
+- `button.add_member`
+- `button.send_invites`
+
+#### Manage Feed (`manage_feed_screen.json`)
+- `button.manage_feed_prev_button`
+- `button.manage_feed_next_button`
+- `button.manage_feed_ignore`
+- `button.manage_feed_delete`
+- `button.close_manage_feed`
+
+#### Anvil (`anvil_screen.json`)
+- `button.anvil_take_all_place_all`
+- `button.anvil_coalesce_stack`
+
+#### Cartography Table (`cartography_screen.json`)
+- `button.cartography_result_take_all_place_all`
+
+#### Grindstone (`grindstone_screen.json`)
+- `button.grindstone_take_all_place_all`
+- `button.grindstone_coalesce_stack`
+
+#### Loom (`loom_screen.json`)
+- `button.loom_result_take_all_place_all`
+- `button.pattern_select`
+ 
+### Others
+- `button.try_menu_exit`
+- `button.close_dialog`
 - `button.menu_play`
-- `$play_button_target` (hardcoded variable)
+- `$play_button_target` (**hardcoded**)
 - `button.menu_store`
 - `button.menu_achievements`
 - `button.menu_settings`
@@ -640,89 +1086,76 @@ Some of them only work in specific screens.
 - `button.menu_buy_game`
 - `button.menu_invite_notification`
 - `button.search`
+- `button.hotbar_inventory_button`
 - `button.select_offer`
 - `button.action_button`
 - `button.create_realm`
-- `button.tos_hyperlink`
-- `button.privpol_hyperlink`
-- `button.tos_popup`
-- `button.privpol_popup`
-- `button.binding_button`
-- `button.reset_binding`
-- `button.reset_keyboard_bindings`
-- `button.view_account_errors`
 - `button.switch_accounts`
-- `button.open_content_log_history`
-- `button.clear_content_log_files`
-- `button.clear_msa_token_button`
-- `button.terms_and_conditions_popup`
-- `button.credits`
-- `button.unlink_msa`
-- `button.attribute_popup`
-- `button.licensed_content`
-- `button.font_license`
-- ...
-
-Keyboard Keys/Mouse/Controller Buttons/etc IDs (`from_button_id`):
-- `button.menu_exit`
-- `button.menu_cancel`
-- `button.menu_inventory_cancel`
-- `button.menu_ok`
-- `button.menu_select`
-- `button.controller_select`
-- `button.menu_secondary_select`
-- `button.controller_secondary_select`
-- `button.controller_secondary_select_left`
-- `button.controller_secondary_select_right`
-- `button.controller_start`
-- `button.menu_up`
-- `button.menu_down`
-- `button.menu_left`
-- `button.menu_right`
-- `button.menu_tab_left`
-- `button.menu_tab_right`
-- `button.menu_alternate_tab_left`
-- `button.menu_alternate_tab_right`
-- `button.menu_autocomplete`
-- `button.menu_autocomplete_back`
-- `button.controller_autocomplete`
-- `button.controller_autocomplete_back`
-- `button.menu_textedit_up`
-- `button.menu_textedit_down`
-- `button.controller_textedit_up`
-- `button.controller_textedit_down`
-- `button.menu_auto_place`
-- `button.menu_inventory_drop`
-- `button.menu_inventory_drop_all`
-- `button.menu_clear`
+- `button.hotbar_select`
+- `button.hotbar_ok`
+- `button.slot_pressed`
+- `button.hotbar_inventory_left`
+- `button.hotbar_inventory_right`
+- `button.hide_gui_all`
+- `button.hide_tooltips_hud`
+- `button.hide_paperdoll_hud`
+- `button.slot_1`
+- `button.slot_2`
+- `button.slot_3`
+- `button.slot_4`
+- `button.slot_5`
+- `button.slot_6`
+- `button.slot_7`
+- `button.slot_8`
+- `button.slot_9`
+- `button.slot_0`
 - `button.chat`
-- `button.mobeffects`
-- `key.emote`
-- `button.slot1` (Emote Wheel)
-- `button.slot2` (Emote Wheel)
-- `button.slot3` (Emote Wheel)
-- `button.slot4` (Emote Wheel)
-- `button.slot5` (Emote Wheel)
-- `button.slot6` (Emote Wheel)
-- `button.inventory_right`
-- `button.inventory_left`
-- `button.scoreboard`
-- `button.hide_gui`
-- `button.hide_tooltips`
-- `button.hide_paperdoll`
-- `button.slot0`
-- `button.slot1`
-- `button.slot2`
-- `button.slot3`
-- `button.slot4`
-- `button.slot5`
-- `button.slot6`
-- `button.slot7`
-- `button.slot8`
-- `button.slot9`
-- `button.menu_vr_realign`
-- `any` (literally the name of it)
-
-Button IDs (`to_button_id`):
-- `button.anvil_take_all_place_all`
+- `button.menu_continue`
+- `user_confirm_dialog.escape`
+- `user_confirm_dialog.left_button`
+- `user_confirm_dialog.middle_button`
+- `user_confirm_dialog.rightcancel_button`
+- `button.view_skin`
+- `button.delete_action`
+- `button.exit_student`
+- `button.play_video`
+- `button.menu_store_error`
+- `button.left_panel_tab_increment`
+- `button.left_panel_tab_decrement`
+- `button.right_panel_tab_increment`
+- `button.right_panel_tab_decrement`
+- `button.layout_increment`
+- `button.layout_decrement`
+- `button.is_hovered`
+- `button.container_take_all_place_all`
+- `button.container_take_half_place_one`
+- `button.container_auto_place`
+- `button.coalesce_stack`
+- `button.shape_drawing`
+- `button.destroy_selection`
+- `button.clear_selected_recipe`
+- `button.clear_hotbar_or_remove_one`
+- `button.clear_hotbar_or_drop`
+- `button.container_reset_held`
+- `button.container_auto_place`
+- `button.container_slot_hovered`
+- `button.button_hovered`
+- `button.shift_pane_focus`
+- `button.focus_left`
+- `button.focus_right`
+- `button.filter_toggle_hovered`
+- `button.drop_one`
+- `button.cursor_drop_one`
+- `button.drop_all`
+- `button.cursor_drop_all`
+- `button.search_bar_clear`
+- `button.search_bar_selected`
+- `button.search_bar_deselected`
+- `button.menu_leave_screen`
+- `button.turn_doll`
+- `button.select_skin`
+- `button.skin_hovered`
+- `button.skin_unhovered`
+- `button.leave`
+- `button.leave_on_device`
 - ...
