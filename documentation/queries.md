@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Molang
+title: Queries
 parent: Documentation
 ---
 
@@ -191,3 +191,25 @@ For the player, the variable will track whenever the arm bones are swinging, thi
 
 Evaluates to true when a `knockback_roar` attack is happening.
 
+# query.head_x_rotation
+
+Formatted like: `query.head_x_rotation(x)` 
+
+Where `x` specifies the head of the entity. It is not really relevant for any entity but the wither. 
+
+Returns head pitch. looking up returns `-89.9`, looking all the way down returns `89.9`. 
+
+# query.head_y_rotation
+Formatted like: `query.head_y_rotation(x)`
+
+Where `x` specifies the head of the entity. It is not really relevant for any entity but the wither. 
+
+Returns yaw of the head from `-179.9` to `179.9`. the values wrap around so like if you are at `-179.9` and you turn just a little bit, it instantly goes to `179.9`.
+
+# query.target_x_rotation and query.target_y_rotation
+
+Identical to the respective `query.head_*_rotation`, however has no optional argument for selecting head.
+
+# query.eye_target_x_rotation and query.eye_target_y_rotation
+
+Not valid for player. not really sure what its good for.
