@@ -1,9 +1,7 @@
----
+  ---
 layout: page
 title: JSON UI
 parent: Concepts
-badge: NEW
-badge_color: blue
 ---
 
 # JSON UI
@@ -19,82 +17,77 @@ badge_color: blue
 
 
 ## Introduction
-All editable vanilla UIs are stored in `RP/ui/` in `.json` files. Though the file can have any extension since it will always be read as a JSON file.
+All editable vanilla UI files are stored in `RP/ui/` in `.json` files. Though the file can have any extension since it will always be read as a JSON file.
 
-They can be divided into two groups:
+They can be divided into three groups:
 - System files:
   - `_global_varibles.json` - for variables used in multiple files
-  - `_ui_defs.json` - for referencing the files used on the UI
+  - `_ui_defs.json` - for referencing the files used on the UI.
 - Screens:
   - `hud_screen.json`
   - `inventory_screen.json`
   - etc.
+- Additional files: (templates, like `ui_common.json`, `ui_templates_*.json` etc.
 
-Additional files: (templates, like `ui_common.json`, `ui_templates_*.json` etc.
+## UI Defs
+In `_ui_defs.json` you add all the files that will be used on the UI.
 
-## Screens
-Screen files contain UIs which are shown in appropriate situations:
-- `hud_screen` is used in HUD
-- `inventory_screen` is used in Inventory screen
-- etc.
+Imagine I created the files `RP/ui/button.json` and `RP/my_ui/main_menu.json`:
 
-All files are pretty self-explanatory. An important thing to notice is that **different screens can access different variables**. More about that later.
-
-## Notations
-So, what are variables and how can elements derive from others?
-
-### Variables
-Everything that has `$` as the first letter of its name is a variable.
-Variables can store numbers, booleans, strings and arrays. It's unknown if they can store elements.
-
-{% include filepath.html path="RP/ui/example_file.json"%}
+{% include filepath.html path="RP/ui/_ui_defs.json"%}
 ```jsonc
 {
-  "cool_element": {
+  "ui_defs": [
+    "ui/button.json",
+    "my_ui/main_menu.json"
+  ]
+}
+```
+
+Three things to notice:
+- You have to add the whole directory starting from the RP folder
+- You can have files wherever you want. Even `RP/textures/folder_1/papers/sound/scrollpane.json`
+- The `_ui_defs.json` in your RP doesn't need to have the vanilla files because all related UI files will not be replaced. Only overwritten.
+
+## Global Variables
+Let's say you have a variable `"$info_text_color": [0.8, 0.8, 0.8]` that stores a color for the information texts.
+If you use the same value in multiple files instead of repeatedly writing `"color": [0.8, 0.8, 0.8]` you can just reference the variable (`"color": "$info_text_color"`) and put the variable on the `_global_variables.json` file.
+Another good advantage of doing that is you only need to change in one place and all the elements that use the variable will have the value updated.
+
+{% include filepath.html path="RP/ui/_global_variables.json"%}
+```jsonc
+{
+ "$info_text_color": [0.8, 0.8, 0.8]
+}
+```
+
+{% include filepath.html path="RP/my_ui/file1.json"%}
+```jsonc
+{
+  "some_info": {
     ...
-    "$foo": 100,         // a number variable
-    "$bar": "string",    // a string variable
-    "$arr": [10,10],     // an array variable
-    "$elem": "template_elem" // a string pointing at the element
-    ...
-    // How to use
-    "size": "$arr"           // puts the value of $arr into the size property
-    "string_param": "$bar"   // sets string_param to the value of $bar
+    "text": "Hey",
+    "color": "$info_text_color"
   }
 }
 ```
 
-### Deriving
-To derive some element from another you should use `new@super` notation. An example:
-
-{% include filepath.html path="RP/ui/example_file.json"%}
+{% include filepath.html path="RP/my_ui/file2.json"%}
 ```jsonc
 {
-  "foobar": {
-    "$cool_variable": 777,
-    "$fixbugs": false
-  },
-
-  // "fizzbuzz" extends "foobar"
-  // and replaces $cool_variable value with 666.
-  // $fixbugs is still false for fizzbuzz, because it wasn't changed
-  "fizzbuzz@foobar": {
-    "$cool_variable": 666
-  } 
+  "info": {
+    ...
+    "text": "Information",
+    "color": "$info_text_color"
+  }
 }
 ```
-You should remember that `controls` property is an array and if you add it to a derived element, it will completely replace the superior one. More about that later.
-
-Also you can use a string variable after `@`, its value will be interpreted as a superior element name. You may use it before `@` as well, its value will become the derived element name, but that'd be a strange move.
-
-### Binding names
-There are `#things` that have a hash sign in the beginning. They're mostly used in `"property_bag"` objects in form of `"#property": "value"` and in `"bindings"` arrays. They can store the same types that `$variables` can store. More about binding later.
 
 ## Namespaces
-Namespaces are used to access elements in some file across all other files.
+Namespaces are identifiers for the UI files. They are used to access elements in some file across all other files.
+They must be unique and short if possible because you may use it a lot of times.
+
 An example:
-
-
 {% include filepath.html path="RP/ui/file_a.json"%}
 ```jsonc
 {
@@ -112,31 +105,91 @@ An example:
 }
 ```
 
-WARNING! Don't create new files using vanilla pre-existing namespaces.
+## Screens
+Screen files contain UIs which are shown in appropriate situations:
+- `hud_screen` is used in HUD
+- `inventory_screen` is used in Inventory screen
+- etc.
+
+All files are pretty self-explanatory. An important thing to notice is that **different screens can access different variables**. More about that later.
+
+## Notations
+So, what are variables and how can elements derive from others?
+
+### Variables
+Everything that has `$` as the first letter of its name is a variable.
+Variables can store numbers, booleans, strings and arrays.
+
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "cool_element": {
+    ...
+    "$foo": 100,         // a number variable
+    "$bar": "string",    // a string variable
+    "$arr": [10, 10],     // an array variable
+    "$elem": "my_button.template_button" // a string pointing at the element
+    ...
+    // How to use
+    "size": "$arr"           // puts the value of $arr into the size property
+    "text": "$bar"   // sets text to the value of $bar
+    "controls": [
+      { "tplt_element@$elem": {} }
+    ]
+  }
+}
+```
+
+### Deriving
+To derive some element from another you should use `new@super` notation. An example:
+
+{% include filepath.html path="RP/ui/example_file.json"%}
+```jsonc
+{
+  "foobar": {
+    ...
+    "color": "white",
+    "$cool_variable": 777,
+    "$fixbugs": false
+  },
+
+  // "fizzbuzz" extends "foobar"
+  // and replaces $cool_variable value with 666.
+  // $fixbugs is still false for fizzbuzz, because it wasn't changed
+  "fizzbuzz@foobar": {
+    "color": "red",
+    "$cool_variable": 666
+  } 
+}
+```
+
+Any property you add to the derive element will completely replace the superior one.
+Also you can use a string variable after `@`, its value will be interpreted as a superior element name. You may use it before `@` as well, its value will become the derived element name.
 
 ## UI Elements
-Most of the element have `type`, `size` and `controls` (**if they have children**).
-A typical element looks like this:
+All the elements must have the `type` property because its value will define what kind of element it is.
+
+Here's an example:
 
 {% include filepath.html path="RP/ui/example_file.json"%}
 ```jsonc
 {
   ...
-  "typical_element@common.template_element": { //"common" is ui_common.json namespace
-    "size": [32, 32],
-    "$template_var": "new_value",
-
-    //and if we want it to have children
-    "controls": [
-      {
-        "child1@some_other_template": {...}
-      }, 
-      ...
-    ]
+  "example_element": {
+    "type": "label",
+    "text": "Hello World"
+    ...
   }
   ...
 }
 ```
+
+Here the element is `type` `label`. So it will render a text.
+
+### Binding names
+There are `#things` that have a hash sign in the beginning. They're mostly used in `"property_bag"` objects in form of `"#property": "value"` and in `"bindings"` arrays. They can store the same types that `$variables` can store. More about binding later.
+
+
 
 ## Element Types
 ### Grid
@@ -288,6 +341,7 @@ You can ignore a mapping using the `ignored` property
 ```
 
 ## Operators
+
 | Operator Name          | Operator   | Examples                                                                          |
 |------------------------|------------|-----------------------------------------------------------------------------------|
 | Addiction              | +          | `"100% + 420px"` `($text + ' my')` `($index + 2)` `('#' + $bdg_nm + '_name')`     |
