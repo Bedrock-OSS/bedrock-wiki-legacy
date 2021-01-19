@@ -199,12 +199,12 @@ RP/textures/particle/example.particle.png
                                 <li><span class="image">...</span></li>
                             </ul>
                         </li>
-                        <li><span class="image">flame_atlas.png</span>
-                        <li><span class="image">forcefield.png</span>
-                        <li><span class="file">flipbook_textures.json</span>
-                        <li><span class="file">item_texture.json</span>
-                        <li><span class="file">terrain_texture.json</span>
-                        <li><span class="file">textures_list.json</span>
+                        <li><span class="image">flame_atlas.png</span></li>
+                        <li><span class="image">forcefield.png</span></li>
+                        <li><span class="file">flipbook_textures.json</span></li>
+                        <li><span class="file">item_texture.json</span></li>
+                        <li><span class="file">terrain_texture.json</span></li>
+                        <li><span class="file">textures_list.json</span></li>
                     </ul>
                 </li>
                 <li><span class="folder">ui</span>
