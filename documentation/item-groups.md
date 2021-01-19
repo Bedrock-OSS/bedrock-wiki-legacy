@@ -1,4 +1,4 @@
- ---
+---
 layout: page
 title: Item Categories
 parent: Documentation
