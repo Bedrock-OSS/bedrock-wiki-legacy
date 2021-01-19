@@ -1511,6 +1511,7 @@ Some of them only work in specific screens.
 - `#close_button_visible`
 
 ## Item ID Aux (`#item_id_aux`)
+
 | Name                         | ID       | Aux Values    |
 |------------------------------|:--------:|:-------------:|
 | diamond                      | 304      | 17301504      |
