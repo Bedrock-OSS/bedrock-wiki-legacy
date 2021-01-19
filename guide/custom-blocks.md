@@ -20,7 +20,7 @@ badge_justification: left
 # Custom Blocks
 Bedrock Minecraft allows us to add custom blocks into our world, with various vanilla-like properties. In the newest beta , custom blocks can have multiple stages (like plants), directional facing, among other features. This tutorial will cover how to create some simple blocks, for the stable version of Minecraft Bedrock.
 
-[You can find the full bedrock.dev block documentation here.](https://bedrock.dev/r/Blocks.)
+[You can find the full bedrock.dev block documentation here.](https://bedrock.dev/r/Blocks)
 
 # Block Behavior File
 Block behaviors are structured similarly to entities: They contain description, as well as a list of components that describes the blocks behavior.
