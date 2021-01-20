@@ -107,7 +107,7 @@ The path to the file, such as: `"sounds/music/game/creative/creative1"`
 
 ### stream
 
-WIP
+Limits the sound to only be played a limited number of instances at a time. Good for improving preformance on sound heavy worlds.
 
 ### volume
 
@@ -115,7 +115,7 @@ How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made loude
 
 ### load_on_low_memory
 
-WIP
+Forces the loading of the sound even when nearing low memmory. "load_on_low_memory" is now deprecated as of 1.16.0
 
 ### pitch
 
