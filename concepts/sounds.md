@@ -243,7 +243,7 @@ This example shows playing a wing-flap sound, synced with an animation.
 
 # Adding sounds to Animation Controllers
 
-Sounds played in animation controllers in a similar way that animations can.
+You can play sounds within animation controllers in a similar way that animations can be.
 
 This example shows playing an explosion sound, synced using an animation controller.
 
