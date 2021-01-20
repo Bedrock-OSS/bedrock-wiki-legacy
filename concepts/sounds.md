@@ -240,3 +240,41 @@ This example shows playing a wing-flap sound, synced with an animation.
     }
 }
 ```
+
+# Adding sounds to Animation Controllers
+
+Sounds played in animation controllers in a similar way that animations can.
+
+This example shows playing an explosion sound, synced using an animation controller.
+
+{% include filepath.html path="RP/entities/custom_tnt.json" local_path="minecraft:client_entity/description"%}
+```jsonc
+"sound_effects": {
+    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
+}
+```
+{% include filepath.html path="RP/animation_controllers/custom_tnt.animation_controllers.json" local_path="animation_controllers/custom_tnt.animation_controllers.json"%}
+```jsonc
+"states": {
+  "default": {
+    "transitions": [
+      {
+        "explode_state": "query.mark_variant == 1"
+      }
+    ]
+  },
+  "explode_state": {
+    "sound_effects": [
+      {
+        "effect": "explosion"
+      }
+    ],
+    "transitions": [
+      {
+        "default": "query.mark_variant == 0"
+      }
+    ]
+  }
+}
+```
+
