@@ -112,8 +112,10 @@ Like component-groups, events are 100% custom created inside each entity. You ca
 
 The only thing you can add/remove from an entity is `component groups`. As tempting as it is to try and add/remove components directly, this is not possible. 
 
-# Advanced Usage
-Advanced Usage {: .label .label-yellow }
+Advanced
+{: .label .label-yellow }
+
+## Conditional Events
 
 Conditional events are events using "filters" to return a component group depending on your filter see the below example.
 We are testing if a tag exists and if it doesn't return the "prefix:is_false" component but if it does exist return "prefix:is_true".
@@ -162,7 +164,7 @@ An example:
       }
 ```
 
-# Triggering events
+## Triggering events
 
 Many components can trigger events. Particularly, components like the [environment sensor](/vanilla-usage/components.html#minecraftenvironment_sensor) or [timer](/vanilla-usage/components.html#minecrafttimer).
 
