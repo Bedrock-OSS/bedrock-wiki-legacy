@@ -42,15 +42,18 @@ The following sound formats are accepted:
 
 # sound_definitions.json
 
-`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example `sound_definitions.json` that adds a new trumpet sound.
+`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example `sound_definitions.json` that adds a new trumpet sound called `example.toot`.
 
 ```json
 {
-    "dirt.roar": {
-        "category": "neutral",
-        "sounds": [
-            "sounds/trumpet"
-        ]
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "example.toot": {
+            "category": "neutral",
+            "sounds": [
+                "sounds/trumpet"
+            ]
+        }
     }
 }
 ```
