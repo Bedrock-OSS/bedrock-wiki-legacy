@@ -1,3 +1,13 @@
+---
+layout: guide
+title: Downloading Template Packs
+parent: Beginners Guide
+nav_order: 2.5
+badge: 2.5
+badge_color: guide
+badge_justification: left
+---
+
 # Downloading/Installing the template packs
 
 Resource Pack download directions:
