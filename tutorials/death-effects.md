@@ -74,14 +74,14 @@ In the case of player entities, an additional transition must be added to the se
                         }
                     ]
                 },
-                "transitions": [
-                    {
-                        "default": "query.is_alive"
-                    }
-                ],
                 "dead": {
                     "on_entry": [
                         "/say I am dead!"
+                    ],
+                    "transitions": [
+                        {
+                            "default": "query.is_alive"
+                        }
                     ]
                 }
             }
