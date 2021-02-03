@@ -94,7 +94,6 @@ Important links have a ⭐.
  - [Learn OpenGL](https://learnopengl.com/)
 
 ## Addon Marketplaces
- - [MC bedrock](https://www.mcbe.dev/)
  - [MCPEDL](http://mcpedl.com/?cookie_check=1)
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 
