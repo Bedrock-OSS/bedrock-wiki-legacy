@@ -91,7 +91,7 @@ Important links have a ⭐.
 
 ## Shader Resources
  - [The book of Shaders](https://thebookofshaders.com/)
- - [Lean OpenGL](https://learnopengl.com/)
+ - [Learn OpenGL](https://learnopengl.com/)
 
 ## Addon Marketplaces
  - [MC bedrock](https://www.mcbe.dev/)
