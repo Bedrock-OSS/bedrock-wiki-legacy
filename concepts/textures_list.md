@@ -39,6 +39,6 @@ The structure is simple, the file itself is in `RP/textures` and is named `textu
     "textures/models/bar",
 
     "textures/entity/foo",
-    "textures/entity/foo"
+    "textures/entity/bar"
 ]
 ```
