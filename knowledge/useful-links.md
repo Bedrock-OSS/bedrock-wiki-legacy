@@ -63,6 +63,7 @@ Important links have a ⭐.
 ### Tools
  - [Java to Bedrock Texture converter](https://ozelot379.github.io/ConvertJavaTextureToBedrock/)
  - [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
+ - [Molang Playground](https://bridge-core.github.io/molang-playground/)
   
 ## Documentation Links
  - ⭐[bedrock.dev](https://bedrock.dev/)
