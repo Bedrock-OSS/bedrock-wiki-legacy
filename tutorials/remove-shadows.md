@@ -15,6 +15,9 @@ parent: Tutorials
 {:toc}
 </details>
 
+Intermediate
+{: .label .label-yellow }
+
 There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
 
 ## Very small Collision Box
