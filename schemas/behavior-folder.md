@@ -111,6 +111,11 @@ BP/feature_rules/example.rule.json
                         <li><span class="file">example.spawn.json</span></li>
                     </ul>
                 </li>
+                <li><span class="folder">structures</span>
+                    <ul>
+                        <li><span class="file">example.mcstructure</span></li>
+                    </ul>
+                </li>
                 <li><span class="folder">texts</span>
                     <ul>
                         <li><span class="file">en_US.lang</span></li>

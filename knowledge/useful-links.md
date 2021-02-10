@@ -63,6 +63,7 @@ Important links have a ⭐.
 ### Tools
  - [Java to Bedrock Texture converter](https://ozelot379.github.io/ConvertJavaTextureToBedrock/)
  - [Molang Grapher](https://jannisx11.github.io/molang-grapher/)
+ - [Molang Playground](https://bridge-core.github.io/molang-playground/)
   
 ## Documentation Links
  - ⭐[bedrock.dev](https://bedrock.dev/)
@@ -91,10 +92,9 @@ Important links have a ⭐.
 
 ## Shader Resources
  - [The book of Shaders](https://thebookofshaders.com/)
- - [Lean OpenGL](https://learnopengl.com/)
+ - [Learn OpenGL](https://learnopengl.com/)
 
 ## Addon Marketplaces
- - [MC bedrock](https://www.mcbe.dev/)
  - [MCPEDL](http://mcpedl.com/?cookie_check=1)
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 

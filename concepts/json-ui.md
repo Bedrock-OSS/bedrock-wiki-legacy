@@ -1,4 +1,4 @@
-  ---
+---
 layout: page
 title: JSON UI
 parent: Concepts
