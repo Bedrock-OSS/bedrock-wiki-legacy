@@ -163,19 +163,17 @@ There will be instructions for creating custom emoji at the bottom.
 
 # Custom Emoji
 
-`warning:` This method is not officially supported. Use with caution on the Marketplace!
+**Warning: This method is not officially supported. Use with caution on the Marketplace!**
 
-To make custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some *character-slots* are already used up with the emoji above, but there are blank slots we can use.
+To make a custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some *character-slots* are already used up with the emoji above, but there are blank slots we can use.
 
 Please note that the following files have been annotated with slot information: If you use them directly, existing Emoji will have numbers added on top of them. If you need the original sprite-sheets, you can get them from the Vanilla Resources on your system (not included in the Vanilla Resource Pack downloads).
 
 To get started, you should copy the sprite-sheets into these locations:
 
-`font/glyph_E0.png`
-![)](/assets/images/Documentation/emojis/custom/glyph_E0.png)
+{% include filepath.html path="RP/font/glyph_E0.png" img="/assets/images/Documentation/emojis/custom/glyph_E0.png" %}
 
-`font/glyph_E1.png`
-![)](/assets/images/Documentation/emojis/custom/glyph_E1.png)
+{% include filepath.html path="RP/font/glyph_E0.png" img="/assets/images/Documentation/emojis/custom/glyph_E1.png" %}
 
 Your filepath should look like this:
 
@@ -194,5 +192,22 @@ Your filepath should look like this:
     </ul>
 </div>
 
+Once you have emojis inside the `glyph_E0.png` or `glyph_E1.png` you need to find your character in a hex. First two characters (`F0` or `F1`) depend on which file you added emojis to. 
+Next to characters determine the position inside the image like this `<row><column>`, where each character is a number in hexadecimal numeral system.
 
+Hexadecimal uses the decimal numbers and six extra symbols. There are no numerical symbols that represent values greater than nine, so letters taken from the English alphabet are used, specifically A, B, C, D, E and F. Hexadecimal A = decimal 10, and hexadecimal F = decimal 15([Source](https://simple.wikipedia.org/wiki/Hexadecimal)).
+Numbers in hexadecimal should be written with `0x` prefix.
+
+
+So after you are done, it might look like `0xE102` and need to convert the hex into a character. You can copy and paste your hex on a website like [unicodelookup.com](https://unicodelookup.com) or for more advanced creators [r12a.github.io/app-conversion](https://r12a.github.io/app-conversion).
+
+Additionally, you can use the one below.
+
+<div markdown="0">
+<form>
+<input id="hexValue" placeholder="Hex value" />
+<input id="result" placeholder="Result" readonly />
+<p><a onclick="document.getElementById('result').value = String.fromCodePoint(parseInt(document.getElementById('hexValue').value, 16))" class="btn btn-blue">Convert</a></p>
+</form>
+</div>
 

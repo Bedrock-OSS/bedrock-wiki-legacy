@@ -199,6 +199,14 @@ details#toc > summary {
   color: $nav-child-link-color;
 }
 
+.filepath.img {
+  border-bottom: $border-color 1px solid;
+}
+.filepath.img > img {
+  display: block;
+  margin: 1em auto;
+}
+
 .local_path::before {
   content: '# ';
   font-weight: 900;
@@ -296,4 +304,16 @@ div.highlighter-rouge {
   background-image: none;
   background: $feedback-color;
   border-radius: 4px;
+}
+
+input {
+  outline: none;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  color: #555;
+  font: 95% Arial, Helvetica, sans-serif;
 }
