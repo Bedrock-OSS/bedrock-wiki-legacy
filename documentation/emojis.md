@@ -18,7 +18,9 @@ parent: Documentation
 Minecraft has a bunch of hard-coded [Private Use Unicode symbols](https://en.wikipedia.org/wiki/Private_Use_Areas) that it automatically converts to Emoji-like symbols.
 These can be used anywhere where normal letters can - signs, books, item names, chat, etc.
 
-Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter collum directly into Minecraft.
+Below you can find platform specific Emoji's, as well as general symbols. Copy/paste the "box" character under the Letter colum directly into Minecraft.
+
+There will be instructions for creating custom emoji at the bottom.
 
 ## General
 
@@ -158,3 +160,39 @@ Below you can find platform specific Emoji's, as well as general symbols. Copy/p
 | RG (Right Grab)      |                         | U+E0C1                       |![)](/assets/images/Documentation/emojis/windowsMR/right_grab.png)|
 | LS (Left Stick)      |                         | U+E0C3                       |![)](/assets/images/Documentation/emojis/windowsMR/left_stick.png)|
 | RS (Right Stick)     |                         | U+E0C4                       |![)](/assets/images/Documentation/emojis/windowsMR/right_stick.png)|
+
+# Custom Emoji
+
+`warning:` This method is not officially supported. Use with caution on the Marketplace!
+
+To make custom emoji, we use a very similar method to the pre-built emoji, except instead of using the Microsoft sprite-sheets, we overwrite them with our own! Some *character-slots* are already used up with the emoji above, but there are blank slots we can use.
+
+Please note that the following files have been annotated with slot information: If you use them directly, existing Emoji will have numbers added on top of them. If you need the original sprite-sheets, you can get them from the Vanilla Resources on your system (not included in the Vanilla Resource Pack downloads).
+
+To get started, you should copy the sprite-sheets into these locations:
+
+`font/glyph_E0.png`
+![)](/assets/images/Documentation/emojis/custom/glyph_E0.png)
+
+`font/glyph_E1.png`
+![)](/assets/images/Documentation/emojis/custom/glyph_E1.png)
+
+Your filepath should look like this:
+
+<div markdown="0" class="folder-structure">
+    <ul>
+        <li><span class="folder">RP</span>
+            <ul>
+                <li><span class="folder">font</span>
+                    <ul>
+                        <li><span class="image">glyph_E0.png</span></li>
+                        <li><span class="image">glyph_E1.png</span></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+
+
