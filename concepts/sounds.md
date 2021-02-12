@@ -70,18 +70,18 @@ In the example above, I showed two `top-level` fields: `category`, and `sounds`.
 
 Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get different effects. 
 
-| Category | Note |
-|----------|------|
-| weather  |      |
-| block    |      |
-| bucket   |      |
-| bottle   |      |
-| ui       |      |
-| player   |      |
-| hostile  |      |
-| music    |      |
-| record   |      |
-| neutral  |      |
+| Category | Note                                            |
+|----------|-------------------------------------------------|
+| weather  |                                                 |
+| block    |                                                 |
+| bucket   |                                                 |
+| bottle   |                                                 |
+| ui       | Sounds in this category will ignore range limit |
+| player   |                                                 |
+| hostile  |                                                 |
+| music    |                                                 |
+| record   |                                                 |
+| neutral  |                                                 |
 
 ### min_distance
 
