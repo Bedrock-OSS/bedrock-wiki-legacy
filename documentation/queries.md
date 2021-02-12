@@ -169,7 +169,7 @@ Basically it's tick timer that starts after entity is first ignited and resets e
 
 Formatted like: `structural_integrity = query.structural_integrity`. 
 
-Used by boats and minecrafts for destroying it. It will decrease when attacking the entity and will recover with time. 
+Used by boats and minecarts for destroying it. It will decrease when attacking the entity and will recover with time. 
 Probably unusable by anything other than boats and minecarts.
 
 # variable.attack_time
