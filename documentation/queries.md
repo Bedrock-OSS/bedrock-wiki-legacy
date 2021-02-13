@@ -213,3 +213,11 @@ Identical to the respective `query.head_*_rotation`, however has no optional arg
 # query.eye_target_x_rotation and query.eye_target_y_rotation
 
 Not valid for player. not really sure what its good for.
+
+# variable.short_arm_offset_right
+
+Returns the offset factor for the player's rightarm bone compared to the default skin geometry. Slim-armed (3 pixel wide) skins will return `0.5` when equipped on the player. Normal (4 pixel wide) skins will return `0.0` when equipped on the player. Note: the player must go into 1st person perspective at least once for this variable to be initialized and usable elsewhere on the entity.
+
+# variable.short_arm_offset_left 
+
+Identical behavior to `variable.short_arm_offset_right` except it references the player leftarm bone.
