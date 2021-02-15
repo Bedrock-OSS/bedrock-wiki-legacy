@@ -37,7 +37,7 @@ There are two main files that we edit when we want to add sounds. Note how `soun
 The following sound formats are accepted:
  - .ogg (reccomended)
  - .wav
- - .mp3
+ - .mp3 (Not executable with ```/music```!)
  - .fsb (difficult to work with)
 
 # sound_definitions.json
