@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Texture Caching
+title: .textures_list
 parent: Concepts
 ---
 # Understanding textures_list.json
