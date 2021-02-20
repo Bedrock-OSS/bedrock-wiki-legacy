@@ -183,6 +183,12 @@
 
     window.addEventListener('load', () => {
         /*
+        Add disclaimer
+        */
+        let p = document.createElement('p');
+        p.innerText = "Not Affiliated with Mojang";
+        document.getElementsByClassName("site-footer")[0].prepend(p);
+        /*
         Add theme switcher
         */
         let switcher = document.createElement("select");
