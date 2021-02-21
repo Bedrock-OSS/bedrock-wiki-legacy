@@ -17,7 +17,7 @@ GameTests are a new feature in the 1.16.210.60 beta which allow developers to cr
 
 **Methods:**
 
-- `register(namespace, identifier, callback: (gameTest) => void)`
+- `register(namespace, identifier, callback(gameTest))`
 Registers a GameTest into Minecraft. The namespace + identifier should match the identifier of the GameTest's structure. The callback should run the test.
 
 Example:
@@ -80,7 +80,7 @@ Example:
 ```js  
 pressButton(2, 1, 0);
 ```
-- `failIf(callback: (gameTest) => void)`
+- `failIf(callback(gameTest))`
 If the callback asserts, the GameTest will fail.
 
 Example:
@@ -89,7 +89,7 @@ failIf((test) => {
     test.assertActorPresent("minecraft:cow", 1, 2, 0);
 });
 ```
-- `runAfterDelay(delay, callback: (gameTest) => void)`
+- `runAfterDelay(delay, callback(gameTest))`
 Runs the callback after the set delay (in ticks).
 
 Example:
@@ -98,7 +98,7 @@ test.runAfterDelay(20, (test) => {
     test.succeed();
 });
 ```
-- `succeedWhen(callback: (gameTest) => void)`
+- `succeedWhen(callback(gameTest))`
 If the callback asserts, the GameTest will succeed.
 
 Example:
