@@ -20,6 +20,20 @@ The bedrock documentation for Molang is notoriously bad. This page will attempt 
 
 [This list is limited. The full list of queries can be found here!](https://bedrock.dev/docs/stable/MoLang#List%20of%20Entity%20Queries)
 
+# query.get_equiped_item_name
+
+Formatted like: `query.get_equiped_item_name(hand) = 'name'`
+
+Takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and a second parameter (0=default) if you would like the equipped item or any non-zero number for the currently rendered item, and returns the name of the item in the requested slot (defaulting to the main hand if no parameter is supplied) if there is one, otherwise returns ''.
+
+Where `hand` is the hane you would like to query for, 
+
+Where `name` is the item you want to test for. No namespace, and please notice the quotes.
+
+Example: `"query.get_equipped_item_name == 'diamond'"`
+
+Can you test for items in the inventory? No. You can't. You can only test for the two slots defined here.
+
 # query.armor_texture_slot
 
 Formatted like: `query.armor_texture_slot(x) = y`. 
