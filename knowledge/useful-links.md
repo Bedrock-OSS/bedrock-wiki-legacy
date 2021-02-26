@@ -75,6 +75,7 @@ Important links have a ⭐.
  - [Bedrock Texture Pack Template](https://github.com/Brennian/BedrockTexturesTemplate)
  - [Format Versions](https://gist.github.com/Tschrock/e6615f93f0db82ef30ada63f9ad670ac)
  - [Loot- and Trade Table functions Doc](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
+ - [Docs Graveyard (Links to documentation for components removed from the docs)](https://gist.github.com/destruc7i0n/ea1a6a7f97f0986d9326c58246f96fa3)
 
 ## Vanilla Behavior & Resource Packs
  - [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate)
