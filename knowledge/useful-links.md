@@ -29,6 +29,7 @@ Important links have a ⭐.
  - [Skill Share](https://discord.gg/sZ7fkcN)
  - [Amulet](https://discord.gg/dSnwqQf)
  - [Minecraft Map Testing](https://discord.gg/QRE99eS)
+ - [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
 
 ## Software
  - ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
