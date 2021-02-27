@@ -30,6 +30,7 @@ Important links have a ⭐.
  - [Amulet](https://discord.gg/dSnwqQf)
  - [Minecraft Map Testing](https://discord.gg/QRE99eS)
  - [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
+ - [MCPECore](https://discord.gg/Zgu3qt4)
 
 ## Software
  - ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
@@ -99,6 +100,7 @@ Important links have a ⭐.
 ## Addon Marketplaces
  - [MCPEDL](http://mcpedl.com/?cookie_check=1)
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
+ - [MCPECore](https://mcpecore.com/)
 
 ## Other useful Links
  - ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
