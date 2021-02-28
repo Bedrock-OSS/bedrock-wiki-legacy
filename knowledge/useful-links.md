@@ -27,7 +27,7 @@ Important links have a ⭐.
  - [Bridge](https://discord.gg/NxKuWuA)
  - [Minecraft](https://discord.gg/minecraft)
  - [Skill Share](https://discord.gg/sZ7fkcN)
- - [Amulet](https://discord.gg/dSnwqQf)
+ - [Amulet & MCEdit](https://discord.gg/dSnwqQf)
  - [Minecraft Map Testing](https://discord.gg/QRE99eS)
  - [Mojang Bug Tracker](https://discord.gg/rpCyfKV)
  - [MCPECore](https://discord.gg/Zgu3qt4)
