@@ -56,7 +56,7 @@ Important links have a ⭐.
  - [Advancements](https://advancements.thedestruc7i0n.ca/)
  - [Feature Rules](https://machine-builder.github.io/feature_rule_generator_1.15.html)
  - [Block and Items](https://gitwither.github.io/bedrock-item-generator/)
- - [Manifests](https://geenium.github.io/pack-manifest-creator/)
+ - [Manifests](https://bedrock-manifest.web.app/)
  - [behavior-builder (beta)](https://stirante.com/behavior/index.html)
  - [controller-builder (beta)](https://stirante.com/controller/index.html)
  - [.lang](https://solveddev.github.io/AnyLanguage/)
