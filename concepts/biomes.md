@@ -5,6 +5,7 @@ parent: Concepts
 ---
 
 # Biomes
+*Last updated for 1.16.201*
 
 <details id="toc" open markdown="block">
   <summary>
@@ -15,39 +16,37 @@ parent: Concepts
 {:toc}
 </details>
 
-*Last updated for 1.16.201*
+> Biome generation has been bugged since version 1.16.100. Biome layout remains consistent on the first generation when a pack is applied to a world but breaks on subsequent loads, causing new chunks to be loaded using the vanilla generation. The only workaround for now is removing and reapplying all behavior packs containing biome definitions to a world between loads.
 
-> Biome generation has been bugged since version 1.16.100. Biome layout remains consistent on the first generation when a pack is applied to a world, but breaks on subsequent loads, causing new chunks to be loaded using the vanilla generation. The only workaround for now is removing and reapplying all behavior packs containing biome definitions to a world between loads.
+>  Biome customization is *experimental*. An experimental gameplay toggle must be enabled for each world that uses behavior packs containing biome definitions. What is currently available works well if declared correctly; however, incorrectly declared components and properties may result in crashing as opposed to just logged errors. Furthermore, in light of the [inheritance model](#inheritance), the schema used for custom biomes is currently not well constructed.
 
->  Biome customization is *experimental*. An experimental gameplay toggle must be enabled for each world that uses behavior packs containing biome definitions. What is currently available works well if declared correctly; however, incorrectly declared components and properties may result in crashing as opposed to just logged errors. Furthermore, in light of the [inheritance model](#inheritance), the schema used for custom biomes is not well constructed.
+Behavior packs allow for the customization of biomes. A behavior pack can either create create entirely new **custom biomes** or [**overrides** for previously declared biomes](#inheritance), such as vanilla biomes. Biomes hook into critical gameplay features, such as mob spawning, data-driven gameplay, and presentation of custom blocks. Biomes also enable a powerful system for adding decorations like flowers and trees, or even structures like towers and houses; these decorations and structures are together known as [features](/concepts/features/), which are crucial to world generation but (generally) separate in scope and construction from biomes.
 
-Behavior packs allow for the customization of biomes. Behavior packs can either override vanilla biomes or create entirely new ones (with some limitations to each). Biomes hook into critical gameplay features, such as mob spawning, data-driven gameplay, and presentation of custom blocks. Biomes also enable a powerful system for adding decorations like flowers and trees, or even structures like towers and houses; these decorations and structures are together known as [features](/concepts/features), which are (generally) separate in scope and construction from biomes.
-
-While both vanilla overrides and custom biomes offer the same power, custom biomes are the recommended means for creating entirely new gameplay experiences. Vanilla overrides should only be reserved for:
+While both overrides and custom biomes offer the same power, custom biomes are the recommended means for creating entirely new gameplay experiences. Overrides should retain the original biome’s identity and intentions and should only be reserved for:
 
 - Mild surface, heightmap, or climate adjustments
-- Redistribution of biome rarities across a dimension
-- Addition of new features or mobs, but only if these are intended to be used globally across a dimension
+- Redistribution of biome rarity in a dimension
+- Addition of new features or mobs, but only if thematically appropriate
 
-Custom biomes should be used when *any* unique gameplay experience is desired or if an adjustment to a vanilla biome would fundamentally change its nature. Examples of situations where custom biomes shine include:
+Custom biomes should be used when *any* unique gameplay experience is desired or if an adjustment to a previously declared biome would fundamentally change its nature. Examples of situations where custom biomes shine include:
 
 - A new or radical terrain is required to achieve an aesthetic.
 - Custom features, like a new tree type, need somewhere to generate.
 - An alternate or more challenging gaming experience is desired, potentially using new mobs and structures.
 
-> There are some exceptions to these recommendation due to oversights in the biomes schema. For example, it might make sense only to use vanilla overrides when attempting to force a vanilla Overworld biome to generate in additional locations, but this may be impossible because of how biomes register themselves to be generated.
+> There are some exceptions to these recommendation due to oversights in the biomes schema. For example, it might make sense only to use vanilla overrides when attempting to force a vanilla Overworld biome to generate in additional locations, but this may be impossible because of [how biomes register themselves to be generated](#regions).
 
-## Biome definitions
+## Biome Definitions
 Biomes are declared in a file of the form <code>*biome_name*.json</code> or <code>*biome_name*.biome.json</code> in the top-level `biomes` directory of a behavior pack. Subdirectories may not be used within the `biomes` directory to group biome definitions; all definitions within sub-directories of `biomes` will be ignored.
 
-[Because identifiers must match the filename](#description), namespace collisions may occur with other biome-declaring packs. One strategy to avoid collisions is to use a reverse-domain name scheme. *biome_name* may contain periods for grouping biomes in nested order, like `biomes/fancycraft.fantasy_realms.magical_springs.hills.mutated.json`. Here, `fancycraft` is the developer, `fantasy_realms` is the behavior pack, `magical_springs` is the [top-level biome](#heirarchy) name, `hills` and `mutated` are the [sub-biome](#types) types, and `json` is the required file extension (the optional `.biome` extension being omitted in this example).
+[Because identifiers must match the filename](#description), namespace collisions may occur with other biome-declaring packs. One strategy to avoid collisions is to use a reverse-domain name scheme. *biome_name* may contain periods for grouping biomes in nested order, like `biomes/fancycraft.fantasy_realms.magical_springs.hills.mutated.json`. Here, `fancycraft` is the developer, `fantasy_realms` is the behavior pack, `magical_springs` is the [top-level biome](#heirarchy) name, `hills` and `mutated` are the [sub-biome](#subbiome-types) types, and `json` is the required file extension. (The optional `.biome` extension was omitted from this example.)
 
-> Invalid JSON files declared in the top-level `biomes` directory are more likely to log errors, but they may cause crashes. Non-JSON files directly placed inside this directory are ignored. If a file exists directly inside `biomes` that begins with a `.`, the game currently always crashes. This can cause problems with overlooked configuration files in build environments or the infamous [.DS_Store file](https://en.wikipedia.org/wiki/.DS_Store) on macOS.
+> Invalid JSON files declared in the top-level `biomes` directory are more likely to log errors, but they may cause crashes. Non-JSON files directly placed inside this directory are ignored. If a file exists directly inside `biomes` that begins with a `.`, the game currently always crashes. This can cause problems with files such as those used for project configuration or even the infamous [.DS_Store file](https://en.wikipedia.org/wiki/.DS_Store) on macOS.
 
 ### Format
 Like all constructed assets in a behavior pack, biome definitions are written in JSON, such as:
 
-```
+```jsonc
 {
   "format_version": "1.13.0",
 
@@ -57,25 +56,24 @@ Like all constructed assets in a behavior pack, biome definitions are written in
     },
 
     "components": {
-      "minecraft:climate": {
-        "temperature": 0.25,
-        "downfall": 0.25,
-        "snow_accumulation": [0.0, 0.25]
-      },
-
       "minecraft:surface_parameters": {
-        "sea_floor_depth": 4,
-
         "foundation_material": "minecraft:stone",
 
         "top_material": "minecraft:grass",
         "mid_material": "minecraft:dirt",
 
+        "sea_floor_depth": 4,
         "sea_material": "minecraft:water",
         "sea_floor_material": "minecraft:sand"
       },
       "minecraft:overworld_height": {
         "noise_params": [0.125, 0.0625]
+      },
+      
+      "minecraft:climate": {
+        "temperature": 0.375,
+        "downfall": 0.25,
+        "snow_accumulation": [0, 0.5]
       },
 
       "minecraft:overworld_generation_rules": {
@@ -98,49 +96,49 @@ Like all constructed assets in a behavior pack, biome definitions are written in
 ```
 
 #### Format Version
-```
+```jsonc
 "format_version": "1.13.0"
 ```
 
-The top-level property `format_version` describes the version specification to which the proceeding schema conforms. The latest issued `format_version` for biomes is `1.13.0`.
+The top-level property `"format_version"` describes the version specification to which the proceeding schema conforms. The latest issued `"format_version"` for biomes is `"1.13.0"`.
 
-> A previous version for 1.12 existed but has been deprecated and is unusable in newer versions. In it, the biome identifier acted as the key for a top-level object property, which itself contained the format version, components, and tags directly. This document exclusively uses the `1.13.0` format, but the deprecated one may be seen elsewhere.
+> A previous version for 1.12 existed but has been deprecated and is unusable in newer versions. In it, the biome identifier acted as the key for a top-level object property, which itself contained the format version, components, and tags directly. This document exclusively uses the `"1.13.0"` format, but the deprecated one may be seen elsewhere.
 
-The version must be of the form <code>*major*.*minor*.*patch*</code>, where `patch` or both `minor` and `patch` are optional. All 3 identifiers must be integers, but the completed version numbers do not have to represent a real version of Minecraft. Currently, any version number greater than or equal to `1.13.0` may be used and will refer to the `1.13.0` specification, but it is recommended to only use the value `1.13.0` or the version targeted during development: future versions may alter the expectations of the versioning system.
+The version must be of the form <code>*release*.*major*.*minor*</code>, where either *minor* or both *major* and *minor* are optional. All 3 identifiers must be integers, but the completed version numbers do not have to represent a real version of Minecraft. Currently, any version number greater than or equal to `1.13.0` may be used and will refer to the `1.13.0` specification, but it is recommended to only use the value `1.13.0` or the version targeted during development: future versions may affect the overall schema.
 
 #### Biome Specification
-```
+```jsonc
 "minecraft:biome": {  
   …
 }
 ```
 
-The other top-level property is `minecraft:biome`, which establishes the schema for the biome file.
+The other top-level property is `"minecraft:biome"`, which establishes the schema for the biome definition.
 
 ##### Description
-```
+```jsonc
 "description": {
   "identifier": "pumpkin_pastures"
 }
 ```
 
-The `description` property of the `minecraft:biome` property is used as the metadata for the biome. It currently contains only one property, `identifier`, which is used to uniquely identify a biome. The value here must match the file name, sans the `.json` or `.biome.json` extensions. For example, if the identifier is `prairie`, the filename must be either `prairie.json` or `prairie.biome.json`. This identifier is also used for referencing from other biome files.
+The `"description"` property of the `"minecraft:biome"` property is used as the metadata for the biome. It currently contains only one property, `"identifier"`, which is used to uniquely identify a biome. The value here must match the file name, sans the `.json` or `.biome.json` extensions. For example, if the identifier is `prairie`, the filename must be either `prairie.json` or `prairie.biome.json`. This identifier is used for referencing from a number of biome definition properties.
 
-> Unlike other aspects of add-ons, biomes do not accept a filename-ignored namespace prefix in their identifier. Such a prefix may be provided, but the file would have to contain the prefix, including the colon; such a filename is invalid on many Minecraft-supporting file systems, so this traditional namespace system should not be used.
+> Unlike other aspects of add-ons, biomes do not accept a filename-ignored namespace prefix (such as `elysium:`) in their identifier. Such a prefix may be provided, but the file would have to contain the prefix, including the colon; such a filename is invalid on many Minecraft-supporting file systems, so this traditional namespace system should not be used. Consider a [reverse domain name system](#biome-definitions) instead.
 
 ##### Components
-```
+```jsonc
 "components": {
   …
 }
 ```
 
-The `minecraft:biome` property also holds the `components` property, which is the meat of a biome definition. The components declared here place, shape, and style biomes. Components are always object properties, even those that should seemingly act as booleans.
+The `"minecraft:biome"` property also holds the `"components"` property, which is the meat of a biome definition. The components declared here place, shape, and style biomes. Components are always object properties, even those that should seemingly act as booleans.
 
 > Component details are scattered throughout the rest of this document; they cannot be as neatly described or organized as these wrapper properties due to intricacies in their interactions.
 
 ###### Tags
-```
+```jsonc
 "components": {
   …
   
@@ -152,41 +150,36 @@ The `minecraft:biome` property also holds the `components` property, which is th
 }
 ```
 
-In addition to the components that work to create a biome, the `components` property also allows for the addition of arbitrary tags. Tags appear like empty components, e.g., `"animal": {}`. Tag names must conform to the regular expression `[a-z0-9_.:]+`, that is: lowercase Latin letters, Arabic numerals, underscores, periods, and colons.
+In addition to the components that work to create a biome, the `"components"` property also allows for the addition of arbitrary tags. Tags appear like empty components, e.g., `"animal": {}`. Tag names must conform to the regular expression `[a-z0-9_.:]+`, that is: lowercase Latin letters, Arabic numerals, underscores, periods, and colons.
 
-> For future-proofing, it is not recommended to create a tag with the prefix `minecraft:` to ensure a tag does not clash with a future Mojang-defined component. Furthermore, it is suggested to use a pack-specific namespace with these tags to minimize collisions with other behavior packs, such as `betterbiomes:arboreal`.
+> For future-proofing, it is not recommended to create a tag with the prefix `minecraft:` to ensure a tag does not clash with a future Mojang-defined component. Furthermore, it is suggested to use a pack-specific namespace with these tags to minimize collisions with other behavior packs, such as `"betterbiomes:arboreal"`.
 
 ### Inheritance
-Biome files can act as initial definitions or overrides depending on behavior pack ordering. The earliest appearance of a biome definition in a behavior pack stack is the **initial definition**; Subsequent definitions of the same biome in the behavior pack stack can modify or override earlier definitions through inheritance.
+Biome definition files can act as initial definitions or overrides depending on behavior pack ordering. The earliest appearance of a biome definition in a behavior pack stack marks the creation of a custom biome; subsequent definitions of the same biome in the behavior pack stack can modify or override earlier definitions through inheritance.
 
-Only components and tags in the `components` property are inherited. Properties within an individual component are also usually inherited. Unfortunately, some components or component property objects require complete redeclaration of all their properties to work, meaning it is often better to redeclare an entire component when overriding. Inheritance always occurs unless a new component would interfere with a previously existing component, as is typically the case with [surface builders](#surface-builders).
+Only components and tags in the `"components"` property are inherited. Properties within an individual component are also usually inherited. Unfortunately, some components or component property objects require complete redeclaration of all their properties to work, meaning it is often better to redeclare an entire component when overriding. Inheritance always occurs unless a new component would interfere with a previously existing component, as is typically the case with [surface builders](#inheritance-considerations).
 
-There is no way to indicate a property should be removed from earlier definitions. This can especially be troublesome with tags due to their usage in signifying biome placement and how they power other gameplay elements like mob spawning. If conflicts arise due to inheritance issues, it is recommended to extract the desired elements of a biome into a new custom biome and attempt to remove the old biome from world generation.
+There is no way to indicate a property should be removed from earlier definitions. This can especially be troublesome with [tags](#tagging) due to their usage in signifying biome placement and how they power other gameplay elements like mob spawning. If conflicts arise due to inheritance issues, it is recommended to extract the desired elements of a biome into a new custom biome and attempt to remove the old biome from [world generation](#generation).
 
-Biome files may uselessly be empty if overriding a previously declared biome. If a biome definition, initial or override, contains any contents, it must contain the top-level `format_version` property and down to the `identifier` property. Initial definitions of a biome must contain at least one component or tag; the required declaration is small because defaults for almost every biome aspect are available for fallback.
+Biome files may uselessly be empty if overriding a previously declared biome. If a biome definition, initial or override, contains any contents, it must contain the top-level `"format_version"` property and down to the `"identifier"` property. Initial definitions of a biome must contain at least one component or tag; the required declaration is small because defaults for almost every biome aspect are available for fallback.
 
 ## Generation
-The rules for how a biome is selected for placement depend on 3 things:
+The rules for how a biome is selected for placement in a world depend on 3 things:
 
-1. The dimension for which the biome registers itself
-2. The weight for a biome to generate within a slot of a dimension, relative to any other biomes also in that slot *across all behavior packs applied to a world at the time a chunk is loaded*
-3. The immutable random noise surface used in that slot derived from the seed of the world
+1. The dimension(s) for which the biome registers itself
+2. The potential for a biome to generate within a particular slot, relative to any other biomes also registered for that slot *across all behavior packs applied to a world at the time a chunk is loaded*
+3. The immutable random noise surfaces used by that slot that are derived from the seed of the world
 
-*Biome layout is not randomized per world, only per seed.* This means that if the same add-ons containing custom biome definitions are applied to two new worlds with the same seed, each dimension in both worlds will contain the exact same biome layout. This is obvious for vanilla generation, as the same seed will always generate the same vanilla biomes in the same places.
+> A **slot** may represent an entire dimension or a subset of its surface area. The concept of slots does not exist in the actual documentation or schemas. This term is used here to represent a dedicated region for which a biome can be selected from a pool or where a collection of biomes are independently connected for a singular purpose.
 
-> The concept of biome slots does not exist in the actual documentation or schemas. This term is used here to represent a dedicated region within a dimension either for which a biome can be selected from a pool or where a collection of biomes are independently connected for a singular purpose. Slots are fixed per seed; that is: they cannot be moved or changed in any way using behavior packs.
+*Biome layout is not randomized per world, only per seed.* This means that if the same add-ons containing the same custom biome definitions are applied to two new worlds with the same seed, each dimension in both worlds will contain the exact same biome layout. This is obvious for vanilla generation, as the same seed will always generate the same vanilla biomes in the same places.
 
-Biome weights work like any other weight in behavior packs, so if for a given dimension rule:  
-A fictional Biome X has a weight of 5. All the biomes placed in this target slot, including Biome X, have a combined weight of 20. Therefore, Biome X will have a 5 in 20, or 25%, chance of generating.
+Minecraft currently has no way of creating new dimensions. The End does not allow for either adding new biomes or removing the default one, leaving only Overworld and Nether customization possible.
 
-Biomes are not filled into valid slots in entirety by weight; instead, the available space in a slot appears divided by the weights. A more radical discrepancy between numerator (the target biome’s weight) and denominator (the sum of all relevant biomes’ weights) will result in *smaller* biomes as opposed to *rarer* biomes.
-
-Minecraft currently has no way of creating new dimensions. The End does not allow for biome alterations, new or overridden, leaving only Overworld and Nether implementations.
-
-> A `"minecraft:legacy_world_generation_rules"` component is noted in the documentation to affect legacy limited worlds, but no schema is provided for this component and no vanilla biome definition uses it, rendering the component useless.
+> The `"minecraft:legacy_world_generation_rules"` component is noted in the Mojang-provided documentation to affect legacy limited worlds, but no schema is provided for this component and no vanilla biome definition uses it, leaving its purpose and behavior unknown.
 
 ### Overworld
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   "generate_for_climates": [
     ["cold", 1]
@@ -197,37 +190,97 @@ Minecraft currently has no way of creating new dimensions. The End does not allo
 }
 ```
 
-The Overworld uses concepts of **regions**, **climates**, and **heirarchy** to determine how to place biomes. Biomes are slotted directly into the Overworld as **base biomes**, while **sub-biomes** can be declared in these base biomes for finer tuning.
+The Overworld uses concepts of [**climates**](#climates), [**regions**](#regions), and [**hierarchy**](#hierarchy) to determine how to place biomes.
 
-Biomes interact with Overworld generation using the `minecraft:overworld_generation_rules` component. Here, they can register themselves as base biomes or declare sub-biomes. Biomes do not necessarily need to be base biomes to have sub-biomes. Sub-biomes — in some circumstances — may have their own sub-biomes.
+Biomes primarily interact with Overworld generation using the `"minecraft:overworld_generation_rules"` component. Here, they can register themselves as base biomes and declare their sub-biomes. The [tagging system](#tagging) unfortunately also comes into play for slotting into [regions](#regions).
+
+Climates and regions form independent, non-configurable maps of slots that overlap across the Overworld. A biome with a specified climate slot and region slot can only generate in the relevant intersections of those slot maps for a seed. In other words, a biome can only generate into areas of the Overworld of matching climate and region types, the climate and region bindings restricting the surface area into which a biome may generate. Biomes can be slotted directly into these intersections as base biomes, while sub-biomes can be declared in these base biomes for finer terrain detailing.
+
+Biomes compete over the available area of a slot intersection using [weighting](#climates). Biome instances are actually not predetermined based on the seed; instead, the available space in the relevant slot appears divided by the weights. Biome additions to a slot intersection will therefore result in *smaller* biomes as opposed to *rarer* biomes; the reverse is also true. Because the size of the climate and temperature maps are not configurable, adjusting biome weightings is the only way to modify biome sizing.
+
+#### Climates
+```jsonc
+"generate_for_climates": [
+  ["frozen", 2],
+  ["cold", 1]
+]
+```
+
+Biomes must be aligned with temperature categories to generate as base biomes. To promote a biome to a base biome that will generate in the Overworld, the biome’s definition must have the `"generate_for_climates"` array property within the `"minecraft:overworld_generation_rules"` component. This array contains array values of the form <code>[*climate type*, *weight*]</code>, where <code>*climate type*</code> is one of five climate strings and <code>*weight*</code> is a float value reflecting the biome’s chance to generate. Biomes are generated by weight within each declared climate category *in the biomes’s declared [region](#regions)*, generating [sub-biomes](#hierarchy) within their bounds.
+
+> The climate temperatures here are different from the [float property `"temperature"`](#temperature) in the `"minecraft:climate"` component, which is used for styling rather than placement. Traditionally, however, they correlate for gameplay purposes.
+
+The 5 climates are, by increasing temperature:
+
+| Climate | Property value |
+|:--|:--|
+| Frozen | `"frozen"` |
+| Cold | `"cold"` |
+| Medium | `"medium"` |
+| Lukewarm | `"lukewarm"` |
+| Warm | `"warm"` |
+
+Biome weights act as numerators to a shared denominator for a slot intersection. As an example:
+
+A fictional Biome X has a weight of 5. All the biomes placed in this target slot, including Biome X, have a combined weight of 20. Therefore, Biome X will have a 5 in 20, or 25%, chance of generating.
+
+Vanilla biomes can typically be removed by **de-weighting**: setting the weights for their `"generate_for_climates"` property to `0` across all applicable climates. However, Minecraft actually has an [aggressive fallback system](#regions) in place to prevent generation failures caused by de-weighting, so such a strategy may not be enough to remove a biome. [De-slotting](#regions) or the addition of custom biomes may be necessary to remove a biome from generation.
+
+> If all biomes for a climate are set not to generate, Minecraft will use biomes from other climates to fill that climate’s designated space. This can be used to simplify the climate slot map by effectively ignoring all of a climate’s slots in the world. This fallback actually occurs in vanilla Minecraft, as no lukewarm land biomes exist.
+
+Minecraft only allows the player’s first load in a select few biomes:
+
+- Plains
+- Forest
+- Taiga
+- Dark Forest
+- Savanna
+- Jungle
+
+If none of these biomes are present due to de-weighting (and in the case of the Plains and Forest biomes, additionally being unlisted as [sub-biomes of Deep Oceans](#islands)), the player usually will not be able to load in to the world: the game most often will search for a valid spawn location endlessly.
+
+> In some rare, inexplicable cases, the player will be thrown into a biome not ordained for player loading at the world origin after enough time has passed attempting to find a valid spot.
+
+Unlike [region slots](#regions), biomes can be registered for multiple climates. This can, for example, be used to spread a biome across different climates if it would be appropriate. An example is the Plains biome, which is spread across 3 climates:
+
+{% include filepath.html path="biomes/plains.json" %}
+
+```jsonc
+"generate_for_climates": [
+  ["cold", 1],
+  ["medium", 3],
+  ["warm", 1]
+]
+```
+
+If the same biome generates in two adjacent climates and these separate biome instances are next to each other, the biome will seem to combine into one with no indication of the boundaries of a climate region.
 
 #### Regions
-The Overworld is composed of many regions, which act as slots for the Overworld dimension. Obviously split by land and oceans, the dedicated slots relate in a complicated fashion.
+The Overworld is composed of many regions, which behave as slots for biome placement. Obviously split by land and oceans, the dedicated slots relate in a complicated fashion.
 
-> The nature of a biome (its aesthetic and gameplay), do not have to conform to the intention of the slot in which they are placed. The “land” and “ocean” region names used here are therefore slightly misleading: land biomes can be aquatic and ocean biomes can represent land. These are only named as such here in reference to vanilla generation. This is additionally true for all other slot names: river-like biomes do not have to generate along designated stretches for rivers, etc.
+> The nature of a biome (its aesthetic and gameplay) do not have to conform to the intention of the region in which they are placed. The “land” and “ocean” region names used here are therefore slightly misleading: biomes slotted into the [land region](#land) can be aquatic, and those slotted into [oceans](#oceans) can represent land. These are only named as such here in reference to vanilla generation.
 
-Biomes are placed into the Overworld using the `generate_for_climates` property in the `minecraft:overworld_generation_rules` component, but the values given here only affect [climates](#climates). Configuring a biome to generate in a particular slot is unintuitive and expounded upon below.
+[As noted](#climates), biomes are directly placed into the Overworld using the `"generate_for_climates"` property in the `"minecraft:overworld_generation_rules"` component, but the values given here only affect the climate slot map. Configuring a biome to generate in a particular region is unintuitive and even undocumented by Mojang. The Overworld depends on the existence of [specific tags](#overworld-generation-aspects) to slot biomes on the region map.
 
-Vanilla biomes can effectively be removed by setting the weights for their `generate_for_climates` property to `0` across the applicable climates, but Minecraft actually has an aggressive fallback system in place to prevent generation failures.
-
-> Biomes can additionally be **de-slotted** in the Overworld, forcing them to generate elsewhere or not at all. This change is irreversible by later listed behavior packs, as it relies on the tagging inheritance model. Due to the aggressiveness of the fallback system, de-slotting is in some circumstances the only means of removing an unwanted biome.
+In certain circumstances, biomes can be **de-slotted** from their region in the Overworld, forcing them to generate as part of a higher priority slot. This change is irreversible by later listed behavior packs, as it relies on the [biome definition inheritance model](#inheritance). Minecraft uses an aggressive fallback system that attempts to prevent generation failures when no biomes are registered for a slot intersection. Due to the aggressiveness of the fallback system, de-slotting is in some circumstances the only means of removing an unwanted biome; [de-weighting](#climates) may not be enough.
 
 ##### Land
 Unlike the real world, land makes up the majority of the Overworld. Land technically contains several odd sub-slots because of a mix of interactions and restrictions with oceans. As noted above, land biomes do not actually have to represent land: this is only the designation for the slot; they can be aquatic or contain ocean sub-biomes.
 
-There are a total of 56 vanilla land biomes, many of which are mutated or hilly forms of base biomes. By default, all custom biomes are land unless marked otherwise.
+There are a total of 56 vanilla land biomes, many of which are mutated or hilly forms of base biomes.
 
 ###### Common Land
-```
+```jsonc
 "generate_for_climates": [
   ["cold", 1]
 ]
 ```
 
-Common land is the largest slot in the game, making up the vast majority of land. The majority of biomes in Minecraft are slotted here, such as Deserts, Dark Forests, Plains, and Swamps. Custom biomes generate here when using the ``generate_for_climates` property unless otherwise indicated using the tag system.
+Common land is the largest slot in the game, making up the vast majority of land. The majority of biomes in Minecraft are slotted here, such as Deserts, Dark Forests, Plains, and Swamps. *By default, all custom biomes are slotted into common land unless marked otherwise.*
 
 <blockquote>
-  When all common land biomes are instructed not to generate by setting their climate weights to `0`, Minecraft fills this slot using biomes from the [rare land](#rare-land) slot: Eroded Badlands and Giant Tree Taigas. If these biomes are then de-slotted and also set not to generate, the game descends down a fallback list for which biome will generate across the entirety of land in the Overworld:
+  When all common land biomes are instructed not to generate by setting their climate weights to `0`, Minecraft fills this slot using biomes from the [rare land](#rare-land) slot, beginning with Eroded Badlands and Giant Tree Taigas. If these biomes are then de-slotted and also set not to generate, the game descends down a fallback list of biomes:
+  
 - Jungle variants
 - The remaining Giant Tree Taiga variants
 - Mushroom Fields
@@ -238,21 +291,11 @@ Common land is the largest slot in the game, making up the vast majority of land
 - Forest variants
 - Ocean variants
 
-The variants selected for this list may even act as sub-biomes in vanilla generation. Ocean biomes are the final fallback for land because of tag inheritance: there is no way to de-slot ocean biomes into the ocean slot, as they already have the `ocean` tag in their vanilla definitions. Rare biomes will continue to be slotted in rare land slots until they are de-slotted into oceans.
-
-Minecraft only allows the player’s first load in a select few biomes:
-- Plains
-- Forest
-- Taiga
-- Dark Forest
-- Savanna
-- Jungle
-
-If none of these biomes are present due to setting their weights  for generation to `0` (and in the case of the Plains and Forest biomes, additionally being unlisted as sub-biomes of Deep Oceans), the player cannot load in to the world. The game will search for a valid spawn location endlessly.
+The fallback biome will then generate across the entirety of land in the Overworld. The variants selected for this list may even typically act as sub-biomes in unmodified generation. Ocean biomes are the final fallback for land because of tag inheritance: there is no way to de-slot ocean biomes into the ocean slot, as they already have the `"ocean"` tag in their vanilla definitions. Rare biomes will continue to be slotted in rare land slots until they are de-slotted into oceans.
 </blockquote>
 
 ###### Rare Land
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   "generate_for_climates": [
     ["medium", 1]
@@ -262,21 +305,21 @@ If none of these biomes are present due to setting their weights  for generation
 "rare": {}
 ```
 
-Rare land slots are somewhat large but very uncommon regions of the Overworld set aside for biomes. Biomes are slotted here when the `rare` tag is applied to them. Examples of rare biomes in vanilla generation include Jungles, Mesas, and Giant Tree Taigas.
+Rare land slots are somewhat large but very uncommon regions of the Overworld set aside for biomes. Biomes are slotted here when the `"rare"` tag is applied to them. Examples of rare biomes in vanilla generation include Jungles, Mesas, and Giant Tree Taigas.
 
-> Rare land biomes can be de-slotted by applying the `ocean` tag to the declaration. This is because the `ocean` tag takes precedence over the `rare` tag. If no `rare`-tagged biome is available for an instance of rare land in a given climate, the game will fall back to compatible common land biomes.
+> Rare land biomes can be de-slotted by applying the `"ocean"` tag to the declaration. This is because the `"ocean"` tag takes precedence over the `"rare"` tag. If no `"rare"`-tagged biome is available for an instance of rare land in a given climate, the game will fall back to compatible common land biomes. This situation naturally occurs in the frozen and lukewarm climates, where there are no vanilla rare biomes.
 
 ##### Oceans
-The rest of the Overworld is covered in oceans. Oceans are a misnomer as they do not fully connect through the world; in Minecraft, the land region instead behaves like this to give the player more room, causing oceans to behave more as seas or lakes. Biomes are slotted into the ocean region by using the `ocean` tag.
+The rest of the Overworld is covered in oceans. Oceans are a misnomer as they do not fully connect through the world; in Minecraft, the land region instead behaves like this to give the player more room, causing oceans to behave more as seas or lakes. Biomes are slotted into the ocean region by using the `"ocean"` tag.
 
-The oceans are prevalently split by normal and deep depths with about equal weight. Scattered islands can generate inside the ocean region. By default, there are twelve ocean biomes in total: ten aquatic biomes, one for each combination of the five temperatures and two depths, and two for the Mushroom Fields, base and shore. Ocean biomes do not have to actually generate as aquatic biomes; they can be land. Furthermore, oceans can contain land sub-biomes. Plains, Forests, and Beaches, for example, are not exclusive to oceans but can generate as a part of ocean islands, themselves contained within the ocean region.
+The oceans are prevalently split by normal and deep depths with about equal weight. Scattered islands can generate inside the ocean region. By default, there are ten ocean biomes in total: one for each combination of the five temperatures and two depths. Ocean biomes do not have to actually generate as aquatic biomes; they can be land. Furthermore, oceans can contain land sub-biomes. Plains, Forests, and Beaches, for example, are not exclusive to oceans but can generate as a part of ocean islands, themselves contained within the ocean regions.
 
-> Ocean weighting behaves differently from other distributions. Seemingly, oceans weren’t intended to compete for space: vanilla biomes have exclusively one ocean biome for each depth-climate combination. Competing oceans of similar weights are separated on a very small scale: approximately several blocks across each instance. A greater difference in weights does more cleanly separate competing biomes, but the lesser-weighted biome will still only generate in very small clumps. Generally, it is wiser to use [surface adjusments](#surface-adjustments) or features to transform oceans.
+> Ocean weighting behaves differently from other distributions. Seemingly, oceans weren’t intended to compete for space: vanilla biomes have exclusively one ocean biome for each depth-climate combination. Competing oceans of similar weights are separated on a very small scale: approximately several blocks across each instance. A greater difference in weights does more cleanly separate competing biomes, but the lesser-weighted biome will still only generate in very small clumps. Generally, it is wiser to use [surface adjusments](#surface-adjustments) or [features](#features) to transform oceans.
 
-> If all oceans are set not to generate by changing their `generate_for_climates` weights to 0, the game falls back to Frozen Ocean and Deep Frozen Ocean.
+> If all oceans are set not to generate via [de-weighting](#climates), the game falls back to Frozen Ocean and Deep Frozen Ocean. Because of this fallback, the addition of a custom biome may be the only way to remove all the vanilla ocean biomes
 
 ###### Basic Oceans
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   "generate_for_climates": [
     ["lukewarm", 1]
@@ -288,10 +331,10 @@ The oceans are prevalently split by normal and deep depths with about equal weig
 
 The basic oceans make up about half of the ocean region. This region is intended to be used by aquatic biomes with a relatively shallow depth.
 
-> [Despite how deep ocean slotting occurs](#deep-oceans), a basic ocean biome cannot be de-slotted using the `deep` tag. It will continue to generate unless the weight for its designated climate is set to `0`.
+> [Despite how deep ocean slotting occurs](#deep-oceans), a vanilla basic ocean biome cannot be de-slotted using the `deep` tag. It will continue to generate unless it is [de-weighted](#climates).
 
 ###### Deep Oceans
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   "generate_for_climates": [
     ["frozen", 1]
@@ -304,12 +347,12 @@ The basic oceans make up about half of the ocean region. This region is intended
 
 Biomes slotted into the deep ocean region use the `deep` tag in addition to the `ocean` tag. Deep oceans make up most of the space remaining in oceans. This slot is typically used with oceans extending deeper than others, often halfway to bedrock from the surface.
 
-> The `deep` tag on its own has no effect.
+> The `"deep"` tag on its own has no effect on generation or spawning; it must be used alongside `"ocean"`.
 
 ###### Islands
 {% include filepath.html path="biomes/ocean.json" %}
 
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   "hills_transformation": "tropical_island"
 },
@@ -317,51 +360,25 @@ Biomes slotted into the deep ocean region use the `deep` tag in addition to the 
 
 Conceptually, islands are no different from sub-biomes in the land region. The islands that generate in vanilla are actually just “hills” in oceans!
 
-> While these islands do not technically form a slot and are instead sub-biomes, due to what is either a bug or an oversight, they are noted as a slot due to how they must be declared. Islands are never declared for a custom ocean biome and can only be separately grouped by ocean depth. Islands are declared using either the `hills_transformation` or `mutate_transformation` properties in the `minecraft:overworld_generation_rules` component *only* in override definitions for the `ocean` and `deep_ocean` biomes; they can also be declared as [mutated hills](#mutated-hills). Islands in vanilla only generate using hills sub-biomes and only in Deep Oceans; vanilla islands can therefore entirely be disabled by pointing the `hills_transformation` in an override for Deep Oceans to the Deep Ocean biome itself:
+> While these islands do not technically form a slot and are instead sub-biomes, due to what is either a bug or an oversight, they are noted as a slot due to how they must be declared. Islands are never declared for a custom ocean biome and can only be separately grouped by ocean depth. Islands are declared using either the `hills_transformation` or `mutate_transformation` properties in the `minecraft:overworld_generation_rules` component *only* in override definitions for the `ocean` and `deep_ocean` biomes (even if these vanilla oceans have been [de-weighted](#climates)). Islands can also be declared as [mutated hills](#mutated-hills) if rarity is desired. Islands in vanilla only generate using hills sub-biomes and only in Deep Oceans; vanilla islands can therefore entirely be disabled by pointing the `hills_transformation` in an override for Deep Oceans to the Deep Ocean biome itself:
 
 {% include filepath.html path="biomes/deep_ocean.json" %}
 
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   "hills_transformation": "deep_ocean"
 },
 ```
 
-Because of [how shores are prioritized when generating land](#shores), islands in the ocean may form entirely as shores. This can, however, be overridden, as described in [Rivers & Shores](#rivers-shores). Islands may additionally have their own river sub-biome; the vanilla islands use Rivers.
+Because of [how shores are prioritized when generating land](#shores), islands in the ocean may form entirely as shores unless those shores are disabled. Islands may also have their own river sub-biome; the vanilla islands and all custom biomes by default use Rivers.
 
-###### Mushroom Fields
+##### Mushroom Fields
 Very rarely, Mushroom Fields generate within ocean regions. The Mushroom Fields biomes cannot be disabled and are generated at fixed locations determined by the seed; these are the only biomes in the Overworld that are fixed.
 
-#### Climates
-```
-"generate_for_climates": [
-  ["frozen", 2],
-  ["cold", 1]
-]
-```
-
-Base biomes must be declared in a temperature category to generate. All of a base biome’s sub-biomes will exist within the bounds of the base biome and therefore lie within its associated climate.
-
-> These climate temperature types are different from the float property `temperature` in the `minecraft:climate` component. Traditionally, however, they correlate for gameplay purposes. Because of how sub-biomes are placed as noted above, it is possible to force a snowy sub-biome to appear within a warm biome, but this is not recommended.
-
-The 5 climates are, by increasing temperature:
-
-- Frozen: `frozen`
-- Cold: `cold`
-- Medium: `medium`
-- Lukewarm: `lukewarm`
-- Warm: `warm`
-
-To promote a biome to a base biome that will generate in the Overworld, the biome’s definition must have the `generate_for_climates` array property within the `minecraft:overworld_generation_rules` component. This array contains array values of the form <code>[*climate_type*, *weight*]</code>, where <code>*climate_type*</code> is one of the listed climate strings and <code>*weight*</code> is a float value reflecting the biome’s chance to generate. Biomes are generated by weight within each declared climate category *in the relevant region*, generating sub-biomes within their bounds.
-
-The temperature map is entirely separate from the designated slot locations described above. Climate temperature regions are fixed per seed. A biome with a given climate and region slot can therefore only generate in the fixed intersections of the climate and region slot maps for a seed.
-
-Unlike region slots, biomes can be registered for multiple climates. This can, for example, be used to spread a biome across different climates if it would be appropriate, like the Plains biome. If the same biome generates in two adjacent climates and these separate biome instances are next to each other, the biome will seem to combine into one with no indication of the boundaries of a climate region.
-
-> If all biomes for a climate are set not to generate, Minecraft will use biomes from other climates to fill that climate’s designated space.
+> If Mushroom Fields are unwanted in a world, changing their style — most conveniently by making them to fit in with surrounding ocean — is the only course of action.
 
 #### Hierarchy
-```
+```jsonc
 "minecraft:overworld_generation_rules": {
   …
   
@@ -373,92 +390,148 @@ Unlike region slots, biomes can be registered for multiple climates. This can, f
 }
 ```
 
-Overworld biomes may directly or indirectly be placed by the world generator.
+Overworld biomes may directly or indirectly be placed by the world generator. Biomes placed directly are here referred to as **base biomes**, while those that are placed indirectly via a base biome will be called **sub-biomes**.
 
-If declaring a target climate temperature in the `generate_for_climates` property, a biome will behave as a base biome. Biomes placed directly are generally large and may declare their own sub-biomes of these categories:
+If declaring a target climate temperature in the `"generate_for_climates"` property, a biome will behave as a base biome. Biomes placed directly are generally large.
 
-- Hills: `hills_transformation`
-- Mutated: `mutate_transformation`
-- River: `river_transformation`
-- Shore: `shore_transformation`
+All of a base biome’s sub-biomes will exist within the bounds of the base biome and lie within its associated slot intersection. These sub-biomes therefore are indirectly placed, not declaring their own generation in the Overworld but instead relying on a base biome’s generation.
 
-These sub-biomes are therefore indirectly placed, not declaring their own generation in the Overworld but instead relying on a base biome’s generation. Biomes may be referenced without limitation: they may appear as a base biome and simultaneously be a sub-biome somewhere else.
+> Biomes may be referenced without limitation: they may appear as a base biome and simultaneously be a sub-biome to multiple other biomes.
 
-In light of regions and climates, sub-biomes may be perceived as optional further limitations on biome placement. Hills and mutations are fixed, scattered, bounded regions within which sub-biomes may be placed; they can even overlap, forming mutated hills. Rivers run as lines through the world, and their shape cannot be influenced at all. The placement of shores, meanwhile, is indirectly determined by other biomes.
+##### Sub-Biome Types
+Base biomes may declare their own sub-biomes of these categories:
 
-##### Types
+| Transformation | Property value |
+|:--|:--|
+| Hills | `"hills_transformation"` |
+| Mutated | `"mutate_transformation"` |
+| River | `"river_transformation"` |
+| Shore | `"shore_transformation"` |
+
+[Hills](#hills) and [mutations](#mutations) are fixed, scattered, bounded regions that may have their own sub-biomes, including [mutated hills](#mutated-hills). [Rivers](#rivers) form thin, unchangeable stretches that are spread throughout the world. The placement of [shores](#shores), meanwhile, is indirectly influenced by other biomes; they form the divide between land and oceans.
+
+Nesting sub-biomes has no effect. Hills cannot have further hills. The same goes for all sub-biome types. Hills, mutations, and mutated hills may all declare their own river and shore sub-biomes allowing for finely tuned changes on a sub-biome scale. Rivers and shores do not generate any sub-biomes.
+
 ###### Hills
-```
+```jsonc
 "hills_transformation": "pumpkin_pastures_hills"
 ```
 
-Hills sub-biomes are small, common subsets of a biome generally used for elevation shifts. Despite their name, they do not have to be used to generate hilly terrain. Their chance to generate within a base biome is common enough that they can reliably be used to form large, natural generations such as lakes, craters, woods in an otherwise tree-less biome, and more. Hills sub-biomes are used in the vanilla Deep Ocean biome to generate islands. They can be used anywhere in the Overworld but will never be selected if used in a river or shore sub-biome. Not declaring a hills sub-biome will have no effect on the base biome, leading to normal generation.
+Hills sub-biomes are small, common subsets of a biome generally used for elevation shifts. Despite their name, they do not have to be used to generate hilly terrain. Their chance to generate within a base biome is common enough that they can reliably be used to form large, natural generations such as lakes, craters, and more. Hills sub-biomes are used in the vanilla Deep Ocean biome to generate islands. Hills have no default value; no changes occur in generation when not declaring a hills sub-biome.
 
 ###### Mutations
-```
+```jsonc
 "mutate_transformation": "mushroom_forest_dense"
 ```
 
-Mutated sub-biomes are large, rare subsets of a base biome that are typically used for odd variations. One vanilla example is Sunflower Plains; another is Ice Spikes. Unlike the other dependently generated biome categories, mutated sub-biomes do not generate reliably. They should not be used with an expectation that they will generate within an instance of a base biome. Like hills sub-biomes, declaring mutations as a sub-biome to a river or shore sub-biome won’t do anything. If no mutated sub-biome is declared, no transformation will occur.
+Mutated sub-biomes are large, rare subsets of a base biome that are typically used for odd variations. One vanilla example is Sunflower Plains; another is Ice Spikes. Unlike the other dependently generated biome categories, mutated sub-biomes do not generate reliably. They should not be used with an expectation that they will generate within an instance of a base biome. Like hills sub-biomes, if no mutated sub-biome is declared, no transformation will occur.
 
 ###### Mutated Hills
 {% include filepath.html path="biomes/mangrove_forest.json" %}
 
-```
+```jsonc
 "hills_transformation": "mangrove_forest_hills"
 ```
 
 {% include filepath.html path="biomes/mangrove_forest_hills.json" %}
 
-```
+```jsonc
 "mutate_transformation": "mangrove_forest_hills_mutated"
 ```
 
+Hills sub-biomes may declare their own mutated sub-biomes, effectively creating a mutated hills sub-biome. This very rare sub-biome generation allows all the same interactions as hills or mutated sub-biomes including having its own river and shore.
 
-Hills sub-biomes may declare their own mutated sub-biomes, effectively creating a mutated hills sub-biome. This very rare sub-biome generation allows all the same interactions as hills or mutated sub-biomes including having its own river and shore. Mutated hills won’t generate if a hills sub-biome is declared as part of a mutated sub-biome.
+> Mutated hills **do not** generate if a *hills* sub-biome is declared as part of a *mutated* sub-biome.
 
 ###### Rivers
-```
+```jsonc
 "river_transformation": "riverbed_dry"
 ```
 
-Rivers exist in dedicated spaces fixed to the seed of a world and are unchangeable via behavior packs. While the shape of rivers technically run everywhere in the Overworld, they only generate when intersecting with a land biome. The intersecting land biome declaration can specify a river sub-biome to apply to stretches allocated for river generation. While the widths of rivers are not configurable, rivers may appear wider with lower heightmap configurations.
+Rivers exist in dedicated spaces fixed to the seed of a world and are unchangeable via behavior packs. While the shape of rivers technically run everywhere in the Overworld, they only generate when intersecting with a land biome. The intersecting land biome declaration can specify a river sub-biome to apply to stretches allocated for river generation. While the widths of rivers are not configurable, rivers may appear wider with lower [heightmap](#heightmap) configurations.
 
-By default, Minecraft uses the River biome if the `river_transformation` property is not declared as part of the `minecraft:overworld_generation_rules` component or if this component is not declared at all. To effectively remove rivers from a biome, the `river_transformation` property can point to the declaring biome itself via its identifier; this retains the biome’s surface builder and its specified blocks, heightmap, climate, etc., along the river’s route, generating the declaring biome smoothly without interruption. Rivers declared in a biome with the `ocean` tag have no effect on world generation. Slotting tags added to a river biome are ignored.
+By default, Minecraft uses the River biome if the `"river_transformation"` property is not declared as part of the `"minecraft:overworld_generation_rules"` component or if this component is not declared at all. To effectively remove rivers from a biome, the `"river_transformation"` property can point to the declaring biome itself via its identifier:
+
+{% include filepath.html path="biomes/ivory_shallows.json" %}
+
+```jsonc
+{
+  "format_version": "1.13.0",
+
+  "minecraft:biome": {
+    "description": {
+      "identifier": "ivory_shallows"
+    },
+
+    "components": {
+      …
+
+      "minecraft:overworld_generation_rules": {
+        …
+        
+        "river_transformation": "ivory_shallows"
+      }
+    }
+  }
+}
+```
+
+This retains the biome’s surface builder and its specified blocks, heightmap, climate, etc., along the river’s route, generating the declaring biome smoothly without interruption. Rivers declared in a biome with the `ocean` tag have no effect on world generation. [Slotting tags](#overworld-generation-aspects) added to a river biome are ignored.
 
 ###### Shores
-```
+```jsonc
 "shore_transformation": "cliffs_steep"
 ```
 
-Shores are special stretches of land designated to generate between a land biome and ocean biomes: biomes without the `ocean` tag and those with it. Because these locations vary under customized biome definitions, shores are the only sub-biome whose location can be influenced. This is not merely restricted to the major land and ocean regions of the Overworld but can also be used between conflicting sub-biomes. Alternations such as these could be used to generate large, shallow lakes with shores or even a transition biome between what appears to be two land biomes.
+Shores are special stretches of land designated to generate between a land biome and ocean biomes: biomes without the `ocean` tag and those with it. Because these locations vary under customized biome definitions, shores are the only sub-biome whose location can be influenced. This is not merely restricted to the major land and ocean regions of the Overworld but can also be used between conflicting sub-biomes. Alternations such as these could be used to generate large, shallow lakes with shores or even a transition biome between [what appears to be](#oceans) two land biomes.
 
-Like rivers, shores are declared as part of a land biome, this time using `shore_transformation`. The shores that generate between land and ocean biomes are *always* selected from the land biome; adding shores to oceans has no effect on generation. Slotting tag additions have no effect on shores. Shores default to Beaches and can again be effectively removed by referencing the declaring biome. If removed, the base biome will ease into the ocean at a slightly steeper angle, ignoring sandy shores in favor of the blocks used by the base biome’s surface builder.
+Like rivers, shores are declared as part of a land biome, this time using `"shore_transformation"`. The shores that generate between land and ocean biomes are *always* selected from the land biome; adding shores to oceans has no effect on generation. [Slotting tag](#overworld-generation-aspects) additions have no effect on shores. Shores default to Beaches and can again be effectively removed by referencing the declaring biome:
 
-Shores are always prioritized against their referencing biome when space is small. If an area of the Overworld surface designated for a land biome would be sufficiently small, the resultant generation may just be shore, with no hint of the referencing biome in sight.
+{% include filepath.html path="biomes/lava_fields.json" %}
 
-##### Interactions
-Nesting sub-biomes has no effect. Hills cannot have further hills. The same goes for all sub-biome types. Hills, mutations, and mutated hills may all declare their own river and shore sub-biomes allowing for finely tuned changes on a sub-biome scale. Rivers and shores do not generate any sub-biomes. 
+```jsonc
+{
+  "format_version": "1.13.0",
+
+  "minecraft:biome": {
+    "description": {
+      "identifier": "lava_fields"
+    },
+
+    "components": {
+      …
+
+      "minecraft:overworld_generation_rules": {
+        …
+        
+        "shore_transformation": "lava_fields"
+      }
+    }
+  }
+}
+```
+
+If removed, the base biome will ease into the ocean at a slightly steeper angle, ignoring sandy shores in favor of the blocks used by the base biome’s [surface builder](#surface-builders).
+
+Shores are always prioritized against their referencing biome when space is small. If an area of the Overworld surface designated for a land biome would be sufficiently small, the resultant generation may just be shore, with no hint of the referencing biome in sight. This is often the case for Vanilla ocean islands.
 
 ##### Weighting
-```
+```jsonc
 "mutate_transformation": [
   ["crater", 2],
   ["lava_pit", 1]
 ]
 ```
 
-Multiple sub-biomes may be declared for each type of sub-biome. They may be given float-valued weights when declared in a base biome to vary their occurrences. For example, the hills sub-biome is really just a small, common subregion of a base biome, so it can be used to form many different scenes. A single base biome may have, for example, both hill and lake “hills” sub-biomes.
+Multiple sub-biomes may be declared for each transformation type. They may be given float-valued weights when declared in a base biome to vary their occurrences. For example, the hills sub-biome is really just a small, common subregion of a base biome, so it can be used to form many different scenes. A single base biome may have, for example, both hill and lake “hills” sub-biomes.
 
-The base biome may be referenced from its own weighted sub-biome declarations. Like with climate biome weights, this has the effect of decreasing the available space afforded to actual sub-biomes, making them smaller in surface area as opposed to making them rarer by count. For a hilly base biome using hills sub-biomes, this could be used to make small, rare mountain peaks. For a dry, warm base biome using river sub-biomes, rivers could appear dried up every now and again without having to depend on hills or mutated sub-biomes.
+The base biome may be referenced from its own weighted sub-biome declarations. [Like with base biome weights](#overworld), this has the effect of decreasing the available space afforded to actual sub-biomes, making them smaller in surface area as opposed to making them rarer by count. For a hilly base biome using hills sub-biomes, this could be used to make small, rare mountain peaks. For a dry, warm base biome using river sub-biomes, rivers could sporadically appear dried up without having to depend on hills or mutated sub-biomes.
 
 ##### Exceptions
-Mushroom Fields cannot have river or shore sub-biomes; the shore that generates along its coast is fixed. Mushroom Fields do not generate separate shores even if it has hills, mutations, or mutated hills sub-biomes marked as oceans via tags. The mutations Mushroom Fields does allow can have their own river and shore sub-biomes, but this is not recommended.
-
-Mushroom Fields Shore cannot have any sub-biomes.
+The Mushroom Fields biomes, [already anomalous for their non-configurable direct placement in the Overworld](#mushroom-fields), also have exceptional rules for sub-biome generation. Mushroom Fields cannot have river or shore sub-biomes; the shore that generates along its coast is unremovable. Mushroom Fields do not generate separate shores even if having hills, mutations, or mutated hills sub-biomes marked as oceans via tags. The mutations Mushroom Fields does allow can have their own river and shore sub-biomes, but this is not recommended, as the mix of biomes here can become messy in such a small space.
 
 ### The Nether
-```
+```jsonc
 "minecraft:nether_generation_rules": {
   "target_temperature": 0.5,
   "target_humidity": 0.75,
@@ -468,24 +541,26 @@ Mushroom Fields Shore cannot have any sub-biomes.
 }
 ```
 
-Nether generation is far more pure and allows for more control than the Overworld, but this comes at the cost of significantly increased complexity. [Arbitrary systems](#strategies-considerations) should be constructed on top of [the powerful provided mathematical system](#principles) for a functioning Nether layout system to work.
+Nether generation is far more pure and allows for far greater control than the Overworld, but this comes at the cost of significantly increased complexity. [Arbitrary systems](#strategies-considerations) should be constructed on top of [the powerful provided mathematical system](#principles) for a functioning Nether layout system to work.
 
 #### Principles
-Unlike the Overworld, which defines fixed regions for placing biomes by random chance, the Nether uses a 4-dimensional “multi-noise” biome layout system. No sub-biomes exist in this dimension: the Nether exclusively places biomes directly.
+Unlike the Overworld, which defines fixed overlapping slot maps for placing biomes by random chance, the Nether uses a 4-dimensional “multi-noise” biome layout system where biomes are always placed directly; no sub-biomes exist in this dimension.
 
-> As described in [Aspects & Targets](#aspects-targets), a biome may completely encapsulate another biome if both biomes are configured for this to happen.
+> As described in [Aspects & Targets](#aspects-targets), a biome may completely encapsulate another biome (akin to [sub-biomes](#sub-biome-types)) if both biomes are configured for this to happen.
 
 > Despite its appearance, Nether biomes only generate depending on the `x` and `z` coordinates with all `y` values at those coordinates belonging to the same biome; it is not currently possible to place a biome vertically adjacent to another biome in the Nether.
 
 ##### Aspects
-In the Nether’s multi-noise system, 4 independent values are assigned to every `x`-`z` location in the Nether based on the world seed using Perlin noise curves, values on the closed interval [-1, 1]. These values remain constant across worlds of the same seed if the Nether-declaring biomes across all applied behavior packs remain constant — they will not change per world otherwise. For convenience, these independent values will be described here as **aspects**; the documentation does not use this vocabulary. These four aspects are assigned arbitrary names for usage in behavior packs and “targeted” by a biome definition with the following properties:
+In the Nether’s multi-noise system, 4 independent values are assigned to every `x`-`z` location in the Nether based on the world seed using [Perlin noise](https://en.wikipedia.org/wiki/Perlin_noise) curves, which generate values on the closed interval [-1, 1]. These values remain constant across worlds of the same seed if the Nether-declaring biomes across all applied behavior packs remain constant — they will not change per world otherwise. For convenience, these independent values will be described here as **aspects**; the documentation does not use this vocabulary. These four aspects are assigned arbitrary names for usage in behavior packs and “targeted” by a biome definition with the following properties:
 
-- Temperature: `"target_temperature"`
-- Humidity: `"target_humidity"`
-- Altitude: `"target_altitude"`
-- Weirdness: `"target_weirdness"`
+| Aspect | Targeting property |
+|:--|:--|
+| Temperature | `"target_temperature"` |
+| Humidity | `"target_humidity"` |
+| Altitude | `"target_altitude"` |
+| Weirdness | `"target_weirdness"` |
 
-> The names have no correlation to the properties of a biome, i.e., setting a larger `target_temperature` will not result in a warmer climate for that biome. These names are merely a way to refer to the independent aspects. The names can be disregarded or reinterpreted as desired.
+> The names have no correlation to the properties of a biome, i.e., setting a larger `target_temperature` will not result in a warmer climate for that biome. These names are merely a way to refer to the independent aspects. [The names can be disregarded or reinterpreted as desired.](#separation-of-concerns)
 
 ###### Aspect Properties
 Values generated by Perlin noise exist on the interval `[-1, 1]`, but the distribution between the extremes is not even. Perlin noise on such an interval tends to distribute similarly to a bell curve with a standard deviation of about 0.4, leading to a couple of obvious conclusions:
@@ -497,36 +572,36 @@ Because Perlin noise is an interpolated process, each aspect will be smoothly ge
 
 > Currently, the way coordinates are mapped as inputs to the Perlin noise generators cannot be changed. This means that the distance along the horizontal plane (the `x` and `z` coordinates in the Nether) between local extrema is fixed; conveniently setting all biomes to be larger or smaller is impossible. Biomes may, however, appear sufficiently large with a small number of Nether-registered biomes and vice-versa.
 
-As an example of these properties, consider a scenario where only the 5 vanilla Nether biomes generate. [Isolating a single dimension](#ignoring-aspects) for the example, temperature, all other aspect targets will be set to `0`. The vanilla biomes will be mapped to temperatures as such:
+As an example of these properties, consider a scenario where only the 5 vanilla Nether biomes generate. [Isolating a single aspect](#ignoring-aspects) for the example, temperature, all other aspect targets will be set to `0`. The vanilla biomes will be mapped to temperatures as such:
 
 | Biome | Temperature
 |:--|--:|
-| Soulsand Valley | -1 |
-| Warped Forest | -0.5 |
-| Nether Wastes | 0 |
-| Crimson Forest | 0.5 |
-| Basalt Deltas | 1 |
+| Soulsand Valley | `-1` |
+| Warped Forest | `-0.5` |
+| Nether Wastes | `0` |
+| Crimson Forest | `0.5` |
+| Basalt Deltas | `1` |
 
 This means that Soulsand Valleys and Basalt Deltas act as extremes; they will be isolated and uncommon and form simple, often convex shapes. In the middle, Nether Wastes will often wind seemingly endlessly in a loose, wavy shape. The two forests will form large rings between the mean and extremes. In other words, because of interpolation, a player would have to move through the Warped Forest, Nether Wastes, and Crimson Forest biomes in that order to reach a Basalt Delta from a Soulsand Valley.
 
 Unfortunately, actual generation is much less convenient to understand. With 4 dimensions, configurability of target matching, and virtually no limit on biome count, it can be much more challenging to create a compelling Nether layout. However, by [understanding targeting](#targeting) and [constraining and isolating target values and fine-tuning the weightings](#strategies), an interesting layout can be achieved with minimal trial and error.
 
 ##### Targeting
-With particular values set for each aspect at a spot in the Nether, Minecraft then uses biome definitions to determine which biome will be selected for generation. Unlike the Overworld, the same biomes will always generate for the same values; there is no hidden randomness here. This is because the game uses a formula to determine the biome whose aspect targets most closely match the values at a given position. The declared targets never change in a game session, so that biome would always be selected for those values.
+With particular values set for each aspect at a spot in the Nether, Minecraft then uses biome definitions to determine which biome will be selected for generation. Unlike the Overworld, the same biomes will always generate for the same target values; there is no hidden randomness here. This is because the game uses a formula to determine the biome whose aspect targets most closely match the values at a given position. The declared targets never change in a game session, so that biome would always be selected for those values.
 
 > The exact formula used to determine the closest matching biome to a set of values is unknown. It can be expected to be either a simple sum of absolute value differences or a 4-dimensional distance formula.
 
 It can therefore be understood that every Nether biome shares a portion of the 4-dimensional space that is formed from the intersections of valid aspect values. The divides between these forms are derived from the aspect targets of “adjacent” and therefore competing biomes.
 
-Again [considering a single dimension](#ignoring-aspects) (Aspect 1) for the sake of simplicity, imagine attempting to distribute 3 biomes: Biome A, Biome B, and Biome C. Because of how targeting finds a closest match, success intervals are formed based on the targeted values, which is what will ultimately decide where a biome generates.
+Again [considering a single aspect](#ignoring-aspects) (Aspect 1) for the sake of simplicity, imagine attempting to distribute 3 biomes: Biome A, Biome B, and Biome C. Because of how targeting finds a closest match, success intervals are formed based on the targeted values, which is what will ultimately decide where a biome generates.
 
 As one specific example, imagine targeting the most extreme values on the range:
 
-| Biome | Aspect 1 Target | Success Interval |
+| Biome | Aspect 1 target | Success interval |
 |:--|--:|--:|
-| Biome A | -1 | [-1, -0.5] |
-| Biome B | 0 | [-0.5, 0.5] |
-| Biome C | 1 | [0.5, 1] |
+| Biome A | `-1` | [-1, -0.5] |
+| Biome B | `0` | [-0.5, 0.5] |
+| Biome C | `1` | [0.5, 1] |
 
 In this case, even though the targeted values are evenly spread along the range, the intervals derived from these values are not the same size. This is because the targets are pushed to the limits of the range, with midpoints between the targets of means and extremes existing at -0.5 and 0.5; it is these 2 values that ultimately divide the resultant intervals. In this scenario, Biome B will be very prevalent across the Nether, while Biomes A and C will be noticeably less common.
 
@@ -534,13 +609,13 @@ Attempting to evenly distribute the intervals by approaching the problem in reve
 
 | Biome | Targeted Value | Success Interval |
 |:--|--:|--:|
-| Biome A | -0.667 | [-1, -0.333] |
-| Biome B | 0 | [-0.333, 0.333] |
-| Biome C | 0.667 | [0.333, 1] |
+| Biome A | `-0.667` | [-1, -0.333] |
+| Biome B | `0` | [-0.333, 0.333] |
+| Biome C | `0.667` | [0.333, 1] |
 
 The space (in this case just intervals on a line segment) is now evenly divided, showing how the spatial boundaries are formed between targets.
 
-> *However, even with the intervals being evenly spaced, noise distribution will still ensure the biomes don’t evenly take up 1/3 of the Nether!* Biome B here will still be the most common, but Biomes B and C will appear more frequently than the first example. To truly evenly distribute biomes such that each would have about a 1 in 3 chance of generating, both the success interval and the noise distribution must be taken into consideration. In this example, intervals of [-1, -0.25], [-0.25, 0.25], and [0.25, 1] would approximately evenly distribute the three biomes across the Nether.
+> *However, even with the intervals being evenly spaced, [noise distribution](#aspect-properties) will still ensure the biomes don’t evenly take up 1/3 of the Nether!* Biome B here will still be the most common, but Biomes B and C will appear more frequently than the first example. To truly evenly distribute biomes such that each would have about a 1 in 3 chance of generating, both the success interval and the noise distribution must be taken into consideration. In this example, intervals of [-1, -0.25], [-0.25, 0.25], and [0.25, 1] would approximately evenly distribute the three biomes across the Nether.
 
 ###### Targeting Adjustment
 Biomes can also declare a fifth property in the `"minecraft:nether_generation_rules"` component to affect biome matching, `"weight"`, which can require the aspect values to more closely align with the biome’s aspect targets for the biome to generate. Weight is designed to behave on the interval [0, 1], where 0 causes the matching to behave as normal, and 1 will require an *exact* match for the biome to generate.
@@ -549,7 +624,7 @@ Biomes can also declare a fifth property in the `"minecraft:nether_generation_ru
 
 Weight adjustments can therefore only decrease a biome’s size. These adjustments are helpful when using a biome to transition between two other biomes. While a biome may be made smaller by adjusting its aspect targets, this can cause a chain reaction of constantly having to revise targets in other biomes because of how they all influence each others’ generation. Using `"weight"` is a simple, singular action.
 
-> Constantly using weight adjustments can make the system even more complicated to understand, as an additional property will have to be taken into consideration everywhere it is used. For this reason, weight adjustments should be used sparingly. A general rule is to never use it in “successive” biomes: biomes that target more or less the same aspect values.
+> Constantly using weight adjustments, however, can make the system even more complicated to understand, as an additional property will have to be taken into consideration everywhere it is used. For this reason, weight adjustments should be used sparingly. A general rule is to never use it in “successive” biomes: biomes that target more or less the same aspect values; leave the `"weight"` property to one side or the other.
 
 If multiple Nether biomes have the same exact aspect targets, only one of them will generate. If a targeting adjustment is given with the `"weight"` property, the biome whose `"weight"` is closest to `0` will be selected, and the other biomes will never generate. If multiple biomes are equally distant from `0`, a fixed order is used to determine the single biome that will always generate for those targets.
 
@@ -563,52 +638,52 @@ In a vague mathematical system of unseeable values, it can be difficult to decid
 ##### Separation of Concerns
 Because the aspects are completely independent and their given names are meaningless, the aspects can be reinterpreted as any system of independent properties. In a grimmer Nether, these aspects could be something like:
 
-- Corruption
-- Living/dead ratio
-- Soul affinity
-- Spitefulness
+| Actual targeting property | Reinterpretation |
+|:--|:--|
+| `"target_temperature"` | Corruption |
+| `"target_humidity"` | Living/dead ratio |
+| `"target_altitude"` | Soul affinity |
+| `"target_weirdness"` | Spitefulness |
 
 In a Nether reinterpreted as an extension of the bottom of the Overworld, the aspects could be:
 
-- Temperature
-- Darkness
-- Richness
-- Dangerousness
+| Actual targeting property | Reinterpretation |
+|:--|:--|
+| `"target_temperature"` | Temperature (same) |
+| `"target_humidity"` | Darkness |
+| `"target_altitude"` | Richness |
+| `"target_weirdness"` | Dangerousness |
 
 So long as the arbitrary meanings always match the property names, any custom system can be used. Only after establishing the meaning of the aspects can the actual assignments of aspect targets commence.
 
-> Due to the arbitrary nature of meaning used in the Nether, any custom system only works when all Nether-declaring biome definitions are “on the same page”. Such a system fails when biome definitions from other behavior packs follow their own agenda. Interpretations must be conservative when Nether-altering behavior packs may compete.
-
 ###### Ignoring Aspects
-Aspects can effectively be ignored for the sake of generation. By setting all aspect targets to the same value, such as `0`, that aspect will not play a role in determining biome layout. This can be the right option for several use cases:
+Aspects can effectively be ignored for the sake of generation. By setting all targets of an aspect across all biomes definitions to the same value, such as `0`, that aspect will not play a role in determining biome layout. This can be the right option for several use cases:
 
 - A total of four independent parameters are not required to achieve an effect.
 - Only a small number of biomes need to be considered.
 - [Simple, dependable biome transitions](#containment-transitions) are desired.
 
-If any of these conditions are true, some aspects should be ignored to ease development.
-
-> Vanilla generation itself ignores 2 of the 4 aspects, altitude and weirdness.
+If any of these conditions are true, some aspects should be ignored to ease development. Vanilla generation itself ignores 2 of the 4 aspects, altitude and weirdness.
 
 ###### Arbitrary Aspect Types
 It can be challenging to ensure all biomes can generate [due to uniqueness requirements in biome generation under a multi-noise layout system](#targeting-adjustment). Values can be arbitrarily adjusted per-aspect, but it is cleaner and easier to impose uniqueness expectations onto each aspect, creating non-unique and unique aspects.
 
-Non-unique aspects may have values that are not guaranteed to help uniquely place a biome. One usage of this is [tiered aspects](#tiering). Unique aspects, meanwhile, can be used to find a distinct set of conditions in the Nether for a biome to generate.
+Non-unique aspects may have values that are not guaranteed to help uniquely place a biome. One usage of this is [tiered aspects](#tiering). Unique aspects, meanwhile, are to be used to find a distinct set of conditions in the Nether for a biome to generate.
 
 When using such a methodology, at least one unique aspect must be used. Beyond the guaranteed one unique aspect, any of the other aspects may be unique or non-unique, but this system affords the most potential when only one aspect is expected to contain unique values.
 
 ##### Rarity
-There are two primary means of establishing the rarity of Nether biomes: per-aspect rarity and the designation of one of the aspects to represent rarity itself. The latter method enables complete control over biome weighting, not too dissimilar to [Overworld layout](#overworld).
+There are two primary means of establishing the rarity of Nether biomes: per-aspect rarity and the designation of one of the aspects to represent rarity itself. The latter method enables complete control over biome weighting, not too dissimilar to [the Overworld’s layout](#overworld).
 
 ###### Per-Aspect Rarity
 Per-aspect rarity refers to how each aspect, no matter its functional use case or arbitrary interpretation, is [independently distributed](#aspect-properties). This distribution must be taken into consideration when targeting aspect values. With 2 symmetrical distributions of rarity with Perlin noise generations, competition for available space on an interval is typically a non-issue; the negative values can be targeted if the positive values become too cluttered. A [tiering](#tiering) plan for rarity can further ease pains caused by constrained space.
 
 ###### Independent Rarity Aspect (Weighting)
-[Usage of a unique aspect](#arbitrary-aspect-types) works especially well for setting weights for Nether biomes like how the Overworld generation works. In this system, one aspect, such as weirdness, is re-designated to represent weight. Assuming the other 3 aspects are non-unique and used to represent standalone properties of a biome, this weighting can be used to pick a particular biome dependent upon the [distribution of Perlin noise](#aspect-properties) for that re-imagined aspect.
+[Usage of a unique aspect](#arbitrary-aspect-types) works especially well for setting weights for Nether biomes like how the Overworld generation works. In this system, one aspect, such as weirdness, is [re-designated](#separation-of-concerns) to represent weight. Assuming the other 3 aspects are non-unique and used to represent standalone properties of a biome, this weighting can be used to pick a particular biome dependent upon the [distribution of Perlin noise](#aspect-properties) for that re-imagined aspect.
 
 Generally, a meaningful selection of the other aspects shouldn’t necessitate great complexity within the weight aspect, but if there are a large number of possibilities desired for a given combination, the uniqueness of values and computed target intervals must also be considered. Essentially, every weight for a given combination of the other aspects must be unique [due to uniqueness requirements](#targeting). With this uniqueness in mind, the intervals derived from these targets need to be carefully spread to get the desired weightings exactly right. [Targeting adjustments](#targeting-adjustments) are useful here, but the weights may need to be adjusted across all biomes targeting the same combination when a new biome is added to the set.
 
-When no weights are needed for a combination of the non-unique aspects because only one biome matches the conditions, target a value of `0`. This gives the maximum berth possible for that biome to generate, helping to avoid interference from unwanted biomes.
+When no weights are needed for a combination of the non-unique aspects because only one biome matches the conditions, a value of `0` should be targeted. This gives the maximum berth possible for that biome to generate, helping to avoid interference from unwanted biomes.
 
 > Because masking of aspects does not exist in the Nether, this weighting system is susceptible to some minor failures caused by [the function that calculates distance in the 4-dimensional map of aspect target spaces](#targeting). For a given set of values for a point in the Nether, if a target weight is far enough from the actual value of that aspect at that point when the other 3 aspects are well-targeted, the discrepancy may cause the system to pick an undesired biome. In other words, usage of a weighting aspect is not rigid or guaranteed. However, the biome selected by the system will still be well-targeted and appropriate for the values, and the intended biome may very well show up with a smaller surface area nearby, so this system’s failures are mild.
 
@@ -634,7 +709,7 @@ Regardless of implementation difficulty, the behaviors at play are simple to und
 
 As an example, if a biome had the following Nether generation rules:
 
-```
+```jsonc
 "minecraft:nether_generation_rules": {
   "target_temperature": 0.2,
   "target_humidity": -0.6,
@@ -644,23 +719,23 @@ As an example, if a biome had the following Nether generation rules:
 }
 ```
 
-Assuming the weirdness aspect was ignored, a transition biome would have to occur for every combination before and after each of the other 3 target aspects. Because a single biome definition cannot target multiple spots in the Nether, 8 different definitions would have to be created and well adjusted to act as transitions into this target biome. Furthermore, if any of the aspect targets in this biome changed, all transition biome definitions would have to be updated to accommodate the change.
+Assuming the weirdness aspect was ignored, a transition biome would have to occur for every combination before and after each of the other 3 target aspects. Because a single biome definition cannot target multiple spots in the Nether, 8 different definitions (1 positive and 1 negative for each combination of the 3 relevant aspects) would have to be created and well adjusted to act as transitions into this target biome. Furthermore, if any of the aspect targets in this biome changed, all transition biome definitions would have to be updated to accommodate the change.
 
 There are, however, two different scenarios where transition biomes can be used with minimal effort or complications.
 
 ###### Corner Transitions
-Corner transitions can occur when the biome to be transition to exists at the absolute extremes of the used aspects. An example is if the target biome targeted values of +/-1 for every used aspect. In this case, a transition biome could be created by placing values “right in front of” the target biome, like at +/- 0.8 for the same aspects.
+Corner transitions can occur when the biome targeted for transitioning exists at the absolute extremes of the used aspects. An example is if the target biome targeted values of +/-1 for every used aspect. In this case, a transition biome could be created by placing values “right in front of” the target biome, like at +/- 0.8 for the same aspects.
 
-As an example, if at target biome had the following targets:
+As an example, if at target biome had the following targets (with the other 2 being ignored):
 
-```
+```jsonc
 "target_temperature": 1,
 "target_humidity": -1
 ```
 
 A transition biome could be established using:
 
-```
+```jsonc
 "target_temperature": 0.8,
 "target_humidity": -0.8
 ```
@@ -677,20 +752,20 @@ If a tiered aspect had the following schema:
 
 A transition mixing these two extremes would help the change between the two be less jarring. To achieve this, simply add a new transition tier, such as “Void” with a value of `0`.
 
-In the case that this transition could be represented by more than one biome, the set of space dedicated to these transition biomes could end up being sufficiently large for the transition to always occur between the two extremes. If only one biome should act as this transition, however, the biome may need to be duplicated for combinations of other used aspects to reserve enough of the targeting space for the transition to always occur.
+In the case that this transition tier could be represented by more than one biome, the set of space dedicated to these transition biomes could end up being sufficiently large for the transition to almost always occur between the two extremes. If only one biome should act as this transition, however, the biome may need to be duplicated for combinations of other used aspects to reserve enough of the targeting space for the transition to frequently occur.
 
 ##### Arrangements
 Because strict boundaries aren’t a given in the Nether’s multi-noise system, biomes are never absolutely arranged; the concept of [slotting](#regions) doesn’t exist in the Nether. However, biomes in this system can still be arranged relative to one another, so long as all targeted values across all Nether-declaring biomes are considered.
 
 ###### Clustering
-Biome clustering is rather straightforward and becomes more obvious as the count of biomes registered for the Nether increases. Biome clustering occurs when a group of related biomes have sufficiently close values. To cluster biomes together, simply assign targets to every biome that are only mildly offset from one another. Ensure the every biome has its own unique values to avoid conflicts.
+Biome clustering is rather straightforward and becomes more obvious as the count of biomes registered for the Nether increases. Biome clustering occurs when a group of related biomes have sufficiently close aspect targets. To cluster biomes together, simply assign targets to each appropriate biome that are only mildly offset from one another, ensuring that each biome has its own unique values to avoid conflicts.
 
-Due to the nature of the multi-noise system, there is no guarantee that all the biomes in an intended cluster will generate together, but more than likely at least some of them will.
+Due to the nature of the multi-noise system, there is no guarantee that all the biomes in a designed cluster will generate together in a cluster instance, but typically more than one will.
 
 For biomes targeting values farther away from the averages for each aspect in the cluster, a small [target adjustment](#target-adjustment) may need to be provided to ensure the “outermost” biomes in the cluster don’t bleed too far into space that would typically be designated for biomes outside the cluster.
 
 ###### Isolation
-Biomes may be isolated at the extremes of the values of an aspect. Setting a biome to target a value near the extremes (`-1` or `1`) of any aspect can help ensure the rarity of that biome. With a sufficiently large number of biomes per [used aspects](#ignoring-aspects), these isolated biomes will typically be smaller and form simple, discrete shapes due to Perlin noise interpolation. Such isolated biomes become increasingly smaller and rarer for each aspect targeted with an extreme value.
+Biomes may be isolated at the extremes of the values of an aspect. Setting a biome to target a value near the extremes (`-1` or `1`) of any aspect can help ensure the rarity of that biome. With a sufficiently large number of biomes per [used aspects](#ignoring-aspects), these isolated biomes will typically be smaller and form simple, discrete shapes due to Perlin noise interpolation. Such isolated biomes become increasingly smaller and rarer with each added aspect targeted with an extreme value.
 
 ###### Avoidance
 The dual nature of the range of Perlin noise for aspects can be used to force biomes away from one another. If the biome count for the Nether is small, [transitions](#tiering-transitions) can be established to separate biomes. For larger biome counts, biomes can avoid each other by setting their targets *for a single aspect* to opposing extremes, such as `-1` and `1`. This will effectively [isolate](#isolation) both biomes and prevent them from ever directly touching.
@@ -698,19 +773,19 @@ The dual nature of the range of Perlin noise for aspects can be used to force bi
 > Setting the values for more than one aspect target in opposing biomes to extremes is fruitless for the actual sake of avoidance. This would only work to further isolate each biome by constraining the conditions under which each could generate due to the independence of the aspects. At the same time, the minimum distance between two instances of these biomes would not decrease but would only serve to minimize the count of “close calls” due to the now compounded rarity of the biomes.
 
 ### Dimension Interactions
-Dimension-specific tags used for slotting have no effect across dimensions; for example, the `ocean` or `rare` tags have no effect in the Nether or on The End biome.
+Dimension-specific tags used for slotting have no effect across dimensions; for example, the `"ocean"` and `"rare"` tags have no effect in generation for biomes in the Nether or The End.
 
-Biomes may generate in multiple dimensions; they need only to register themselves for each desired place (currently only the Overworld and Nether).
+Biomes may generate in multiple dimensions; they need only to register themselves for each desired place using the relevant components (currently only the Overworld and the Nether).
 
 ## Shape & Style
-The actual look of a biome depends on its shape and its aesthetic. These concepts exist entirely separately from how a biome is placed, meaning that a single aesthetic can be reused in multiple places in the Overworld; as an example, Forests can exist: independently as a base biome, as a sub-biome to Plains, or as an island in the ocean.
+The actual look of a biome depends on its shape and its aesthetic. These concepts exist entirely separately from how a biome is placed, meaning that a single aesthetic can be reused in multiple places in the Overworld; as an example, vanilla Forests exist: independently as a base biome, as a sub-biome to Plains, or as an island in the ocean.
 
-Biome aesthetic is controlled by the blocks comprising the biome and the climate features the biome declares. Blocks comprising a biome are predominantly declared using surface builders, but eligible surface builders allow for noise-controlled adjustments.
+Biome aesthetic is controlled by the blocks comprising the biome and the [climate](#climate) features the biome declares. Blocks comprising a biome are predominantly declared using [surface builders](#surface-builders), but eligible surface builders also allow for noise-controlled [adjustments](#surface-adjustments).
 
 Biome shape depends on the surface builder it declares and the biome’s heightmap settings. A biome’s shape will fluctuate per-block; these fluctuations are fixed per dimension per seed, meaning that the same shape settings for a biome at the same location in a dimension will then only vary per seed.
 
 ### Block Types
-Blocks are declared using the simple notation or the stateful notation. The **simple notation** references the identifier for a block as a string, such as `"minecraft:grass"`. If no namespace is provided, the game attempts to find a registered block with that name across all declared namespaces.
+Blocks are declared using a simple notation or a stateful notation. The **simple notation** references the identifier for a block as a string, such as `"minecraft:grass"`. If no namespace is provided, the game attempts to find a registered block with that name across all declared namespaces.
 
 > It is strongly advised to always use the complete name of a block, including the namespace, to avoid unexpected issues.
 
@@ -718,9 +793,9 @@ The **stateful notation** indicates block states for selecting a particular vari
 
 > Unfortunately, block states for vanilla blocks do not currently cover every possible true state for every block; for example, not all directionally placeable blocks have a state for their orientation, like walls.
 
-Stateful notations are objects with a `name` string property referring to the block identifier (like the basic notation) and a `states` object property providing state declarations. An example of a stateful declaration would be:
+Stateful notations are objects with a `"name"` string property referring to the block identifier (like the basic notation) and a `"states"` object property providing state declarations. An example of a stateful declaration would be:
 
-```
+```jsonc
 {
   "name": "minecraft:concrete",
   
@@ -731,26 +806,26 @@ Stateful notations are objects with a `name` string property referring to the bl
 ```
 
 ### Heightmap
-```
+```jsonc
 "minecraft:overworld_height": {
   "noise_type": "lowlands"
 }
 ```
 
-**The heightmap for a biome can only be customized for the Overworld.** The Nether sets its biomes’ heightmaps to give the dimension a consistent feel.
+Heightmaps are customized by affecting the noise a seed gives its terrain. The Overworld heightmap is adjusted using the `"minecraft:overworld_height"` component. Noises declared here can be customized using either numeric parameters passed to the noise generator or named presets of these parameters used in vanilla generation.
 
-Heightmaps are customized by affecting the noise a seed gives its terrain. The Overworld heightmap is adjusted using the `minecraft:overworld_height` component. Noises declared here can be customized using either numeric parameters passed to the noise generator or named presets of these parameters used in vanilla generation.
+> **The heightmap for a biome can only be customized for the Overworld.** The Nether sets its biomes’ heightmaps to give the dimension a consistent feel.
 
-> If a preset is used anywhere in the inheritance chain for a biome, this preset will unconditionally override declarations of numeric parameters. This can occur if both described properties are declared in a biome definition’s `minecraft:overworld_height` component or when attempting to override a biome initially declared earlier in a behavior pack stack. Unfortunately, most vanilla biomes use presets, restricting heightmap adjustments in these biomes only to the provided presets.
+> If a preset is used anywhere in the inheritance chain for a biome, this preset will unconditionally override declarations of numeric parameters. This can occur if both described properties are declared in a biome definition’s `"minecraft:overworld_height"` component or when attempting to override a biome initially declared earlier in a behavior pack stack. Unfortunately, most vanilla biomes use presets, restricting heightmap adjustments in these biomes only to the set of available, non-extensible presets.
 
 The world generator will smoothly transition between heightmaps of adjacent biomes. Gradual descents and diagonal changes in elevation are not reliably possible using heightmap adjustments. In other words, world painter-like biomes are not currently possible.
 
 #### Noise Parameters
-```
+```jsonc
 "noise_params": [0.5, 0.125]
 ```
 
-Noise parameters are declared as a 2-valued array using the `noise_params` property.
+Noise parameters are declared as a 2-valued array using the `"noise_params"` property.
 
 The first value represents the average height of a biome. Interestingly, this parameter does not directly use block height (the `y` coordinate) and is scaled to where a ∆ of 1 in the value represents a ∆ of 16 blocks in the average height of a biome. Furthermore, this value is zero-set to a `y`-height of about 67, several blocks above sea level. This means that to set this value with a particular average `y`-height in mind, use the formula:
 
@@ -760,12 +835,12 @@ Therefore, setting this value to `1` will result in an average `y`-height of abo
 
 > The maximum average height of a biome only works up to a `y`-height of 128: the first value of the `"noise_params"` array, therefore, has no effect above about `3.8125`.
 
-The second value of the array determines height variation. Negative values behave erratically and should generally not be used; in many cases, no terrain is formed other than the bedrock foundation. A value of `0` will make terrain variance small but not make the biome completely flat. Values up to about `0.125` will generate particularly smooth terrain; values greater than this begin to form cliffs, coves, and hollows. Extreme overhangs form beginning at `0.25`. By `0.5`, massive floating islands can dominate the landscape at the cost of player mobility. The terrain becomes more radical with larger values and should generally not be used to avoid player annoyance.
+The second value of the array determines height variation. Negative values behave erratically and should generally not be used; in many cases, no terrain is formed other than the bedrock foundation. A value of `0` will make terrain variance small but not make the biome completely flat. Values up to about `0.125` will generate particularly smooth terrain; values greater than this begin to form cliffs, coves, and hollows. Extreme overhangs form beginning at `0.25`. By `0.5`, beautiful, massive floating islands can dominate the landscape at the cost of player mobility. The terrain becomes more radical with larger values and should generally not be used to avoid player annoyance.
 
 > If a perfectly flat surface is desired within a biome, the second value given to `"noise_params"` should be set to `0` to minimize height variation. The first value should then be set to `4`, above the value of maximum effect, to guarantee unconditional height variations do not dip below the average height upper bound. Despite how flat these values will cause the biome interior to generate, the biome surface will still smoothly transition to lower adjacent biomes as needed, causing massive rises and falls unless the entirety of the Overworld is rewritten to sit at this `y`-height of 128.
 
 #### Noise Presets
-```
+```jsonc
 "noise_type": "ocean"
 ```
 
@@ -773,32 +848,32 @@ Noise presets provide a convenient way to emulate vanilla biome generation. It i
 
 The built-in noise presets include:
 
-- Default: `default`
-- Mutated default: `default_mutated`
-- Lowlands: `lowlands`
-- Highlands: `highlands`
-- Mountains: `mountains`
-- Extreme: `extreme`
-- Less extreme: `less_extreme`
-- Taiga: `taiga`
-- Swamp: `swamp`
-- Mushroom: `mushroom`
-- Ocean: `ocean`
-- Deep ocean: `deep_ocean`
-- River: `river`
-- Beach: `beach`
-- Stone beach: `stone_beach`
+| Preset | Value |
+|:--|:--|
+| Default | `"default"` |
+| Mutated default | `"default_mutated"` |
+| Lowlands | `"lowlands"` |
+| Highlands | `"highlands"` |
+| Mountains | `"mountains"` |
+| Extreme | `"extreme"` |
+| Less extreme | `"less_extreme"` |
+| Taiga | `"taiga"` |
+| Swamp | `"swamp"` |
+| Mushroom | `"mushroom"` |
+| Ocean | `"ocean"` |
+| Deep ocean | `"deep_ocean"` |
+| River | `"river"` |
+| Beach | `"beach"` |
+| Stone beach | `"stone_beach"` |
 
 ### Surface Builders
-Surface builders allow for more stylized terrain. Surface builders allow for biome terrain features that would otherwise be impossible using only heightmap adjustments or biome features. These terrain features are either intricately shaped or large in size. Unfortunately, there is no way to create a surface builder; surface builders exist solely to represent complex vanilla biome surfaces.
+Whereas heightmaps are used to control the general shape of a biome, surface builders are used to style biomes. Surface builders provide two key mechanisms for this styling: a schema to which blocks can be assigned for actual terrain generation and optionally a set of large-scale adornments to make a biome stand out.
 
-Surface builders // inheritance and restrictions;
+The optional adornments allow for biome terrain features that would otherwise be impossible using only heightmap adjustments or biome features; these adornments are either intricately shaped or massive in size. Unfortunately, there is no way to create a surface builder; the provided surface builders exist solely to represent complex vanilla biome surfaces.
 
-> Decorations created by surface builders are unfortunately fixed and not relative to the declared heightmap. This means that if the heightmap at the location of a given surface builder-created decoration is high or low enough, the decoration will not appear to exist, consumed by the land or the water.
+> Adornmenrts created by surface builders are unfortunately fixed and not relative to the declared heightmap. This means that if the heightmap at the location of a given surface builder-created decoration is high or low enough, the decoration will not appear to exist, consumed by the land or the water.
 
-#### Surfaces for the Overworld
-
-
+##### Surface Types
 ##### Default
 
 
@@ -811,11 +886,8 @@ Surface builders // inheritance and restrictions;
 ##### Frozen Ocean
 
 
-#### Surfaces for Other Dimensions
+##### The End
 The surface in The End cannot be changed in any way.
-
-##### Nether
-
 
 ##### Capped
 
@@ -823,8 +895,18 @@ The surface in The End cannot be changed in any way.
 ##### The End
 
 
+#### Dimensional Considerations
+
+
+The End surface cannot be changed in any way. The surface can’t be altered for two reasons: inheritance won’t allow for a change in surface builder type, and The End surface component contains no properties for configuration.
+
+#### Inheritance Considerations
+Due to biome inheritance, surface builders declared in later definitions of a biome may conflict with earlier definitions. Because each surface builder type is its own component, the default resolution system for inheritance pits the builders against each other, often leading to some strange outcomes.
+
+Only the [default surface builder](#default) can be overridden. Overrides will fail if attempted for any other builder, but the inner schema of the failed override may actually yet have an effect on generation. This occurs when the schemas of two different builders share properties of the same name and type.
+
 ### Surface Adjustments
-```
+```jsonc
 "minecraft:surface_material_adjustments": {
   "adjustments": [
     {
@@ -840,45 +922,56 @@ The surface in The End cannot be changed in any way.
 }
 ```
 
-Surface adjustments allow for fine-tuning a biome's surface blocks. Despite being called "surface" adjustments, these adjustments can actually affect all blocks from the heightmap down to the origin (bedrock layer); they cannot be used to alter bedrock or air in caves, above the heightmap, or between shelves of land. Surface adjustment conditions are checked against random noise specific to the world seed.
-
-Surface adjustment declarations can affect the intervals for noise intersection and relative sizing of the noise surface as mapped to the biome surface. Restrictions can also be applied to the heights at which surface adjustments will be applied, either independently or coordinated with noise intersections. Therefore, for an adjustment to be applied to a location, every restriction must succeed; it any fail, the condition fails, and the game will fall back to the surface builder’s declared block for that location.
+Surface adjustments allow for fine-tuning a biome's surface blocks. Despite being called "surface" adjustments, these adjustments can actually affect all blocks declared in an eligible surface builder. These adjustments cannot modify blocks outside the scope of a surface builder and therefore cannot be used to alter bedrock or air, whether the air generates in caves, above the heightmap, or between shelves of land (if the heightmap is radical enough).
 
 > Currently, only the default and swamp surface builders support adjustments.
 
-#### Noise Intersections
-A noise curve that is dependent upon the seed of a world can be used to limit the `x` and `z` components of an adjustment. The origin of the adjustments noise curve is centered on the world origin and can then be scaled to map onto the horizontal plane of a dimension. The noise curve can therefore only work on this horizontal plane and not on the `y` coordinate; for that, use height restrictions.
+Surface adjustments declarations are implemented using objects in the `"adjustments"` property of the `"minecraft:surface_material_adjustments"` component. These declarations contain both overrides for blocks declared in the biome’s surface builder and the conditions under which these adjustments should occur.
 
-The exact value generated from the noise curve at a particular location is inconsequential to the resultant surface adjustment. The only consideration is whether the value at that location falls within the provided closed interval.
+Surface adjustment conditions can check against a [random noise surface](#noise-intersections) dependent on the `x` and `z` coordinates using `"noise_range"` and `"noise_frequency_scale"` or a [simple range](#height-restrictions) of `y` coordinates via `"height_range"`. If all coordinates should be considered, both conditions can be used. For an adjustment to be applied to a location, every declared condition must succeed; it any fail, the condition check fails, and the game will fall back to the surface builder’s declared block for that location.
+
+#### Noise Intersections
+```json
+"noise_range": [-1, -0.5],
+"noise_frequency_scale": 0.125,
+```
+
+A noise curve that is dependent upon the seed of a world can be used to restrict the `x` and `z` components of a surface adjustment. The origin of this noise curve is centered on the world origin and [can then optionally be scaled via `"noise_frequency_scale"`](#sizing) to map onto the horizontal plane of a dimension. The noise curve can therefore only work on this horizontal plane and not on the `y` coordinate; for that, use [height restrictions](#height-restrictions). To actually use the noise curve to restrict adjustments, a success interval must be provided using `"noise_range"`.
+
+The exact value generated from the noise curve at a particular location is inconsequential to the resultant surface adjustment. The only consideration is whether the value at that location meets the conditional check.
 
 ##### Intervals
-```
+```jsonc
 "noise_range": [0.5, 1]
 ```
 
-The noise curve used for surface adjustments generates values lying on the closed interval `[-1, 1]`. The negative values behave symmetrically with the positives; that is: an intersecting sub-interval to this curve `[-0.8, -0.6]` would theoretically have approximately the same shape and represent approximately the same ratio of the full range as the sub-interval `[0.6, 0.8]`. Intervals closer to `0` tend to form continually winding striations in the surface, while those further away tend to form small, discrete, well spread shapes. Intervals closer to `0` also intersect a larger range of the noise curve than intervals of equal length further from `0`; this means that if discrete shapes are desired, like those that are formed at the extremes of the noise curve’s range, a larger relative interval may be required than one targeting the winding paths close to `0`.
+The noise curve used for surface adjustments generates values lying on the closed interval [-1, 1]. Values on this interval are targeted via a sub-interval using the `"noise_range"` property.
+
+The noise curve itself has some notable properties that should be understood when using surface adjustments. Negative values generated by Perlin noise behave symmetrically with the positives; that is: an intersecting sub-interval to this curve [-0.8, -0.6] would theoretically have approximately the same shape and represent approximately the same ratio of the full range as the sub-interval [0.6, 0.8]. Intervals closer to `0` tend to form continually winding striations in the surface, while those further away tend to form small, discrete, well spread shapes. Intervals closer to `0` also intersect a larger range of the noise curve than intervals of equal length further from `0`; this means that if discrete shapes are desired, like those that are formed at the extremes of the noise curve’s range, a larger relative interval may be required than one targeting the winding paths close to `0`.
 
 ##### Sizing
-```
+```jsonc
 "noise_frequency_scale": 0.25
 ```
 
 The surface adjustment noise curve uses a default mapping relative to the dimension coordinates that would form extremely small transformations. The noise intersections are actually made larger by setting the sizing value to be smaller. Smaller values, such as `0.125`, are key to forming large patches of transformations, such as podzol or coarse dirt clusters. Larger values of this property are typically used to create a messier feel to the terrain. Values greater than the default `1` are not recommended unless something akin to a checkerboard pattern is desired.
 
 #### Height Restrictions
-```
+```jsonc
 "height_range": [
   "math.random_integer(30, 40)",
   "math.random_integer(60, 70)"
 ]
 ```
 
-Height restrictions can be provided to limit the valid transformation region. These restrictions are independent of limitations using the noise curve and much simpler, too. Height restrictions are provided as an interval and simply target a range of `y`-heights to transform a region. Layer will be created that are either bound to the entire target biome or to the specific `x` and `z` intersections determined by the adjustments noise curve if it was used. The first value of the `"height_range"` array must be less than the second value or else the adjustment will fail.
+Height restrictions can be provided to limit the valid transformation region. These restrictions are independent of limitations using the noise curve and much simpler, too. Height restrictions are provided as an interval and simply target a range of `y`-heights to transform a region. The first value of the `"height_range"` array must be less than the second value or else the adjustment will fail.
 
-Unlike the properties establishing checks against the noise curve, the `"height_range"` property accepts MoLang expressions for its elements. Using math functions, intervals can be created that are randomly spread for higher quality adjustments. Unfortunately, queries cannot be used in these expressions, so adjustments cannot be made relative to the heightmap.
+Using integers directly will create boring layers of adjustments. However, unlike the properties establishing checks against the noise curve, the `"height_range"` property accepts MoLang expressions for its elements. Using math functions, intervals can be created that are randomly spread for higher quality adjustments.
+
+> Unfortunately, queries cannot be used in these expressions, so adjustments cannot be made relative to either the heightmap a noise surface.
 
 ### Climate
-```
+```jsonc
 "minecraft:climate": {
   "temperature": 1,
   "downfall": 0.25,
@@ -887,21 +980,21 @@ Unlike the properties establishing checks against the noise curve, the `"height_
 }
 ```
 
-Climate adjustments work everywhere in Minecraft, even The End.
+A biome’s climate mostly represents its ambient aesthetic. Aspects of a biome’s climate may have an effect on gameplay, but this is rarely used in vanilla. Climate adjustments work everywhere in Minecraft, even The End, but the adjustments may have no effect if a dimension doesn’t support a specific climate feature, such as [precipitation](#precipitation) outside the Overworld.
 
 #### Temperature
-```
+```jsonc
 "minecraft:climate": {
   "temperature": 0.5
   …
 }
 ```
 
-The temperature of a biome affects various gameplay features like precipitation type, the formation of ice and snow layers, and the survivability of snow golems. It is implemented as the float property `"temperature"` and may be set without limitation: all possible float values may be used. Lower values represent colder temperatures. Freezing temperatures, such as where snow falls, occur below `0.15`.
+The **temperature** of a biome affects various gameplay features like [precipitation type](#precipitation), the formation of ice and [snow layers](#snow-cover) when the appropriate blocks are directly exposed to sunlight, and the survivability of snow golems. It is implemented as the float property `"temperature"` and may be set without limitation: all possible float values may be used. Lower values represent colder temperatures. Freezing temperatures, such as where snow falls, occur below `0.15`.
 
-> The `"temperature"` property is unrelated to the climate temperatures given in the `"generate_for_climates"` property in the `"minecraft:overworld_generation_rules"` component, affecting gameplay rather than biome placement.
+> The `"temperature"` property is unrelated to the climate temperatures given in either the `"generate_for_climates"` property in the `"minecraft:overworld_generation_rules"` component or the `"target_temperature"` property in the `"minecraft:nether_generation_rules"` component; the property here affects gameplay rather than biome placement.
 
-The temperature established with this property is not the fixed temperature of a biome, only the basis; the actual temperature at a location also depends on the `y`-height. The temperature at or below sea level is fixed to this basis. The temperature decreases by `1 / 600` every block above sea level. The formula, therefore, of the temperature, *T*, at a given `y`-height, *y*, from a declared temperature basis, *t*, for `y`-heights above sea level is given by:
+The temperature established with this property is not the fixed temperature of a biome, only the basis; the actual temperature at a location also depends on the `y`-height. The temperature at or below sea level is fixed to this basis. Above sea level, however, the temperature decreases by 1 / 600 every block. The formula, therefore, of the temperature, *T*, at a given `y`-height, *y*, from a declared temperature basis, *t*, for `y`-heights above sea level is given by:
 
 *T*(*y*) = *t* - ((*y* - 63) / 600)
 
@@ -909,36 +1002,48 @@ The constant 63 represents the `y`-height of the Overworld sea level. To establi
 
 *t*(*y*) = 0.15 + ((*y* - 63) / 600)
 
-The constant 0.15 here represents the freezing temperature. Data-driven gameplay can use the temperature at the position of an entity to perform actions upon that entity using the `"is_temperature_value"` damage condition filter in an entity definition.
+The constant 0.15 here represents the freezing temperature. Data-driven gameplay can use the temperature at the position of an entity to perform actions upon that entity using the `"is_temperature_value"` damage condition filter in an entity definition, but this is outside the scope of this document.
 
 Vanilla biomes only use temperature values ranging from `-0.5` to `2`. Biomes to be completely covered in snow should use values less than `0.15`; `0` is the recommended value for this case. Warm biomes, such as those that would damage snow golems, should use values greater than `1`. Deserts and Nether biomes use `2`. For biomes that should only be capped with snow layers, a value between about `0.2` and about `0.4` should be used due to [how snow layer generation is affected by temperature](#snow-cover).
 
 #### Precipitation
-```
+```jsonc
 "minecraft:climate": {
   "downfall": 0.5
   …
 }
 ```
 
-The float property `"downfall"` controls the extent of precipitation within a biome. Currently, the property only behaves on the closed interval `[0, 1]`; values outside this interval are clamped to the nearest valid value. At `0` or less, this property disables all precipitation effects within a biome. At `1` or greater, precipitation effects will be maximized. Values between `0` and `1` scale accordingly.
+**Precipitation** is visible as rainfall or snowfall in the Overworld. The float property `"downfall"` controls the extent of precipitation within a biome. Currently, the property only behaves on the closed interval [0, 1]; values outside this interval are clamped to the nearest valid value. At `0` or less, this property disables all precipitation effects within a biome. At `1` or greater, precipitation effects will be maximized. Values between `0` and `1` scale accordingly.
 
-> Adjustments to precipitation are *never* reflected visually in the particles that fall when raining or snowing. Precipitation particles are never visible in Desert variants, Savanna variants, or Mesa variants, no matter their overrides; particles are *always* visible in any other biome, including custom ones. Despite this, *most* gameplay affected by precipitation will behave accordingly.
+> Due to a bug, adjustments to precipitation are *never* reflected visually in the particles that fall when raining or snowing. Precipitation particles are never visible in Desert variants, Savanna variants, or Mesa variants, no matter their overrides; particles are *always* visible in any other biome, including custom ones. Despite this, *most* gameplay affected by precipitation will behave appropriately.
 
-Examples of precipitation effects in vanilla gameplay include the addition of snow layers when snowing, the filling of exposed cauldrons in rain, and the time required for a fish to spawn when fishing. Some gameplay aspects that should consider this value will instead ignore it, such as entities with the `"in_water_or_rain"` damage filter. Lesser values of `"downfall"` will slow precipitation effects accordingly, i.e., snow layers will form a tenth asC fast at a value of `0.1` as they would at `1`.
+Examples of precipitation effects in vanilla gameplay include the addition of snow layers when snowing, the filling of exposed cauldrons in rain, and the time required for a fish to spawn when fishing. Some gameplay aspects that should consider this value will instead ignore it, such as entities with the `"in_water_or_rain"` damage filter. Lesser values of `"downfall"` will slow precipitation effects accordingly, i.e., snow layers will form a tenth as fast at a value of `0.1` as they would at `1`.
 
-The type of precipitation occurring at a location depends on its `y`-coordinate. If the value is [freezing or below](#temperature), snow will fall at that location; otherwise, rain will fall.
+The type of precipitation occurring at a location depends on its `y`-coordinate. If the value is [freezing, `0.15`, or below](#temperature), snow will fall at that location; otherwise, rain will fall.
 
 #### Snow Cover
-```
+```jsonc
 "minecraft:climate": {
   "snow_accumulation": [1, 0.5],
   …
 }
 ```
 
+When a biome is generated, blocks that are [at a freezing temperature](#temperature) typically have **snow cover** above them: snow layers stacked atop eligible blocks. The `"snow_accumulation"` property is used to adjust this snow cover. Snow covering seems to occur as one of the final passes to biome generation, meaning snow will cover features as well as the biome’s surface.
+
+> Snow can also cover a biome post-generation as a part of [snow precipitation](#precipitation), but the `"snow_accumulation"` property has no effect in this situation. Use the [`"precipitation"` property](#precipitation) to adjust snow formation rate.
+
+This property takes a two-valued array of float values, [*a*, *b*], where *a* affects the average height of snow covering eligible blocks and *b* seemingly affects the distribution of the snow.
+
+In particular, *a* represents the maximum block count of snow layers above blocks at a freezing temperature. On average, the snow layer block height will actually be about 40% of this value. Blocks having no snow covering will be uncommon, and blocks having the maximum snow covering will be almost impossibly rare. Because this value represents block height and each actual snow layer is only one-eighth of a block tall, float values must be used for targeting shallower snow covering. For example, to have snow cover that is at most 4 layers tall, use a value of `0.5`. At this value, almost all eligible blocks will have a covering that is either 2 or 3 layers thick.
+
+The second value of the array, *b*, is intended to adjust snow distribution, but  many values for *b* cause erratic behavior, and even well-behaved values have little impact on generation. Values of `0` or less always result in a single layer of snow cover above eligible blocks, entirely disregarding the value set for *a*. Values exclusively between `0` and `0.125` cause a seemingly random spread of entire chunks to be only covered in a single layer of snow, while all other chunks respect the value set for *a*. Values at `0.125` or greater cause mild adjustments in snow cover that are not relative to the value set for *a*; in other words, extreme values of *a* make alterations caused by *b* to be virtually unnoticeable. Furthermore, the adjustments caused by *b* only apply to a small spread of blocks, making this value rather useless at best and buggy at worst. *It is therefore recommended to just set this value to 0.5 wherever `"snow_acucmulation"` is declared.*
+
+> There is no way to conveniently avoid snow cover in frozen areas. Snow cover will not effect blocks not suitable for snow layer placement. To avoid snow, choose a warmer [`"temperature"` value](#temperature).
+
 #### Particle Decorations
-```
+```jsonc
 "minecraft:climate": {
   …
   
@@ -947,26 +1052,29 @@ The type of precipitation occurring at a location depends on its `y`-coordinate.
 ```
 
 **Particle decorations** are storms of ambient particles visible within a biome. These properties are solely decorative; unlike other aspects of a biome’s climate, particle decorations have no effect on gameplay. Custom particles currently may not be used. 4 different particle decorations from vanilla biomes are available to use anywhere:
-- Ash: `ash`
-- White ash: `white_ash`
-- Red spores: `red_spores`
-- Blue spores: `blue_spores`
+
+| Decoration type | Property name |
+|:--|:--|
+| Ash | `"ash"` |
+| White ash | `"white_ash"` |
+| Red spores | `"red_spores"` |
+| Blue spores | `"blue_spores"` |
 
 These decorations will be a constant presence within a biome. If a player is within the bounds of a biome, these particles will be visible, even if underground or within water or lava. If undeclared, no particles will be used in a biome.
 
-As they are represented as float properties in the `minecraft:climate` component, their intensities are adjustable. The float value works for any number greater than `0`. The larger the value, the more particles will be used simultaneously; negative values or `0` will disable the effect.
+As they are represented as float properties in the `"minecraft:climate"` component, their intensities are adjustable. The float value works for any number greater than `0`. The larger the value, the more particles will be used simultaneously; negative values or `0` will disable the effect.
 
-> It is not recommended to set this value too large, as the particle count may cause crashes to occur. By a value of `16`, the screen will be inundated with particles, but the biome will still be visible through the storm.
+> It is not recommended to set this value too large, as the particle count may cause crashes to occur. By a value of `16`, the screen will be inundated with particles, but the biome will still be barely visible through the storm.
 
 ## Gameplay
-
+Biomes are the starting point of much of the configurable gameplay in Minecraft. Features, such as trees and villages, can only generate as part of biomes. Automatic mob spawning can then be configured for biomes and structures. Feature attachments and mob spawning are outside the scope of this document, but there are a few configurations for biome definitions that power how biomes interact with other gameplay systems.
 
 ### Features
-```
+```jsonc
 "minecraft:forced_features": {
   "surface_pass": {
     "identifier": "pioneercraft:grasslands_caravan_feature",
-    "feature_reference": "pioneercraft"caravan_feature",
+    "feature_reference": "pioneercraft:caravan_feature",
     
     "scatter_chance": "100 * math.pow(2, -4)",
     
@@ -986,16 +1094,283 @@ As they are represented as float properties in the `minecraft:climate` component
 
 If a collection of blocks generating in a world aren’t created by a surface builder, they are created from a feature. Features are fundamental to gameplay in Minecraft: vanilla features range from trees to villages to boulders. The features in a biome may handily determine that biome’s worth to a player.
 
-Features are mostly outside the scope of biomes, but the two components within a biome’s schema should be noted.
+Features are mostly outside the scope of biomes, but the two components within a biome’s schema affecting feature generation should be noted.
 
 #### Forced Features
-The `minecraft:forced_features` component can be used to force a feature to generate within a biome without using [feature rules](/concepts/features/#feature-rules). The schema here is similar to feature rules and further detailed in that documentation.
+```jsonc
+"minecraft:forced_features": {
+  "surface_pass": [
+    {
+      "identifier": "aetherlands:redwood_tree_feature",
+      "feature_reference": "aetherlands:redwood_tree",
+      
+      "iterations": "math.random_integer(2, 4)",
+      
+      "x": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+      "z": {
+        "distribution": "uniform",
+        "extent": [0, 16]
+      },
+      "y": "query.heightmap(variable.worldx, variable.worldz)"
+    }
+  ]
+}
+```
+
+The `"minecraft:forced_features"` component can be used to force a feature to generate within a biome without using [feature rules](/concepts/features/).
+
+##### Time of Placement
+11 different **placement pass** opportunities for feature generation form the properties directly contained within the `"minecraft:forced_features"` component:
+
+| Placement pass | Property name |
+|:--|:--|
+| First pass | `"first_pass"` |
+| Pre-underground pass | `"before_underground_pass"` |
+| Underground pass | `"underground_pass"` |
+| Post-underground pass | `"after_underground_pass"` |
+| Pre-surface pass | `"before_surface_pass"` |
+| Surface pass | `"surface_pass"` |
+| Post-surface pass | `"after_surface_pass"` |
+| Pre-sky pass | `"before_sky_pass"` |
+| Sky pass | `"sky_pass"` |
+| Post-sky pass | `"after_sky_pass"` |
+| Last pass | `"final_pass"` |
+
+In general, use the pass that most closely matches where a feature should generate: `"underground_pass"`, `"surface_pass"`, or `"sky_pass"`. If features need to generate before or after other features in a category, use pre- and post-pass timings. In rare cases, the first pass may be needed to provided a groundwork for all other feature generations. Feature generating in the first pass behave as though a part of surface generation itself. The last pass should only be used to provide finishing touches, especially if a feature could potentially adorn any features previously placed.
+
+These array properties take objects that represent actual feature attachments.
+
+##### Feature Attachments
+```jsonc
+{
+  "identifier": "monsterville:abandoned_outpost_rule",
+  "feature_reference": "monsterville:abandoned_outpost",
+  
+  "scatter_chance": {
+    "numerator": 1,
+    "denominator": 256
+  },
+  
+  "x": {
+    "distribution": "uniform",
+    "extent": [0, 16]
+  },
+  "z": {
+    "distribution": "uniform",
+    "extent": [0, 16]
+  },
+  "y": "query.heightmap(variable.worldx, variable.worldz)"
+}
+```
+
+**Feature attachments** are objects behaving similarly to [feature rules](/concepts/features/) listed in the [placement pass](#time-of-placement) arrays. These objects describe which feature should be generated, when it could potentially generate, and how the feature could be placed when it will generate.
+
+###### Feature Selection
+```jsonc
+"identifier": "project_x:skyscraper_rule",
+"feature_reference": "project_x:skyscraper"
+```
+
+The feature to be placed by this attachment is given via the `"feature_reference"` property. The value here refers to the identifier of the feature definition, including its required namespace. The `"identifier"` property, meanwhile, is used to uniquely determine the *feature attachment* itself and should include a namespace prefix, <code>*namespace*:</code>.
+
+###### Generation Potential
+```jsonc
+"scatter_chance": 25,
+"iterations": 4
+```
+
+The actual potential for a feature to generate is dependent on the idea of a feature cluster. Feature clusters are groupings of the same feature that generate together. Clusters are an abstraction above individual features and do not need to actually contain multiple instances of a feature; the count of a cluster may be 1. Cluster generation is determined by 2 factors:
+
+- The chance for a given chunk to hold a cluster
+- The size of a cluster
+
+The `"scatter_chance"` property determines whether a cluster will generate in a chunk. This chance is checked against every single chunk for the biome. When a cluster generates, *every* instance of the cluster (as determined with the `"iterations"` property) will attempt to generate. To adjust the iterations randomly when a cluster successfully generates, MoLang expressions may be used.
+
+> Instances of a cluster may still fail to generate in cases such as when generational checks are not met or if another feature has already established itself at that location during that [placement pass](#time-of-placement). One such means of failure is actually for an instance to attempt to generate where a previous instance of the cluster is already placed. The latter generation attempt is then effectively skipped; the game does not attempt to relocate that instance.
+
+`"scatter_chance"` may be expressed in 3 different forms.
+
+Float values behave as literal chances. Strings may be used containing MoLang expressions to evaluate the chance. Regardless, both of these forms are actually scaled against `100` for chance determination. For an example using literals, a value of `0.5` here doesn’t mean the feature will generate in half of all chunks; it would generate only 1 in every 200 chunks. Use `50` to represent half a chance. All MoLang expressions should therefore be multiplied by 100, so `"math.pow(2, -4)"` would actually represent a 1 in 1600 chance of generation; use `"100 * math.pow(2, -4)"` instead to get a 1 in 16 chance.
+
+A third form for `"scatter_chance"` uses an object notation with `"numerator"` and `"denominator"` integer properties:
+
+```jsonc
+"scatter_chance": {
+  "numerator": 1,
+  "denominator": 12
+}
+```
+
+By default, the chance that a feature generates in a chunk is 100%, so omitting the `"scatter_chance"` property is equivalent to providing a value of `100`.
+
+The `"iterations"` property is what determines cluster size when a feature would successfully generate in a chunk. Literal integers may be used to always keep clusters the same size when generating, but MoLang strings can also be employed to adjust the cluster size in each instance of a cluster:
+
+```json
+"iterations": "math.random_integer(4, 8)"
+```
+
+The default cluster size when `"iterations"` is omitted is 1.
+
+###### Placement Location
+```jsonc
+"x": {
+  "distribution": "gaussian",
+  "extent": [0, 16]
+},
+"z": {
+  "distribution": "gaussian",
+  "extent": [0, 16]
+},
+"y": "query.heightmap(variable.worldx, variable.worldz)"
+```
+
+Within every chunk where a [feature cluster](#generation-potential) will successfully generate, a system must be described for instances of a cluster to be placed. An astounding number of distributions are possible in feature placement.
+
+The `"x"`, `"z"`, and `"y"` properties are used to independently describe coordinate distributions for each matching dimension *relative to each chunk where a cluster generates*. This means that the values provided to these properties aren’t relative to a dimension’s coordinate system. For example, imagine a feature attachment with literal values for the coordinates:
+
+```jsonc
+{
+  "identifier": "mysterio:random_block_rule",
+  "feature_reference": "mysterio:random_block",
+  
+  "x": 8,
+  "z": 8,
+  "y": 128
+}
+```
+
+This attachment would generate the feature `"mysterio:random_block"` in the horizontal and vertical center of *every single* chunk in that biome, that is at (8, 128, 8) in every chunk.
+
+Literal values, while possible, are generally boring. The coordinate properties also allow for an object form describing distributions and intervals and a string form for MoLang expressions. Typically the same distribution strategy will be used for at least `"x"` and `"z"`, but this isn’t required. Any mixing of forms and strategies is allowed on a per-coordinate level.
+
+The object form is used to distribute generation locations across a chunk. This form declares a distribution type using `"distribution"` and the range for which it should be applied relative to the chunk origin using `"extent"`.
+
+Distributions should typically be used for at least the `x` and `z` coordinates of a feature attachment to provide a degree of randomness to generation. While distributions, particularly uniform ones, are helpful for clusters of 1, they become especially important when attempt to place clusters of greater count. This is the because the distributions effectively form shapes that can only be seen with a higher `"iteration"` count of a feature.
+
+> Regardless of the distribution type, it is possible for [instances of a cluster to fail to generate](#generation-potential), obscuring the shapes formed from different distribution types.
+
+5 different distribution types are available:
+
+| Distribution type | Property value |
+|:--|:--|
+| Uniform | `"uniform"` |
+| Gaussian | `"gaussian"` |
+| Inverse Gaussian | `"inverse_gaussian"` |
+| Fixed grid | `"fixed_grid"` |
+| Jittered grid | `"jittered_grid"` |
+
+**Uniform distributions** give an even chance for a value to be selected across the `"extent"` interval. Uniform distributions can therefore be considered to provide a basic random chance across the interval. These distributions should be used in the majority of cases.
+
+Whenever the size of a feature cluster is 1, uniform distributions should be used to randomize generation evenly across chunks selected by `"scatter_chance"`.
+
+**Gaussian distributions** focus values closer to the center of the provided interval. Gaussian distributions are helpful when a feature cluster should be isolated and form a natural spread of some feature. A great example is flower beds:
+
+```jsonc
+{
+  "identifier": "gaiapack:poinsettia_rule",
+  "feature_reference": "gaiapack:poinsettia",
+  
+  "scatter_chance": 12.5,
+  "iterations": "math.random(8, 16)",
+  
+  "x": {
+    "distribution": "gaussian",
+    "extent": [
+      "math.random_integer(2, 6)",
+      "math.random_integer(10, 14)"
+    ]
+  },
+  "z": {
+    "distribution": "gaussian",
+    "extent": [
+      "math.random_integer(2, 6)",
+      "math.random_integer(10, 14)"
+    ]
+  },
+  "y": "query.heightmap(variable.worldx, variable.worldz)"
+}
+```
+
+The `"x"` and `"z"` properties use Gaussian distribution for both dimensions of a randomly sized rectangle centered near the middle of a chunk. This results in an *elliptical* spread of — as the MoLang value of `"iterations"` indicates — 8 to 16 flowers.
+
+> The `"y"` MoLang expression attaches the flowers to the ground level; this is expounded upon below.
+
+**Inverse Gaussian distributions** push values away from the center of an interval: toward the extremes. Inverse Gaussian distributions have a very limited number of use cases, but if the feature is small, the `"iteration"` count is great enough, and the `"scatter_chance"` resolves to 100%, elliptical star shapes can form throughout a biome. For example:
+
+```jsonc
+{
+  "identifier": "wildwest:stone_column_rule",
+  "feature_reference": "wildwest:stone_column",
+  
+  "iterations": "math.random(16, 32)",
+  
+  "x": {
+    "distribution": "inverse_gaussian",
+    "extent": [0, 16]
+  },
+  "z": {
+    "distribution": "inverse_gaussian",
+    "extent": [0, 16]
+  },
+  "y": "query.heightmap(variable.worldx, variable.worldz)"
+}
+```
+
+This would more often that not form star-shaped clusters of stone columns at the corners of chunks in the containing biome.
+
+Two grid distributions are available for snapping features to grids. **Fixed grids** center features within random grid tiles in a simple grid. **Jittered grids** can offset the placement position of a feature between grid lines.
+
+Both grid types are configured using 2 additional integer properties inside the coordinate description: `"step_size"`, which controls the spacing between grid lines for that coordinate, and `"grid_offset"`, which controls where the origin for that coordinate of the grid is mapped onto the `"extent"` interval.
+
+`"step_size"` uses natural numbers and defaults to `1` if not declared. Because distributions are configured per-coordinate, different step sizes for different coordinates allow for complete control over grid construction.
+
+The `"grid_offset"` property uses whole numbers and defaults to `0` if no value is provided. Offsets cause a dimension of the grid to be realigned along the extent.
+
+As an example, considering only the `"x"` and `"z"` coordinates for the sake of simplicity:
+
+```jsonc
+"x": {
+  "distribution": "fixed_grid",
+  "extent": [0, 16],
+  
+  "step_size": 4,
+  "grid_offset": 2
+},
+"z": {
+  "distribution": "fixed_grid",
+  "extent": [0, 16],
+  
+  "step_size": 6,
+  "grid_offset": 4
+},
+```
+
+A two-dimensional grid is formed from this declaration. Grid tiles here are 4 × 6 in size and extend across the entire chunk; features can be placed in the *center* of any given grid tile. The grid is centered at an `x` of `2` and a `z` of `4` relative to the chunk coordinates. As with all non-uniform distributions, a larger `"iterations"` count would be necessary to actually being seeing the grid at play.
+
+> The grid formed here wouldn’t tile neatly across all chunks because the `z` chunk length, 16, does not evenly divide the step size of `6` for that dimension; grids effectively reset *each and every chunk*.
+
+> If a jittered grid were used in the example instead of a fixed grid, features would be placed within the grid tiles randomly as opposed to evenly.
+
+It is possible for a coordinate for generation to be dependent on an already determined value for another coordinate. This can occur when a coordinate uses a MoLang expression. In the Gaussian distribution example with flowers, a `"y"` value was given that required the `x` and `z` coordinates:
+
+```jsonc
+"y": "query.heightmap(variable.worldx, variable.worldz)"
+```
+
+This MoLang expression looks up the maximum surface `y` coordinate using `x` and `z` coordinates. This places the flowers directly on the surface as opposed to randomly underground or in the air. The `y` coordinate must therefore be evaluated after `x` and `z` have been determined.
+
+A final property for feature attachments is available for this situation, `"coordinate_eval_order"`. It is a string property that lists the 3 coordinates in the order that they should be evaluated, such as `"xyz"`. By default, a value of `"xzy"` is implied since `y` values often depend upon the `x` and `z` coordinates to align features with the surface. This value generally isn’t necessary, but if generation of a biome’s features require unnatural distributions, this property can come in handy.
+
+> This helpful default is why the `"coordinate_eval_order"` property was unneeded in the example and not described until now.
 
 #### Ignoring Feature Rules
-The empty `minecraft:ignore_automatic_features` component is intended to indicate that a declaring biome will ignore all feature rules attached to it, but this component currently does not work, whether for overrides or initial definitions.
+The empty `"minecraft:ignore_automatic_features"` component is intended to indicate that a declaring biome will ignore all external feature rules attached to it, but this component currently does not work, whether for overrides or initial definitions.
 
 ### Tagging
-```
+```jsonc
 "components": {
  …
  
@@ -1007,15 +1382,235 @@ The empty `minecraft:ignore_automatic_features` component is intended to indicat
 }
 ```
 
-Tags power much of what brings a biome to life in Minecraft, including entity spawns, feature attachment, and data-driven gameplay. [Because some tags are additionally used (by poor design) to determine where a biome may generate](#regions), issues may arise when attempting to separate placement from form and function. See the [tags section](#tags) for implementation details.
+Tags power much of what brings a biome to life in Minecraft, including entity spawns, external feature attachment, and data-driven gameplay. [Because some tags are additionally used (by poor design) to determine where a biome may generate](#regions), issues may arise when attempting to separate placement from form and function. See [Tags](#tags) for the implementation details of tags.
 
-#### Key Vanilla Tags
-Custom usages of tags are outside the scope of this document, but a few important vanilla tags should be noted for most behavior packs.
+#### Tagging Strategies
+Due to the inheritance system for biome definitions, strategies should be used with tagging to separate concerns.
 
-##### Regions & Slotting
+##### Biome Taxonomy
+A taxonomical system can be created to bind biomes to other systems by putting the focus on the biome itself. Adding tags that help single out a biome by its generation rules can be useful for features that need to generate under conditions shared by a set of biomes due to their inherent nature. Some examples of a basic taxonomy would include using tags to specify:
 
+- A name for the basic type of biome
+- The dimension where a biome would generate
+- The [type of climate](#climates) or [strength of a defining characteristic](#separation-of-concerns) for the biome
+- [Variants](#hierarchy) of a biome
+
+Example taxonomical tags for a theoretical Pumpkin Pastures Spooky Hills biome could include:
+
+- `"overworld"`
+- `"cold"`
+- `"pumpkin_pastures"`
+- `"hills"`
+- `"mutation"` (the “spooky” aspect)
+- `"spooky"`, but only if this mutated aspect were shared with other biomes
+
+Vanilla biomes have historically relied exclusively on taxonomical systems for biome selection, often leading to verbose success conditions for spawning or generation. Here’s a snippet from the `wolf.json` spawn rules:
+
+```jsonc
+"minecraft:biome_filter": {
+  "all_of": [
+    {"test": "has_biome_tag", "operator":"==", "value": "forest"},
+    {"test": "has_biome_tag", "operator":"!=", "value": "mutated"},
+    {"test": "has_biome_tag", "operator":"!=", "value": "birch"},
+    {"test": "has_biome_tag", "operator":"!=", "value": "roofed"},
+    {"test": "has_biome_tag", "operator":"!=", "value": "mountain"}
+  ]
+}
+```
+
+In cases such as this, another perspective can be used for tagging that eases authoring pains.
+
+##### Spawning & Generating Perspective
+Authoring spawning and generating conditions can be made much easier by shifting the tagging perspective onto feature and spawn rules. [Minecraft 1.16 began using such a system for mob spawning in the Nether.](#other-mobs) In this system, tags are attached to a biome with actual gameplay in mind. If a custom mob were to be created that wasn’t meant to neatly spawn in a convenient classification of biome taxonomy, alluding to spawn rules via tagging can keep condition checks simple.
+
+Imagining bird mobs that could spawn in any area with trees, a tagging system could be developed dependent on how wooded a biome is. From another perspective, these biomes could also be tagged as `"forested"` and even go so far as to provide tags relating the density of trees:
+
+| Forest cover | Feature-focused tag | Biome taxonomy-focused tag |
+|:--|:--|:--|
+| Light | `"few_birds"` | `"lightly_forested"` |
+| Medium | `"default_birds"` | `"moderately_forested"` |
+| Heavy | `"many_birds"` | `"heavily_forested"` |
+
+The problem with the latter system is what can happen during development if some other gameplay aspect relies on trees existing in a biome. Continuing the scenario, pretend only the biome taxonomy system were to be used:
+
+An abandoned forest shack structure feature meant to hide under the cover of trees is created; its feature rule will check for any of the 3 forested tags for generation. Later in behavior pack development, a new, heavily forested, toxic waste biome, Toxic Woods, is constructed with the `"heavily_forested"` tag. Abandoned shacks could make sense here to match the environment, but nature should be scarce or even missing; few or no birds should spawn. Unfortunately, the `"heavily_forested"` tag here would cause many birds to spawn, which is undesirable. The spawn rules for the birds would have to be updated to blacklist Toxic Woods.
+
+With dozens or hundreds of biomes, features, and mobs across the game all relying on the same tagging system, such exceptions as this can add up. Consider using feature-focused tagging systems. These systems don’t have to compete with taxonomy; both types can be included and used as needed.
+
+#### Vanilla Tags
+The tags used on vanilla biomes should be noted for biome-altering behavior packs that only mildly change or add to vanilla generation. These tags could be used to emulate vanilla gameplay aspects in a custom biome.
+
+##### Location & Variation
+Most tags used in vanilla biomes are used to help organize biomes by location and variant, forming a sort of [taxonomy](#biome-taxonomy) for targeting biomes.
+
+> A `"no_legacy_worldgen"` tag exists in the biome definition of Roofed Forests, but its behavior is unknown.
+
+###### Dimensions
+```jsonc
+"components": {
+  …
+  
+  "overworld": {}
+}
+```
+
+4 tags exists supporting the game’s dimensions:
+
+| Dimension | Tag |
+|:--|:--|
+| Overworld | `"overworld"` |
+| Overworld generation | `"overworld_generation"` |
+| The Nether | `"nether"` |
+| The End | `"the_end"` |
+
+> The Overworld generation tag is required by Minecraft to support legacy features and behaviors. Features, entity spawning, and gameplay that needs to target all the Overworld should filter for both `"overworld"` *and* `"overworld_generation"`, but the construction of this targeting is outside the scope of this document.
+
+These tags have mixed effects on biomes but are predominantly used to further organize or filter biomes in combination with other tags.
+
+###### Biomes
+```jsonc
+"components": {
+  …
+  
+  "taiga": {},
+  "mega": {},
+  "hills": {}
+}
+```
+
+A number of vanilla biome tags exist to support the specific nature of those biomes.
+
+For the Overworld:
+
+| Biome | Tag |
+|:--|:--|
+| Plains | `"plains"` |
+| Forest | `"forest"` |
+| Mountains | `"extreme_hills"` |
+| Taiga | `"taiga"` |
+| Swamp | `"swamp"` |
+| Flower Forest | `"flower_forest"` |
+| Jungle | `"jungle"` |
+| Desert | `"desert"` |
+| Savanna | `"savanna"` |
+| Badlands | `"mesa"` |
+| Snowy Tundra | `"ice_plains"` |
+| Mushroom Fields | `"mooshroom_island"` |
+| Beach | `"beach"` |
+
+For the Nether:
+
+| Biome | Tag |
+|:--|:--|
+| Nether Wastes | `"nether_wastes"` |
+| Soulsand Valley | `"soulsand_valley"` |
+| Basalt Deltas | `"basalt_deltas"` |
+| Crimson Forest | `"crimson_forest"` |
+| Warped Forest | `"warped_forest"` |
+
+Two tags exists strictly to group related biomes:
+
+| Group | Tag |
+|:--|:--|
+| Snowy Tundra & Snowy Mountains | `"ice"` |
+| Crimson Forest & Warped Forest | `"netherwart_forest"` |
+
+A few tags are used to single out unique variants:
+
+| Variant | Tag |
+|:--|:--|
+| Giant Tree Taiga variant | `"mega"` |
+| Stone Shore variant | `"stone"` |
+| Birch Forest variant | `"birch"` |
+| Dark Forest variant | `"roofed"` |
+| Bamboo Jungle variant | `"bamboo"` |
+| Savanna & Badlands Plateaus variant | `"plateau"` |
+| Jungle Edge variant | `"edge"` |
+
+###### Overworld Generation Aspects
+```jsonc
+"components": {
+  …
+  
+  "ocean": {},
+  "deep": {},
+  "warm": {}
+}
+```
+
+Groups of tags exist for slotting and matching climates and transformations in the Overworld.
+
+Three tags are used for the slotting of biomes in the Overworld. These slotting tags are:
+
+| Slot | Tag |
+|:--|:--|
+| Ocean | `"ocean"` |
+| Deep ocean (when used in combination with the `"ocean"` tag) | `"deep"` |
+| Rare land | `"rare"` |
+
+> As described in [Regions](#regions), these tags have an actual effect on world generation. Only use these tags for biome placement.
+
+4 tags exist for [Overworld temperature variations](#climates):
+
+| Climate | Tag |
+|:--|:--|
+| Frozen | `"frozen"` |
+| Cold | `"cold"` |
+| Lukewarm | `"lukewarm"` |
+| Warm | `"warm"` |
+
+A tag exists for [each type of Overworld sub-biome](#hierarchy):
+
+| Sub-Biome type | Tag |
+|:--|:--|
+| Hills | `"hills"` |
+| Mutated | `"mutated"` |
+| River | `"river"` |
+| Shore | `"shore"` |
 
 ##### Mob Spawning
+Mob spawning is predominantly controlled by two tags: `"animal"` and `"monster"`. Finer control over the spawning of vanilla mob is provided in some special cases but often necessitates an intervention that involves both adding tags to biome definitions and overriding spawn rules to work with these new tags.
 
+> Overriding spawn rules is outside the scope of this document.
+
+Vanilla mobs not listed in this section are spawned via selection of vanilla biome-specific tags. As an example, Wolves only spawn in biomes tagged with `"forest"` or `"taiga"`. It is possible to tag a custom biome using one of these vanilla tags to spawn Wolves, but doing so may have unintended consequences. In this example, likely unwanted ground decorations from Forests and Taigas could generate in the custom biome. Instead, use custom tag additions, and adapt spawn rules to these new tags.
+
+###### Animals
+```jsonc
+"components": {
+  …
+  
+  "animal": {}
+}
+```
+
+Using the `"animal"` tag will allow Cows, Chickens, Sheep, Pigs, and Bats to spawn in a biome.
+
+A `"bee_habitat"` tag exists, presumably to generate beehives, but it is unused.
+
+###### Other Mobs
+```jsonc
+"components": {
+  …
+  
+  "monster": {}
+}
+```
+
+The `"monster"` tag allows Zombies, Skeletons, Spiders, Creepers, Slime, Endermen, Witches, and Phantoms to spawn in a biome.
+
+Beginning with Minecraft 1.16, a [new tagging strategy](#spawning-generating-perspective) was employed by Mojang in the new Nether biomes to separate biome type and location from functionality. A number of tags now exist for mob spawning in the Nether.
+
+| Mob spawning rule | Tag |
+|:--|:--|
+| Piglins | `"spawn_piglin"` |
+| Few Piglins | `"spawn_few_piglins"` |
+| Zombified Piglins | `"spawn_zombified_piglin"` |
+| Few Zombified Piglins | `"spawn_few_zombified_piglins"` |
+| Ghasts | `"spawn_ghast"` |
+| Magma Cubes | `"spawn_magma_cubes"` |
+| Many Magma Cubes | `"spawn_many_magma_cubes"` |
+| Endermen (only considered in biomes also tagged with `"nether"`) | `"spawn_endermen"` |
 
 ##### Decorations
+Currently, features and decorations are applied only through the [targeting of a a particular kind of biome](#location-variation); no dedicated tags exist for decorations.
