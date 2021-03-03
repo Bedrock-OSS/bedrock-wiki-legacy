@@ -317,3 +317,11 @@ input {
   color: #555;
   font: 95% Arial, Helvetica, sans-serif;
 }
+
+/*
+  Pixelated images
+*/
+
+img.pixelated {
+  image-rendering: pixelated;
+}

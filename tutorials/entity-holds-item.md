@@ -76,4 +76,4 @@ To have the entity always spawn with the same item, add the following loot table
 
 If everything went well, you'll have something looking like this:
 
-![](/assets/images/tutorials/finished_result.png)
+![](/assets/images/tutorials/entity-holds-item/finished_result.png)
