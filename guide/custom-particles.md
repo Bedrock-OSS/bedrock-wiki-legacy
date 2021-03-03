@@ -69,7 +69,7 @@ File structure:
 - "texture" defines the texture file. Not that a single image file can hold textures for many particles.
 - "material" is usually set to "particles_alpha" for particles.
 
-![](/assets/guide/custom_particles_5.png){:height="100px" width="100px"}
+![](/assets/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
 
 That is the texture I'm going to use, it's size is 16*16. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a 8*8. The upper row (*starting/top left corner at at 0, 0*) is the flipbook texture for "tut:curvy_particle" and the bottom row (*top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 

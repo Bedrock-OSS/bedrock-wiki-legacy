@@ -136,9 +136,9 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 ```
 
 The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for the BP:
-![Pack icon](/assets/guide/pack_icon_BP.png)
+![Pack icon](/assets/guide/pack_icon_BP.png){: .pixelated}
 And this one for the RP:
-![Pack icon](/assets/guide/pack_icon_RP.png)
+![Pack icon](/assets/guide/pack_icon_RP.png){: .pixelated}
 
 
 If you have done everything correctly, your packs should show up in Minecraft now!
@@ -161,7 +161,7 @@ Now to create a testing world to test your new add-on!
 ![](/assets/guide/world_params_3.jpg)
 
 Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too, otherwise, it'll be applied automatically). Check if **[EX]**(Experimental Gameplay) is turned on, and click '**Create**'. You might need a separate '*Infinite*' world to test entity spawning too.
-![](/assets/guide/behavior_pack_applied.jpg)
+![](/assets/guide/behavior_pack_applied.png)
 
 _____________
 ___
