@@ -18,11 +18,9 @@ parent: Tutorials
 Expert
 {: .label .label-red }
 
-```
 {% include notice.html
   contents='This tutorial assumes you have a basic understanding of MoLang, render controllers and client entity definitions. Make sure to check out the [render controller tutorial](/concepts/render-controller) before starting this tutorial.'
 %}
-```
 
 ## Concept & Idea
 
