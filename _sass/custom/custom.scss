@@ -388,6 +388,26 @@ img.pixelated {
   padding-top: 25px;
 }
 
+.panel-notice
+{
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: $panel-notice-background;
+  background-image: url(/assets/images/icons/notice.png);
+  background-size: 32px, 32px;
+  background-position: 5px 15px;
+  background-repeat: no-repeat;
+  border: solid 1px $panel-notice-border;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 13px 20px 15px 50px;
+  min-height: 80px;
+}
+
+.panel-notice.top-padding {
+  padding-top: 25px;
+}
+
 #footer {
   font-size: x-small;
 }
