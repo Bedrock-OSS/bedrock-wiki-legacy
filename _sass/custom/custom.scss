@@ -325,3 +325,69 @@ input {
 img.pixelated {
   image-rendering: pixelated;
 }
+
+// Warning Panel!
+
+.panel-info
+{
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: $panel-info-background;
+  background-image: url(/assets/images/icons/info.png);
+  background-size: 32px, 32px;
+  background-position: 5px 15px;
+  background-repeat: no-repeat;
+  border: solid 1px $panel-info-border;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 13px 20px 15px 50px;
+  min-height: 80px;
+}
+
+.panel-info.top-padding {
+  padding-top: 25px;
+}
+
+.panel-warning
+{
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: $panel-warning-background;
+  background-image: url(/assets/images/icons/warning.png);
+  background-size: 32px, 32px;
+  background-position: 5px 15px;
+  background-repeat: no-repeat;
+  border: solid 1px $panel-warning-border;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 13px 20px 15px 50px;
+  min-height: 80px;
+}
+
+.panel-warning.top-padding {
+  padding-top: 25px;
+}
+
+.panel-error
+{
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  background-color: $panel-error-background;
+  background-image: url(/assets/images/icons/error.png);
+  background-size: 32px, 32px;
+  background-position: 5px 15px;
+  background-repeat: no-repeat;
+  border: solid 1px $panel-error-border;
+  border-radius: 6px;
+  overflow: hidden;
+  padding: 13px 20px 15px 50px;
+  min-height: 80px;
+}
+
+.panel-error.top-padding {
+  padding-top: 25px;
+}
+
+#footer {
+  font-size: x-small;
+}

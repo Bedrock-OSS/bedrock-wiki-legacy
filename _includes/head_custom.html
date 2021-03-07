@@ -6,9 +6,8 @@
 <link rel="stylesheet" href="{{ '/assets/css/discord-dark.css' | absolute_url }}"/>
 <script>
     const CONTRIBUTORS_URL = "https://api.github.com/repos/SirLich/bedrock-wiki/commits";
-    const DEFAULT_THEME = "Default";
+    const DEFAULT_THEME = "Light";
     let allThemes = {
-        "Default": "{{ '/assets/css/just-the-docs-default.css' | absolute_url }}",
         "Dark": "{{ '/assets/css/just-the-docs-dark.css' | absolute_url }}",
         "Light": "{{ '/assets/css/just-the-docs-light.css' | absolute_url }}",
         "Discord Dark": "{{ '/assets/css/discord-dark.css' | absolute_url }}"
@@ -182,12 +181,6 @@
     changeTheme(theme);
 
     window.addEventListener('load', () => {
-        /*
-        Add disclaimer
-        */
-        let p = document.createElement('p');
-        p.innerText = "Not Affiliated with Mojang";
-        document.getElementsByClassName("site-footer")[0].prepend(p);
         /*
         Add theme switcher
         */
