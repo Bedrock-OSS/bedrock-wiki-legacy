@@ -261,3 +261,27 @@ This will result in this output:
 # Icons
 
 <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+# Using Panels
+
+There are three kinds: Info, Warning, and Error
+
+Use like this:
+
+```
+{% include warning.html
+  contents='Animation Controllers "reset" when an entity reloads (player join/leave, chunk reload, etc). This means that it will "jump" back to the default state. You should always have logic in your default state that can handle restarting any critical animations.'
+%}
+```
+
+Or like this:
+```
+
+```
+<p class="panel-warning" markdown="1">
+  Remember! Render controllers work based on short-names. If you want to use the cow render controller, you need to provide the short-names it is using. In this case, you will need to provide:<br>
+    - `default` geometry<br>
+    - `default` texture<br>
+    - `default` material
+</p>
+```
