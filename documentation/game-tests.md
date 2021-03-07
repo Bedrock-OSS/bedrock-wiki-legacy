@@ -285,7 +285,15 @@ _Needs more information_
 
 **Methods:**
 
-The `Blocks` object contains a method for every block to reference it in GameTests. These methods should be used when referencing a block in GameTests.
+- `get(identifier)`
+Returns the block from the specified identifier to be referenced in GameTests.
+
+Example:
+```js
+const block = Blocks.get("minecraft:dirt");
+```
+
+The `Blocks` object also contains a method for every block to reference it in GameTests. These methods should be used when referencing a block in GameTests.
 
 Examples:
 
