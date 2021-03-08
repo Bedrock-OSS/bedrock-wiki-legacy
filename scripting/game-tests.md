@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Game Tests
-parent: Documentation
+parent: Scripting
 badge: BETA
 badge_color: red
 ---
