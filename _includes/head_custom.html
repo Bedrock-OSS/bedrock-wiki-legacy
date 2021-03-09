@@ -152,6 +152,9 @@
     } else {
         theme = DEFAULT_THEME;
     }
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        changeTheme(e.matches ? "Dark" : "Light");
+    });
     changeTheme(theme);
 
     window.addEventListener('load', () => {
