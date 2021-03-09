@@ -17,32 +17,6 @@
     Very dirty fix for code highlighting. To be removed once it's fixed in just-the-docs
     */
     let allCodeThemes = {
-        "Default": `
-        .highlight .nl {
-            color: #9CDCFE;
-        }
-        .highlight .s2 {
-            color: #ce9178;
-        }
-        .highlight .mi, .highlight .mf {
-            color: #b5cea8;
-        }
-        .highlight .kc {
-            color: #569cd6;
-        }
-        .highlight .p {
-            color: #C8C8C8;
-        }
-        .highlight .err {
-            color: #6A9955;
-        }
-        pre.highlight, figure.highlight {
-            background-color: 1E1E1E;
-        }
-        code {
-            background-color: 1E1E1E;
-        }
-        `,
         "Dark": `
         .highlight .nl {
             color: #9CDCFE;
@@ -169,14 +143,14 @@
     }
 
     /*
-    Try to set the theme based on the one saved in browser. Fallback to default, if none found.
+    Try to set the theme based on the one saved in browser. Fallback to browser theme, if none found.
     */
     if (typeof window.localStorage != 'undefined') {
         theme = localStorage.getItem('theme');
-        if (!theme) {
-            theme = DEFAULT_THEME;
-            localStorage.setItem('theme', theme);
-        }
+    } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        theme = "Dark";
+    } else {
+        theme = DEFAULT_THEME;
     }
     changeTheme(theme);
 
@@ -209,7 +183,7 @@
         /*
         Add contributors section
         */
-        let filepath = document.querySelector('.main-content footer a').getAttribute('href');
+        let filepath = document.querySelector('.main-content footer div:nth-child(2) a').getAttribute('href');
         filepath = filepath.substr(filepath.indexOf('gh-pages/') + 9);
         fetch(CONTRIBUTORS_URL + "?path=" + filepath)
             .then(response => response.json())
