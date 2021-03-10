@@ -26,13 +26,15 @@ gamemode creative
 effect @s night_vision 100000 1 true
 ```
 
-Functions can be executed in game by typing `./function name_of_function`. This will execute all the commands in the function file, all in a single tick. Nested `function`s will also run in the same tick as the parent function.
+Functions can be executed in game by typing `/function name_of_function`. This will execute all the commands in the function file, all in a single tick. Nested functions will also run in the same tick as the parent function.
 
 Function files can be nested, for example: `BP/functions/teleport/home.mcfunction` will create a new function called `teleport/home`, which can be called in game like `/function teleport/home`.
 
+Functions can be reloaded from file without leaving the game with the `/reload` command.
+
 # Running functions through tick.json
  
-`Tick.json` is server-side file located as `BP/functions/tick.json` that lets you execute function files.
+`tick.json` is server-side file located as `BP/functions/tick.json` that lets you execute function files.
 
 Functions will be run each tick, as if placed in a repeating command block.
 

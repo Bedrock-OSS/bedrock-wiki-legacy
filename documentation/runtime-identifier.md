@@ -109,3 +109,22 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 ---
 ## minecraft:panda
  - Allows `query.is_grazing` and `query.sit_mount` to function with the `minecraft:behavior.random_sitting` component
+
+---
+## minecraft:wither_skull_dangerous
+ - Makes the entity drop a wither rose on death
+ - Any entity killed by the entity will have a wither rose placed where it dies. Strangely, zombies seem to drop the wither rose instead of having it placed at the spot they die at.
+ - Makes the entity constantly generate particles(the identifier of the particles it generates is `minecraft:basic_smoke_particle`)
+ - Makes the entity unaffected by gravity(this seems to cause entities with `minecraft:projectile` to move in a straight line)
+ - Prevents the entity from taking damage
+ - only works for entities with no ai goals(so it's only useful for dummy entities and projectiles)
+
+---
+## minecraft:zombie
+- Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect
+- Makes the entity receive increased damage from weapons with Smite enchantment
+
+---
+## minecraft:skeleton
+- Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect
+- Makes the entity receive increased damage from weapons with Smite enchantment

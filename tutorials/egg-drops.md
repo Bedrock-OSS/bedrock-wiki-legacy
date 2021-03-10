@@ -15,6 +15,9 @@ parent: Tutorials
 {:toc}
 </details>
 
+Beginner
+{: .label .label-green }
+
 Here is how to make entities drop their own eggs when killed:
 
 ## Add loot table to BP entity

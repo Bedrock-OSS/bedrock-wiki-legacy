@@ -78,11 +78,13 @@ Create the first frame of your walking animation under 0 on the timeline by movi
 
 Now that our model, texture and walk animation are complete, you can  save your work.
 
-Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model in `RP/models/entity`, the texture in `RP/textuRP/entity/` and the animation in `RP/animations`. Congratulations! You've succesfully created your first entity's visuals! You can see the file examples below.
+Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model in `RP/models/entity`, the texture in `RP/textures/entity/` and the animation in `RP/animations`. Congratulations! You've succesfully created your first entity's visuals! You can see the file examples below.
 
 *Meanwhile, why not upgrading the visuals of your own unique entities' or creating another one?*
 
 `RP/models/entity/skele_yaklin.geo.json`
+
+{% include filepath.html path="RP/models/entity/skele_yaklin.geo.json"%}
 ```jsonc
 {
   "format_version": "1.12.0",
@@ -173,7 +175,7 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
 }
 ```
 
-`RP/animations/skele_yaklin.animations.json`
+{% include filepath.html path="RP/animations/skele_yaklin.animations.json"%}
 ```jsonc
 {
   "format_version": "1.8.0",
@@ -220,8 +222,6 @@ Simply go to *File>Save Model* or *File>Export Bedrock Geometry*. Save the model
   }
 }
 ```
-
-__
 __
 
 # Your progress so far:

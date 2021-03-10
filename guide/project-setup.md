@@ -36,7 +36,7 @@ ___
 
 Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).
 
-
+{% include filepath.html path="RP/manifest.json"%}
 ```jsonc
 {
     "format_version": 2,
@@ -85,13 +85,14 @@ Let's break up the code now.
 
 
 
-###### Note: if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
+`Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
 
 #
 The next step is, naturally, creating your `BP/manifest.json`. it is very much like a Resource pack manifest, except the "`type`" is "`data`"(for a *Data Pack*/*Behavior Pack*). There's also an optional field "`dependencies`", where you can define the needed resource packs by including their main UUID. Dependent resource packs will be applied to any world with the behavior pack automatically, if they exist on the device.
 
 *Remember that same UUIDs cannot be used twice, which means that you have to generate NEW ones for the behavior manifest, and not use the ones already used in the resource manifest.*
 
+{% include filepath.html path="BP/manifest.json"%}
 ```jsonc
 {
     "format_version": 2,
@@ -135,9 +136,9 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 ```
 
 The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for the BP:
-![Pack icon](/assets/guide/pack_icon_BP.png)
+![Pack icon](/assets/guide/pack_icon_BP.png){: .pixelated}
 And this one for the RP:
-![Pack icon](/assets/guide/pack_icon_RP.png)
+![Pack icon](/assets/guide/pack_icon_RP.png){: .pixelated}
 
 
 If you have done everything correctly, your packs should show up in Minecraft now!
@@ -160,7 +161,7 @@ Now to create a testing world to test your new add-on!
 ![](/assets/guide/world_params_3.jpg)
 
 Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too, otherwise, it'll be applied automatically). Check if **[EX]**(Experimental Gameplay) is turned on, and click '**Create**'. You might need a separate '*Infinite*' world to test entity spawning too.
-![](/assets/guide/behavior_pack_applied.jpg)
+![](/assets/guide/behavior_pack_applied.png)
 
 _____________
 ___
@@ -191,7 +192,7 @@ What if you want both your resource pack and your behavior pack to be imported a
 ##### Note: Some external programs like AJG and bridge do that automatically
 
 *Note: same method can be used to compile a world folder from com.mojang/minecraftWorlds and changing the `.zip` to `.mcworld`. On Win10 devices one can click "*Export world*" in the world settings to achieve the same result. `.mcworld`s usually include all add-ons applied (as long as they come from `..._packs`.).*
-___
+
 ___
 ## Your progress so far:
 **What you've done:**

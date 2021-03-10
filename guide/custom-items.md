@@ -27,6 +27,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 
 ## Gem Behavior Code (BP)
 
+{% include filepath.html path="BP/items/gem.item.json" id="bp_gem_item" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -46,7 +47,7 @@ Let's start off by creating our simple item's behavior file: `BP/items/gem.item.
 ```
 
  - `format_version` defines what format the file uses. We'll be using 1.10.
- - `identifier` in `description` is used in blocks, recipes and entities. It will be used to define your item. [For example, you can use /give with the identifier like this: `/give @s tut:gem`). The part of the identifier is your pack's namespace. It's best to use the same namespace throughout your pack. It can be anything you like(e.g `kf:`, `jdot:`, `ve:`, `kai:`) providing it isn't too long. A namespace CANNOT be `minecraft:` or `minecon:`. The second part of the identifier is the name of the item, entity, recipe or block.
+ - `identifier` in `description` is used in blocks, recipes and entities. It will be used to define your item. For example, you can use /give with the identifier like this: `/give @s tut:gem`. The first part of the identifier is your pack's namespace. It's best to use the same namespace throughout your pack. It can be anything you like (e.g `kf:`, `jdot:`, `ve:`, `kai:`) providing it isn't too long. A namespace CANNOT be `minecraft:` or `minecon:`. The second part of the identifier is the name of the item, entity, recipe or block.
  - `components` are "qualities" the object always has. We'll look deeper into them when creating a custom entity. Let's break up everything in "components".
    - `minecraft:hand_equipped` defines whether the item 'equips' in your hand, this controls how the item is displayed on your character. For example, a Wooden Sword is hand equipped, but an Apple isn't.
    - `minecraft:stacked_by_data` defines whether this item with different aux values will be able to stack. For example
@@ -61,6 +62,7 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 ## Gem Resource Code (RP)
 
+{% include filepath.html path="RP/items/gem.item.json" id="rp_gem_item" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -79,18 +81,19 @@ If you enter the game now, the item will function, but it will be invisible. You
 
 - Set the same `identifier` under `description`, as in the item's behavior file.
 - `category` defines the category of items of the item in creative inventory. It can be set to "Nature", "Equipment", "Construction" or "Items".
-- Note that due to a bug  items will not display in the Creative Inventory how they are supposed to, and you'll have to use `/give` to get them.
+- Note that due to a bug items will not display in the Creative Inventory how they are supposed to, and you'll have to use `/give` to get them.
 - Here are the components, explained:
   - `minecraft:render_offsets` defines how the item should be rendered. Can be set to pretty much any Vanilla item name, for example "apple".
   - `minecraft:use_animation` defines what animation to use when the player is using the item (Can be set to "bow", "eat", "drink", "crossbow", "camera"). It isn't needed in simple items, only foods and weapons.
-  - `minecraft:icon` defines the item's texture's short name. Let's look more into it.
+  - `minecraft:icon` defines the item texture's short name. Let's look more into it.
 
 ## Gem Textures and Shortnames
 
-In order to define your item's texture's shortname (to be able to use the texture on an item), you first need to create the texture. Create a 16*16 image file, draw a gem on it, and save it into `RP/textures/items/gem.png`.
+In order to define your item texture's shortname (to be able to use the texture on an item), you first need to create the texture. Create a 16*16 image file, draw a gem on it, and save it into `RP/textures/items/gem.png`.
 
 Now let's create the file where texture short names will be defined: `RP/textures/item_texture.json`, and copy this code into it:
 
+{% include filepath.html path="RP/textures/item_texture.json" %}
 ```jsonc
 {
 	"resource_pack_name": "tut",
@@ -118,6 +121,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal BP Code
 
+{% include filepath.html path="BP/items/meal.item.json" id="bp_meal_item" %}
 ```jsonc
 {
 	"format_version": "1.12.0",
@@ -164,6 +168,7 @@ Creating a food item is very much the same as creating a simple item, except an 
 
 ## Meal RP Code
 
+{% include filepath.html path="RP/items/meal.item.json" id="rp_meal_item" %}
 ```jsonc
 {
 	"format_version": "1.10",
@@ -181,12 +186,13 @@ Creating a food item is very much the same as creating a simple item, except an 
 }
 ```
 
-The following code goes in `RP/items/meal.item.json`, similarly to the Gem.
+The preceding code goes in `RP/items/meal.item.json`, similarly to the Gem.
 
 - `minecraft:use_animation` defines what animation to use when the player is using the item (Can be set to "bow", "eat", "drink", "crossbow", "camera"). It isn't needed in simple items, only foods and weapons.
 
 ## Meal Textures and Shortnames
 
+{% include filepath.html path="RP/textures/item_texture.json" %}
 ```jsonc
 {
 	"resource_pack_name": "tut",
@@ -210,12 +216,54 @@ Make sure to check out the current Item documentation for even more components o
 
 Your items should now show up in game, but they have weird names, which consist of their identifiers. For example, `tut:gem` shows up as `item.tut:gem.name`. To fix this, we need a `.lang` file in `RP/texts`. If you have US English set as your language in Minecraft settings, you'll need to name your text file `en_US.lang`. You can find file names for other languages in the example resource pack's texts folder. Paste the following "code" into res/texts/en_US.lang. Now your items will have the correct names:
 
+{% include filepath.html path="RP/texts/en_US.lang" %}
 ```
 item.tut:gem.name=Gem
 item.tut:meal.name=Meal
 ```
 
 [You can learn more about .lang here](https://wiki.bedrock.dev/concepts/lang.html)
+
+<div markdown="0" class="folder-structure">
+    <ul>
+        <li><span class="folder">BP</span>
+            <ul>
+                <li><span class="folder">items</span>
+                    <ul>
+                        <li><a href="#bp_gem_item" class="file">gem.item.json</a></li>
+                        <li><a href="#bp_meal_item" class="file">meal.item.json</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><span class="folder">RP</span>
+            <ul>
+                <li><span class="folder">items</span>
+                    <ul>
+                        <li><a href="#rp_gem_item" class="file">gem.item.json</a></li>
+                        <li><a href="#rp_meal_item" class="file">meal.item.json</a></li>
+                    </ul>
+                </li>
+                <li><span class="folder">texts</span>
+                    <ul>
+                        <li><span class="file">en_US.lang</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">textures</span>
+                    <ul>
+                        <li><span class="file">item_texture.json</span></li>
+                        <li><span class="folder">items</span>
+                            <ul>
+                                <li><span class="image">gem.png</span></li>
+                                <li><span class="image">meal.png</span></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
 
 ___
 ___

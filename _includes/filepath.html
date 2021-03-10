@@ -1,0 +1,12 @@
+{% comment %}
+<!--
+File path include
+
+Params:
+ - path: path to the file
+ - local_path: (optional)JSON path inside the file
+ - id: (optional) ID of the element
+ - img: (optional) path to the image
+-->
+{% endcomment %}
+<p class="filepath{% if include.img %} img{% endif %}" {% if include.id %}id="{{include.id}}"{% endif %}>{{ include.path | replace: "/", "<span class='path-separator'>/</span>" }}{% if include.local_path %}<span class="local_path">{{ include.local_path | replace: "/", "<span class='path-separator'>/</span>" }}</span>{% endif %}{% if include.img %}<img src="{{ include.img }}"/>{% endif %}</p>

@@ -40,7 +40,8 @@ Better documentation on the new item format introduced in the 1.16.100.56 Minecr
                     "event": "on_consume",
                     "target": "self"
                 }      
-            }
+            },
+	    "minecraft:use_animation": "eat"
         },
         "events": {
             "on_consume": {
@@ -74,7 +75,7 @@ Shoots a projectile when triggered
             "projectile": "minecraft:snowball",
             "launch_power": 5,
             "angle_offset": 20
-        },
+        }
     }
 }
 ```
@@ -563,8 +564,16 @@ _New Syntax_
         },
         "nurtition": 3,
         "can_always_eat": true,
-        "saturation_modifier": "normal"
+        "saturation_modifier": "normal",
+	"using_converts_to": minecraft:item // Changes the food or drink into another item when consumed. Can be changed to any item.
     }
+}
+```
+
+- minecraft:use_animation
+```jsonc
+{
+    "minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. Can also be changed to "drink".
 }
 ```
 

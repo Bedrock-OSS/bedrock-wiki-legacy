@@ -15,6 +15,9 @@ parent: Tutorials
 {:toc}
 </details>
 
+Beginner
+{: .label .label-green }
+
 This tutorial will show you how to create player NPCs and add them into your world. These player NPCs will take vanilla player skins, and come included with walk-animations, attack animations, etc.
 
 This tutorial is a *graphical* tutorial. Mechanics are not covered.

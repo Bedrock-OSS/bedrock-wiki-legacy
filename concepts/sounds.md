@@ -35,21 +35,25 @@ There are two main files that we edit when we want to add sounds. Note how `soun
 ## Sound Formats
 
 The following sound formats are accepted:
- - ogg (recommended)
- - wav
- - fsb
+ - .ogg (reccomended)
+ - .wav
+ - .mp3 (Not executable with ```/music```!)
+ - .fsb (difficult to work with)
 
 # sound_definitions.json
 
-`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example `sound_definitions.json` that adds a new trumpet sound.
+`sound_definitions.json` is where we define new sound short-names. This should be thought of as typing a `short-name` or `id` to a physical sound path. Here is an example `sound_definitions.json` that adds a new trumpet sound called `example.toot`.
 
 ```json
 {
-    "dirt.roar": {
-        "category": "neutral",
-        "sounds": [
-            "sounds/trumpet"
-        ]
+    "format_version": "1.14.0",
+    "sound_definitions": {
+        "example.toot": {
+            "category": "neutral",
+            "sounds": [
+                "sounds/trumpet"
+            ]
+        }
     }
 }
 ```
@@ -66,18 +70,18 @@ In the example above, I showed two `top-level` fields: `category`, and `sounds`.
 
 Categories are used internally by the engine to decide how each sound is played. We can utilize different channels to get different effects. 
 
-| Category | Note |
-|----------|------|
-| weather  |      |
-| block    |      |
-| bucket   |      |
-| bottle   |      |
-| ui       |      |
-| player   |      |
-| hostile  |      |
-| music    |      |
-| record   |      |
-| neutral  |      |
+| Category | Note                                            |
+|----------|-------------------------------------------------|
+| weather  |                                                 |
+| block    |                                                 |
+| bucket   |                                                 |
+| bottle   |                                                 |
+| ui       | Sounds in this category will ignore range limit |
+| player   |                                                 |
+| hostile  |                                                 |
+| music    |                                                 |
+| record   |                                                 |
+| neutral  |                                                 |
 
 ### min_distance
 
@@ -106,7 +110,7 @@ The path to the file, such as: `"sounds/music/game/creative/creative1"`
 
 ### stream
 
-WIP
+Limits the sound to only be played a limited number of instances at a time. Good for improving preformance on sound heavy worlds.
 
 ### volume
 
@@ -114,7 +118,7 @@ How loud the sound should play, from `0.0` to `1.0`. Sounds cannot be made loude
 
 ### load_on_low_memory
 
-WIP
+Forces the loading of the sound even when nearing low memmory. "load_on_low_memory" is now deprecated as of 1.16.0
 
 ### pitch
 
@@ -225,14 +229,13 @@ Sounds played in animations function based off of `short-name` definitions in th
 
 This example shows playing a wing-flap sound, synced with an animation.
 
-`RP/entities/dragon.entity.rp.json`
+{% include filepath.html path="RP/entities/dragon.json" local_path="minecraft:client_entity/description"%}
 ```jsonc
 "sound_effects": {
     "wing_flap": "wiki.dragon.wing_flap" //where wiki.dragon.roar is a sound definited in sound_definitions
 }
 ```
-
-`RP/animations/dragon.animation.json`
+{% include filepath.html path="RP/animations/dragon.json" local_path="animations/animation.dragon.flying"%}
 ```jsonc
 "sound_effects": {
     "3.16": {
@@ -240,3 +243,41 @@ This example shows playing a wing-flap sound, synced with an animation.
     }
 }
 ```
+
+# Adding sounds to Animation Controllers
+
+You can play sounds within animation controllers in a similar way that animations can be.
+
+This example shows playing an explosion sound, synced using an animation controller.
+
+{% include filepath.html path="RP/entities/custom_tnt.json" local_path="minecraft:client_entity/description"%}
+```jsonc
+"sound_effects": {
+    "explosion": "wiki.custom_tnt.explosion" //where wiki.custom_tnt.explosion is a sound definited in sound_definitions just like animation sounds.
+}
+```
+{% include filepath.html path="RP/animation_controllers/custom_tnt.animation_controllers.json" local_path="animation_controllers/custom_tnt.animation_controllers.json"%}
+```jsonc
+"states": {
+  "default": {
+    "transitions": [
+      {
+        "explode_state": "query.mark_variant == 1"
+      }
+    ]
+  },
+  "explode_state": {
+    "sound_effects": [
+      {
+        "effect": "explosion"
+      }
+    ],
+    "transitions": [
+      {
+        "default": "query.mark_variant == 0"
+      }
+    ]
+  }
+}
+```
+

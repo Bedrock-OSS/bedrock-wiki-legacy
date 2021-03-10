@@ -35,14 +35,14 @@ There are strong opinions about the best editor for beginners, but generally spe
 Editor recommendations are starred.
 
 ### Plaintext Editors
- - ⭐[_VSCode Code_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
+ - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
 - [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
  
 
-### Graphical Editors
+### Dedicated Editors
  - ⭐[_Bridge_](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
-- [_CoreCoder ($$$)_](https://hanprog.itch.io/core-coder) - is a unique Code Editor developed specifically for Addon creation.   
+- [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for Addon creation with JSON linting and autocomplete.   
 
 ### Mobile Alternatives
 - **Android**: [_ES File Explorer_](https://play.google.com/store/apps/details?id=com.File.Manager.Filemanager&hl=de&gl=US)
@@ -104,8 +104,8 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 
 ## Additional Addon-creation Software
 
- - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *($$$)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
- - You may also be recommended software such as [AJG (\$\$\$)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (\$\$\$)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
+ - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *(≈$10/m)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
+ - You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
 
 ![Blockbench Workspace](/assets/guide/blockbench_workspace.png)
 
@@ -133,7 +133,7 @@ I strongly recommend creating a shortcut to the folder on your Desktop, in order
 
 ### Folder concents
 
-We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folder, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft. 
+We will use `development_behavior_packs` and `development_resource_packs` for developing addons. When you make changes within these folders, you can _exit and re-enter a world with the packs applied_, to automatically reload the content. This allows you to quickly test pack content without reloading minecraft. 
  
 Thus we'll work with these folders.
 

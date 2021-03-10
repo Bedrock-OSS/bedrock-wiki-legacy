@@ -15,11 +15,28 @@ parent: Tutorials
 {:toc}
 </details>
 
+Intermediate
+{: .label .label-yellow }
+
 There are quite a few ways to remove shadows from entities. This document will cover some of the best ways.
 
 ## Very small Collision Box
 
 Make the size of the collision component very, very small (does 0, 0 work?) this will make it impossible to interact/hit the entity, but it will make the shadow disappear!
+
+But you can also add the custom hit test component, to at least make it possible to hit the entity, you will not be abble to interact wih it, but at least you can hit it.
+
+```jsonc
+"minecraft:custom_hit_test": {
+    "hitboxes": [
+        {
+            "pivot": [0, 0.5, 0],//This is the position of the hitbox, you can change the X, Y and Z values.
+            "width": 0.8,
+            "height": 0.7
+        }//And you can add many more hitboxes as you want, just copy-paste the hitbox inside the "hitboxes" array. 
+    ]
+}
+```
 
 ## Teleport underground
 
@@ -27,11 +44,13 @@ If you have a dummy entity (invisible) that you need to interact with, you can t
 
 ## using runtime identifier
 
-Some entities don't have shadows. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors. See the [runtime identifers document for more information](/documentation/runtime-identifiers)
+Some entities don't have shadows. By using the runtime identifier of these entities, we can remove the shadows. The downside is taking on that entities hard-coded behaviors. See the [runtime identifers document for more information](/documentation/runtime-identifier)
 
 ## Remove Entity Shadows for ALL Entities
 
-`warning:` Can crash your game, or get you rejected on Marketplace!
+{% include info.html
+  contents='Can crash your game, or get you rejected on Marketplace!'
+%}
 
 Change these lines in the `shadows.material` file under the Resource Pack / materials folder. 
 
@@ -362,8 +381,3 @@ Change these lines in the `shadows.material` file under the Resource Pack / mate
 }
 ```
 I hope this helps, if you find other ways to disable shadow please let us know so we can add them.
-
----
-
-**Credit:** by Outlandishly Crafted updated by Jeremy Benisek AKA CyberAxe
-06212020

@@ -251,7 +251,7 @@ Used to sequence event functions
 				"trigger": {
 					"event": "example:my_entity_event",
 					"target": "other",
-					"conditions": "query.block_propertry('test:my_prop') == true"
+					"conditions": "query.block_property('test:my_prop') == true"
 				}
 			}
 		]

@@ -238,11 +238,11 @@ After clicking "Continue", your behavior pack should have been moved to the "Act
 
 ![](/assets/images/scripting/hello-world-tutorial/active-hello-world-addon.png)
 
-The next most important part is to enable "Experimental Gameplay".
+The next most important part is to enable "Additional Modding Capabilities" under "Experiments".
 If you don't enable this then none of your scripts will work at all!
 Scroll down until you see this toggle button and turn it on.
 
-![](/assets/images/scripting/hello-world-tutorial/use-experimental-gameplay-toggle.png)
+![](/assets/images/scripting/hello-world-tutorial/additional-modding-capabilities-toggle.png)
 
 After turning it on you will see a pop-up titled "Activate Experimental Gameplay?".
 Select "Continue".
