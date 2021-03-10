@@ -112,4 +112,4 @@ Important links have a ⭐.
  - [Block Models](https://blockmodels.com/)
  - [Bedrock Addons Reddit](https://www.reddit.com/r/BedrockAddons/)
  - [Minecraft Marketplace Stats](https://mcmarketstats.miste.fr/globalStats/)
- - [Addon Obfuscator](https://pixelpoly.co/creator-tools/obfuscator)
+ - [Addon Obfuscator](https://tools.pixelpoly.co/obfuscator)
