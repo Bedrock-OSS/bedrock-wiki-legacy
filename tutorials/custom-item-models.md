@@ -4,7 +4,7 @@ title: Custom Item Models
 parent: Tutorials
 ---
 
-# 3D Item Models
+# Entity Based 3D Item Models
 
 <details id="toc" open markdown="block">
   <summary>
@@ -588,3 +588,336 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 ```
 
 Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
+
+# Attachable Based 3D Item Models [BETA]
+
+## Concept & Idea
+
+1.16.210.5 is the first release in which attahables in player hand slots work correctly. When combined with custom block geometry, we can leverage this to create a minimal-compromises 3D item. Parts of this tutorial currently require that experimental features are enabled, due to the presence of custom blocks. Do note that these are completely optional, and you may use this method to create a custom item with an item sprite, similarly to what is described in the above tutorial. An advantage here, however, is that it will not be necessary to remove the alpha layer of the item texture. This will allow for dropped item and item frame visibility. 
+
+## The "Item"
+
+The item in this case is actually a custom block. We'll define this in our behavior pack. Note that this concept can be applied to vanilla items as well, you'll just need to define your attachable to utilize the vanilla item. We'll construct the block definition in the blocks folder of our behavior pack as follows:
+
+`./bp/blocks/<your_item>`
+```jsonc
+{
+    "format_version": "1.16.200",
+    "minecraft:block": {
+        "description": {
+            "identifier": "<your_namespace>:<your_item>" //arbitrary namespace and item name
+        },
+        "components": {
+            "minecraft:material_instances": {
+                "*": {
+                    "texture": "<texture_short>", //defined texture shortname, which we'll later add to terrain_texture.json
+                    "render_method": "<opaque|alpha_test|blend|double_sided>", //block model material type
+                    "face_dimming": false, //optional to make item appear more like java
+                    "ambient_occlusion": false //optional to make item appear more like java
+                }
+            },
+            "tag:geysercmd:example_block": {},
+            "minecraft:geometry": "geometry.<your_item>",
+            "minecraft:placement_filter": { //optional to ensure our block behaves like an item and is unplaceable
+                "conditions": [
+                    {
+                        "allowed_faces": [],
+                        "block_filter": []
+                    }
+                ]
+            }
+        }
+    }
+}
+```
+
+In the above example, we define our block, texture, render method, and geometry. We also apply a conditional placement filter to ensure our block behaves like an item and cannot be placed. If this is not desired, simply omit this component.
+
+## Geometry
+
+Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheless, there are still some special notes to allow this to work properly. First, take careful note that we are utilizing the 1.16.0 geometry format. This is important, as it will allow us to define a binding expression with a Molang query. This will effectively treat our model as though it is parented to a given bone in the entity to which it is attached. We will define our geometry in the following form:
+
+`./rp/models/blocks/<your_item>.geo.json`
+```jsonc
+{
+    "format_version": "1.16.0", //note we are on format version 1.16.0
+    "minecraft:geometry": [
+        {
+            "description": {
+                "identifier": "geometry.<your_item>", // this uses the same geometry we defined for the block previously
+                "texture_width": 16,
+                "texture_height": 16,
+                "visible_bounds_width": 4,
+                "visible_bounds_height": 4.5,
+                "visible_bounds_offset": [0, 0.75, 0]
+            },
+            "bones": [
+                {
+                    "name": "root",
+		    //this is what will ensure that we bind to the correct slot
+		    //currently, q.item_slot_to_bone_name only returns hand slots
+		    //therefore, we must build in a special case if we'd like our item to be useable in the head slot
+                    "binding": "c.item_slot == 'head' ? 'head' : q.item_slot_to_bone_name(c.item_slot)",
+                    "pivot": [0, 8, 0]
+                },
+                {
+                    "name": "root_x", //we define these extra bones for x, y, & z axes to make applying pseudo-display settings easier
+                    "parent": "root",
+                    "pivot": [0, 8, 0]
+                },
+                {
+                    "name": "root_y",
+                    "parent": "root_x",
+                    "pivot": [0, 8, 0]
+                },
+                {
+                    "name": "root_z",
+                    "parent": "root_y",
+                    "pivot": [0, 8, 0],
+                    "cubes": ["<...>"] //cubes of our model
+		}
+	    ]
+        }
+    ]
+}
+```
+
+In the above geometry, you'll noticed we've added special bones for the x, y, and z axis. These are placed here for the purpose of animation. Having separate rotational axes will make it easier to apply animations similarly to how Java Edition applies display settings. Another important note for those utilize individual cube rotations: these are not currently supported by custom block geometry, as the pivots are not properly applied. If you would like the block portion to render correctly, please use bones for all rotation.
+
+## Attachable Definition
+
+Next, we'll define our attachable. This can be done as follows:
+
+`./rp/attachables/<your_item>.json`
+```jsonc
+{
+    "format_version": "1.10.0",
+    "minecraft:attachable": {
+        "description": {
+	    //ensure this is the same as the block you defined
+	    //this will ensure the default block geometry is hidden
+            "identifier": "<your_namespace>:<your_item>",
+            "materials": {
+                "default": "entity_alphatest",
+		//this is needed because we are using the item_default render controller
+		//this would also be useable if were overriding an echantable item
+                "enchanted": "entity_alphatest_glint"
+            },
+            "textures": {
+                "default": "textures/blocks/<your_texture>", //full path to your texture
+                "enchanted": "textures/misc/enchanted_item_glint"
+            },
+            "geometry": {
+                "default": "geometry.<your_item>" //same geometry as specified in the block definition
+            },
+            "scripts": {
+                "pre_animation": [
+		    //define a variable to check when our item is in the main hand via the context variable of the attachable
+                    "v.main_hand = c.item_slot == 'main_hand';",
+		    //define a variable to check when our item is in the off hand via the context variable of the attachable
+                    "v.off_hand = c.item_slot == 'off_hand';",
+		    //define a variable to check when our item is in the head slot via the context variable of the attachable
+                    "v.head = c.item_slot == 'head';"
+		    //in theory, you could obviously apply this to any slot
+		    //I've chosen these because they are what java displays 3D items in
+                ],
+                "animate": [
+		    //thirdperson_main_hand pseudo display setting defined when we're in the main hand slot but not first person
+                    {"thirdperson_main_hand": "v.main_hand && !c.is_first_person"},
+		    //thirdperson_off_hand pseudo display setting defined when we're in the off hand slot but not first person
+                    {"thirdperson_off_hand": "v.off_hand && !c.is_first_person"},
+		    //thirdperson_head pseudo display setting defined when we're in the head slot hand but not first person
+                    {"thirdperson_head": "v.head && !c.is_first_person"},
+		    //firstperson_main_hand pseudo display setting defined when we're in the main hand slot slot hand and are first person
+                    {"firstperson_main_hand": "v.main_hand && c.is_first_person"},
+		    //firstperson_off_hand pseudo display setting defined when we're in the off hand slot hand and are first person
+                    {"firstperson_off_hand": "v.off_hand && c.is_first_person"},
+		    //firstperson_off_hand pseudo display setting defined when we're in the head hand slot hand and are first person
+                    {"firstperson_head": "c.is_first_person && v.head"}
+                ]
+            },
+            "animations": {
+                "thirdperson_main_hand": "animation.<your_item>.thirdperson_main_hand",
+                "thirdperson_off_hand": "animation.<your_item>.thirdperson_off_hand",
+                "thirdperson_head": "animation.<your_item>.head",
+                "firstperson_main_hand": "animation.<your_item>.firstperson_main_hand",
+                "firstperson_off_hand": "animation.<your_item>.firstperson_off_hand",
+		//animation to disable our attachable in the first person, as not to obstruct player view
+		//I attempted this via render controller, but I couldn't seem to get the render controller to acknowledge the attachable variables
+                "firstperson_head": "animation.disable"
+            },
+            "render_controllers": [
+	        //we'll use the same render controller as the trident here, but you could define your own if you'd like
+                "controller.render.item_default"
+            ]
+        }
+    }
+}
+```
+
+There's a bit to unpack here. Firstly, it's important to note that we must use the same identifier for our attachable as our defined block. When we do this, we cause the automatically generated model that Minecraft would place in the rightitem/leftitem slot of our entity geometry to be hidden when this attachable is enabled. This is quite desirable, as previous methods of implementing custom items required removal of the alpha layer of the defined item texture, which meant that the item would not have a visible sprite for item drops or in item frames. For our animation section, I've essentially setup a system to mimic Java's display settings. If this does not suit your needs, then feel free to define it however you'd like. Also note that I'm using an animation to disable fist person view in the case of the player, as attempting to do so via render controller seemed to fail due to the pre-animation variable not being accessible.
+
+## Animations
+
+### Display Animations
+
+For animations, we'll be defining a seperate animation for each pseudo-display setting. Here's an example:
+
+`./rp/animations/<your_item>.animation.json`
+```jsonc
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.<your_item>.thirdperson_main_hand": {
+            "loop": true,
+            "bones": {
+                "root_x": {
+                    "rotation": [-19, 0, 0],
+                    "position": [-0, 2.25, 0.5]
+                },
+                "root_y": {
+                    "rotation": [0, -180, 0]
+                },
+                "root_z": {
+                    "rotation": [0, 0, 0]
+                },
+                "root": {
+                    "rotation": [90, 0, 0],
+                    "position": [0, 13, -3]
+                }
+            }
+        },
+        "animation.<your_item>.thirdperson_off_hand": {
+            "loop": true,
+            "bones": {
+                "root_x": {
+                    "rotation": [-19, 0, 0],
+                    "position": [-0, 2.25, 0.5]
+                },
+                "root_y": {
+                    "rotation": [0, 180, 0]
+                },
+                "root_z": {
+                    "rotation": [0, 0, 0]
+                },
+                "root": {
+                    "rotation": [90, 0, 0],
+                    "position": [0, 13, -3]
+                }
+            }
+        },
+        "animation.<your_item>.head": {
+            "loop": true,
+            "bones": {
+                "root_x": {
+                    "rotation": [-0, 0, 0],
+                    "position": [-0, 12.8125, 0],
+                    "scale": 1.125
+                },
+                "root_y": {
+                    "rotation": [0, -180, 0]
+                },
+                "root_z": {
+                    "rotation": [0, 0, 0]
+                },
+                "root": {
+                    "position": [0, 19.5, 0]
+                }
+            }
+        },
+        "animation.<your_item>.firstperson_main_hand": {
+            "loop": true,
+            "bones": {
+                "root": {
+                    "rotation": [90, 60, -40],
+                    "position": [4, 10, 4],
+                    "scale": 1.5
+                },
+                "root_x": {
+                    "position": [-2.5, 5.5, -0],
+                    "rotation": [0.1, 0.1, 0.1]
+                }
+            }
+        },
+        "animation.<your_item>.firstperson_off_hand": {
+            "loop": true,
+            "bones": {
+                "root": {
+                    "rotation": [90, 60, -40],
+                    "position": [4, 10, 4],
+                    "scale": 1.5
+                },
+                "root_x": {
+                    "position": [3, 6, -0],
+                    "rotation": [0.1, 0.1, 0.1]
+                }
+            }
+        }
+    }
+}
+```
+
+Above, we are essentially defining display settings as we would on Java. However, we must account for the translational and axial differences of bedrock. The above settings are unlikely to work for your model, as obviously the proper display settings will depend on the model. Optionally, I've written a jq filter that can effectively translate input Java display settings to a Bedrock animation. You may access it [here](https://jqterm.com/1966ea34bd01c98494579645ff4aa5d9?query=%22CHANGE_ME%22%20as%20%24model_name%20%7C%0A%0A%7B%0A%20%20%20%20%09%22format_version%22%3A%20%221.8.0%22%2C%0A%20%20%20%20%09%22animations%22%3A%20%7B%0A%20%20%20%20%09%09%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.thirdperson_main_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%28if%20.display.thirdperson_righthand%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%5B%28-%20.display.thirdperson_righthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.thirdperson_righthand.translation%20then%20%5B%28-%20.display.thirdperson_righthand.translation%5B0%5D%29%2C%20%28.display.thirdperson_righthand.translation%5B1%5D%29%2C%20%28.display.thirdperson_righthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.thirdperson_righthand.scale%20then%20%5B%28.display.thirdperson_righthand.scale%5B0%5D%29%2C%20%28.display.thirdperson_righthand.scale%5B1%5D%29%2C%20%28.display.thirdperson_righthand.scale%5B2%5D%29%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%20%22rotation%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%5B0%2C%20%28-%20.display.thirdperson_righthand.rotation%5B1%5D%29%2C%200%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.thirdperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%20%20%20%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.thirdperson_righthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22rotation%22%3A%20%5B90%2C%200%2C%200%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22position%22%3A%20%5B0%2C%2013%2C%20-3%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.thirdperson_off_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%28if%20.display.thirdperson_lefthand%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%5B%28-%20.display.thirdperson_lefthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.thirdperson_lefthand.translation%20then%20%5B%28-%20.display.thirdperson_lefthand.translation%5B0%5D%29%2C%20%28.display.thirdperson_lefthand.translation%5B1%5D%29%2C%20%28.display.thirdperson_lefthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.thirdperson_lefthand.scale%20then%20%5B%28.display.thirdperson_lefthand.scale%5B0%5D%29%2C%20%28.display.thirdperson_lefthand.scale%5B1%5D%29%2C%20%28.display.thirdperson_lefthand.scale%5B2%5D%29%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%20%22rotation%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%5B0%2C%20%28-%20.display.thirdperson_lefthand.rotation%5B1%5D%29%2C%200%5D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.thirdperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%20%20%20%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.thirdperson_lefthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22rotation%22%3A%20%5B90%2C%200%2C%200%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22position%22%3A%20%5B0%2C%2013%2C%20-3%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.head%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_x%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.head.rotation%20then%20%5B%28-%20.display.head.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.head.translation%20then%20%5B%28-%20.display.head.translation%5B0%5D%20*%200.625%29%2C%20%28.display.head.translation%5B1%5D%20*%200.625%29%2C%20%28.display.head.translation%5B2%5D%20*%200.625%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.head.scale%20then%20%28.display.head.scale%20%7C%20map%28.%20*%200.625%29%29%20else%200.625%20end%29%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.head.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%20%28-%20.display.head.rotation%5B1%5D%29%2C%200%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.head.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.head.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22position%22%3A%20%5B0%2C%2019.5%2C%200%5D%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.firstperson_main_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B90%2C%2060%2C%20-40%5D%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%5B4%2C%2010%2C%204%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%201.5%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.firstperson_righthand.translation%20then%20%5B%28-%20.display.firstperson_righthand.translation%5B0%5D%29%2C%20%28.display.firstperson_righthand.translation%5B1%5D%29%2C%20%28-%20.display.firstperson_righthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.firstperson_righthand.rotation%20then%20%5B%28-%20.display.firstperson_righthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20%5B0.1%2C%200.1%2C%200.1%5D%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.firstperson_righthand.scale%20then%20%28.display.firstperson_righthand.scale%29%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.firstperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%20%28-%20.display.firstperson_righthand.rotation%5B1%5D%29%2C%200%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.firstperson_righthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.firstperson_righthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%2C%0A%20%20%20%20%09%09%28%22animation.%22%20%2B%20%28%24model_name%29%20%2B%20%22.firstperson_off_hand%22%29%3A%20%7B%0A%20%20%20%20%09%09%09%22loop%22%3A%20true%2C%0A%20%20%20%20%09%09%09%22bones%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B90%2C%2060%2C%20-40%5D%2C%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%5B4%2C%2010%2C%204%5D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%201.5%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%09%09%09%09%22root_x%22%3A%20%7B%0A%20%20%20%20%09%09%09%09%09%22position%22%3A%20%28if%20.display.firstperson_lefthand.translation%20then%20%5B%28.display.firstperson_lefthand.translation%5B0%5D%29%2C%20%28.display.firstperson_lefthand.translation%5B1%5D%29%2C%20%28-%20.display.firstperson_lefthand.translation%5B2%5D%29%5D%20else%20null%20end%29%2C%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%28if%20.display.firstperson_lefthand.rotation%20then%20%5B%28-%20.display.firstperson_lefthand.rotation%5B0%5D%29%2C%200%2C%200%5D%20else%20%5B0.1%2C%200.1%2C%200.1%5D%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22scale%22%3A%20%28if%20.display.firstperson_lefthand.scale%20then%20%28.display.firstperson_lefthand.scale%29%20else%20null%20end%29%0A%20%20%20%20%09%09%09%09%7D%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_y%22%3A%20%28if%20.display.firstperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%20%28-%20.display.firstperson_lefthand.rotation%5B1%5D%29%2C%200%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%22root_z%22%3A%20%28if%20.display.firstperson_lefthand.rotation%20then%20%7B%0A%20%20%20%20%09%09%09%09%09%22rotation%22%3A%20%5B0%2C%200%2C%20%28.display.firstperson_lefthand.rotation%5B2%5D%29%5D%0A%20%20%20%20%09%09%09%09%7D%20else%20null%20end%29%0A%20%20%20%20%09%09%09%7D%0A%20%20%20%20%09%09%7D%0A%20%20%20%20%09%7D%0A%20%20%20%20%7D%20%7C%20walk%28%20if%20type%20%3D%3D%20%22object%22%20then%20with_entries%28select%28.value%20!%3D%20null%29%29%20else%20.%20end%29) This filter assumes the pivot of root is `[0, 8, 0]`, and therefore is the point from which display settings will be applied.
+
+### Disabling via Animations
+
+In order to ensure our attachable does not display in the first person, we will apply a disabling animation. This can simply take the following form:
+
+`./rp/animations/disable.animation.json`
+```jsonc
+{
+    "format_version": "1.8.0",
+    "animations": {
+        "animation.disable": {
+            "loop": true,
+            "override_previous_animation": true,
+            "bones": {
+                "root": {
+                    "scale": 0
+                }
+            }
+        }
+    }
+}
+```
+
+## Texts
+
+We will also apply a simple lang file to allow our item to be displayed with a properly formatted name. Simply follow the format:
+
+`./rp/texts/<country>_<language>.lang`
+```
+tile.<your_namespace>:<your_item>.name=Your Displayed Name
+```
+
+This assumes you utilized blocks. If you utilizes items instead, simply use "item" instead of "tile".
+
+## Textures
+
+There are no special requirements with regards to the construction of our texture, beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname. We do so as follows:
+
+`./rp/textures/terrain_texture.json`
+```jsonc
+{
+    "resource_pack_name": "vanilla",
+    "texture_name": "atlas.terrain",
+    "padding": 8,
+    "num_mip_levels": 4,
+    "texture_data": {
+       "<texture_short>": { //your defined texture shortname
+       "textures": "textures/blocks/<your_texture>" //full path to your texture
+       }
+    }
+}
+```
+
+## Obtaining the Item
+
+To obtain the item, simply use the give command: `/give @p <your_namespace>:<your_item>`
+In order to place the item in the head slot: `/replaceitem entity @p slot.armor.head 0 <your_namespace>:<your_item>`
+
+## Example Pack Download
+
+![](/assets/images/tutorials/custom-item-models/hat_attachable.png)
+
+Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels_attachable.mcaddon)
