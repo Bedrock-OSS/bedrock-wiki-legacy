@@ -2,6 +2,8 @@
 layout: page
 title: Custom Item Models
 parent: Tutorials
+badge: UPDATED
+badge_color: yellow
 ---
 
 # Entity Based 3D Item Models
@@ -589,17 +591,21 @@ Here you can find the final `player.entity.json` file, render controllers, anima
 
 Pack download link: [Link](/assets/packs/tutorials/custom-item-models/CustomItemModels.mcaddon)
 
-# Attachable Based 3D Item Models [BETA]
+# Attachable Based 3D Item Models
+
+{% include notice.html
+contents='Attachable Based 3D Item Models works only in **Minecraft 1.16.210.59 beta or above**'
+%}
 
 ## Concept & Idea
 
-1.16.210.5 is the first release in which attahables in player hand slots work correctly. When combined with custom block geometry, we can leverage this to create a minimal-compromises 3D item. Parts of this tutorial currently require that experimental features are enabled, due to the presence of custom blocks. Do note that these are completely optional, and you may use this method to create a custom item with an item sprite, similarly to what is described in the above tutorial. An advantage here, however, is that it will not be necessary to remove the alpha layer of the item texture. This will allow for dropped item and item frame visibility. 
+1.16.210.5 is the first release in which attachables in player hand slots work correctly. When combined with custom block geometry, we can leverage this to create a minimal-compromises 3D item. Parts of this tutorial currently require that experimental features are enabled, due to the presence of custom blocks. Do note that these are completely optional, and you may use this method to create a custom item with an item sprite, similarly to what is described in the above tutorial. An advantage here, however, is that it will not be necessary to remove the alpha layer of the item texture. This will allow for dropped item and item frame visibility. 
 
 ## The "Item"
 
 The item in this case is actually a custom block. We'll define this in our behavior pack. Note that this concept can be applied to vanilla items as well, you'll just need to define your attachable to utilize the vanilla item. We'll construct the block definition in the blocks folder of our behavior pack as follows:
 
-`./bp/blocks/<your_item>`
+{% include filepath.html path="BP/blocks/*your_item*.json"%}
 ```jsonc
 {
     "format_version": "1.16.200",
@@ -637,7 +643,7 @@ In the above example, we define our block, texture, render method, and geometry.
 
 Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheless, there are still some special notes to allow this to work properly. First, take careful note that we are utilizing the 1.16.0 geometry format. This is important, as it will allow us to define a binding expression with a Molang query. This will effectively treat our model as though it is parented to a given bone in the entity to which it is attached. We will define our geometry in the following form:
 
-`./rp/models/blocks/<your_item>.geo.json`
+{% include filepath.html path="RP/models/blocks/*your_item*.geo.json"%}
 ```jsonc
 {
     "format_version": "1.16.0", //note we are on format version 1.16.0
@@ -654,9 +660,9 @@ Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheles
             "bones": [
                 {
                     "name": "root",
-		    //this is what will ensure that we bind to the correct slot
-		    //currently, q.item_slot_to_bone_name only returns hand slots
-		    //therefore, we must build in a special case if we'd like our item to be useable in the head slot
+					//this is what will ensure that we bind to the correct slot
+					//currently, q.item_slot_to_bone_name only returns hand slots
+					//therefore, we must build in a special case if we'd like our item to be useable in the head slot
                     "binding": "c.item_slot == 'head' ? 'head' : q.item_slot_to_bone_name(c.item_slot)",
                     "pivot": [0, 8, 0]
                 },
@@ -675,32 +681,32 @@ Unlike the above tutorial, the geometry structure is entity agnostic. Nonetheles
                     "parent": "root_y",
                     "pivot": [0, 8, 0],
                     "cubes": ["<...>"] //cubes of our model
-		}
-	    ]
+				}
+	    	]
         }
     ]
 }
 ```
 
-In the above geometry, you'll noticed we've added special bones for the x, y, and z axis. These are placed here for the purpose of animation. Having separate rotational axes will make it easier to apply animations similarly to how Java Edition applies display settings. Another important note for those utilize individual cube rotations: these are not currently supported by custom block geometry, as the pivots are not properly applied. If you would like the block portion to render correctly, please use bones for all rotation.
+In the above geometry, you'll notice we've added special bones for the x, y, and z axis. These are placed here for the purpose of animation. Having separate rotational axes will make it easier to apply animations similarly to how Java Edition applies display settings. Another important note for those utilize individual cube rotations: these are not currently supported by custom block geometry, as the pivots are not properly applied. If you would like the block portion to render correctly, please use bones for all rotation.
 
 ## Attachable Definition
 
 Next, we'll define our attachable. This can be done as follows:
 
-`./rp/attachables/<your_item>.json`
+{% include filepath.html path="RP/attachables/*your_item*.json"%}
 ```jsonc
 {
     "format_version": "1.10.0",
     "minecraft:attachable": {
         "description": {
-	    //ensure this is the same as the block you defined
-	    //this will ensure the default block geometry is hidden
+	    	//ensure this is the same as the block you defined
+	    	//this will ensure the default block geometry is hidden
             "identifier": "<your_namespace>:<your_item>",
             "materials": {
                 "default": "entity_alphatest",
-		//this is needed because we are using the item_default render controller
-		//this would also be useable if were overriding an echantable item
+				//this is needed because we are using the item_default render controller
+				//this would also be useable if were overriding an echantable item
                 "enchanted": "entity_alphatest_glint"
             },
             "textures": {
@@ -712,27 +718,27 @@ Next, we'll define our attachable. This can be done as follows:
             },
             "scripts": {
                 "pre_animation": [
-		    //define a variable to check when our item is in the main hand via the context variable of the attachable
+		    		//define a variable to check when our item is in the main hand via the context variable of the attachable
                     "v.main_hand = c.item_slot == 'main_hand';",
-		    //define a variable to check when our item is in the off hand via the context variable of the attachable
+		    		//define a variable to check when our item is in the off hand via the context variable of the attachable
                     "v.off_hand = c.item_slot == 'off_hand';",
-		    //define a variable to check when our item is in the head slot via the context variable of the attachable
+		    		//define a variable to check when our item is in the head slot via the context variable of the attachable
                     "v.head = c.item_slot == 'head';"
-		    //in theory, you could obviously apply this to any slot
-		    //I've chosen these because they are what java displays 3D items in
+		    	//in theory, you could obviously apply this to any slot
+		    	//I've chosen these because they are what java displays 3D items in
                 ],
                 "animate": [
-		    //thirdperson_main_hand pseudo display setting defined when we're in the main hand slot but not first person
+		    		//thirdperson_main_hand pseudo display setting defined when we're in the main hand slot but not first person
                     {"thirdperson_main_hand": "v.main_hand && !c.is_first_person"},
-		    //thirdperson_off_hand pseudo display setting defined when we're in the off hand slot but not first person
+		    		//thirdperson_off_hand pseudo display setting defined when we're in the off hand slot but not first person
                     {"thirdperson_off_hand": "v.off_hand && !c.is_first_person"},
-		    //thirdperson_head pseudo display setting defined when we're in the head slot hand but not first person
+		    		//thirdperson_head pseudo display setting defined when we're in the head slot hand but not first person
                     {"thirdperson_head": "v.head && !c.is_first_person"},
-		    //firstperson_main_hand pseudo display setting defined when we're in the main hand slot slot hand and are first person
+		    		//firstperson_main_hand pseudo display setting defined when we're in the main hand slot slot hand and are first person
                     {"firstperson_main_hand": "v.main_hand && c.is_first_person"},
-		    //firstperson_off_hand pseudo display setting defined when we're in the off hand slot hand and are first person
+		    		//firstperson_off_hand pseudo display setting defined when we're in the off hand slot hand and are first person
                     {"firstperson_off_hand": "v.off_hand && c.is_first_person"},
-		    //firstperson_off_hand pseudo display setting defined when we're in the head hand slot hand and are first person
+		    		//firstperson_off_hand pseudo display setting defined when we're in the head hand slot hand and are first person
                     {"firstperson_head": "c.is_first_person && v.head"}
                 ]
             },
@@ -742,12 +748,12 @@ Next, we'll define our attachable. This can be done as follows:
                 "thirdperson_head": "animation.<your_item>.head",
                 "firstperson_main_hand": "animation.<your_item>.firstperson_main_hand",
                 "firstperson_off_hand": "animation.<your_item>.firstperson_off_hand",
-		//animation to disable our attachable in the first person, as not to obstruct player view
-		//I attempted this via render controller, but I couldn't seem to get the render controller to acknowledge the attachable variables
+				//animation to disable our attachable in the first person, as not to obstruct player view
+				//I attempted this via render controller, but I couldn't seem to get the render controller to acknowledge the attachable variables
                 "firstperson_head": "animation.disable"
             },
             "render_controllers": [
-	        //we'll use the same render controller as the trident here, but you could define your own if you'd like
+	        	//we'll use the same render controller as the trident here, but you could define your own if you'd like
                 "controller.render.item_default"
             ]
         }
@@ -761,9 +767,9 @@ There's a bit to unpack here. Firstly, it's important to note that we must use t
 
 ### Display Animations
 
-For animations, we'll be defining a seperate animation for each pseudo-display setting. Here's an example:
+For animations, we'll be defining a separate animation for each pseudo-display setting. Here's an example:
 
-`./rp/animations/<your_item>.animation.json`
+{% include filepath.html path="RP/animations/*your_item*.animation.json"%}
 ```jsonc
 {
     "format_version": "1.8.0",
@@ -863,7 +869,7 @@ Above, we are essentially defining display settings as we would on Java. However
 
 In order to ensure our attachable does not display in the first person, we will apply a disabling animation. This can simply take the following form:
 
-`./rp/animations/disable.animation.json`
+{% include filepath.html path="RP/animations/disable.animation.json"%}
 ```jsonc
 {
     "format_version": "1.8.0",
@@ -885,18 +891,18 @@ In order to ensure our attachable does not display in the first person, we will 
 
 We will also apply a simple lang file to allow our item to be displayed with a properly formatted name. Simply follow the format:
 
-`./rp/texts/<country>_<language>.lang`
+{% include filepath.html path="RP/texts/*country*_*language*.lang"%}
 ```
 tile.<your_namespace>:<your_item>.name=Your Displayed Name
 ```
 
-This assumes you utilized blocks. If you utilizes items instead, simply use "item" instead of "tile".
+This assumes you utilized blocks. If you utilize items instead, simply use "item" instead of "tile".
 
 ## Textures
 
-There are no special requirements with regards to the construction of our texture, beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname. We do so as follows:
+There are no special requirements in regard to the construction of our texture, beyond it being a single texture. We need only define a shortname for it in `terrain_texture.json` so that our defined block may access the full texture through the shortname. We do so as follows:
 
-`./rp/textures/terrain_texture.json`
+{% include filepath.html path="RP/textures/terrain_texture.json"%}
 ```jsonc
 {
     "resource_pack_name": "vanilla",
