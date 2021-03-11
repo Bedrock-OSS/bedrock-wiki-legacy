@@ -24,7 +24,7 @@ Important links have a ⭐.
  - ⭐ [Bedrock OSS](https://discord.gg/XjV87YN)
  - [Minecraft Commands](https://discord.gg/QAFXFtZ)
  - [Blockbench](http://discord.gg/fZQbxbg)
- - [Bridge](https://discord.gg/NxKuWuA)
+ - [bridge.](https://discord.gg/NxKuWuA)
  - [Minecraft](https://discord.gg/minecraft)
  - [Skill Share](https://discord.gg/sZ7fkcN)
  - [Amulet & MCEdit](https://discord.gg/dSnwqQf)
@@ -34,7 +34,7 @@ Important links have a ⭐.
 
 ## Software
  - ⭐ [Blockbench: A boxy 3D model editor](https://blockbench.net/)
- - [Bridge Addon Editor](https://bridge-core.github.io/)
+ - [bridge. Addon Editor](https://bridge-core.github.io/)
  - [Bedrock Chunk Generator](http://www.brightmoore.net/builds/bedrockchunkgenerator)
  - [Echo:NPC Entity Management (paid)](https://www.echonpc.dev/)
  - [CoreCoder (paid) [Code Editor]](https://hanprog.itch.io/core-coder)
