@@ -565,7 +565,7 @@ _New Syntax_
         "nurtition": 3,
         "can_always_eat": true,
         "saturation_modifier": "normal",
-	"using_converts_to": minecraft:item // Changes the food or drink into another item when consumed. Can be changed to any item.
+	    "using_converts_to": "minecraft:apple" // Changes the food or drink into another item when consumed. Can be changed to any item.
     }
 }
 ```
@@ -574,6 +574,39 @@ _New Syntax_
 ```jsonc
 {
     "minecraft:use_animation": "eat" // Adds the animation and sound when eating a food item. Can also be changed to "drink".
+}
+```
+
+- minecraft:render_offsets
+_New Syntax_
+```jsonc
+{
+    "minecraft:render_offsets": {
+        "main_hand": {
+            "first_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            },
+            "third_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            }
+        },
+        "off_hand": {
+            "first_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            },
+            "third_person": {
+                "position": [1, 1, 1],
+                "rotation": [1, 1, 1],
+                "scale": [1, 1, 1]
+            }
+        }
+    }
 }
 ```
 
