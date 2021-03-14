@@ -136,7 +136,7 @@ You can use the damage_sensor component to trigger an event upon fatal damage; t
 Please note that you will have to find another work to drop multiple loot or for entities with inventory. You should also ensure that the despawn component group is not added when the entity is spawned using the entity_spawned event.
 
 Heres an example file in the BP 
-```
+```json
 {
   "format_version": "1.14.0",
   "min_engine_version": "1.16.100",
