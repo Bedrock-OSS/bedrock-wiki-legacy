@@ -98,8 +98,8 @@ Sets the maximum amount of time the GameTest must complete until it fails. If th
 Example:
 ```js
 GameTest.register("MyTest", "actor_is_present", (test) => {
-    test.succeedWhen((test) => {
-        test.assertActorPresent("minecraft:zombie", new BlockPos(3, 2, 4));
+    test.succeedWhen(() => {
+        test.assertEntityPresent("minecraft:zombie", new BlockLocation(3, 2, 4));
     });
 }).maxTicks(500); // Test must complete before 500 ticks pass.
 ```
@@ -111,8 +111,8 @@ Valid arguments: "night" and "day"
 Example:
 ```js
 GameTest.register("MyTest", "zombie_is_present_at_night", (test) => {
-    test.succeedWhen((test) => {
-        test.assertActorPresent("minecraft:zombie", new BlockPos(3, 2, 4));
+    test.succeedWhen(() => {
+        test.assertEntityPresent("minecraft:zombie", new BlockLocation(3, 2, 4));
     });
 }).batch("night"); // Test must complete at night.
 ```
@@ -123,8 +123,8 @@ Sets the ticks at which the GameTest begins
 Example:
 ```js
 GameTest.register("MyTest", "actor_is_present", (test) => {
-    test.succeedWhen((test) => {
-        test.assertActorPresent("minecraft:cow", new BlockPos(0, 3, 0));
+    test.succeedWhen(() => {
+        test.assertEntityPresent("minecraft:cow", new BlockLocation(0, 3, 0));
     });
 }).setupTicks(20);
 ```
@@ -135,8 +135,8 @@ Sets a tag for the GameTest to be referenced in the "/gametest runall" command
 Example:
 ```js
 GameTest.register("MyTest", "actor_is_present", (test) => {
-    test.succeedWhen((test) => {
-        test.assertActorPresent("minecraft:cow", new BlockPos(0, 3, 0));
+    test.succeedWhen(() => {
+        test.assertEntityPresent("minecraft:cow", new BlockLocation(0, 3, 0));
     });
 }).tag(GameTest.Tags.suiteDefault);
 ```
@@ -147,8 +147,8 @@ Sets the padding between GameTests being run
 Example:
 ```js
 GameTest.register("MyTest", "actor_is_present", (test) => {
-    test.succeedWhen((test) => {
-        test.assertActorPresent("minecraft:cow", new BlockPos(0, 3, 0));
+    test.succeedWhen(() => {
+        test.assertEntityPresent("minecraft:cow", new BlockLocation(0, 3, 0));
     });
 }).padding(40);
 ```
@@ -159,8 +159,8 @@ Sets the structure name linked with this GameTest
 Example:
 ```js
 GameTest.register("MyTest", "actor_is_present", (test) => {
-    test.succeedWhen((test) => {
-        test.assertActorPresent("minecraft:cow", new BlockPos(0, 3, 0));
+    test.succeedWhen(() => {
+        test.assertEntityPresent("minecraft:cow", new BlockLocation(0, 3, 0));
     });
 }).structureName("mystructure:actor_is_present");
 ```
@@ -169,104 +169,209 @@ GameTest.register("MyTest", "actor_is_present", (test) => {
 
 _All relative coordinates are from the structure block position._
 
+- `startSequence()`
+Begins a sequence for finer control over advanced sequences.
+
+Example:
+```js
+startSequence()
+// Sequence methods
+startSequence().thenIdle(100).thenSucceed()
+```
+
 - `spawn(identifier, position)`
 Spawns the specified entity at the coordinates relative to where the GameTest was run.
 
 Example:
 ```js
-spawn("minecraft:pig", new BlockPos(0, 3, 0));
+spawn("minecraft:pig", new BlockLocation(0, 3, 0));
 ```
 - `setBlock(block, position)`
 Sets the specified block at the coordinates relative to where the GameTest was run.
 
 Example:
 ```js
-setBlock(Minecraft.Blocks.dirt(), new BlockPos(2, 0, 5));
+setBlock(Minecraft.Blocks.dirt(), new BlockLocation(2, 0, 5));
 ```
+
+- `setEntityTamed(identifier, position)`
+Sets the specified entity at the specified coordinates as tamed.
+
+Example:
+```js
+setEntityTamed("minecraft:horse", new BlockLocation(2, 0, 5))
+```
+
+- `pullLever(position)`
+Pulls a lever at the specified coordinates if there is one there.
+
+Example:
+```js
+pullLever(new BlockLocation(4, 4, 6))
+```
+
 - `pressButton(position)`
-Presses the button at the corridnates relative to where the GameTest was run.
+Presses a button at the specified coordinates if there is one there.
 
 Example:
 ```js  
-pressButton(new BlockPos(2, 1, 0));
+pressButton(new BlockLocation(2, 1, 0));
 ```
-- `failIf(callback(gameTest))`
+- `failIf(callback())`
 If the callback asserts, the GameTest will fail.
 
 Example:
 ```js
-failIf((test) => {
-    test.assertActorPresent("minecraft:cow", new BlockPos(1, 2, 0));
+failIf(() => {
+    test.assertEntityPresent("minecraft:cow", new BlockLocation(1, 2, 0));
 });
 ```
-- `runAfterDelay(delay, callback(gameTest))`
+- `runAfterDelay(delay, callback())`
 Runs the callback after the set delay (in ticks).
 
 Example:
 ```js
-test.runAfterDelay(20, (test) => {
+runAfterDelay(20, () => {
     test.succeed();
 });
 ```
-- `succeedWhen(callback(gameTest))`
+- `succeedWhen(callback())`
 If the callback asserts, the GameTest will succeed.
 
 Example:
 ```js
-succeedWhen((test) => {
-    test.assertActorNotPresent("minecraft:sheep", new BlockPos(1, 2, 0));
+succeedWhen(() => {
+    test.assertEntityNotPresent("minecraft:sheep", new BlockLocation(1, 2, 0));
 })
 ```
-- `succeedWhenActorPresent(identifier, position)`
+- `succeedWhenEntityPresent(identifier, position)`
 If the specified actor is present at the coordinates relative to where the GameTest was run, the test will succeed.
 
 Example:
 ```js
-succeedWhenActorPresent("minecraft:villager", new BlockPos(2, 1, 10));
+succeedWhenEntityPresent("minecraft:villager", new BlockLocation(2, 1, 10));
 ```
-- `succeedWhenActorNotPresent(identifier, position)`
+- `succeedWhenEntityNotPresent(identifier, position)`
 If the specified actor is not present at the coordinates relative to where the GameTest was run, the test will succeed.
 
 Example:
 ```js
-succeedWhenActorNotPresent("minecraft:villager", new BlockPos(2, 1, 9));
+succeedWhenEntityNotPresent("minecraft:villager", new BlockLocation(2, 1, 9));
 ```
 - `succeedWhenBlockPresent(block, position)`
 If the specified block is present at the coordinates relative to where the GameTest was run, the test will succeed.
 
 Example:
 ```js
-succeedWhenBlockPresent(Minecraft.Blocks.stone(), new BlockPos(5, 0, 1));
+succeedWhenBlockPresent(Minecraft.Blocks.stone(), new BlockLocation(5, 0, 1));
 ```
 
-- `assertActorPresent(identifier, position)`
+- `succeedOnTick(tick)`
+The GameTest will succeed when the specified amount of time has passed.
+
+Example:
+```js
+succeedOnTick(40);
+```
+
+- `succeedOnTickWhen(tick, callback())`
+The GameTest will succeed when the specified amount of time has passed and the callback calls an assert.
+
+Example:
+```js
+succeedOnTickWhen(40, () => {
+    test.assertEntityPresent("minecraft:cow", new BlockLocation(2, 1, 9);
+});
+```
+
+- `assertEntityPresent(identifier, position)`
 Asserts an error if the specified actor is present at the coordinates relative to where the GameTest was run.
 
 Example:
 ```js
-assertActorPresent("minecraft:skeleton", new BlockPos(2, 1, 9));
+assertEntityPresent("minecraft:skeleton", new BlockLocation(2, 1, 9));
 ```
-- `assertActorNotPresent(identifier, position)`
+- `assertEntityNotPresent(identifier, position)`
 Asserts an error if the specified actor is not present at the coordinates relative to where the GameTest was run.
 
 Example:
 ```js
-assertActorNotPresent("minecraft:spider", new BlockPos(0, 6, 8));
+assertEntityNotPresent("minecraft:spider", new BlockLocation(0, 6, 8));
 ```
 - `assertBlockPresent(block, position)`
 Asserts an error if the specified block is present at the coordinates relative to where the GameTest was run.
 
 Example:
 ```js
-assertBlockPresent(Minecraft.Blocks.bedrock(), new BlockPos(0, 0, 1));
+assertBlockPresent(Minecraft.Blocks.bedrock(), new BlockLocation(0, 0, 1));
 ```
 
-- `assertItemActorPresent(block, position, amount)`
+- `assertBlockNotPresent(block, position)`
+Asserts an error if the specified block is not present at the coordinates relative to where the GameTest was run.
+
+Example:
+```js
+assertBlockNotPresent(Minecraft.Blocks.bedrock(), new BlockLocation(0, 0, 1));
+```
+
+- `assertBlockState(state, data, position)`
+Asserts an error when the specified block at the specified coordinates has the block state.
+
+Example:
+```js
+assertBlockState("respawn_anchor_charge", 0, new BlockLocation(0, 3, 0));
+```
+
+- `assertContainerEmpty(position)`
+Asserts an error if there is an empty container at the specified coordinates.
+
+Example:
+```js
+assertContainerEmpty(new BlockLocation(5, 2, 1));
+```
+
+- `assertContainerContains(identifier, position)`
+Asserts an error if there is a container with the specified item at the specified coordinates.
+
+Example:
+```js
+assertContainerContains("minecraft:glowstone", new BlockLocation(5, 2, 1));
+```
+
+- `assertEntityHasArmor(identifier, slot, item, data, position, bool)`
+Asserts an error when the armor is found on the entity at the specified coordinates.
+
+Example:
+```js
+assertEntityHasArmor(
+    "minecraft:horse", 
+    1, 
+    "", 
+    0, 
+    new BlockLocation(5, 2, 1), 
+    false // Last parameter function unknown
+); 
+```
+
+- `assertEntityHasComponent(identifier, component, position, bool)`
+Asserts an error when the specified entity has the component.
+
+Example:
+```js
+assertEntityHasComponent(
+    "minecraft:sheep",
+    "minecraft:is_sheared",
+    new BlockLocation(5, 2, 1),
+    false // Last parameter function unknown
+);
+```
+
+- `assertItemEntityPresent(block, position, amount)`
 Asserts an error when the specified item stack is not found at the specified coordinates
 
 Example:
 ```js
-assertItemActorPresent(new ItemStack(Blocks.redSandstone()), new BlockPos(0, 2, 0), 2.0)
+assertItemEntityPresent(new ItemStack(Blocks.redSandstone()), new BlockLocation(0, 2, 0), 2.0)
 ```
 
 - `succeed()`
@@ -321,9 +426,9 @@ The `BlockStates` objects contains a method for every block state which can be u
 
 `new ItemStack(Minecraft.Blocks.sand())`
 
-#### `BlockPos(x, y, z)`
+#### `BlockLocation(x, y, z)`
 
-`new BlockPos(1, 6, 0)`
+`new BlockLocation(1, 6, 0)`
 
 ## Complete examples
 
@@ -331,20 +436,20 @@ The `BlockStates` objects contains a method for every block state which can be u
 // Structure Path: BP/structures/MinecartTests/turn.mcstructure
 
 import * as GameTest from "GameTest";
-import { BlockPos } from "Minecraft";
+import { BlockLocation } from "Minecraft";
 
 GameTest.register("MinecartTests", "turn", (test) => {
   const minecartActorType = "minecart";
 
-  const endPos = new BlockPos(1, 2, 2);
-  const startPos = new BlockPos(1, 2, 0);
+  const endPos = new BlockLocation(1, 2, 2);
+  const startPos = new BlockLocation(1, 2, 0);
 
-  test.assertActorPresent(minecartActorType, startPos);
-  test.assertActorNotPresent(minecartActorType, endPos);
+  test.assertEntityPresent(minecartActorType, startPos);
+  test.assertEntityNotPresent(minecartActorType, endPos);
 
-  test.pressButton(new BlockPos(0, 3, 0));
+  test.pressButton(new BlockLocation(0, 3, 0));
 
-  test.succeedWhenActorPresent(minecartActorType, endPos);
+  test.succeedWhenEntityPresent(minecartActorType, endPos);
 }).tag(GameTest.Tags.suiteDefault);
 
 ```
@@ -353,23 +458,23 @@ GameTest.register("MinecartTests", "turn", (test) => {
 // Structure Path: BP/structures/DoorTests/four_villagers_one_door.mcstructure
 
 import * as GameTest from "GameTest";
-import { BlockPos } from "Minecraft";
+import { BlockLocation } from "Minecraft";
 
 GameTest.register("DoorTests", "four_villagers_one_door", (test) => {
   const villagerActorType = "minecraft:villager_v2";
   const villagerActorSpawnType =
     "minecraft:villager_v2<minecraft:spawn_farmer>"; // Attempt to spawn the villagers as farmers
 
-  test.spawn(villagerActorSpawnType, new BlockPos(5, 2, 4));
-  test.spawn(villagerActorSpawnType, new BlockPos(4, 2, 5));
-  test.spawn(villagerActorSpawnType, new BlockPos(2, 2, 5));
-  test.spawn(villagerActorSpawnType, new BlockPos(1, 2, 4));
+  test.spawn(villagerActorSpawnType, new BlockLocation(5, 2, 4));
+  test.spawn(villagerActorSpawnType, new BlockLocation(4, 2, 5));
+  test.spawn(villagerActorSpawnType, new BlockLocation(2, 2, 5));
+  test.spawn(villagerActorSpawnType, new BlockLocation(1, 2, 4));
 
-  test.succeedWhen((test) => {
-    test.assertActorPresent(villagerActorType, new BlockPos(5, 2, 2));
-    test.assertActorPresent(villagerActorType, new BlockPos(5, 2, 1));
-    test.assertActorPresent(villagerActorType, new BlockPos(1, 2, 2));
-    test.assertActorPresent(villagerActorType, new BlockPos(1, 2, 1));
+  test.succeedWhen(() => {
+    test.assertEntityPresent(villagerActorType, new BlockLocation(5, 2, 2));
+    test.assertEntityPresent(villagerActorType, new BlockLocation(5, 2, 1));
+    test.assertEntityPresent(villagerActorType, new BlockLocation(1, 2, 2));
+    test.assertEntityPresent(villagerActorType, new BlockLocation(1, 2, 1));
   });
 })
   .tag(GameTest.Tags.suiteDefault)
