@@ -45,7 +45,7 @@ Editor recommendations are starred.
 - [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for Addon creation with JSON linting and autocomplete.   
 
 ### Mobile Alternatives
-- **Android**: [_ES File Explorer_](https://play.google.com/store/apps/details?id=com.File.Manager.Filemanager&hl=de&gl=US)
+- **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
 - **iOS**: [_Kodex_](https://apps.apple.com/us/app/kodex/id1038574481)
 
 
