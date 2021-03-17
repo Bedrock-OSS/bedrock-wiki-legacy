@@ -17,7 +17,7 @@ parent: Documentation
 
 ## What are subpacks?
 
-Subpacks are what cause the gear icon to appear on packs. They were originally intended for texture resolutions to load on different memory capacities, but can also be use to create file variations in behavior and resource packs which can then be chosen by clicking the gear icon and adjusting the slider.
+Subpacks are what cause the gear icon to appear on packs. They are intended for texture resolutions to load on different memory capacities, but can also be used to create file variations in behavior and resource packs which can then be chosen by clicking the gear icon and adjusting the slider.
 
 ## Creating subpacks
 
@@ -31,8 +31,8 @@ e.g.
             <ul>
                 <li><span class="folder">subpacks</span>
                     <ul>
-                        <li><span class="file">subpack_1</span></li>
-                        <li><span class="file">subpack_2</span></li>
+                        <li><span class="folder">subpack_1</span></li>
+                        <li><span class="folder">subpack_2</span></li>
                     </ul>
                 </li>
             </ul>
@@ -111,7 +111,7 @@ Example:
      },
      "modules": [
           {
-               "type": "data",
+               "type": "resources",
                "uuid": "f6821b4a-1854-44fc-a8a4-0c2847ffda46",
                "version": [1, 0, 0]
           }
@@ -131,11 +131,14 @@ Example:
 }
 
 ```
-- name
+- `name`
+
 Defines the name that will show when selecting the subpacks.
 
-- memory_tier
+- `memory_tier`
+
 A number specifying the order of the subpacks on the slider. (Starts at 0)
 
-- folder_name
+- `folder_name`
+
 This corresponds to the name of the folder to be used in this subpack, for example in the examples above this would be `subpack_1` or `subpack_2`. These names can be anything you want, they don't need to follow the `subpack_n` format.
