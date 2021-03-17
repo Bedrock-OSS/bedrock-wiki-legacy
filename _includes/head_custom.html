@@ -152,9 +152,10 @@
     } else {
         theme = DEFAULT_THEME;
     }
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+    /* Disable automatic theme switcher based on system theme due to issues on iOS */
+    /*window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
         changeTheme(e.matches ? "Dark" : "Light");
-    });
+    });*/
     changeTheme(theme);
 
     window.addEventListener('load', () => {
