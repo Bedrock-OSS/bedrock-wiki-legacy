@@ -35,14 +35,14 @@ There are strong opinions about the best editor for beginners, but generally spe
 Editor recommendations are starred.
 
 ### Plaintext Editors
- - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for Addon development. (*Warning: Do not install Visual Studio, which is something different*)
+ - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for add-on development. (*Warning: Do not install Visual Studio, which is something different*)
 - [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
  
 
 ### Dedicated Editors
- - ⭐[_Bridge_](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft Add-On development. It offers JSON in tree view. However, the process of creating add-ons in bridge is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using Bridge.
-- [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for Addon creation with JSON linting and autocomplete.   
+ - ⭐[_bridge_.](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft add-on development. It offers JSON in tree view. However, the process of creating add-ons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
+- [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for add-on creation with JSON linting and autocomplete.   
 
 ### Mobile Alternatives
 - **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
@@ -56,7 +56,7 @@ Editor recommendations are starred.
       Features to look for in a Code Editor
    </summary>
 
-   - **Opening Folders:** When editing Addons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks. 
+   - **Opening Folders:** When editing add-ons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks. 
    - **Json Linting/Prettify:** Linting is the ability to validate code as correct in real-time. Linting for json will mark things like missing commas, misplaced parens, or other formatting issues so that you can fix them. [Linting can also be found online](https://jsonlint.com/), but having real-time linting built directly into your editor is very much preferred.
    - **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
 
@@ -69,7 +69,7 @@ Editor recommendations are starred.
       VSCode Extensions for Addon development
    </summary>
 
-Many packages exist for VSCode that make editing addons easier:
+Many packages exist for VSCode that make editing add-ons easier:
  - [Blockceptions Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
  - [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
  - [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
@@ -90,7 +90,7 @@ Many packages exist for VSCode that make editing addons easier:
       If you choose to use bridge.
    </summary>
 
-   You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
+   You should be aware that it is a application that you benefit most from when you use it exclusively for editing your add-on. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
 1) Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without bridge.
 2) Add files that you want to edit without bridge. to a `.no-cache` file at the root of your behavior pack
 
@@ -102,7 +102,7 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 
 <br>
 
-## Additional Addon-creation Software
+## Additional Add-on-creation Software
 
  - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *(≈$10/m)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
  - You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
