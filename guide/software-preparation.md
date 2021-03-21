@@ -35,14 +35,14 @@ There are strong opinions about the best editor for beginners, but generally spe
 Editor recommendations are starred.
 
 ### Plaintext Editors
- - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for add-on development. (*Warning: Do not install Visual Studio, which is something different*)
+ - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for addon development. (*Warning: Do not install Visual Studio, which is something different*)
 - [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
  
 
 ### Dedicated Editors
- - ⭐[_bridge_.](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft add-on development. It offers JSON in tree view. However, the process of creating add-ons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
-- [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for add-on creation with JSON linting and autocomplete.   
+ - ⭐[_bridge_.](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
+- [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for addon creation with JSON linting and autocomplete.   
 
 ### Mobile Alternatives
 - **Android**: [_ACode Editor_](https://play.google.com/store/apps/details?id=com.foxdebug.acodefree)
@@ -56,7 +56,7 @@ Editor recommendations are starred.
       Features to look for in a Code Editor
    </summary>
 
-   - **Opening Folders:** When editing add-ons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks. 
+   - **Opening Folders:** When editing addons, it is very convenient to open an entire folder as a project, instead of just individual files. This allows you to edit the files in both the Behavior Pack and Resource Pack at the same time, and quickly switch between tasks. 
    - **Json Linting/Prettify:** Linting is the ability to validate code as correct in real-time. Linting for json will mark things like missing commas, misplaced parens, or other formatting issues so that you can fix them. [Linting can also be found online](https://jsonlint.com/), but having real-time linting built directly into your editor is very much preferred.
    - **Built in Terminal:** I find a terminal built into my editor to be very useful. I often use python scripting to supplement my workflow, and having easy access to a terminal speeds up that workflow.
 
@@ -69,7 +69,7 @@ Editor recommendations are starred.
       VSCode Extensions for Addon development
    </summary>
 
-Many packages exist for VSCode that make editing add-ons easier:
+Many packages exist for VSCode that make editing addons easier:
  - [Blockceptions Minecraft Bedrock Development](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
  - [.mcfunction support](https://marketplace.visualstudio.com/items?itemName=arcensoth.language-mcfunction)
  - [.lang support](https://marketplace.visualstudio.com/items?itemName=zz5840.minecraft-lang-colorizer)
