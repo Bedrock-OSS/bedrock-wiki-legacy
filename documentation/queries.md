@@ -26,7 +26,7 @@ Formatted like: `query.get_equiped_item_name(hand) = 'name'`
 
 Takes one optional hand slot as a parameter (0 or 'main_hand' for main hand, 1 or 'off_hand' for off hand), and a second parameter (0=default) if you would like the equipped item or any non-zero number for the currently rendered item, and returns the name of the item in the requested slot (defaulting to the main hand if no parameter is supplied) if there is one, otherwise returns ''.
 
-Where `hand` is the hane you would like to query for, 
+Where `hand` is the hand you would like to query for, 
 
 Where `name` is the item you want to test for. No namespace, and please notice the quotes.
 
