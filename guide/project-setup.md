@@ -21,7 +21,7 @@ nav_order: 2
 
 ## Manifests
 A manifest is a file that defines your pack to Minecraft. It stores all sorts of important info about your pack.
-Like all other code files in your pack, it's written in [json](https://www.json.org/json-en.html).
+Like all other code files in your pack, it's written in [JSON](https://www.json.org/json-en.html).
 
 ### **JSON Syntax Rules**
 - **Data is in name/value pairs;**
@@ -34,7 +34,7 @@ Like all other code files in your pack, it's written in [json](https://www.json.
 
 ___
 
-Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (I*n other words, in a '`manifest.json`' file in your resource pack folder, which is located in '`development_resource_packs`'*).
+Let's create our Resource Pack manifest first by copying the code below into `RP/manifest.json` (*In other words, in a `manifest.json` file in your resource pack folder, which is located in `development_resource_packs`*).
 
 {% include filepath.html path="RP/manifest.json"%}
 ```jsonc
@@ -51,7 +51,7 @@ Let's create our Resource Pack manifest first by copying the code below into `RP
         ],
         "min_engine_version": [
             1,
-            14,
+            16,
             0
         ]
     },
@@ -75,11 +75,11 @@ Let's break up the code now.
 
 - "`name`" is the name of your behavior pack. "description" will show up under it in-game.
 
-- The "`uuid`" field is a very important one. A UUID(*Universally Unique IDentifier*) identifies your pack for other programs(in this case, Minecraft) to read. NEVER USE THE SAME UUID TWICE. You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like *Bridge*, *AJG* and *CoreCoder* generate UUIDS automatically.. Every manifest file uses 2 different UUIDs.
+- The "`uuid`" field is a very important one. A UUID (*Universally Unique IDentifier*) identifies your pack for other programs (in this case, Minecraft) to read. NEVER USE THE SAME UUID TWICE. You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like *Bridge*, *AJG* and *CoreCoder* generate UUIDS automatically. Every manifest file uses 2 different UUIDs.
 
 - "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
 
-- "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. Set it to `1.16.0` or the latest versionof Minecraft.
+- "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. Set it to `1.16.0` or the latest version of Minecraft.
 
 - In "`modules`", write the same "`version`" number, a new UUID under "uuid" and define the "`type`" to be "`resources`". This makes your pack a *Resource Pack*, also called a *Client pack* or a *Texture pack*. It changes things in-game visually.
 
@@ -88,7 +88,7 @@ Let's break up the code now.
 `Note:` if Mojang decides to add something else to the manifest syntax, they'll create a newer format version. Your manifests can left unchanged, but it's recommended to create the new ones with "format_version" set to the new number and the new syntax used. If this ever happens, it will be mentioned in a changelog, and this site will be updated.
 
 #
-The next step is, naturally, creating your `BP/manifest.json`. it is very much like a Resource pack manifest, except the "`type`" is "`data`"(for a *Data Pack*/*Behavior Pack*). There's also an optional field "`dependencies`", where you can define the needed resource packs by including their main UUID. Dependent resource packs will be applied to any world with the behavior pack automatically, if they exist on the device.
+The next step is, naturally, creating your `BP/manifest.json`. it is very much like a Resource pack manifest, except the "`type`" is "`data`" (for a *Data Pack*/*Behavior Pack*). There's also an optional field "`dependencies`", where you can define the needed resource packs by including their main UUID. Dependent resource packs will be applied to any world with the behavior pack automatically, if they exist on the device.
 
 *Remember that same UUIDs cannot be used twice, which means that you have to generate NEW ones for the behavior manifest, and not use the ones already used in the resource manifest.*
 
@@ -135,8 +135,11 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 }
 ```
 
-The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. I'm going to use this image here for the BP:
+The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. 
+
+I'm going to use this image here for the BP:
 ![Pack icon](/assets/guide/pack_icon_BP.png){: .pixelated}
+
 And this one for the RP:
 ![Pack icon](/assets/guide/pack_icon_RP.png){: .pixelated}
 
