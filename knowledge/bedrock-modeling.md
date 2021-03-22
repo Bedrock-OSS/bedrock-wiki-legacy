@@ -103,7 +103,6 @@ You can learn more about queries & functions at the following link:
 To easily change the speed of an animation you can simply multiply the default value of `anim_time_update` (defaults to `query.delta_time + query.anim_time`) inside our animation:
 
 ```jsonc
-
 "animation.myentity.myanimation": {
     "anim_time_update":"2 * query.delta_time + query.anim_time"
     //My animation goes here!
