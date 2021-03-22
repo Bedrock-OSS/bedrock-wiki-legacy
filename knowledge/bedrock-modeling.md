@@ -99,3 +99,15 @@ NOTE: you can have an animation in loop clicking on the following setting
 Is with this function & creativity that animals & dinosaurs are animated into walking, running & attacking.
 You can learn more about queries & functions at the following link:
 [https://bedrock.dev/docs/stable/MoLang](https://bedrock.dev/docs/stable/MoLang)
+## Animation Speed
+To easily change the speed of an animation you can simply multiply the default value of `anim_time_update` (defaults to `query.delta_time + query.anim_time`) inside our animation:
+
+```jsonc
+
+"animation.myentity.myanimation": {
+    "anim_time_update":"2 * query.delta_time + query.anim_time"
+    //My animation goes here!
+}
+```
+
+This will make the animation run 2 times faster. We can tweak the value to any positive float, so we can even slow down animations. With 0.5 for example, the animation will run 2 times slower etc.
