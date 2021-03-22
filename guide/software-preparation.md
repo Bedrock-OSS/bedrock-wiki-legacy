@@ -41,7 +41,7 @@ Editor recommendations are starred.
  
 
 ### Dedicated Editors
- - ⭐[_Bridge._](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
+ - ⭐[_bridge._](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
 - [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for addon creation with JSON linting and autocomplete.   
 
 ### Mobile Alternatives
