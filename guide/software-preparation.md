@@ -35,13 +35,13 @@ There are strong opinions about the best editor for beginners, but generally spe
 Editor recommendations are starred.
 
 ### Plaintext Editors
- - ⭐[_VSCode ](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for addon development. (*Warning: Do not install Visual Studio, which is something different*)
+ - ⭐[_VSCode_](https://code.visualstudio.com/) - is optimal in many cases, due to the fact that it has a variety of extensions for addon development. (*Warning: Do not install Visual Studio, which is something different*)
 - [_Sublime Text_](https://www.sublimetext.com/) - is another code editor with good theme customization capabilities. 
 - [_Atom_](https://atom.io/) - is another solid editor, which can be thought of as the precursor to VSCode.  
  
 
 ### Dedicated Editors
- - ⭐[_bridge_.](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
+ - ⭐[_bridge._](https://github.com/bridge-core/bridge.) - is a visual software for Minecraft addon development. It offers JSON in tree view. However, the process of creating addons in bridge. is parallel to creating them in a Code editor, so once you grasped the basics you could easily switch to using bridge.
 - [_CoreCoder (Free)_](https://hanprog.itch.io/core-coder-one) - is a unique Code Editor developed specifically for addon creation with JSON linting and autocomplete.   
 
 ### Mobile Alternatives
@@ -129,7 +129,7 @@ I strongly recommend creating a shortcut to the folder on your Desktop, in order
 `Phone>games>com.mojang`
 
 ### iOS
-`My iDevice>Minecaraft>games>com.mojang`
+`My iDevice>Minecraft>games>com.mojang`
 
 ### Folder concents
 
@@ -142,7 +142,7 @@ Thus we'll work with these folders.
 ## Setting up your workspace
 _The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
 
-Let's create you first add-on workspace in Visual Studio Code now.
+Let's create your first add-on workspace in Visual Studio Code now.
 
 1. Open VSCode (*Visual Studio Code, the code editor*)
 2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
@@ -171,4 +171,4 @@ ___
 
 **What you are to do next:**
 - [ ] Create your add-ons manifests, pack icons;
-- [ ] Learn to use `.mcfunction`, .`mcstructure`, `.mcpack` and `.mcaddon.`
+- [ ] Learn to use `.mcfunction`, `.mcstructure`,  `.mcpack`  and  `.mcaddon`.
