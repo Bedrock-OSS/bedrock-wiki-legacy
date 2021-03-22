@@ -21,17 +21,17 @@ ___
 
 # Understanding JSON
 
-JSON is a simple "language" that is used for lots of things in Computer Science... including making Minecraft Bedrock Addons! If you have never heard of json before, you are encourage to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
+JSON is a simple "language" that is used for lots of things in Computer Science... Including making Minecraft Bedrock Addons! If you have never heard of JSON before, you are encouraged to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
 
 ## Valid JSON
 
-The important thing to remember when writing JSON is that it must be *completely error free*, or it it won't work at all. Even one wrong character, or one extra comma will cause the entire file to fail. For this reason, its super important you write valid json.
+The important thing to remember when writing JSON is that it must be *completely error free*, or it won't work at all. Even one wrong character, or one extra comma will cause the entire file to fail. For this reason, it's super important you write valid JSON.
 
-We can use an online tool called [json lint](https://jsonlint.com/) to tell us whether our json is valid. Simply paste your code into the website, and press `Validate Json`. You will get a response indicating whether your code is correct or not, as well as the location and type of any errors.
+We can use an online tool called [json lint](https://jsonlint.com/) to tell us whether our JSON is valid. Simply paste your code into the website, and press `Validate JSON`. You will get a response indicating whether your code is correct or not, as well as the location and type of any errors.
 
 ## Data Structures
 
-In json, data can be written in a number of formats. Each format is specialized for the kind of data it wants to represent. Here are the structures we have available:
+In JSON, data can be written in a number of formats. Each format is specialized for the kind of data it wants to represent. Here are the structures we have available:
 
 | Name   | Example  | Explanation                            |
 |--------|----------|----------------------------------------|
@@ -74,7 +74,7 @@ We call the key-value pairs of an object as its *child* or as being *inside* the
 
 ## JSON Structure
 
-In minecraft, json files always begin with an *object*, which you can remember is two curly brackets:`{}`. We call this the *top level object*. We write our code *inside* of this object, in the form of key-value pairs.
+In Minecraft, JSON files always begin with an *object*, which you can remember is two curly brackets:`{}`. We call this the *top level object*. We write our code *inside* of this object, in the form of key-value pairs.
 
 Here is an example of a simple json file, used for Minecraft addons:
 
