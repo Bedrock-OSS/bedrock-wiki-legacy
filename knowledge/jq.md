@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Building and Editing JSON with jq
-parent: Tutorials
+parent: Knowledge
 ---
 
 <details id="toc" open markdown="block">
