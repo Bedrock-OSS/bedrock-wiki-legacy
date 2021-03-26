@@ -8,6 +8,17 @@ badge_color: red
 
 # Game Tests
 
+
+<details id="toc" open markdown="block">
+  <summary>
+    Table of contents
+  </summary>
+  {: .text-delta }
+1. TOC
+{:toc}
+</details>
+
+
 {% include notice.html 
     contents='The GameTest framework requires you to activate **"Enable GameTest Framework"** in your world settings and you must be using **Minecraft 1.16.210.60 beta or above**'
 %}
@@ -194,14 +205,6 @@ Example:
 setBlock(Minecraft.Blocks.dirt(), new BlockLocation(2, 0, 5));
 ```
 
-- `setEntityTamed(identifier, position)`
-Sets the specified entity at the specified coordinates as tamed.
-
-Example:
-```js
-setEntityTamed("minecraft:horse", new BlockLocation(2, 0, 5))
-```
-
 - `pullLever(position)`
 Pulls a lever at the specified coordinates if there is one there.
 
@@ -217,6 +220,15 @@ Example:
 ```js  
 pressButton(new BlockLocation(2, 1, 0));
 ```
+
+- `killAllEntities()`
+Kills all entities in the GameTest area.
+
+Example:
+```js
+killAllEntities();
+```
+
 - `failIf(callback())`
 If the callback asserts, the GameTest will fail.
 
@@ -284,6 +296,14 @@ succeedOnTickWhen(40, () => {
 });
 ```
 
+- `assertEntityPresentInArea(identifier)`
+Asserts an error if the specified entity is present in the GameTest area.
+
+Example:
+```js
+assertEntityPresentInArea("minecraft:skeleton");
+```
+
 - `assertEntityPresent(identifier, position)`
 Asserts an error if the specified actor is present at the coordinates relative to where the GameTest was run.
 
@@ -291,6 +311,7 @@ Example:
 ```js
 assertEntityPresent("minecraft:skeleton", new BlockLocation(2, 1, 9));
 ```
+
 - `assertEntityNotPresent(identifier, position)`
 Asserts an error if the specified actor is not present at the coordinates relative to where the GameTest was run.
 
@@ -382,6 +403,14 @@ Example:
 succeed();
 ```
 
+- `print(text: string)`
+Prints the given text to the chat
+
+Example:
+```js
+print('Hello World!');
+```
+
 ### "Minecraft"
 
 `import * as Minecraft from "Minecraft";`
@@ -419,6 +448,16 @@ Examples:
 **Methods:**
 
 The `BlockStates` objects contains a method for every block state which can be used in the `setState` method of the block object
+
+#### `World`
+
+**Methods:**
+
+- `addEventListener(event, callback())`
+
+Valid events: `"onEntityCreated"`, `"onEntityDefinitionTriggered"`
+
+- `getDimension()`
 
 **Classes:**
 
@@ -508,9 +547,9 @@ Removes all GameTests in the specified radius.
 
 Creates and runs the specified GameTest.
 
-- `/gametest runAll [tagTag: GameTestTag] [rotationSteps: int]`
+- `/gametest runset [tagTag: GameTestTag] [rotationSteps: int]`
 
-Creates and runs all GameTests with the specified GameTestTag.
+Creates and runs all GameTests with the specified tag.
 
 - `/gametest create <testName: string> [width: int] [height: int] [depth: int]`
 
