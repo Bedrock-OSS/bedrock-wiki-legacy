@@ -42,7 +42,7 @@ Let's create our Resource Pack manifest first by copying the code below into `RP
     "format_version": 2,
     "header": {
         "name": "kf:Tutorial Resources",
-        "description": "A great place to start creating your very own add-ons. Organized by KaiFireborn#1551 on Discord.",
+        "description": "A great place to start creating your very own addons. Organized by KaiFireborn#1551 on Discord.",
         "uuid": "2f85891a-bd3d-439d-a1ec-238ea8b22abf",
         "version": [
             1,
@@ -77,9 +77,9 @@ Let's break up the code now.
 
 - The "`uuid`" field is a very important one. A UUID (*Universally Unique IDentifier*) identifies your pack for other programs (in this case, Minecraft) to read. NEVER USE THE SAME UUID TWICE. You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like *Bridge*, *AJG* and *CoreCoder* generate UUIDS automatically. Every manifest file uses 2 different UUIDs.
 
-- "`version`" defines the version of your add-on. When you import an add-on with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the add-on in `development_*_packs` folders and only use them on private worlds.
+- "`version`" defines the version of your addon. When you import an addon with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the addon in `development_*_packs` folders and only use them on private worlds.
 
-- "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your add-on. Set it to `1.16.0` or the latest version of Minecraft.
+- "`min_engine_version`" defines the minimum Minecraft client version that'll be able to read your addon. Set it to `1.16.0` or the latest version of Minecraft.
 
 - In "`modules`", write the same "`version`" number, a new UUID under "uuid" and define the "`type`" to be "`resources`". This makes your pack a *Resource Pack*, also called a *Client pack* or a *Texture pack*. It changes things in-game visually.
 
@@ -98,7 +98,7 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
     "format_version": 2,
     "header": {
         "name": "kf:Tutorial Behaviors",
-        "description": "A great place to start creating your very own add-ons. Organized by KaiFireborn#1551 on Discord.",
+        "description": "A great place to start creating your very own addons. Organized by KaiFireborn#1551 on Discord.",
         "uuid": "1e77f741-228e-4085-af8d-cd53d4c6612b",
         "version": [
             1,
@@ -149,15 +149,15 @@ If you have done everything correctly, your packs should show up in Minecraft no
 ___
 
 ## Creating your testing world
-Now to create a testing world to test your new add-on!
+Now to create a testing world to test your new addon!
 
 1. Click "**Create new world**";
 
-2. Set the following settings like on the images below, so it'll be easier to test your add-on in the future:
- - The '**Experimental Gameplay**' **MUST** be **on** for some add-on features (*like Scripting, Biomes, Features, Feature Rules, etc*), double check if it's on after applying your packs.
+2. Set the following settings like on the images below, so it'll be easier to test your addon in the future:
+ - The '**Experimental Gameplay**' **MUST** be **on** for some addon features (*like Scripting, Biomes, Features, Feature Rules, etc*), double check if it's on after applying your packs.
 - You might need to turn some settings, like '*TNT explodes*', '*fire spreads*', '*do daylight cycle*', '*Mobs spawning*' etc, depending on what you're testing. It's easy to do with the `/gamerule` command in-game.
 
-3. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
+3. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your addon when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
 ![](/assets/images/guide/world_params_1.jpg)
 ![](/assets/images/guide/world_params_2.jpg)
@@ -187,14 +187,14 @@ Now you can run the function by typing `/function diamond_tools` (*`/function {f
 ![function in-game](/assets/images/guide/function_in_game.jpg)
 ___
 ## .mcpack, .mcaddon & .mcworld
-Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `BP` or your `RP`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)
+Next up are `.mcpack` files. These are used to *import external addons*. To create one, all you have to do is *right_click* your `BP` or your `RP`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)
 
 ![](/assets/images/guide/transpiled_mcpack.png)
 
 What if you want both your resource pack and your behavior pack to be imported at once? Make both `.mcpacks`, then select them and choose `send to>compressed(zipped) folder`. Then change `.zip` to `.mcaddon`. Done!
 ##### Note: Some external programs like AJG and bridge do that automatically
 
-*Note: same method can be used to compile a world folder from com.mojang/minecraftWorlds and changing the `.zip` to `.mcworld`. On Win10 devices one can click "*Export world*" in the world settings to achieve the same result. `.mcworld`s usually include all add-ons applied (as long as they come from `..._packs`.).*
+*Note: same method can be used to compile a world folder from com.mojang/minecraftWorlds and changing the `.zip` to `.mcworld`. On Win10 devices one can click "*Export world*" in the world settings to achieve the same result. `.mcworld`s usually include all addons applied (as long as they come from `..._packs`.).*
 
 ___
 ## Your progress so far:

@@ -143,7 +143,7 @@ The first line defines the entity's name, and the second one the entity's spawn 
 
 # Custom entity behavior definition
 
-This is one of the most complicated part of creating add-ons - Entity behaviors. You'll often refer to [bedrock.dev/r/Entities](https://bedrock.dev/r/Entities) for what the different components do and for their parameters. All-in-all, the entity's behavior file defines what the entity does in game. Let's see the overall structure of such a file first. (Behavior files are located in BP/entities/) (The file name doesn't matter, but I recommend naming it entityName.json or entityName.behavior.json)
+This is one of the most complicated part of creating addons - Entity behaviors. You'll often refer to [bedrock.dev/r/Entities](https://bedrock.dev/r/Entities) for what the different components do and for their parameters. All-in-all, the entity's behavior file defines what the entity does in game. Let's see the overall structure of such a file first. (Behavior files are located in BP/entities/) (The file name doesn't matter, but I recommend naming it entityName.json or entityName.behavior.json)
 
 ![](/assets/images/guide/custom_entity_1.png)
 

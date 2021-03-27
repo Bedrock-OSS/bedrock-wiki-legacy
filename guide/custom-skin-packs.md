@@ -130,7 +130,7 @@ Done! Now, when you open Character Creator, you'll see your skins available to b
 
 Exporting the pack is easy: simply zip everything in the SkinpackName folder and change the `.zip` extension to `.mcpack`.
 
-*Note: Skin packs can be instantly generated from a folder with skins with [AJG](https://kaifireborn.itch.io/add-on-json-generator).*
+*Note: Skin packs can be instantly generated from a folder with skins with [AJG](https://kaifireborn.itch.io/addon-json-generator).*
 
 ___
 ___

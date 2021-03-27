@@ -90,13 +90,13 @@ Many packages exist for VSCode that make editing addons easier:
       If you choose to use bridge.
    </summary>
 
-   You should be aware that it is a application that you benefit most from when you use it exclusively for editing your add-on. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
+   You should be aware that it is a application that you benefit most from when you use it exclusively for editing your addon. Switching between a different editor and bridge. creates a bit of an overhead in your workflow (more later). The program builds up a knowledge base of your files as you use the editor. This enables very fast and dynamic auto-completions and file validation but also means that all of your files are cached in the background by default. There are two ways to workaround Bridge's caching strategy:
 1) Increase or remove the `bridge-file-version: #11` comment the app leaves in your files after editing a file without bridge.
 2) Add files that you want to edit without bridge. to a `.no-cache` file at the root of your behavior pack
 
 Due to the nature of the file versioning system, most scripts and tools will continue to work as expected.
 
-For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), with announcements, plugin discussion, add-on help, and more.
+For further guidance on the editor, feel free to contact [solvedDev](https://twitter.com/solvedDev). bridge. also has an [official Discord server](https://discord.gg/wcRJZN3), with announcements, plugin discussion, addon help, and more.
 
 </details>
 
@@ -105,7 +105,7 @@ For further guidance on the editor, feel free to contact [solvedDev](https://twi
 ## Additional Add-on-creation Software
 
  - [**Blockbench**](https://blockbench.net/) is a 'boxy 3D model editor ' typically used to create Minecraft entity/block models, textures and animations. Also provides a web-browser version compatible with mobile.  An image editor, like [GIMP](https://www.gimp.org/), [Krita](https://krita.org/en/) [Photoshop *(≈$10/m)*](https://www.adobe.com/products/photoshop.html) or paint.net, is recommended to be used along.
- - You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/add-on-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
+ - You may also be recommended software such as [AJG (≈$3.50)](https://kaifireborn.itch.io/addon-json-generator) for repetitious task automation (e.g mass weapon generation) or [FRG (≈$3.50)](https://machine-builder.itch.io/frg-v2) for quick custom structure creation.
 
 ![Blockbench Workspace](/assets/images/guide/blockbench_workspace.png)
 
@@ -137,12 +137,12 @@ We will use `development_behavior_packs` and `development_resource_packs` for de
  
 Thus we'll work with these folders.
 
-`resource_packs` and `behavior_packs` on the other hand contain stable add-ons, including those imported via `.mcpack`. We can ignore these folders for now.
+`resource_packs` and `behavior_packs` on the other hand contain stable addons, including those imported via `.mcpack`. We can ignore these folders for now.
 
 ## Setting up your workspace
 _The remainder of this Guide assumes you are using VSCode. You may also follow along in other editors._
 
-Let's create your first add-on workspace in Visual Studio Code now.
+Let's create your first addon workspace in Visual Studio Code now.
 
 1. Open VSCode (*Visual Studio Code, the code editor*)
 2. Create a folder named "`your_pack_name_RP`" in `development_resource_packs`. **I'll refer to this folder as `RP`**, in accordance with the [Style Guide](https://wiki.bedrock.dev/knowledge/style-guide.html).
@@ -153,7 +153,7 @@ Let's create your first add-on workspace in Visual Studio Code now.
 ## Learning to reference
 
 ## Vanilla Packs
-Referencing means looking at other add-ons to find out how certain results are achieved. Minecraft's unmodified files are a good place to start. Download the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) and [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate) and get creative! I recommend adding them to your workspace for easy referencing.
+Referencing means looking at other addons to find out how certain results are achieved. Minecraft's unmodified files are a good place to start. Download the [Vanilla Resource Pack](https://aka.ms/resourcepacktemplate) and [Vanilla Behavior Pack](https://aka.ms/behaviorpacktemplate) and get creative! I recommend adding them to your workspace for easy referencing.
 
 Once you complete this guide, you can download and reference some open-source addons from, for example, [MCPEDL](https://mcpedl.com/?cookie_check=1). You can also upload your own addons there.
 
@@ -167,8 +167,8 @@ ___
 
 - [x] Installed the necessary software;
 - [x] Downloaded the Vanilla Example files;
-- [x] Located your com.mojang folder and created your add-on's workspace.
+- [x] Located your com.mojang folder and created your addon's workspace.
 
 **What you are to do next:**
-- [ ] Create your add-ons manifests, pack icons;
+- [ ] Create your addons manifests, pack icons;
 - [ ] Learn to use `.mcfunction`, `.mcstructure`,  `.mcpack`  and  `.mcaddon`.

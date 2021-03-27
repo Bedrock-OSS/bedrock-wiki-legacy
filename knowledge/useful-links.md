@@ -40,7 +40,7 @@ Important links have a ⭐.
  - [CoreCoder (paid) [Code Editor]](https://hanprog.itch.io/core-coder)
  - [Feature Rule Generator v2 (paid version)](https://machine-builder.itch.io/frg-v2)
  - [Feature Rule Generator v2 (free version)](https://drive.google.com/file/d/1rwQTtzgpWiqCS9ecO_j-qcxjdQvWSXgi/view)
- - [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/add-on-json-generator)
+ - [Add-on JSON Generator (paid)](https://kaifireborn.itch.io/addon-json-generator)
  - [NBT Editor](https://www.universalminecrafteditor.com/)
  - [World Converter (free)](http://www.mcctoolchest.com/)
  - [World Converter (paid)](https://www.universalminecraftconverter.com/download)
