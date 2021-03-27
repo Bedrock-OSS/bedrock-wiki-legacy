@@ -1,7 +1,0 @@
-[
-  {
-    "flipbook_texture": "textures/blocks/flashing_flipbook",
-    "atlas_tile": "flashing",
-    "ticks_per_frame": 13
-  }
-]

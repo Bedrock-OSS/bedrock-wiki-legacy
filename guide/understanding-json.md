@@ -2,9 +2,9 @@
 layout: guide
 title: Understanding JSON
 parent: Beginners Guide
-nav_order: 1.5
-badge: 1.5
-badge_color: guide
+nav_order: 102
+badge: a2
+badge_color: green
 badge_justification: left
 ---
 
@@ -20,6 +20,10 @@ badge_justification: left
 ___
 
 # Understanding JSON
+
+{% include info.html 
+    contents='This is an appendix page. You can start the guide from the beginning [here](/guide/).'
+%}
 
 JSON is a simple "language" that is used for lots of things in Computer Science... including making Minecraft Bedrock Addons! If you have never heard of JSON before, you are encouraged to read through [this tutorial](https://www.digitalocean.com/community/tutorials/an-introduction-to-json). It will teach you everything you need to know about writing valid JSON files.
 

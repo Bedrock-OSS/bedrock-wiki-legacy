@@ -1,4 +1,6 @@
-var redirectors = {}
+var redirectors = {
+    "/assets/guide/template_packs/README": "/guide/download-packs"
+}
 
 // HANDLE CASE AND UNDERSCORES
 // get current url

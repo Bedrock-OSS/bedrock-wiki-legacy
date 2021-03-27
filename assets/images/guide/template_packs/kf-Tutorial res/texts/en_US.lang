@@ -1,7 +1,0 @@
-item.tut:gem.name=Gem
-item.tut:meal.name=Meal
-
-tile.tut:blocky.name=Blocky
-
-entity.tut:skele_yaklin=Skeleton Yaklin
-item.spawn_egg.entity.tut:skele_yaklin.name=Spawn Skeleton Yaklin
