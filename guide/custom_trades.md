@@ -47,7 +47,7 @@ If you don't feel confident with events and component groups, make sure you're f
 # Writing the Trade Table itself
 The Trade Table syntax is somewhat similar to that of Loot Tables. It's located in any subfolder of BP/trades/. The trade table file name is important, since it's path is referenced/called in the behavior file. Let's break it up somewhat:
 
-![](/assets/guide/trade_table_tree_1.png)
+![](/assets/images/guide/trade_table_tree_1.png)
 
 First, the main object opens. Then comes an array under keyword *tiers*, including however many arrays needed.
 
@@ -57,11 +57,11 @@ Every tier has two keys ("parameters").
 - "`total_exp_required`" is quite self-explanatory: the number of *xp* the entity needs to gain while trading before the *tier* unlocks. The first tier in the array must have this set to `0`. Typically, the higher the tier, the higher the xp number that needs to be unlocked. If this is set to `0` for all tiers, all tiers will be initially unlocked.
 
 - "`groups`" array holds *trade groups*. They're also objects. There must be at least 1 Trade group in every groups array, otherwise an error will be returned.
-![](/assets/guide/trade_table_tree_2.png)
-![](/assets/guide/trade_table_tree_3.png)
+![](/assets/images/guide/trade_table_tree_2.png)
+![](/assets/images/guide/trade_table_tree_3.png)
 
 Lower you can see how a *group* looks inside. As you can see, it holds "`trades`" objects in the array. The other parameter is "`num_to_select`". This number defines the number of trades from this group to be applied (randomly selected), and cannot be more then the number of defined trades. For example, here we have two *trade*s in the *trade group* and `num_to_select` set to `1`. This means that only one trade from the two will be selected for the entity with equal chances. See Wandering Trader file for clear examples.
-![](/assets/guide/trade_table_tree_4.png)
+![](/assets/images/guide/trade_table_tree_4.png)
 
 ```json
 {
@@ -134,7 +134,7 @@ ___
 This example Trade Table has a single *tier*, which is unlocked by default, a single *group* inside, with a single *trade* that is always going to be selected.
 The Trade Table "*hierarchy*" should be pretty well understood by now.
 
-![](/assets/guide/trade_table_tree_5.png)
+![](/assets/images/guide/trade_table_tree_5.png)
 
 
 For more examples/info, I recommend checking out the Vanilla trades/villagers files in the Example behavior pack.

@@ -124,18 +124,18 @@ These "gorgeous" textures are the ones I'm going to use for my example blocks. T
 
 *Left to right: `blocky.png`, `sapp_log_side.png`, `side_block_top.png`, `sb_up.png`, `sb_down.png`, `sb_north.png`, `sb_south.png`, `sb_west.png`, `sb_east.png`*
 
-![](/assets/guide/tut_blocky_texture.png){: .pixelated}
+![](/assets/images/guide/tut_blocky_texture.png){: .pixelated}
 
-![](/assets/guide/tut_log_side_texture.png){: .pixelated}
-![](/assets/guide/tut_log_top_texture.png){: .pixelated}
+![](/assets/images/guide/tut_log_side_texture.png){: .pixelated}
+![](/assets/images/guide/tut_log_top_texture.png){: .pixelated}
 
-![](/assets/guide/tut_sb_up.png){: .pixelated}
-![](/assets/guide/tut_sb_down.png){: .pixelated}
+![](/assets/images/guide/tut_sb_up.png){: .pixelated}
+![](/assets/images/guide/tut_sb_down.png){: .pixelated}
 
-![](/assets/guide/tut_sb_north.png){: .pixelated}
-![](/assets/guide/tut_sb_south.png){: .pixelated}
-![](/assets/guide/tut_sb_west.png){: .pixelated}
-![](/assets/guide/tut_sb_east.png){: .pixelated}
+![](/assets/images/guide/tut_sb_north.png){: .pixelated}
+![](/assets/images/guide/tut_sb_south.png){: .pixelated}
+![](/assets/images/guide/tut_sb_west.png){: .pixelated}
+![](/assets/images/guide/tut_sb_east.png){: .pixelated}
 
 
 All textures need to be defines a **shortname**, (and we'll do it the same way as we defined item texture shortnames in `RP/textures/item_texture.json`), but this time in `RP/textures/terrain_texture.json`
@@ -185,7 +185,7 @@ The only difference from `item_textures.json` is that "`atlas.items`" is now cha
 
 Next, all our texture shortnames have been defined. These shortnames were already used in r`RP/blocks.json`, as you might remember. If you load the game now, you'll be able to see the 3 new custom blocks you just added, with all the texture functionality :)
 
-![](/assets/guide/custom_blocks_inventory.png)
+![](/assets/images/guide/custom_blocks_inventory.png)
 
 But, we still have to define the `tut:flashing`'s texture(third from the left), which is currently undefined. That's why it appears as purple-and-black tiled texture right now.
 
@@ -213,7 +213,7 @@ A **flipbook texture** file is created like this:
 **Done!** All of our blocks work perfectly.
 
 <video width="320" height="240" controls>
-  <source src="/assets/guide/custom_blocks_done.mp4" type="video/mp4">
+  <source src="/assets/images/guide/custom_blocks_done.mp4" type="video/mp4">
 </video>
 
 # Setting block names

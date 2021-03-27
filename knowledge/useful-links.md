@@ -85,7 +85,7 @@ Important links have a ⭐.
  - [Vanilla Beta Resource Pack](https://aka.ms/MinecraftBetaResources)
  - [Vanilla Beta Behavior Pack](https://aka.ms/MinecraftBetaBehaviors)
  - Other
-   - [Beginners Guide template packs](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/guide/template_packs)
+   - [Beginners Guide template packs](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/images/guide/template_packs)
 
 ## Scripting Resources
  - [Timer Utility](https://github.com/WavePlayz/Bedrock-Scripting-API/tree/master/utility/TimerJS)

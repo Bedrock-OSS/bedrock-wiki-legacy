@@ -80,7 +80,7 @@ What to do **next**:
 - The [Bedrock Wiki](https://wiki.bedrock.dev) has a lot of more advanced tutorials you might be interested to utilize.
 
 
-__*Note*__: *A template Add-On, containing all code examples from this guide can be downloaded [here](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/guide/template_packs)*.
+__*Note*__: *A template Add-On, containing all code examples from this guide can be downloaded [here](https://github.com/SirLich/bedrock-wiki/tree/gh-pages/assets/images/guide/template_packs)*.
 
 
 

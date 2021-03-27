@@ -138,14 +138,14 @@ The next step is, naturally, creating your `BP/manifest.json`. it is very much l
 The last thing to do is to add your `pack_icon.png` file to both the BP and RP folders. 
 
 I'm going to use this image here for the BP:
-![Pack icon](/assets/guide/pack_icon_BP.png){: .pixelated}
+![Pack icon](/assets/images/guide/pack_icon_BP.png){: .pixelated}
 
 And this one for the RP:
-![Pack icon](/assets/guide/pack_icon_RP.png){: .pixelated}
+![Pack icon](/assets/images/guide/pack_icon_RP.png){: .pixelated}
 
 
 If you have done everything correctly, your packs should show up in Minecraft now!
-![](/assets/guide/behavior_pack_existing.jpg)
+![](/assets/images/guide/behavior_pack_existing.jpg)
 ___
 
 ## Creating your testing world
@@ -159,12 +159,12 @@ Now to create a testing world to test your new add-on!
 
 3. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your add-on when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
-![](/assets/guide/world_params_1.jpg)
-![](/assets/guide/world_params_2.jpg)
-![](/assets/guide/world_params_3.jpg)
+![](/assets/images/guide/world_params_1.jpg)
+![](/assets/images/guide/world_params_2.jpg)
+![](/assets/images/guide/world_params_3.jpg)
 
 Now activate your behavior pack. If you haven't set up dependencies in the manifest, apply your resource pack too, otherwise, it'll be applied automatically). Check if **[EX]**(Experimental Gameplay) is turned on, and click '**Create**'. You might need a separate '*Infinite*' world to test entity spawning too.
-![](/assets/guide/behavior_pack_applied.png)
+![](/assets/images/guide/behavior_pack_applied.png)
 
 _____________
 ___
@@ -175,21 +175,21 @@ ___
 ### .mcstructure
 An  `.mcstructure`  file literally includes a Minecraft structure, consisting of blocks and entities. It can be exported via a Structure Block(`*/give @s structure_block*`) and is Win10 Edition only.
 If you store one of these files in the `BP/structures` folder you'll be able to '**load**' the structure from structure blocks on any world with the pack applied. (*A reliable method to transfer structures between worlds!*). See the Custom Structures article to make your Structures automatically generate in your world!
-![Structure Block Example](/assets/guide/structure_block_example.jpg)
+![Structure Block Example](/assets/images/guide/structure_block_example.jpg)
 ___
 ### .mcfunction
 An  `.mcfunction` file is a file holding a function, a.k.a a bundle of commands.. Let's create one in `BP/functions/`. VSC will treat it like a normal .txt file.
 Let's name the new text file `diamond_tools.mcfunction` and write a set of simple *slash commands*[but without slashes(`/`)], which can otherwise be executed from in-game chat, like these:
-![.mcstructure in VSC](/assets/guide/function_code.png)
+![.mcstructure in VSC](/assets/images/guide/function_code.png)
 ##### Note: if a command's syntax in the function is incorrect, the function won't parse. Watch your *content log* for errors
 
 Now you can run the function by typing `/function diamond_tools` (*`/function {filename}`*) in the in-game chat!
-![function in-game](/assets/guide/function_in_game.jpg)
+![function in-game](/assets/images/guide/function_in_game.jpg)
 ___
 ## .mcpack, .mcaddon & .mcworld
 Next up are `.mcpack` files. These are used to *import external add-ons*. To create one, all you have to do is *right_click* your `BP` or your `RP`, and zip it (*choose `send to>compressed(zipped) folder`*). Now simply change the extension [*by renaming the file*] from `.zip` to `.mcpack`, to create a file like on the image below. When a user clicks on the file, it'll be automatically opened by and imported to Minecraft, for them to use (Win10 and iOS). (It'll be located in `com.mojang/..._packs`)
 
-![](/assets/guide/transpiled_mcpack.png)
+![](/assets/images/guide/transpiled_mcpack.png)
 
 What if you want both your resource pack and your behavior pack to be imported at once? Make both `.mcpacks`, then select them and choose `send to>compressed(zipped) folder`. Then change `.zip` to `.mcaddon`. Done!
 ##### Note: Some external programs like AJG and bridge do that automatically

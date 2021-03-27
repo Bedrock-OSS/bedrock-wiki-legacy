@@ -33,7 +33,7 @@ You can change the world's generation via Add-ons. The needed folders in the Beh
 
 *Note: it might be easier to create biomes using Bridge, a Visual software for Add-on creation (also linked in Links and Contact), since the official Documentation is rather incomplete. You can also generate all example files of vanilla biomes, features and feature rules for reference, like shown here:*
 
-![](/assets/guide/gen_coal_ore.png)
+![](/assets/images/guide/gen_coal_ore.png)
 *Generating a coal_ore feature using Bridge*
 
 However, Bridge is not required.
@@ -118,7 +118,7 @@ BP/biomes/cold_biome.json
 
 DO NOT use both `noise_type` and `noise_params` at the same time. `noise_params` is an array of the top level of noise and the lowest level of noise allowed in the biome.
 
-![](/assets/guide/non_smooth_noise_transition.jpg)
+![](/assets/images/guide/non_smooth_noise_transition.jpg)
 *A non-smooth transition between the same  biome, generated with noise_params as [0.1, 0,1] and then [1.0, 1.0].*
 
 - If you want to use `noise_type`, however, you will be presented with a few pre-generated types of noise. You will probably know how some of them look from the Vanilla game. Here's the list:
@@ -303,7 +303,7 @@ You can find their Documentation on [bedrock.dev/r/Features](https://bedrock.dev
 
 The easiest way to test wether your ores generated is /fill ~15 ~5 ~15 ~-15 ~-15 ~-15 air 0 replace stone using this command at a low y level. it'll keep everything BUT stone in the selected area, like this:
 
-![](/assets/guide/ore_gen_sans_stone.jpg)
+![](/assets/images/guide/ore_gen_sans_stone.jpg)
 
 And yes, 100 as "iterations" is definitely waaay too much ;)
 
