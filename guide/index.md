@@ -12,10 +12,10 @@ sitemap:
 ## **What is this guide?**
 This guide is a beginner tutorial, created to make it possible for more people to start 'modding' Minecraft Bedrock Edition. The guide is intended to be followed step by step, and will guide you from the very fundamentals, to being able to create advanced packs yourself.
 
-## **What exactly are addon?**
+## **What exactly are Add-ons?**
 An addon is basically the Minecraft Bedrock Edition (*Windows 10, iOS, Android, Console*) equivalent to Java mods. However, in contrast to Java, the Bedrock Edition API is officially maintained by Mojang itself, instead of the community. 
 
-In general, you can think of *mods* as *modifying* the game, and *addons* as *adding-on-to* the game, following the development opportunities provided by Microsoft.
+In general, you can think of *mods* as *modifying* the game, and *addons* as *adding-onto* the game, following the development opportunities provided by Microsoft.
 
 ## **What do I need in order to create Add-ons?**
 This guide be focused on creating addons on a Windows 10 PC for any Bedrock platform. However, the process is much the same when working on Android or iOS, although it is significantly more difficult. If something works differently on a mobile device, a note will state that.
