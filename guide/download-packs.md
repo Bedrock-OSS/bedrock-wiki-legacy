@@ -4,7 +4,7 @@ title: Download Example Packs
 parent: Beginners Guide
 nav_order: 101
 badge: a
-badge_color: guide-green
+badge_color: guide
 badge_justification: left
 ---
 
