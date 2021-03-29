@@ -279,7 +279,7 @@ Returns the block position it was called on but increases the y coordinate by 1
 
 #### constructor
 
-\+ **new BlockPositionClass**(`x`: *number*, `y`: *number*, `z`: *number*): [*BlockPos*](#interfacesblockpos)
+\+ **new BlockLocation**(`x`: *number*, `y`: *number*, `z`: *number*): [*BlockPos*](#interfacesblockpos)
 
 Creates a block position
 
@@ -301,11 +301,9 @@ Name | Type |
 
 ### Methods
 
-#### air
+Contains a method for every vanilla block. Every method is in camelCase. Example:
 
 ▸ **air**(): [*Block*](#interfacesblock)
-
-**Returns:** [*Block*](#interfacesblock)
 
 
 ___
@@ -332,17 +330,9 @@ Name | Type | Description |
 
 ### Methods
 
-#### topSlotBit
+Contains a method for every block state. Every method is in camelCase. Example:
 
 ▸ **topSlotBit**(`data`: *boolean*): [*State*](#interfacesstate)
-
-##### Parameters:
-
-Name | Type |
-:------ | :------ |
-`data` | *boolean* |
-
-**Returns:** [*State*](#interfacesstate)
 
 
 
@@ -519,7 +509,7 @@ Causes this entity to detach leashes. This must be used on the "minecraft:leasha
 
 #### constructor
 
-\+ **new ItemStackClass**(`item`: [*Block*](#interfacesblock)): [*ItemStack*](#interfacesitemstack)
+\+ **new ItemStack**(`item`: [*Block*](#interfacesblock)): [*ItemStack*](#interfacesitemstack)
 
 Creates a an item stack
 
