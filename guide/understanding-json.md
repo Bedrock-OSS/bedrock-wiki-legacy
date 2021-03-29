@@ -4,7 +4,7 @@ title: Understanding JSON
 parent: Beginners Guide
 nav_order: 102
 badge: b
-badge_color: green
+badge_color: guide-green
 badge_justification: left
 ---
 
