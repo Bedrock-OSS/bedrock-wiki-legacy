@@ -86,6 +86,7 @@ This guide is a non-exhaustive list of specific performance considerations separ
 ### Geometry
 #### Bones
 - No performance impact has been observed regarding bone count
+
 #### Elements
 - Element count is not generally an issue, except in extreme cases when thousands of elements are reached
 
