@@ -29,7 +29,7 @@ It is recommended that your GameTests go in the `BP/scripts/gametests` directory
 
 ## Using GameTests
 
-In the behavior pack manifest you need to add a `plugin` module where you set an `entry` point for your GameTests.
+In the behavior pack manifest you need to add a `javascript` module where you set an `entry` point for your GameTests.
 
 {% include filepath.html path="BP/manifest.json"%}
 ```json
@@ -69,9 +69,21 @@ In the behavior pack manifest you need to add a `plugin` module where you set an
                 0,
                 0
             ],
-            "type": "plugin",
+            "type": "javascript",
             "entry": "scripts/gametests/Main.js"
         }
+    ],
+    "dependencies": [
+      {
+      // Minecraft native module - needed to use the "Minecraft" module
+      "uuid": "b26a4d4c-afdf-4690-88f8-931846312678",
+      "version": [ 0, 1, 0 ]
+    },
+    {
+      // GameTest native module - needed to use the "GameTest" module
+      "uuid": "6f4b6893-1bb6-42fd-b458-7fa3d0c89616",
+      "version": [ 0, 1, 0 ]
+    }
     ]
 }
 ```
@@ -220,9 +232,37 @@ ___
 
 ___
 
+#### Commands
+
+• `Const` **Commands**: [*Commands*](#interfacescommands)
+
+
+___
+
+#### Effects
+
+• `Const` **Effects**: [*Effects*](#interfaceseffects)
+
+
+___
+
 #### ItemStack
 
 • `Const` **ItemStack**: [*ItemStackClass*](#interfacesitemstackclass)
+
+
+___
+
+#### Items
+
+• `Const` **Items**: [*Items*](#interfacesitems)
+
+
+___
+
+#### Location
+
+• `Const` **Location**: [*WorldLocationClass*](#interfacesworldlocationclass)
 
 
 ___
@@ -233,7 +273,6 @@ ___
 
 
 # Interfaces
-
 
 <a name="interfacesblock"></a>
 
@@ -279,7 +318,7 @@ Returns the block position it was called on but increases the y coordinate by 1
 
 #### constructor
 
-\+ **new BlockLocation**(`x`: *number*, `y`: *number*, `z`: *number*): [*BlockPos*](#interfacesblockpos)
+\+ **new BlockPosition**(`x`: *number*, `y`: *number*, `z`: *number*): [*BlockPos*](#interfacesblockpos)
 
 Creates a block position
 
@@ -332,7 +371,29 @@ Name | Type | Description |
 
 Contains a method for every block state. Every method is in camelCase. Example:
 
-▸ **topSlotBit**(`data`: *boolean*): [*State*](#interfacesstate)
+▸ **topSlotBit**(data: boolean): [*State*](#interfacesstate)
+
+
+
+<a name="interfacescommands"></a>
+
+## Interface: Commands
+
+### Methods
+
+#### run
+
+▸ **run**(`command`: *string*): *void*
+
+Runs the given command when called
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`command` | *string* |  The command to run (should start with a '/')    |
+
+**Returns:** *void*
 
 
 
@@ -341,11 +402,323 @@ Contains a method for every block state. Every method is in camelCase. Example:
 ## Interface: Dimension
 
 
+<a name="interfaceseffect"></a>
+
+## Interface: Effect
+
+### Methods
+
+#### getAmplifier
+
+▸ **getAmplifier**(): *number*
+
+Gets the effect's amplifier level
+
+**Returns:** *number*
+
+
+___
+
+#### getDuration
+
+▸ **getDuration**(): *number*
+
+Gets the effect's remaining duration in ticks
+
+**Returns:** *number*
+
+
+
+<a name="interfaceseffects"></a>
+
+## Interface: Effects
+
+### Methods
+
+#### absorption
+
+▸ **absorption**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### badOmen
+
+▸ **badOmen**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### blindness
+
+▸ **blindness**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### conduitPower
+
+▸ **conduitPower**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### fatalPoison
+
+▸ **fatalPoison**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### fireResistance
+
+▸ **fireResistance**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### haste
+
+▸ **haste**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### healthBoost
+
+▸ **healthBoost**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### heroOfTheVillage
+
+▸ **heroOfTheVillage**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### hunger
+
+▸ **hunger**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### instantDamage
+
+▸ **instantDamage**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### instantHealth
+
+▸ **instantHealth**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### invisibility
+
+▸ **invisibility**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### jumpBoost
+
+▸ **jumpBoost**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### levitation
+
+▸ **levitation**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### miningFatigue
+
+▸ **miningFatigue**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### nausea
+
+▸ **nausea**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### nightVision
+
+▸ **nightVision**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### poison
+
+▸ **poison**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### regeneration
+
+▸ **regeneration**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### resistance
+
+▸ **resistance**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### saturation
+
+▸ **saturation**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### slowFalling
+
+▸ **slowFalling**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### slowness
+
+▸ **slowness**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### speed
+
+▸ **speed**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### strength
+
+▸ **strength**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### waterBreathing
+
+▸ **waterBreathing**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### weakness
+
+▸ **weakness**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
+
+#### wither
+
+▸ **wither**(): [*Effect*](#interfaceseffect)
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+
 <a name="interfacesentity"></a>
 
 ## Interface: Entity
 
 ### Methods
+
+#### addEffect
+
+▸ **addEffect**(`effect`: [*Effect*](#interfaceseffect), `duration`: *number*, `amplifier`: *number*): [*Effect*](#interfaceseffect)
+
+Adds an effect to the Entity
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`effect` | [*Effect*](#interfaceseffect) |
+`duration` | *number* |
+`amplifier` | *number* |
+
+**Returns:** [*Effect*](#interfaceseffect)
+
+
+___
 
 #### getComponent
 
@@ -371,6 +744,23 @@ ___
 Returns an array of supported components
 
 **Returns:** [*EntityComponent*](#interfacesentitycomponent)[]
+
+
+___
+
+#### getEffect
+
+▸ **getEffect**(`effect`: [*Effect*](#interfaceseffect)): [*Effect*](#interfaceseffect)
+
+Gets an effect from the Entity
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`effect` | [*Effect*](#interfaceseffect) |
+
+**Returns:** [*Effect*](#interfaceseffect)
 
 
 ___
@@ -434,7 +824,7 @@ ___
 
 ▸ **leash**(`entity`: [*Entity*](#interfacesentity)): *void*
 
-Leashes this entity to another specified entity. This must be used on the "minecraft:leashable" component
+Leashes this entity to another given entity. This must be used on the "minecraft:leashable" component
 
 ##### Parameters:
 
@@ -496,6 +886,18 @@ Causes this entity to detach leashes. This must be used on the "minecraft:leasha
 ## Interface: Item
 
 
+<a name="interfacesitems"></a>
+
+## Interface: Items
+
+### Methods
+
+Contains a method for every vanilla item. Every method is in camelCase. Example:
+
+▸ **apple**(): [*Item*](#interfaceitem)
+
+
+
 <a name="interfacesitemstack"></a>
 
 ## Interface: ItemStack
@@ -509,7 +911,7 @@ Causes this entity to detach leashes. This must be used on the "minecraft:leasha
 
 #### constructor
 
-\+ **new ItemStack**(`item`: [*Block*](#interfacesblock)): [*ItemStack*](#interfacesitemstack)
+\+ **new ItemStack**(`item`: [*Item*](#interfacesitem), `amount`: *number*, `data`: *number*): [*ItemStack*](#interfacesitemstack)
 
 Creates a an item stack
 
@@ -517,7 +919,9 @@ Creates a an item stack
 
 Name | Type |
 :------ | :------ |
-`item` | [*Block*](#interfacesblock) |
+`item` | [*Item*](#interfacesitem) |
+`amount` | *number* |
+`data` | *number* |
 
 **Returns:** [*ItemStack*](#interfacesitemstack)
 
@@ -529,11 +933,46 @@ Name | Type |
 
 ### Methods
 
+#### thenExecute
+
+▸ **thenExecute**(`func`: () => *void*): [*Sequence*](#interfacessequence)
+
+Executes the function when called
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`func` | () => *void* |
+
+**Returns:** [*Sequence*](#interfacessequence)
+
+
+___
+
+#### thenExecuteAfter
+
+▸ **thenExecuteAfter**(`time`: *number*, `func`: () => *void*): [*Sequence*](#interfacessequence)
+
+Executes the function after the time given when called
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`time` | *number* |
+`func` | () => *void* |
+
+**Returns:** [*Sequence*](#interfacessequence)
+
+
+___
+
 #### thenIdle
 
 ▸ **thenIdle**(`time`: *number*): [*Sequence*](#interfacessequence)
 
-Causes the sequence to wait for the specified amount of time
+Causes the sequence to wait for the given amount of time
 
 ##### Parameters:
 
@@ -555,6 +994,23 @@ Causes the GameTest to succeed
 **Returns:** *void*
 
 
+___
+
+#### thenWait
+
+▸ **thenWait**(`func`: () => *void*): [*Sequence*](#interfacessequence)
+
+Causes the sequence to wait until the function asserts an error
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`func` | () => *void* |
+
+**Returns:** [*Sequence*](#interfacessequence)
+
+
 
 <a name="interfacesstate"></a>
 
@@ -571,7 +1027,7 @@ Causes the GameTest to succeed
 
 ▸ **assertBlockNotPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error when the specified block is not found at the specified coordinates
+Asserts an error when the given block is not found at the given coordinates
 
 ##### Parameters:
 
@@ -587,7 +1043,7 @@ ___
 
 #### assertBlockPresent
 
-▸ **assertBlockPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
 Asserts an error when the specified block is found at the specified coordinates
 
@@ -595,7 +1051,7 @@ Asserts an error when the specified block is found at the specified coordinates
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`id` | *string* |  The block to check for   |
+`id` | [*Block*](#interfacesblock) |  The block to check for   |
 `position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the block    |
 
 **Returns:** *void*
@@ -607,7 +1063,7 @@ ___
 
 ▸ **assertBlockState**(`state`: *string*, `data`: *string* \| *number*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error when the specified block at the specified coordinates has the block state
+Asserts an error when the given block at the given coordinates has the block state
 
 ##### Parameters:
 
@@ -626,7 +1082,7 @@ ___
 
 ▸ **assertContainerContains**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error if there is a container with the specified item at the specified coordinates
+Asserts an error if there is a container with the given item at the given coordinates
 
 ##### Parameters:
 
@@ -644,7 +1100,7 @@ ___
 
 ▸ **assertContainerEmpty**(`position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error if there is an empty container at the specified coordinates
+Asserts an error if there is an empty container at the given coordinates
 
 ##### Parameters:
 
@@ -657,11 +1113,30 @@ Name | Type | Description |
 
 ___
 
+#### assertEntityData
+
+▸ **assertEntityData**(`position`: [*BlockPos*](#interfacesblockpos), `id`: *string*, `func`: (`entity`: [*Entity*](#interfacesentity)) => *void*): *void*
+
+Asserts that the given condition is true for all entities of the given type at the given location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockPos*](#interfacesblockpos) |  Position of the entity to test   |
+`id` | *string* |  Identifier of the entity to test   |
+`func` | (`entity`: [*Entity*](#interfacesentity)) => *void* |     |
+
+**Returns:** *void*
+
+
+___
+
 #### assertEntityHasArmor
 
 ▸ **assertEntityHasArmor**(`id`: *string*, `slot`: *number*, `item`: *string*, `data`: *number*, `position`: [*BlockPos*](#interfacesblockpos), `bool`: *boolean*): *void*
 
-Asserts an error when the armor is found on the entity at the specified coordinates
+Asserts an error when the armor is found on the entity at the given coordinates
 
 ##### Parameters:
 
@@ -669,7 +1144,7 @@ Name | Type | Description |
 :------ | :------ | :------ |
 `id` | *string* |  The identifier of the entity to check for the armor on   |
 `slot` | *number* |  The slot of the entity to test for the item   |
-`item` | *string* |  The item to test for in the specified slot   |
+`item` | *string* |  The item to test for in the given slot   |
 `data` | *number* |  The data value of the item   |
 `position` | [*BlockPos*](#interfacesblockpos) |  The position of the entity to test for the armor   |
 `bool` | *boolean* |  Unknown function of parameter...    |
@@ -683,7 +1158,7 @@ ___
 
 ▸ **assertEntityHasComponent**(`id`: *string*, `component`: *string*, `position`: [*BlockPos*](#interfacesblockpos), `bool`: *boolean*): *void*
 
-Asserts an error when the specified entity has the component
+Asserts an error when the given entity has the component
 
 ##### Parameters:
 
@@ -703,7 +1178,7 @@ ___
 
 ▸ **assertEntityInstancePresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error when the specified entity is found at the specified coordinates
+Asserts an error when the given entity is found at the given coordinates
 
 ##### Parameters:
 
@@ -721,7 +1196,7 @@ ___
 
 ▸ **assertEntityNotPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error when the specified entity is not found at the specified coordinates
+Asserts an error when the given entity is not found at the given coordinates
 
 ##### Parameters:
 
@@ -739,7 +1214,7 @@ ___
 
 ▸ **assertEntityPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Asserts an error when the specified entity is found at the specified coordinates
+Asserts an error when the given entity is found at the given coordinates
 
 ##### Parameters:
 
@@ -770,11 +1245,29 @@ Name | Type | Description |
 
 ___
 
+#### assertIsWaterLogged
+
+▸ **assertIsWaterLogged**(`position`: [*BlockPos*](#interfacesblockpos), `isWaterLoggged`: *boolean*): *void*
+
+Asserts that the block at the given location is waterlogged
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockPos*](#interfacesblockpos) |  Position of the block to test   |
+`isWaterLoggged` | *boolean* |  Whether to test if the block is or isn't waterlogged    |
+
+**Returns:** *void*
+
+
+___
+
 #### assertItemEntityPresent
 
 ▸ **assertItemEntityPresent**(`itemStack`: [*ItemStack*](#interfacesitemstack), `position`: [*BlockPos*](#interfacesblockpos), `amount`: *number*): *void*
 
-Asserts an error when the specified item stack is not found at the specified coordinates
+Asserts an error when the given item stack is not found at the given coordinates
 
 ##### Parameters:
 
@@ -783,6 +1276,24 @@ Name | Type | Description |
 `itemStack` | [*ItemStack*](#interfacesitemstack) |  The item stack to test for   |
 `position` | [*BlockPos*](#interfacesblockpos) |  The position to test for the item stack   |
 `amount` | *number* |  The amount of items that should be in the stack    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertRedstonePower
+
+▸ **assertRedstonePower**(`position`: [*BlockPos*](#interfacesblockpos), `power`: *number*): *void*
+
+Asserts the redstone power level at the given location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockPos*](#interfacesblockpos) |  Position of the block to test   |
+`power` | *number* |  The redstone power level to test for    |
 
 **Returns:** *void*
 
@@ -855,7 +1366,7 @@ ___
 
 ▸ **pullLever**(`position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-Pulls a lever at the specified coordinates if there is one there
+Pulls a lever at the given coordinates if there is one there
 
 ##### Parameters:
 
@@ -888,7 +1399,7 @@ ___
 
 #### setBlock
 
-▸ **setBlock**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **setBlock**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
 Places the specified block at the specified coordinates
 
@@ -896,7 +1407,7 @@ Places the specified block at the specified coordinates
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`id` | *string* |  The block to place   |
+`id` | [*Block*](#interfacesblock) |  The block to place   |
 `position` | [*BlockPos*](#interfacesblockpos) |  The relative position to place the block    |
 
 **Returns:** *void*
@@ -908,7 +1419,7 @@ ___
 
 ▸ **spawn**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): [*Entity*](#interfacesentity)
 
-Spawns the specified entity at the specified coordinates
+Spawns the given entity at the given coordinates
 
 ##### Parameters:
 
@@ -918,6 +1429,24 @@ Name | Type | Description |
 `position` | [*BlockPos*](#interfacesblockpos) |  The relative position to spawn the entity    |
 
 **Returns:** [*Entity*](#interfacesentity)
+
+
+___
+
+#### spawnItem
+
+▸ **spawnItem**(`item`: [*ItemStack*](#interfacesitemstack), `location`: [*WorldLocation*](#interfacesworldlocation)): [*Item*](#interfacesitem)
+
+Spawns an item at the given location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`item` | [*ItemStack*](#interfacesitemstack) |  The item stack to spawn   |
+`location` | [*WorldLocation*](#interfacesworldlocation) | - |
+
+**Returns:** [*Item*](#interfacesitem)
 
 
 ___
@@ -948,7 +1477,7 @@ ___
 
 ▸ **succeedOnTick**(`tick`: *number*): *void*
 
-The GameTest will succeed when the specified amount of ticks has passed
+The GameTest will succeed when the given amount of ticks has passed
 
 ##### Parameters:
 
@@ -965,7 +1494,7 @@ ___
 
 ▸ **succeedOnTickWhen**(`tick`: *number*, `func`: () => *void*): *void*
 
-The GameTest will succeed when the specified amount of ticks has passed and the `func` parameter calls an assert function
+The GameTest will succeed when the given amount of ticks has passed and the `func` parameter calls an assert function
 
 ##### Parameters:
 
@@ -998,7 +1527,7 @@ ___
 
 #### succeedWhenBlockPresent
 
-▸ **succeedWhenBlockPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **succeedWhenBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
 The GameTest will succeed when the specified block is found at the specified coordinates
 
@@ -1006,7 +1535,7 @@ The GameTest will succeed when the specified block is found at the specified coo
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`id` | *string* |  The block to check for   |
+`id` | [*Block*](#interfacesblock) |  The block to check for   |
 `position` | [*BlockPos*](#interfacesblockpos) | - |
 
 **Returns:** *void*
@@ -1014,7 +1543,7 @@ Name | Type | Description |
 
 ▸ **succeedWhenBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-The GameTest will succeed when the specified block is found at the specified coordinates
+The GameTest will succeed when the given block is found at the given coordinates
 
 ##### Parameters:
 
@@ -1028,11 +1557,29 @@ Name | Type | Description |
 
 ___
 
+#### succeedWhenEntityNotPresent
+
+▸ **succeedWhenEntityNotPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+
+The GameTest will succeed when the given entity is not found at the given coordinates
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The identifier of the entity to check for   |
+`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the actor    |
+
+**Returns:** *void*
+
+
+___
+
 #### succeedWhenEntityPresent
 
 ▸ **succeedWhenEntityPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
 
-The GameTest will succeed when the specified entity is found at the specified coordinates
+The GameTest will succeed when the given entity is found at the given coordinates
 
 ##### Parameters:
 
@@ -1160,7 +1707,7 @@ Name | Type | Description |
 
 #### addEventListener
 
-▸ **addEventListener**(`event`: [*WorldEvent*](#worldevent), `func`: () => *void*): *void*
+▸ **addEventListener**(`event`: [*WorldEvent*](#worldevent), `func`: (`entity`: [*Entity*](#interfacesentity)) => *void*): *void*
 
 Registers an event listener for entity events Supported
 
@@ -1169,7 +1716,7 @@ Registers an event listener for entity events Supported
 Name | Type | Description |
 :------ | :------ | :------ |
 `event` | [*WorldEvent*](#worldevent) | - |
-`func` | () => *void* |  Function to run when the event is triggered    |
+`func` | (`entity`: [*Entity*](#interfacesentity)) => *void* |  Function to run when the event is triggered    |
 
 **Returns:** *void*
 
@@ -1186,8 +1733,36 @@ Gets the current dimension
 
 
 
-## Type aliases
+<a name="interfacesworldlocation"></a>
 
-### WorldEvent
+## Interface: WorldLocation
+
+
+<a name="interfacesworldlocationclass"></a>
+
+## Interface: WorldLocationClass
+
+### Constructors
+
+#### constructor
+
+\+ **new Location**(`x`: *number*, `y`: *number*, `z`: *number*): [*WorldLocation*](#interfacesworldlocation)
+
+Creates a location
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`x` | *number* |
+`y` | *number* |
+`z` | *number* |
+
+**Returns:** [*WorldLocation*](#interfacesworldlocation)
+
+
+# Type aliases
+
+## WorldEvent
 
 Ƭ **WorldEvent**: "*onEntityCreated*" \| "*onEntityDefinitionTriggered*"
