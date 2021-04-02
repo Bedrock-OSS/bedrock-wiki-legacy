@@ -200,3 +200,19 @@ Heres an example file in the BP
   }
 }
 ```
+
+Note: You can also spawn custom spawn egg items using the **minecraft:spawn_entity** component by setting "spawn_item":
+to be your entity's id and an affix of **_spawn_egg** and it will look something like this.
+
+```jsonc
+{
+    "minecraft:spawn_entity": [
+        {
+            "min_wait_time": 0,
+            "max_wait_time": 0,
+            "spawn_item": "prefix:custom_zombie_spawn_egg",
+            "single_use": true
+        }
+    ]
+}
+```
