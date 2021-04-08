@@ -85,11 +85,11 @@ Categories are used internally by the engine to decide how each sound is played.
 
 ### min_distance
 
-WIP
+The minimum distance **away** the source of the sound that the client needs to be within to hear. Must be a float (1.0) or the argument will be ignored.
 
 ### max_distance
 
-WIP
+The maximum distance **to** the source of the sound that the client needs to be within to hear. Must be a float (1.0) or the argument will be ignored.
 
 ## Sound definitions
 
@@ -130,7 +130,7 @@ Here is a more realistic example containing these options:
 ```json
 "block.beehive.drip": {
     "category": "block",
-    "max_distance": 8,
+    "max_distance": 8.0,
     "sounds": [
         {
             "name": "sounds/block/beehive/drip1",
