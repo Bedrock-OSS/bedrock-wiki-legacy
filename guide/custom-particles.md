@@ -71,7 +71,7 @@ File structure:
 
 ![](/assets/images/guide/custom_particles_5.png){:height="100px" width="100px" .pixelated}
 
-That is the texture I'm going to use, it's size is 16*16. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a 8*8. The upper row (*starting/top left corner at at 0, 0*) is the flipbook texture for "tut:curvy_particle" and the bottom row (*top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
+That is the texture I'm going to use, it's size is 16×16. (`RP/particles/tut_particles.png`). As you can see, it has 4 different textures in it, each of them being a 8×8. The upper row (*starting/top left corner at at 0, 0*) is the flipbook texture for "tut:curvy_particle" and the bottom row (*top left corner at/starting at 0, 8*). We'll define this in the "billboard_texture" component.
 
 `RP/particles/curvy_particle.json`
 ```jsonc
@@ -138,7 +138,7 @@ The components are quite complicated here, but they're explained well on the [Pa
 
 - "texture_width" and "texture_height" defines the size of the image file itself.
 - "base_UV" in "flipbook" defines the top-left corner of the particle texture. For this particle it's at 0, 0, which is the upper left corner of the image itself. For the second particle, "tut:pink_hit", "base_UV" will be at 0, 8, which is 8 pixels lower then the first location.
-- "size_UV" defines the size of the particle's texture(8*8) on the image file(which is 16*16).
+- "size_UV" defines the size of the particle's texture (8×8) on the image file (which is 16×16).
 - "step_UV" is how far the flipbook needs to step in order to get the next particle texture. In this case it's 8, 0, which is 8 pixels to the right.
 - "frames_per_second" is quite self-explainable. "max_frame" is the total number of frames for the particle.
 
