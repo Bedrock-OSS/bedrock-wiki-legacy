@@ -185,6 +185,13 @@ GameTest.register("DoorTests", "four_villagers_one_door", (test) => {
 
 ## Namespace: "GameTest"
 
+### Variables
+
+#### Tags
+
+• `Const` **Tags**: [*Tags*](#interfacestags)
+
+
 ### Functions
 
 #### register
@@ -213,7 +220,7 @@ Name | Type | Description |
 
 #### BlockLocation
 
-• `Const` **BlockLocation**: [*BlockPositionClass*](#interfacesblockpositionclass)
+• `Const` **BlockLocation**: [*BlockLocationClass*](#interfacesblocklocationclass)
 
 
 ___
@@ -232,44 +239,10 @@ ___
 
 ___
 
-#### Commands
-
-• `Const` **Commands**: [*Commands*](#interfacescommands)
-
-
-___
-
-#### Effects
-
-• `Const` **Effects**: [*Effects*](#interfaceseffects)
-
-
-___
-
 #### ItemStack
 
 • `Const` **ItemStack**: [*ItemStackClass*](#interfacesitemstackclass)
 
-
-___
-
-#### Items
-
-• `Const` **Items**: [*Items*](#interfacesitems)
-
-
-___
-
-#### Location
-
-• `Const` **Location**: [*WorldLocationClass*](#interfacesworldlocationclass)
-
-
-___
-
-#### World
-
-• `Const` **World**: [*World*](#interfacesworld)
 
 
 # Interfaces
@@ -294,31 +267,31 @@ Name | Type |
 
 
 
-<a name="interfacesblockpos"></a>
+<a name="interfacesblocklocation"></a>
 
-## Interface: BlockPos
+## Interface: BlockLocation
 
 ### Methods
 
 #### above
 
-▸ **above**(): [*BlockPos*](#interfacesblockpos)
+▸ **above**(): [*BlockLocation*](#interfacesblocklocation)
 
 Returns the block position it was called on but increases the y coordinate by 1
 
-**Returns:** [*BlockPos*](#interfacesblockpos)
+**Returns:** [*BlockLocation*](#interfacesblocklocation)
 
 
 
-<a name="interfacesblockpositionclass"></a>
+<a name="interfacesblocklocationclass"></a>
 
-## Interface: BlockPositionClass
+## Interface: BlockLocationClass
 
 ### Constructors
 
 #### constructor
 
-\+ **new BlockPosition**(`x`: *number*, `y`: *number*, `z`: *number*): [*BlockPos*](#interfacesblockpos)
+\+ **new BlockLocation**(`x`: *number*, `y`: *number*, `z`: *number*): [*BlockLocation*](#interfacesblocklocation)
 
 Creates a block position
 
@@ -330,7 +303,7 @@ Name | Type |
 `y` | *number* |
 `z` | *number* |
 
-**Returns:** [*BlockPos*](#interfacesblockpos)
+**Returns:** [*BlockLocation*](#interfacesblocklocation)
 
 
 
@@ -374,7 +347,6 @@ Contains a method for every block state. Every method is in camelCase. Example:
 ▸ **topSlotBit**(data: boolean): [*State*](#interfacesstate)
 
 
-
 <a name="interfacescommands"></a>
 
 ## Interface: Commands
@@ -410,22 +382,22 @@ Name | Type | Description |
 
 #### getAmplifier
 
-▸ **getAmplifier**(): *number*
+▸ **getAmplifier**(): *any*
 
 Gets the effect's amplifier level
 
-**Returns:** *number*
+**Returns:** *any*
 
 
 ___
 
 #### getDuration
 
-▸ **getDuration**(): *number*
+▸ **getDuration**(): *any*
 
 Gets the effect's remaining duration in ticks
 
-**Returns:** *number*
+**Returns:** *any*
 
 
 
@@ -933,6 +905,248 @@ Name | Type |
 
 ### Methods
 
+#### assertEntityData
+
+▸ **assertEntityData**(`position`: [*BlockLocation*](#interfacesblocklocation), `id`: *string*, `func`: (`entity`: [*Entity*](#interfacesentity)) => *void*): *void*
+
+Asserts that the given condition is true for all entities of the given type at the given location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  Position of the entity to test   |
+`id` | *string* |  Identifier of the entity to test   |
+`func` | (`entity`: [*Entity*](#interfacesentity)) => *void* |     |
+
+**Returns:** *void*
+
+
+___
+
+#### assertEntityHasArmor
+
+▸ **assertEntityHasArmor**(`id`: *string*, `slot`: *number*, `item`: *string*, `data`: *number*, `position`: [*BlockLocation*](#interfacesblocklocation), `bool`: *boolean*): *void*
+
+Asserts an error when the armor is found on the entity at the given coordinates
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The identifier of the entity to check for the armor on   |
+`slot` | *number* |  The slot of the entity to test for the item   |
+`item` | *string* |  The item to test for in the given slot   |
+`data` | *number* |  The data value of the item   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position of the entity to test for the armor   |
+`bool` | *boolean* |  Unknown function of parameter...    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertEntityHasComponent
+
+▸ **assertEntityHasComponent**(`id`: *string*, `component`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation), `bool`: *boolean*): *void*
+
+Asserts an error when the given entity has the component
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The identifier of the entity to test   |
+`component` | *string* |  The name of the component to test for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position of the entity to test   |
+`bool` | *boolean* |  Unknown function of parameter...    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertEntityInstancePresent
+
+▸ **assertEntityInstancePresent**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
+
+Asserts an error when the given entity is found at the given coordinates
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The identifier of the entity to check for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the actor    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertEntityNotTouching
+
+▸ **assertEntityNotTouching**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
+
+Asserts that there is no entity of the given type at the given position
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The entity to test for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position of the entity to test    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertEntityTouching
+
+▸ **assertEntityTouching**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
+
+Asserts that there is an entity of the given type at the given position
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The entity to test for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position of the entity to test    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertIsWaterLogged
+
+▸ **assertIsWaterLogged**(`position`: [*BlockLocation*](#interfacesblocklocation), `isWaterLoggged`: *boolean*): *void*
+
+Asserts that the block at the given location is waterlogged
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  Position of the block to test   |
+`isWaterLoggged` | *boolean* |  Whether to test if the block is or isn't waterlogged    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertItemEntityCountIs
+
+▸ **assertItemEntityCountIs**(`item`: [*Item*](#interfacesitem), `position`: [*BlockLocation*](#interfacesblocklocation), `searchDistance`: *number*, `count`: *number*): *void*
+
+Asserts that the entity item count in the given search area matches the expected count
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`item` | [*Item*](#interfacesitem) |  The item type to test for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position of the item to test for   |
+`searchDistance` | *number* |  The distance to search for the item   |
+`count` | *number* |  The amount of items to expect in the stack    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertRedstonePower
+
+▸ **assertRedstonePower**(`position`: [*BlockLocation*](#interfacesblocklocation), `power`: *number*): *void*
+
+Asserts the redstone power level at the given location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  Position of the block to test   |
+`power` | *number* |  The redstone power level to test for    |
+
+**Returns:** *void*
+
+
+___
+
+#### print
+
+▸ **print**(`text`: *string*): *void*
+
+Prints the given text to the chat
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`text` | *string* |  The text to print out    |
+
+**Returns:** *void*
+
+
+___
+
+#### pulseRedstone
+
+▸ **pulseRedstone**(`position`: [*BlockLocation*](#interfacesblocklocation), `duration`: *number*): *void*
+
+Creates a Redstone block at the given position and destroys it after "duration" ticks
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  Position to place the redstone block   |
+`duration` | *number* |  The time until the redstone block is destroyed    |
+
+**Returns:** *void*
+
+
+___
+
+#### spawn
+
+▸ **spawn**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): [*Entity*](#interfacesentity)
+
+Spawns the specified entity at the specified coordinates
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The identifier of the entity to spawn   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to spawn the entity    |
+
+**Returns:** [*Entity*](#interfacesentity)
+
+
+___
+
+#### spawnItem
+
+▸ **spawnItem**(`item`: [*ItemStack*](#interfacesitemstack), `location`: [*WorldLocation*](#interfacesworldlocation)): [*Item*](#interfacesitem)
+
+Spawns an item at the given location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`item` | [*ItemStack*](#interfacesitemstack) |  The item stack to spawn   |
+`location` | [*WorldLocation*](#interfacesworldlocation) | - |
+
+**Returns:** [*Item*](#interfacesitem)
+
+
+___
+
 #### thenExecute
 
 ▸ **thenExecute**(`func`: () => *void*): [*Sequence*](#interfacessequence)
@@ -958,10 +1172,10 @@ Executes the function after the time given when called
 
 ##### Parameters:
 
-Name | Type |
-:------ | :------ |
-`time` | *number* |
-`func` | () => *void* |
+Name | Type | Description |
+:------ | :------ | :------ |
+`time` | *number* |  The amount of time until the function is called   |
+`func` | () => *void* |     |
 
 **Returns:** [*Sequence*](#interfacessequence)
 
@@ -985,9 +1199,9 @@ Name | Type | Description |
 
 ___
 
-#### thenSucced
+#### thenSucceed
 
-▸ **thenSucced**(): *void*
+▸ **thenSucceed**(): *void*
 
 Causes the GameTest to succeed
 
@@ -1011,10 +1225,61 @@ Name | Type |
 **Returns:** [*Sequence*](#interfacessequence)
 
 
+___
+
+#### thenWaitWithDelay
+
+▸ **thenWaitWithDelay**(`delayTicks`: *number*, `func`: () => *void*): [*Sequence*](#interfacessequence)
+
+Causes the sequence to wait until the function asserts an error and the delay has passed
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`delayTicks` | *number* |  The amount of ticks to wait   |
+`func` | () => *void* |     |
+
+**Returns:** [*Sequence*](#interfacessequence)
+
+
 
 <a name="interfacesstate"></a>
 
 ## Interface: State
+
+
+<a name="interfacestags"></a>
+
+## Interface: Tags
+
+### Properties
+
+#### suiteAll
+
+• **suiteAll**: *string*
+
+
+___
+
+#### suiteBroken
+
+• **suiteBroken**: *string*
+
+
+___
+
+#### suiteDebug
+
+• **suiteDebug**: *string*
+
+
+___
+
+#### suiteDefault
+
+• **suiteDefault**: *string*
+
 
 
 <a name="interfacestest"></a>
@@ -1025,7 +1290,7 @@ Name | Type |
 
 #### assertBlockNotPresent
 
-▸ **assertBlockNotPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertBlockNotPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Asserts an error when the given block is not found at the given coordinates
 
@@ -1034,7 +1299,7 @@ Asserts an error when the given block is not found at the given coordinates
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | [*Block*](#interfacesblock) |  The block to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the block    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the block    |
 
 **Returns:** *void*
 
@@ -1043,7 +1308,7 @@ ___
 
 #### assertBlockPresent
 
-▸ **assertBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Asserts an error when the specified block is found at the specified coordinates
 
@@ -1052,7 +1317,7 @@ Asserts an error when the specified block is found at the specified coordinates
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | [*Block*](#interfacesblock) |  The block to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the block    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the block    |
 
 **Returns:** *void*
 
@@ -1061,7 +1326,7 @@ ___
 
 #### assertBlockState
 
-▸ **assertBlockState**(`state`: *string*, `data`: *string* \| *number*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertBlockState**(`state`: *string*, `stateValue`: *string* \| *number*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Asserts an error when the given block at the given coordinates has the block state
 
@@ -1070,8 +1335,8 @@ Asserts an error when the given block at the given coordinates has the block sta
 Name | Type | Description |
 :------ | :------ | :------ |
 `state` | *string* |  The block state to test for   |
-`data` | *string* \| *number* |  The value of the state to test for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the block    |
+`stateValue` | *string* \| *number* |  The value of the state to test for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the block    |
 
 **Returns:** *void*
 
@@ -1080,7 +1345,7 @@ ___
 
 #### assertContainerContains
 
-▸ **assertContainerContains**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertContainerContains**(`itemStack`: [*ItemStack*](#interfacesitemstack), `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Asserts an error if there is a container with the given item at the given coordinates
 
@@ -1088,8 +1353,8 @@ Asserts an error if there is a container with the given item at the given coordi
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`id` | *string* |  The item to test for in the container   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position of the container to check    |
+`itemStack` | [*ItemStack*](#interfacesitemstack) |  The item stack to test for in the container   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position of the container to check    |
 
 **Returns:** *void*
 
@@ -1098,7 +1363,7 @@ ___
 
 #### assertContainerEmpty
 
-▸ **assertContainerEmpty**(`position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertContainerEmpty**(`position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Asserts an error if there is an empty container at the given coordinates
 
@@ -1106,86 +1371,7 @@ Asserts an error if there is an empty container at the given coordinates
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position of the container to check    |
-
-**Returns:** *void*
-
-
-___
-
-#### assertEntityData
-
-▸ **assertEntityData**(`position`: [*BlockPos*](#interfacesblockpos), `id`: *string*, `func`: (`entity`: [*Entity*](#interfacesentity)) => *void*): *void*
-
-Asserts that the given condition is true for all entities of the given type at the given location
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`position` | [*BlockPos*](#interfacesblockpos) |  Position of the entity to test   |
-`id` | *string* |  Identifier of the entity to test   |
-`func` | (`entity`: [*Entity*](#interfacesentity)) => *void* |     |
-
-**Returns:** *void*
-
-
-___
-
-#### assertEntityHasArmor
-
-▸ **assertEntityHasArmor**(`id`: *string*, `slot`: *number*, `item`: *string*, `data`: *number*, `position`: [*BlockPos*](#interfacesblockpos), `bool`: *boolean*): *void*
-
-Asserts an error when the armor is found on the entity at the given coordinates
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`id` | *string* |  The identifier of the entity to check for the armor on   |
-`slot` | *number* |  The slot of the entity to test for the item   |
-`item` | *string* |  The item to test for in the given slot   |
-`data` | *number* |  The data value of the item   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The position of the entity to test for the armor   |
-`bool` | *boolean* |  Unknown function of parameter...    |
-
-**Returns:** *void*
-
-
-___
-
-#### assertEntityHasComponent
-
-▸ **assertEntityHasComponent**(`id`: *string*, `component`: *string*, `position`: [*BlockPos*](#interfacesblockpos), `bool`: *boolean*): *void*
-
-Asserts an error when the given entity has the component
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`id` | *string* |  The identifier of the entity to test   |
-`component` | *string* |  The name of the component to test for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The position of the entity to test   |
-`bool` | *boolean* |  Unknown function of parameter...    |
-
-**Returns:** *void*
-
-
-___
-
-#### assertEntityInstancePresent
-
-▸ **assertEntityInstancePresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
-
-Asserts an error when the given entity is found at the given coordinates
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`id` | *string* |  The identifier of the entity to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the actor    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position of the container to check    |
 
 **Returns:** *void*
 
@@ -1194,7 +1380,7 @@ ___
 
 #### assertEntityNotPresent
 
-▸ **assertEntityNotPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **assertEntityNotPresent**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Asserts an error when the given entity is not found at the given coordinates
 
@@ -1203,34 +1389,16 @@ Asserts an error when the given entity is not found at the given coordinates
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | *string* |  The identifier of the entity to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the actor    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the actor    |
 
 **Returns:** *void*
 
 
 ___
 
-#### assertEntityPresent
+#### assertEntityNotPresentInArea
 
-▸ **assertEntityPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
-
-Asserts an error when the given entity is found at the given coordinates
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`id` | *string* |  The identifier of the entity to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the actor    |
-
-**Returns:** *void*
-
-
-___
-
-#### assertEntityPresentInArea
-
-▸ **assertEntityPresentInArea**(`id`: *string*): *void*
+▸ **assertEntityNotPresentInArea**(`id`: *string*): *void*
 
 Throws an Error if an entity matching the given identifier does not exist in the test region
 
@@ -1245,18 +1413,54 @@ Name | Type | Description |
 
 ___
 
-#### assertIsWaterLogged
+#### assertEntityPresent
 
-▸ **assertIsWaterLogged**(`position`: [*BlockPos*](#interfacesblockpos), `isWaterLoggged`: *boolean*): *void*
+▸ **assertEntityPresent**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
-Asserts that the block at the given location is waterlogged
+Asserts an error when the given entity is found at the given coordinates
 
 ##### Parameters:
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`position` | [*BlockPos*](#interfacesblockpos) |  Position of the block to test   |
-`isWaterLoggged` | *boolean* |  Whether to test if the block is or isn't waterlogged    |
+`id` | *string* |  The identifier of the entity to check for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the actor    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertEntityPresentInArea
+
+▸ **assertEntityPresentInArea**(`id`: *string*): *void*
+
+Throws an Error if an entity matching the given identifier exists in the test region
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The identifer of the entity to test for    |
+
+**Returns:** *void*
+
+
+___
+
+#### assertItemEntityNotPresent
+
+▸ **assertItemEntityNotPresent**(`item`: [*Item*](#interfacesitem), `position`: [*BlockLocation*](#interfacesblocklocation), `amount`: *number*): *void*
+
+Asserts an error when the given item is not found at the given coordinates
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`item` | [*Item*](#interfacesitem) | - |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position to test for the item stack   |
+`amount` | *number* |  The amount of items that should be in the stack    |
 
 **Returns:** *void*
 
@@ -1265,16 +1469,16 @@ ___
 
 #### assertItemEntityPresent
 
-▸ **assertItemEntityPresent**(`itemStack`: [*ItemStack*](#interfacesitemstack), `position`: [*BlockPos*](#interfacesblockpos), `amount`: *number*): *void*
+▸ **assertItemEntityPresent**(`item`: [*Item*](#interfacesitem), `position`: [*BlockLocation*](#interfacesblocklocation), `amount`: *number*): *void*
 
-Asserts an error when the given item stack is not found at the given coordinates
+Asserts an error when the given item stack is found at the given coordinates
 
 ##### Parameters:
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`itemStack` | [*ItemStack*](#interfacesitemstack) |  The item stack to test for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The position to test for the item stack   |
+`item` | [*Item*](#interfacesitem) | - |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position to test for the item stack   |
 `amount` | *number* |  The amount of items that should be in the stack    |
 
 **Returns:** *void*
@@ -1282,18 +1486,17 @@ Name | Type | Description |
 
 ___
 
-#### assertRedstonePower
+#### fail
 
-▸ **assertRedstonePower**(`position`: [*BlockPos*](#interfacesblockpos), `power`: *number*): *void*
+▸ **fail**(`errorMessage`: *string*): *void*
 
-Asserts the redstone power level at the given location
+Causes the GameTest to fail
 
 ##### Parameters:
 
-Name | Type | Description |
-:------ | :------ | :------ |
-`position` | [*BlockPos*](#interfacesblockpos) |  Position of the block to test   |
-`power` | *number* |  The redstone power level to test for    |
+Name | Type |
+:------ | :------ |
+`errorMessage` | *string* |
 
 **Returns:** *void*
 
@@ -1330,7 +1533,7 @@ ___
 
 #### pressButton
 
-▸ **pressButton**(`position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **pressButton**(`position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Presses a button at the specified coordinates if there is one there
 
@@ -1338,24 +1541,7 @@ Presses a button at the specified coordinates if there is one there
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to press the button    |
-
-**Returns:** *void*
-
-
-___
-
-#### print
-
-▸ **print**(`text`: *string*): *void*
-
-Prints the given text to the chat
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`text` | *string* |  The text to print out    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to press the button    |
 
 **Returns:** *void*
 
@@ -1364,7 +1550,7 @@ ___
 
 #### pullLever
 
-▸ **pullLever**(`position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **pullLever**(`position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Pulls a lever at the given coordinates if there is one there
 
@@ -1372,7 +1558,7 @@ Pulls a lever at the given coordinates if there is one there
 
 Name | Type | Description |
 :------ | :------ | :------ |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to pull the lever    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to pull the lever    |
 
 **Returns:** *void*
 
@@ -1397,9 +1583,25 @@ Name | Type | Description |
 
 ___
 
+#### runAtTickTime
+
+▸ **runAtTickTime**(`tick`: *number*, `func`: () => *void*): *any*
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`tick` | *number* |
+`func` | () => *void* |
+
+**Returns:** *any*
+
+
+___
+
 #### setBlock
 
-▸ **setBlock**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **setBlock**(`id`: [*Block*](#interfacesblock), `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 Places the specified block at the specified coordinates
 
@@ -1408,45 +1610,9 @@ Places the specified block at the specified coordinates
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | [*Block*](#interfacesblock) |  The block to place   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to place the block    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to place the block    |
 
 **Returns:** *void*
-
-
-___
-
-#### spawn
-
-▸ **spawn**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): [*Entity*](#interfacesentity)
-
-Spawns the given entity at the given coordinates
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`id` | *string* |  The identifier of the entity to spawn   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to spawn the entity    |
-
-**Returns:** [*Entity*](#interfacesentity)
-
-
-___
-
-#### spawnItem
-
-▸ **spawnItem**(`item`: [*ItemStack*](#interfacesitemstack), `location`: [*WorldLocation*](#interfacesworldlocation)): [*Item*](#interfacesitem)
-
-Spawns an item at the given location
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`item` | [*ItemStack*](#interfacesitemstack) |  The item stack to spawn   |
-`location` | [*WorldLocation*](#interfacesworldlocation) | - |
-
-**Returns:** [*Item*](#interfacesitem)
 
 
 ___
@@ -1527,21 +1693,7 @@ ___
 
 #### succeedWhenBlockPresent
 
-▸ **succeedWhenBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
-
-The GameTest will succeed when the specified block is found at the specified coordinates
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`id` | [*Block*](#interfacesblock) |  The block to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) | - |
-
-**Returns:** *void*
-
-
-▸ **succeedWhenBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **succeedWhenBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 The GameTest will succeed when the given block is found at the given coordinates
 
@@ -1550,7 +1702,41 @@ The GameTest will succeed when the given block is found at the given coordinates
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | [*Block*](#interfacesblock) |  The block to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the block    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the block    |
+
+**Returns:** *void*
+
+
+▸ **succeedWhenBlockPresent**(`id`: [*Block*](#interfacesblock), `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
+
+The GameTest will succeed when the specified block is found at the specified coordinates
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | [*Block*](#interfacesblock) |  The block to check for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) | - |
+
+**Returns:** *void*
+
+
+___
+
+#### succeedWhenEntityHasComponent
+
+▸ **succeedWhenEntityHasComponent**(`id`: *string*, `component`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation), `hasComponent`: *boolean*): *void*
+
+The GameTest will succeed when the given entity has the given component
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`id` | *string* |  The entity to test for   |
+`component` | *string* |  The component identififer to test for   |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The position of the entity to test for   |
+`hasComponent` | *boolean* |  Whether the entity should or shouldn't have the component    |
 
 **Returns:** *void*
 
@@ -1559,7 +1745,7 @@ ___
 
 #### succeedWhenEntityNotPresent
 
-▸ **succeedWhenEntityNotPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **succeedWhenEntityNotPresent**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 The GameTest will succeed when the given entity is not found at the given coordinates
 
@@ -1568,7 +1754,7 @@ The GameTest will succeed when the given entity is not found at the given coordi
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | *string* |  The identifier of the entity to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the actor    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the actor    |
 
 **Returns:** *void*
 
@@ -1577,7 +1763,7 @@ ___
 
 #### succeedWhenEntityPresent
 
-▸ **succeedWhenEntityPresent**(`id`: *string*, `position`: [*BlockPos*](#interfacesblockpos)): *void*
+▸ **succeedWhenEntityPresent**(`id`: *string*, `position`: [*BlockLocation*](#interfacesblocklocation)): *void*
 
 The GameTest will succeed when the given entity is found at the given coordinates
 
@@ -1586,7 +1772,7 @@ The GameTest will succeed when the given entity is found at the given coordinate
 Name | Type | Description |
 :------ | :------ | :------ |
 `id` | *string* |  The identifier of the entity to check for   |
-`position` | [*BlockPos*](#interfacesblockpos) |  The relative position to test for the actor    |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  The relative position to test for the actor    |
 
 **Returns:** *void*
 
@@ -1609,6 +1795,23 @@ Sets the time of day when the GameTest is run. The time will be changed to the t
 Name | Type | Description |
 :------ | :------ | :------ |
 `time` | *night* \| *day* |  The time that the GameTest must take place in    |
+
+**Returns:** [*TestRunner*](#interfacestestrunner)
+
+
+___
+
+#### maxAttempts
+
+▸ **maxAttempts**(`attempts`: *number*): [*TestRunner*](#interfacestestrunner)
+
+Sets the maximum number of times a test will try to rerun if it fails
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`attempts` | *number* |
 
 **Returns:** [*TestRunner*](#interfacestestrunner)
 
@@ -1643,6 +1846,38 @@ Sets the padding between GameTests being run
 Name | Type | Description |
 :------ | :------ | :------ |
 `time` | *number* |  The duration of the padding    |
+
+**Returns:** [*TestRunner*](#interfacestestrunner)
+
+
+___
+
+#### required
+
+▸ **required**(`isRequired`: *boolean*): [*TestRunner*](#interfacestestrunner)
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`isRequired` | *boolean* |
+
+**Returns:** [*TestRunner*](#interfacestestrunner)
+
+
+___
+
+#### requiredSuccessfulAttempts
+
+▸ **requiredSuccessfulAttempts**(`attempts`: *number*): [*TestRunner*](#interfacestestrunner)
+
+Sets the number of successful test runs to be considered successful
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`attempts` | *number* |
 
 **Returns:** [*TestRunner*](#interfacestestrunner)
 
