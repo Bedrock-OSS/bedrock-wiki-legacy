@@ -591,7 +591,7 @@ Following the above example with the actionbar, you might logically assume that 
 }
 ```
 
-You will need to add another binding object to the text to control its visibility. Recall that `#visible` controls visiblity of the object directly through bindings. The following example will not render the title string `hello world` but will render all other strings.
+You will need to add another binding object to the text to control its visibility. Recall that `#visible` controls visiblity of the object directly through bindings. The following example will not render the title string `hello world` but will render all other strings. Try typing ``/title @s title hello world`` to see it in-game.
 
 {% include filepath.html path="vanilla/ui/hud_screen.json"%}
 ```jsonc
