@@ -75,7 +75,7 @@ Let's break up the code now.
 
 - "`name`" is the name of your behavior pack. "description" will show up under it in-game.
 
-- The "`uuid`" field is a very important one. A UUID (*Universally Unique IDentifier*) identifies your pack for other programs (in this case, Minecraft) to read. NEVER USE THE SAME UUID TWICE. You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like *Bridge*, *AJG* and *CoreCoder* generate UUIDS automatically. Every manifest file uses 2 different UUIDs.
+- The "`uuid`" field is a very important one. A UUID (*Universally Unique IDentifier*) identifies your pack for other programs (in this case, Minecraft) to read. NEVER USE THE SAME UUID TWICE. You can generate your own UUIDs [here](https://www.uuidgenerator.net/version4) or, if you use VSC, you can install [this](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator) extension. Many other tools like *bridge.*, *AJG* and *CoreCoder* generate UUIDS automatically. Every manifest file uses 2 different UUIDs.
 
 - "`version`" defines the version of your addon. When you import an addon with a newer version on a device where an older version was installed, the newer version will overwrite the older one. You don't need to change the version if you have the addon in `development_*_packs` folders and only use them on private worlds.
 
