@@ -31,12 +31,12 @@ You can change the world's generation via Add-ons. The needed folders in the Beh
 `structures`, `features`, `feature_rules` and `biomes`.  It's quite self-explanatory: you can store your .mcstructure files from (or for) structure blocks in `structures`, biome files in `biomes`, terrain features, like ores, in `features` and the rules for their generation in `feature_rules`. Let's go over adding a custom biome first.
 
 
-*Note: it might be easier to create biomes using Bridge, a Visual software for Add-on creation (also linked in Links and Contact), since the official Documentation is rather incomplete. You can also generate all example files of vanilla biomes, features and feature rules for reference, like shown here:*
+*Note: it might be easier to create biomes using bridge., a Visual software for Add-on creation (also linked in Links and Contact), since the official Documentation is rather incomplete. You can also generate all example files of vanilla biomes, features and feature rules for reference, like shown here:*
 
 ![](/assets/images/guide/gen_coal_ore.png)
-*Generating a coal_ore feature using Bridge*
+*Generating a coal_ore feature using bridge.*
 
-However, Bridge is not required.
+However, bridge. is not required.
 
 ----
 
@@ -104,7 +104,7 @@ BP/biomes/cold_biome.json
 - `downfall` is how often it'll be raining or snowing. 0.0 is for absolutely no rain (like a desert) and 1.0  should mean constant rain.
 - `temperature` is used to define things like water freezing and rain turning into snow.
 
-**You can generate default biome files for reference using Bridge**
+**You can generate default biome files for reference using bridge.**
 - `overworld_surface` controls blocks generated.
 - `floor_depth` is how deep down lakes and rivers go in blocks.
 - `sea_floor_material` defines the material to be used when generating the river and lake's floor.
@@ -152,11 +152,11 @@ Now, it's worthwhile to mention that the easiest way to generate Custom Structur
 
 Let's make our `tut:blocky` custom block generate as an ore for the tutorial's sake. I'll do it the easy way, like this:
 
-1. Open *Bridge*, choose your Add-on.
+1. Open *bridge.*, choose your Add-on.
 1. *Add new file>features>diamond_ore and Add new file>feature_rules>diamond_ore*.
 1. Now I'll save the files and open them in my Code Editor and make the necessary modifications.
 
-*You could've easily just written the files from scratch or copied them from somewhere without using Bridge in case you are having trouble installing it. **One place to find the Vanilla Files are the [Example Packs](https://www.minecraft.net/en-us/addons), another, a more complete one is [Bridge's repository](https://github.com/bridge-core/bridge./tree/master/static/vanilla)**.*
+*You could've easily just written the files from scratch or copied them from somewhere without using bridge. in case you are having trouble installing it. **One place to find the Vanilla Files are the [Example Packs](https://www.minecraft.net/en-us/addons), another, a more complete one is [bridge.'s repository](https://github.com/bridge-core/bridge./tree/master/static/vanilla)**.*
 
 ## Features
 
@@ -359,6 +359,6 @@ ___
 **What you've done:**
 - Created you very first biome.
 - Made your very first ore generate naturally.
-- Learned to use Bridge for vanilla files generation and referencing.
+- Learned to use bridge. for vanilla files generation and referencing.
 - Learned about other Custom Generation methods.
 - Created custom Structures
