@@ -54,10 +54,10 @@ Where `x` and `y` are both integer arguments, from the following table:
 | Argument | Type                  |
 |----------|-----------------------|
 | -1       | none                  |
-| 0        | Chain armor piece     |
-| 1        | Iron armor piece      |
-| 2        | Diamond armor piece   |
-| 3        | Boots of any type     |
+| 0        | Leather armor piece     |
+| 1        | Chain armor piece      |
+| 2        | Iron armor piece   |
+| 3        | Diamond armor piece     |
 | 4        | Gold armor piece      |
 | 5        | Elytra                |
 | 6        | Turtle helmet         |
