@@ -16,7 +16,7 @@ GameTests are a new feature which allow developers to create unit tests to make 
 
 It is recommended that your GameTests go in the `BP/scripts/gametests` directory.
 
-[Type declaration files for the GameTest API](https://github.com/bridge-core/editor/tree/dev/data/types/gameTest)
+[Type declaration files for the GameTest API](https://github.com/bridge-core/editor/tree/dev/data/packages/minecraftBedrock/types/gameTest)
 
 <details id="toc" open markdown="block">
   <summary>
