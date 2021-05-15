@@ -317,7 +317,6 @@ Contains a method for every vanilla block. Every method is in camelCase. Example
 
 ▸ **air**(): [*Block*](#interfacesblock)
 
-
 ___
 
 #### get
@@ -364,6 +363,135 @@ Runs the given command when called
 Name | Type | Description |
 :------ | :------ | :------ |
 `command` | *string* |  The command to run (should start with a '/')    |
+
+**Returns:** *void*
+
+
+
+<a name="interfacescontainer"></a>
+
+## Interface: Container
+
+### Methods
+
+#### addItem
+
+▸ **addItem**(`itemStack`: [*ItemStack*](#interfacesitemstack)): *void*
+
+Adds the given itemStack to the first available slot of the container
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`itemStack` | [*ItemStack*](#interfacesitemstack) |
+
+**Returns:** *void*
+
+
+___
+
+#### getItem
+
+▸ **getItem**(`slot`: *number*): [*ItemStack*](#interfacesitemstack)
+
+Gets the itemStack at the given slot
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`slot` | *number* |
+
+**Returns:** [*ItemStack*](#interfacesitemstack)
+
+
+___
+
+#### relativeLocation
+
+▸ **relativeLocation**(`worldPosition`: [*BlockLocation*](#interfacesblocklocation)): *any*
+
+Transforms the coordinates of given world location to its corresponding GameTest location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`worldPosition` | [*BlockLocation*](#interfacesblocklocation) |  Position to transform    |
+
+**Returns:** *any*
+
+
+___
+
+#### setItem
+
+▸ **setItem**(`slot`: *number*, `itemStack`: [*ItemStack*](#interfacesitemstack)): *void*
+
+Adds itemStack to the container at the given slot
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`slot` | *number* |
+`itemStack` | [*ItemStack*](#interfacesitemstack) |
+
+**Returns:** *void*
+
+
+___
+
+#### swapItems
+
+▸ **swapItems**(`slot`: *number*, `otherSlot`: *number*, `otherContainer`: [*Container*](#interfacescontainer)): *void*
+
+Swaps ItemStacks between slot of the container and otherSlot of otherContainer
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`slot` | *number* |
+`otherSlot` | *number* |
+`otherContainer` | [*Container*](#interfacescontainer) |
+
+**Returns:** *void*
+
+
+___
+
+#### transferItem
+
+▸ **transferItem**(`fromSlot`: *number*, `toSlot`: *number*, `toContainer`: [*Container*](#interfacescontainer)): *void*
+
+Transfers an ItemStack from fromSlot of the container to toSlot of toContainer
+
+##### Parameters:
+
+Name | Type |
+:------ | :------ |
+`fromSlot` | *number* |
+`toSlot` | *number* |
+`toContainer` | [*Container*](#interfacescontainer) |
+
+**Returns:** *void*
+
+
+___
+
+#### worldLocation
+
+▸ **worldLocation**(`position`: [*BlockLocation*](#interfacesblocklocation)): *void*
+
+Transforms the coordinates of given GameTest location to its corresponding world location
+
+##### Parameters:
+
+Name | Type | Description |
+:------ | :------ | :------ |
+`position` | [*BlockLocation*](#interfacesblocklocation) |  Position to transform    |
 
 **Returns:** *void*
 
@@ -779,6 +907,15 @@ Kills the entity
 
 ## Interface: EntityComponent
 
+### Properties
+
+#### container
+
+• **container**: [*Container*](#interfacescontainer)
+
+The container of this component. Can only be used on the "inventory" component
+
+
 ### Methods
 
 #### getName
@@ -803,23 +940,6 @@ Leashes this entity to another given entity. This must be used on the "minecraft
 Name | Type | Description |
 :------ | :------ | :------ |
 `entity` | [*Entity*](#interfacesentity) |  The entity to leash this entity to    |
-
-**Returns:** *void*
-
-
-___
-
-#### setColor
-
-▸ **setColor**(`color`: *number*): *void*
-
-Sets the entities color value. This must be used on the "minecraft:color" component
-
-##### Parameters:
-
-Name | Type | Description |
-:------ | :------ | :------ |
-`color` | *number* |  The color value to set    |
 
 **Returns:** *void*
 
@@ -867,7 +987,6 @@ Causes this entity to detach leashes. This must be used on the "minecraft:leasha
 Contains a method for every vanilla item. Every method is in camelCase. Example:
 
 ▸ **apple**(): [*Item*](#interfaceitem)
-
 
 
 <a name="interfacesitemstack"></a>
