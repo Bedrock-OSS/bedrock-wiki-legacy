@@ -2,8 +2,8 @@
 layout: page
 title: Items
 parent: Concepts
-badge: BETA
-badge_color: red
+badge: EXPERIMENTAL
+badge_color: yellow
 ---
 
 # Items [BETA]
