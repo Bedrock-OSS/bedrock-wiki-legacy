@@ -2,11 +2,11 @@
 layout: page
 title: Items
 parent: Concepts
-badge: BETA
-badge_color: red
+badge: EXPERIMENTAL
+badge_color: yellow
 ---
 
-# Items [BETA]
+# Items [EXPERIMENTAL]
 
 <details id="toc" open markdown="block">
   <summary>
