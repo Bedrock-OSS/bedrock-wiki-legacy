@@ -17,7 +17,7 @@ badge_color: red
 {:toc}
 </details>
 
-+ Documentation on the new Entity Properties, also known as Actor Properties introduced in the 1.16.230.50 Minecraft: Bedrock Edition beta version.
++ Documentation on the new Entity Properties, also known as Actor Properties introduced in the 1.16.230.52 Minecraft: Bedrock Edition beta version.
 + Entity Properties were implemented to save data, or store values on entities efficiently without needing the use of components, or attributes (For example "minecraft:variant") in server-side of the entity (Behavior Pack), similar to Block Properties.
 
 ------------------
