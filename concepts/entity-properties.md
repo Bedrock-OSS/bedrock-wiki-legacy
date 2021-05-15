@@ -123,6 +123,47 @@ badge_color: red
 
 ------------------
 
+## Entity Aliases
++ You can define aliases for your entity to summon the entity with set entity property values through the `summon` command.
++ Entity can have various aliases with custom entity identifier to use:
+
+```json
+{
+    "format_version": "1.16.0",
+    "minecraft:entity": {
+      "description": {
+        "identifier": "entity:properties_example",
+        "is_spawnable": true,
+        "is_summonable": true,
+        "is_experimental": false,
+        "properties": {
+          "property:property_index": {
+            "client_sync": true,
+            "values": {
+              "min": 0,
+              "max": 2
+            },
+            "default": 0
+          }
+        },
+        "aliases": {
+          "entity:default_alias": {
+          },
+          "entity:first_alias": {
+            "property:property_index": 1
+          },
+          "entity:second_alias": {
+            "property:property_index": 2
+          }
+        }
+      }
+    }
+}
+```
++ Now, the entity have multiple aliases, and you can use the defined alias identifier through the `summon` command to spawn the entity with the properties set.
+
+------------------
+
 
 ## Entity Permutations
 + Entity Permutations are implemented to apply a set of components every tick if the condition met.
