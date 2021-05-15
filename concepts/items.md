@@ -6,7 +6,7 @@ badge: EXPERIMENTAL
 badge_color: yellow
 ---
 
-# Items [BETA]
+# Items [EXPERIMENTAL]
 
 <details id="toc" open markdown="block">
   <summary>
