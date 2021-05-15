@@ -40,7 +40,7 @@ badge_color: red
             }
           },
           "property:number_enum_example": {
-            "values": [0, 1, 2, 3]
+            "values": [1, 2]
           },
           "property:string_enum_example": {
             "values": ["first", "second", "third"]
@@ -60,7 +60,7 @@ badge_color: red
 
 #### `values`
 + `values` property is required, and omitting this field may cause error and fail to register the property.
-+ `values` field be evaluated as an array of enum values, or a range of a minimum and maximum value:
++ `values` field be evaluated as an array of enum values, or a range of a minimum and maximum value (Note that integer, float, and boolean enums only supports two values):
 ```json
 "property:range_example": {
     "values": {
@@ -72,7 +72,7 @@ badge_color: red
 **OR**
 ```json
 "property:enum_example": {
-    "values": [0, 1, 2, 3, 4, 5]
+    "values": [1, 2]
 }
 ```
 
