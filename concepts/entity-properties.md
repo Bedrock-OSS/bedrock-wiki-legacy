@@ -95,8 +95,34 @@ badge_color: red
 ------------------
 ## Entity Permutations
 * Entity Permutations are implemented to apply a set of components every tick if the condition met.
-* `permutations` array is inserted in the `minecraft:entity` object:
+* `permutations` array is inserted in the `minecraft:entity` object, the same level as `components`:
 ```jsonc
-
+"permutations": [
+  {
+    "condition": "query.actor_property('property:string_enum_example') == 'first'",
+    "components": {
+      "minecraft:scale": {
+        "value": 1.0
+      }
+    }
+  },
+  {
+    "condition": "query.actor_property('property:string_enum_example') == 'second'",
+    "components": {
+      "minecraft:scale": {
+        "value": 2.0
+      }
+    }
+  },
+  {
+    "condition": "query.actor_property('property:string_enum_example') == 'third'",
+    "components": {
+      "minecraft:scale": {
+        "value": 3.0
+      }
+    }
+  }
+]
 ```
+* As we can observe, if the entity property "`property:string_enum_example`" is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied on the entity. Otherwise, if the entity property "`property:string_enum_example`" is "`second`", the entity's scale is twice as it was.
 
