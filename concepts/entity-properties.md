@@ -30,19 +30,19 @@ Defining Properties:
   "description": {
     "identifier": "entity:properties_test",
     "properties": {
-      "property:number_range_test": {
+      "property:number_range_example": {
         "values": {
           "min": 0,
           "max": 100
         }
       },
-      "property:number_enum_test": }
+      "property:number_enum_example": {
         "values": [0, 1, 2, 3]
       },
-      "property:string_enum_test": {
+      "property:string_enum_example": {
         "values": ["first", "second", "third"]
       },
-      "property:boolean_enum_test": {
+      "property:boolean_enum_example": {
         "values": [true, false]
       }
     }
