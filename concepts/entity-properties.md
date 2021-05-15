@@ -18,12 +18,13 @@ badge_color: red
 </details>
 
 * Documentation on the new Entity Properties, also known as Actor Properties introduced in the 1.16.230.50 Minecraft: Bedrock Edition beta version.
-* Entity Properties were implemented to save data on entities efficiently without needing the use of components, or attributes (For example "minecraft:variant").
+* Entity Properties were implemented to save data, or store values on entities efficiently without needing the use of components, or attributes (For example "minecraft:variant") in server-side of the entity (Behavior Pack).
 
 ## Entity Properties Definitions
 
-Defining Properties:
+### Defining Properties on Entities
 
+* Entity Properties Definition:
 ```jsonc
 {
   "minecraft:entity": {
@@ -50,4 +51,26 @@ Defining Properties:
 }
 ```
 
+### Entity Properties Optional Fields
+#### `default`
+* You can set the default value of the entity property (By default, the first value of the enum array index), through the <code>default</code> field inside the defined property object:
+```jsonc
+"property:default_value_example": {
+  "values": [true, false],
+  "default": false
+}
+```
+* As you can observe, the default property is set to `false` instead of `true` when the entity is spawned in the world.
+
+#### `client_sync`
+* To sync through the Resource Pack (client-side), <code>client_sync</code> field can be used to allow the Client Entity access the Entity Properties. By default, the value is set to `false`.
+```jsonc
+"property:client_sync_example": {
+  "values": {
+    "min": 0,
+    "max": 20
+  },
+  "client_sync": true
+}
+```
 
