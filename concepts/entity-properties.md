@@ -26,7 +26,7 @@ badge_color: red
 
 ### Defining Properties on Entities
 
-* Entity Properties Definition:
++ Entity Properties Definition:
 ```json
 {
   "minecraft:entity": {
@@ -59,8 +59,8 @@ badge_color: red
 ### Entity Properties Object Fields
 
 #### `values`
-* `values` property is required, and omitting this field may cause error and fail to register the property.
-* `values` field be evaluated as an array of enum values, or a range of a minimum and maximum value:
++ `values` property is required, and omitting this field may cause error and fail to register the property.
++ `values` field be evaluated as an array of enum values, or a range of a minimum and maximum value:
 ```json
 "property:range_example": {
   "values": {
@@ -78,18 +78,18 @@ badge_color: red
 
 
 #### `default`
-* You can set the default value of the entity property (By default, the first value of the enum array index), through the <code>default</code> field inside the defined property object:
++ You can set the default value of the entity property (By default, the first value of the enum array index), through the <code>default</code> field inside the defined property object:
 ```json
 "property:default_value_example": {
   "values": [true, false],
   "default": false
 }
 ```
-* As you can observe, the default property is set to `false` instead of `true` when the entity is spawned in the world.
++ As you can observe, the default property is set to `false` instead of `true` when the entity is spawned in the world.
 
 
 #### `client_sync`
-* To sync through the Resource Pack (client-side), <code>client_sync</code> field can be used to allow the Client Entity access the Entity Properties. By default, the value is set to `false`.
++ To sync through the Resource Pack (client-side), <code>client_sync</code> field can be used to allow the Client Entity access the Entity Properties. By default, the value is set to `false`.
 ```json
 "property:client_sync_example": {
   "values": {
@@ -104,11 +104,11 @@ badge_color: red
 ------------------
 
 ### Manipulating and Accessing Entity Properties
-* You can access entity properties though MoLang Entity Queries:
-  * `query.actor_property`
-  * `query.has_actor_property`
++ You can access entity properties though MoLang Entity Queries:
+  + `query.actor_property`
+  + `query.has_actor_property`
 
-* Through entity events, you can set the entity property to a value with the `set_actor_property` event response:
++ Through entity events, you can set the entity property to a value with the `set_actor_property` event response:
 ```json
 "events": {
   "event:set_entity_property": {
@@ -125,8 +125,8 @@ badge_color: red
 
 
 ## Entity Permutations
-* Entity Permutations are implemented to apply a set of components every tick if the condition met.
-* `permutations` array is inserted in the `minecraft:entity` object, the same level as `components`:
++ Entity Permutations are implemented to apply a set of components every tick if the condition met.
++ `permutations` array is inserted in the `minecraft:entity` object, the same level as `components`:
 ```json
 "permutations": [
   {
@@ -155,5 +155,5 @@ badge_color: red
   }
 ]
 ```
-* As we can observe, if the entity property "`property:string_enum_example`" is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied on the entity. Otherwise, if the entity property "`property:string_enum_example`" is "`second`", the entity's scale is twice as it was.
++ As we can observe, if the entity property "`property:string_enum_example`" is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied on the entity. Otherwise, if the entity property "`property:string_enum_example`" is "`second`", the entity's scale is twice as it was.
 
