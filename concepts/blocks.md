@@ -421,9 +421,14 @@ List of all new block components, with usage examples
 ```jsonc
 {
   	"minecraft:material_instances": {
+		// Can also be a specific material instance for a specific face mapped in the geometry
+		// Wildcards follow render controller syntax
+		// Options 'up', 'down', and 'sides' are builtin
 		"*": {
 	 		"texture": "texture_name", // References texture defined in terrain_textures.json
-	  		"render_method": "blend" // Options 'blend', 'opaque', 'alpha_test'
+	  		"render_method": "blend", // Options 'blend', 'opaque', 'alpha_test',
+			"face_dimming": true, // Defaults to true; refers to whether or not block is affected by lighting (Undocumented)
+			"ambient_occlusion": true // Defaults to true; refers to whether ot not faces have smooth lighting (Undocumented)
 		}
   	}
 }
