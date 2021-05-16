@@ -23,7 +23,7 @@ ___
 
 A render controller is a file that controls what is rendered in-game. They define the material, the texture and the model to be used on the entity. Render Controller files are located in `RP/render_controllers` (the `render_controllers` folder in your resource pack). Let's look at a simple render controller's structure.
 
-`RP/render_contollers/skeleton.render_controllers.json`
+`RP/render_controllers/skeleton.render_controllers.json`
 ```jsonc
 {
   "format_version": "1.8.0",
@@ -37,7 +37,7 @@ A render controller is a file that controls what is rendered in-game. They defin
 }
 ```
 
-- `contoller.render.skeleton` is the identifier of this render controller. Typically the last word in a render controller identifier is the name of the entity the render controller is to be applied to.
+- `controller.render.skeleton` is the identifier of this render controller. Typically the last word in a render controller identifier is the name of the entity the render controller is to be applied to.
 - Next come the definitions of the geometry, the materials, and the textures:
 -- `"geometry": "Geometry.default"` - this means that the geometry that is to be rendered on this entity is the one with the shortname "default".(Shortnames are defined in the .entity file).
 -- Materials define how something is rendered in-game. Different materials can be rendered on different bones. The asterisk ( * ) can be replaced by a bone's name. The asterisk itself refers to all bones. If you were to put something like "left_\*" there, all bones with names that start with "left_" will be rendered with this material.
@@ -95,7 +95,7 @@ If you have some programming basics, you'll know that you can get an element fro
 
 *Note 1: If you use a query that returns true or false(like query.is_charged) true will mean the same as 1 and false the same as 0.*
 
-*Note 2: You can do the same with geometries in `Array.geos`. Check `RP/render_contrllers.sheep.render_controllers.json` for more details on how that would work.*
+*Note 2: You can do the same with geometries in `Array.geos`. Check `RP/render_controllers.sheep.render_controllers.json` for more details on how that would work.*
 
 
 ```jsonc
