@@ -22,7 +22,7 @@ badge_color: red
 
 ------------------
 
-## Entity Properties Definitions
+## Entity Properties Definition
 
 ### Defining Properties on Entities
 
