@@ -31,7 +31,7 @@ badge_color: red
 {
     "minecraft:entity": {
       "description": {
-        "identifier": "entity:properties_test",
+        "identifier": "entity:properties_example",
         "properties": {
           "property:number_range_example": {
             "values": {
@@ -60,7 +60,7 @@ badge_color: red
 
 #### `values`
 + `values` property is required, and omitting this field may cause error and fail to register the property.
-+ `values` field be evaluated as an array of enum values, or a range of a minimum and maximum value (Note that integer, float, and boolean enums only supports two values):
++ `values` field can be evaluated as an array of enum values, or a range of minimum and maximum values (Note that integer, float, and boolean enum values currently supports only two values):
 ```json
 "property:range_example": {
     "values": {
@@ -104,11 +104,11 @@ badge_color: red
 ------------------
 
 ### Manipulating and Accessing Entity Properties
-+ You can access entity properties though MoLang Entity Queries:
++ You can access entity properties though MoLang Entity Queries (Note, these MoLang Entity Queries are a part of Experimental features):
   + `query.actor_property`
   + `query.has_actor_property`
 
-+ Through entity events, you can set the entity property to a value with the `set_actor_property` event response:
++ With entity events, you may set the entity property to a value with the `set_actor_property` event response:
 ```json
 "events": {
     "event:set_entity_property": {
@@ -129,45 +129,46 @@ badge_color: red
 
 ```json
 {
-    "format_version": "1.16.0",
-    "minecraft:entity": {
-      "description": {
-        "identifier": "entity:properties_example",
-        "is_spawnable": true,
-        "is_summonable": true,
-        "is_experimental": false,
-        "properties": {
-          "property:property_index": {
-            "client_sync": true,
-            "values": {
-              "min": 0,
-              "max": 2
-            },
-            "default": 0
-          }
+  "format_version": "1.16.0",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "entity:properties_example",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false,
+      "properties": {
+        "property:property_index": {
+          "client_sync": true,
+          "values": {
+            "min": 0,
+            "max": 2
+          },
+          "default": 0
+        }
+      },
+      "aliases": {
+        "entity:default_alias": {
         },
-        "aliases": {
-          "entity:default_alias": {
-          },
-          "entity:first_alias": {
-            "property:property_index": 1
-          },
-          "entity:second_alias": {
-            "property:property_index": 2
-          }
+        "entity:first_alias": {
+          "property:property_index": 1
+        },
+        "entity:second_alias": {
+          "property:property_index": 2
         }
       }
     }
+  }
 }
 ```
-+ Now, the entity have multiple aliases, and you can use the defined alias identifier through the `summon` command to spawn the entity with the properties set.
++ Now, the entity has multiple aliases, and you can use the defined alias identifier through the `summon` command to spawn the entity with the properties set:
+  + `/summon entity:first_alias` will spawn the entity with the entity property `property:property_index` set to 1.
 
 ------------------
 
 
 ## Entity Permutations
 + Entity Permutations are implemented to apply a set of components every tick if the condition met.
-+ `permutations` array is inserted in the `minecraft:entity` object, the same level as `components`:
++ `permutations` array is inserted in the `minecraft:entity` object, the same level as `components` object:
 ```json
 "permutations": [
     {
@@ -196,5 +197,5 @@ badge_color: red
     }
 ]
 ```
-+ As we can observe, if the entity property "`property:string_enum_example`" is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied on the entity. Otherwise, if the entity property "`property:string_enum_example`" is "`second`", the entity's scale is twice as it was.
++ As we observed, if the entity property "`property:string_enum_example`" value is "`first`", then the "`minecraft:scale`" entity component with a scale of 1 is applied on the entity. Otherwise, if the entity property "`property:string_enum_example`" value is "`second`", the entity's scale is twice as it was. Then, it is similar to how it goes for the `third` value, with three times from the original scale.
 
