@@ -21,7 +21,7 @@ Beginner
 ## Using Damage Sensor
 The best and most flexible way of disabling damage for entities is using the `minecraft:damage_sensor` component. The component allows us to use `filters` to determine which damage sources are allowed to damage our entity.
 
-The best way to learn about this component is by using the [vanilla examples for damage sensor.](https://sirlich.github.io/technical-bedrock/vanilla-usage/components-1.14.html#minecraftdamage_sensor)
+The best way to learn about this component is by using the [vanilla examples for damage sensor.](https://wiki.bedrock.dev/vanilla-usage/components#minecraftdamage_sensor)
 
 ### Completely Invulnerable Entity
 
