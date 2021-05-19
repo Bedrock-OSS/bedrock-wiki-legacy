@@ -258,7 +258,7 @@ You can do whatever you want here and get super creative, set enemies on fire, o
 
 You should probably make a recipe for it, which is covered in previous chapters, as there isn't anything really new in there, but incase you are unsure here is an example one to make the sword with ender eyes and ender pearls.
 
-{% include filepath.html path="BP/recipes/my_swordjson"%}
+{% include filepath.html path="BP/recipes/my_sword.json"%}
 ```json
 {
   "format_version": "1.16.100",
