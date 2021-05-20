@@ -1,5 +1,6 @@
 var redirectors = {
-    "/assets/guide/template_packs/README": "/guide/download-packs"
+    "/assets/guide/template_packs/README": "/guide/download-packs",
+    "/knowledge/namespaces": "/concepts/namespaces"
 }
 
 // HANDLE CASE AND UNDERSCORES
