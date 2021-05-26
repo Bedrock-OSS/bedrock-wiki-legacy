@@ -2,6 +2,8 @@
 layout: page
 title: Biomes
 parent: Concepts
+badge: EXPERIMENTAL
+badge_color: yellow
 ---
 
 # Biomes
