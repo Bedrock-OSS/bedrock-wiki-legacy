@@ -2,7 +2,7 @@
 layout: page
 title: Game Tests
 parent: Scripting
-badge: EXPERIMNTAL
+badge: EXPERIMENTAL
 badge_color: yellow
 ---
 
