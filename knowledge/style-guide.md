@@ -40,7 +40,7 @@ Identifiers are used almost everywhere, and this section applies to entities, co
 
 ## File and Folder names
 
-If multiple options are aviable the prefence go to the first found item, however the second one is recognized as valid as well.
+If multiple options are available, the preference goes to the first found item. However, the second one is recognized as valid as well.
 
 | Concept              | Example Identifier                                   |
 | -------------------- | ---------------------------------------------------- |
@@ -77,13 +77,18 @@ Note: `minecraft` and `minecon` namespaces are reserved. Don't use these unless 
 
 **Where to use name-spaces:** ✔️
 
+- blocks
 - entities
+- items
 - particles
+- spawn rules
 
 **Where to use name-spaces optional:**
 
 - component-groups
 - events
+- geometry
+- sounds
 
 **When not to use name-spaces:** ❌
 
