@@ -2,8 +2,8 @@
 layout: page
 title: Game Tests
 parent: Scripting
-badge: BETA
-badge_color: red
+badge: EXPERIMNTAL
+badge_color: yellow
 ---
 
 # Game Tests
