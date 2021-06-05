@@ -125,6 +125,11 @@ Perfect for imitating a block, as long as the player is in Adventure Mode.
 - Makes the entity receive increased damage from weapons with Smite enchantment
 
 ---
+## minecraft:wither
+- Makes the entity constantly generate particles (the identifiers of the particles generated are `minecraft:basic_smoke_particle`, `minecraft:wither_boss_invulnerable`) 
+- Makes the entity levitate when the entity has a target.
+
+---
 ## minecraft:skeleton
 - Makes the entity receive damage from Healing effect, heal from Instant Damage effect and become immune to Regeneration and Poison effect
 - Makes the entity receive increased damage from weapons with Smite enchantment
