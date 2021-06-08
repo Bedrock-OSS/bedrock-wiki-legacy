@@ -196,7 +196,7 @@ Your filepath should look like this:
     </ul>
 </div>
 
-Once you have emojis inside the `glyph_E0.png` or `glyph_E1.png` you need to find your character in a hex. First two characters (`F0` or `F1`) depend on which file you added emojis to. 
+Once you have emojis inside the `glyph_E0.png` or `glyph_E1.png` you need to find your character in a hex. First two characters (`E0` or `E1`) depend on which file you added emojis to. 
 Next to characters determine the position inside the image like this `<row><column>`, where each character is a number in hexadecimal numeral system.
 
 Hexadecimal uses the decimal numbers and six extra symbols. There are no numerical symbols that represent values greater than nine, so letters taken from the English alphabet are used, specifically A, B, C, D, E and F. Hexadecimal A = decimal 10, and hexadecimal F = decimal 15([Source](https://simple.wikipedia.org/wiki/Hexadecimal)).
