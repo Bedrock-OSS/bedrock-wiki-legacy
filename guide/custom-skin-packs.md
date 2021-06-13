@@ -72,7 +72,7 @@ Many people wrongly assume that skin packs are only available for creation to Ma
 
 ## skins.json
 
-is used to define the skin texture files. Most of the options are, however, hard-coded/unchangeable. The skin `.png` or other image files are located in the same folder as `manifest.json` and `skins.json`, which is `skin_packs/TutorialSkinpack` in this scenario. My example skin files are named `Niika.png` and `Senn_skin.png` ~~guess where I took the names from~~.
+`skins.json` is used to define the skin texture files. Most of the options are, however, hard-coded/unchangeable. The skin `.png` or other image files are located in the same folder as `manifest.json` and `skins.json`, which is `skin_packs/TutorialSkinpack` in this scenario. My example skin files are named `Niika.png` and `Senn_skin.png`.
 
 `//skin_packs//TutorialSkinPack/skins.json`
 ```json
@@ -101,15 +101,14 @@ is used to define the skin texture files. Most of the options are, however, hard
 - `skins` array is where the object for every skin of yours are in. The skins will be displayed in the same order in minecraft as they are defined here.
 
 In this example, I defined two skins. it is possible to define any number.
-- `localization_name` is going to be used in the .lang file. Think of it as the skins identifier.
-- `texture` is the name of the image file, located int eh main skin pack folder.
+- `localization_name` is going to be used in the `.lang` file. Think of it as the skins identifier.
+- `texture` is the name of the image file, located in the main skin pack folder.
 - `type` is only accessible to marketplace partners, so leave it as `free`
 - `serialize_name` is for marketplace.
-- `localization_name` is the packs identifier, to be called in `.lang`.
 
 ## texts/en_US.lang
 
-Finally, we'll define the names of the skin pack and every skin in the `.lang` file in `skin_packs/Skinpackname/texts/en_US.lang`. Of course "en_US" can be replaced with any language.
+Finally, we'll define the names of the skin pack and every skin in the `.lang` file in `skin_packs/Skinpackname/texts/en_US.lang`. Of course `en_US` can be replaced with any language.
 
 ```
 skinpack.TutorialSkinPack=guide.bedrock.dev Tutorial skin pack
