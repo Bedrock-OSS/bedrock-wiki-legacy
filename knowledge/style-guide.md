@@ -49,13 +49,14 @@ If multiple options are available, the preference goes to the first found item. 
 | Geometry             | dragon.geo.json                                      |
 | Animation            | dragon.animation.json                                |
 | Animation Controller | dragon.controller.json<br/>dragon.ac.json            |
+| Dialogue             | intro.diag.json                                      |
 | Behaviorpack Entity  | dragon.entity.json<br/>dragon.entity.bp.json         |
 | Resourcepack Entity  | dragon.entity.json<br/>dragon.entity.rp.json         |
 | Behaviorpack Item    | dragon_tooth.item.json<br/>dragon_tooth.item.bp.json |
 | Resourcepack Item    | dragon_tooth.item.json<br/>dragon_tooth.item.rp.json |
 | Render Controller    | dragon.render.json                                   |
 | Loot Table           | dragon.loot.json                                     |
-| Dragon Saddle        | dragon_saddle.recipe.json                            |
+| Recipe               | dragon_saddle.recipe.json                            |
 | Spawn Rules          | dragon.spawn.json                                    |
 | Trade Table          | dragon.trade.json                                    |
 | Particles            | dragon_magic.particle.json                           |
