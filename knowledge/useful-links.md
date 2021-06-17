@@ -102,6 +102,13 @@ Important links have a ⭐.
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
  - [MCPECore](https://mcpecore.com/)
 
+## Useful Extensions for Visual Studio Code
+ - ⭐[BlockCeption](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
+ - [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
+ - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
+ - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+
+
 ## Other useful Links
  - ⭐ [Bucket of Crabs (Marketplace joblist)](https://www.bucketofcrabs.net/)
  - [UUID v4 Generator (online)](https://www.uuidgenerator.net/version4)
