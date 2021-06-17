@@ -98,7 +98,7 @@ Important links have a ⭐.
  - [Minecraft Marketplace](https://www.minecraft.net/en-us/catalog)
 
 ## Useful Extensions for Visual Studio Code
- - ⭐[Block Ception](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
+ - ⭐[BlockCeption](https://marketplace.visualstudio.com/items?itemName=BlockceptionLtd.blockceptionvscodeminecraftbedrockdevelopmentextension)
  - [UUID Generator](https://marketplace.visualstudio.com/items?itemName=netcorext.uuid-generator)
  - [Bedrock Definitions](https://marketplace.visualstudio.com/items?itemName=destruc7i0n.vscode-bedrock-definitions)
  - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
