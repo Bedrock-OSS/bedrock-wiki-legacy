@@ -157,7 +157,7 @@ Now to create a testing world to test your new addon!
  - The '**Experimental Gameplay**' **MUST** be **on** for some addon features (*like Scripting, Biomes, Features, Feature Rules, etc*), double check if it's on after applying your packs.
 - You might need to turn some settings, like '*TNT explodes*', '*fire spreads*', '*do daylight cycle*', '*Mobs spawning*' etc, depending on what you're testing. It's easy to do with the `/gamerule` command in-game.
 
-3. Turn on both '**settings>profile>content_log_file**' and '**settings>profile>content_log_gui**'. This will show you any errors in your addon when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
+3. Turn on both '**settings>creator>content_log_file**' and '**settings>creator>content_log_gui**'. This will show you any errors in your addon when you enter a world with it applied. You can also open the content log GUI by pressing `ctrl+h`.
 
 ![](/assets/images/guide/world_params_1.jpg)
 ![](/assets/images/guide/world_params_2.jpg)
