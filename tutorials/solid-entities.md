@@ -34,9 +34,9 @@ The shulker runtime identifier wil cause the entity to be solid with a 1x1 block
 
 ## is_stackable 
 
-Place `is_stackable` on both entities you want to collide. `Note:` This requires editing `player.json` if you want the entity to be solid for the player.
+Place `minecraft:is_stackable` component on both entities you want to collide. `Note:` This requires editing `player.json` if you want the entity to be solid for the player.
 
-You will also need to set push through = 1`
+You will also need to set `"minecraft:push_through": {"value": 1}`
 
 ## Faking it with blocks
 
