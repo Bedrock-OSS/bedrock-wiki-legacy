@@ -131,6 +131,15 @@ RP/textures/particle/example.particle.png
                         </li>
                         <li><span class="folder">environment</span>
                             <ul>
+				<li><span class="folder">overworld_cubemap</span>
+				<ul>
+				<li><span class="image">cubemap_0.png</span></li>
+				<li><span class="image">cubemap_1.png</span></li>
+				<li><span class="image">cubemap_2.png</span></li>
+				<li><span class="image">cubemap_3.png</span></li>
+				<li><span class="image">cubemap_4.png</span></li>
+				<li><span class="image">cubemap_5.png</span></li>
+				</ul></li>
                                 <li><span class="image">clouds.png</span></li>
                                 <li><span class="image">destroy_stage_0.png</span></li>
                                 <li><span class="image">...</span></li>
