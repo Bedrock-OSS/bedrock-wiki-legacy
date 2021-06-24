@@ -25,7 +25,7 @@ RP/render_controllers/example.render_controller.json
 RP/sounds/example.sound.ogg
 RP/sounds/sound_definitions.json
 RP/texts/languages.json
-RP/textx/en_US.lang
+RP/texts/en_US.lang
 RP/textures/item_texture.json
 RP/textures/blocks/example.block.png
 RP/textures/blocks/example.texture.variant.block/0.png
@@ -60,15 +60,30 @@ RP/textures/particle/example.particle.png
                         <li><span class="file">example.animation.json</span></li>
                     </ul>
                 </li>
+                <li><span class="folder">attachables</span>
+                    <ul>
+                        <li><span class="file">example.attachable.json</span></li>
+                    </ul>
+                </li>
                 <li><span class="folder">entity</span>
                     <ul>
                         <li><span class="file">example.entity.json</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">fogs</span>
+                    <ul>
+                        <li><span class="file">example.fog.json</span></li>
                     </ul>
                 </li>
                 <li><span class="folder">font</span></li>
                 <li><span class="folder">items</span>
                     <ul>
                         <li><span class="file">example.item.json</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">library</span>
+                    <ul>
+                        <li><span class="file">categories.json</span></li>
                     </ul>
                 </li>
                 <li><span class="folder">materials</span>
@@ -94,6 +109,25 @@ RP/textures/particle/example.particle.png
                 <li><span class="folder">render_controllers</span>
                     <ul>
                         <li><span class="file">example.render_controller.json</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">shaders</span>
+                    <ul>
+                        <li><span class="folder">glsl</span>
+                            <ul>
+                                <li><span class="file">example.fragment</span></li>
+                                <li><span class="file">example.vertex</span></li>
+                                <li><span class="file">example.h</span></li>
+                            </ul>
+                        </li>
+                        <li><span class="folder">hlsl</span>
+                            <ul>
+                                <li><span class="file">example.fragment.hlsl</span></li>
+                                <li><span class="file">example.geometry.hlsl</span></li>
+                                <li><span class="file">example.vertex.hlsl</span></li>
+                            </ul>
+                        </li>
+
                     </ul>
                 </li>
                 <li><span class="folder">sounds</span>
@@ -131,15 +165,16 @@ RP/textures/particle/example.particle.png
                         </li>
                         <li><span class="folder">environment</span>
                             <ul>
-				<li><span class="folder">overworld_cubemap</span>
-				<ul>
-				<li><span class="image">cubemap_0.png</span></li>
-				<li><span class="image">cubemap_1.png</span></li>
-				<li><span class="image">cubemap_2.png</span></li>
-				<li><span class="image">cubemap_3.png</span></li>
-				<li><span class="image">cubemap_4.png</span></li>
-				<li><span class="image">cubemap_5.png</span></li>
-				</ul></li>
+                                <li><span class="folder">overworld_cubemap</span>
+                                    <ul>
+                                        <li><span class="image">cubemap_0.png</span></li>
+                                        <li><span class="image">cubemap_1.png</span></li>
+                                        <li><span class="image">cubemap_2.png</span></li>
+                                        <li><span class="image">cubemap_3.png</span></li>
+                                        <li><span class="image">cubemap_4.png</span></li>
+                                        <li><span class="image">cubemap_5.png</span></li>
+                                    </ul>
+                                </li>
                                 <li><span class="image">clouds.png</span></li>
                                 <li><span class="image">destroy_stage_0.png</span></li>
                                 <li><span class="image">...</span></li>
