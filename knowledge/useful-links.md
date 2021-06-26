@@ -70,6 +70,8 @@ Important links have a ⭐.
 ## Documentation Links
  - ⭐[bedrock.dev](https://bedrock.dev/)
  - [Official Documentation](https://minecraft.gamepedia.com/Add-on)
+ - [Add-ons Documentation (Microsoft Docs)](https://docs.microsoft.com/minecraft/creator)
+ - [Entity JSON Reference (Microsoft Docs)](https://docs.microsoft.com/minecraft/creator/reference/content/entityreference/)
  - [Trade Tables](https://minecraft.gamepedia.com/Bedrock_Edition_function/loot_tables/trade_tables_documentation)
  - [Component Examples](vanilla-usage/components)
  - [JSON guis](https://geenium.com/bedrock/json-guis/)
