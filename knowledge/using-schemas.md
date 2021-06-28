@@ -27,7 +27,7 @@ Many schemas exist, with many small differences. Try out different schemas and s
 | Author                                                                  | Supports                                                                                                       | Note                                             |
 |-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|--------------------------------------------------|
 | [Assassin](https://github.com/aexer0e/bedrock-schema)                   | Behavior pack entity file                                                                                      | The original Schema this article was written for |
-| [BlueFrog130](https://github.com/BlueFrog130/minecraft-addon-schemas/) | Behavior pack entity file                                                                                      |                                                  |
+| [BlueFrogGames](https://github.com/BlueFrogGames/minecraft-addon-schemas/) | Behavior pack entity file, resource pack entity file, spawn rules, items                                    |                                                  |
 | [Tschrock's](https://github.com/bedrock-studio/bedrock-json-schemas/)   | Manifest, Actor Animation Controller, Actor Animations, Actor Resource Definition, Render Controller, Geometry |                                                  |
 | [stirante](https://github.com/stirante/bedrock-shader-schema/)          | Shaders                                                                                                        |                                                  |
 
