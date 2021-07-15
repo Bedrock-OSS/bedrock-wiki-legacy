@@ -57,7 +57,7 @@ Block behaviors are structured similarly to entities: They contain description, 
 - "`minecraft:loot`" defines a loot table path which will define what the block will drop. We'll look into loot tables in the next chapter.
 - "`minecraft:destroy_time`" defines how long the player will need to punch the block until it breaks. Currently it isn't possible to set different destroy times for different tools;
 - "`minecraft:explosion_resistance`": the higher the value, the lower the chance that the block will be destroyed by an explosion;
-- "`minecraft:friction`" defines how much friction the block has. For example, Soul and has a high value for friction and thus it slows players down. Ice has a lower friction value, and thus it has the effect of being slippery. The friction of classic blocks such as wood or stone is `0.6`.
+- "`minecraft:friction`" defines how much friction the block has. For example, Soul sand has a high value for friction and thus it slows players down. Ice has a lower friction value, and thus it has the effect of being slippery. The friction of classic blocks such as wood or stone is `0.6`.
 - "`minecraft:flammable":"flame_odds`": how likely the block is to catch fire; "`burn_odds`": how likely the block is to be destroyed by fire;
 - "`minecraft:map_color`" has the hex code of  color that will be displayed on a minecraft Map to symbolize this block. `#FFFFFF` means white. You can get hex codes for other colors [here](https://www.google.com/search?q=hex+color+picker&rlz=1C1CHBF_enDE886DE886&oq=hex+color+picker&aqs=chrome..69i57j0l7.2293j0j8&sourceid=chrome&ie=UTF-8).
 - "`minecraft:block_light_emission`" defines the light level the block will output.
