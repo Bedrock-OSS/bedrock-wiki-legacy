@@ -220,7 +220,7 @@ Used to execute commands
 
 ## BP Item Components
 
-List of all new block components, with usage examples
+List of all new item components, with usage examples
 
 - minecraft:ignores_permission
 ```jsonc
@@ -262,7 +262,7 @@ List of all new block components, with usage examples
 - minecraft:mirrored_art
 ```jsonc
 {
-    "minecraft:mirrord_art": true
+    "minecraft:mirrored_art": true
 }
 ```
 
