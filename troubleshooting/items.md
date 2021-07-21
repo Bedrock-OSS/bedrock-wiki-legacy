@@ -144,6 +144,9 @@ To turn it to back into a normal size item (16x16), use the following formula pr
 
 The base values, [0.075, 0.125, 0.075], seems to be the about the same scale value as normal items
 
+Or, alternitivly, feel free to use this free tool (Created by Ultr4Anubis) for doing these calculations automatically:
+https://github.com/Ultr4Anubis/Minecraft-Item-Scale
+
 ---
 <a name="4.0.0"></a>
 ## What Now?
