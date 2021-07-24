@@ -1,3 +1,5 @@
+<h1>This is the old wiki it is not maintained anymore changes will not be merged direct yourself to https://github.com/Bedrock-OSS/bedrock-wiki </h1>
+
 <p align="center">
     <h1 align="center">Bedrock Wiki</h1>
     <p align="center">The Bedrock Wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information.<br>Here, you can contribute to this amazing, open-source resource!</p>
