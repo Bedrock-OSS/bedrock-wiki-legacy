@@ -91,4 +91,4 @@ In the case of player entities, an additional transition must be added to the se
 ```
 ## Wait, but how do Animation Controllers work?
 
-[Learn about ACs here!](https://wiki.bedrock.dev/concepts/animation-controllers)
+[Learn about ACs here!](https://old-wiki.bedrock.dev/concepts/animation-controllers)

@@ -1,4 +1,4 @@
 User-agent: *
 Dissallow: /assets/js/
 
-Sitemap: https://wiki.bedrock.dev/sitemap
+Sitemap: https://old-wiki.bedrock.dev/sitemap

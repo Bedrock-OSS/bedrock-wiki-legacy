@@ -37,7 +37,7 @@ Items are VERY DIFFERENT in 1.16. The main change you need to focus on is that t
 }
 ```
 Make sure it matches the one from your item_texture.json
-Learn about the new 1.16 items here: https://wiki.bedrock.dev/concepts/items
+Learn about the new 1.16 items here: https://old-wiki.bedrock.dev/concepts/items
 
 ## Result
 I'm using 1.10 format [Go](#2.0.0){: .btn .btn-blue }

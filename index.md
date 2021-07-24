@@ -13,6 +13,7 @@ sitemap:
 
 This wiki is a knowledge-sharing website for Technical Bedrock, containing documentation, tutorials, and general how-to information. 
 
+## Join the New Site!
 ## Navigating:
  - **Concepts**: The first introduction to a concept, intended to be read in-full.
  - **Knowledge**: Top-level information, such as editor recommendations.

@@ -20,7 +20,7 @@ Intermediate
 
 ## Creating the Hitbox
 
-Here is a tutorial of how to make a solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://wiki.bedrock.dev/tutorials/solid-entities)
+Here is a tutorial of how to make a solid Hitbox in four different ways, with `runtime_identifiers`, blocks and components. [Solid Entities](https://old-wiki.bedrock.dev/tutorials/solid-entities)
 
 ## Basic Components
 

@@ -212,4 +212,4 @@ Function Pack Structure:
 
 Here are [some open-source examples](https://github.com/VideoCarp/carpcorps/tree/master/function_packs) of raw commands on GitHub.
 
-Learn about [tick.json](https://wiki.bedrock.dev/concepts/mcfunction#creating-tickjson)
+Learn about [tick.json](https://old-wiki.bedrock.dev/concepts/mcfunction#creating-tickjson)

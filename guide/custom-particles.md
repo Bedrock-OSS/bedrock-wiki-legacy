@@ -230,7 +230,7 @@ It's rather tiresome to create particles that way, comparable to creating models
 
 # Defining Custom Sounds
 
-*You can find a more in-depth tutorial on custom sounds on [wiki.bedrock.dev](https://wiki.bedrock.dev/concepts/sounds.html).*
+*You can find a more in-depth tutorial on custom sounds on [old-wiki.bedrock.dev](https://old-wiki.bedrock.dev/concepts/sounds.html).*
 
 Minecraft can read sound files in the `.ogg` (recommended) or `.wav` format. (You can look up an .mp3 to .ogg converter online). Personally, I usually get my sound effects from ZapSplat.com.
 
@@ -305,7 +305,7 @@ Now we are about to call our sounds. We can do it either through the `/playsound
 
 Let's see how the sounds of the skele_yaklin are called in the entity's object.
 - The first "volume" and "pitch" are global, they are the starting point for every other of the entity's sounds. If you want the sounds to play exactly how they are, set both of them to 1;
-- "events" include the automatic sounds to be played. There are a couple Vanilla events that will trigger automatically(you can see the whole list on the wiki.bedrock.dev page linked bove). All of the events call a sound's shortname.
+- "events" include the automatic sounds to be played. There are a couple Vanilla events that will trigger automatically(you can see the whole list on the old-wiki.bedrock.dev page linked bove). All of the events call a sound's shortname.
 - "ambient" plays occasionally, for example the sheep "baah" sound.
 - "hurt" plays when the entity is hurt.
 - "death" plays on death.
