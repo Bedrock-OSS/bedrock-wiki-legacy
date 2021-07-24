@@ -1,0 +1,15 @@
+on:
+  issues:
+    types: [opened]
+jobs:
+  tampered_launcher:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Create Response
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          This repository is nolonger maintained please direct your information to https://github.com/Bedrock-OSS/bedrock-wiki
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
