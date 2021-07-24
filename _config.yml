@@ -21,7 +21,7 @@ kramdown:
   parse_block_html: true
 
 markdown: kramdown
-url: https://wiki.bedrock.dev
+url: https://old-wiki.bedrock.dev/
 aux_links:
   "Discord":
     - "/discord"
