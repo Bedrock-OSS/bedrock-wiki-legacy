@@ -23,14 +23,7 @@ kramdown:
 markdown: kramdown
 url: https://old-wiki.bedrock.dev/
 aux_links:
-  "Discord":
-    - "/discord"
-  "Bedrock.dev":
-    - "https://bedrock.dev/"
-  "Contribute":
-    - "/contribute"
-  "News":
-   - "/news/"
+  "New Site": "https://wiki.bedrock.dev/"
   
 
 
