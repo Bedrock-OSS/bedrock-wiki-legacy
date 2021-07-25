@@ -6,12 +6,12 @@ description: >-
 remote_theme: pmarsceill/just-the-docs
 color_scheme: light
 
-github_username:  SirLich
+github_username:  Bedrock-OSS
 
 # Footer "Edit this page on GitHub" link text
 gh_edit_link: true # show or hide edit this page link
 gh_edit_link_text: "Edit this page on GitHub."
-gh_edit_repository: "https://github.com/SirLich/bedrock-wiki" # the github URL for your repo
+gh_edit_repository: "https://github.com/Bedrock-OSS/bedrock-wiki-legacy" # the github URL for your repo
 gh_edit_branch: "gh-pages" # the branch that your docs is served from
 gh_edit_view_mode: "tree" # "tree" or "edit" if you want the user to jump into the editor immediately
 
@@ -40,7 +40,6 @@ plugins:
   - jekyll-feed
 
 search_enabled: true
-
 
 paginate: 10
 paginate_path: "/news/page:num/"
