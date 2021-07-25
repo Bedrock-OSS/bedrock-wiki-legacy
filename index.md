@@ -3,7 +3,7 @@ layout: default
 title: Home
 nav_order: 0
 description: "Legacy Wiki: Please visit wiki.bedrock.dev for updated site."
-permalink: /
+permalink: 
 sitemap:
   priority: 1
   changefreq: 'weekly'
