@@ -1,7 +1,7 @@
 title: Bedrock Wiki
 email: sirlich.business@gmail.com
 description: >-
-  Open-source knowledge-sharing Bedrock Wiki, containing documentation, beginner Guide, tutorials, and general how-to information. Maintained by SirLich#1658.
+  Legacy Wiki: Please visit wiki.bedrock.dev for updated site.
 
 remote_theme: pmarsceill/just-the-docs
 color_scheme: light
@@ -41,8 +41,6 @@ plugins:
 
 search_enabled: true
 
-ga_tracking: UA-172450751-1
-ga_tracking_anonymize_ip: true
 
 paginate: 10
 paginate_path: "/news/page:num/"

@@ -2,7 +2,7 @@
 layout: default
 title: Home
 nav_order: 0
-description: "Technical bedrock knowledge-sharing wiki."
+description: "Legacy Wiki: Please visit wiki.bedrock.dev for updated site."
 permalink: /
 sitemap:
   priority: 1
