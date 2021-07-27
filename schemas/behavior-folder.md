@@ -15,7 +15,11 @@ BP/manifest.json
 BP/pack_icon.png
 BP/animations/example.animation.json
 BP/animation_controllers/example.ac.json
+BP/biomes/example.biome.json
+BP/blocks/example.block.json
 BP/entities/example.entity.json
+BP/feature_rules/example.rule.json
+BP/features/example.feature.json
 BP/functions/example.mcfunction
 BP/functions/tick.json
 BP/items/example.item.json
@@ -28,10 +32,6 @@ BP/trading/economy_trades/example.trade.json
 BP/scripts/client/example.js
 BP/scripts/server/example.js
 BP/spawn_rules/example.spawn.json
-BP/blocks/example.block.json
-BP/feature_rules/example.feature.json
-BP/biomes/example.biome.json
-BP/feature_rules/example.rule.json
 -->
 
 <div markdown="0" class="folder-structure">
@@ -67,6 +67,11 @@ BP/feature_rules/example.rule.json
                     <ul>
                         <li><span class="file">example.feature.json</span></li>
                         <li><span class="file">example.rule.json</span></li>
+                    </ul>
+                </li>
+                <li><span class="folder">features</span>
+                    <ul>
+                        <li><span class="file">example.feature.json</span></li>
                     </ul>
                 </li>
                 <li><span class="folder">functions</span>
