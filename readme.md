@@ -1,4 +1,4 @@
-<h1>This is the old wiki it is not maintained anymore changes will not be merged direct yourself to https://github.com/Bedrock-OSS/bedrock-wiki </h1>
+<h1>This is the old wiki it is not maintained anymore changes will not be merged. Direct yourself to https://github.com/Bedrock-OSS/bedrock-wiki </h1>
 
 <p align="center">
     <h1 align="center">Bedrock Wiki</h1>
